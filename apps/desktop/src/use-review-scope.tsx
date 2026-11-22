@@ -66,7 +66,7 @@ export function useReviewScope(runtime: RuntimeAdapter) {
     setPending(pending); pendingRef.current = pending; setError(''); setSaveError('');
     if (!hasCard) void applyPending();
   }
-  return { applied, pending, categories, busy, error: saveError || error, select, applyPending, preservePresentation, retryRead: () => { setError(''); setVersion((value) => value + 1); } };
+  return { applied, pending, categories, busy, error: saveError || error, saveError, select, applyPending, preservePresentation, retryRead: () => { setError(''); setVersion((value) => value + 1); } };
 }
 
 export function ReviewScopeSelector({ state, locale, hasCard }: {
@@ -93,7 +93,7 @@ export function ReviewScopeSelector({ state, locale, hasCard }: {
     </fieldset>
     {state.applied && <p role="status">{labels.current(name(state.applied))}</p>}
     {state.pending && <p role="status">{labels.pending(name(state.pending))}</p>}
-    {state.error && <><p role="alert">{state.applied ? labels.saveError : labels.readError}: {state.error}</p>
-      <button disabled={state.busy} onClick={() => { if (state.applied) void state.applyPending(); else state.retryRead(); }}>{state.applied ? labels.retrySave : labels.retryRead}</button></>}
+    {state.error && <><p role="alert">{state.saveError ? labels.saveError : labels.readError}: {state.error}</p>
+      <button disabled={state.busy} onClick={() => { if (state.saveError) void state.applyPending(); else state.retryRead(); }}>{state.saveError ? labels.retrySave : labels.retryRead}</button></>}
   </div>;
 }

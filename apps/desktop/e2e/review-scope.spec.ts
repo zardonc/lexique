@@ -187,6 +187,29 @@ test('scope read failures remain visible and prevent mixed queue reads until ret
   await expect(page.getByText('当前范围：全部复习')).toBeVisible();
 });
 
+for (const command of ['review_scope', 'learning_categories'] as const) {
+  test(`failed ${command} refresh after successful loading retries reading without saving`, async ({ page }) => {
+    const value = command === 'review_scope' ? all : [];
+    const initialReads = command === 'review_scope' ? 2 : 4;
+    await nativeFixture(page, { [command]: [...Array.from({ length: initialReads }, () => ({ value })), { error: 'refresh read unavailable' }, { value }] });
+    await page.goto('/');
+    await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+    await expect(page.getByText('当前范围：全部复习')).toBeVisible();
+    const reads = () => page.evaluate((command) => window.testNative.calls.filter((call) => call.command === command && !call.args?.scope).length, command);
+    await expect.poll(reads).toBe(initialReads);
+    await page.evaluate(() => window.testNative.emit('lexique-review-changed'));
+    await expect(page.getByRole('alert')).toContainText('refresh read unavailable');
+    await expect(page.getByRole('alert')).toContainText('复习范围读取失败');
+    await expect.poll(reads).toBe(initialReads + 1);
+    const retry = page.getByRole('button', { name: '重读复习范围', exact: true });
+    await retry.click();
+    await expect.poll(reads).toBe(initialReads + 2);
+    await expect(page.getByRole('alert')).toHaveCount(0);
+    await expect(page.getByText('当前范围：全部复习')).toBeVisible();
+    expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_scope' && call.args?.scope))).toHaveLength(0);
+  });
+}
+
 for (const diagnostic of [
   { reason: 'empty_scope', pending: false, error: null, label: '此范围内没有已加入复习的生词' },
   { reason: 'paused', pending: false, error: null, label: '复习已暂停' },
