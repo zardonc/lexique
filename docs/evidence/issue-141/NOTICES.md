@@ -1,10 +1,10 @@
 # Source and modification notices for #141
 
-These author proposals retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en)
+This independently reviewed content retains [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en)
 for fixed Wiktionnaire contributions and Lexique’s French adaptations and new English/Chinese
 explanations. Project source code remains MIT. The [complete legal text](COPYING),
 [field rights](rights.json), [selected spans](source-excerpts.json) and
-[full contributor records](source-context.json) accompany the proposals.
+[full contributor records](source-context.json) accompany the selected content.
 
 Exact word/POS membership and unchanged frequency strings derive from Boris New and
 Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -13,13 +13,14 @@ Rows 3001–3050 preserve spelling, order and subclasses. CEFR remains unknown.
 
 ## Modifications and credits
 
-One selected everyday sense is proposed per exact group. French definitions are scoped
+One selected everyday sense is independently accepted per exact group. French definitions are scoped
 adaptations; English and Chinese are new explanations, rather than upstream bilingual
 sentences. Recorded French lexical equivalences also support do/ut/C. Construction,
 gender, number, register and region follow the selected use. One applicable isolated
 IPA variant is retained, with slashes added. Source spellings create no lookup aliases.
 Literary/news quotations, media, etymologies and other-language entries are outside the
-proposed fields. The original field proposals remain in [authored/](authored/groups.json).
+selected fields. The certain-trades restriction is explicit in all three brigade meaning fields.
+The original field proposals remain in [authored/](authored/groups.json).
 
 Wiktionnaire contributors receive credit through the complete linked histories below
 and the fully paginated named registries and returned anonymous counts in source-context.json.
@@ -92,5 +93,5 @@ layer uses CC BY-SA 4.0 without additional restrictions. Referenced external wor
 own rights; bibliography does not grant permission to redistribute their text. The coordinator
 must verify the actual combined materials and notices before canonical admission.
 
-All 200 fields remain pending separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this package.
+All 200 selected fields pass independent quality and selected-text rights review.
+Canonical conversion, actual packaged obligations and native checks remain pending.
