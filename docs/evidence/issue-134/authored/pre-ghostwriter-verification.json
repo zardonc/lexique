@@ -1,0 +1,80 @@
+{
+  "ticket": 134,
+  "status": "review_checks_passed_with_one_required_group_unresolved",
+  "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+  "author_commit": "2937688639cde50a9ad919292b7803a3225b03db",
+  "initial_review_base": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+  "final_integration_merge": "75a7edda18012d2e20345494fadc497e2edc3103",
+  "tested_state": "Scoped staged and working-tree review changes over the final integration base; exact final patches retained in the reviewer archive.",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-134",
+  "branch": "codex/d2-review-134",
+  "platform": "Windows x64; PowerShell 7; Python 3.14.10 via uv; pnpm 11.25.0",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-134\\issue-134-review",
+  "live_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-134\\target\\issue-134-review",
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134",
+  "accepted_groups": 49,
+  "accepted_fields": 196,
+  "changed_fields": 0,
+  "unresolved_rows": [
+    2675
+  ],
+  "unresolved_quality_fields": 4,
+  "pending_rights_fields": 4,
+  "root_source_context_rights_passes": 50,
+  "explicit_unadmitted_sources": 1,
+  "daf8_original_boundary_sources": 35,
+  "daf8_selected_boundaries_cleared": 34,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py",
+      "status": "passed",
+      "tests": 5,
+      "log": "final-batch.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-134-review/audit.py",
+      "status": "passed",
+      "log": "final-audit.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "documents": 446,
+      "local_links": 3483,
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "focused_red": {
+    "status": "expected_failure",
+    "log": "review-red.log",
+    "failure": "Author-prepared review kind did not satisfy independent acceptance records."
+  },
+  "retained_originals": {
+    "nine_json_files": "verified byte-for-byte against author commit",
+    "prose_and_legal": "original bytes preserved under authored/",
+    "record": "authored/snapshot.json"
+  },
+  "audit_report": "source-audit.json",
+  "full_patch": "accepted-shard.patch",
+  "test_patch": "tests.patch",
+  "limitations": [
+    "Content filtering limited row 2675 source inspection; quality and selected rights remain unresolved without an exemption.",
+    "Direct Légifrance retrieval returned HTTP 403; retained fixed policy and first-party indexed statutory text were inspected."
+  ],
+  "coordinator_owned_unrun": [
+    "Resolve row 2675",
+    "Canonical assembly/conversion",
+    "Actual combined notices/source obligations",
+    "Native all-group lookup/save/reopen and preservation",
+    "Global coverage/size gates",
+    "Learner acceptance",
+    "Offline/platform/release checks",
+    "Tracker operations"
+  ],
+  "recorded_at_utc": "2026-11-22T02:46:54.434371+00:00"
+}

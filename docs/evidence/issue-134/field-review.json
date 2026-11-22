@@ -6894,9 +6894,9 @@
         "revid": 39904725,
         "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
         "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
-        "line_1_based": 39,
+        "line_1_based": 56,
         "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
       },
       "supporting_sources": [
         {
@@ -6937,19 +6937,39 @@
         }
       ],
       "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+      "accepted_text_quality_status": "passed",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
       "author_rights_proposal": {
         "source_id": "b134_fr_168876",
         "evidence": "rights.json and source-context.json",
         "selected_span_independent_rights_review": "pending"
       },
-      "accepted_text": "Terme injurieux et péjoratif désignant un homme noir, généralement afrodescendant ; emploi vieilli ou vulgaire, non neutre.",
+      "accepted_text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
       "independence": true,
-      "review_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved.",
-      "acceptance_decision": "not_accepted",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "review_reason": "Passed unchanged from coordinator proposal. Au figuré states the contemporary figurative restriction. Écrivain payé, écrire un livre and another person’s authorship credit faithfully scope fixed noun definition 56; signer de son nom denotes byline credit, not a physical autograph.",
+      "acceptance_decision": "accepted",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "original_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 39,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+      },
+      "coordinator_proposed_text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
+      "coordinator_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      },
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2675-nègre-nom-selected",
@@ -7009,9 +7029,9 @@
         }
       ],
       "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+      "accepted_text_quality_status": "passed",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
       "author_rights_proposal": {
         "source_id": "b134_fr_168876",
         "evidence": "rights.json and source-context.json",
@@ -7019,9 +7039,33 @@
       },
       "accepted_text": "/nɛɡʁ/",
       "independence": true,
-      "review_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved.",
-      "acceptance_decision": "not_accepted",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "review_reason": "Passed unchanged. Fixed French masculine noun frame 13–15 records nɛɡʁ; /nɛɡʁ/ retains that isolated-headword variant with no adjective, feminine, liaison or audio substitution.",
+      "acceptance_decision": "accepted",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "original_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 15,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''nègre''' {{pron|nɛɡʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|négresse}} {{hispanisme|fr}}",
+        "ipa_variant_column_1_based": 20,
+        "ipa_variant_excerpt": "nɛɡʁ"
+      },
+      "coordinator_proposed_text": "/nɛɡʁ/",
+      "coordinator_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 15,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''nègre''' {{pron|nɛɡʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|négresse}} {{hispanisme|fr}}",
+        "ipa_variant_column_1_based": 20,
+        "ipa_variant_excerpt": "nɛɡʁ"
+      },
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2675-nègre-nom-selected",
@@ -7036,9 +7080,9 @@
         "revid": 39904725,
         "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
         "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
-        "line_1_based": 39,
+        "line_1_based": 56,
         "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
       },
       "supporting_sources": [
         {
@@ -7079,19 +7123,39 @@
         }
       ],
       "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+      "accepted_text_quality_status": "passed",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
       "author_rights_proposal": {
         "source_id": "b134_fr_168876",
         "evidence": "rights.json and source-context.json",
         "selected_span_independent_rights_review": "pending"
       },
-      "accepted_text": "An insulting, derogatory term for a Black man, generally of African descent; dated or vulgar usage, not a neutral designation. Masculine noun.",
+      "accepted_text": "In figurative use, a paid ghostwriter who writes a book credited to another person as its author. Masculine noun.",
       "independence": true,
-      "review_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved.",
-      "acceptance_decision": "not_accepted",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "review_reason": "Passed after clarification. Paid ghostwriter, writes a book and credit to another person as author match definition 56. The byline wording removes ambiguity about a physical autograph while retaining figurative use and masculine noun.",
+      "acceptance_decision": "accepted",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "original_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 39,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+      },
+      "coordinator_proposed_text": "In figurative use, a paid ghostwriter who writes a book that another person signs under their own name. Masculine noun.",
+      "coordinator_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      },
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2675-nègre-nom-selected",
@@ -7106,9 +7170,9 @@
         "revid": 39904725,
         "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
         "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
-        "line_1_based": 39,
+        "line_1_based": 56,
         "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
       },
       "supporting_sources": [
         {
@@ -7149,19 +7213,39 @@
         }
       ],
       "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+      "accepted_text_quality_status": "passed",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
       "author_rights_proposal": {
         "source_id": "b134_fr_168876",
         "evidence": "rights.json and source-context.json",
         "selected_span_independent_rights_review": "pending"
       },
-      "accepted_text": "对黑人男性、通常是非洲裔男性的侮辱性贬称；用法陈旧或粗俗，并非中性称谓。阳性名词。",
+      "accepted_text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
       "independence": true,
-      "review_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved.",
-      "acceptance_decision": "not_accepted",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "review_reason": "Passed unchanged from coordinator proposal. 受雇 retains paid employment; 替他人写书 and 由对方署名 express writing a book with another person’s authorship credit; 代笔者 is the scoped explanation. 转义 and 阳性名词 preserve use and POS.",
+      "acceptance_decision": "accepted",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "original_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 39,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+      },
+      "coordinator_proposed_text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
+      "coordinator_proposed_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      },
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2676-cardiaque-adj-selected",
@@ -16905,15 +16989,15 @@
       "source_headword": "nègre",
       "proposed_usage": "Masculine noun; derogatory racial designation, for comprehension of offensive dated or vulgar language.",
       "language": "en",
-      "excluded_uses": "Slave sense, ghostwriter, editorial rewriter, military top student, blackface performer and colour adjective.",
+      "excluded_uses": "Racial designation (39), slave sense, editorial revision (61), military, performer and adjective uses.",
       "exact_source": {
         "source_id": "b134_fr_168876",
         "revid": 39904725,
         "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
         "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
-        "line_1_based": 39,
+        "line_1_based": 56,
         "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
       },
       "supporting_sources": [
         {
@@ -16993,14 +17077,16 @@
       ],
       "author_construction_and_flexion_interpretation": "Masculine noun; derogatory racial designation, for comprehension of offensive dated or vulgar language. Source lexical/POS frame and applicable headword pronunciation retained.",
       "author_everyday_use_assessment": "Current vulgar racial designation for comprehension, retaining insulting, pejorative and dated/vulgar labels from lexical line 39. The retained article also cites a 2020 metalinguistic discussion at line 55; that quotation is not adapted into any learner field. Everyday-use eligibility remains for the separate reviewer.",
-      "accepted_usage_quality_status": "unresolved",
-      "everyday_sense_status": "unresolved",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
-      "accepted_usage": "Masculine noun; derogatory racial designation, for comprehension of offensive dated or vulgar language.",
-      "everyday_use_decision": "unresolved",
-      "everyday_sense_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved.",
-      "review_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved.",
-      "independence": true
+      "accepted_usage_quality_status": "passed",
+      "everyday_sense_status": "passed",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "accepted_usage": "Masculine noun in figurative use: a paid ghostwriter writes a book signed under another person's name.",
+      "everyday_use_decision": "passed",
+      "everyday_sense_reason": "Passed as an ordinary contemporary figurative masculine noun, with the paid-book-writing/byline sense limited to fixed definition 56. Original Robert HTTP 200 HTML separately identifies nom masculin / au figuré without an obsolete label on that sense. Definition 39’s racial restrictions and definition 61’s editorial revision are different uses. No specialist or annotation exception is needed.",
+      "review_reason": "Passed as an ordinary contemporary figurative masculine noun, with the paid-book-writing/byline sense limited to fixed definition 56. Original Robert HTTP 200 HTML separately identifies nom masculin / au figuré without an obsolete label on that sense. Definition 39’s racial restrictions and definition 61’s editorial revision are different uses. No specialist or annotation exception is needed.",
+      "independence": true,
+      "coordinator_proposed_usage": "Masculine noun in figurative use: a paid ghostwriter writes a book signed under another person's name.",
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2676-cardiaque-adj-selected",
@@ -20980,10 +21066,11 @@
           "reviewed_excerpt": "'''nègre''' {{pron|nɛɡʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|négresse}} {{hispanisme|fr}}"
         }
       ],
-      "construction_and_flexion_interpretation": "Masculine noun; derogatory racial designation, for comprehension of offensive dated or vulgar language. Source lexical/POS frame and applicable headword pronunciation retained.",
-      "independent_review": "pending",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
-      "review_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "construction_and_flexion_interpretation": "Masculine noun in figurative use: a paid ghostwriter writes a book signed under another person's name.",
+      "independent_review": "passed_source_binding_only",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "review_reason": "Exact accented French noun source spelling nègre; frozen NOM and row 2675 unchanged. No runtime alias is admitted.",
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2676-cardiaque-adj-selected",
@@ -22288,41 +22375,13 @@
       "review_reason": "The popular traditional narrative at 28 is ordinary legend; cartographic keys, captions, saint’s lives and celebrity senses are unselected. Exact French spelling/POS or explicit inflection evidence supports this source binding; it adds no runtime alias."
     }
   ],
-  "unresolved_fields": [
-    {
-      "frozen_row": 2675,
-      "headword": "nègre",
-      "pos": "NOM",
-      "sense_id": "b134-2675-nègre-nom-selected",
-      "field": "french_definition",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
-    },
-    {
-      "frozen_row": 2675,
-      "headword": "nègre",
-      "pos": "NOM",
-      "sense_id": "b134-2675-nègre-nom-selected",
-      "field": "ipa",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
-    },
-    {
-      "frozen_row": 2675,
-      "headword": "nègre",
-      "pos": "NOM",
-      "sense_id": "b134-2675-nègre-nom-selected",
-      "field": "english",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
-    },
-    {
-      "frozen_row": 2675,
-      "headword": "nègre",
-      "pos": "NOM",
-      "sense_id": "b134-2675-nègre-nom-selected",
-      "field": "chinese",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
-    }
-  ],
-  "batch_complete": false,
-  "accepted_fields": 196,
-  "accepted_groups": 49
+  "unresolved_fields": [],
+  "batch_complete": true,
+  "accepted_fields": 200,
+  "accepted_groups": 50,
+  "alternative_review": {
+    "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+    "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+    "evidence": "ghostwriter-review.json"
+  }
 }

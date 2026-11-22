@@ -1400,8 +1400,8 @@
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
-      "source_frame": "unresolved_selected_use_not_admitted",
-      "selected_text_review": "pending_separate_selected_span_audit",
+      "source_frame": "fixed_french_wiktionnaire_selected_frame_independently_reviewed",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1414,11 +1414,12 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+          "independent_review": "historical_original_assessed_separately_not_selected_definition",
+          "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+          "selected_boundary": "Fresh DAF8 and initial import comparison distinguish the original workshop-auxiliary wording from selected definition 56."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
+      "modification": "Selected paid-book/byline noun definition 56; scoped French adaptation and new EN/ZH explanations; isolated IPA 15.",
       "external_reference_markers": [
         {
           "line_1_based": 278,
@@ -1432,8 +1433,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved.",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "selected_boundary_review": "ghostwriter-review.json"
     },
     {
       "id": "b134_fr_178213",

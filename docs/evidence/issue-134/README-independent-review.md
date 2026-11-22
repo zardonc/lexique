@@ -1,91 +1,79 @@
 # Independent field and selected-rights review: #134
 
-**49 ordinary uses / 196 fields accepted, all unchanged.** Row 2675 retains four
-unresolved fields and no exemption. All 50 exact frozen groups, POS subclasses,
-frequency strings and order are preserved.
+**50 ordinary groups / 200 fields accepted.** All prior 196 accepted fields are
+unchanged. Row 2675 now selects the paid-ghostwriter noun: all four fields pass
+fresh independent quality and selected-rights review. There are zero unresolved
+fields, reused groups/fields, annotation exceptions or specialist exceptions.
+All 50 frozen groups, POS subclasses, frequency strings and order are preserved.
+Canonical admission is still pending for all 200 fields.
 
-Reviewer: **Independent semantic and selected-rights reviewer #134; separate from
-author and integration owner**. Author commit: `2937688`. Checkout:
+The fresh reviewer is separate from the coordinator alternative author and the
+original author (`2937688`). Checkout:
 `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/review-134`, branch
-`codex/d2-review-134`. The clean initial branch at `7e13502` was normally merged
-with integration to review base `7b619a7`. Ownership is this evidence directory
-and [the batch test](../../../scripts/test_core_batch_134.py). The reviewer guide,
-local/repository rules, ticket #134, parent #78, pilot #79, pipeline notes,
-glossary, resource ADRs and coding standards were read.
+`codex/d2-review-134`; integration `3c2432f` was merged before this review.
+Scope is row 2675, owned #134 evidence and the
+[focused batch test](../../../scripts/test_core_batch_134.py). Repository/local
+guidance, the reviewer guide, exact #78/#134 specifications, source archives,
+selected import/licence context and the existing owned evidence were read.
+The prior 196 decisions are preserved, not reissued as fresh review.
 
-[Field decisions](field-review.json) preserve all 200 exact proposals/current
-text, source spans and separate quality/rights verdicts. [Per-use and per-field
-reasons](independent-review-decisions.json) record grammatical fit, constructions,
-exclusions and applicable IPA. [Authored snapshots](authored/snapshot.json)
-preserve all nine original JSON files byte-for-byte against the author commit,
-plus original prose/legal text. [Replacements](accepted-replacements.json) is
-empty. English and Chinese are independently assessed Lexique explanations of
-the selected French semantics, with their actual restrictions.
+[Actual decisions](ghostwriter-review.json) bind the four fields to fixed
+Wiktionnaire revision **39904725**, paid-writer definition **56** and nominal
+IPA **15**, with French/POS support **3, 13–15**. The French definition, IPA
+`/nɛɡʁ/` and Chinese explanation pass unchanged from the coordinator proposal.
+English is accepted as:
 
-## Selected boundaries
+> In figurative use, a paid ghostwriter who writes a book credited to another
+> person as its author. Masculine noun.
 
-`lesquels/PRO:int` and `lesquels/PRO:rel` retain separate masculine plural frames,
-their respective `lequel` definitions and exact-form `/le.kɛl/`. The relative
-use retains ordinary prepositional context. `bijoux/NOM` preserves its plural
-identity, decorative-object `bijou` meaning and `/bi.ʒu/`, without pronouncing
-plural x. These source relations add no runtime aliases.
+This clarifies authorship/byline credit. All four fields describe the paid
+book-writing use; contemporary Robert raw HTML independently identifies
+**nom masculin / au figuré**. Racial definition 39 and editorial revision 61
+are separate uses. No alias, frozen-identity change or exception is admitted.
 
-`tester` selects the second verb frame's test definition and actual tested
-objects, rather than the testament-making homonym. Its inconsistent intransitive
-header does not override that object-taking use. `arrestation` binds through
-the API/article identity and pronunciation line 57, `/a.ʁɛs.ta.sjɔ̃/`; the faulty
-lexical-header spelling and omitted consonant are excluded.
-`piper les dés` selects physical dice tampering and `/pi.pe/`, separately from
-computing `/paj.pe/`. `occupé` uses adjective `/ɔ.ky.pe/`, not the participle
-frame's `/o.ky.pe/`.
+[Original authored snapshots](authored/snapshot.json) remain intact.
+[Original row and unaccepted racial proposal](authored/original-rejected-2675.json)
+preserve its exact group, fields, source spans, use and historical review state.
+[Coordinator proposal](authored/coordinator-ghostwriter-proposal.json) is retained
+byte-for-byte. [Replacements](accepted-replacements.json) identify both authors,
+the fresh reviewer, original/coordinator/accepted text and accepted source spans
+for all four replacement-use fields. Three texts differ from the original racial
+proposal; only English differs from the coordinator proposal. IPA text is
+identical but belongs to the newly selected use.
 
-`orange` is the feminine fruit, `voile` the feminine boat sail, `lion` the animal
-species rather than only its male, and `baron` the figurative powerful person.
-`assis`, `reconnaissant` and `ennuyeux` retain their adjective frames and agreement.
+[Selected rights](selected-rights.md) records the actual DAF8/TLFi comparison.
+Initial DAF8 import **434860** lacks the paid-writer definition; revision
+**448299** adds it under **Ericdec**. Fresh first-party DAF8/TLFi HTTP 200 captures
+show different wording. The complete retained contributor chain credits **83
+named / 19 anonymous article contributors**, rather than claiming sentence
+authorship from the registry. Selected wiki contributions and Lexique
+adaptations/translations retain CC BY-SA 4.0 with source/history credits,
+modification notices, licence text/link and share-alike. DAF8 original credit and
+historical rights are identified separately. Fresh direct Légifrance requests
+returned 403; the retained actual indexed first-party statutory records and
+fixed policy quotation were independently read.
 
-Row 2675 remains unresolved because a content filter blocked part of source
-inspection. All four original proposals remain present. Its field, use, source,
-spelling-review and rights records withhold acceptance. No annotation, specialist
-sense or alternate spelling is approved.
+Robert is corroboration only: its publisher notice limits use to personal use,
+and no Robert redistribution permission is asserted. Robert/TLFi prose,
+unrelated quoted stories, audio/media and other senses do not enter the resource.
+Original Robert filesystem-write UTC and HTTP Date metadata are retained with
+their actual stated basis.
 
-## Source and rights evidence
+The regression first fails on the old racial selection, then all **six focused
+tests pass** on the replacement. They check exact frozen membership/frequencies,
+all 200 proposed/accepted field bindings, use alignment, literal fixed API/raw
+identity, contributor pagination, original-proposal preservation, the distinct
+alternative identity and selected rights consistency. A separate audit checks
+the actual selected source, raw Robert corroboration and historical comparisons.
+[Verification](ghostwriter-verification.json) records commands and results.
 
-The audit confirms **51 literal API/raw article byte identities**, all **200
-structural field spans** and **2,510 recorded span occurrences**. Independent
-field/frame inspection covers the **196 accepted fields**. Structural agreement
-does not clear the unresolved row. Two complete contributor chains contain seven
-responses, **2,981 named article memberships** and **474 anonymous counts**;
-these are article credits, not unique people or sentence authorship.
-
-The 50 source nodes used by accepted fields have root selected-rights acceptance
-in [context](source-context.json); the other source is explicitly unadmitted.
-[Selected rights](selected-rights.md) and [rights records](rights.json) distinguish
-fixed wiki/Lexique layers, historical original-work credit and excluded material.
-`donnée`'s CFC-associated representation **31** is excluded while information **11**
-is selected. `légende`'s CFC subsenses **18** and **20** are excluded while narrative
-**28** is selected. No CFC licence is asserted. The DAF8 collective original
-retains the independently inspected conservative **2006-01-01** expiry. Direct
-Légifrance requests returned 403; retained policy and indexed first-party
-statutory text supply the recorded legal basis.
-
-## Verification and remaining gates
-
-The focused resource/admission check first failed on absent independent-review
-records, then passed on the actual decisions. It checks exact membership and
-frequencies, four fields/use alignment, original/current text, exact source
-spans, contributor pagination, accepted source-context rights and the explicit
-unresolved row. Source audit, documentation/link and diff checks are recorded
-in [verification](verification.json).
-
-Complete reviewer cache, authorities, audit/boundaries, helpers, full/test-only
-patches and actual logs:
-`C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-134/issue-134-review/`.
-Live ignored evidence: `target/issue-134-review/`.
+Raw corroboration, exact proposal, selected author captures, historical HTTP
+responses, statutory records, actual decisions, helpers, preservation results,
+patches and logs are archived at:
+`C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-134/ghostwriter-review/`.
 Stable author evidence:
 `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-134/`.
 
-No new canonical fields are admitted: **196 independently accepted fields await
-assembly; four required fields remain unresolved**. Canonical conversion,
-combined notices, global counts, native lookup/save/reopen and preservation,
-learner acceptance, offline/platform/release checks and tracker operations
-remain coordinator-owned and unrun by this reviewer.
+Canonical conversion/assembly, combined artifact notices, native lookup/save/
+reopen, global coverage, learner and release checks remain coordinator-owned.
+No application, shared resource hooks or learning data changed.
