@@ -1,0 +1,69 @@
+{
+  "ticket": 138,
+  "kind": "completed_selected_text_rights_metadata_alignment",
+  "branch": "codex/d2-review-138",
+  "completed_review_commit": "07bd89b529d60ac39c97289dc9d1499e6678ea2f",
+  "integration_tip_merged": "75a7edda18012d2e20345494fadc497e2edc3103",
+  "merge_mode": "normal_fast_forward_from_clean_review_branch",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/metadata-alignment",
+  "committed_identity_record": "final-verification.json in archive_root",
+  "marker_path": "source-context.json.current_content[].selected_text_rights_status",
+  "observed_previous_marker": "pending_independent_selected_text_and_import_boundary_audit",
+  "aligned_marker": "passed_at_selected_text_boundary",
+  "aligned_sources": 50,
+  "completed_rights_verdict_fields": 200,
+  "verdict_basis": [
+    "rights.json.sources[].independent_review and selected_text_rights_reason",
+    "rights.json.fields[].independent_review and selected_text_rights_reason",
+    "field-review.json.fields[].rights_eligibility_status and selected_text_rights_reason",
+    "source-audit.json.sources[] retained selected revision, locations, reviewer and reason"
+  ],
+  "accepted_prose_changes": 0,
+  "source_identity_or_span_changes": 0,
+  "protected_existing_evidence_files_byte_identical": 42,
+  "quality_accepted_groups_unchanged": 49,
+  "quality_accepted_fields_unchanged": 196,
+  "unresolved_semantic_rows_unchanged": [2894],
+  "halte_quality_status_unchanged": "unresolved_everyday_eligibility",
+  "halte_rights_status": "passed_at_selected_text_boundary",
+  "unresolved_source_fields_unchanged": 0,
+  "unresolved_legal_fields_unchanged": 0,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py Batch138Tests.test_source_context_markers_match_completed_selected_text_verdicts",
+      "status": "expected_failure_before_alignment",
+      "failures": 50,
+      "log": "RED-markers.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py Batch138Tests.test_source_context_markers_match_completed_selected_text_verdicts",
+      "status": "passed",
+      "log": "GREEN-markers.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py",
+      "status": "passed",
+      "tests": 11,
+      "log": "GREEN-batch.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-138-review/metadata-alignment/check_metadata_delta.py",
+      "status": "passed",
+      "log": "metadata-delta.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "documents": 445,
+      "local_links": 3477,
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "global_canonical_gates_native_tracker": "coordinator_owned_not_run",
+  "separate_modern_halte_interjection_investigation": "pending_elsewhere_not_performed_in_this_follow_up"
+}

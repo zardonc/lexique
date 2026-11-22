@@ -1,0 +1,47 @@
+{
+  "ticket": 134,
+  "frozen_row": 2675,
+  "headword": "nègre",
+  "pos": "NOM",
+  "reviewer": "Fresh independent follow-up reviewer #134; separate from original author and prior partial review",
+  "reviewed_author_commit": "2937688639cde50a9ad919292b7803a3225b03db",
+  "prior_partial_review": "b72c9fe",
+  "review_base": "98794579b05835950908b681e735c50c9e76151f",
+  "status": "incomplete_full_quality_and_selected_rights_audit",
+  "inspection_limitation": "A content filter blocked part of source/authority inspection. The blocked material was not retried; full audit verdicts remain unresolved.",
+  "source": {
+    "source_id": "b134_fr_168876",
+    "pageid": 168876,
+    "revid": 39904725,
+    "timestamp": "2026-09-26T11:24:28Z",
+    "selected_field_lines": [15, 39],
+    "necessary_frame_lines": [3, 13, 14, 15],
+    "contemporary_context_line": 55,
+    "import_reference_lines": [278, 279],
+    "selected_sentence_authorship_proved": false
+  },
+  "observations": {
+    "french_definition": "Line 39 supports the proposed referent and insulting, derogatory, dated-or-vulgar restriction; the adaptation omits the historical-neutrality note rather than teaching current neutral use.",
+    "ipa": "Line 15 gives nɛɡʁ in the masculine French noun frame; the proposed /nɛɡʁ/ selects that isolated-headword pronunciation.",
+    "english": "The proposed explanation retains the same referent, general African-descent qualification, grammatical gender and all selected register restrictions.",
+    "chinese": "The proposed explanation retains the male referent, general African-descent qualification, masculine noun and insulting/derogatory/dated-or-vulgar restriction.",
+    "use": "The selected source contains a 2020 metalinguistic example under this sense. Contemporary comprehension context was inspected, but full ordinary modern scoped-use eligibility is not resolved by this incomplete audit.",
+    "rights": "DAF8 import and TLFi reference markers were inspected at 278/279. They identify article-level boundaries, not the author of a selected sentence. Full selected-source rights review remains incomplete; no broad article licence or contributor count is treated as permission."
+  },
+  "quality_verdicts": {
+    "french_definition": "unresolved",
+    "ipa": "unresolved",
+    "english": "unresolved",
+    "chinese": "unresolved"
+  },
+  "selected_rights_verdict": "unresolved",
+  "everyday_scoped_use_verdict": "unresolved",
+  "newly_accepted_fields": 0,
+  "previously_accepted_fields_preserved": 196,
+  "replacement_fields": 0,
+  "unresolved_fields": 4,
+  "exemptions": 0,
+  "alternate_identity": null,
+  "source_notices": "unchanged_pending_actual_full_audit",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-134/issue-134-followup"
+}

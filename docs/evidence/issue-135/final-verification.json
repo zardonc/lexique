@@ -1,0 +1,144 @@
+{
+  "ticket": 135,
+  "parent": 78,
+  "status": "author_package_verified_independent_review_and_native_admission_pending",
+  "author_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-135",
+  "diff_base": "e4005d868880dac12c84c412773049eea737bc67",
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-135",
+  "original_target_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-135\\target\\issue-135",
+  "source_test_reads": "stable_archive_first_for_all_article_api_raw_contributor_request_and_rights_captures",
+  "scope_denominator_groups": 4087,
+  "frozen_rows": [
+    2701,
+    2702,
+    2703,
+    2704,
+    2705,
+    2706,
+    2707,
+    2708,
+    2709,
+    2710,
+    2711,
+    2712,
+    2713,
+    2714,
+    2715,
+    2716,
+    2717,
+    2718,
+    2719,
+    2720,
+    2721,
+    2722,
+    2723,
+    2724,
+    2725,
+    2726,
+    2727,
+    2728,
+    2729,
+    2730,
+    2731,
+    2732,
+    2733,
+    2734,
+    2735,
+    2736,
+    2737,
+    2738,
+    2739,
+    2740,
+    2741,
+    2742,
+    2743,
+    2744,
+    2745,
+    2746,
+    2747,
+    2748,
+    2749,
+    2750
+  ],
+  "proposed_groups": 50,
+  "proposed_fields": 200,
+  "independently_accepted_new_groups": 0,
+  "independently_accepted_new_fields": 0,
+  "pending_quality_fields": 200,
+  "pending_rights_fields": 200,
+  "missing_authored_fields": 0,
+  "missing_admitted_fields": 200,
+  "canonical_content_version": "core-129-v2",
+  "canonical_admitted_groups": 2435,
+  "canonical_admitted_fields": 9740,
+  "canonical_groups_without_admitted_content": 1652,
+  "fixed_french_sources": 51,
+  "contributor_chain_parts": {
+    "support": 1,
+    "primary": 6
+  },
+  "contributor_article_credit_name_entries": 3037,
+  "historical_daf8_import_articles": 30,
+  "lengths": {
+    "longest_proposed_field_characters": 154.0,
+    "total_proposed_field_characters": 7868.0
+  },
+  "sizes": {
+    "converted_resource_bytes": null,
+    "source_and_rights_capture_bytes": 1472783.0,
+    "authored_package_bytes_before_this_report": 6464819.0,
+    "packaged_contribution_bytes": null,
+    "source_and_rights_capture_files": 85
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_135.py",
+      "evidence": "GREEN-archive-resource.log",
+      "status": "passed",
+      "tests": 5
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-135/reproduce.py",
+      "evidence": "reproduction.log",
+      "status": "passed",
+      "byte_equal_files": 16
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_135.py --admitted",
+      "evidence": "RED-admission-final.log",
+      "status": "expected_failure_missing_canonical_batch"
+    },
+    {
+      "command": "pnpm test:docs",
+      "evidence": "docs.log",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --cached --check",
+      "evidence": "diff-check.log",
+      "status": "passed"
+    }
+  ],
+  "review_attention_rows": [
+    2712,
+    2721
+  ],
+  "unresolved_author_field_rows": [],
+  "gates": {
+    "learner_acceptance": "not_run",
+    "release_readiness": "not_established",
+    "matching_native_lookup_save_normal_restart": "integration_owned_not_run",
+    "construction_spelling_everyday_use": "pending",
+    "independent_quality": "pending",
+    "prior_learning_state_preservation": "integration_owned_not_run",
+    "whole_machine_offline": "not_run",
+    "selected_span_rights": "pending",
+    "combined_converter_and_notices": "integration_owned_not_run",
+    "other_platforms": "not_run"
+  },
+  "skipped_checks": [
+    "Frontend lint/typecheck/build: no frontend change",
+    "Rust formatting/compilation/tests: no Rust change",
+    "Native/combined converter/package tests: coordinator-owned gates"
+  ]
+}

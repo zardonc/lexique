@@ -1,0 +1,25 @@
+# #133 selected-text rights proposal
+
+The 196 candidate fields have fixed source/version/line records in [rights.json](rights.json). Their quality and selected-span rights acceptance remain pending. The [source context](source-context.json) records the exact French frames, complete current named contributor registries, anonymous counts, full history credits, and article-level import/reference markers. A registry or import marker does not identify the author of a selected sentence.
+
+## Contribution and adaptation layers
+
+The fixed Wiktionnaire lexical definitions and pronunciation contributions retain CC BY-SA 4.0. French learner definitions remove markup and retain selected-use restrictions. English and Chinese are new Lexique explanatory translations of those French semantics; no upstream bilingual table is imported. These adaptations are offered under CC BY-SA 4.0, with explicit modification records and Lexique contributor credit. Application/converter MIT does not replace content terms.
+
+The complete [licence](COPYING), particularly sections 2(a), 3(a), 3(b) and 4, permits sharing/adaptation and applicable database extraction subject to source/author/licence identification, modification notices, ShareAlike and no additional downstream restrictions. [Wikimedia Terms section 7](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en) allows article/history attribution and retains separately imported works' actual obligations. The retained copyright-policy revision [38903168](https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit%20d%E2%80%99auteur&oldid=38903168) expressly distinguishes external material. Its API and text, complete Terms and CC legal HTML are reused from the established #129 authority archive. Copies remain in this ticket's `target/issue-133/rights/` and the stable external `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-133/rights/`. Policy text is compared after declared CRLF-to-LF normalization; article bodies are byte-exact UTF-8 matches to their API slots. The tracked legal text omits a terminal blank line only; the original licence bytes remain in `rights/COPYING.original`.
+
+## Historical original works
+
+DAF8-marked or referenced articles retain original credit to **Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935**, separately from modern Wiktionnaire transcription and Lexique adaptation. The fixed import-template revision [22113837](https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837) says all or part may have been extracted and subsequently modified. It does not prove individual sentence authorship.
+
+The established [#129 original-work account](../issue-129/selected-rights.md) applies [CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20) to the original institutional collective edition: final publication in 1935 gives **1936-01-01 + 70 years = 2006-01-01**. This historical original-work conclusion is reused, not a new independent review of #133 wording. Modern electronic editorial/transcription contributions are separate. Original author/work credit and modification information remain, consistent with [L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891). Every actual selected field and construction span still requires independent rights acceptance.
+
+## Selected and excluded boundaries
+
+No literary/news/social-media example bodies, other-language meanings, sound recordings, pictures or linked external dictionary prose enter learner fields. The two short `pourvoir` support fragments identify passive grammar and `de`; their full quoted source context remains in the raw archive, with exact columns. They supply construction evidence, not adapted literary text.
+
+`assiette` line 49 includes an image link/caption; only the lexical plate semantics are adapted. No image/caption is included in learner prose. `réserve` selects line 26, things set aside. Its separately marked **Import:CFC cartographic definition at line 88 is unselected**, with no claim that CC BY-SA covers that import. Source context records the exclusion explicitly. `for` retains its DAF8 reference separately, and the current `for intérieur` article supplies conscience semantics and generally-singular construction evidence. Bare `for` pronunciation is not replaced by the linked phrase pronunciation.
+
+## Redistribution handoff
+
+Candidate materials include [complete legal text](COPYING), [modification/original-work notices](NOTICES.md), [fixed article/history credits](SOURCE-NOTICES.md), selected excerpts and rights records. The combined core must include all actually accepted content, source/version records, applicable legal texts, attributions and required source materials through the established converter/packaging path. Raw research contains excluded material and is not a dictionary source union to redistribute. Coordinator assembly and actual packaged obligations remain unverified.

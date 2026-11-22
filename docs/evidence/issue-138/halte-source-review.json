@@ -1,0 +1,151 @@
+{
+  "ticket": 138,
+  "frozen_row": 2894,
+  "frozen_headword": "halte",
+  "frozen_pos": "ONO",
+  "sense_id": "b138-2894-halte-ono-selected",
+  "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+  "review_base": "cc641d0a09874b7099ebd2faf59b47580b3bf268",
+  "investigator_findings": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/investigator/findings.md",
+  "modern_sources": [
+    {
+      "id": "academie9-halte",
+      "url": "https://www.dictionnaire-academie.fr/article/A9H0116",
+      "retrieved_utc": "2026-11-22T02:42:57.2341678Z",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/investigator/20261122T023957Z/academie9-halte.raw",
+      "role": "contemporary_corroboration_only_no_publisher_text_reuse"
+    },
+    {
+      "id": "larousse-halte-38944",
+      "url": "https://www.larousse.fr/dictionnaires/francais/halte/38944",
+      "retrieved_utc": "2026-11-22T02:42:55.9862249Z",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/investigator/20261122T023957Z/larousse-halte-38944.raw",
+      "role": "contemporary_corroboration_only_no_publisher_text_reuse"
+    },
+    {
+      "id": "robert-halte",
+      "url": "https://dictionnaire.lerobert.com/definition/halte",
+      "retrieved_utc": "2026-11-22T02:39:57.4070873Z",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/investigator/20261122T023957Z/robert-halte.raw",
+      "role": "contemporary_corroboration_only_no_publisher_text_reuse"
+    },
+    {
+      "id": "academie8-halte",
+      "url": "https://www.dictionnaire-academie.fr/article/A8H0077",
+      "retrieved_utc": "2026-11-22T02:42:58.8238466Z",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/investigator/20261122T023957Z/academie8-halte.raw",
+      "role": "original_DAF8_wording_boundary"
+    }
+  ],
+  "everyday_use_status": "passed_familiar_figurative_construction",
+  "everyday_use_reason": "The familiar second sense at fixed halte-là line 9 is an interjection, and current Académie A9H0116 and Larousse halte/38944 retain its figurative use to stop excessive or inappropriate words/actions. Parent halte line 57 lists this interjection derivative; derivative line 3 explicitly composes halte and là. This is an ordinary construction-bound use of frozen halte/ONO, with familiar/figurative limits, without a noun substitution, alias or exception. Robert corroborates figurative halte à, but its literal halte-là gloss is not evidence for this selected familiar sense.",
+  "source_binding_relation": "interjection_derivative_composition",
+  "new_aliases": 0,
+  "new_groups": 0,
+  "annotation_exception": "none",
+  "selected_definition_source_id": "b138_fr_1914833",
+  "selected_definition_revid": 39006229,
+  "selected_definition_line": 9,
+  "headword_ipa_source_id": "b138_fr_25029",
+  "headword_ipa": "/alt/",
+  "construction_ipa_not_headword_field": "/al.tə.la/",
+  "named_contributors": 17,
+  "anonymous_contributors": 1,
+  "history_revisions": 24,
+  "history_api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/sources/history-1914833.api.json",
+  "pronunciation_origin_api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/sources/pronunciation-11016866.api.json",
+  "history_continuation_complete": true,
+  "current_registry_continuation_complete": true,
+  "current_registry_is_sentence_authorship": false,
+  "selected_text_rights_status": "passed_at_selected_text_boundary",
+  "selected_text_rights_reason": "halte-là, fixed revision 39006229, selected familiar definition at line 9: the sentence is present in Jona’s creation revision 7379871 (2010-06-09) and corresponds to the actual DAF8 A8H0077 familiar wording, with subject/register moved into the headword/tag. Credit Académie française, eighth edition 1932–1935; the established collective original-work L123-3 boundary is 2006-01-01. Fixed wiki transcription/editorial work and Lexique adaptations/translations remain CC BY-SA 4.0 with source/history, all 17 named contributors, anonymous-history credit, modification notices and ShareAlike. The current DAF8 reference corroborates this actual origin rather than granting a later edition’s rights. Modern DAF9/Robert/Larousse editorial text, the Bazin quotation, audio and Russian translation are unselected. This verdict covers the selected text; combined packaging remains coordinator-owned.",
+  "original_work": {
+    "author": "Académie française",
+    "edition": "eighth edition, 1932–1935",
+    "creation_revision": 7379871,
+    "creation_date": "2010-06-09T17:02:34Z",
+    "creation_editor": "Jona",
+    "actual_DAF8_entry": "https://www.dictionnaire-academie.fr/article/A8H0077",
+    "evidence": "The full familiar sentence is present at creation and corresponds to actual A8H0077; current reference at line 32 and pronunciation revision 11016866 retain DAF8 identification.",
+    "conservative_french_economic_rights_expiry": "2006-01-01",
+    "statutory_basis": "Existing project L123-3 collective-edition record in issue-129/selected-rights.md and issue-99/source-context.json; investigator direct statute requests returned 403.",
+    "electronic_editorial_text_selected": false
+  },
+  "modern_publisher_text_reuse": "not_selected_or_licensed",
+  "unselected_boundaries": "Literal immediate-stop sense, parent soldiers definition, Bazin quotation at 12–14, media, Russian translation, noun and verb senses.",
+  "fields": [
+    {
+      "field": "french_definition",
+      "proposed_text": "Ordre lancé pour faire arrêter des soldats : « Halte ! ». Le h est aspiré : muet, mais empêchant l’élision et la liaison.",
+      "accepted_text": "Dans l’expression familière « halte-là ! », sert à arrêter ou à faire taire quelqu’un qui dépasse les bornes.",
+      "text_changed": true,
+      "exact_source": {
+        "source_id": "b138_fr_1914833",
+        "revid": 39006229,
+        "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+      },
+      "review_reason": "The French definition explicitly selects familiar halte-là and retains both stopping/silencing and the person’s exceeding acceptable bounds; it does not generalise the soldiers command.",
+      "rights_status": "passed_at_selected_text_boundary"
+    },
+    {
+      "field": "ipa",
+      "proposed_text": "/alt/",
+      "accepted_text": "/alt/",
+      "text_changed": false,
+      "exact_source": {
+        "source_id": "b138_fr_25029",
+        "revid": 38818374,
+        "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+        "line_1_based": 51,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''halte''' {{h aspiré}}{{pron|alt|fr}}"
+      },
+      "review_reason": "Accepted unchanged /alt/ is the parent halte interjection headword pronunciation at line 51, with h aspiré. The derivative’s /al.tə.la/ remains the construction pronunciation, not this field.",
+      "rights_status": "passed_at_selected_text_boundary"
+    },
+    {
+      "field": "english",
+      "proposed_text": "Halt! A command to make soldiers stop. Its silent French h blocks elision and liaison (h aspiré).",
+      "accepted_text": "In the informal exclamation “halte-là!” (“that’s enough!”), tells someone who is overstepping acceptable bounds to stop or be quiet.",
+      "text_changed": true,
+      "exact_source": {
+        "source_id": "b138_fr_1914833",
+        "revid": 39006229,
+        "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+      },
+      "review_reason": "Informal exclamation and overstepping acceptable bounds render familier and va au-delà de ce qui convient; stop or be quiet preserves the two stated responses. “That’s enough!” explains this scoped rebuke.",
+      "rights_status": "passed_at_selected_text_boundary"
+    },
+    {
+      "field": "chinese",
+      "proposed_text": "“立定！停止！”：让士兵停下的口令。h 不发音，但阻止省音和连诵（h aspiré）。",
+      "accepted_text": "用于口语感叹语“halte-là !”（“够了！”），制止越过分寸的人，或让其住口。",
+      "text_changed": true,
+      "exact_source": {
+        "source_id": "b138_fr_1914833",
+        "revid": 39006229,
+        "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+      },
+      "review_reason": "口语感叹语 marks the familiar expression, 越过分寸 retains the excessive-behaviour condition, and 制止/让其住口 retains the stopping/silencing alternatives; it is not a military order.",
+      "rights_status": "passed_at_selected_text_boundary"
+    }
+  ],
+  "combined_package": "pending_coordinator_verification"
+}
