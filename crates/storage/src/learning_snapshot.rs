@@ -4,7 +4,8 @@ use serde::{Deserialize, Serialize, Serializer, ser::SerializeMap};
 use crate::{
     ConjugationBlockOrder, ConjugationMode, DictionaryCatalog, GrammarCardRequest, GrammarRecord,
     GrammarSaveRequest, InterfacePreferences, LearningCategory, QueueCard, RatingRequest,
-    ReviewSettings, SaveRequest, SpeechPreferences, SpeechSpec, SpeechVoice, VocabularyRecord,
+    ReviewScope, ReviewSettings, SaveRequest, SpeechPreferences, SpeechSpec, SpeechVoice,
+    VocabularyRecord,
 };
 
 #[derive(Deserialize, Serialize)]
@@ -342,6 +343,8 @@ pub struct SnapshotAudioRepair {
 #[serde(deny_unknown_fields)]
 pub struct SnapshotPreferences {
     pub review: ReviewSettings,
+    #[serde(default)]
+    pub review_scope: ReviewScope,
     pub auto_enroll: bool,
     pub speech: SpeechPreferences,
     pub interface: InterfacePreferences,

@@ -4,6 +4,66 @@ use rusqlite::{Connection, params};
 
 const CAPTURED_AT: i64 = 1_800_000_100;
 
+#[test]
+fn applied_review_scopes_roundtrip_with_category_identities_and_memberships() {
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    let voyage = create_category(&source, "Voyage").unwrap();
+    let ecole = create_category(&source, "École").unwrap();
+    let id = saved_word(&mut source, "scope-word", "école");
+    for category_id in [voyage.id, ecole.id] {
+        let results = bulk_classify(
+            &source,
+            &CategoryBulkRequest {
+                record_kind: "vocabulary".into(),
+                ids: vec![id],
+                category_id,
+                action: "add".into(),
+            },
+        )
+        .unwrap();
+        assert_eq!(results[0].status, "saved");
+    }
+    for scope in [
+        ReviewScope::All {},
+        ReviewScope::Vocabulary {
+            category_ids: vec![voyage.id],
+            include_uncategorized: false,
+        },
+        ReviewScope::Vocabulary {
+            category_ids: vec![voyage.id, ecole.id],
+            include_uncategorized: false,
+        },
+        ReviewScope::Vocabulary {
+            category_ids: vec![],
+            include_uncategorized: true,
+        },
+        ReviewScope::Vocabulary {
+            category_ids: vec![ecole.id],
+            include_uncategorized: true,
+        },
+        ReviewScope::NeedsSelection {},
+    ] {
+        set_review_scope(&source, &scope).unwrap();
+        let snapshot = export_learning_snapshot(&mut source, CAPTURED_AT).unwrap();
+        assert_eq!(snapshot.preferences.review_scope, scope);
+        let encoded = serde_json::to_vec(&snapshot).unwrap();
+        let decoded = read_learning_snapshot(encoded.as_slice(), CAPTURED_AT).unwrap();
+        let mut destination = Connection::open_in_memory().unwrap();
+        initialize(&destination).unwrap();
+        import_learning_snapshot(&mut destination, &decoded, CAPTURED_AT).unwrap();
+        assert_eq!(review_scope(&destination).unwrap(), scope);
+        assert_eq!(
+            learning_categories(&destination).unwrap(),
+            vec![voyage.clone(), ecole.clone()]
+        );
+        assert_eq!(
+            get(&destination, id).unwrap().category_ids,
+            vec![voyage.id, ecole.id]
+        );
+    }
+}
+
 fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> i64 {
     let id = save(
         connection,

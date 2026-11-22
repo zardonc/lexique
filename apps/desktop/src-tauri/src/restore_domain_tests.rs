@@ -551,6 +551,238 @@ fn restoring_an_earlier_backup_preserves_all_allocated_learning_identities() {
 }
 
 #[test]
+fn full_backup_restores_applied_review_scopes_and_preserves_the_destination_scope() {
+    let source = Fixture::new();
+    let mut connection = Connection::open(&source.database.0).unwrap();
+    let voyage = storage::create_category(&connection, "Voyage").unwrap();
+    let ecole = storage::create_category(&connection, "École").unwrap();
+    let mut saved = request("scope-A", "école", "A scoped notes");
+    saved.category_ids = vec![voyage.id, ecole.id];
+    let id = save(&mut connection, &saved);
+    let scopes = [
+        storage::ReviewScope::All {},
+        storage::ReviewScope::Vocabulary {
+            category_ids: vec![voyage.id],
+            include_uncategorized: false,
+        },
+        storage::ReviewScope::Vocabulary {
+            category_ids: vec![voyage.id, ecole.id],
+            include_uncategorized: false,
+        },
+        storage::ReviewScope::Vocabulary {
+            category_ids: vec![],
+            include_uncategorized: true,
+        },
+        storage::ReviewScope::Vocabulary {
+            category_ids: vec![ecole.id],
+            include_uncategorized: true,
+        },
+        storage::ReviewScope::NeedsSelection {},
+    ];
+    for (index, scope) in scopes.iter().enumerate() {
+        storage::set_review_scope(&connection, scope).unwrap();
+        let archive = source.root.0.join(format!("scope-{index}.lexique-backup"));
+        let workers = source.workers();
+        export_backup_to_new_file(
+            &source.database,
+            &workers,
+            &MaintenanceCoordinator::default(),
+            &archive,
+            &format!("scope-export-{index}"),
+            &AtomicBool::new(false),
+            |_| {},
+        )
+        .unwrap();
+        workers.shutdown().unwrap();
+        assert_eq!(
+            archive_snapshot(&archive)["preferences"]["review_scope"],
+            serde_json::to_value(scope).unwrap()
+        );
+
+        let destination = Fixture::new();
+        let mut target = Connection::open(&destination.database.0).unwrap();
+        storage::create_category(&target, "École").unwrap();
+        let target_category = storage::create_category(&target, "Voyage").unwrap();
+        let target_scope = storage::ReviewScope::Vocabulary {
+            category_ids: vec![target_category.id],
+            include_uncategorized: true,
+        };
+        storage::set_review_scope(&target, &target_scope).unwrap();
+        let target_id = save(&mut target, &request("scope-B", "destination", "B notes"));
+        target.close().unwrap();
+
+        let stage = destination.preview(&archive);
+        let prepared = destination.restore(stage, &format!("restore-scope-{index}"));
+        let restored = Connection::open(&destination.database.0).unwrap();
+        assert_eq!(storage::review_scope(&restored).unwrap(), *scope);
+        assert_eq!(
+            storage::learning_categories(&restored).unwrap(),
+            vec![voyage.clone(), ecole.clone()]
+        );
+        assert_eq!(
+            storage::get(&restored, id).unwrap().category_ids,
+            vec![voyage.id, ecole.id]
+        );
+        assert!(storage::find(&restored, "destination").unwrap().is_none());
+        restored.close().unwrap();
+
+        let retained = PathBuf::from(
+            &prepared
+                .retained_copies
+                .iter()
+                .find(|copy| copy.kind == PreservationKind::LogicalBackup)
+                .unwrap()
+                .path,
+        );
+        assert_eq!(
+            archive_snapshot(&retained)["preferences"]["review_scope"],
+            serde_json::to_value(&target_scope).unwrap()
+        );
+        let recovery = Fixture::new();
+        recovery.restore(
+            recovery.preview(&retained),
+            &format!("recover-scope-{index}"),
+        );
+        let recovered = Connection::open(&recovery.database.0).unwrap();
+        assert_eq!(storage::review_scope(&recovered).unwrap(), target_scope);
+        assert_eq!(
+            storage::get(&recovered, target_id).unwrap().headword,
+            "destination"
+        );
+    }
+}
+
+fn rewrite_scope_archive(source: &Path, destination: &Path, scope: Option<Value>) {
+    use std::io::Write;
+    let mut archive = zip::ZipArchive::new(fs::File::open(source).unwrap()).unwrap();
+    let mut output = zip::ZipWriter::new(fs::File::create_new(destination).unwrap());
+    for index in 0..archive.len() {
+        let mut entry = archive.by_index(index).unwrap();
+        let mut bytes = Vec::new();
+        entry.read_to_end(&mut bytes).unwrap();
+        if entry.name().unwrap() == "snapshot.json" {
+            let mut value: Value = serde_json::from_slice(&bytes).unwrap();
+            if let Some(scope) = &scope {
+                value["preferences"]["review_scope"] = scope.clone();
+            } else {
+                value["preferences"]
+                    .as_object_mut()
+                    .unwrap()
+                    .remove("review_scope");
+            }
+            bytes = serde_json::to_vec(&value).unwrap();
+        }
+        output
+            .start_file(
+                entry.name().unwrap(),
+                zip::write::SimpleFileOptions::default()
+                    .compression_method(zip::CompressionMethod::Stored),
+            )
+            .unwrap();
+        output.write_all(&bytes).unwrap();
+    }
+    output.finish().unwrap().sync_all().unwrap();
+}
+
+#[test]
+fn old_backup_without_review_scope_restores_all_instead_of_the_destination_preference() {
+    let source = Fixture::new();
+    let workers = source.workers();
+    let archive = source.root.0.join("old-source.lexique-backup");
+    export_backup_to_new_file(
+        &source.database,
+        &workers,
+        &MaintenanceCoordinator::default(),
+        &archive,
+        "old-scope-export",
+        &AtomicBool::new(false),
+        |_| {},
+    )
+    .unwrap();
+    workers.shutdown().unwrap();
+    let legacy = source.root.0.join("old-without-scope.lexique-backup");
+    rewrite_scope_archive(&archive, &legacy, None);
+    assert!(
+        archive_snapshot(&legacy)["preferences"]
+            .get("review_scope")
+            .is_none()
+    );
+    let destination = Fixture::new();
+    let connection = Connection::open(&destination.database.0).unwrap();
+    let category = storage::create_category(&connection, "Destination").unwrap();
+    let scope = storage::ReviewScope::Vocabulary {
+        category_ids: vec![category.id],
+        include_uncategorized: false,
+    };
+    storage::set_review_scope(&connection, &scope).unwrap();
+    connection.close().unwrap();
+    let prepared = destination.restore(destination.preview(&legacy), "restore-old-scope");
+    let restored = Connection::open(&destination.database.0).unwrap();
+    assert_eq!(
+        storage::review_scope(&restored).unwrap(),
+        storage::ReviewScope::All {}
+    );
+    assert!(storage::learning_categories(&restored).unwrap().is_empty());
+    let retained = PathBuf::from(
+        &prepared
+            .retained_copies
+            .iter()
+            .find(|copy| copy.kind == PreservationKind::LogicalBackup)
+            .unwrap()
+            .path,
+    );
+    assert_eq!(
+        archive_snapshot(&retained)["preferences"]["review_scope"],
+        serde_json::to_value(scope).unwrap()
+    );
+}
+
+#[test]
+fn invalid_scope_archives_fail_preview_before_replacing_destination_learning_data() {
+    let source = Fixture::new();
+    let connection = Connection::open(&source.database.0).unwrap();
+    storage::create_category(&connection, "Voyage").unwrap();
+    connection.close().unwrap();
+    let archive = source.root.0.join("scope-source.lexique-backup");
+    let workers = source.workers();
+    export_backup_to_new_file(
+        &source.database,
+        &workers,
+        &MaintenanceCoordinator::default(),
+        &archive,
+        "invalid-scope-source",
+        &AtomicBool::new(false),
+        |_| {},
+    )
+    .unwrap();
+    workers.shutdown().unwrap();
+    let destination = Fixture::new();
+    let mut connection = Connection::open(&destination.database.0).unwrap();
+    let id = save(
+        &mut connection,
+        &request("scope-destination", "destination", "Keep these notes"),
+    );
+    storage::set_review_scope(&connection, &storage::ReviewScope::NeedsSelection {}).unwrap();
+    let before = storage::export_learning_snapshot(&mut connection, NOW).unwrap();
+    for (index, scope) in [
+        json!({"kind":"vocabulary","category_ids":[1,1],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[2],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[0],"include_uncategorized":true}),
+        json!({"kind":"vocabulary","category_ids":[9_007_199_254_740_992_i64],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[],"include_uncategorized":false}),
+        json!({"kind":"all","include_uncategorized":true}),
+        json!(null),
+    ].into_iter().enumerate() {
+        let invalid = source.root.0.join(format!("invalid-scope-{index}.lexique-backup"));
+        rewrite_scope_archive(&archive, &invalid, Some(scope));
+        assert!(prepare_preview(&invalid, destination.database.0.parent().unwrap(), true, &AtomicBool::new(false), |_| {}).is_err());
+        assert_eq!(storage::get(&connection, id).unwrap().notes, "Keep these notes");
+        assert_eq!(serde_json::to_value(storage::export_learning_snapshot(&mut connection, NOW).unwrap()).unwrap(), serde_json::to_value(&before).unwrap());
+        assert!(!destination.database.0.parent().unwrap().join(".lexique-restore.json").exists());
+    }
+}
+
+#[test]
 fn ordinary_restore_keeps_history_replays_preferences_and_a_backup_that_restores_b() {
     let fixture = Fixture::new();
     let mut connection = Connection::open(&fixture.database.0).unwrap();

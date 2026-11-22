@@ -65,6 +65,7 @@ pub fn import_learning_snapshot(
         batch_status(&tx, &batch.operation)?;
     }
     review_settings(&tx)?;
+    review_scope(&tx)?;
     speech_preferences(&tx)?;
     interface_preferences(&tx)?;
     conjugation_preferences(&tx)?;
@@ -186,6 +187,10 @@ fn insert_preferences(
         [preferences.review.new_cards_ignore_review_limit.to_string()],
     )?;
     set_auto_enroll(connection, preferences.auto_enroll)?;
+    connection.execute(
+        "INSERT INTO app_metadata(key,value) VALUES('review-scope',?1)",
+        [serde_json::to_string(&preferences.review_scope)?],
+    )?;
     set_speech_preferences(connection, &preferences.speech)?;
     set_interface_preferences(connection, &preferences.interface)?;
     connection.execute(
