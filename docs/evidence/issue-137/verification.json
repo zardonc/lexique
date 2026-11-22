@@ -1,81 +1,112 @@
 {
   "ticket": 137,
   "parent": 78,
-  "kind": "author_package_resource_evidence",
-  "status": "author_checks_passed_independent_and_native_gates_pending",
-  "author_branch": "codex/d2-content-137",
-  "author_base_commit": "fbcc55129e1f8b4c6c47bb6ed73aa69991e926af",
+  "kind": "independent_reviewed_shard_resource_evidence",
+  "status": "independent_quality_and_selected_rights_passed_canonical_native_pending",
+  "reviewer": "Independent reviewer #137, codex/d2-review-137; separate from content author and integration coordinator",
+  "review_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-137",
+  "review_branch": "codex/d2-review-137",
+  "review_base": "a15ed6345371399c177a33dbbfa2cad5ec8f922e",
+  "reviewed_author_commits": [
+    "637652c3e614a1f0cfef3b186631b590a79f076d",
+    "b4adaf1ce0cfd5b83ff77c950229d5486899b7e1"
+  ],
+  "platform": "Windows PowerShell 7, Python 3.14.10",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     2801,
     2850
   ],
-  "proposed_groups": 50,
-  "proposed_senses": 50,
-  "proposed_fields": 200,
-  "fixed_french_sources": 53,
-  "contributor_response_parts": 7,
-  "named_article_contributor_memberships": 3031,
-  "daf8_marked_source_articles": 32,
-  "independently_accepted_new_groups": 0,
-  "independently_accepted_new_fields": 0,
-  "pending_quality_fields": 200,
-  "pending_rights_fields": 200,
-  "missing_admitted_fields": 200,
-  "author_unresolved_content_rows": [],
-  "stable_author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-137",
-  "toolchain": {
-    "python": "3.14.10",
-    "pnpm": "11.25.0"
+  "independently_accepted_new_groups": 50,
+  "independently_accepted_new_fields": 200,
+  "unchanged_fields": 198,
+  "replacement_fields": 2,
+  "unresolved_quality_fields": 0,
+  "unresolved_selected_rights_fields": 0,
+  "canonical_pending_groups": 50,
+  "canonical_pending_fields": 200,
+  "annotation_exception_groups": 0,
+  "specialist_exception_groups": 0,
+  "source_audit": {
+    "articles": 53,
+    "article_comparison": "literal_utf8_byte_equality",
+    "selected_field_spans": 200,
+    "total_checked_span_occurrences": 1564,
+    "contributor_responses": 7,
+    "finished_contributor_chains": 2,
+    "named_article_memberships": 3031,
+    "anonymous_article_counts": 598,
+    "authorities": [
+      {
+        "title": "Convention:Droit d’auteur",
+        "revision": 38903168,
+        "comparison": "equal_after_newline_normalization"
+      },
+      {
+        "title": "Modèle:Import:DAF8",
+        "revision": 22113837,
+        "comparison": "equal_after_newline_normalization"
+      },
+      {
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+        "retained": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137\\rights\\cc-legal.html"
+      },
+      {
+        "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+        "retained": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137\\rights\\terms.html"
+      }
+    ],
+    "unique_supporting_spans": 194,
+    "daf8_import_articles": 32,
+    "legal_or_linguistic_verdict": "None: separate recorded editorial decisions are required."
   },
+  "stable_author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137",
+  "stable_review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-137\\issue-137-review",
+  "local_review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-137\\target\\issue-137-review",
   "checks": [
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py",
-      "phase": "initial resource seam",
-      "result": "failed_expected_missing_admission",
-      "exit_code": 1,
-      "missing_frozen_groups": 50,
-      "log": "resource-red.log"
-    },
-    {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py --author-only",
-      "result": "passed",
-      "tests": 4,
-      "exit_code": 0,
-      "log": "author-tests-final.log"
+      "result": "failed_expected_two_chinese_scope_regressions_before_correction",
+      "exit_code": 1,
+      "log": "content-red.log",
+      "tests": 5,
+      "failed_subtests": 2
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-137/reproduce.py",
-      "result": "passed",
-      "json_and_markdown_files_byte_equal": 14,
-      "isolated_copy": true,
-      "exit_code": 0,
-      "log": "reproduction-final.log"
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py --review-only",
+      "result": "failed_expected_unreviewed_author_ledger_before_acceptance",
+      "exit_code": 1,
+      "log": "review-red.log",
+      "tests": 6
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-137/check_archive_fallback.py",
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py --review-only",
       "result": "passed",
-      "tests": 4,
-      "original_checkout_cache_absent": true,
       "exit_code": 0,
-      "log": "archive-fallback-final.log"
+      "log": "review-green.log",
+      "tests": 6
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-137-review/audit.py",
+      "result": "passed",
+      "exit_code": 0,
+      "log": "source-audit.log"
     },
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py",
-      "phase": "author package plus canonical admission",
-      "result": "failed_expected_missing_admission",
-      "passed_author_tests": 4,
-      "failed_admission_tests": 1,
+      "result": "failed_expected_coordinator_canonical_gate",
       "exit_code": 1,
-      "log": "admission-pending.log"
+      "log": "canonical-pending.log",
+      "passed_review_tests": 6,
+      "failed_canonical_tests": 1
     },
     {
       "command": "pnpm test:docs",
       "result": "passed",
       "log": "docs-check.log",
       "exit_code": 0,
-      "checked_documents": 400,
-      "local_links": 3112
+      "documents": 443,
+      "local_links": 3439
     },
     {
       "command": "git diff --cached --check",
@@ -84,26 +115,43 @@
       "exit_code": 0
     }
   ],
+  "statutory_refresh": {
+    "result": "live_primary_requests_returned_403",
+    "log": "rights-capture.log",
+    "scope": "Selected rights assessed under the recorded original French collective-edition L123-3 basis; no successful current statutory refresh or global jurisdictional clearance is asserted."
+  },
   "skipped_checks": [
     {
-      "check": "combined core conversion/package and every-headword native lookup/trusted save/reopen/preservation",
-      "reason": "coordinator-owned shared assembly and actual native seams; independent admission pending"
+      "check": "canonical assembly/conversion/combined notices, native all-headword lookup/trusted save/reopen/preservation",
+      "reason": "coordinator-owned seams; this change owns the independently reviewed shard only"
     },
     {
-      "check": "frontend lint/typecheck/build and Rust checks",
-      "reason": "no frontend or Rust implementation changes in the scoped author package"
+      "check": "frontend lint/typecheck/build and Rust compilation/tests",
+      "reason": "no frontend or Rust source changes"
     },
     {
-      "check": "independent quality/rights review and learner acceptance",
-      "reason": "author package only; no independent reviewer assigned"
-    },
-    {
-      "check": "other-platform execution, whole-machine offline and formal release",
-      "reason": "existing separate release gates"
+      "check": "learner acceptance, other-platform execution, whole-machine offline and formal release",
+      "reason": "separate pending gates"
     }
   ],
-  "shared_registration_integration_tip": "7e135023bff4ed3ad5c681be4200ec9b0c79398d",
-  "post_merge_author_tests": "passed: four tests; committed-author-tests.log",
-  "post_merge_docs_check": "passed: 425 documents / 3290 local links; committed-docs-check.log",
-  "post_merge_admission_check": "failed_expected_missing_admission: four author tests passed, one admission test failed; committed-admission-pending.log"
+  "archive_materials": [
+    "source-cache/",
+    "rights/",
+    "decisions.json",
+    "source-audit.json",
+    "source-boundary-audit.json",
+    "frames.txt",
+    "full-review.patch",
+    "focused-test.patch",
+    "verification logs",
+    "final-verification.json"
+  ],
+  "latest_merged_integration": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+  "recorded_at_utc": "2026-11-22T02:33:15.999978+00:00",
+  "source_cache_preservation": {
+    "copied_files": 85,
+    "byte_comparison": "equal",
+    "original_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137",
+    "copied_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-137\\target\\issue-137-review\\source-cache"
+  }
 }
