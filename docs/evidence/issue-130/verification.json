@@ -1,0 +1,63 @@
+{
+  "ticket": 130,
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-130",
+  "branch": "codex/d2-content-130",
+  "diff_base": "e4005d868880dac12c84c412773049eea737bc67",
+  "tested_scope": "exact authored working-tree package, subsequently committed unchanged",
+  "platform": "Windows x64; PowerShell 7; uv Python",
+  "checks": [
+    {
+      "command": "uv run --no-project python scripts/test_core_batch_130.py",
+      "stage": "initial missing-admission regression",
+      "result": "expected_failure",
+      "exit_code": 1,
+      "log": "target/issue-130/resource-red.log"
+    },
+    {
+      "command": "uv run --no-project python scripts/test_core_batch_130.py --author-only",
+      "result": "passed",
+      "tests": 4,
+      "exit_code": 0,
+      "log": "target/issue-130/author-tests.log"
+    },
+    {
+      "command": "uv run --no-project python scripts/test_core_batch_130.py",
+      "result": "expected_failure_missing_canonical_batch_content",
+      "tests": 5,
+      "passing_tests": 4,
+      "exit_code": 1,
+      "log": "target/issue-130/admission-pending.log"
+    },
+    {
+      "command": "uv run --no-project python target/issue-130/check_links.py",
+      "result": "passed",
+      "links": 38,
+      "exit_code": 0,
+      "log": "target/issue-130/link-check.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "exit_code": 0,
+      "log": "target/issue-130/diff-check.log"
+    },
+    {
+      "command": "uv run --no-project python target/issue-130-review-copy/scripts/test_core_batch_130.py --author-only",
+      "result": "passed_without_local_captures_using_stable_archive",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "target/issue-130/archive-fallback-tests.log"
+    }
+  ],
+  "independent_quality": "pending_separate_reviewer",
+  "native": "not_run_coordinator_owned",
+  "conversion": "not_run_coordinator_owned",
+  "frontend_rust": "not_run_no_runtime_changes",
+  "resource_denominator": 4087,
+  "newly_admitted_fields": 0,
+  "identity_file": "target/issue-130/author-commit.txt",
+  "integration_identity_file": "target/issue-130/integration-tip.txt",
+  "merged_integration_tip": "6b9db47664581bfa26f2abaf112a6b33c2d0c78c",
+  "stable_author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-130",
+  "original_captures_retained": true
+}

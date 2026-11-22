@@ -15,8 +15,8 @@ assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'cor
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
-const expectedRows = Array.from({ length: 2450 }, (_, index) => index + 1)
-  .filter((row) => ![87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386].includes(row));
+const expectedRows = Array.from({ length: 2950 }, (_, index) => index + 1)
+  .filter((row) => ![87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386, 2560, 2626].includes(row));
 const membership = expectedRows.map((row) => {
   const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
   assert.ok(match, `Invalid frozen scope row ${row}`);
@@ -283,11 +283,12 @@ async function pilot() {
 
 async function contentBatch() {
   const issue = Number(input);
-  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 129, 'Expected batch issue 84–129');
+  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 139, 'Expected batch issue 84–139');
   const firstRow = 151 + (issue - 84) * 50;
   const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
   const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934],
-    101: [1005], 102: [1051], 105: [1208, 1218, 1219, 1220], 106: [1300], 108: [1386] })[issue] ?? [];
+    101: [1005], 102: [1051], 105: [1208, 1218, 1219, 1220], 106: [1300], 108: [1386],
+    132: [2560], 133: [2626] })[issue] ?? [];
   assert.equal(groups.length, 50 - annotationRows.length);
   for (const row of annotationRows) {
     const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
@@ -693,9 +694,9 @@ async function replacement() {
       assert.deepEqual(await invoke('vocabulary_find', { headword: 'lâche' }), existing);
       evidence.checks.push({ check: 'The existing lâche adjective and noun digests remain frozen after the resource update', status: 'passed' });
     }
-    for (const row of [1951, 2450]) {
+    for (const row of [2451, 2950]) {
       const key = curation.groups.find((group) => group.frozen_row === row).headword;
-      await save(key, `batch-120-129-upgrade-${key}`);
+      await save(key, `batch-130-139-upgrade-${key}`);
     }
   }
   await openRecord(record);
