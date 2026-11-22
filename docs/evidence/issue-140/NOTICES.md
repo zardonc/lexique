@@ -5,8 +5,10 @@ The fixed Wiktionnaire contribution layer, French adaptations and new Lexique
 English/Chinese explanations have that licence. Project code remains MIT.
 The [complete legal text](COPYING), source/version identities, attribution,
 modification notices and selected source material accompany the reviewed shard.
-Quality review is complete. Rights are resolved for 98 fields; 102 textual
-fields across 34 groups retain unresolved original-work territorial rights.
+All 200 fields have independent quality and selected-source rights decisions.
+The separate expression review resolves the 102 former blockers without
+changing learner wording. Fourteen long excerpts use exact minimal factual
+bindings; twenty uses retain specifically assessed short expressions.
 
 Exact membership, POS subclasses and both frequency strings derive from Boris
 New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -90,17 +92,21 @@ Thirty-four articles declare Académie française eighth-edition imports
 (1932–1935), including supporting `mien`. Original credit remains distinct from
 the wiki and Lexique contribution layers. [Selected rights](selected-rights.md)
 retains the established French collective-work basis and French economic
-expiry 2006-01-01. US clearance of the selected original expression and retained
-source material remains unresolved. No worldwide original-work grant is asserted.
+expiry 2006-01-01. Whole-edition US clearance remains unproved. Current selected
+material has separate short-expression/facts determinations in
+[rights-fix-review.json](rights-fix-review.json), without a worldwide grant.
 
 ## Selected boundaries and redistribution
 
-`thème` selects lexical topic definition 10. The CFC cartography definition at
+`thème` selects exact topic/argument terms from lexical definition 10. The CFC cartography definition at
 41 is excluded and supplies no field or rights claim. `automne` selects only
 the first sentence of definition 12; the adjacent calendar/date claims are
 excluded. The three supporting possessive articles establish the construction
 of `miens` in `les miens`, while the exact `miens` page supplies its isolated IPA.
-No runtime lookup alias is proposed.
+No runtime lookup alias is proposed. Longer original source prose is excluded
+from current admission spans; [exact excerpts](source-excerpts.json) retain the
+assessed units. Historical author/first-review snapshots and research captures
+remain distinct from the current source selection.
 
 Retain CC BY-SA 4.0 legal text and licence/source links, contributor/history
 attribution, applicable original-work credits, modification notices and exact

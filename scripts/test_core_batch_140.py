@@ -20,15 +20,84 @@ def read(name):
 
 
 class Batch140ResourceTests(unittest.TestCase):
+    def test_excluded_cfc_metadata_keeps_the_marker_without_definition_prose(self):
+        for name, collection in [('sources.json', 'sources'),
+                                 ('source-context.json', 'current_content'),
+                                 ('rights.json', 'sources')]:
+            source = next(s for s in read(name)[collection] if s['title'] == 'thème')
+            markers = source.get('external_reference_markers', source.get('reference_markers', []))
+            marker = next(m for m in markers if 'Import:CFC' in m['raw_reference'])
+            self.assertEqual(marker['raw_reference'], '{{Import:CFC}}')
+            self.assertEqual(marker['line_1_based'], 41)
+            self.assertGreater(marker['column_1_based'], 1)
+            self.assertEqual(marker['independent_review'], 'excluded_from_selected_content')
+
+    def test_all_selected_material_is_eligible_without_rewriting_quality_history(self):
+        current = read('field-review.json')
+        previous = read('first-review/field-review.json')
+        self.assertEqual(read('rights.json')['independent_rights_fields_accepted'], 200)
+        self.assertEqual(current['unresolved_fields'], [])
+        self.assertTrue(current['independent_acceptance'])
+        self.assertEqual(len(read('rights-fix-review.json')['selected_uses']), 34)
+        prior = {(r['sense_id'], r['field']): r for r in previous['fields']}
+        for record in current['fields']:
+            original = prior[record['sense_id'], record['field']]
+            for key in ('proposed_text', 'accepted_text', 'review_reason',
+                        'accepted_text_quality_status', 'reviewer'):
+                self.assertEqual(record[key], original[key])
+        snapshot = read('first-review/snapshot.json')
+        for name in snapshot['preserved_files']:
+            relative = name.removesuffix('.txt')
+            original = subprocess.check_output(
+                ['git', 'show', snapshot['integration_base'] + ':docs/evidence/issue-140/' + relative], cwd=ROOT)
+            self.assertEqual((EVIDENCE / 'first-review' / name).read_bytes(), original)
+        self.assertNotEqual(read('rights-fix-review.json')['reviewer'], previous['reviewer'])
+        self.assertFalse(read('rights-fix-review.json')['worldwide_public_domain_claim'])
+
+    def test_diplome_uses_sufficient_factual_spans_without_the_long_sentence(self):
+        group = next(g for g in read('groups.json') if g['frozen_row'] == 2959)
+        sense = group['senses'][0]
+        self.assertEqual(sense['fields']['french_definition']['text'],
+                         'Document délivré par une institution pour attester un titre ou une qualification.')
+        self.assertEqual(sense['fields']['french_definition']['source_span']['raw_source_excerpt'], 'Acte')
+        support = [r['reviewed_excerpt'] for r in read('source-excerpts.json')['supporting_evidence']
+                   if r['sense_id'] == sense['sense_id']]
+        self.assertIn('un [[corps]], une [[faculté]], une [[société]]', support)
+        self.assertIn('[[délivre]]', support)
+        self.assertIn('[[justifier]] de son titre', support)
+        self.assertIn('la [[qualité]]', support)
+        decision = next(r for r in read('rights-fix-review.json')['selected_uses']
+                        if r['frozen_row'] == 2959)
+        self.assertEqual(decision['determination'], 'minimal_factual_spans')
+        self.assertNotEqual(decision['before_excerpt'], decision['after_excerpt'])
+        current = [r['reviewed_excerpt'] for r in read('source-excerpts.json')['fields']
+                   if r['sense_id'] == sense['sense_id']]
+        self.assertNotIn(decision['before_excerpt'], current + support)
+
+    def test_pecher_short_expression_has_its_own_rights_decision(self):
+        group = next(g for g in read('groups.json') if g['frozen_row'] == 2977)
+        sense = group['senses'][0]
+        self.assertEqual(sense['fields']['french_definition']['text'], 'Prendre du poisson.')
+        for name in ('french_definition', 'english', 'chinese'):
+            self.assertEqual(sense['fields'][name]['rights_eligibility_status'],
+                             'passed_at_selected_text_boundary')
+        decision = next(r for r in read('rights-fix-review.json')['selected_uses']
+                        if r['frozen_row'] == 2977)
+        self.assertEqual(decision['before_excerpt'], '# [[prendre|Prendre]] du [[poisson]].')
+        self.assertEqual(decision['after_excerpt'], decision['before_excerpt'])
+        self.assertEqual(decision['determination'], 'noncopyrightable_short_expression')
+        self.assertIn('313.4(C)', decision['authority'])
+        self.assertTrue(decision['expression_reason'])
+
     def test_daf8_french_expiry_does_not_complete_territorial_rights(self):
-        review = read('field-review.json')
+        review = read('first-review/field-review.json')
         self.assertEqual(len(review['unresolved_fields']), 102)
         self.assertTrue(all(r['accepted_text_quality_status'] == 'passed' for r in review['fields']))
         pending = [r for r in review['fields'] if r['rights_eligibility_status'] == 'pending_original_work_territorial_review']
         self.assertEqual(len(pending), 102)
         self.assertEqual({r['field'] for r in pending}, {'french_definition', 'english', 'chinese'})
         self.assertFalse(review['independent_acceptance'])
-        rights = read('rights.json')
+        rights = read('first-review/rights.json')
         self.assertEqual(rights['independent_rights_fields_accepted'], 98)
         self.assertEqual(rights['original_work_territorial_review']['status'], 'unresolved')
         self.assertIn('104A', rights['original_work_territorial_review']['reason'])
@@ -82,15 +151,15 @@ class Batch140ResourceTests(unittest.TestCase):
         rights = read('rights.json')
         self.assertEqual(admission['scope_denominator_groups'], 4087)
         self.assertEqual((admission['proposed_groups'], admission['proposed_fields']), (50, 200))
-        self.assertEqual((admission['independently_accepted_new_groups'], admission['independently_accepted_new_fields']), (16, 98))
+        self.assertEqual((admission['independently_accepted_new_groups'], admission['independently_accepted_new_fields']), (50, 200))
         self.assertEqual((admission['independently_quality_accepted_groups'], admission['independently_quality_accepted_fields']), (50, 200))
-        self.assertEqual((admission['pending_independent_review_fields'], admission['pending_independent_rights_fields']), (0, 102))
+        self.assertEqual((admission['pending_independent_review_fields'], admission['pending_independent_rights_fields']), (0, 0))
         self.assertEqual(admission['missing_admitted_fields'], 200)
         self.assertEqual(admission['missing_authored_fields'], 0)
         self.assertEqual(admission['author_unresolved_content_rows'], [])
         self.assertEqual(admission['unresolved_field_blockers'], review['unresolved_fields'])
         self.assertEqual(admission['newly_admitted_fields'], 0)
-        self.assertFalse(review['independent_acceptance'])
+        self.assertTrue(review['independent_acceptance'])
         self.assertTrue(review['reviewer'])
         fields = {(r['sense_id'], r['field']): r for r in review['fields']}
         legal = {(r['sense_id'], r['field']): r for r in rights['fields']}
@@ -148,7 +217,7 @@ class Batch140ResourceTests(unittest.TestCase):
         for sid, source in source_records.items():
             self.assertEqual(source['selected_text_review'], contexts[sid]['selected_text_rights_status'])
             self.assertEqual(source['selected_text_rights_reason'], contexts[sid]['selected_text_rights_reason'])
-        self.assertEqual(rights['independent_rights_fields_accepted'], 98)
+        self.assertEqual(rights['independent_rights_fields_accepted'], 200)
         self.assertEqual((EVIDENCE / 'COPYING').read_bytes().rstrip(),
                          (ROOT / 'resources/core-pilot-79/COPYING').read_bytes().rstrip())
 

@@ -1,6 +1,6 @@
 # Issue #140 independently reviewed selected content
 
-50 exact groups and 200 quality-reviewed fields; 196 unchanged and four replacements. Rights are resolved for 98 fields; 102 fields across 34 groups retain original-work territorial blockers. [Authored originals](authored/snapshot.json), [exact replacements](accepted-replacements.json) and [individual decisions](field-review.json) retain the full review.
+50 exact groups and 200 quality-reviewed fields; 196 unchanged and four replacements. All 200 fields have resolved selected-source rights in the separate [expression review](rights-fix-review.json); no learner wording changed. [Authored originals](authored/snapshot.json), [exact replacements](accepted-replacements.json) and [individual decisions](field-review.json) retain the full review.
 
 ## 2951 `racheter/VER`
 
@@ -10,10 +10,10 @@ Excluded: ['buying replacement goods', 'ransom', 'religious redemption', 'making
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Acheter de nouveau un bien qui a été vendu. | [39965629](https://fr.wiktionary.org/w/index.php?title=racheter&oldid=39965629), line 7 | pending_original_work_territorial_review |
+| french_definition | Acheter de nouveau un bien qui a été vendu. | [39965629](https://fr.wiktionary.org/w/index.php?title=racheter&oldid=39965629), line 7 | passed_at_selected_text_boundary |
 | ipa | /ʁaʃ.te/ | [39965629](https://fr.wiktionary.org/w/index.php?title=racheter&oldid=39965629), line 6 | passed_at_selected_text_boundary |
-| english | To buy back something that was sold; transitive racheter quelque chose. | [39965629](https://fr.wiktionary.org/w/index.php?title=racheter&oldid=39965629), line 7 | pending_original_work_territorial_review |
-| chinese | 买回已经售出的东西；及物用法 racheter quelque chose。 | [39965629](https://fr.wiktionary.org/w/index.php?title=racheter&oldid=39965629), line 7 | pending_original_work_territorial_review |
+| english | To buy back something that was sold; transitive racheter quelque chose. | [39965629](https://fr.wiktionary.org/w/index.php?title=racheter&oldid=39965629), line 7 | passed_at_selected_text_boundary |
+| chinese | 买回已经售出的东西；及物用法 racheter quelque chose。 | [39965629](https://fr.wiktionary.org/w/index.php?title=racheter&oldid=39965629), line 7 | passed_at_selected_text_boundary |
 
 ## 2952 `fondre/VER`
 
@@ -36,10 +36,10 @@ Excluded: ['musical motif', 'translation exercise', 'linguistic stem', 'Byzantin
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Sujet ou matière que l’on cherche à expliquer ou à développer. | [39820225](https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225), line 10 | pending_original_work_territorial_review |
+| french_definition | Sujet ou matière que l’on cherche à expliquer ou à développer. | [39820225](https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225), line 10 | passed_at_selected_text_boundary |
 | ipa | /tɛm/ | [39820225](https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225), line 9 | passed_at_selected_text_boundary |
-| english | A theme or topic that is discussed, explained or developed; masculine noun. | [39820225](https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225), line 10 | pending_original_work_territorial_review |
-| chinese | 所讨论、解释或展开的主题、题目；阳性名词。 | [39820225](https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225), line 10 | pending_original_work_territorial_review |
+| english | A theme or topic that is discussed, explained or developed; masculine noun. | [39820225](https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225), line 10 | passed_at_selected_text_boundary |
+| chinese | 所讨论、解释或展开的主题、题目；阳性名词。 | [39820225](https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225), line 10 | passed_at_selected_text_boundary |
 
 ## 2954 `épisode/NOM`
 
@@ -49,10 +49,10 @@ Excluded: ['a television-series instalment as a separately selected sense']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Période distincte, ayant un caractère particulier, dans le déroulement du temps. | [38491124](https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124), line 10 | pending_original_work_territorial_review |
+| french_definition | Période distincte, ayant un caractère particulier, dans le déroulement du temps. | [38491124](https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124), line 10 | passed_at_selected_text_boundary |
 | ipa | /e.pi.zɔd/ | [38491124](https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124), line 9 | passed_at_selected_text_boundary |
-| english | An episode: a distinct period with a particular character in the course of events; masculine noun. | [38491124](https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124), line 10 | pending_original_work_territorial_review |
-| chinese | 事件发展过程中具有某种特点的一个阶段；阳性名词。 | [38491124](https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124), line 10 | pending_original_work_territorial_review |
+| english | An episode: a distinct period with a particular character in the course of events; masculine noun. | [38491124](https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124), line 10 | passed_at_selected_text_boundary |
+| chinese | 事件发展过程中具有某种特点的一个阶段；阳性名词。 | [38491124](https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124), line 10 | passed_at_selected_text_boundary |
 
 ## 2955 `capacité/NOM`
 
@@ -88,10 +88,10 @@ Excluded: ['notepad', 'political bloc', 'city block', 'data block', 'climbing']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Gros morceau compact d’une matière lourde et dure, comme la pierre ou le métal. | [39967757](https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757), line 10 | pending_original_work_territorial_review |
+| french_definition | Gros morceau compact d’une matière lourde et dure, comme la pierre ou le métal. | [39967757](https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757), line 10 | passed_at_selected_text_boundary |
 | ipa | /blɔk/ | [39967757](https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757), line 9 | passed_at_selected_text_boundary |
-| english | A large solid block of heavy, hard material, such as stone or metal; masculine noun. | [39967757](https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757), line 10 | pending_original_work_territorial_review |
-| chinese | 石头、金属等沉重坚硬材料的一大块；阳性名词。 | [39967757](https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757), line 10 | pending_original_work_territorial_review |
+| english | A large solid block of heavy, hard material, such as stone or metal; masculine noun. | [39967757](https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757), line 10 | passed_at_selected_text_boundary |
+| chinese | 石头、金属等沉重坚硬材料的一大块；阳性名词。 | [39967757](https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757), line 10 | passed_at_selected_text_boundary |
 
 ## 2958 `éveiller/VER`
 
@@ -101,10 +101,10 @@ Excluded: ['waking from sleep', 'sensitising someone to an issue']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Faire naître un sentiment chez quelqu’un. | [38927643](https://fr.wiktionary.org/w/index.php?title=%C3%A9veiller&oldid=38927643), line 24 | pending_original_work_territorial_review |
+| french_definition | Faire naître un sentiment chez quelqu’un. | [38927643](https://fr.wiktionary.org/w/index.php?title=%C3%A9veiller&oldid=38927643), line 24 | passed_at_selected_text_boundary |
 | ipa | /e.ve.je/ | [38927643](https://fr.wiktionary.org/w/index.php?title=%C3%A9veiller&oldid=38927643), line 6 | passed_at_selected_text_boundary |
-| english | To arouse or awaken a feeling in someone; transitive éveiller un sentiment chez quelqu’un. | [38927643](https://fr.wiktionary.org/w/index.php?title=%C3%A9veiller&oldid=38927643), line 24 | pending_original_work_territorial_review |
-| chinese | 在某人心中唤起一种感情；及物用法 éveiller un sentiment chez quelqu’un。 | [38927643](https://fr.wiktionary.org/w/index.php?title=%C3%A9veiller&oldid=38927643), line 24 | pending_original_work_territorial_review |
+| english | To arouse or awaken a feeling in someone; transitive éveiller un sentiment chez quelqu’un. | [38927643](https://fr.wiktionary.org/w/index.php?title=%C3%A9veiller&oldid=38927643), line 24 | passed_at_selected_text_boundary |
+| chinese | 在某人心中唤起一种感情；及物用法 éveiller un sentiment chez quelqu’un。 | [38927643](https://fr.wiktionary.org/w/index.php?title=%C3%A9veiller&oldid=38927643), line 24 | passed_at_selected_text_boundary |
 
 ## 2959 `diplôme/NOM`
 
@@ -114,10 +114,10 @@ Excluded: ['historical charter of privilege', 'ironic recognition', 'finite form
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Document délivré par une institution pour attester un titre ou une qualification. | [39982256](https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256), line 11 | pending_original_work_territorial_review |
+| french_definition | Document délivré par une institution pour attester un titre ou une qualification. | [39982256](https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256), line 11 | passed_at_selected_text_boundary |
 | ipa | /di.plom/ | [39982256](https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256), line 8 | passed_at_selected_text_boundary |
-| english | A diploma or certificate issued by an institution to attest a title or qualification; masculine noun. | [39982256](https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256), line 11 | pending_original_work_territorial_review |
-| chinese | 由机构颁发、证明所获称号或资格的文凭、证书；阳性名词。 | [39982256](https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256), line 11 | pending_original_work_territorial_review |
+| english | A diploma or certificate issued by an institution to attest a title or qualification; masculine noun. | [39982256](https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256), line 11 | passed_at_selected_text_boundary |
+| chinese | 由机构颁发、证明所获称号或资格的文凭、证书；阳性名词。 | [39982256](https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256), line 11 | passed_at_selected_text_boundary |
 
 ## 2960 `invisible/ADJ`
 
@@ -127,10 +127,10 @@ Excluded: ['a person hiding', 'social invisibility', 'noun meaning the unseen']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Que l’on ne peut pas voir. | [39571799](https://fr.wiktionary.org/w/index.php?title=invisible&oldid=39571799), line 8 | pending_original_work_territorial_review |
+| french_definition | Que l’on ne peut pas voir. | [39571799](https://fr.wiktionary.org/w/index.php?title=invisible&oldid=39571799), line 8 | passed_at_selected_text_boundary |
 | ipa | /ɛ̃.vi.zibl/ | [39571799](https://fr.wiktionary.org/w/index.php?title=invisible&oldid=39571799), line 7 | passed_at_selected_text_boundary |
-| english | Invisible: unable to be seen; adjective with the same masculine and feminine spelling. | [39571799](https://fr.wiktionary.org/w/index.php?title=invisible&oldid=39571799), line 8 | pending_original_work_territorial_review |
-| chinese | 看不见的、不可见的；形容词，阴阳性拼写相同。 | [39571799](https://fr.wiktionary.org/w/index.php?title=invisible&oldid=39571799), line 8 | pending_original_work_territorial_review |
+| english | Invisible: unable to be seen; adjective with the same masculine and feminine spelling. | [39571799](https://fr.wiktionary.org/w/index.php?title=invisible&oldid=39571799), line 8 | passed_at_selected_text_boundary |
+| chinese | 看不见的、不可见的；形容词，阴阳性拼写相同。 | [39571799](https://fr.wiktionary.org/w/index.php?title=invisible&oldid=39571799), line 8 | passed_at_selected_text_boundary |
 
 ## 2961 `mater/VER`
 
@@ -166,10 +166,10 @@ Excluded: ['English mood meaning of humour']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Manière plaisante de recourir à l’ironie, en mêlant le sérieux, la sensibilité ou la satire. | [39911963](https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963), line 9 | pending_original_work_territorial_review |
+| french_definition | Manière plaisante de recourir à l’ironie, en mêlant le sérieux, la sensibilité ou la satire. | [39911963](https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963), line 9 | passed_at_selected_text_boundary |
 | ipa | /y.muʁ/ | [39911963](https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963), line 8 | passed_at_selected_text_boundary |
-| english | Humour: an amusing form of irony that can also convey seriousness, feeling or satire; masculine noun. | [39911963](https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963), line 9 | pending_original_work_territorial_review |
-| chinese | 幽默：诙谐而带有反讽意味的表达，也可传达严肃意味、感情或讽刺；阳性名词。 | [39911963](https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963), line 9 | pending_original_work_territorial_review |
+| english | Humour: an amusing form of irony that can also convey seriousness, feeling or satire; masculine noun. | [39911963](https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963), line 9 | passed_at_selected_text_boundary |
+| chinese | 幽默：诙谐而带有反讽意味的表达，也可传达严肃意味、感情或讽刺；阳性名词。 | [39911963](https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963), line 9 | passed_at_selected_text_boundary |
 
 ## 2964 `psy/NOM`
 
@@ -192,10 +192,10 @@ Excluded: ['human remains', 'religious ashes', 'nuclear-fusion residue', 'colour
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Résidu en poudre qui reste après la combustion du bois ou d’autres matières organiques. | [40006002](https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002), line 12 | pending_original_work_territorial_review |
+| french_definition | Résidu en poudre qui reste après la combustion du bois ou d’autres matières organiques. | [40006002](https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002), line 12 | passed_at_selected_text_boundary |
 | ipa | /sɑ̃dʁ/ | [40006002](https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002), line 11 | passed_at_selected_text_boundary |
-| english | Ash: the powdery residue left after wood or other organic material burns; feminine noun. | [40006002](https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002), line 12 | pending_original_work_territorial_review |
-| chinese | 木材或其他有机物燃烧后留下的粉末状灰烬；阴性名词。 | [40006002](https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002), line 12 | pending_original_work_territorial_review |
+| english | Ash: the powdery residue left after wood or other organic material burns; feminine noun. | [40006002](https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002), line 12 | passed_at_selected_text_boundary |
+| chinese | 木材或其他有机物燃烧后留下的粉末状灰烬；阴性名词。 | [40006002](https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002), line 12 | passed_at_selected_text_boundary |
 
 ## 2966 `compliment/NOM`
 
@@ -205,10 +205,10 @@ Excluded: ['conventional greetings', 'ironic insults', 'a ceremonial speech by a
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Parole qui exprime une appréciation favorable sur une personne ou une chose. | [40050628](https://fr.wiktionary.org/w/index.php?title=compliment&oldid=40050628), line 8 | pending_original_work_territorial_review |
+| french_definition | Parole qui exprime une appréciation favorable sur une personne ou une chose. | [40050628](https://fr.wiktionary.org/w/index.php?title=compliment&oldid=40050628), line 8 | passed_at_selected_text_boundary |
 | ipa | /kɔ̃.pli.mɑ̃/ | [40050628](https://fr.wiktionary.org/w/index.php?title=compliment&oldid=40050628), line 7 | passed_at_selected_text_boundary |
-| english | A compliment: words praising a person or a thing; masculine noun. | [40050628](https://fr.wiktionary.org/w/index.php?title=compliment&oldid=40050628), line 8 | pending_original_work_territorial_review |
-| chinese | 赞美某人或某物的话，称赞；阳性名词。 | [40050628](https://fr.wiktionary.org/w/index.php?title=compliment&oldid=40050628), line 8 | pending_original_work_territorial_review |
+| english | A compliment: words praising a person or a thing; masculine noun. | [40050628](https://fr.wiktionary.org/w/index.php?title=compliment&oldid=40050628), line 8 | passed_at_selected_text_boundary |
+| chinese | 赞美某人或某物的话，称赞；阳性名词。 | [40050628](https://fr.wiktionary.org/w/index.php?title=compliment&oldid=40050628), line 8 | passed_at_selected_text_boundary |
 
 ## 2967 `loyer/NOM`
 
@@ -218,10 +218,10 @@ Excluded: ['farm rent', 'wages', 'reward', 'dated Quebec noun for rented accommo
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Somme payée pour louer une maison ou un appartement. | [39774301](https://fr.wiktionary.org/w/index.php?title=loyer&oldid=39774301), line 8 | pending_original_work_territorial_review |
+| french_definition | Somme payée pour louer une maison ou un appartement. | [39774301](https://fr.wiktionary.org/w/index.php?title=loyer&oldid=39774301), line 8 | passed_at_selected_text_boundary |
 | ipa | /lwa.je/ | [39774301](https://fr.wiktionary.org/w/index.php?title=loyer&oldid=39774301), line 7 | passed_at_selected_text_boundary |
-| english | Rent paid for a house or flat; masculine noun. | [39774301](https://fr.wiktionary.org/w/index.php?title=loyer&oldid=39774301), line 8 | pending_original_work_territorial_review |
-| chinese | 租住房屋或公寓所支付的租金；阳性名词。 | [39774301](https://fr.wiktionary.org/w/index.php?title=loyer&oldid=39774301), line 8 | pending_original_work_territorial_review |
+| english | Rent paid for a house or flat; masculine noun. | [39774301](https://fr.wiktionary.org/w/index.php?title=loyer&oldid=39774301), line 8 | passed_at_selected_text_boundary |
+| chinese | 租住房屋或公寓所支付的租金；阳性名词。 | [39774301](https://fr.wiktionary.org/w/index.php?title=loyer&oldid=39774301), line 8 | passed_at_selected_text_boundary |
 
 ## 2968 `entièrement/ADV`
 
@@ -244,10 +244,10 @@ Excluded: ['geographical plateau', 'film set', 'television studio', 'game board'
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Grand plat utilisé pour servir de la nourriture ou transporter de la vaisselle. | [39812986](https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986), line 85 | pending_original_work_territorial_review |
+| french_definition | Grand plat utilisé pour servir de la nourriture ou transporter de la vaisselle. | [39812986](https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986), line 85 | passed_at_selected_text_boundary |
 | ipa | /pla.to/ | [39812986](https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986), line 14 | passed_at_selected_text_boundary |
-| english | A tray used to serve food or carry dishes; masculine noun, plural plateaux. | [39812986](https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986), line 85 | pending_original_work_territorial_review |
-| chinese | 用来上菜或端送餐具的托盘；阳性名词，复数为 plateaux。 | [39812986](https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986), line 85 | pending_original_work_territorial_review |
+| english | A tray used to serve food or carry dishes; masculine noun, plural plateaux. | [39812986](https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986), line 85 | passed_at_selected_text_boundary |
+| chinese | 用来上菜或端送餐具的托盘；阳性名词，复数为 plateaux。 | [39812986](https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986), line 85 | passed_at_selected_text_boundary |
 
 ## 2970 `site/NOM`
 
@@ -270,10 +270,10 @@ Excluded: ['dated general preference', 'historical administrative district']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Choix d’une personne par un vote. | [39773858](https://fr.wiktionary.org/w/index.php?title=%C3%A9lection&oldid=39773858), line 9 | pending_original_work_territorial_review |
+| french_definition | Choix d’une personne par un vote. | [39773858](https://fr.wiktionary.org/w/index.php?title=%C3%A9lection&oldid=39773858), line 9 | passed_at_selected_text_boundary |
 | ipa | /e.lɛk.sjɔ̃/ | [39773858](https://fr.wiktionary.org/w/index.php?title=%C3%A9lection&oldid=39773858), line 8 | passed_at_selected_text_boundary |
-| english | An election: choosing someone by voting; feminine noun. | [39773858](https://fr.wiktionary.org/w/index.php?title=%C3%A9lection&oldid=39773858), line 9 | pending_original_work_territorial_review |
-| chinese | 通过投票选出某人的选举；阴性名词。 | [39773858](https://fr.wiktionary.org/w/index.php?title=%C3%A9lection&oldid=39773858), line 9 | pending_original_work_territorial_review |
+| english | An election: choosing someone by voting; feminine noun. | [39773858](https://fr.wiktionary.org/w/index.php?title=%C3%A9lection&oldid=39773858), line 9 | passed_at_selected_text_boundary |
+| chinese | 通过投票选出某人的选举；阴性名词。 | [39773858](https://fr.wiktionary.org/w/index.php?title=%C3%A9lection&oldid=39773858), line 9 | passed_at_selected_text_boundary |
 
 ## 2972 `douloureux/ADJ`
 
@@ -283,10 +283,10 @@ Excluded: ['emotional distress', 'expressing grief', 'a painful event']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | En parlant d’une partie du corps, sensible au point que le contact provoque une douleur. | [39884914](https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914), line 18 | pending_original_work_territorial_review |
+| french_definition | En parlant d’une partie du corps, sensible au point que le contact provoque une douleur. | [39884914](https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914), line 18 | passed_at_selected_text_boundary |
 | ipa | /du.lu.ʁø/ | [39884914](https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914), line 7 | passed_at_selected_text_boundary |
-| english | Sore or tender: of a body part that hurts when touched; masculine adjective, feminine douloureuse. | [39884914](https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914), line 18 | pending_original_work_territorial_review |
-| chinese | 指身体部位疼痛、触碰时会痛的；阳性形容词，阴性为 douloureuse。 | [39884914](https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914), line 18 | pending_original_work_territorial_review |
+| english | Sore or tender: of a body part that hurts when touched; masculine adjective, feminine douloureuse. | [39884914](https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914), line 18 | passed_at_selected_text_boundary |
+| chinese | 指身体部位疼痛、触碰时会痛的；阳性形容词，阴性为 douloureuse。 | [39884914](https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914), line 18 | passed_at_selected_text_boundary |
 
 ## 2973 `cigare/NOM`
 
@@ -296,10 +296,10 @@ Excluded: ['Belgian reprimand', 'slang head', 'verb flexion']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Petit rouleau de feuilles de tabac préparé pour être fumé. | [39628831](https://fr.wiktionary.org/w/index.php?title=cigare&oldid=39628831), line 11 | pending_original_work_territorial_review |
+| french_definition | Petit rouleau de feuilles de tabac préparé pour être fumé. | [39628831](https://fr.wiktionary.org/w/index.php?title=cigare&oldid=39628831), line 11 | passed_at_selected_text_boundary |
 | ipa | /si.ɡaʁ/ | [39628831](https://fr.wiktionary.org/w/index.php?title=cigare&oldid=39628831), line 10 | passed_at_selected_text_boundary |
-| english | A cigar: a roll of tobacco leaves prepared for smoking; masculine noun. | [39628831](https://fr.wiktionary.org/w/index.php?title=cigare&oldid=39628831), line 11 | pending_original_work_territorial_review |
-| chinese | 雪茄：卷成条状、供吸食的烟草叶；阳性名词。 | [39628831](https://fr.wiktionary.org/w/index.php?title=cigare&oldid=39628831), line 11 | pending_original_work_territorial_review |
+| english | A cigar: a roll of tobacco leaves prepared for smoking; masculine noun. | [39628831](https://fr.wiktionary.org/w/index.php?title=cigare&oldid=39628831), line 11 | passed_at_selected_text_boundary |
+| chinese | 雪茄：卷成条状、供吸食的烟草叶；阳性名词。 | [39628831](https://fr.wiktionary.org/w/index.php?title=cigare&oldid=39628831), line 11 | passed_at_selected_text_boundary |
 
 ## 2974 `orage/NOM`
 
@@ -335,10 +335,10 @@ Excluded: ['anatomical duct', 'telecommunications channel', 'natural sea channel
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Voie d’eau creusée par l’homme pour relier des lieux et faciliter le transport. | [39975344](https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344), line 33 | pending_original_work_territorial_review |
+| french_definition | Voie d’eau creusée par l’homme pour relier des lieux et faciliter le transport. | [39975344](https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344), line 33 | passed_at_selected_text_boundary |
 | ipa | /ka.nal/ | [39975344](https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344), line 11 | passed_at_selected_text_boundary |
-| english | A canal: a man-made waterway linking places and facilitating transport; masculine noun, plural canaux. | [39975344](https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344), line 33 | pending_original_work_territorial_review |
-| chinese | 人工开凿、连接各地并便于运输的运河；阳性名词，复数为 canaux。 | [39975344](https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344), line 33 | pending_original_work_territorial_review |
+| english | A canal: a man-made waterway linking places and facilitating transport; masculine noun, plural canaux. | [39975344](https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344), line 33 | passed_at_selected_text_boundary |
+| chinese | 人工开凿、连接各地并便于运输的运河；阳性名词，复数为 canaux。 | [39975344](https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344), line 33 | passed_at_selected_text_boundary |
 
 ## 2977 `pêcher/VER`
 
@@ -348,10 +348,10 @@ Excluded: ['peach tree noun', 'retrieving an object from water', 'figurative sou
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Prendre du poisson. | [39889318](https://fr.wiktionary.org/w/index.php?title=p%C3%AAcher&oldid=39889318), line 62 | pending_original_work_territorial_review |
+| french_definition | Prendre du poisson. | [39889318](https://fr.wiktionary.org/w/index.php?title=p%C3%AAcher&oldid=39889318), line 62 | passed_at_selected_text_boundary |
 | ipa | /pe.ʃe/ | [39889318](https://fr.wiktionary.org/w/index.php?title=p%C3%AAcher&oldid=39889318), line 61 | passed_at_selected_text_boundary |
-| english | To catch fish or go fishing; pêcher du poisson, also used without an object for the activity. | [39889318](https://fr.wiktionary.org/w/index.php?title=p%C3%AAcher&oldid=39889318), line 62 | pending_original_work_territorial_review |
-| chinese | 捕鱼、钓鱼；可用 pêcher du poisson，也可不带宾语表示捕鱼这一活动。 | [39889318](https://fr.wiktionary.org/w/index.php?title=p%C3%AAcher&oldid=39889318), line 62 | pending_original_work_territorial_review |
+| english | To catch fish or go fishing; pêcher du poisson, also used without an object for the activity. | [39889318](https://fr.wiktionary.org/w/index.php?title=p%C3%AAcher&oldid=39889318), line 62 | passed_at_selected_text_boundary |
+| chinese | 捕鱼、钓鱼；可用 pêcher du poisson，也可不带宾语表示捕鱼这一活动。 | [39889318](https://fr.wiktionary.org/w/index.php?title=p%C3%AAcher&oldid=39889318), line 62 | passed_at_selected_text_boundary |
 
 ## 2978 `miens/PRO:pos`
 
@@ -361,10 +361,10 @@ Excluded: ['old possessive adjective mien', 'the separate family meaning of les 
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Dans « les miens », pronom possessif masculin pluriel : ceux ou les objets qui m’appartiennent. | [40036508](https://fr.wiktionary.org/w/index.php?title=les%20miens&oldid=40036508), line 17 | pending_original_work_territorial_review |
+| french_definition | Dans « les miens », pronom possessif masculin pluriel : ceux ou les objets qui m’appartiennent. | [40036508](https://fr.wiktionary.org/w/index.php?title=les%20miens&oldid=40036508), line 17 | passed_at_selected_text_boundary |
 | ipa | /mjɛ̃/ | [38517622](https://fr.wiktionary.org/w/index.php?title=miens&oldid=38517622), line 4 | passed_at_selected_text_boundary |
-| english | Mine, referring to masculine plural people or things belonging to me; used as les miens. The possessor is first-person singular. | [40036508](https://fr.wiktionary.org/w/index.php?title=les%20miens&oldid=40036508), line 17 | pending_original_work_territorial_review |
-| chinese | 我的人或东西；用于阳性复数所有格代词短语 les miens，所有者是第一人称单数“我”。 | [40036508](https://fr.wiktionary.org/w/index.php?title=les%20miens&oldid=40036508), line 17 | pending_original_work_territorial_review |
+| english | Mine, referring to masculine plural people or things belonging to me; used as les miens. The possessor is first-person singular. | [40036508](https://fr.wiktionary.org/w/index.php?title=les%20miens&oldid=40036508), line 17 | passed_at_selected_text_boundary |
+| chinese | 我的人或东西；用于阳性复数所有格代词短语 les miens，所有者是第一人称单数“我”。 | [40036508](https://fr.wiktionary.org/w/index.php?title=les%20miens&oldid=40036508), line 17 | passed_at_selected_text_boundary |
 
 ## 2979 `trouble/NOM`
 
@@ -374,10 +374,10 @@ Excluded: ['adjective cloudy', 'medical disorder', 'public disturbances', 'femin
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Agitation de l’esprit ou des sentiments. | [40045997](https://fr.wiktionary.org/w/index.php?title=trouble&oldid=40045997), line 74 | pending_original_work_territorial_review |
+| french_definition | Agitation de l’esprit ou des sentiments. | [40045997](https://fr.wiktionary.org/w/index.php?title=trouble&oldid=40045997), line 74 | passed_at_selected_text_boundary |
 | ipa | /tʁubl/ | [40045997](https://fr.wiktionary.org/w/index.php?title=trouble&oldid=40045997), line 48 | passed_at_selected_text_boundary |
-| english | Emotional or mental agitation, unease or turmoil; masculine noun. | [40045997](https://fr.wiktionary.org/w/index.php?title=trouble&oldid=40045997), line 74 | pending_original_work_territorial_review |
-| chinese | 心神不安、情绪波动；阳性名词。 | [40045997](https://fr.wiktionary.org/w/index.php?title=trouble&oldid=40045997), line 74 | pending_original_work_territorial_review |
+| english | Emotional or mental agitation, unease or turmoil; masculine noun. | [40045997](https://fr.wiktionary.org/w/index.php?title=trouble&oldid=40045997), line 74 | passed_at_selected_text_boundary |
+| chinese | 心神不安、情绪波动；阳性名词。 | [40045997](https://fr.wiktionary.org/w/index.php?title=trouble&oldid=40045997), line 74 | passed_at_selected_text_boundary |
 
 ## 2980 `réalisateur/NOM`
 
@@ -387,10 +387,10 @@ Excluded: ['general person who carries something out', 'adjective creative']
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Personne responsable de la réalisation d’un film. | [39807929](https://fr.wiktionary.org/w/index.php?title=r%C3%A9alisateur&oldid=39807929), line 10 | pending_original_work_territorial_review |
+| french_definition | Personne responsable de la réalisation d’un film. | [39807929](https://fr.wiktionary.org/w/index.php?title=r%C3%A9alisateur&oldid=39807929), line 10 | passed_at_selected_text_boundary |
 | ipa | /ʁe.a.li.za.tœʁ/ | [39807929](https://fr.wiktionary.org/w/index.php?title=r%C3%A9alisateur&oldid=39807929), line 7 | passed_at_selected_text_boundary |
-| english | A film director, responsible for making the film; masculine noun, feminine réalisatrice. | [39807929](https://fr.wiktionary.org/w/index.php?title=r%C3%A9alisateur&oldid=39807929), line 10 | pending_original_work_territorial_review |
-| chinese | 负责影片制作的导演；阳性名词，阴性为 réalisatrice。 | [39807929](https://fr.wiktionary.org/w/index.php?title=r%C3%A9alisateur&oldid=39807929), line 10 | pending_original_work_territorial_review |
+| english | A film director, responsible for making the film; masculine noun, feminine réalisatrice. | [39807929](https://fr.wiktionary.org/w/index.php?title=r%C3%A9alisateur&oldid=39807929), line 10 | passed_at_selected_text_boundary |
+| chinese | 负责影片制作的导演；阳性名词，阴性为 réalisatrice。 | [39807929](https://fr.wiktionary.org/w/index.php?title=r%C3%A9alisateur&oldid=39807929), line 10 | passed_at_selected_text_boundary |
 
 ## 2981 `veille/NOM`
 
@@ -426,10 +426,10 @@ Excluded: ['marriage itself in plural noces', 'the wedding guests as a collectiv
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Fête et réjouissances qui accompagnent la célébration d’un mariage ; au singulier ou au pluriel. | [39849307](https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307), line 22 | pending_original_work_territorial_review |
+| french_definition | Fête et réjouissances qui accompagnent la célébration d’un mariage ; au singulier ou au pluriel. | [39849307](https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307), line 22 | passed_at_selected_text_boundary |
 | ipa | /nɔs/ | [39849307](https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307), line 10 | passed_at_selected_text_boundary |
-| english | Wedding celebrations or festivities; feminine noun used in the singular or plural. | [39849307](https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307), line 22 | pending_original_work_territorial_review |
-| chinese | 婚礼庆典、喜宴等婚庆活动；阴性名词，可用单数或复数。 | [39849307](https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307), line 22 | pending_original_work_territorial_review |
+| english | Wedding celebrations or festivities; feminine noun used in the singular or plural. | [39849307](https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307), line 22 | passed_at_selected_text_boundary |
+| chinese | 婚礼庆典、喜宴等婚庆活动；阴性名词，可用单数或复数。 | [39849307](https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307), line 22 | passed_at_selected_text_boundary |
 
 ## 2984 `rocher/NOM`
 
@@ -452,10 +452,10 @@ Excluded: ['thick rope', 'cable television', 'telegraphic message', 'ornamental 
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Ensemble de conducteurs électriques réunis dans une même enveloppe. | [39800575](https://fr.wiktionary.org/w/index.php?title=c%C3%A2ble&oldid=39800575), line 22 | pending_original_work_territorial_review |
+| french_definition | Ensemble de conducteurs électriques réunis dans une même enveloppe. | [39800575](https://fr.wiktionary.org/w/index.php?title=c%C3%A2ble&oldid=39800575), line 22 | passed_at_selected_text_boundary |
 | ipa | /kabl/ | [39800575](https://fr.wiktionary.org/w/index.php?title=c%C3%A2ble&oldid=39800575), line 12 | passed_at_selected_text_boundary |
-| english | An electrical cable: conductors enclosed in a common sheath; masculine noun. | [39800575](https://fr.wiktionary.org/w/index.php?title=c%C3%A2ble&oldid=39800575), line 22 | pending_original_work_territorial_review |
-| chinese | 电缆：包在同一护套中的一组导电线；阳性名词。 | [39800575](https://fr.wiktionary.org/w/index.php?title=c%C3%A2ble&oldid=39800575), line 22 | pending_original_work_territorial_review |
+| english | An electrical cable: conductors enclosed in a common sheath; masculine noun. | [39800575](https://fr.wiktionary.org/w/index.php?title=c%C3%A2ble&oldid=39800575), line 22 | passed_at_selected_text_boundary |
+| chinese | 电缆：包在同一护套中的一组导电线；阳性名词。 | [39800575](https://fr.wiktionary.org/w/index.php?title=c%C3%A2ble&oldid=39800575), line 22 | passed_at_selected_text_boundary |
 
 ## 2986 `linge/NOM`
 
@@ -465,10 +465,10 @@ Excluded: ['underwear specifically', 'a cleaning cloth', 'Quebec general clothin
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Tissu de fil ou de coton destiné à l’usage du corps ou à des usages domestiques. | [39865439](https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439), line 10 | pending_original_work_territorial_review |
+| french_definition | Tissu de fil ou de coton destiné à l’usage du corps ou à des usages domestiques. | [39865439](https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439), line 10 | passed_at_selected_text_boundary |
 | ipa | /lɛ̃ʒ/ | [39865439](https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439), line 9 | passed_at_selected_text_boundary |
-| english | Linen or cotton fabric used for personal or household purposes; masculine noun. | [39865439](https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439), line 10 | pending_original_work_territorial_review |
-| chinese | 供个人或家庭使用的麻纱或棉织物；阳性名词。 | [39865439](https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439), line 10 | pending_original_work_territorial_review |
+| english | Linen or cotton fabric used for personal or household purposes; masculine noun. | [39865439](https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439), line 10 | passed_at_selected_text_boundary |
+| chinese | 供个人或家庭使用的麻纱或棉织物；阳性名词。 | [39865439](https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439), line 10 | passed_at_selected_text_boundary |
 
 ## 2987 `cité/NOM`
 
@@ -478,10 +478,10 @@ Excluded: ['ancient city-state', 'citizens as a collective', 'citizenship', 'cit
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Ensemble architectural de logements collectifs. | [39804147](https://fr.wiktionary.org/w/index.php?title=cit%C3%A9&oldid=39804147), line 60 | pending_original_work_territorial_review |
+| french_definition | Ensemble architectural de logements collectifs. | [39804147](https://fr.wiktionary.org/w/index.php?title=cit%C3%A9&oldid=39804147), line 60 | passed_at_selected_text_boundary |
 | ipa | /si.te/ | [39804147](https://fr.wiktionary.org/w/index.php?title=cit%C3%A9&oldid=39804147), line 10 | passed_at_selected_text_boundary |
-| english | A housing estate or complex of apartment buildings; feminine noun. | [39804147](https://fr.wiktionary.org/w/index.php?title=cit%C3%A9&oldid=39804147), line 60 | pending_original_work_territorial_review |
-| chinese | 由多户住宅楼组成的住宅区、住宅小区；阴性名词。 | [39804147](https://fr.wiktionary.org/w/index.php?title=cit%C3%A9&oldid=39804147), line 60 | pending_original_work_territorial_review |
+| english | A housing estate or complex of apartment buildings; feminine noun. | [39804147](https://fr.wiktionary.org/w/index.php?title=cit%C3%A9&oldid=39804147), line 60 | passed_at_selected_text_boundary |
+| chinese | 由多户住宅楼组成的住宅区、住宅小区；阴性名词。 | [39804147](https://fr.wiktionary.org/w/index.php?title=cit%C3%A9&oldid=39804147), line 60 | passed_at_selected_text_boundary |
 
 ## 2988 `guère/ADV`
 
@@ -491,10 +491,10 @@ Excluded: ['regional ne… pas guère', 'ne… guère que', 'other combinations 
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Presque pas, presque rien ; dans la construction négative « ne… guère ». | [39006060](https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060), line 10 | pending_original_work_territorial_review |
+| french_definition | Presque pas, presque rien ; dans la construction négative « ne… guère ». | [39006060](https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060), line 10 | passed_at_selected_text_boundary |
 | ipa | /ɡɛʁ/ | [39006060](https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060), line 9 | passed_at_selected_text_boundary |
-| english | Hardly, scarcely or not much; in the negative construction ne… guère, without adding pas. | [39006060](https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060), line 10 | pending_original_work_territorial_review |
-| chinese | 几乎不、不太多；用于否定结构 ne… guère，不另加 pas。 | [39006060](https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060), line 10 | pending_original_work_territorial_review |
+| english | Hardly, scarcely or not much; in the negative construction ne… guère, without adding pas. | [39006060](https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060), line 10 | passed_at_selected_text_boundary |
+| chinese | 几乎不、不太多；用于否定结构 ne… guère，不另加 pas。 | [39006060](https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060), line 10 | passed_at_selected_text_boundary |
 
 ## 2989 `peintre/NOM`
 
@@ -517,10 +517,10 @@ Excluded: ['mass/space definition of matter', 'school subject', 'topic of discus
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Substance dont une chose est faite. | [39871340](https://fr.wiktionary.org/w/index.php?title=mati%C3%A8re&oldid=39871340), line 20 | pending_original_work_territorial_review |
+| french_definition | Substance dont une chose est faite. | [39871340](https://fr.wiktionary.org/w/index.php?title=mati%C3%A8re&oldid=39871340), line 20 | passed_at_selected_text_boundary |
 | ipa | /ma.tjɛʁ/ | [39871340](https://fr.wiktionary.org/w/index.php?title=mati%C3%A8re&oldid=39871340), line 9 | passed_at_selected_text_boundary |
-| english | The material or substance something is made of; feminine noun. | [39871340](https://fr.wiktionary.org/w/index.php?title=mati%C3%A8re&oldid=39871340), line 20 | pending_original_work_territorial_review |
-| chinese | 构成某物的材料、物质；阴性名词。 | [39871340](https://fr.wiktionary.org/w/index.php?title=mati%C3%A8re&oldid=39871340), line 20 | pending_original_work_territorial_review |
+| english | The material or substance something is made of; feminine noun. | [39871340](https://fr.wiktionary.org/w/index.php?title=mati%C3%A8re&oldid=39871340), line 20 | passed_at_selected_text_boundary |
+| chinese | 构成某物的材料、物质；阴性名词。 | [39871340](https://fr.wiktionary.org/w/index.php?title=mati%C3%A8re&oldid=39871340), line 20 | passed_at_selected_text_boundary |
 
 ## 2991 `intime/ADJ`
 
@@ -556,10 +556,10 @@ Excluded: ['money held as savings', 'the economic system', 'economics as a disci
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Réduction ou modération des dépenses. | [39960440](https://fr.wiktionary.org/w/index.php?title=%C3%A9conomie&oldid=39960440), line 8 | pending_original_work_territorial_review |
+| french_definition | Réduction ou modération des dépenses. | [39960440](https://fr.wiktionary.org/w/index.php?title=%C3%A9conomie&oldid=39960440), line 8 | passed_at_selected_text_boundary |
 | ipa | /e.kɔ.nɔ.mi/ | [39960440](https://fr.wiktionary.org/w/index.php?title=%C3%A9conomie&oldid=39960440), line 7 | passed_at_selected_text_boundary |
-| english | Saving or economising on expenditure; feminine noun, distinct from plural économies meaning saved money. | [39960440](https://fr.wiktionary.org/w/index.php?title=%C3%A9conomie&oldid=39960440), line 8 | pending_original_work_territorial_review |
-| chinese | 节省开支、节约；阴性名词，区别于表示积蓄的复数 économies。 | [39960440](https://fr.wiktionary.org/w/index.php?title=%C3%A9conomie&oldid=39960440), line 8 | pending_original_work_territorial_review |
+| english | Saving or economising on expenditure; feminine noun, distinct from plural économies meaning saved money. | [39960440](https://fr.wiktionary.org/w/index.php?title=%C3%A9conomie&oldid=39960440), line 8 | passed_at_selected_text_boundary |
+| chinese | 节省开支、节约；阴性名词，区别于表示积蓄的复数 économies。 | [39960440](https://fr.wiktionary.org/w/index.php?title=%C3%A9conomie&oldid=39960440), line 8 | passed_at_selected_text_boundary |
 
 ## 2994 `atelier/NOM`
 
@@ -569,10 +569,10 @@ Excluded: ['the workers collectively', 'a discussion/project workshop', 'Masonic
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Lieu où l’on effectue un travail manuel. | [39773605](https://fr.wiktionary.org/w/index.php?title=atelier&oldid=39773605), line 10 | pending_original_work_territorial_review |
+| french_definition | Lieu où l’on effectue un travail manuel. | [39773605](https://fr.wiktionary.org/w/index.php?title=atelier&oldid=39773605), line 10 | passed_at_selected_text_boundary |
 | ipa | /a.tə.lje/ | [39773605](https://fr.wiktionary.org/w/index.php?title=atelier&oldid=39773605), line 9 | passed_at_selected_text_boundary |
-| english | A workshop: a place where manual work is done; masculine noun. | [39773605](https://fr.wiktionary.org/w/index.php?title=atelier&oldid=39773605), line 10 | pending_original_work_territorial_review |
-| chinese | 进行手工劳动的工作间、作坊；阳性名词。 | [39773605](https://fr.wiktionary.org/w/index.php?title=atelier&oldid=39773605), line 10 | pending_original_work_territorial_review |
+| english | A workshop: a place where manual work is done; masculine noun. | [39773605](https://fr.wiktionary.org/w/index.php?title=atelier&oldid=39773605), line 10 | passed_at_selected_text_boundary |
+| chinese | 进行手工劳动的工作间、作坊；阳性名词。 | [39773605](https://fr.wiktionary.org/w/index.php?title=atelier&oldid=39773605), line 10 | passed_at_selected_text_boundary |
 
 ## 2995 `instinct/NOM`
 
@@ -582,10 +582,10 @@ Excluded: ['species-specific animal behaviour', 'a strong aptitude or propensity
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Impulsion intérieure et involontaire qui pousse une personne à agir sans réfléchir. | [39872155](https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155), line 14 | pending_original_work_territorial_review |
+| french_definition | Impulsion intérieure et involontaire qui pousse une personne à agir sans réfléchir. | [39872155](https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155), line 14 | passed_at_selected_text_boundary |
 | ipa | /ɛ̃s.tɛ̃/ | [39872155](https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155), line 7 | passed_at_selected_text_boundary |
-| english | Instinct: an involuntary inner impulse leading a person to act without deliberation; masculine noun. | [39872155](https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155), line 14 | pending_original_work_territorial_review |
-| chinese | 本能：促使人未经思考便行动的内在、不由自主的冲动；阳性名词。 | [39872155](https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155), line 14 | pending_original_work_territorial_review |
+| english | Instinct: an involuntary inner impulse leading a person to act without deliberation; masculine noun. | [39872155](https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155), line 14 | passed_at_selected_text_boundary |
+| chinese | 本能：促使人未经思考便行动的内在、不由自主的冲动；阳性名词。 | [39872155](https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155), line 14 | passed_at_selected_text_boundary |
 
 ## 2996 `major/NOM`
 
@@ -595,10 +595,10 @@ Excluded: ['French senior NCO rank', 'Canadian commissioned-officer rank', 'mili
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Personne classée première d’une promotion d’élèves ou d’étudiants. | [39970603](https://fr.wiktionary.org/w/index.php?title=major&oldid=39970603), line 19 | pending_original_work_territorial_review |
+| french_definition | Personne classée première d’une promotion d’élèves ou d’étudiants. | [39970603](https://fr.wiktionary.org/w/index.php?title=major&oldid=39970603), line 19 | passed_at_selected_text_boundary |
 | ipa | /ma.ʒɔʁ/ | [39970603](https://fr.wiktionary.org/w/index.php?title=major&oldid=39970603), line 9 | passed_at_selected_text_boundary |
-| english | The top-ranked student in a graduating class or cohort, as in major de promotion; noun usable for either gender. | [39970603](https://fr.wiktionary.org/w/index.php?title=major&oldid=39970603), line 19 | pending_original_work_territorial_review |
-| chinese | 一届学生中排名第一的人，常用 major de promotion；名词，可指男性或女性。 | [39970603](https://fr.wiktionary.org/w/index.php?title=major&oldid=39970603), line 19 | pending_original_work_territorial_review |
+| english | The top-ranked student in a graduating class or cohort, as in major de promotion; noun usable for either gender. | [39970603](https://fr.wiktionary.org/w/index.php?title=major&oldid=39970603), line 19 | passed_at_selected_text_boundary |
+| chinese | 一届学生中排名第一的人，常用 major de promotion；名词，可指男性或女性。 | [39970603](https://fr.wiktionary.org/w/index.php?title=major&oldid=39970603), line 19 | passed_at_selected_text_boundary |
 
 ## 2997 `collection/NOM`
 
@@ -608,10 +608,10 @@ Excluded: ['publishing series', 'medical fluid accumulation', 'seasonal fashion 
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Ensemble de plusieurs objets qui ont un rapport entre eux. | [39772601](https://fr.wiktionary.org/w/index.php?title=collection&oldid=39772601), line 8 | pending_original_work_territorial_review |
+| french_definition | Ensemble de plusieurs objets qui ont un rapport entre eux. | [39772601](https://fr.wiktionary.org/w/index.php?title=collection&oldid=39772601), line 8 | passed_at_selected_text_boundary |
 | ipa | /kɔ.lɛk.sjɔ̃/ | [39772601](https://fr.wiktionary.org/w/index.php?title=collection&oldid=39772601), line 7 | passed_at_selected_text_boundary |
-| english | A collection: a set of related objects brought together; feminine collective noun. | [39772601](https://fr.wiktionary.org/w/index.php?title=collection&oldid=39772601), line 8 | pending_original_work_territorial_review |
-| chinese | 汇集在一起、彼此有某种联系的一组物品，收藏；阴性集合名词。 | [39772601](https://fr.wiktionary.org/w/index.php?title=collection&oldid=39772601), line 8 | pending_original_work_territorial_review |
+| english | A collection: a set of related objects brought together; feminine collective noun. | [39772601](https://fr.wiktionary.org/w/index.php?title=collection&oldid=39772601), line 8 | passed_at_selected_text_boundary |
+| chinese | 汇集在一起、彼此有某种联系的一组物品，收藏；阴性集合名词。 | [39772601](https://fr.wiktionary.org/w/index.php?title=collection&oldid=39772601), line 8 | passed_at_selected_text_boundary |
 
 ## 2998 `automne/NOM`
 
@@ -621,10 +621,10 @@ Excluded: ['figurative stage before old age', 'decline or ageing', 'calendar and
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Saison de l’année entre l’été et l’hiver. | [39914390](https://fr.wiktionary.org/w/index.php?title=automne&oldid=39914390), line 12 | pending_original_work_territorial_review |
+| french_definition | Saison de l’année entre l’été et l’hiver. | [39914390](https://fr.wiktionary.org/w/index.php?title=automne&oldid=39914390), line 12 | passed_at_selected_text_boundary |
 | ipa | /o.tɔn/ | [39914390](https://fr.wiktionary.org/w/index.php?title=automne&oldid=39914390), line 11 | passed_at_selected_text_boundary |
-| english | Autumn or fall, the season between summer and winter; usually masculine in ordinary French. Feminine use is uncommon and literary. | [39914390](https://fr.wiktionary.org/w/index.php?title=automne&oldid=39914390), line 12 | pending_original_work_territorial_review |
-| chinese | 秋季、秋天，夏季与冬季之间的季节；现代日常法语通常用阳性，阴性用法少见且偏文学。 | [39914390](https://fr.wiktionary.org/w/index.php?title=automne&oldid=39914390), line 12 | pending_original_work_territorial_review |
+| english | Autumn or fall, the season between summer and winter; usually masculine in ordinary French. Feminine use is uncommon and literary. | [39914390](https://fr.wiktionary.org/w/index.php?title=automne&oldid=39914390), line 12 | passed_at_selected_text_boundary |
+| chinese | 秋季、秋天，夏季与冬季之间的季节；现代日常法语通常用阳性，阴性用法少见且偏文学。 | [39914390](https://fr.wiktionary.org/w/index.php?title=automne&oldid=39914390), line 12 | passed_at_selected_text_boundary |
 
 ## 2999 `pencher/VER`
 
@@ -634,10 +634,10 @@ Excluded: ['tilting an object transitively', 'an object being off-level', 'figur
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Dans « se pencher », incliner le corps vers le bas ou sur le côté. | [39827518](https://fr.wiktionary.org/w/index.php?title=pencher&oldid=39827518), line 29 | pending_original_work_territorial_review |
+| french_definition | Dans « se pencher », incliner le corps vers le bas ou sur le côté. | [39827518](https://fr.wiktionary.org/w/index.php?title=pencher&oldid=39827518), line 29 | passed_at_selected_text_boundary |
 | ipa | /pɑ̃.ʃe/ | [39827518](https://fr.wiktionary.org/w/index.php?title=pencher&oldid=39827518), line 6 | passed_at_selected_text_boundary |
-| english | To bend or lean down or to one side; pronominal se pencher. | [39827518](https://fr.wiktionary.org/w/index.php?title=pencher&oldid=39827518), line 29 | pending_original_work_territorial_review |
-| chinese | 俯身、弯腰或向一侧倾身；代词式用法 se pencher。 | [39827518](https://fr.wiktionary.org/w/index.php?title=pencher&oldid=39827518), line 29 | pending_original_work_territorial_review |
+| english | To bend or lean down or to one side; pronominal se pencher. | [39827518](https://fr.wiktionary.org/w/index.php?title=pencher&oldid=39827518), line 29 | passed_at_selected_text_boundary |
+| chinese | 俯身、弯腰或向一侧倾身；代词式用法 se pencher。 | [39827518](https://fr.wiktionary.org/w/index.php?title=pencher&oldid=39827518), line 29 | passed_at_selected_text_boundary |
 
 ## 3000 `personnalité/NOM`
 
@@ -647,7 +647,7 @@ Excluded: ['personal identity', 'legal personality', 'original character', 'egoi
 
 | Field | Quality-reviewed text | Fixed source | Rights |
 | --- | --- | --- | --- |
-| french_definition | Personne connue du public. | [39917971](https://fr.wiktionary.org/w/index.php?title=personnalit%C3%A9&oldid=39917971), line 23 | pending_original_work_territorial_review |
+| french_definition | Personne connue du public. | [39917971](https://fr.wiktionary.org/w/index.php?title=personnalit%C3%A9&oldid=39917971), line 23 | passed_at_selected_text_boundary |
 | ipa | /pɛʁ.sɔ.na.li.te/ | [39917971](https://fr.wiktionary.org/w/index.php?title=personnalit%C3%A9&oldid=39917971), line 7 | passed_at_selected_text_boundary |
-| english | A well-known person or public figure; feminine noun regardless of the person’s gender. | [39917971](https://fr.wiktionary.org/w/index.php?title=personnalit%C3%A9&oldid=39917971), line 23 | pending_original_work_territorial_review |
-| chinese | 知名人士、公众人物；阴性名词，不随所指人物的性别变化。 | [39917971](https://fr.wiktionary.org/w/index.php?title=personnalit%C3%A9&oldid=39917971), line 23 | pending_original_work_territorial_review |
+| english | A well-known person or public figure; feminine noun regardless of the person’s gender. | [39917971](https://fr.wiktionary.org/w/index.php?title=personnalit%C3%A9&oldid=39917971), line 23 | passed_at_selected_text_boundary |
+| chinese | 知名人士、公众人物；阴性名词，不随所指人物的性别变化。 | [39917971](https://fr.wiktionary.org/w/index.php?title=personnalit%C3%A9&oldid=39917971), line 23 | passed_at_selected_text_boundary |
