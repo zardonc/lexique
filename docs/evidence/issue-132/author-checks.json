@@ -1,0 +1,74 @@
+{
+  "ticket": 132,
+  "base_commit": "e4005d868880dac12c84c412773049eea737bc67",
+  "boundary": "Author resource/admission handoff only; no independent quality or native execution.",
+  "frozen_groups": 50,
+  "candidate_senses": 50,
+  "candidate_fields": 200,
+  "modern_use_proposals": 49,
+  "unresolved_rows": [
+    2560
+  ],
+  "independent_accepted_fields": 0,
+  "newly_admitted_fields": 0,
+  "scope_denominator_groups": 4087,
+  "commands": [
+    {
+      "command": "Focused resource/admission baseline against curated-inputs.json",
+      "result": "RED: 0/50 frozen ticket groups admitted; 200 fields lack admission",
+      "log": "target/issue-132/canonical-admission-red.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_132.py -v (initial)",
+      "result": "RED: missing groups.json",
+      "log": "target/issue-132/membership-red.log"
+    },
+    {
+      "command": "Focused unresolved-use resource check",
+      "result": "RED: unresolved row 2560 was not yet recorded",
+      "log": "target/issue-132/blocker-red.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_132.py -v",
+      "result": "PASS: four author-boundary tests, zero skips",
+      "log": "target/issue-132/green.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 target/issue-132/reproduce.py",
+      "result": "PASS: ten JSON evidence files and article notices reproduced byte for byte",
+      "log": "target/issue-132/reproduction.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 target/issue-132/recapture_fixed.py",
+      "result": "PASS: all 50 full fixed-revision articles match retained bytes",
+      "log": "target/issue-132/fixed-recapture-retry.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "PASS: 395 documents, 3067 local links, zero problems",
+      "log": "target/issue-132/docs-check.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "PASS",
+      "log": "target/issue-132/staged-diff-check.log"
+    }
+  ],
+  "measured_max_field_utf8_bytes": {
+    "french_definition": 200,
+    "ipa": 21,
+    "english": 187,
+    "chinese": 171
+  },
+  "retained_source_capture_bytes": 2093314,
+  "measurements_boundary": "Candidate fields and retained author captures only; converted SQLite, runtime response, package size, loaded cost and lookup timing are coordinator-owned and unmeasured here.",
+  "unrun_checks": [
+    "Independent field/source/rights/use review",
+    "Combined converter and packaged notices",
+    "Native all-group lookup and trusted save/restart/reopen",
+    "Learner acceptance",
+    "Frontend lint/typecheck/build and Rust checks: no application or Rust code changed"
+  ],
+  "raw_reproduction_requires": "Local target/issue-132 or the external archive identified in admission.json",
+  "original_work_obligations": "CC BY-SA 4.0 attribution/history/version/modifications and ShareAlike; DAF8/Littré original-work layers separately credited and pending selected-span review. CFC, media and CNRTL prose excluded."
+}
