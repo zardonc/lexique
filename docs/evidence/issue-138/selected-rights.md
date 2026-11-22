@@ -1,69 +1,86 @@
-# Selected rights proposal for #138
+# Selected text rights for #138
 
-The 200 fields are author proposals under CC BY-SA 4.0. Independent selected-span
-rights, quality, spelling/use and combined-package admission remain pending.
-[Rights records](rights.json) bind every exact proposed field to its revision,
-span, attribution, contributor record and modification. [Source context](source-context.json)
-retains original-work notices and references separately from selected wording.
+Independent rights review covers the fixed spans for all **200 candidate
+fields**. Semantic/use review accepts **196 fields in 49 groups**; the four
+`halte/ONO` fields remain unresolved for everyday eligibility. The combined
+converted/package artifact has its own coordinator verification gate.
 
-## Contribution and adaptation layer
+[Rights records](rights.json) bind each field to its exact revision/span,
+attribution, modification and separate decision. [Source audit](source-audit.json)
+records 50 independently captured fixed revisions, 50 oldest revisions and
+selected historical/import boundaries. All seven author contributor responses
+and their complete continuation chain agree with [source context](source-context.json).
+Named registries and anonymous counts are article credits; full linked histories
+retain attribution without asserting selected-sentence authorship.
 
-The fixed French lexical definitions and recorded IPA are the scoped source
-basis. French definitions are Lexique adaptations; English and Chinese are new
-Lexique explanations of those selected French uses, not bilingual quotations.
-The adaptation layer is proposed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en),
-with [complete legal text](COPYING), article/history links, named and anonymous
-credits and [modification notices](NOTICES.md). Article-level contributor
-registries extend beyond the selected revision and do not prove sentence authorship.
+## Contributor and adaptation layers
 
-Licence sections 2(a)(1), 3(a) and 3(b) allow sharing and adaptation, including
-commercial use, subject to attribution, licence identification, modification
-notices, ShareAlike and no additional restrictions. Wikimedia Terms of Use
-section 7 and the fixed French copyright convention preserve imported/external
-material’s own rights. Source authority captures are in the stable author archive
-identified by [capture records](source-captures.json), with their actual revisions,
-capture dates and reuse origin. No blanket whole-dictionary admission is proposed.
+Only the selected French lexical definition, applicable IPA and short
+language/POS/construction frames supply the fields. French definitions are scoped
+adaptations; English/Chinese are new explanatory translations of those selected
+uses. Their adaptation layer is [CC BY-SA 4.0](COPYING), with article/history
+links, applicable original credits and [modification notices](NOTICES.md).
 
-## DAF8 original work
+Sections 2(a)(1), 3(a) and 3(b) provide the sharing/adaptation route with
+attribution, licence identification, change notices, ShareAlike and no additional
+restrictions. Retained Wikimedia Terms section 7 and the French copyright
+convention preserve external material's own rights. TLFi, Robert, Larousse or
+DAF9 references do not grant permission for those editions. No publisher article,
+neighbouring literary/news quotation, audio, media or whole dictionary is
+selected learner content.
 
-Thirty-one source articles declare DAF8 imports. The original authorship remains
-Académie française, *Dictionnaire de l’Académie française*, eighth edition,
-1932–1935. The established institutional collective-work basis is preserved from
-[the historical independently reviewed record](../issue-129/selected-rights.md)
-and [original-work context](../issue-99/source-context.json). Under
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20),
-final publication in 1935 gives **1936-01-01 + 70 years = 2006-01-01**.
-Original author/work respect remains under
-[L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891).
-This concerns the original collective edition, not later electronic editorial
-work, Wiktionnaire contributions or Lexique adaptations. A page import marker
-does not establish who wrote a particular selected sentence. Historic review of
-this original-work basis grants no quality or rights acceptance to new fields.
+## Original historical text
 
-## CFC boundary on signature
+The 31 current DAF8 import notices and additional retained DAF1932 imports for
+`catholique`, `tireur` and `cravate` preserve **Académie française,
+Dictionnaire de l’Académie française, eighth edition, 1932–1935**. The original
+collective edition's economic-rights calculation remains **1936-01-01 + 70 years
+= 2006-01-01**, under [CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20).
+Original author/work respect remains under [L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891).
+The old `plastique` import concerns adjective/art uses; its selected masculine
+material definition is a separate current contribution. The `signature` DAF
+fusion is evidenced below.
 
-`signature`, fixed revision **39773897**, declares `Import:CFC` at line 191 and
-references DAF8 at line 190. The selected handwritten-name definition is line 10;
-its nominal IPA is line 9. The printing/cartography definition at line 43 is
-excluded from all proposed fields.
+Oldest `personnellement` **97333**, `suffisamment` **97578** and `réellement`
+**97803** explicitly declare Littré, with a `Littré 1863` reference. Their
+person-relation, sufficient-degree and actuality definitions retain
+**Émile Littré (1801–1881), Dictionnaire de la langue française,
+nineteenth-century original**. Under [CPI L123-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937),
+that original's economic rights expired **1952-01-01**. Prior
+[original-work authorities](../issue-129/selected-rights.md) identify the author
+and edition; these new imports were inspected independently. No modern
+XMLittré/ARTFL transcription is selected.
 
-The fixed `Modèle:Import:CFC` revision **29619964** credits **Comité français de
-cartographie**, *Glossaire de cartographie*, *Bulletin du Comité français de
-cartographie*, numbers 123–124, March–June 1990, second edition, Paris. It declares
-**CC BY-SA 4.0** and a CFC donation. Fixed project revision **33263883** records
-the contact, donation, June 2018 import and subsequent formatting/review work.
-Those actual declarations, institutional credit and import history are retained
-in `rights/` in the stable archive, not replaced by a public-domain assumption.
-They do not establish selected-sentence origin. The independent reviewer must
-inspect that boundary before deciding the handwritten-signature fields’ rights.
-No CFC glossary field is admitted here.
+These original-work boundaries do not relicense later electronic editorial
+work, current Wiktionnaire contributions or Lexique adaptations. Their current
+contribution/adaptation layer remains CC BY-SA 4.0.
 
-## Combined delivery obligations
+## Signature and CFC
 
-Retain fixed source identities, histories and applicable contributors, original
-author/work credit, legal text, licence links and modification notices. Share the
-adaptation layer under CC BY-SA 4.0 without additional restrictions. Preserve
-selected source material and source-binding evidence. Literary/news examples,
-media, etymologies and unrelated definitions remain research captures, outside
-learner content. The coordinator must satisfy these obligations in the actual
-combined converted/package artifact. Project-owned source code remains MIT.
+The selected handwritten-name definition is fixed revision **39773897**, line
+**10**, with nominal IPA at **9**. Revision **3060169** lacks the handwritten
+definition. DAF fusion **3156847**, line **10**, introduces it; cleanup
+**3156879**, line **8**, retains it. This supplies an observed DAF source boundary.
+
+Pre-import **24719744**, lines **8–9**, already contains the nominal IPA and
+handwritten definition. CFC import **24952889** adds the distinct cartography
+definition at **33**, leaving that pair unchanged. CFC review/fusion
+**25814756** changes the printing/cartography definition at **29** and places
+`Import:CFC` at **101**; the selected pair remains unchanged. Current printing/
+cartography line **43** is unselected. Exact API/raw revision pairs and the
+complete 182-revision history are retained in [source audit](source-audit.json).
+
+CFC template **29619964** and project **33263883** retain the declaration,
+donation history and credit: **Comité français de cartographie, Glossaire de
+cartographie, Bulletin 123–124, March–June 1990, second edition, Paris**,
+with the stated CC BY-SA 4.0 donation. CFC is an unselected original-work boundary;
+no public-domain status or selected handwritten-definition authorship is
+attributed to it.
+
+## Delivery obligations
+
+Retain fixed selected source material, original author/work credit, article/
+history attribution, contributor evidence, complete licence text and modification
+notices. Share the adaptation layer under CC BY-SA 4.0 without additional
+restrictions. The coordinator must verify these obligations in the actual
+combined converted/package resource. Project-owned code remains MIT.

@@ -1,0 +1,3450 @@
+{
+  "kind": "independent_fixed_source_and_original_work_boundary_audit",
+  "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138",
+  "author_archive_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-138",
+  "review_base": "a15ed6345371399c177a33dbbfa2cad5ec8f922e",
+  "source_count": 50,
+  "fixed_capture_count": 50,
+  "oldest_capture_count": 50,
+  "contributor_registry_review": "All seven author API responses and matching request URLs, continuation values, terminal response, named registries and anonymous counts verified against current source-context.json; full histories retain attribution beyond names/counts. This does not assert selected-sentence authorship.",
+  "sources": [
+    {
+      "source_id": "b138_fr_4865",
+      "frozen_row": 2860,
+      "title": "intelligence",
+      "pageid": 4865,
+      "selected_revid": 40012762,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2860-intelligence-nom-selected",
+          "frozen_row": 2860,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[faculté|Faculté]] de [[comprendre]], de ne pas se [[méprendre]] sur le sens des mots, la [[nature]] des choses et la [[signification]] des faits."
+        },
+        {
+          "sense_id": "b138-2860-intelligence-nom-selected",
+          "frozen_row": 2860,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''intelligence''' {{pron|ɛ̃.te.li.ʒɑ̃s|fr}} ou {{pron|ɛ̃.tɛ.li.ʒɑ̃s|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2860-intelligence-nom-selected",
+          "frozen_row": 2860,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[faculté|Faculté]] de [[comprendre]], de ne pas se [[méprendre]] sur le sens des mots, la [[nature]] des choses et la [[signification]] des faits."
+        },
+        {
+          "sense_id": "b138-2860-intelligence-nom-selected",
+          "frozen_row": 2860,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[faculté|Faculté]] de [[comprendre]], de ne pas se [[méprendre]] sur le sens des mots, la [[nature]] des choses et la [[signification]] des faits."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-4865-40012762.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 8914,
+        "parentid": 0,
+        "timestamp": "2004-11-19T16:23:38Z",
+        "user": "Chrisaiki~frwiktionary",
+        "comment": "Def",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-4865.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-4865-8914.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 232,
+          "raw_reference": "* {{R:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "intelligence, fixed revision 40012762, selected lines 7, 8: Faculté de comprendre preserves the faculty and the three domains of words, things and facts; dropping a repeated negative reformulation changes no meaning. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_9017",
+      "frozen_row": 2851,
+      "title": "boisson",
+      "pageid": 9017,
+      "selected_revid": 39924833,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2851-boisson-nom-selected",
+          "frozen_row": 2851,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[liquide|Liquide]] servant à la [[réhydratation]] par la [[bouche]], que l’on [[boire|boit]] pour se [[désaltérer]] ou pour se [[rafraîchir]]."
+        },
+        {
+          "sense_id": "b138-2851-boisson-nom-selected",
+          "frozen_row": 2851,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''boisson''' {{pron|bwa.sɔ̃|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2851-boisson-nom-selected",
+          "frozen_row": 2851,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[liquide|Liquide]] servant à la [[réhydratation]] par la [[bouche]], que l’on [[boire|boit]] pour se [[désaltérer]] ou pour se [[rafraîchir]]."
+        },
+        {
+          "sense_id": "b138-2851-boisson-nom-selected",
+          "frozen_row": 2851,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[liquide|Liquide]] servant à la [[réhydratation]] par la [[bouche]], que l’on [[boire|boit]] pour se [[désaltérer]] ou pour se [[rafraîchir]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-9017-39924833.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 19692,
+        "parentid": 0,
+        "timestamp": "2005-03-18T18:15:52Z",
+        "user": "82.234.252.211",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-9017.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-9017-19692.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 162,
+          "raw_reference": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 163,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "boisson, fixed revision 39924833, selected lines 9, 10: Liquide bu pour désaltérer ou rafraîchir faithfully condenses the oral rehydration definition without adding an alcoholic restriction. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_12106",
+      "frozen_row": 2855,
+      "title": "riz",
+      "pageid": 12106,
+      "selected_revid": 39874451,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2855-riz-nom-selected",
+          "frozen_row": 2855,
+          "field": "french_definition",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{term|alimentation}} Grain [[farineux]] [[produire|produit]] par ces [[plante]]s."
+        },
+        {
+          "sense_id": "b138-2855-riz-nom-selected",
+          "frozen_row": 2855,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''riz''' {{pron|ʁi|fr}} {{m}} {{invar}}"
+        },
+        {
+          "sense_id": "b138-2855-riz-nom-selected",
+          "frozen_row": 2855,
+          "field": "english",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{term|alimentation}} Grain [[farineux]] [[produire|produit]] par ces [[plante]]s."
+        },
+        {
+          "sense_id": "b138-2855-riz-nom-selected",
+          "frozen_row": 2855,
+          "field": "chinese",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{term|alimentation}} Grain [[farineux]] [[produire|produit]] par ces [[plante]]s."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-12106-39874451.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 31248,
+        "parentid": 0,
+        "timestamp": "2005-05-03T19:06:08Z",
+        "user": "Guaka",
+        "comment": "ebauche-trans",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-12106.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-12106-31248.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 282,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "riz, fixed revision 39874451, selected lines 10, 23: The explanatory reference to rice plants resolves ces plantes in the selected alimentary grain definition without importing the botanical plant sense. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_33526",
+      "frozen_row": 2858,
+      "title": "dose",
+      "pageid": 33526,
+      "selected_revid": 39938310,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2858-dose-nom-selected",
+          "frozen_row": 2858,
+          "field": "french_definition",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{en particulier}} Quantité d’un [[médicament]] que l’on en doit prendre en une fois."
+        },
+        {
+          "sense_id": "b138-2858-dose-nom-selected",
+          "frozen_row": 2858,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''dose''' {{pron|doz|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2858-dose-nom-selected",
+          "frozen_row": 2858,
+          "field": "english",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{en particulier}} Quantité d’un [[médicament]] que l’on en doit prendre en une fois."
+        },
+        {
+          "sense_id": "b138-2858-dose-nom-selected",
+          "frozen_row": 2858,
+          "field": "chinese",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{en particulier}} Quantité d’un [[médicament]] que l’on en doit prendre en une fois."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-33526-39938310.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 90036,
+        "parentid": 0,
+        "timestamp": "2005-10-03T10:58:59Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-33526.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-33526-90036.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 139,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "dose, fixed revision 39938310, selected lines 9, 14: Une seule fois retains the single-taking quantity of a medicine, not an ingredient proportion or a cumulative amount. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_33906",
+      "frozen_row": 2856,
+      "title": "signature",
+      "pageid": 33906,
+      "selected_revid": 39773897,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2856-signature-nom-selected",
+          "frozen_row": 2856,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Nom d’une personne [[écrit]] de sa [[main]], mis à la fin d’une [[lettre]], d’un [[contrat]], ou d’un [[acte]] quelconque, pour le [[certifier]], pour le [[confirmer]], pour le rendre [[valable]]."
+        },
+        {
+          "sense_id": "b138-2856-signature-nom-selected",
+          "frozen_row": 2856,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''signature''' {{pron|si.ɲa.tyʁ|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2856-signature-nom-selected",
+          "frozen_row": 2856,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Nom d’une personne [[écrit]] de sa [[main]], mis à la fin d’une [[lettre]], d’un [[contrat]], ou d’un [[acte]] quelconque, pour le [[certifier]], pour le [[confirmer]], pour le rendre [[valable]]."
+        },
+        {
+          "sense_id": "b138-2856-signature-nom-selected",
+          "frozen_row": 2856,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Nom d’une personne [[écrit]] de sa [[main]], mis à la fin d’une [[lettre]], d’un [[contrat]], ou d’un [[acte]] quelconque, pour le [[certifier]], pour le [[confirmer]], pour le rendre [[valable]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-33906-39773897.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 90465,
+        "parentid": 0,
+        "timestamp": "2005-10-03T20:20:42Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-33906.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-33906-90465.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 190,
+          "raw_reference": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 191,
+          "raw_reference": "* {{Import:CFC}}"
+        }
+      ],
+      "selected_source_rights_reason": "signature, fixed revision 39773897, selected lines 9, 10: The accepted definition restores à la fin, a location condition in the fixed handwritten-name sentence. It remains a signature, not the act of signing. The handwritten definition first appears in DAF fusion revision 3156847 (Serpicozaure, 2008-03-19), line 10, and remains after fusion cleanup 3156879, line 8. Before the CFC import, 24719744 lines 8–9 already contain the nominal IPA and handwritten definition. Import 24952889 adds a separate cartography definition at line 33, leaving lines 8–9 unchanged. Review/fusion 25814756 changes the printing/cartography definition at line 29 and moves Import:CFC to line 101; the handwriting/IPA pair remains unchanged. Thus CFC is an actual unselected boundary, not the selected sentence’s origin. Fixed CFC declarations and institutional credit remain preserved; no public-domain claim is made for CFC. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_152436",
+      "frozen_row": 2852,
+      "title": "catholique",
+      "pageid": 152436,
+      "selected_revid": 39775453,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2852-catholique-adj-selected",
+          "frozen_row": 2852,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|catholicisme|fr}} Relatif à la religion chrétienne et l’Église dirigée par le pape de {{lien|Rome|fr}}."
+        },
+        {
+          "sense_id": "b138-2852-catholique-adj-selected",
+          "frozen_row": 2852,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''catholique''' {{pron|ka.tɔ.lik|fr}} {{mf}}"
+        },
+        {
+          "sense_id": "b138-2852-catholique-adj-selected",
+          "frozen_row": 2852,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|catholicisme|fr}} Relatif à la religion chrétienne et l’Église dirigée par le pape de {{lien|Rome|fr}}."
+        },
+        {
+          "sense_id": "b138-2852-catholique-adj-selected",
+          "frozen_row": 2852,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|catholicisme|fr}} Relatif à la religion chrétienne et l’Église dirigée par le pape de {{lien|Rome|fr}}."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-152436-39775453.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 417788,
+        "parentid": 0,
+        "timestamp": "2006-02-19T13:17:38Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-152436.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-152436-417788.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 28,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 215,
+          "raw_reference": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 216,
+          "raw_reference": "** {{RÉF|ÉL3}} : {{R:Littré|catholique}} § 3 : « Primat des églises d'Asie. Le catholique d'Arménie. »"
+        },
+        {
+          "line_1_based": 217,
+          "raw_reference": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 218,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "catholique, fixed revision 39775453, selected lines 8, 9: The added à restores French syntax while retaining the Catholic religion and Church directed by the pope in Rome. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_155280",
+      "frozen_row": 2857,
+      "title": "consulter",
+      "pageid": 155280,
+      "selected_revid": 39812771,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2857-consulter-ver-selected",
+          "frozen_row": 2857,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Prendre [[avis]], [[conseil]] ou [[instruction]] de [[quelqu’un]]."
+        },
+        {
+          "sense_id": "b138-2857-consulter-ver-selected",
+          "frozen_row": 2857,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''consulter''' {{pron|kɔ̃.syl.te|fr}} {{t|fr}} ou {{i|fr}} {{conj|grp=1|fr}}"
+        },
+        {
+          "sense_id": "b138-2857-consulter-ver-selected",
+          "frozen_row": 2857,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Prendre [[avis]], [[conseil]] ou [[instruction]] de [[quelqu’un]]."
+        },
+        {
+          "sense_id": "b138-2857-consulter-ver-selected",
+          "frozen_row": 2857,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Prendre [[avis]], [[conseil]] ou [[instruction]] de [[quelqu’un]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-155280-39812771.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 420804,
+        "parentid": 0,
+        "timestamp": "2006-02-19T21:10:38Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-155280.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-155280-420804.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 40,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 154,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "consulter, fixed revision 39812771, selected lines 8, 9: Demander avis, conseils ou indications is a natural explanation of prendre avis, conseil ou instruction de quelqu’un. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_160362",
+      "frozen_row": 2853,
+      "title": "étrangler",
+      "pageid": 160362,
+      "selected_revid": 39902205,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2853-étrangler-ver-selected",
+          "frozen_row": 2853,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[serrer|Serrer]] à la [[gorge]] de manière à faire [[perdre]] la [[respiration]] ou même la vie."
+        },
+        {
+          "sense_id": "b138-2853-étrangler-ver-selected",
+          "frozen_row": 2853,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''étrangler''' {{pron|e.tʁɑ̃.ɡle|fr}} {{t|fr}} ou {{prnl}} {{conj|grp=1|fr}}"
+        },
+        {
+          "sense_id": "b138-2853-étrangler-ver-selected",
+          "frozen_row": 2853,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[serrer|Serrer]] à la [[gorge]] de manière à faire [[perdre]] la [[respiration]] ou même la vie."
+        },
+        {
+          "sense_id": "b138-2853-étrangler-ver-selected",
+          "frozen_row": 2853,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[serrer|Serrer]] à la [[gorge]] de manière à faire [[perdre]] la [[respiration]] ou même la vie."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-160362-39902205.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 425971,
+        "parentid": 0,
+        "timestamp": "2006-02-20T12:20:43Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-160362.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-160362-425971.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 39,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 122,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "étrangler, fixed revision 39902205, selected lines 6, 7: Serrer quelqu’un à la gorge preserves loss of breathing and possible death; physical strangling is distinct from figurative constraint. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_175099",
+      "frozen_row": 2859,
+      "title": "réveil",
+      "pageid": 175099,
+      "selected_revid": 39911290,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2859-réveil-nom-selected",
+          "frozen_row": 2859,
+          "field": "french_definition",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{sens propre|fr}} [[retour#fr|Retour]] à l’état d’[[éveil]]. {{cf|lang=fr|heure du réveil}}"
+        },
+        {
+          "sense_id": "b138-2859-réveil-nom-selected",
+          "frozen_row": 2859,
+          "field": "ipa",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''réveil''' {{pron|ʁe.vɛj|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2859-réveil-nom-selected",
+          "frozen_row": 2859,
+          "field": "english",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{sens propre|fr}} [[retour#fr|Retour]] à l’état d’[[éveil]]. {{cf|lang=fr|heure du réveil}}"
+        },
+        {
+          "sense_id": "b138-2859-réveil-nom-selected",
+          "frozen_row": 2859,
+          "field": "chinese",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{sens propre|fr}} [[retour#fr|Retour]] à l’état d’[[éveil]]. {{cf|lang=fr|heure du réveil}}"
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-175099-39911290.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 441660,
+        "parentid": 0,
+        "timestamp": "2006-02-21T23:53:03Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-175099.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-175099-441660.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 35,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 163,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "réveil, fixed revision 39911290, selected lines 13, 14: Retour à l’état d’éveil après le sommeil resolves literal waking, without introducing the alarm-clock device. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_185335",
+      "frozen_row": 2854,
+      "title": "progrès",
+      "pageid": 185335,
+      "selected_revid": 39664295,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2854-progrès-nom-selected",
+          "frozen_row": 2854,
+          "field": "french_definition",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{absolument}} [[mouvement|Mouvement]] en [[avant]] de la [[civilisation]], en général ou dans un de ses domaines particuliers."
+        },
+        {
+          "sense_id": "b138-2854-progrès-nom-selected",
+          "frozen_row": 2854,
+          "field": "ipa",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''progrès''' {{pron|pʁɔ.ɡʁɛ|fr}} {{m}}, {{sp}}"
+        },
+        {
+          "sense_id": "b138-2854-progrès-nom-selected",
+          "frozen_row": 2854,
+          "field": "english",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{absolument}} [[mouvement|Mouvement]] en [[avant]] de la [[civilisation]], en général ou dans un de ses domaines particuliers."
+        },
+        {
+          "sense_id": "b138-2854-progrès-nom-selected",
+          "frozen_row": 2854,
+          "field": "chinese",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{absolument}} [[mouvement|Mouvement]] en [[avant]] de la [[civilisation]], en général ou dans un de ses domaines particuliers."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-185335-39664295.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 520047,
+        "parentid": 0,
+        "timestamp": "2006-03-12T11:55:06Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-185335.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-185335-520047.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 39,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 150,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "progrès, fixed revision 39664295, selected lines 11, 12: Avancée de la civilisation retains the overall or domain-specific advancement, rather than every movement in a good or bad direction. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_12023",
+      "frozen_row": 2863,
+      "title": "u",
+      "pageid": 12023,
+      "selected_revid": 39772419,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2863-u-nom-selected",
+          "frozen_row": 2863,
+          "field": "french_definition",
+          "line_1_based": 36,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Vingt-et-unième lettre et cinquième voyelle de l’alphabet (minuscule)."
+        },
+        {
+          "sense_id": "b138-2863-u-nom-selected",
+          "frozen_row": 2863,
+          "field": "ipa",
+          "line_1_based": 35,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''u''' {{pron|y|fr}} {{m}} {{invar}}"
+        },
+        {
+          "sense_id": "b138-2863-u-nom-selected",
+          "frozen_row": 2863,
+          "field": "english",
+          "line_1_based": 36,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Vingt-et-unième lettre et cinquième voyelle de l’alphabet (minuscule)."
+        },
+        {
+          "sense_id": "b138-2863-u-nom-selected",
+          "frozen_row": 2863,
+          "field": "chinese",
+          "line_1_based": 36,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Vingt-et-unième lettre et cinquième voyelle de l’alphabet (minuscule)."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-12023-39772419.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 21480,
+        "parentid": 0,
+        "timestamp": "2005-05-01T14:31:02Z",
+        "user": "Yann",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-12023.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-12023-21480.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 88,
+          "raw_reference": "* {{R:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "u, fixed revision 39772419, selected lines 35, 36: The masculine invariant lowercase letter name explicitly resolves minuscule and French alphabet; /y/ is identified as its name, not every grapheme value. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_26157",
+      "frozen_row": 2869,
+      "title": "bougie",
+      "pageid": 26157,
+      "selected_revid": 39814909,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2869-bougie-nom-selected",
+          "frozen_row": 2869,
+          "field": "french_definition",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[chandelle|Chandelle]] de [[cire]], de [[stéarine]], de [[paraffine]], [[servir|servant]] d’[[éclairage]] ou [[utilisée]] dans [[certains]] [[rite]]s [[religieux]]."
+        },
+        {
+          "sense_id": "b138-2869-bougie-nom-selected",
+          "frozen_row": 2869,
+          "field": "ipa",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''bougie''' {{pron|bu.ʒi|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2869-bougie-nom-selected",
+          "frozen_row": 2869,
+          "field": "english",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[chandelle|Chandelle]] de [[cire]], de [[stéarine]], de [[paraffine]], [[servir|servant]] d’[[éclairage]] ou [[utilisée]] dans [[certains]] [[rite]]s [[religieux]]."
+        },
+        {
+          "sense_id": "b138-2869-bougie-nom-selected",
+          "frozen_row": 2869,
+          "field": "chinese",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[chandelle|Chandelle]] de [[cire]], de [[stéarine]], de [[paraffine]], [[servir|servant]] d’[[éclairage]] ou [[utilisée]] dans [[certains]] [[rite]]s [[religieux]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-26157-39814909.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 73665,
+        "parentid": 0,
+        "timestamp": "2005-08-29T23:35:42Z",
+        "user": "Laurent Bouvier",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-26157.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-26157-73665.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 286,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "bougie, fixed revision 39814909, selected lines 13, 14: Wax, stearin or paraffin, lighting and certain religious rites preserve the actual candle materials and uses. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_37375",
+      "frozen_row": 2865,
+      "title": "personnellement",
+      "pageid": 37375,
+      "selected_revid": 39729576,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2865-personnellement-adv-selected",
+          "frozen_row": 2865,
+          "field": "french_definition",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# D’une [[manière]] [[propre]] à la [[personne]] [[elle-même]]."
+        },
+        {
+          "sense_id": "b138-2865-personnellement-adv-selected",
+          "frozen_row": 2865,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''personnellement''' {{pron|pɛʁ.sɔ.nɛl.mɑ̃|fr}}"
+        },
+        {
+          "sense_id": "b138-2865-personnellement-adv-selected",
+          "frozen_row": 2865,
+          "field": "english",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# D’une [[manière]] [[propre]] à la [[personne]] [[elle-même]]."
+        },
+        {
+          "sense_id": "b138-2865-personnellement-adv-selected",
+          "frozen_row": 2865,
+          "field": "chinese",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# D’une [[manière]] [[propre]] à la [[personne]] [[elle-même]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-37375-39729576.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 97333,
+        "parentid": 0,
+        "timestamp": "2005-10-18T07:48:32Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-37375.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-37375-97333.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{Littré}}"
+        },
+        {
+          "line_1_based": 26,
+          "raw_source_excerpt": "{{réf|Littré|1863}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 49,
+          "raw_reference": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 50,
+          "raw_reference": "* {{R:Littré}}"
+        }
+      ],
+      "selected_source_rights_reason": "personnellement, fixed revision 39729576, selected lines 6, 14: D’une manière propre à la personne elle-même accurately retains the personally-affected relation. The oldest retained French entry 97333 is explicitly marked Littré and réf Littré 1863. Its person-relation definition precedes the selected modern split sense. Preserve Émile Littré’s original text boundary, separately from current phonetic/editorial and Lexique adaptation layers. Littré’s original author died in 1881; original economic rights expired 1952-01-01 under L123-1. Current contributor/phonetic and Lexique adaptation layers remain CC BY-SA 4.0. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_39220",
+      "frozen_row": 2861,
+      "title": "bisou",
+      "pageid": 39220,
+      "selected_revid": 39901228,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2861-bisou-nom-selected",
+          "frozen_row": 2861,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{enfantin|fr}} [[contact|Contact]] effectué avec les [[lèvre]]s en signe d’[[amour]] ou d’[[affection]] sur la joue. ({{note}} Quand il est donné autre part que sur la joue c'est généralement spécifié, voir ci-dessous.)"
+        },
+        {
+          "sense_id": "b138-2861-bisou-nom-selected",
+          "frozen_row": 2861,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''bisou''' {{pron|bi.zu|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2861-bisou-nom-selected",
+          "frozen_row": 2861,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{enfantin|fr}} [[contact|Contact]] effectué avec les [[lèvre]]s en signe d’[[amour]] ou d’[[affection]] sur la joue. ({{note}} Quand il est donné autre part que sur la joue c'est généralement spécifié, voir ci-dessous.)"
+        },
+        {
+          "sense_id": "b138-2861-bisou-nom-selected",
+          "frozen_row": 2861,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{enfantin|fr}} [[contact|Contact]] effectué avec les [[lèvre]]s en signe d’[[amour]] ou d’[[affection]] sur la joue. ({{note}} Quand il est donné autre part que sur la joue c'est généralement spécifié, voir ci-dessous.)"
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-39220-39901228.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 112166,
+        "parentid": 0,
+        "timestamp": "2005-11-03T17:45:54Z",
+        "user": "Kipmaster",
+        "comment": "smack !",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-39220.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-39220-112166.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [],
+      "selected_source_rights_reason": "bisou, fixed revision 39901228, selected lines 10, 11: Langage enfantin and the usual cheek/explicit-other-location condition reproduce the selected contact-of-lips definition and its note. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_132103",
+      "frozen_row": 2866,
+      "title": "défaut",
+      "pageid": 132103,
+      "selected_revid": 39823184,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2866-défaut-nom-selected",
+          "frozen_row": 2866,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[imperfection|Imperfection]] [[physique]]."
+        },
+        {
+          "sense_id": "b138-2866-défaut-nom-selected",
+          "frozen_row": 2866,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''défaut''' {{pron|de.fo|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2866-défaut-nom-selected",
+          "frozen_row": 2866,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[imperfection|Imperfection]] [[physique]]."
+        },
+        {
+          "sense_id": "b138-2866-défaut-nom-selected",
+          "frozen_row": 2866,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[imperfection|Imperfection]] [[physique]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-132103-39823184.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 308222,
+        "parentid": 0,
+        "timestamp": "2006-01-05T12:59:03Z",
+        "user": "Ignis",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-132103.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-132103-308222.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 185,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "défaut, fixed revision 39823184, selected lines 9, 10: Imperfection physique reproduces the selected physical flaw rather than the following moral flaw or lack/absence definitions. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_165759",
+      "frozen_row": 2870,
+      "title": "ivre",
+      "pageid": 165759,
+      "selected_revid": 39424802,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2870-ivre-adj-selected",
+          "frozen_row": 2870,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui a le [[cerveau]] [[troubler|troublé]] par l’[[effet]] des [[boisson]]s [[fermenter|fermentées]], par l’[[alcool]], etc."
+        },
+        {
+          "sense_id": "b138-2870-ivre-adj-selected",
+          "frozen_row": 2870,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''ivre''' {{pron|ivʁ|fr}} {{mf}}"
+        },
+        {
+          "sense_id": "b138-2870-ivre-adj-selected",
+          "frozen_row": 2870,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui a le [[cerveau]] [[troubler|troublé]] par l’[[effet]] des [[boisson]]s [[fermenter|fermentées]], par l’[[alcool]], etc."
+        },
+        {
+          "sense_id": "b138-2870-ivre-adj-selected",
+          "frozen_row": 2870,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui a le [[cerveau]] [[troubler|troublé]] par l’[[effet]] des [[boisson]]s [[fermenter|fermentées]], par l’[[alcool]], etc."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-165759-39424802.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 431659,
+        "parentid": 0,
+        "timestamp": "2006-02-21T05:41:52Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-165759.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-165759-431659.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 26,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 210,
+          "raw_reference": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 211,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "ivre, fixed revision 39424802, selected lines 10, 11: Cerveau troublé par l’alcool scopes the definition to alcoholic intoxication without importing emotional intoxication. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_166799",
+      "frozen_row": 2867,
+      "title": "loger",
+      "pageid": 166799,
+      "selected_revid": 39647178,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2867-loger-ver-selected",
+          "frozen_row": 2867,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[séjourner|Séjourner]] ; avoir sa [[demeure]] [[habituelle]] ou [[temporaire]] dans un [[logis]]."
+        },
+        {
+          "sense_id": "b138-2867-loger-ver-selected",
+          "frozen_row": 2867,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''loger''' {{pron|lɔ.ʒe|fr}} {{i|fr}} ou {{t|fr}} {{conj|grp=1|fr}}"
+        },
+        {
+          "sense_id": "b138-2867-loger-ver-selected",
+          "frozen_row": 2867,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[séjourner|Séjourner]] ; avoir sa [[demeure]] [[habituelle]] ou [[temporaire]] dans un [[logis]]."
+        },
+        {
+          "sense_id": "b138-2867-loger-ver-selected",
+          "frozen_row": 2867,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[séjourner|Séjourner]] ; avoir sa [[demeure]] [[habituelle]] ou [[temporaire]] dans un [[logis]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-166799-39647178.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 432699,
+        "parentid": 0,
+        "timestamp": "2006-02-21T07:06:11Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-166799.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-166799-432699.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 47,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 117,
+          "raw_reference": "* {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 118,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "loger, fixed revision 39647178, selected lines 6, 7: Habiter ou séjourner dans un logement retains habitual or temporary dwelling without supplying accommodation to someone else. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_167873",
+      "frozen_row": 2868,
+      "title": "messe",
+      "pageid": 167873,
+      "selected_revid": 38945958,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2868-messe-nom-selected",
+          "frozen_row": 2868,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|christianisme|fr}} [[rite|Rite]] [[catholique]] qui [[commémore]] la [[mort]] de [[Jésus-Christ]], et qui se fait par le [[ministère]] du [[prêtre]] devant un [[autel]]."
+        },
+        {
+          "sense_id": "b138-2868-messe-nom-selected",
+          "frozen_row": 2868,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''messe''' {{pron|mɛs|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2868-messe-nom-selected",
+          "frozen_row": 2868,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|christianisme|fr}} [[rite|Rite]] [[catholique]] qui [[commémore]] la [[mort]] de [[Jésus-Christ]], et qui se fait par le [[ministère]] du [[prêtre]] devant un [[autel]]."
+        },
+        {
+          "sense_id": "b138-2868-messe-nom-selected",
+          "frozen_row": 2868,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|christianisme|fr}} [[rite|Rite]] [[catholique]] qui [[commémore]] la [[mort]] de [[Jésus-Christ]], et qui se fait par le [[ministère]] du [[prêtre]] devant un [[autel]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-167873-38945958.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 433784,
+        "parentid": 0,
+        "timestamp": "2006-02-21T08:34:14Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-167873.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-167873-433784.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 56,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 134,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "messe, fixed revision 38945958, selected lines 10, 11: Catholic rite, priest, altar and commemoration of Jesus Christ’s death all remain in the scoped definition. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_178737",
+      "frozen_row": 2862,
+      "title": "transférer",
+      "pageid": 178737,
+      "selected_revid": 39719925,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2862-transférer-ver-selected",
+          "frozen_row": 2862,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[transporter|Transporter]], [[porter]] quelque chose d’un [[lieu]] à un autre, [[faire]] [[passer]] d’un lieu à un autre."
+        },
+        {
+          "sense_id": "b138-2862-transférer-ver-selected",
+          "frozen_row": 2862,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''transférer''' {{pron|tʁɑ̃s.fe.ʁe|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+        },
+        {
+          "sense_id": "b138-2862-transférer-ver-selected",
+          "frozen_row": 2862,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[transporter|Transporter]], [[porter]] quelque chose d’un [[lieu]] à un autre, [[faire]] [[passer]] d’un lieu à un autre."
+        },
+        {
+          "sense_id": "b138-2862-transférer-ver-selected",
+          "frozen_row": 2862,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[transporter|Transporter]], [[porter]] quelque chose d’un [[lieu]] à un autre, [[faire]] [[passer]] d’un lieu à un autre."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-178737-39719925.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 445409,
+        "parentid": 0,
+        "timestamp": "2006-02-22T05:35:57Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-178737.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-178737-445409.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 31,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 61,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "transférer, fixed revision 39719925, selected lines 7, 8: Faire passer quelque chose d’un lieu à un autre preserves transport/movement of a thing without importing jurisdiction or ownership transfer. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_195793",
+      "frozen_row": 2864,
+      "title": "dégoûter",
+      "pageid": 195793,
+      "selected_revid": 39124108,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2864-dégoûter-ver-selected",
+          "frozen_row": 2864,
+          "field": "french_definition",
+          "line_1_based": 17,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} Inspirer de l’[[aversion]] pour une [[personne]], pour une [[chose]] ; [[faire]] qu’on [[cesser|cesse]] de [[trouver]] une personne, une chose à son [[gré]]."
+        },
+        {
+          "sense_id": "b138-2864-dégoûter-ver-selected",
+          "frozen_row": 2864,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''dégoûter''' {{pron|de.ɡu.te|fr}} {{t|fr}} {{conj|grp=1|fr}}, {{tradit}}"
+        },
+        {
+          "sense_id": "b138-2864-dégoûter-ver-selected",
+          "frozen_row": 2864,
+          "field": "english",
+          "line_1_based": 17,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} Inspirer de l’[[aversion]] pour une [[personne]], pour une [[chose]] ; [[faire]] qu’on [[cesser|cesse]] de [[trouver]] une personne, une chose à son [[gré]]."
+        },
+        {
+          "sense_id": "b138-2864-dégoûter-ver-selected",
+          "frozen_row": 2864,
+          "field": "chinese",
+          "line_1_based": 17,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} Inspirer de l’[[aversion]] pour une [[personne]], pour une [[chose]] ; [[faire]] qu’on [[cesser|cesse]] de [[trouver]] une personne, une chose à son [[gré]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-195793-39124108.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 575027,
+        "parentid": 0,
+        "timestamp": "2006-04-01T20:55:10Z",
+        "user": "Urhixidur",
+        "comment": "dégoûter déplacé vers dégouter: ortho1990",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-195793.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-195793-575027.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 91,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "dégoûter, fixed revision 39124108, selected lines 7, 17: Inspirer de l’aversion and cease finding a person/thing agreeable preserve the figurative aversion sense rather than loss of appetite. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_545",
+      "frozen_row": 2877,
+      "title": "aïe",
+      "pageid": 545,
+      "selected_revid": 39494788,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2877-aïe-ono-selected",
+          "frozen_row": 2877,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Cri [[exprimer|exprimant]] la [[douleur]]."
+        },
+        {
+          "sense_id": "b138-2877-aïe-ono-selected",
+          "frozen_row": 2877,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''aïe''' {{pron|aj|fr}} {{invar}}"
+        },
+        {
+          "sense_id": "b138-2877-aïe-ono-selected",
+          "frozen_row": 2877,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Cri [[exprimer|exprimant]] la [[douleur]]."
+        },
+        {
+          "sense_id": "b138-2877-aïe-ono-selected",
+          "frozen_row": 2877,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Cri [[exprimer|exprimant]] la [[douleur]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-545-39494788.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 2432,
+        "parentid": 0,
+        "timestamp": "2004-04-12T00:38:24Z",
+        "user": "Dedoo",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-545.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-545-2432.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [],
+      "selected_source_rights_reason": "aïe, fixed revision 39494788, selected lines 9, 10: Cri qui exprime la douleur faithfully retains the actual pain cry. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_9197",
+      "frozen_row": 2878,
+      "title": "parking",
+      "pageid": 9197,
+      "selected_revid": 39908246,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2878-parking-nom-selected",
+          "frozen_row": 2878,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{faux anglicismes|fr}} [[terrain|Terrain]] ou aménagement destiné au [[stationnement]] des [[automobile]]s."
+        },
+        {
+          "sense_id": "b138-2878-parking-nom-selected",
+          "frozen_row": 2878,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''parking''' {{pron|paʁ.kiŋ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2878-parking-nom-selected",
+          "frozen_row": 2878,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{faux anglicismes|fr}} [[terrain|Terrain]] ou aménagement destiné au [[stationnement]] des [[automobile]]s."
+        },
+        {
+          "sense_id": "b138-2878-parking-nom-selected",
+          "frozen_row": 2878,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{faux anglicismes|fr}} [[terrain|Terrain]] ou aménagement destiné au [[stationnement]] des [[automobile]]s."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-9197-39908246.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 14336,
+        "parentid": 0,
+        "timestamp": "2005-03-22T03:54:04Z",
+        "user": "66.36.149.8",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-9197.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-9197-14336.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 105,
+          "raw_reference": "* {{R:Robert}}."
+        },
+        {
+          "line_1_based": 106,
+          "raw_reference": "* {{R:Larousse}}"
+        },
+        {
+          "line_1_based": 108,
+          "raw_reference": "* {{R:DAF9}}"
+        }
+      ],
+      "selected_source_rights_reason": "parking, fixed revision 39908246, selected lines 9, 10: Terrain ou aménagement destiné au stationnement des automobiles retains the whole car-parking facility. Oldest revision 14336 already defines the French noun as Terrain de stationnement automobile without modern publisher reference markers. Current Robert/Larousse/DAF9 footer references are bibliographic identities, not licensed original quotations for this selected sentence. The selected brief French contributor definition/IPA is the basis; no publisher article or example is reproduced or admitted. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_37611",
+      "frozen_row": 2873,
+      "title": "suffisamment",
+      "pageid": 37611,
+      "selected_revid": 39771896,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2873-suffisamment-adv-selected",
+          "frozen_row": 2873,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[assez|Assez]] ; autant qu’il faut."
+        },
+        {
+          "sense_id": "b138-2873-suffisamment-adv-selected",
+          "frozen_row": 2873,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''suffisamment''' {{pron|sy.fi.za.mɑ̃|fr}}"
+        },
+        {
+          "sense_id": "b138-2873-suffisamment-adv-selected",
+          "frozen_row": 2873,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[assez|Assez]] ; autant qu’il faut."
+        },
+        {
+          "sense_id": "b138-2873-suffisamment-adv-selected",
+          "frozen_row": 2873,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[assez|Assez]] ; autant qu’il faut."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-37611-39771896.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 97578,
+        "parentid": 0,
+        "timestamp": "2005-10-18T10:06:00Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-37611.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-37611-97578.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{Littré}}"
+        },
+        {
+          "line_1_based": 27,
+          "raw_source_excerpt": "{{réf|Littré|1863}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 99,
+          "raw_reference": "* {{R:Littré}}"
+        }
+      ],
+      "selected_source_rights_reason": "suffisamment, fixed revision 39771896, selected lines 6, 7: Assez; autant qu’il faut accurately states sufficient degree without a noun-quantity de construction. Oldest revision 97578 explicitly declares Littré and réf Littré 1863; line 11 is Assez, autant qu’il faut. This is the actual historical source of the selected degree definition. Retain original Littré credit; the capacity sense and literary quotations are excluded. Littré’s original author died in 1881; original economic rights expired 1952-01-01 under L123-1. Current contributor/phonetic and Lexique adaptation layers remain CC BY-SA 4.0. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_37828",
+      "frozen_row": 2876,
+      "title": "réellement",
+      "pageid": 37828,
+      "selected_revid": 39773672,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2876-réellement-adv-selected",
+          "frozen_row": 2876,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[effectivement|Effectivement]], [[véritablement]]."
+        },
+        {
+          "sense_id": "b138-2876-réellement-adv-selected",
+          "frozen_row": 2876,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''réellement''' {{pron|ʁe.ɛl.mɑ̃|fr}} {{invar}}"
+        },
+        {
+          "sense_id": "b138-2876-réellement-adv-selected",
+          "frozen_row": 2876,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[effectivement|Effectivement]], [[véritablement]]."
+        },
+        {
+          "sense_id": "b138-2876-réellement-adv-selected",
+          "frozen_row": 2876,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[effectivement|Effectivement]], [[véritablement]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-37828-39773672.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 97803,
+        "parentid": 0,
+        "timestamp": "2005-10-18T11:56:21Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-37828.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-37828-97803.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{Littré}}"
+        },
+        {
+          "line_1_based": 19,
+          "raw_source_excerpt": "{{réf|Littré|1863}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 59,
+          "raw_reference": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 60,
+          "raw_reference": "* {{R:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "réellement, fixed revision 39773672, selected lines 7, 8: Effectivement; véritablement corresponds to actual reality, without the separate intensifying sense. Oldest revision 97803 explicitly declares Littré and réf Littré 1863; line 10 is Effectivement, véritablement. The separate emphatic sense is also visible but unselected. Retain Littré original-work credit independently of current contribution/adaptation rights. Littré’s original author died in 1881; original economic rights expired 1952-01-01 under L123-1. Current contributor/phonetic and Lexique adaptation layers remain CC BY-SA 4.0. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_110816",
+      "frozen_row": 2871,
+      "title": "ouverture",
+      "pageid": 110816,
+      "selected_revid": 39901054,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2871-ouverture-nom-selected",
+          "frozen_row": 2871,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Action d’[[ouvrir]]."
+        },
+        {
+          "sense_id": "b138-2871-ouverture-nom-selected",
+          "frozen_row": 2871,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''ouverture''' {{pron|u.vɛʁ.tyʁ|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2871-ouverture-nom-selected",
+          "frozen_row": 2871,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Action d’[[ouvrir]]."
+        },
+        {
+          "sense_id": "b138-2871-ouverture-nom-selected",
+          "frozen_row": 2871,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Action d’[[ouvrir]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-110816-39901054.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 258553,
+        "parentid": 0,
+        "timestamp": "2005-12-31T08:33:48Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-110816.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-110816-258553.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 243,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "ouverture, fixed revision 39901054, selected lines 10, 11: Action d’ouvrir is the selected action noun, not a gap, an opening occasion or a musical piece. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_120382",
+      "frozen_row": 2872,
+      "title": "cage",
+      "pageid": 120382,
+      "selected_revid": 39884935,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2872-cage-nom-selected",
+          "frozen_row": 2872,
+          "field": "french_definition",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Petite [[loge]] [[portatif|portative]] faite de [[fils]] de fer ou de [[menu]]s [[bâton]]s d’[[osier]] et dans laquelle on [[enfermer|enferme]] [[ordinairement]] des petits animaux."
+        },
+        {
+          "sense_id": "b138-2872-cage-nom-selected",
+          "frozen_row": 2872,
+          "field": "ipa",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''cage''' {{pron|kaʒ|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2872-cage-nom-selected",
+          "frozen_row": 2872,
+          "field": "english",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Petite [[loge]] [[portatif|portative]] faite de [[fils]] de fer ou de [[menu]]s [[bâton]]s d’[[osier]] et dans laquelle on [[enfermer|enferme]] [[ordinairement]] des petits animaux."
+        },
+        {
+          "sense_id": "b138-2872-cage-nom-selected",
+          "frozen_row": 2872,
+          "field": "chinese",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Petite [[loge]] [[portatif|portative]] faite de [[fils]] de fer ou de [[menu]]s [[bâton]]s d’[[osier]] et dans laquelle on [[enfermer|enferme]] [[ordinairement]] des petits animaux."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-120382-39884935.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 280175,
+        "parentid": 0,
+        "timestamp": "2006-01-02T11:54:00Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-120382.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-120382-280175.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 173,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "cage, fixed revision 39884935, selected lines 11, 12: Petite loge portative, wire/wicker sticks and small animals preserve the selected small portable enclosure. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_121042",
+      "frozen_row": 2875,
+      "title": "invitation",
+      "pageid": 121042,
+      "selected_revid": 39773775,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2875-invitation-nom-selected",
+          "frozen_row": 2875,
+          "field": "french_definition",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} La [[lettre]], le [[billet]], le [[carton]] que l'on fait parvenir pour inviter."
+        },
+        {
+          "sense_id": "b138-2875-invitation-nom-selected",
+          "frozen_row": 2875,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''invitation''' {{pron|ɛ̃.vi.ta.sjɔ̃|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2875-invitation-nom-selected",
+          "frozen_row": 2875,
+          "field": "english",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} La [[lettre]], le [[billet]], le [[carton]] que l'on fait parvenir pour inviter."
+        },
+        {
+          "sense_id": "b138-2875-invitation-nom-selected",
+          "frozen_row": 2875,
+          "field": "chinese",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} La [[lettre]], le [[billet]], le [[carton]] que l'on fait parvenir pour inviter."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-121042-39773775.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 281558,
+        "parentid": 0,
+        "timestamp": "2006-01-02T13:31:13Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-121042.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-121042-281558.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 74,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "invitation, fixed revision 39773775, selected lines 7, 15: Lettre, billet ou carton envoyé specifies the invitation document from the elliptical noun sense, not the inviting action. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_138976",
+      "frozen_row": 2879,
+      "title": "araignée",
+      "pageid": 138976,
+      "selected_revid": 39818738,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2879-araignée-nom-selected",
+          "frozen_row": 2879,
+          "field": "french_definition",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|arachnologie|fr}} Animal [[arthropode]] notamment caractérisé par ses quatre paires de pattes et la capacité de certaines espèces à produire de la [[soie]] avec laquelle elles tissent des [[toile]]s où viennent se prendre leurs [[proie]]s."
+        },
+        {
+          "sense_id": "b138-2879-araignée-nom-selected",
+          "frozen_row": 2879,
+          "field": "ipa",
+          "line_1_based": 19,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''araignée''' {{pron|a.ʁɛ.ɲe|fr}} ou {{pron|a.ʁe.ɲe|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2879-araignée-nom-selected",
+          "frozen_row": 2879,
+          "field": "english",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|arachnologie|fr}} Animal [[arthropode]] notamment caractérisé par ses quatre paires de pattes et la capacité de certaines espèces à produire de la [[soie]] avec laquelle elles tissent des [[toile]]s où viennent se prendre leurs [[proie]]s."
+        },
+        {
+          "sense_id": "b138-2879-araignée-nom-selected",
+          "frozen_row": 2879,
+          "field": "chinese",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|arachnologie|fr}} Animal [[arthropode]] notamment caractérisé par ses quatre paires de pattes et la capacité de certaines espèces à produire de la [[soie]] avec laquelle elles tissent des [[toile]]s où viennent se prendre leurs [[proie]]s."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-138976-39818738.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 316865,
+        "parentid": 0,
+        "timestamp": "2006-01-10T13:12:09Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-138976.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-138976-316865.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 22,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 4,
+          "raw_reference": ": {{laé|fr|nom|2}} {{date|1549}} Du {{étyl|la|fr|mot=araneus|sens=araignée}}. À partir du {{siècle2|XVI}} siècle, le mot désignant l’œuvre (« la toile d’araignée ») est utilisée pour désigner l’ouvrière (l’animal) et évince la forme [[aragne]], [[araigne]], qui subsiste dans des formes dialectales et dans le composé [[musaraigne]]<ref>{{R:RobertDHLF2022}}</ref>."
+        },
+        {
+          "line_1_based": 334,
+          "raw_reference": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 336,
+          "raw_reference": "* {{R:DAF1}}"
+        },
+        {
+          "line_1_based": 337,
+          "raw_reference": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 338,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "araignée, fixed revision 39818738, selected lines 19, 20: Four pairs of legs and silk/web production by some species preserve the animal definition without claiming every spider weaves a prey web. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_155115",
+      "frozen_row": 2874,
+      "title": "consacrer",
+      "pageid": 155115,
+      "selected_revid": 39790117,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2874-consacrer-ver-selected",
+          "frozen_row": 2874,
+          "field": "french_definition",
+          "line_1_based": 19,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} [[dévouer|Dévouer]], [[destiner]] ou [[employer]] [[quelque chose]] à un [[certain]] [[usage]]."
+        },
+        {
+          "sense_id": "b138-2874-consacrer-ver-selected",
+          "frozen_row": 2874,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''consacrer''' {{pron|kɔ̃.sa.kʁe|fr}} {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}}"
+        },
+        {
+          "sense_id": "b138-2874-consacrer-ver-selected",
+          "frozen_row": 2874,
+          "field": "english",
+          "line_1_based": 19,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} [[dévouer|Dévouer]], [[destiner]] ou [[employer]] [[quelque chose]] à un [[certain]] [[usage]]."
+        },
+        {
+          "sense_id": "b138-2874-consacrer-ver-selected",
+          "frozen_row": 2874,
+          "field": "chinese",
+          "line_1_based": 19,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} [[dévouer|Dévouer]], [[destiner]] ou [[employer]] [[quelque chose]] à un [[certain]] [[usage]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-155115-39790117.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 420637,
+        "parentid": 0,
+        "timestamp": "2006-02-19T20:46:31Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-155115.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-155115-420637.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 43,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 140,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "consacrer, fixed revision 39790117, selected lines 6, 19: Destiner ou employer quelque chose à un usage retains the figurative allocation construction. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_169692",
+      "frozen_row": 2880,
+      "title": "opposer",
+      "pageid": 169692,
+      "selected_revid": 39720072,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2880-opposer-ver-selected",
+          "frozen_row": 2880,
+          "field": "french_definition",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[mettre|Mettre]] en [[comparaison]], en [[opposition]] ou en [[parallèle]]."
+        },
+        {
+          "sense_id": "b138-2880-opposer-ver-selected",
+          "frozen_row": 2880,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''opposer''' {{pron|ɔ.po.ze|fr}} <small>ou</small> {{pron|o.po.ze|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
+        },
+        {
+          "sense_id": "b138-2880-opposer-ver-selected",
+          "frozen_row": 2880,
+          "field": "english",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[mettre|Mettre]] en [[comparaison]], en [[opposition]] ou en [[parallèle]]."
+        },
+        {
+          "sense_id": "b138-2880-opposer-ver-selected",
+          "frozen_row": 2880,
+          "field": "chinese",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[mettre|Mettre]] en [[comparaison]], en [[opposition]] ou en [[parallèle]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-169692-39720072.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 435751,
+        "parentid": 0,
+        "timestamp": "2006-02-21T11:37:49Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-169692.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-169692-435751.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 40,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 87,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "opposer, fixed revision 39720072, selected lines 6, 21: Comparison, opposition or parallel preserve comparing/contrasting things, not erecting a physical obstacle. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_7859",
+      "frozen_row": 2886,
+      "title": "bâton",
+      "pageid": 7859,
+      "selected_revid": 39852359,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2886-bâton-nom-selected",
+          "frozen_row": 2886,
+          "field": "french_definition",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Morceau de [[bois]] assez long, qu’on peut [[tenir]] à la [[main]] et qui [[servir|sert]] d’[[appui]], d'[[arme]], de [[hampe]] et peut être [[utiliser|utilisé]] à d'autres [[usage]]s."
+        },
+        {
+          "sense_id": "b138-2886-bâton-nom-selected",
+          "frozen_row": 2886,
+          "field": "ipa",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''bâton''' {{pron|bɑ.tɔ̃|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2886-bâton-nom-selected",
+          "frozen_row": 2886,
+          "field": "english",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Morceau de [[bois]] assez long, qu’on peut [[tenir]] à la [[main]] et qui [[servir|sert]] d’[[appui]], d'[[arme]], de [[hampe]] et peut être [[utiliser|utilisé]] à d'autres [[usage]]s."
+        },
+        {
+          "sense_id": "b138-2886-bâton-nom-selected",
+          "frozen_row": 2886,
+          "field": "chinese",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Morceau de [[bois]] assez long, qu’on peut [[tenir]] à la [[main]] et qui [[servir|sert]] d’[[appui]], d'[[arme]], de [[hampe]] et peut être [[utiliser|utilisé]] à d'autres [[usage]]s."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-7859-39852359.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 11686,
+        "parentid": 0,
+        "timestamp": "2005-01-20T16:25:09Z",
+        "user": "Pinpin~frwiktionary",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-7859.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-7859-11686.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 291,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "bâton, fixed revision 39852359, selected lines 13, 14: Peut tenir restores the source’s capability, rather than requiring the wood actually be held; length, wood and uses remain. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_11536",
+      "frozen_row": 2888,
+      "title": "trait",
+      "pageid": 11536,
+      "selected_revid": 39872706,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2888-trait-nom-selected",
+          "frozen_row": 2888,
+          "field": "french_definition",
+          "line_1_based": 53,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par métonymie|fr}} Ligne tracée."
+        },
+        {
+          "sense_id": "b138-2888-trait-nom-selected",
+          "frozen_row": 2888,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''trait''' {{pron|tʁɛ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2888-trait-nom-selected",
+          "frozen_row": 2888,
+          "field": "english",
+          "line_1_based": 53,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par métonymie|fr}} Ligne tracée."
+        },
+        {
+          "sense_id": "b138-2888-trait-nom-selected",
+          "frozen_row": 2888,
+          "field": "chinese",
+          "line_1_based": 53,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par métonymie|fr}} Ligne tracée."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-11536-39872706.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 24066,
+        "parentid": 0,
+        "timestamp": "2005-04-26T23:45:55Z",
+        "user": "Invalid username 406~frwiktionary",
+        "comment": "ébauche",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-11536.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-11536-24066.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 436,
+          "raw_reference": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 437,
+          "raw_reference": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 438,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "trait, fixed revision 39872706, selected lines 8, 53: Ligne tracée retains the drawn line in the source’s metonymic sense, not a bodily feature or pulling action. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_120893",
+      "frozen_row": 2882,
+      "title": "communication",
+      "pageid": 120893,
+      "selected_revid": 40000050,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2882-communication-nom-selected",
+          "frozen_row": 2882,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|communication|sociologie|sciences de l’information|fr}} Processus de [[transmission]] d’[[information]]s, d’[[idée]]s, de [[message]]s ou de [[symbole]]s entre un ou plusieurs acteurs à travers un [[canal]], dans un [[contexte]] donné."
+        },
+        {
+          "sense_id": "b138-2882-communication-nom-selected",
+          "frozen_row": 2882,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''communication''' {{pron|kɔ.my.ni.ka.sjɔ̃|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2882-communication-nom-selected",
+          "frozen_row": 2882,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|communication|sociologie|sciences de l’information|fr}} Processus de [[transmission]] d’[[information]]s, d’[[idée]]s, de [[message]]s ou de [[symbole]]s entre un ou plusieurs acteurs à travers un [[canal]], dans un [[contexte]] donné."
+        },
+        {
+          "sense_id": "b138-2882-communication-nom-selected",
+          "frozen_row": 2882,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|communication|sociologie|sciences de l’information|fr}} Processus de [[transmission]] d’[[information]]s, d’[[idée]]s, de [[message]]s ou de [[symbole]]s entre un ou plusieurs acteurs à travers un [[canal]], dans un [[contexte]] donné."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-120893-40000050.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 281285,
+        "parentid": 0,
+        "timestamp": "2006-01-02T13:13:43Z",
+        "user": "PiedBot",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-120893.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-120893-281285.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 149,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "communication, fixed revision 40000050, selected lines 7, 8: Transmission of information/ideas/messages/symbols via a channel and context condenses the process definition without changing it into an academic discipline. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_156287",
+      "frozen_row": 2885,
+      "title": "culotte",
+      "pageid": 156287,
+      "selected_revid": 39964861,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2885-culotte-nom-selected",
+          "frozen_row": 2885,
+          "field": "french_definition",
+          "line_1_based": 31,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vête|fr}} [[sous-vêtement|Sous-vêtement]], [[caleçon]]."
+        },
+        {
+          "sense_id": "b138-2885-culotte-nom-selected",
+          "frozen_row": 2885,
+          "field": "ipa",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''culotte''' {{pron|ky.lɔt|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2885-culotte-nom-selected",
+          "frozen_row": 2885,
+          "field": "english",
+          "line_1_based": 31,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vête|fr}} [[sous-vêtement|Sous-vêtement]], [[caleçon]]."
+        },
+        {
+          "sense_id": "b138-2885-culotte-nom-selected",
+          "frozen_row": 2885,
+          "field": "chinese",
+          "line_1_based": 31,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vête|fr}} [[sous-vêtement|Sous-vêtement]], [[caleçon]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-156287-39964861.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 421841,
+        "parentid": 0,
+        "timestamp": "2006-02-20T00:40:56Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-156287.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-156287-421841.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 29,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 184,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "culotte, fixed revision 39964861, selected lines 14, 31: Sous-vêtement de type caleçon keeps the underwear sense, not short trousers or riding breeches. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_160270",
+      "frozen_row": 2881,
+      "title": "éternité",
+      "pageid": 160270,
+      "selected_revid": 39886698,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2881-éternité-nom-selected",
+          "frozen_row": 2881,
+          "field": "french_definition",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par hyperbole|fr}} [[temps|Temps]] qui semble durer trop [[longtemps]]."
+        },
+        {
+          "sense_id": "b138-2881-éternité-nom-selected",
+          "frozen_row": 2881,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''éternité''' {{pron|e.tɛʁ.ni.te|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2881-éternité-nom-selected",
+          "frozen_row": 2881,
+          "field": "english",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par hyperbole|fr}} [[temps|Temps]] qui semble durer trop [[longtemps]]."
+        },
+        {
+          "sense_id": "b138-2881-éternité-nom-selected",
+          "frozen_row": 2881,
+          "field": "chinese",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par hyperbole|fr}} [[temps|Temps]] qui semble durer trop [[longtemps]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-160270-39886698.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 425871,
+        "parentid": 0,
+        "timestamp": "2006-02-20T12:13:37Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-160270.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-160270-425871.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 28,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 149,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "éternité, fixed revision 39886698, selected lines 7, 24: Par exagération and seeming too long preserve the source’s hyperbole rather than literal endless duration. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_161166",
+      "frozen_row": 2883,
+      "title": "fédéral",
+      "pageid": 161166,
+      "selected_revid": 39773490,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2883-fédéral-adj-selected",
+          "frozen_row": 2883,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui a rapport à une [[fédération]] d’États ou à une fédération de plusieurs sociétés visant un but commun."
+        },
+        {
+          "sense_id": "b138-2883-fédéral-adj-selected",
+          "frozen_row": 2883,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''fédéral''' {{pron|fe.de.ʁal|fr}}"
+        },
+        {
+          "sense_id": "b138-2883-fédéral-adj-selected",
+          "frozen_row": 2883,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui a rapport à une [[fédération]] d’États ou à une fédération de plusieurs sociétés visant un but commun."
+        },
+        {
+          "sense_id": "b138-2883-fédéral-adj-selected",
+          "frozen_row": 2883,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui a rapport à une [[fédération]] d’États ou à une fédération de plusieurs sociétés visant un but commun."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-161166-39773490.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 426830,
+        "parentid": 0,
+        "timestamp": "2006-02-20T13:24:27Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-161166.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-161166-426830.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 22,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 97,
+          "raw_reference": "*{{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "fédéral, fixed revision 39773490, selected lines 9, 10: Federation of states or several societies with a shared aim preserves both branches of the general adjective. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_171701",
+      "frozen_row": 2887,
+      "title": "plastique",
+      "pageid": 171701,
+      "selected_revid": 39934967,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2887-plastique-nom-selected",
+          "frozen_row": 2887,
+          "field": "french_definition",
+          "line_1_based": 97,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[matériau|Matériau]] [[organique]] de [[synthèse]] fondé sur l’emploi des [[macromolécule]]s ([[polymère]]s)."
+        },
+        {
+          "sense_id": "b138-2887-plastique-nom-selected",
+          "frozen_row": 2887,
+          "field": "ipa",
+          "line_1_based": 96,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''plastique''' {{pron|plas.tik|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2887-plastique-nom-selected",
+          "frozen_row": 2887,
+          "field": "english",
+          "line_1_based": 97,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[matériau|Matériau]] [[organique]] de [[synthèse]] fondé sur l’emploi des [[macromolécule]]s ([[polymère]]s)."
+        },
+        {
+          "sense_id": "b138-2887-plastique-nom-selected",
+          "frozen_row": 2887,
+          "field": "chinese",
+          "line_1_based": 97,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[matériau|Matériau]] [[organique]] de [[synthèse]] fondé sur l’emploi des [[macromolécule]]s ([[polymère]]s)."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-171701-39934967.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 437947,
+        "parentid": 0,
+        "timestamp": "2006-02-21T15:13:33Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-171701.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-171701-437947.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 28,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 193,
+          "raw_reference": "* {{R:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "plastique, fixed revision 39934967, selected lines 96, 97: Synthetic organic material and macromolecules called polymers retain the specific material definition. Oldest revision 437947 is a DAF1932 import of adjective/plastic-art uses. The selected masculine synthetic-material noun is absent from that original snapshot and is a separate current contributor definition at line 97. Preserve the article’s historical DAF8 layer as unselected, without using it to authorise a modern material definition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_178426",
+      "frozen_row": 2889,
+      "title": "tireur",
+      "pageid": 178426,
+      "selected_revid": 39997251,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2889-tireur-nom-selected",
+          "frozen_row": 2889,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{absolument}} Celui qui [[tirer|tire]] à l’aide d’une [[arme à feu]]."
+        },
+        {
+          "sense_id": "b138-2889-tireur-nom-selected",
+          "frozen_row": 2889,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''tireur''' {{pron|ti.ʁœʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|tireuse}}"
+        },
+        {
+          "sense_id": "b138-2889-tireur-nom-selected",
+          "frozen_row": 2889,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{absolument}} Celui qui [[tirer|tire]] à l’aide d’une [[arme à feu]]."
+        },
+        {
+          "sense_id": "b138-2889-tireur-nom-selected",
+          "frozen_row": 2889,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{absolument}} Celui qui [[tirer|tire]] à l’aide d’une [[arme à feu]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-178426-39997251.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 445097,
+        "parentid": 0,
+        "timestamp": "2006-02-22T05:07:16Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-178426.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-178426-445097.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 25,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 105,
+          "raw_reference": "* {{R:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "tireur, fixed revision 39997251, selected lines 7, 10: Person firing a firearm keeps the absolute firearm-shooter definition; masculine noun and tireuse counterpart are explicit. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_193879",
+      "frozen_row": 2884,
+      "title": "métro",
+      "pageid": 193879,
+      "selected_revid": 39715538,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2884-métro-nom-selected",
+          "frozen_row": 2884,
+          "field": "french_definition",
+          "line_1_based": 27,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|chemin de fer|fr}} [[chemin de fer|Chemin de fer]] [[métropolitain]]."
+        },
+        {
+          "sense_id": "b138-2884-métro-nom-selected",
+          "frozen_row": 2884,
+          "field": "ipa",
+          "line_1_based": 26,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''métro''' {{pron|me.tʁo|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2884-métro-nom-selected",
+          "frozen_row": 2884,
+          "field": "english",
+          "line_1_based": 27,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|chemin de fer|fr}} [[chemin de fer|Chemin de fer]] [[métropolitain]]."
+        },
+        {
+          "sense_id": "b138-2884-métro-nom-selected",
+          "frozen_row": 2884,
+          "field": "chinese",
+          "line_1_based": 27,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|chemin de fer|fr}} [[chemin de fer|Chemin de fer]] [[métropolitain]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-193879-39715538.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 566009,
+        "parentid": 0,
+        "timestamp": "2006-03-25T22:28:35Z",
+        "user": "Tibo",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-193879.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-193879-566009.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [],
+      "selected_source_rights_reason": "métro, fixed revision 39715538, selected lines 26, 27: Chemin de fer métropolitain keeps the metropolitan railway system rather than the obsolete metre noun. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_878105",
+      "frozen_row": 2890,
+      "title": "appart",
+      "pageid": 878105,
+      "selected_revid": 34678404,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2890-appart-nom-selected",
+          "frozen_row": 2890,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{familier|fr}} [[appartement|Appartement]]."
+        },
+        {
+          "sense_id": "b138-2890-appart-nom-selected",
+          "frozen_row": 2890,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''appart''' {{pron|a.paʁt|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2890-appart-nom-selected",
+          "frozen_row": 2890,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{familier|fr}} [[appartement|Appartement]]."
+        },
+        {
+          "sense_id": "b138-2890-appart-nom-selected",
+          "frozen_row": 2890,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{familier|fr}} [[appartement|Appartement]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-878105-34678404.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 3211720,
+        "parentid": 0,
+        "timestamp": "2008-04-21T13:37:01Z",
+        "user": "Jjackoti",
+        "comment": "Création : {{=fr=}} {{-étym-}} : {{ébauche-étym|fr}}  {{-nom-|fr}} {{fr-rég|a.paʁt}} '''{{subst:PAGENAME}}''' {{m}}, {{abrév}} # {{fam}} {{ucf|appartement}}.  {{-pron-}} * {{pron|a.paʁt}}  {...",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-878105.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-878105-3211720.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [],
+      "selected_source_rights_reason": "appart, fixed revision 34678404, selected lines 9, 10: Langage familier and appartement preserve both meaning and informal register of the shortened noun. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_1870",
+      "frozen_row": 2898,
+      "title": "féminin",
+      "pageid": 1870,
+      "selected_revid": 39928600,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2898-féminin-adj-selected",
+          "frozen_row": 2898,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|grammaire|fr}} Qualifie un des [[genre]]s de mots. Il est généralement — mais pas toujours — lié aux [[femme]]s."
+        },
+        {
+          "sense_id": "b138-2898-féminin-adj-selected",
+          "frozen_row": 2898,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''féminin''' {{pron|fe.mi.nɛ̃|fr}}"
+        },
+        {
+          "sense_id": "b138-2898-féminin-adj-selected",
+          "frozen_row": 2898,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|grammaire|fr}} Qualifie un des [[genre]]s de mots. Il est généralement — mais pas toujours — lié aux [[femme]]s."
+        },
+        {
+          "sense_id": "b138-2898-féminin-adj-selected",
+          "frozen_row": 2898,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|grammaire|fr}} Qualifie un des [[genre]]s de mots. Il est généralement — mais pas toujours — lié aux [[femme]]s."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-1870-39928600.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 2949,
+        "parentid": 0,
+        "timestamp": "2004-06-22T15:13:42Z",
+        "user": "MagicTom",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-1870.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-1870-2949.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 218,
+          "raw_reference": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 219,
+          "raw_reference": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 220,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "féminin, fixed revision 39928600, selected lines 10, 11: Grammatical feminine gender and not always linked to women preserve the selected grammar sense without equating grammatical gender with biological sex. Oldest revision 2949 already describes grammatical gender and says it is not always tied to women. Current DAF8/Littré/TLFi references do not establish copying from a modern external edition; selected contributor text and phonetic line are the only adaptation basis. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_4038",
+      "frozen_row": 2892,
+      "title": "miel",
+      "pageid": 4038,
+      "selected_revid": 39905171,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2892-miel-nom-selected",
+          "frozen_row": 2892,
+          "field": "french_definition",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[mélange|Mélange]] [[liquide]], [[visqueux]] et [[sucré]] que les [[abeille]]s [[composer|composent]] [[avec]] le [[suc]] qu’elles [[recueillir|recueillent]] [[butiner|en butinant]] les [[fleur]]s et les [[feuille]]s des [[plante]]s."
+        },
+        {
+          "sense_id": "b138-2892-miel-nom-selected",
+          "frozen_row": 2892,
+          "field": "ipa",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''miel''' {{pron|mjɛl|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b138-2892-miel-nom-selected",
+          "frozen_row": 2892,
+          "field": "english",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[mélange|Mélange]] [[liquide]], [[visqueux]] et [[sucré]] que les [[abeille]]s [[composer|composent]] [[avec]] le [[suc]] qu’elles [[recueillir|recueillent]] [[butiner|en butinant]] les [[fleur]]s et les [[feuille]]s des [[plante]]s."
+        },
+        {
+          "sense_id": "b138-2892-miel-nom-selected",
+          "frozen_row": 2892,
+          "field": "chinese",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[mélange|Mélange]] [[liquide]], [[visqueux]] et [[sucré]] que les [[abeille]]s [[composer|composent]] [[avec]] le [[suc]] qu’elles [[recueillir|recueillent]] [[butiner|en butinant]] les [[fleur]]s et les [[feuille]]s des [[plante]]s."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-4038-39905171.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 7887,
+        "parentid": 0,
+        "timestamp": "2004-10-18T04:30:33Z",
+        "user": "Talam",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-4038.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-4038-7887.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 297,
+          "raw_reference": "* {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 298,
+          "raw_reference": "* {{R:Robert}}"
+        },
+        {
+          "line_1_based": 299,
+          "raw_reference": "* {{R:Larousse}}"
+        },
+        {
+          "line_1_based": 301,
+          "raw_reference": "* {{R:DAF9}}"
+        },
+        {
+          "line_1_based": 302,
+          "raw_reference": "* {{R:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "miel, fixed revision 39905171, selected lines 11, 12: Liquid, viscous, sweet and bees collecting plant juices preserve the fixed honey definition rather than figurative pleasantness. Oldest revision 7887 already supplies the French bee-produced sweet/viscous edible-substance definition without publisher-reference markers. The current TLFi/Robert/Larousse/DAF9/DAF8 bibliography does not license those publishers’ text. Only the fixed French contributor lexical sentence and nominal IPA supply this selection; no publisher article or attributed example is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_7961",
+      "frozen_row": 2896,
+      "title": "éclairer",
+      "pageid": 7961,
+      "selected_revid": 39985604,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2896-éclairer-ver-selected",
+          "frozen_row": 2896,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[apporter|Apporter]] de la [[lumière]] dans un [[endroit]] [[sombre]]."
+        },
+        {
+          "sense_id": "b138-2896-éclairer-ver-selected",
+          "frozen_row": 2896,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''éclairer''' {{pron|e.kle.ʁe|fr}} ou {{pron|e.klɛ.ʁe|fr}} {{t|fr}} ou {{i|fr}} {{conj|grp=1|fr}}"
+        },
+        {
+          "sense_id": "b138-2896-éclairer-ver-selected",
+          "frozen_row": 2896,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[apporter|Apporter]] de la [[lumière]] dans un [[endroit]] [[sombre]]."
+        },
+        {
+          "sense_id": "b138-2896-éclairer-ver-selected",
+          "frozen_row": 2896,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[apporter|Apporter]] de la [[lumière]] dans un [[endroit]] [[sombre]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-7961-39985604.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 12861,
+        "parentid": 0,
+        "timestamp": "2005-01-26T14:38:57Z",
+        "user": "Pinpin~frwiktionary",
+        "comment": "création",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-7961.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-7961-12861.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 182,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "éclairer, fixed revision 39985604, selected lines 6, 7: Apporter de la lumière dans un endroit sombre exactly preserves literal illumination. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_9801",
+      "frozen_row": 2891,
+      "title": "branche",
+      "pageid": 9801,
+      "selected_revid": 39773421,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2891-branche-nom-selected",
+          "frozen_row": 2891,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Partie [[ramifier|ramifiée]] et [[aérien]]ne d’un [[arbre]] depuis le [[tronc]]."
+        },
+        {
+          "sense_id": "b138-2891-branche-nom-selected",
+          "frozen_row": 2891,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''branche''' {{pron|bʁɑ̃ʃ|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2891-branche-nom-selected",
+          "frozen_row": 2891,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Partie [[ramifier|ramifiée]] et [[aérien]]ne d’un [[arbre]] depuis le [[tronc]]."
+        },
+        {
+          "sense_id": "b138-2891-branche-nom-selected",
+          "frozen_row": 2891,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Partie [[ramifier|ramifiée]] et [[aérien]]ne d’un [[arbre]] depuis le [[tronc]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-9801-39773421.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 16587,
+        "parentid": 0,
+        "timestamp": "2005-04-05T08:18:13Z",
+        "user": "209.90.162.22",
+        "comment": "",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-9801.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-9801-16587.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [
+        {
+          "line_1_based": 308,
+          "raw_reference": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 309,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "branche, fixed revision 39773421, selected lines 10, 11: Above-ground ramified tree part from the trunk retains the literal botanical branch. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_25029",
+      "frozen_row": 2894,
+      "title": "halte",
+      "pageid": 25029,
+      "selected_revid": 38818374,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2894-halte-ono-selected",
+          "frozen_row": 2894,
+          "field": "french_definition",
+          "line_1_based": 52,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+        },
+        {
+          "sense_id": "b138-2894-halte-ono-selected",
+          "frozen_row": 2894,
+          "field": "ipa",
+          "line_1_based": 51,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''halte''' {{h aspiré}}{{pron|alt|fr}}"
+        },
+        {
+          "sense_id": "b138-2894-halte-ono-selected",
+          "frozen_row": 2894,
+          "field": "english",
+          "line_1_based": 52,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+        },
+        {
+          "sense_id": "b138-2894-halte-ono-selected",
+          "frozen_row": 2894,
+          "field": "chinese",
+          "line_1_based": 52,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-25029-38818374.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 67358,
+        "parentid": 0,
+        "timestamp": "2005-08-12T13:42:32Z",
+        "user": "Kipmaster",
+        "comment": "Bescherelle 1856",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-25029.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-25029-67358.wiki"
+      },
+      "oldest_import_markers": [],
+      "current_reference_markers": [],
+      "selected_source_rights_reason": "halte, fixed revision 38818374, selected lines 51, 52: The proposal correctly says a stopping command to soldiers and explains h aspiré, but this does not establish an eligible everyday ONO sense. Oldest revision 67358 already separates noun pauses/stopping places from a soldiers-command interjection. The current interjection line remains soldiers-only. Text rights and correct spelling/IPA do not cure the missing everyday ONO evidence. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_154619",
+      "frozen_row": 2893,
+      "title": "coïncidence",
+      "pageid": 154619,
+      "selected_revid": 38486832,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2893-coïncidence-nom-selected",
+          "frozen_row": 2893,
+          "field": "french_definition",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} État des [[chose]]s qui [[arriver|arrivent]] [[en même temps]]."
+        },
+        {
+          "sense_id": "b138-2893-coïncidence-nom-selected",
+          "frozen_row": 2893,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''coïncidence''' {{pron|kɔ.ɛ̃.si.dɑ̃s|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2893-coïncidence-nom-selected",
+          "frozen_row": 2893,
+          "field": "english",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} État des [[chose]]s qui [[arriver|arrivent]] [[en même temps]]."
+        },
+        {
+          "sense_id": "b138-2893-coïncidence-nom-selected",
+          "frozen_row": 2893,
+          "field": "chinese",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{figuré|fr}} État des [[chose]]s qui [[arriver|arrivent]] [[en même temps]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-154619-38486832.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 420121,
+        "parentid": 0,
+        "timestamp": "2006-02-19T19:23:19Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-154619.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-154619-420121.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 19,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 78,
+          "raw_reference": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 79,
+          "raw_reference": "* {{R:TLFi}}"
+        }
+      ],
+      "selected_source_rights_reason": "coïncidence, fixed revision 38486832, selected lines 9, 14: Things occurring at the same time retains temporal coincidence without asserting chance or independent causes. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_156041",
+      "frozen_row": 2900,
+      "title": "cravate",
+      "pageid": 156041,
+      "selected_revid": 39925617,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2900-cravate-nom-selected",
+          "frozen_row": 2900,
+          "field": "french_definition",
+          "line_1_based": 44,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vête|fr}} [[foulard#fr|Foulard]] que les [[homme]]s et plus rarement les femmes se mettent autour du [[cou]]."
+        },
+        {
+          "sense_id": "b138-2900-cravate-nom-selected",
+          "frozen_row": 2900,
+          "field": "ipa",
+          "line_1_based": 43,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''cravate''' {{pron|kʁa.vat|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2900-cravate-nom-selected",
+          "frozen_row": 2900,
+          "field": "english",
+          "line_1_based": 44,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vête|fr}} [[foulard#fr|Foulard]] que les [[homme]]s et plus rarement les femmes se mettent autour du [[cou]]."
+        },
+        {
+          "sense_id": "b138-2900-cravate-nom-selected",
+          "frozen_row": 2900,
+          "field": "chinese",
+          "line_1_based": 44,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vête|fr}} [[foulard#fr|Foulard]] que les [[homme]]s et plus rarement les femmes se mettent autour du [[cou]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-156041-39925617.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 421591,
+        "parentid": 0,
+        "timestamp": "2006-02-20T00:00:53Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-156041.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-156041-421591.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 24,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 238,
+          "raw_reference": "* {{R:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "cravate, fixed revision 39925617, selected lines 43, 44: Tissue neckwear chiefly worn by men and less often women preserves the neck object and the source’s wearer qualifier. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_175544",
+      "frozen_row": 2899,
+      "title": "ruine",
+      "pageid": 175544,
+      "selected_revid": 39586714,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2899-ruine-nom-selected",
+          "frozen_row": 2899,
+          "field": "french_definition",
+          "line_1_based": 27,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{en particulier}} [[perte|Perte]] des biens, de la [[fortune]]."
+        },
+        {
+          "sense_id": "b138-2899-ruine-nom-selected",
+          "frozen_row": 2899,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''ruine''' {{pron|ʁɥin|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2899-ruine-nom-selected",
+          "frozen_row": 2899,
+          "field": "english",
+          "line_1_based": 27,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{en particulier}} [[perte|Perte]] des biens, de la [[fortune]]."
+        },
+        {
+          "sense_id": "b138-2899-ruine-nom-selected",
+          "frozen_row": 2899,
+          "field": "chinese",
+          "line_1_based": 27,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{en particulier}} [[perte|Perte]] des biens, de la [[fortune]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-175544-39586714.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 442107,
+        "parentid": 0,
+        "timestamp": "2006-02-22T00:35:50Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-175544.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-175544-442107.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 58,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 141,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "ruine, fixed revision 39586714, selected lines 10, 27: Perte des biens ou de la fortune retains the selected financial loss rather than building destruction. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_178480",
+      "frozen_row": 2897,
+      "title": "toile",
+      "pageid": 178480,
+      "selected_revid": 40001471,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2897-toile-nom-selected",
+          "frozen_row": 2897,
+          "field": "french_definition",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{tissus|fr}} [[tissu|Tissu]] d'[[armure]] simple, de [[fils]] de [[lin]], de [[chanvre]], de [[coton]], etc."
+        },
+        {
+          "sense_id": "b138-2897-toile-nom-selected",
+          "frozen_row": 2897,
+          "field": "ipa",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''toile''' {{pron|twal|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b138-2897-toile-nom-selected",
+          "frozen_row": 2897,
+          "field": "english",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{tissus|fr}} [[tissu|Tissu]] d'[[armure]] simple, de [[fils]] de [[lin]], de [[chanvre]], de [[coton]], etc."
+        },
+        {
+          "sense_id": "b138-2897-toile-nom-selected",
+          "frozen_row": 2897,
+          "field": "chinese",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{tissus|fr}} [[tissu|Tissu]] d'[[armure]] simple, de [[fils]] de [[lin]], de [[chanvre]], de [[coton]], etc."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-178480-40001471.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 445151,
+        "parentid": 0,
+        "timestamp": "2006-02-22T05:11:40Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-178480.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-178480-445151.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 71,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 259,
+          "raw_reference": "*{{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "toile, fixed revision 40001471, selected lines 11, 12: Simple weave and linen/hemp/cotton or other fibres retain the textile definition’s armure and open-ended material list. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    },
+    {
+      "source_id": "b138_fr_236496",
+      "frozen_row": 2895,
+      "title": "absolu",
+      "pageid": 236496,
+      "selected_revid": 39919852,
+      "selected_locations": [
+        {
+          "sense_id": "b138-2895-absolu-adj-selected",
+          "frozen_row": 2895,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[complet|Complet]] ; sans [[restriction]]."
+        },
+        {
+          "sense_id": "b138-2895-absolu-adj-selected",
+          "frozen_row": 2895,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''absolu''' {{pron|ap.sɔ.ly|fr}}"
+        },
+        {
+          "sense_id": "b138-2895-absolu-adj-selected",
+          "frozen_row": 2895,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[complet|Complet]] ; sans [[restriction]]."
+        },
+        {
+          "sense_id": "b138-2895-absolu-adj-selected",
+          "frozen_row": 2895,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[complet|Complet]] ; sans [[restriction]]."
+        }
+      ],
+      "fixed_capture_raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/fixed-236496-39919852.wiki",
+      "fixed_capture_byte_comparison": "equal_to_author_retained_API_slot_and_UTF8_raw",
+      "oldest_revision": {
+        "revid": 315073,
+        "parentid": 0,
+        "timestamp": "2006-01-10T02:41:32Z",
+        "user": "DaftBot",
+        "comment": "upload automatique",
+        "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-236496.api.json",
+        "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/oldest-236496-315073.wiki"
+      },
+      "oldest_import_markers": [
+        {
+          "line_1_based": 2,
+          "raw_source_excerpt": "{{DAF1932}} <!-- Supprimez cette ligne une fois l'article relu. Merci :) -->"
+        },
+        {
+          "line_1_based": 34,
+          "raw_source_excerpt": "{{R:DAF8}}"
+        }
+      ],
+      "current_reference_markers": [
+        {
+          "line_1_based": 173,
+          "raw_reference": "* {{Import:DAF8}}"
+        }
+      ],
+      "selected_source_rights_reason": "absolu, fixed revision 39919852, selected lines 8, 9: Complet, sans restriction follows the selected completeness sense rather than sovereign authority or imperious character. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_sentence_authorship_proved": false
+    }
+  ],
+  "signature_history": {
+    "pageid": 33906,
+    "revision_count": 182,
+    "complete_continuation": "continue not present",
+    "metadata_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-history-1.api.json",
+    "origin_revision_pairs": [
+      [
+        3060169,
+        3156847
+      ],
+      [
+        3156847,
+        3156879
+      ],
+      [
+        24719744,
+        24952889
+      ],
+      [
+        25813538,
+        25814756
+      ]
+    ],
+    "boundary_raw_paths": [
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-3060169.wiki",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-3156847.wiki",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-3156879.wiki",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-24719744.wiki",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-24952889.wiki",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-25813538.wiki",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/sources/signature-25814756.wiki"
+    ],
+    "reason": "The handwritten definition first appears in DAF fusion revision 3156847 (Serpicozaure, 2008-03-19), line 10, and remains after fusion cleanup 3156879, line 8. Before the CFC import, 24719744 lines 8–9 already contain the nominal IPA and handwritten definition. Import 24952889 adds a separate cartography definition at line 33, leaving lines 8–9 unchanged. Review/fusion 25814756 changes the printing/cartography definition at line 29 and moves Import:CFC to line 101; the handwriting/IPA pair remains unchanged. Thus CFC is an actual unselected boundary, not the selected sentence’s origin. Fixed CFC declarations and institutional credit remain preserved; no public-domain claim is made for CFC."
+  },
+  "rights_authorities": "Exact retained author authority APIs/raw policy material, CC BY-SA 4.0 full legal text and Wikimedia Terms section 7 reviewed; original DAF8/Littré legal bases retain the prior original-work authorities, with new source import evidence independently checked here.",
+  "missing_or_unresolved_source_boundaries": [],
+  "combined_package_status": "coordinator_owned_pending"
+}
