@@ -28,6 +28,7 @@ export function useReviewScope(runtime: RuntimeAdapter) {
   const preservePresentation = useRef(false);
   const requestRef = useRef(0);
   const [error, setError] = useState('');
+  const [saveError, setSaveError] = useState('');
   const [version, setVersion] = useState(0);
   useEffect(() => {
     let active = true;
@@ -40,7 +41,9 @@ export function useReviewScope(runtime: RuntimeAdapter) {
         preservePresentation.current = live;
         setApplied((previous) => JSON.stringify(previous) === JSON.stringify(scope ?? { kind: 'all' }) ? previous : scope ?? { kind: 'all' });
         setCategories(categories ?? []); setError('');
-        pendingRef.current = remainingChoice(pendingRef.current, categories ?? []); setPending(pendingRef.current);
+        const choice = remainingChoice(pendingRef.current, categories ?? []);
+        if (JSON.stringify(choice) !== JSON.stringify(pendingRef.current)) setSaveError('');
+        pendingRef.current = choice; setPending(choice);
       } catch (cause) { if (active && current === requestRef.current) setError(errorMessage(cause)); }
     }
     const stop = subscribeReviewEvents(runtime, { changed: () => { void read(true); }, resumed: () => { void read(true); }, failed: (cause) => setError(errorMessage(cause)) }); void read();
@@ -50,23 +53,23 @@ export function useReviewScope(runtime: RuntimeAdapter) {
     const choice = pendingRef.current;
     if (!choice) return true;
     if (saving.current) return false;
-    requestRef.current += 1; saving.current = true; setBusy(true); setError('');
+    requestRef.current += 1; saving.current = true; setBusy(true); setError(''); setSaveError('');
     try {
       const saved = await runtime.reviewScope(choice);
       if (!saved) throw new Error('Native review scope unavailable');
       preservePresentation.current = false; setApplied(saved); setPending(null); pendingRef.current = null;
       return true;
-    } catch (cause) { setError(errorMessage(cause)); return false; }
+    } catch (cause) { setSaveError(errorMessage(cause)); return false; }
     finally { saving.current = false; setBusy(false); }
   }
   function select(selection: ReviewScope, hasCard: boolean) {
     const choice: ReviewScope = selection.kind === 'vocabulary' && selection.category_ids.length === 0 && !selection.include_uncategorized
       ? { kind: 'needs_selection' } : selection;
     const pending = JSON.stringify(choice) === JSON.stringify(applied) ? null : choice;
-    setPending(pending); pendingRef.current = pending; setError('');
+    setPending(pending); pendingRef.current = pending; setError(''); setSaveError('');
     if (!hasCard) void applyPending();
   }
-  return { applied, pending, categories, busy, error, select, applyPending, preservePresentation, retryRead: () => { setError(''); setVersion((value) => value + 1); } };
+  return { applied, pending, categories, busy, error: saveError || error, select, applyPending, preservePresentation, retryRead: () => { setError(''); setVersion((value) => value + 1); } };
 }
 
 export function ReviewScopeSelector({ state, locale, hasCard }: {

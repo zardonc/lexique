@@ -132,8 +132,8 @@ for (const completion of ['rating', 'skip'] as const) {
       queue: { ...oldWindow.queue, cards: [...first.queue.cards, ...second.queue.cards] },
       window: [...oldWindow.window, ...nextWindow.window], delta: { ...oldWindow.delta, order: [1, 3] } };
     await nativeFixture(page, { learning_categories: [{ value: [{ id: 7, name: 'Voyage' }] }],
-      review_scope: [{ value: all }, { value: all }, { error: 'scope disk unavailable' }, { value: voyage }],
-      review_queue: [{ value: oldCards }, { value: nextWindow }, { value: windowView(second, voyage, { revision: 3 }) }],
+      review_scope: [{ value: all }, { value: all }, { error: 'scope disk unavailable' }, { value: all }, { value: all }, { value: voyage }],
+      review_queue: [{ value: oldCards }, { value: nextWindow }, { value: nextWindow }, { value: nextWindow }, { value: windowView(second, voyage, { revision: 3 }) }],
       review_rate: [{ value: rated }] });
     await page.goto('/');
     await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
@@ -149,8 +149,19 @@ for (const completion of ['rating', 'skip'] as const) {
     await expect(page.getByText('当前范围：全部复习')).toBeVisible();
     await expect(selector.getByRole('checkbox', { name: 'Voyage', exact: true })).toBeChecked();
     await expect(card).toHaveCount(0);
+    for (const event of ['focus', 'lexique-review-changed']) {
+      const reads = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_scope' && !call.args?.scope).length);
+      await page.evaluate((event) => { if (event === 'focus') window.dispatchEvent(new Event(event)); else window.testNative.emit(event); }, event);
+      await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_scope' && !call.args?.scope).length)).toBe(reads + 1);
+      await expect(page.getByRole('alert')).toContainText('scope disk unavailable');
+      await expect(page.getByRole('button', { name: '重试保存复习范围' })).toBeVisible();
+      await expect(page.getByText('当前范围：全部复习')).toBeVisible();
+      await expect(selector.getByRole('checkbox', { name: 'Voyage', exact: true })).toBeChecked();
+      await expect(card).toHaveCount(0);
+    }
     await page.getByRole('button', { name: '重试保存复习范围' }).click();
     await expect(page.getByText('当前范围：Voyage')).toBeVisible();
+    await expect(page.getByRole('alert')).toHaveCount(0);
     await expect(card.getByRole('heading', { name: 'voyage' })).toBeVisible();
     const calls = await page.evaluate(() => window.testNative.calls);
     expect(calls.filter((call) => call.command === 'review_rate')).toHaveLength(completion === 'rating' ? 1 : 0);
