@@ -1,11 +1,22 @@
 # Frozen row 2560: oublie/NOM
 
-The exact frozen noun remains row 2560 in issue #132. Its modern everyday selected-sense requirement is unresolved.
+The project owner approved only this frozen row as a zero-field annotation
+for #132 on 2026-11-21 (America/Vancouver): `批准仅 oublie/NOM 为零字段注记`.
+The [approval record](owner-approval.md) identifies `project_owner` and #132.
 
-The authored fixed French Wiktionnaire revision 39964053 marks its pastry sense `vieilli`. Independent direct HTTP reads on 2026-11-21 confirmed [Le Robert](https://dictionnaire.lerobert.com/definition/oublie) labels the feminine noun `anciennement` and defines a small cylindrical wafer. The [CNRTL rendering](https://www.cnrtl.fr/definition/oublie) of Académie française ninth edition labels the pastry noun `Vieilli`; its TLFi content also records a religious unleavened-bread meaning. Neither the older pastry use nor the specialized religious sense establishes the requested modern everyday use. Verb forms of oublier and the interjection do not satisfy the noun group.
+Fixed French Wiktionnaire revision 39964053, noun line 15, marks the pastry
+sense `vieilli`. Independent retained Le Robert and Académie ninth-edition
+captures corroborate `anciennement` and `Vieilli`. The religious specialised
+sense, oublier verb forms and interjection do not supply modern everyday noun
+content. External dictionary prose remains outside the admitted fields.
 
-Raw independent captures are cnrtl.html and robert.html in this directory; the author's fixed source and corroborative captures remain under ticket-132/target/issue-132. No external copyrighted dictionary prose is proposed for redistribution.
+Retain row 2560's exact spelling, NOM subclass, ordering, both frequencies and
+the 4,087-group denominator; no alias, alternate POS or specialist substitute
+is admitted. This annotation has zero fields and four missing fields.
+#132 contains 49 independently reviewed content groups / 196 fields, plus
+this one annotation. All other requirements and existing approvals remain.
 
-Proposed owner decision: exempt only row 2560 from the selected-sense/four-field requirement as a zero-field annotation. Preserve exact headword, POS, ordering, frequencies, and the 4,087-group denominator; admit no substituted spelling, runtime alias, or specialist sense. This would give #132 49 admitted groups / 196 fields and one annotation with four missing fields. All other groups retain their requirements. The proposed combined totals would be 2,934 admitted groups / 11,736 fields and 16 annotations / 64 missing annotation fields, subject to independent review and native verification of the remaining new content.
-
-Without this approval, row 2560 and issue #132 remain incomplete under the original requirement. The other nine tickets can proceed independently.
+Fresh factual/approval captures are retained under
+`C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/oublie-independent-check/`
+and copied into the independent-review archive. The rejected four-field
+author proposal remains in [rejected-old-use.json](rejected-old-use.json).

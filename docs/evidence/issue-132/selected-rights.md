@@ -1,47 +1,38 @@
-# #132 selected rights proposal
+# #132 independently reviewed selected rights
 
-The selected Wiktionnaire contribution layer, French adaptations and new
-English/Chinese explanations use **CC BY-SA 4.0**. The [legal text](COPYING),
-[article credits](NOTICES.md), [fixed sources](sources.json) and
-[field-specific rights](rights.json) accompany the proposed text. No dictionary
-is admitted as a whole. Every field’s selected-text rights and independent
-quality remain pending for all 196 candidate fields. The [owner approval](owner-approval.md)
-gives `oublie/NOM` zero fields and four missing annotation fields; its original
-four-field [rejected proposal](rejected-old-use.json) retains the earlier source
-and rights evidence without admission.
+**196 fields pass selected-text rights review.** The selected Wiktionnaire
+contribution layer, French adaptations and new English/Chinese explanations
+remain **CC BY-SA 4.0**, with [full legal text](COPYING), [credits](NOTICES.md),
+[fixed sources](sources.json) and [field-specific decisions](rights.json).
+Quality decisions remain distinct in [field review](field-review.json).
+No whole source dictionary is admitted.
 
-Wiktionnaire’s retained copyright-policy revision 38903168 permits text sharing
-and adaptation under CC BY-SA 4.0 and explicitly distinguishes external
-material with different rights. Import:DAF8 revision 22113837 says all or part
-of an article was imported and may have changed. It identifies an original
-layer, not authorship of a selected sentence.
+Retained copyright-policy revision 38903168 permits sharing/adaptation and
+distinguishes external material. Import:DAF8 revision 22113837 identifies an
+original layer that may have been modified, not a selected sentence's author.
+Where applicable, credit Académie française eighth edition 1932–1935;
+current CPI L123-3's seventy-year collective-work term gives conservative
+economic expiry **2006-01-01** using final publication in 1935. Referenced
+original Littré layers retain Émile Littré (1801–1881), BnF 1873–1874 edition
+evidence and **1952-01-01** expiry under L123-1. Contributor transcriptions and
+Lexique adaptations retain their separate CC BY-SA 4.0 obligations.
 
-Where applicable, credit Académie française’s eighth edition (1932–1935)
-separately. The author proposes the original collective-work public-domain
-basis under CPI L123-3: seventy years from the following 1 January; final
-publication in 1935 yields the conservative 2006-01-01 expiry. Referenced
-Littré original text has its separately credited author, Émile Littré
-(1801–1881), and edition evidence; the proposed life-plus-seventy basis under
-L123-1 yields 1952-01-01. Fixed Wiktionnaire transcription/adaptation and
-Lexique contributions retain their own CC BY-SA layer. The rights records
-retain these as original-work proposals for separate review.
+Import:CFC at facture:47 and douze:184 applies to unselected cartographic
+definitions, supplying no field or construction. Rock noun-1's lexical text
+is scoped to vocal rock; the noun-2 mythical bird and its historical context
+are separate. Its raw image directive/caption is retained as article-text
+evidence only; no image file or media is selected. Attributed literary/news
+examples, etymology, other languages and modern external dictionary prose
+are outside the accepted fields. The short unattributed `se soucier de` and
+`jouir de` construction examples retain article credits and conditional
+original-work attribution without a claim to sentence authorship.
 
-The unselected cartographic definitions at `facture` line 47 and `douze`
-line 184 carry Import:CFC. They supply no proposed field or construction.
-The `rock` image directive/caption precedes the selected lexical description
-on the same raw line; no image, caption, audio, literary/news quotation or
-media right is asserted or bundled. Source examples for `se soucier de`
-and `jouir de` are identified unattributed lexicographical construction
-examples, with original layers kept for independent rights assessment.
+The [oublie owner annotation](owner-approval.md) admits zero fields and retains
+four missing fields. Its [rejected proposal](rejected-old-use.json) and retained
+Le Robert/Académie register captures are evidence only; no entitlement to
+redistribute external dictionary prose is asserted.
 
-The CNRTL/TLFi/Académie 9 response corroborates `oublie`’s register only.
-It supplies none of the proposed four-field prose. No licence or redistribution
-entitlement for those external dictionaries is asserted. Other linked modern
-dictionary references are identities, not permission to copy their prose.
-
-Redistribution of accepted adaptations must retain article/source/history
-links, applicable original-author attribution, licence text/link and
-modification notices, use ShareAlike for adaptations, and add no incompatible
-restrictions. The coordinator must include the actual combined source/notices
-and licence obligations in the converted package before admission. This
-author package leaves final combined conversion and packaging pending.
+Redistribution must retain article/version/history links, applicable original
+author credit, licence text/link and modification notices, preserve ShareAlike
+for adaptations and add no incompatible restrictions. The actual combined
+source/notices and converted package remain coordinator-owned pending gates.
