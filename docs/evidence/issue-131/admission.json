@@ -143,7 +143,7 @@
     "independent_rights": "passed_all_200_selected_fields",
     "independent_batch": "passed_5_tests",
     "source_audit": "passed_53_fixed_sources_2106_span_occurrences_53_complete_contributor_chains",
-    "documentation": "passed_442_documents_3449_local_links",
+    "documentation": "passed_443_documents_3454_local_links_after_final_integration_merge",
     "diff": "passed",
     "independent_archive_fallback": "passed_5_tests_without_local_or_author_captures",
     "archive_preservation": "passed_byte_comparison_of_retained_inputs_and_audit_files"
@@ -165,5 +165,6 @@
   "review_base": "7e135023bff4ed3ad5c681be4200ec9b0c79398d",
   "review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-131\\independent-review-7e13502",
   "count_boundary": "50 groups / 200 fields independently accepted; zero new canonical fields claimed by this reviewer. Combined conversion/notices and native validation remain coordinator-owned.",
-  "merged_integration_tip": "0dbd00bfe2dfeb673470edae2baac1231d750c78"
+  "merged_integration_tip": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+  "review_acceptance_commit": "1ac115f1a22d47fcb8bff09a330733e1f35e9208"
 }

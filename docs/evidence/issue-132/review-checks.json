@@ -1,0 +1,82 @@
+{
+  "ticket": 132,
+  "reviewer": "Independent semantic and selected-rights reviewer #132; separate from author and integration owner",
+  "review_base": "7e135023bff4ed3ad5c681be4200ec9b0c79398d",
+  "tested_integration_base": "0dbd00bfe2dfeb673470edae2baac1231d750c78",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-132",
+  "branch": "codex/d2-review-132",
+  "platform": "Windows PowerShell 7 / Python 3.14.10",
+  "changes_covered": "Scoped committed-base worktree changes; exact patch retained with the checks",
+  "diff_command": "git diff --cached -- docs/evidence/issue-132 scripts/test_core_batch_132.py",
+  "diff_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-132/issue-132-review/accepted-package.patch",
+  "review_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-132/issue-132-review",
+  "author_commits": [
+    "a157c6c10b7da6f5cb485246e1016e92566009c9",
+    "0c9d1762290856575f77f580154f651f26cfa610"
+  ],
+  "integration": {
+    "command": "git merge --no-edit codex/d2-content-130-139",
+    "status": "passed",
+    "merged_tip": "0dbd00bfe2dfeb673470edae2baac1231d750c78",
+    "log": "integration-merge-final.log"
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_132.py",
+      "status": "passed",
+      "tests": 5,
+      "skips": 0,
+      "log": "review-green.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-132-review/audit.py",
+      "status": "passed",
+      "sources": 50,
+      "field_spans": 196,
+      "supporting_span_occurrences": 2289,
+      "log": "source-audit-green.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-132-review/record_checks.py",
+      "status": "passed",
+      "preserved_original_files": 20,
+      "log": "proposal-preservation.json"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "docs-green.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-green.log"
+    }
+  ],
+  "focused_regression": {
+    "status": "expected_failure_before_accepted_changes",
+    "log": "review-red.log"
+  },
+  "accepted_groups": 49,
+  "accepted_fields": 196,
+  "unchanged_fields": 192,
+  "replaced_fields": 4,
+  "accepted_use_changes": 1,
+  "annotation_groups": 1,
+  "annotation_fields": 0,
+  "missing_annotation_fields": 4,
+  "unresolved_field_source_rights_blockers": [],
+  "source_legal_boundaries": [
+    "DAF8 and original Littré economic terms separately resolved; contributor/adaptation layers retain CC BY-SA 4.0",
+    "Import:CFC facture:47 and douze:184 remain unselected",
+    "rock image file, mythical bird and non-French homographs are not selected",
+    "External Le Robert/Académie content is register evidence only; no field prose is redistributed"
+  ],
+  "unrun": [
+    "canonical/global conversion, assembly and package gates",
+    "native lookup/save/reopen and learning-data preservation",
+    "learner acceptance",
+    "offline/platform/release checks"
+  ],
+  "review_scope": "Both repository standards and exact amended spec inspected in this independent review; no additional subagent reviewer identities are asserted"
+}
