@@ -1,13 +1,14 @@
 # Issue #137 selected-source research
 
-**50 selected-use proposals / 200 fields**, all sourced to exact French revisions.
+**50 independently reviewed selected uses / 200 accepted fields**, all sourced to
+exact French revisions.
 Primary fields retain their source lines and isolated IPA columns in
 [excerpts](source-excerpts.json). [Field proposals](field-review.json) preserve the
 precise text plus supporting language, POS, grammar and lexical definition spans.
 All rows retain exact frozen identities and frequency strings; CEFR remains unknown.
 
-The author inspected the captured definitions, homographs, grammar and exclusions.
-This is author evidence; independent quality and selected-span rights remain pending.
+The selected definitions, homographs, grammar, pronunciation and exclusions have
+passed [independent quality and selected-span rights review](README-independent-review.md).
 The original proposals are preserved under [authored](authored/groups.json).
 
 ## Selected spans
@@ -96,4 +97,5 @@ for expression, territoire, renseignement, barre, navrer, auto and bâtir are se
 only where the exact IPA is attested in the matching French/POS section.
 
 No word is substituted, POS broadened, annotation inferred or exception invented.
-Author unresolved fields: **0**; all 200 fields still require independent review.
+Unresolved quality/selected-rights fields: **0**. All 200 accepted fields await
+coordinator canonical assembly and native verification.

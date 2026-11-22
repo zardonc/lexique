@@ -1,0 +1,38 @@
+[
+  {
+    "frozen_row": 2814,
+    "headword": "territoire",
+    "pos": "NOM",
+    "sense_id": "b137-2814-territoire-nom-selected",
+    "field": "chinese",
+    "proposed_text": "领土；地域，指边界或明确或不明确的一片土地。",
+    "accepted_text": "地域；边界或明确或不明确的一片土地。",
+    "source_id": "b137_fr_178139",
+    "source_revision": 39774504,
+    "source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[étendue#fr-nom|Étendue]] de [[terre]] [[plus ou moins]] [[précisément]] [[délimitée]]."
+    },
+    "review_reason": "地域 retains the general land-area sense. Removing 领土 avoids the unselected implication of sovereign national territory; the boundary explanation stays intact.",
+    "reviewer": "Independent reviewer #137, codex/d2-review-137; separate from content author and integration coordinator"
+  },
+  {
+    "frozen_row": 2847,
+    "headword": "mamie",
+    "pos": "NOM",
+    "sense_id": "b137-2847-mamie-nom-selected",
+    "field": "chinese",
+    "proposed_text": "奶奶；外婆，亲昵、口语或儿童用语中的“祖母”。",
+    "accepted_text": "奶奶；外婆，亲昵、口语或儿童用语中的“祖母或外祖母”。",
+    "source_id": "b137_fr_28057",
+    "source_revision": 39178905,
+    "source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{lexique|famille|fr}} {{affectueux|fr}} {{familier|fr}} {{enfantin|fr}} [[grand-mère#fr|Grand-mère]]."
+    },
+    "review_reason": "奶奶/外婆 and 祖母或外祖母 explicitly cover either side of the family, while retaining the affectionate, colloquial or childish register. The proposal's final 祖母 alone excluded the maternal side.",
+    "reviewer": "Independent reviewer #137, codex/d2-review-137; separate from content author and integration coordinator"
+  }
+]

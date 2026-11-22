@@ -763,5 +763,13 @@
   "capture_fallback": "Resolve target/issue-137/<relative capture> from admission.author_evidence_root when absent in the checkout.",
   "captured_at_utc": "2026-11-22T01:04:15.117462+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137\\selection.py",
+  "independent_audit": {
+    "reviewer": "Independent reviewer #137, codex/d2-review-137; separate from content author and integration coordinator",
+    "root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-137\\issue-137-review",
+    "local_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-137\\target\\issue-137-review",
+    "result": "source-audit.json",
+    "source_cache": "source-cache",
+    "selected_sentence_authorship_proved": false
+  }
 }

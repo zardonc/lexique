@@ -1,6 +1,6 @@
 # Source and modification notices for #137
 
-The proposed selected content adapts fixed Wiktionnaire contributions under
+The accepted selected content adapts fixed Wiktionnaire contributions under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The [complete legal text](COPYING), source/version and history links,
 contributor credits, original-work attribution and modification notices accompany
@@ -15,7 +15,7 @@ every selected sense keeps its CEFR unknown.
 
 ## Modifications and selected boundaries
 
-One everyday sense is proposed per exact group. French definitions adapt the
+One everyday sense is selected per exact group. French definitions adapt the
 selected lexical semantics, remove markup and retain the necessary construction
 and register. English and Chinese are newly written explanations of that same use.
 One attested isolated-headword IPA variant is selected and surrounded by slashes.
@@ -104,5 +104,6 @@ Preserve fixed sources, complete history attribution, applicable contributors,
 original-work credits, the CC BY-SA 4.0 legal text and licence link, modification
 notices and ShareAlike for the adaptation layer. Apply no additional downstream
 restrictions. The coordinator must carry the actual accepted notices and source
-records into the combined resource and both full/Lite packages. Selected rights
-and combined-package fulfilment remain pending independent/coordinator review.
+records into the combined resource and both full/Lite packages. Selected-text
+rights passed independent review; combined-package fulfilment awaits coordinator
+verification.
