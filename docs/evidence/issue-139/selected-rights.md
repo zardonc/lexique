@@ -1,10 +1,10 @@
-# Issue #139 selected-rights author proposal
+# Issue #139 independently reviewed selected rights
 
-**200 fields retain exact source and rights proposals for separate review.**
-No new quality or selected-text rights decision is independently accepted.
-[rights.json](rights.json) records each field’s fixed revision, span, contributors,
-attribution, licence, modification and original-work layers. The proposed content
-licence is CC BY-SA 4.0; project source code remains MIT.
+**All 200 fields passed independent review at their selected-text boundaries.**
+Quality and rights decisions remain distinct. [Authored snapshots](authored/snapshot.json)
+preserve the original proposals. [rights.json](rights.json) records each field’s fixed revision, span, contributors,
+attribution, licence, modification and original-work layers. The content
+licence remains CC BY-SA 4.0; project source code remains MIT.
 
 ## Contribution and adaptation layers
 
@@ -14,7 +14,8 @@ French definitions adapt the selected semantics. English and Chinese are new
 Lexique explanations with the same selected sense/POS/use; they are not quotations
 from English or Chinese dictionaries. Those adaptations and explanations retain
 CC BY-SA 4.0. Source correctness does not establish the new bilingual wording’s
-quality; a separate reviewer must assess all 200 actual fields.
+quality; [field review](field-review.json) records the separate actual decisions
+for every French, IPA, English and Chinese field and each selected use.
 
 The [complete legal text](COPYING), sections 2(a), 3(a), 3(b) and 4, requires
 creator/source attribution, licence identification, supplied copyright and
@@ -67,5 +68,7 @@ credits, fixed source/history identifiers, modification notices and selected
 source material, with CC BY-SA 4.0 for the adaptation layer and no additional
 restrictions. Other works retain their own conditions. The coordinator must
 verify the actual combined converted resource and accompanying materials before
-admission. Per-field selected-span/original-source rights and all independent
-language/construction decisions remain pending.
+admission. All 200 selected-text rights decisions and all language/construction
+decisions passed separate review. Every used source-context node records
+root-level `selected_text_rights_status=passed_at_selected_text_boundary` with
+the actual review reason and reviewer.

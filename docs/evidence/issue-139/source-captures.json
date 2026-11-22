@@ -722,5 +722,18 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-139\\target\\issue-139",
   "captured_at_utc": "2026-11-22T01:08:28.417664+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-139\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-139\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-139\\selection.py",
+  "independent_review": {
+    "reviewer": "Independent semantic and selected-rights reviewer #139; separate from author and coordinator",
+    "author_commit": "29e1d2f1bc8b7e26306332015173027897cc7bc2",
+    "review_base": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+    "audit_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-139\\target\\issue-139-review",
+    "source_audit": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-139\\target\\issue-139-review\\source-audit.json",
+    "article_api_bytes": "literal_match_for_all_50",
+    "selected_fields": 200,
+    "contributor_pagination": "complete",
+    "policy_byte_comparison": "CRLF_to_LF_normalization_recorded_separately",
+    "upstream_article_recaptures": 0,
+    "selected_sentence_authorship_proved": false
+  }
 }

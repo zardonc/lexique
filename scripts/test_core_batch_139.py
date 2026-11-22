@@ -2,6 +2,7 @@
 import csv
 import json
 from pathlib import Path
+import subprocess
 from urllib.parse import parse_qs, urlparse
 import unittest
 
@@ -35,6 +36,126 @@ def read(name):
 
 
 class Batch139Tests(unittest.TestCase):
+    def test_independent_acceptance_matches_exact_fields_sources_and_rights(self):
+        review = read('field-review.json')
+        self.assertTrue(review['independent_acceptance'])
+        self.assertEqual(review['kind'], 'separate_independent_field_review')
+        self.assertIs(review['independence'], True)
+        reviewer = review['reviewer']
+        self.assertTrue(reviewer)
+        sources = {s['id']: s for s in read('sources.json')['sources']}
+        contexts = {s['id']: s for s in read('source-context.json')['current_content']}
+        rights = {(r['sense_id'], r['field']): r for r in read('rights.json')['fields']}
+        fields = {(r['sense_id'], r['field']): r for r in review['fields']}
+        originals = {(s['sense_id'], k): f for g in read('authored/groups.json')
+                     for s in g['senses'] for k, f in s['fields'].items()}
+        uses = {u['sense_id']: u for u in review['usage']}
+        spelling = {s['sense_id']: s for s in review['spelling_relations']}
+        self.assertEqual(len(fields), 200)
+        self.assertEqual(set(fields), set(originals))
+        self.assertEqual(set(rights), set(fields))
+        self.assertEqual((len(uses), len(spelling)), (50, 50))
+        used = set()
+        changed = set()
+        for group in read('groups.json'):
+            sense = group['senses'][0]
+            self.assertEqual(sense['independent_review'], 'passed')
+            use = uses[sense['sense_id']]
+            self.assertEqual((use['frozen_row'], use['headword'], use['pos']),
+                             (group['frozen_row'], group['headword'], group['lexique_cgram']))
+            self.assertEqual(use['accepted_usage'], sense['use'])
+            self.assertEqual(use['accepted_usage_quality_status'], 'passed')
+            self.assertEqual(use['everyday_sense_status'], 'passed')
+            self.assertEqual(use['reviewer'], reviewer)
+            self.assertTrue(use['review_reason'])
+            relation = spelling[sense['sense_id']]
+            self.assertEqual((relation['frozen_headword'], relation['source_headword']),
+                             (group['headword'], sense['source_headword']))
+            self.assertEqual(relation['independent_review'], 'passed')
+            self.assertEqual(relation['reviewer'], reviewer)
+            self.assertEqual(relation['alias_admission'], 'not_admitted')
+            for name, field in sense['fields'].items():
+                key = sense['sense_id'], name
+                rec = fields[key]
+                legal = rights[key]
+                self.assertEqual((rec['frozen_row'], rec['headword'], rec['pos'], rec['language']),
+                                 (group['frozen_row'], group['headword'], group['lexique_cgram'], field['language']))
+                self.assertEqual(legal['frozen_row'], group['frozen_row'])
+                sid = field['source_id']
+                used.add(sid)
+                src = sources[sid]
+                self.assertEqual(rec['proposed_text'], originals[key]['text'])
+                self.assertEqual(rec['accepted_text'], field['text'])
+                self.assertEqual(legal['accepted_text'], field['text'])
+                self.assertEqual(rec['accepted_text_quality_status'], 'passed')
+                for value in (field, rec, legal):
+                    self.assertEqual(value['reviewer'], reviewer)
+                self.assertEqual(field['independent_review'], 'passed')
+                self.assertEqual(rec['rights_eligibility_status'], 'passed_at_selected_text_boundary')
+                self.assertEqual(legal['independent_review'], 'passed_at_selected_text_boundary')
+                self.assertTrue(rec['review_reason'])
+                self.assertTrue(rec['selected_text_rights_reason'])
+                self.assertTrue(legal['selected_text_rights_reason'])
+                self.assertEqual((rec['exact_source']['source_id'], rec['exact_source']['revid']),
+                                 (sid, src['revid']))
+                self.assertEqual(rec['exact_source']['url'], src['fixed_url'])
+                self.assertEqual((rec['exact_source']['line_1_based'], rec['exact_source']['column_1_based'],
+                                  rec['exact_source']['reviewed_excerpt']),
+                                 (field['source_span']['line_1_based'], field['source_span']['column_1_based'],
+                                  field['source_span']['raw_source_excerpt']))
+                self.assertEqual((legal['source_id'], legal['source_revision'], legal['fixed_url']),
+                                 (sid, src['revid'], src['fixed_url']))
+                self.assertEqual(legal['exact_source_span'], field['source_span'])
+                self.assertEqual(legal['modification'], field['modification'])
+                if rec['proposed_text'] != rec['accepted_text']:
+                    changed.add((group['frozen_row'], name))
+        self.assertEqual(used, set(sources))
+        self.assertEqual(used, set(contexts))
+        legal_sources = {s['source_id']: s for s in read('rights.json')['sources']}
+        self.assertEqual(used, set(legal_sources))
+        for sid in used:
+            self.assertEqual(legal_sources[sid]['revid'], sources[sid]['revid'])
+            self.assertEqual(legal_sources[sid]['independent_review'], 'passed_at_selected_text_boundary')
+            self.assertEqual(sources[sid]['selected_text_review'], 'passed_at_selected_text_boundary')
+            self.assertEqual(contexts[sid]['current_content_revid'], sources[sid]['revid'])
+            self.assertEqual(contexts[sid]['selected_text_rights_status'], 'passed_at_selected_text_boundary')
+            self.assertEqual(contexts[sid]['reviewer'], reviewer)
+            self.assertTrue(contexts[sid]['selected_text_rights_reason'])
+        replacements = read('accepted-replacements.json')
+        self.assertEqual(changed, {(2905, 'chinese'), (2937, 'chinese')})
+        self.assertEqual({(r['frozen_row'], r['field']) for r in replacements}, changed)
+        for replacement in replacements:
+            key = replacement['sense_id'], replacement['field']
+            self.assertEqual(replacement['proposed_text'], fields[key]['proposed_text'])
+            self.assertEqual(replacement['accepted_text'], fields[key]['accepted_text'])
+            self.assertEqual(replacement['exact_source'], fields[key]['exact_source'])
+        self.assertEqual(review['unresolved_fields'], [])
+        admission = read('admission.json')
+        self.assertEqual((admission['independently_accepted_new_groups'], admission['independently_accepted_new_fields']), (50, 200))
+        self.assertEqual((admission['pending_independent_review_fields'], admission['pending_independent_rights_fields']), (0, 0))
+        self.assertEqual((admission['annotation_exception_groups'], admission['specialist_exception_groups']), (0, 0))
+        self.assertEqual(read('rights.json')['independent_rights_fields_accepted'], 200)
+        self.assertEqual((admission['newly_admitted_fields'], admission['pending_canonical_admission_fields']), (0, 200))
+        self.assertEqual(admission['unresolved_field_blockers'], [])
+
+    def test_reuse_is_measured_against_exact_author_base(self):
+        reuse = read('reuse.json')
+        baseline = json.loads(subprocess.check_output(
+            ['git', 'show', reuse['base_commit'] + ':' + reuse['comparison_input']], cwd=ROOT))
+        self.assertEqual(baseline['content_version'], reuse['canonical_content_version'])
+        self.assertEqual(len(baseline['groups']), reuse['existing_admitted_groups'])
+        selected = {(g['headword'], g['lexique_cgram']) for g in read('groups.json')}
+        overlap = [g for g in baseline['groups'] if (g['headword'], g['lexique_cgram']) in selected]
+        self.assertEqual(overlap, [])
+        self.assertEqual((reuse['reused_groups'], reuse['reused_fields'], reuse['groups']), (0, 0, []))
+
+    def test_chinese_training_and_celebration_meanings(self):
+        senses = {g['frozen_row']: g['senses'][0] for g in read('groups.json')}
+        self.assertEqual(senses[2905]['fields']['chinese']['text'],
+                         '训练动物，使其学会特定行为；及物用法 dresser un animal。')
+        self.assertEqual(senses[2937]['fields']['chinese']['text'],
+                         '举行庆典或仪式来庆祝、纪念某个事件或其周年；及物用法。')
+
     def test_exact_frozen_groups_have_complete_resource_records(self):
         if (EVIDENCE / "groups.json").exists():
             groups = read("groups.json")
@@ -193,6 +314,12 @@ class Batch139Tests(unittest.TestCase):
             self.assertEqual(layer["original_authors"], "Académie française")
             self.assertTrue(layer["conservative_expiry"].startswith("2006-01-01"))
             self.assertIn("issue-129", layer["established_project_evidence"])
+            self.assertEqual(layer['independent_review'], 'passed_at_original_work_boundary')
+        muet = next(s for s in read('rights.json')['sources'] if s['title'] == 'muet')
+        self.assertTrue(any(m['line_1_based'] == 7 and '{{R|TLFi}}' in m['raw_reference']
+                            for m in muet['reference_markers']))
+        self.assertTrue(any(m['line_1_based'] == 189 and 'neuvième' in m['raw_reference']
+                            for m in wallet['reference_markers']))
         self.assertEqual((EVIDENCE / "COPYING").read_bytes().rstrip(),
                          (ROOT / "resources/core-pilot-79/COPYING").read_bytes().rstrip())
 
