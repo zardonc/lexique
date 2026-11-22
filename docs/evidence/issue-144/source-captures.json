@@ -748,5 +748,15 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\author-144\\target\\issue-144",
   "captured_at_utc": "2026-11-22T22:38:12.925474+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-144\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-144\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-144\\selection.py",
+  "independent_audit": {
+    "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+    "author_commit": "652d6779ec264268b5518f09b72290deeaeb4125",
+    "review_base": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+    "merged_integration_commit": "fa142521e974fcf895afccab8d5f1dbae31195c3",
+    "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-144\\issue-144-review",
+    "audit_file": "source-audit.json",
+    "lexical_api_requests_made": 0,
+    "lexical_revisions_recaptured": 0
+  }
 }

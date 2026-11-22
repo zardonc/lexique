@@ -1,66 +1,109 @@
 {
-  "ticket": 144,
-  "role": "content_author",
-  "merged_integration_commit": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
-  "frozen_groups": 50,
-  "proposed_fields": 200,
-  "fixed_sources": 52,
-  "independently_accepted_fields": 0,
-  "admitted_fields": 0,
-  "checks": [
+  "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+  "issue": 144,
+  "parent": 78,
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-144",
+  "branch": "codex/d2-review-144",
+  "author_commit": "652d6779ec264268b5518f09b72290deeaeb4125",
+  "review_base": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+  "merged_integration_commit": "fa142521e974fcf895afccab8d5f1dbae31195c3",
+  "tested_changes": "Owned working-tree review changes atop the merged integration commit; exact final staged patch and commit retained in the external review archive.",
+  "platform": "Windows x64 / PowerShell 7 / uv Python 3.14.10 / pnpm 11.25.0",
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-144",
+  "reviewer_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-144\\issue-144-review",
+  "frozen_rows": [
+    3151,
+    3200
+  ],
+  "groups": 50,
+  "selected_uses": 50,
+  "fields_accepted": 200,
+  "text_fields_changed": 0,
+  "source_span_fields_changed": 6,
+  "modification_notice_fields_changed": 50,
+  "unresolved_review_fields": 0,
+  "newly_installed_canonical_fields": 0,
+  "pending_canonical_fields": 200,
+  "annotation_exception_groups": 0,
+  "specialist_exception_groups": 0,
+  "new_runtime_aliases": 0,
+  "source_audit": {
+    "source_count": 52,
+    "field_spans_checked": 200,
+    "supporting_span_occurrences_checked": 2602,
+    "named_article_credits": 2939,
+    "anonymous_article_credits": 579,
+    "chain_count": 2,
+    "all_chains_complete": true
+  },
+  "selected_supporting_spans": 197,
+  "rights": {
+    "fields_accepted": 200,
+    "DAF8_import_marked_articles": 27,
+    "France_DAF8_economic_expiry": "2006-01-01",
+    "worldwide_original_expression_clearance": false,
+    "extended_exposition_excluded": [
+      "luxe",
+      "fée"
+    ],
+    "independently_reviewed_lexical_facts_and_short_phrases": 50,
+    "legal_basis": [
+      "17 USC 102(b)",
+      "37 CFR 202.1(a)",
+      "Compendium 313.4(C)"
+    ],
+    "combined_source_notices_and_conversion": "pending_coordinator"
+  },
+  "commands": [
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_144.py",
-      "result": "passed",
-      "tests": 4,
-      "log": "final-resource.log"
+      "status": "passed",
+      "tests": 8,
+      "log": "final-batch.log"
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-144\\reproduce.py",
-      "result": "passed",
-      "byte_equal_json_files": 9,
-      "log": "final-reproduction.log"
-    },
-    {
-      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_pilot.py -v",
-      "result": "passed",
-      "tests": 18,
-      "seconds": 171.321,
-      "source_commit": "900dc0eb69fb62dc7517f68886c22635f9031a63",
-      "log": "core-tests.log",
-      "boundary": "unchanged canonical core resource; no admission of this batch"
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-144-review/audit.py",
+      "status": "passed",
+      "log": "final-source-audit.log"
     },
     {
       "command": "pnpm test:docs",
-      "result": "passed",
-      "documents": 476,
-      "local_links": 3670,
-      "skipped_local_links": 404,
+      "status": "passed",
       "log": "final-docs.log"
     },
     {
       "command": "git diff --cached --check",
-      "result": "passed",
-      "log": "final-diff.log"
+      "status": "passed",
+      "log": "final-diff-check.log"
     }
   ],
-  "unresolved_authored_fields": [],
-  "pending_independent_quality_fields": 200,
-  "pending_selected_span_rights_fields": 200,
-  "conversion_and_packaging": "integration_owned_not_run",
-  "native_lookup_save_reopen": "integration_owned_not_run",
-  "learner_acceptance": "not_run",
-  "archive": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-144",
-  "contributor_capture_parts": 7,
-  "named_article_credits": 2939,
-  "tdd_failure_evidence": [
-    "RED.log",
-    "RED-original-proposals.log",
-    "RED-reference-boundary.log"
+  "focused_red_green_logs": [
+    "luxe-red.log",
+    "luxe-green.log",
+    "ipa-red.log",
+    "ipa-green.log",
+    "fee-red.log",
+    "fee-green.log",
+    "acceptance-red.log",
+    "acceptance-green.log"
   ],
-  "original_work_obligations": [
-    "CC BY-SA 4.0 legal text and ShareAlike for contribution/adaptation layers",
-    "fixed article URLs, complete contributor/history attribution, modification notices",
-    "separate Académie française eighth-edition original credit and collective-work expiry 2006-01-01",
-    "unselected CFC and other external lexical prose retained only in the outside raw archive"
-  ]
+  "not_run": [
+    "canonical conversion and packaging",
+    "native lookup/save/reopen",
+    "learner acceptance",
+    "whole-machine offline",
+    "other-platform GUI",
+    "release acceptance",
+    "frontend build/lint/typecheck",
+    "Rust checks"
+  ],
+  "unrun_reason": "Review-only evidence/test changes; canonical resource and application integration belong to the coordinator.",
+  "no_canonical_update": true,
+  "no_push": true,
+  "no_tracker_mutation": true,
+  "documentation_check": {
+    "documents": 505,
+    "local_links": 3894,
+    "problems": 0
+  }
 }
