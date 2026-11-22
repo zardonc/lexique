@@ -95,5 +95,41 @@
     "saved_learning_data",
     "shared_runtime_and_runners",
     "tracker_and_PRs"
-  ]
+  ],
+  "post_merge": {
+    "tested_commit": "c32b3fe266a5b6a99aa17e0c147f1beeb3621e36",
+    "integration_tip": "7e135023bff4ed3ad5c681be4200ec9b0c79398d",
+    "resource_boundary": {
+      "exit_code": 0,
+      "tests": 6,
+      "log": "GREEN-merged-resource.log"
+    },
+    "reproduction": {
+      "exit_code": 0,
+      "exact_files": 20,
+      "log": "reproduction-merged.log"
+    },
+    "documentation": {
+      "exit_code": 0,
+      "log": "merged-docs.log"
+    },
+    "scoped_committed_diff": {
+      "exit_code": 0,
+      "log": "committed-diff-check.log"
+    },
+    "canonical_admission": {
+      "exit_code": 1,
+      "result": "blocked_before_batch_membership_by_shared_annotation_registration",
+      "error": "Annotation exceptions must retain their exact approved frozen identities",
+      "log": "RED-merged-admission.log",
+      "expected_annotation_records": 17,
+      "canonical_annotation_records": 15,
+      "canonical_content_version": "core-129-v2",
+      "absent_registered_rows": [
+        2560,
+        2626
+      ],
+      "owner": "coordinator_shared_assembly"
+    }
+  }
 }

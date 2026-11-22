@@ -74,8 +74,14 @@ git diff --cached --check
 The default resource checks pass for exact membership/frequencies, four fields,
 pending gates, API/raw revision equality, complete contributor continuations,
 French POS/IPA spans, actual special forms and retained rights authorities.
-The focused `--admitted` check fails as expected: canonical content has none of
-these 50 groups. Its RED log remains in the archive. It must become green only
+Before the integration merge, the focused `--admitted` RED check confirmed that
+canonical content had none of these 50 groups. At integration **7e13502**, the
+check stops earlier: registration expects **17** annotation records, while
+canonical `core-129-v2` contains **15**, without row 2560 `oublie/NOM` or row 2626
+`r/ADV`. The actual error is `Annotation exceptions must retain their exact
+approved frozen identities`. Both logs are retained. This shared assembly
+blocker precedes #138 membership admission; the six author checks and exact
+reproduction pass on the merged branch. Canonical admission becomes green only
 after genuine review and coordinator assembly.
 
 For reproduction, copy the complete archived directory into this checkout’s
