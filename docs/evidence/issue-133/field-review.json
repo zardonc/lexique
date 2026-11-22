@@ -17895,12 +17895,49 @@
       "review_reason": "The extended violent/dishonest noun sense is current; the street-child and older merely ill-mannered senses remain excluded. Exact French spelling/POS and selected construction evidence establish this source binding only; no runtime alias is admitted."
     }
   ],
-  "unresolved_fields": [],
+  "unresolved_fields": [
+    {
+      "frozen_row": 2626,
+      "headword": "r",
+      "pos": "ADV",
+      "field": "french_definition",
+      "language": "fr",
+      "status": "unresolved",
+      "reason": "Captured exact French r has lettre and nom (recto abbreviation) frames, no adverb frame or applicable adverb IPA. No source-supported modern everyday r/ADV established."
+    },
+    {
+      "frozen_row": 2626,
+      "headword": "r",
+      "pos": "ADV",
+      "field": "ipa",
+      "language": "und",
+      "status": "unresolved",
+      "reason": "Captured exact French r has lettre and nom (recto abbreviation) frames, no adverb frame or applicable adverb IPA. No source-supported modern everyday r/ADV established."
+    },
+    {
+      "frozen_row": 2626,
+      "headword": "r",
+      "pos": "ADV",
+      "field": "english",
+      "language": "en",
+      "status": "unresolved",
+      "reason": "Captured exact French r has lettre and nom (recto abbreviation) frames, no adverb frame or applicable adverb IPA. No source-supported modern everyday r/ADV established."
+    },
+    {
+      "frozen_row": 2626,
+      "headword": "r",
+      "pos": "ADV",
+      "field": "chinese",
+      "language": "zh",
+      "status": "unresolved",
+      "reason": "Captured exact French r has lettre and nom (recto abbreviation) frames, no adverb frame or applicable adverb IPA. No source-supported modern everyday r/ADV established."
+    }
+  ],
   "author_commit": "afca8fa7a4a09121ed77fb99e72cbbc67b4ceae0",
   "review_base": "fdd2f3b1f057a9a5b7af05641502651253beb439",
   "review_date": "2026-11-21",
   "reviewer_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-133/issue-133-review",
-  "annotations": [
+  "annotation_exceptions": [
     {
       "frozen_row": 2626,
       "headword": "r",
@@ -17919,7 +17956,15 @@
         "retained_context": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-133/issue-133-review/owner-amendment/owner-approval.md"
       },
       "independent_evidence_decision": "Letter and noun-abbreviation frames establish no exact adverb or applicable adverb IPA. Retain the owner-approved annotation without substitute content.",
-      "reviewer": "Independent field and selected-rights reviewer #133; separate from author and integration owner"
+      "reviewer": "Independent field and selected-rights reviewer #133; separate from author and integration owner",
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/133",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-21",
+        "timezone": "America/Vancouver",
+        "decision": "批准仅 r/ADV 为零字段注记",
+        "evidence": "docs/evidence/issue-133/owner-approval.md"
+      }
     }
   ]
 }

@@ -61,6 +61,66 @@ class Batch133Tests(unittest.TestCase):
         self.assertEqual(group["alias_admission"], "not_admitted")
         self.assertFalse(read("authored/unresolved.json")["groups"][0]["approved_exception"])
 
+    def test_canonical_annotation_ledger_keeps_owner_approval_and_four_missing_fields(self):
+        review = read("field-review.json")
+        self.assertNotIn("annotations", review.keys())
+        annotations = review["annotation_exceptions"]
+        self.assertEqual(len(annotations), 1)
+        annotation = annotations[0]
+        self.assertEqual((annotation["frozen_row"], annotation["headword"], annotation["pos"],
+                          annotation["admitted_fields"], annotation["missing_fields"]),
+                         (2626, "r", "ADV", 0, 4))
+        decision = annotation["decision"]
+        self.assertEqual((decision["issue"], decision["approved_by"], decision["approved_on"],
+                          decision["decision"]),
+                         ("https://github.com/zardonc/lexique/issues/133", "project_owner",
+                          "2026-11-21", "批准仅 r/ADV 为零字段注记"))
+        group = next(g for g in read("groups.json") if g["frozen_row"] == 2626)
+        self.assertEqual(annotation["owner_approval"], group["owner_approval"])
+        missing = review["unresolved_fields"]
+        self.assertEqual(len(missing), 4)
+        self.assertEqual({(r["frozen_row"], r["headword"], r["pos"], r["field"], r["language"])
+                          for r in missing},
+                         {(2626, "r", "ADV", field, language) for field, language in
+                          (("french_definition", "fr"), ("ipa", "und"),
+                           ("english", "en"), ("chinese", "zh"))})
+        original = read("authored/unresolved.json")["groups"][0]
+        for record in missing:
+            self.assertEqual(record["status"], "unresolved")
+            self.assertEqual(record["reason"], original["reason"])
+        self.assertFalse(any(r["frozen_row"] == 2626 for r in review["fields"]))
+
+    def test_canonical_source_context_carries_actual_selected_rights_verdicts(self):
+        sources = {s["id"]: s for s in read("sources.json")["sources"]}
+        rights = {s["source_id"]: s for s in read("rights.json")["sources"]}
+        contexts = read("source-context.json")["current_content"]
+        admitted = {field["source_id"] for group in read("groups.json")
+                    for sense in group["senses"] for field in sense["fields"].values()}
+        self.assertEqual(len(admitted), 50)
+        self.assertEqual(len(contexts), 51)
+        self.assertEqual({s["id"] for s in contexts}, set(sources))
+        self.assertEqual(set(rights), set(sources))
+        for context in contexts:
+            with self.subTest(source=context["id"]):
+                source = sources[context["id"]]
+                verdict = rights[context["id"]]
+                expected = ("passed_at_selected_text_boundary" if context["id"] in admitted
+                            else "inspected_no_admitted_content")
+                self.assertEqual(verdict["independent_review"], expected)
+                self.assertEqual(context["selected_text_rights_status"], verdict["independent_review"])
+                self.assertEqual(context["independent_review"], verdict["independent_review"])
+                self.assertEqual(context["reviewer"], verdict["reviewer"])
+                self.assertEqual(context["selected_text_rights_reason"], verdict["review_reason"])
+                self.assertTrue(verdict["review_reason"])
+                if context["id"] in admitted:
+                    self.assertEqual(source["selected_text_review"], "passed_for_selected_spans")
+                    self.assertTrue(context["selected_locations"])
+                else:
+                    self.assertEqual(source["title"], "r")
+                    self.assertEqual(source["selected_text_review"], "inspected_no_admitted_content")
+                    self.assertEqual(context["selected_locations"], [])
+                    self.assertEqual(context["selected_grammar_and_construction_evidence"], [])
+
     def test_exact_frozen_groups_have_accounted_resource_content(self):
         self.assertTrue((EVIDENCE / "groups.json").is_file(),
                         "No #133 resource admission/content records for frozen rows 2601–2650")
@@ -119,7 +179,7 @@ class Batch133Tests(unittest.TestCase):
         self.assertEqual(reviews["kind"], "separate_independent_field_review")
         self.assertEqual(len(reviews["fields"]), 196)
         self.assertEqual(len(reviews["usage"]), 49)
-        self.assertEqual(reviews["unresolved_fields"], [])
+        self.assertEqual(len(reviews["unresolved_fields"]), 4)
         self.assertEqual(read("accepted-replacements.json"), [])
         snapshot = read("authored/snapshot.json")
         self.assertEqual(snapshot["author_commit"], "afca8fa7a4a09121ed77fb99e72cbbc67b4ceae0")
