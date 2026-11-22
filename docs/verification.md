@@ -2,11 +2,11 @@
 
 ## 分类复习整合验收（#195／#201）
 
-2026-11-21，在 Windows x64 `10.0.26300`，从干净提交 `a42f21e8664887aa899498dea6ae6ecb6d8ec822`（tree `9d06c344b0d3f5e986f49094f238544319d38086`）完成整合验证：完整 Playwright **472 项通过**；另行预编译后，storage **242 项通过**（44.06 秒）、desktop library **147 项通过**、speech cache **11 项通过**，保留原有 60 秒执行硬限及三个独立忽略的子进程 helper 入口。lint、typecheck、build、rustfmt、locked workspace 编译与同一源码的原生 release 重建通过。专门回归覆盖评分／跳过后的范围保存失败与仅保存重试，以及 stale-current 范围清理、快照导出／导入和非法 incoming 引用拒绝。
+2026-11-21，在 Windows x64 `10.0.26300`，从干净修复提交 `ee8d3efee2ab21dc7a2fde535faf72902e0993d4`（tree `45617fdffc28d2884fc213da0078026835bfa789`）完成更新源码验收：lint、typecheck、build 通过，完整 Playwright **472 项通过**（186.30 秒），同一源码的 Windows release 可执行文件重新完成构建。Spec P2 的评分／跳过后保存失败回归新增 focus 与 review-change：成功读取保留失败信息、待应用输入和仅保存重试，阻止下一卡及重复评分／额度影响；成功保存或修改／取消选择清除失败。原生真实写锁回归验证刷新后重试不改变评分、进度和全局额度；Standards P3 的原生分类变量改为 `voyageCategory`／`ecoleCategory`。
 
-重建应用的 **12 个原生场景通过**：真实 SQLite、合成音频播放／评分、单分类／并集／未分类／混合 All、待应用切换、实时分类修改、重启、共享额度、跨范围全局撤销、真实写锁失败和七种完整备份／恢复。每个场景保留来源 SHA、SQLite、结果、生命周期和零剩余所属进程记录；备份与受保护合成音频保留，重复模型目录移除。第一次 All 备份尝试发生 WebView2 access violation，dump 定位 `RTSSHooks64.dll + 0x3B1D0`，独立重试通过；探索性 undo 的 `+0x1490AF` dump 也保留，RTSS 禁用对照未运行。
+同一更新源码与新可执行文件的 **12 个原生场景通过**：真实 SQLite、合成音频播放／评分、单分类／并集／未分类／混合 All、待应用切换、实时分类修改、重启、共享额度、跨范围全局撤销、真实写锁失败和七种完整备份／恢复；每次执行保持 60 秒硬限。单分类、并集、明确选择备份各有一次 WebView2 access violation `0xc0000005`，dump 分别定位 `RTSSHooks64.dll + 0x1490AF`、`+0x3B1D0`、`+0x1490AF`，各自新目录重试通过。全部 15 次执行保留来源 SHA／tree、新二进制身份、SQLite、生命周期及清理记录；12 个通过场景另保留结果及各自实际验收的受保护音频、备份与快照。所属 host／worker／helper 与最终进程清单均为零。未全局关闭 RTSS，也未沿用 #192 的 owner exclusion；禁用对照仍未运行。
 
-命令、T01–T19 边界、原生工件目录与重复执行步骤见[验收记录](evidence/issue-195/README.md)。本机证据根为 `C:\Users\inthe\IdeaProjects\lexique-category-review-195\ticket-201\target\ticket-201`，包括 `verification-run.json`、`native-runs.json` 与 `acceptance-summary.json`；#196–#200 的既有证据位于相邻 `evidence\ticket-196` 至 `ticket-200`，各自保留原测试版本。SQLite schema 仍为 20，旧 v1–v4 缺少范围时默认 All；旧 strict v4 reader 会拒绝整份新范围备份，回滚须使用受支持的旧备份并另行保留当前数据。其他平台、干净机器安装、全机断网、该验收提交的 CI 与正式发行验收未运行。
+更新证据根为 `C:\Users\inthe\IdeaProjects\lexique-category-review-195\review-fixes\target\ticket-201`，包括 `verification-run.json`、`native-runs.json`、`acceptance-summary.json`、`focused-native-failure.json`、浏览器回归和三份新 dump 分析；原生根为 `native-ee8d3ef`。此前干净提交 `a42f21e8664887aa899498dea6ae6ecb6d8ec822`（tree `9d06c344b0d3f5e986f49094f238544319d38086`）的完整 storage **242 项通过**（44.06 秒）、desktop library **147 项通过**、speech cache **11 项通过**及 472 个浏览器／12 个原生场景，保留于相邻 `evidence\ticket-201`，原生 All 备份和探索性 undo 的 RTSS 失败证据也保留。更新未修改 backend／desktop／speech 层及其测试，因此未重跑这三套测试，也不将旧结果改标为更新源码结果。命令、T01–T19 边界、元数据路径映射与重复步骤见[验收记录](evidence/issue-195/README.md)；#196–#200 的证据保留各自版本。SQLite schema 仍为 20，旧 v1–v4 缺少范围时默认 All；旧 strict v4 reader 会拒绝整份新范围备份，回滚须使用受支持的旧备份并另行保留当前数据。其他平台、干净机器安装、全机断网、最终 combined-head CI 与正式发行验收未运行。
 
 ## 单条 Markdown 笔记交换（#188）
 
