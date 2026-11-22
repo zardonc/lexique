@@ -237,7 +237,7 @@ async function failure() {
   await expect(card()).toHaveCount(0); await expect(page.getByText('Applied scope: Voyage')).toBeVisible();
   await release(); assert.equal(readState(destination).ratings.length, 1);
   const beforeRetry = readState(destination);
-  await page.evaluate(() => window.dispatchEvent(new Event('focus')));
+  await page.evaluate(() => window.dispatchEvent(new window.Event('focus')));
   await invoke('category_rename', { id: ecoleCategory.id, name: 'École actualisée' });
   await expect(page.getByText('Applies after rating or skipping the current card: École actualisée')).toBeVisible();
   await expect(page.getByRole('alert').filter({ hasText: 'Could not save review scope' })).toContainText('locked');

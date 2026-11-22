@@ -24,8 +24,7 @@ export function useReviewScope(runtime: RuntimeAdapter) {
   const [pending, setPending] = useState<ReviewScope | null>(null);
   const pendingRef = useRef<ReviewScope | null>(null);
   const [busy, setBusy] = useState(false);
-  const saving = useRef(false);
-  const preservePresentation = useRef(false);
+  const saving = useRef(false), preservePresentation = useRef(false);
   const requestRef = useRef(0);
   const [error, setError] = useState('');
   const [saveError, setSaveError] = useState('');
@@ -41,9 +40,7 @@ export function useReviewScope(runtime: RuntimeAdapter) {
         preservePresentation.current = live;
         setApplied((previous) => JSON.stringify(previous) === JSON.stringify(scope ?? { kind: 'all' }) ? previous : scope ?? { kind: 'all' });
         setCategories(categories ?? []); setError('');
-        const choice = remainingChoice(pendingRef.current, categories ?? []);
-        if (JSON.stringify(choice) !== JSON.stringify(pendingRef.current)) setSaveError('');
-        pendingRef.current = choice; setPending(choice);
+        pendingRef.current = remainingChoice(pendingRef.current, categories ?? []); setPending(pendingRef.current);
       } catch (cause) { if (active && current === requestRef.current) setError(errorMessage(cause)); }
     }
     const stop = subscribeReviewEvents(runtime, { changed: () => { void read(true); }, resumed: () => { void read(true); }, failed: (cause) => setError(errorMessage(cause)) }); void read();
