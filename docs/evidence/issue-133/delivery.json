@@ -2,9 +2,9 @@
   "ticket": 133,
   "status": "author_package_pending_independent_review_and_unresolved_r_adv",
   "content_commit": "afca8fa7a4a09121ed77fb99e72cbbc67b4ceae0",
-  "integration_base": "6b9db47664581bfa26f2abaf112a6b33c2d0c78c",
-  "integration_tip": "557b4bb86b090cdbe9a93099a4ddb0d9b093ab80",
-  "tested_source_sha": "557b4bb86b090cdbe9a93099a4ddb0d9b093ab80",
+  "integration_base": "fbcc55129e1f8b4c6c47bb6ed73aa69991e926af",
+  "integration_tip": "3d2bc78c15e1667a989fe470caf3532356dfe1af",
+  "tested_source_sha": "3d2bc78c15e1667a989fe470caf3532356dfe1af",
   "platform": "Windows x64; PowerShell 7; uv-selected Python",
   "changed_paths": [
     "docs/evidence/issue-133/**",
@@ -19,7 +19,7 @@
     {
       "command": "uv run --no-project python -X utf8 scripts/test_core_batch_133.py",
       "result": "passed four author resource/admission checks before commit and after integration merge",
-      "log": "post-merge-resource-check.log"
+      "log": "latest-merge-resource-check.log"
     },
     {
       "command": "uv run --no-project python -X utf8 target/issue-133/check_fallback.py",
@@ -43,8 +43,8 @@
     },
     {
       "command": "git merge --no-edit codex/d2-content-130-139",
-      "result": "merged integration base 6b9db476 into ticket branch; four focused checks passed afterwards",
-      "log": "integration-merge.log"
+      "result": "Merged current integration fbcc55129e1f8b4c6c47bb6ed73aa69991e926af into ticket branch; four focused checks passed afterwards",
+      "log": "integration-latest-merge.log"
     }
   ],
   "author_proposals": {
