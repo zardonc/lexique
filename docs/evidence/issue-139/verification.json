@@ -1,0 +1,76 @@
+{
+  "ticket": 139,
+  "checkout": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/ticket-139",
+  "branch": "codex/d2-content-139",
+  "diff_base": "d3725aa325ed9ac7222c2be80527efb798508485",
+  "platform": "Windows x64, PowerShell 7, Python 3.14.10 via uv",
+  "scope": [
+    "docs/evidence/issue-139/**",
+    "scripts/test_core_batch_139.py"
+  ],
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-139",
+  "capture_fallback": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-139",
+  "proposed_groups": 50,
+  "proposed_senses": 50,
+  "proposed_fields": 200,
+  "fixed_french_sources": 50,
+  "contributor_api_parts": 6,
+  "article_contributor_credits": 2666,
+  "selected_sentence_authorship_proved": false,
+  "independently_accepted_new_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "missing_authored_fields": 0,
+  "missing_admitted_fields": 200,
+  "author_unresolved_content_rows": [],
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_139.py",
+      "status": "passed",
+      "tests": 4,
+      "log": "target/issue-139/GREEN.log",
+      "boundary": "Delivered author resource/admission records, exact frozen membership/frequency strings, fixed raw/API spans, contributor pagination, original proposals and source/POS/use/spelling/rights restrictions. No independent quality acceptance."
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-139/reproduce.py",
+      "status": "passed",
+      "log": "target/issue-139/reproduction.log",
+      "boundary": "All nine root author JSON files reproduce byte for byte from stable fixed captures and recorded baseline metadata."
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "target/issue-139/docs.log"
+    },
+    {
+      "command": "git diff --check; git diff --cached --check",
+      "status": "passed",
+      "log": "target/issue-139/diff-check.log"
+    }
+  ],
+  "initial_resource_failure": {
+    "status": "expected_failure",
+    "log": "target/issue-139/RED.log",
+    "cause": "Baseline canonical resource has none of the exact 50 ticket groups."
+  },
+  "original_proposal_failure": {
+    "status": "expected_failure",
+    "log": "target/issue-139/RED-original-proposals.log",
+    "cause": "Separate preserved original author JSON had not yet been supplied."
+  },
+  "pending_coordinator_gates": {
+    "independent_quality_and_everyday_use": "pending_actual_separate_review",
+    "selected_span_rights": "pending_actual_separate_review",
+    "construction_and_spelling": "pending_actual_separate_review",
+    "combined_conversion_and_packaged_obligations": "not_run_coordinator_owned",
+    "all_group_native_lookup_save_reopen": "not_run_coordinator_owned",
+    "learner_data_preservation": "not_run_coordinator_owned",
+    "learner_acceptance": "not_run"
+  },
+  "frontend_and_rust_checks": "not_run_author_evidence_and_python_test_only",
+  "review_handoff": {
+    "full_patch": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-139/scoped-author.patch",
+    "resource_test_patch": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-139/resource-tests.patch",
+    "commit_and_final_merge_record": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-139/closeout.json"
+  }
+}

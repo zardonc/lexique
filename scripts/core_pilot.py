@@ -24,6 +24,7 @@ ANNOTATIONS = (
     (1219, "qu", "PRO:int", 105), (1220, "qu", "PRO:rel", 105),
     (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
     (2560, "oublie", "NOM", 132), (2626, "r", "ADV", 133),
+    (2792, "man", "NOM", 136),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
 ROWS = tuple(row for row in range(1, 2951) if row not in ANNOTATION_ROWS)

@@ -1,87 +1,29 @@
 {
-  "groups": [
+  "groups": [],
+  "unresolved_fields": [],
+  "approved_annotations": [
     {
       "frozen_row": 2626,
       "headword": "r",
-      "lexique_cgram": "ADV",
-      "missing_fields": [
-        "french_definition",
-        "ipa",
-        "english",
-        "chinese"
-      ],
-      "status": "unresolved_no_owner_exception",
-      "approved_exception": false,
-      "admission": "not_admitted",
-      "reason": "Captured exact French r has lettre and nom (recto abbreviation) frames, no adverb frame or applicable adverb IPA. No source-supported modern everyday r/ADV established.",
-      "source_id": "b133_fr_11617",
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-      "inspected_evidence": [
-        {
-          "source_id": "b133_fr_11617",
-          "revid": 39772424,
-          "url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=r&action=history",
-          "line_1_based": 49,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b133_fr_11617",
-          "revid": 39772424,
-          "url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=r&action=history",
-          "line_1_based": 53,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|lettre|fr}} ==="
-        },
-        {
-          "source_id": "b133_fr_11617",
-          "revid": 39772424,
-          "url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=r&action=history",
-          "line_1_based": 55,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''r''' {{pron|ɛʁ|fr}} {{m}} {{invar}}"
-        },
-        {
-          "source_id": "b133_fr_11617",
-          "revid": 39772424,
-          "url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=r&action=history",
-          "line_1_based": 56,
-          "column_1_based": 1,
-          "reviewed_excerpt": "# Dix-huitième lettre et quatorzième consonne de l’alphabet (minuscule)."
-        },
-        {
-          "source_id": "b133_fr_11617",
-          "revid": 39772424,
-          "url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=r&action=history",
-          "line_1_based": 72,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b133_fr_11617",
-          "revid": 39772424,
-          "url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=r&action=history",
-          "line_1_based": 73,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''r''' {{pron|ʁɛk.to|fr}} {{m}}"
-        },
-        {
-          "source_id": "b133_fr_11617",
-          "revid": 39772424,
-          "url": "https://fr.wiktionary.org/w/index.php?title=r&oldid=39772424",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=r&action=history",
-          "line_1_based": 74,
-          "column_1_based": 1,
-          "reviewed_excerpt": "#{{abréviation|fr}} [[recto|Recto]]."
-        }
-      ],
-      "required_resolution": "Source the exact French bare r adverb and all four fields, or obtain the project owner’s actual annotation approval. No letter-name/recto/specialist substitution or alias authorized."
+      "pos": "ADV",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "owner_approval": {
+        "by": "project_owner",
+        "date": "2026-11-21",
+        "timezone": "America/Vancouver",
+        "issue": 133,
+        "issue_url": "https://github.com/zardonc/lexique/issues/133",
+        "parent_issue": 78,
+        "exact_decision": "批准仅 r/ADV 为零字段注记",
+        "evidence": "docs/evidence/issue-133/owner-approval.md",
+        "retained_context": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-133/issue-133-review/owner-amendment/owner-approval.md"
+      },
+      "independent_evidence_decision": "Letter and noun-abbreviation frames establish no exact adverb or applicable adverb IPA. Retain the owner-approved annotation without substitute content.",
+      "reviewer": "Independent field and selected-rights reviewer #133; separate from author and integration owner"
     }
-  ]
+  ],
+  "original_unresolved_evidence": "authored/unresolved.json",
+  "ordinary_unresolved_groups": 0,
+  "annotation_missing_fields": 4
 }

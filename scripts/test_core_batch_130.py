@@ -1,4 +1,4 @@
-"""Check #130 at the approved resource/admission boundary."""
+"""Check independently reviewed #130 at the approved resource/admission boundary."""
 import csv
 import gzip
 import json
@@ -47,8 +47,49 @@ def retained_path(name):
     return Path(read("admission.json")["author_evidence_root"]).joinpath(*parts[prefix + 1:])
 
 
-class AuthorPackage130Tests(unittest.TestCase):
-    def test_exact_frozen_groups_have_four_bound_proposals_and_honest_gates(self):
+class ReviewedPackage130Tests(unittest.TestCase):
+    def test_separate_review_covers_every_field_and_use_with_exact_acceptance(self):
+        review = read('field-review.json')
+        self.assertEqual(review['kind'], 'separate_independent_field_review')
+        self.assertTrue(review['independence'])
+        self.assertTrue(review['independent_acceptance'])
+        self.assertEqual(review['unresolved_fields'], [])
+        self.assertEqual(len(review['usage']), 50)
+        self.assertEqual(len(review['fields']), 200)
+        authored = {(g['frozen_row'], n): f for g in read('authored/at-d77da5c/groups.json')
+                    for n, f in g['senses'][0]['fields'].items()}
+        accepted = {(g['frozen_row'], n): f for g in read('groups.json')
+                    for n, f in g['senses'][0]['fields'].items()}
+        self.assertEqual({(r['frozen_row'], r['field']) for r in review['fields']}, set(accepted))
+        for r in review['fields']:
+            key = (r['frozen_row'], r['field'])
+            self.assertEqual(r['proposed_text'], authored[key]['text'])
+            self.assertEqual(r['accepted_text'], accepted[key]['text'])
+            self.assertEqual(r['accepted_text_quality_status'], 'passed')
+            self.assertEqual(r['rights_eligibility_status'], 'passed_at_selected_text_boundary')
+            self.assertEqual(r['reviewer'], review['reviewer'])
+            self.assertTrue(r['independence'])
+            self.assertTrue(r['review_reason'])
+            self.assertTrue(r['selected_text_rights_reason'])
+        for u in review['usage']:
+            self.assertEqual(u['accepted_usage_quality_status'], 'passed')
+            self.assertEqual(u['everyday_sense_status'], 'passed')
+            self.assertTrue(u['review_reason'])
+            self.assertEqual(u['reviewer'], review['reviewer'])
+        replacements = read('accepted-replacements.json')
+        self.assertEqual([(r['frozen_row'], r['field']) for r in replacements], [(2498, 'chinese')])
+        replacement = replacements[0]
+        self.assertEqual(replacement['proposed_text'], authored[(2498, 'chinese')]['text'])
+        self.assertEqual(replacement['accepted_text'], accepted[(2498, 'chinese')]['text'])
+        self.assertEqual(replacement['exact_source'], next(r['exact_source'] for r in review['fields']
+                                                         if (r['frozen_row'], r['field']) == (2498, 'chinese')))
+
+    def test_patrie_does_not_require_a_nation_state(self):
+        group = next(g for g in read('groups.json') if g['frozen_row'] == 2498)
+        self.assertEqual(group['senses'][0]['fields']['chinese']['text'],
+                         '祖国、故国；出生的国家、祖先的故土或自己所属的国家或民族。')
+
+    def test_exact_frozen_groups_have_four_reviewed_fields_and_honest_gates(self):
         groups = read("groups.json")
         self.assertEqual([(g["headword"], g["lexique_cgram"]) for g in groups], MEMBERSHIP)
         self.assertEqual([g["frozen_row"] for g in groups], list(range(2451, 2501)))
@@ -60,21 +101,32 @@ class AuthorPackage130Tests(unittest.TestCase):
             self.assertEqual(len(group["senses"]), 1)
             sense = group["senses"][0]
             self.assertTrue(sense["use"])
+            self.assertEqual(sense['independent_review'], 'passed')
+            self.assertEqual(sense['resource_admission'], 'passed_independent_selected_content_and_rights_only')
             self.assertIsNone(sense["cefr"])
             self.assertEqual(set(sense["fields"]), set(LANGUAGES))
             for name, field in sense["fields"].items():
                 self.assertEqual(field["language"], LANGUAGES[name])
                 self.assertTrue(field["text"].strip())
                 self.assertTrue(field["modification"].strip())
+                self.assertEqual(field['independent_review'], 'passed')
+                self.assertEqual(field['rights_eligibility_status'], 'passed_at_selected_text_boundary')
         admission = read("admission.json")
         self.assertEqual(admission["scope_denominator_groups"], 4087)
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
-        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (0, 0))
-        self.assertEqual((admission["pending_independent_review_fields"], admission["pending_independent_rights_fields"], admission["missing_admitted_fields"]), (200, 200, 200))
-        self.assertEqual(admission["pending_independent_review_rows"], list(range(2451, 2501)))
-        self.assertIsNone(admission["independent_reviewer"])
-        self.assertFalse(read("field-review.json")["independent_acceptance"])
-        self.assertEqual(read("field-review.json")["kind"], "author_prepared_for_separate_reviewer")
+        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (50, 200))
+        self.assertEqual((admission["pending_independent_review_fields"], admission["pending_independent_rights_fields"], admission["missing_admitted_fields"]), (0, 0, 200))
+        self.assertEqual((admission['newly_admitted_fields'], admission['canonical_pending_fields']), (0, 200))
+        self.assertEqual((admission['unchanged_accepted_fields'], admission['replacement_fields']), (199, 1))
+        self.assertEqual(admission['pending_independent_review_rows'], [])
+        self.assertEqual(admission['review_base'], 'd3725aa325ed9ac7222c2be80527efb798508485')
+        self.assertEqual(admission['reviewed_author_commit'], 'd77da5c3b6b4c98b741dd449961bbf1d84dc0729')
+        self.assertEqual(admission['independent_reviewer'], read('field-review.json')['reviewer'])
+        canonical = json.loads((ROOT / 'resources/core-pilot-79/curated-inputs.json').read_text(encoding='utf-8'))
+        accepted = {g['frozen_row']: g for g in groups}
+        for group in canonical['groups']:
+            if group['frozen_row'] in ROWS:
+                self.assertEqual(group, accepted[group['frozen_row']])
         self.assertEqual(read("reuse.json")["reused_fields"], 0)
 
     def test_fixed_sources_and_every_field_span_match_actual_captures(self):
@@ -98,6 +150,9 @@ class AuthorPackage130Tests(unittest.TestCase):
         fields = {(f["sense_id"], f["field"]): f for f in read("source-excerpts.json")["fields"]}
         rights = {(f["sense_id"], f["field"]): f for f in read("rights.json")["fields"]}
         proposals = {(f["sense_id"], f["field"]): f for f in read("field-review.json")["fields"]}
+        authored = {(g['senses'][0]['sense_id'], name): f
+                    for g in read('authored/at-d77da5c/groups.json')
+                    for name, f in g['senses'][0]['fields'].items()}
         self.assertEqual(len(fields), 200)
         self.assertEqual(set(fields), set(rights))
         self.assertEqual(set(fields), set(proposals))
@@ -110,7 +165,15 @@ class AuthorPackage130Tests(unittest.TestCase):
                 self.assertEqual(field["content_license"], "CC-BY-SA-4.0")
                 self.assertEqual(rights[key]["exact_source_span"], span)
                 self.assertTrue(rights[key]["author_rights_basis"])
-                self.assertEqual(proposals[key]["proposed_text"], field["text"])
+                self.assertEqual(proposals[key]['proposed_text'], authored[key]['text'])
+                self.assertEqual(proposals[key]['accepted_text'], field['text'])
+                self.assertEqual(rights[key]['accepted_text'], field['text'])
+                self.assertEqual(rights[key]['modification'], field['modification'])
+                self.assertEqual(rights[key]['independent_review'], 'passed_at_selected_text_boundary')
+                self.assertEqual(rights[key]['selected_text_rights_reason'], proposals[key]['selected_text_rights_reason'])
+                self.assertEqual(fields[key]['accepted_text'], field['text'])
+                self.assertEqual(fields[key]['reviewed_excerpt'], span['raw_source_excerpt'])
+                self.assertEqual(fields[key]['line_1_based'], span['line_1_based'])
                 self.assertEqual(fields[key]["source_id"], field["source_id"])
                 self.assertEqual(proposals[key]["exact_source"]["source_id"], field["source_id"])
                 self.assertEqual(proposals[key]["exact_source"]["revid"], sources[field["source_id"]]["revid"])
@@ -163,9 +226,29 @@ class AuthorPackage130Tests(unittest.TestCase):
         self.assertIn("E paire, treize", manual)
         self.assertIn("R rue, venir", manual)
         self.assertIn("ADJ:ind Adjectif indéfini", manual)
+        source = next(s for s in read('sources.json')['sources'] if s['id'] == 'b130_lexique383_phrase')
+        self.assertEqual((source['revid'], source['source_frame'], source['content_license']),
+                         ('3.83', 'fixed_licensed_dataset_capture', 'CC-BY-SA-4.0'))
+        self.assertEqual(phrase['fields']['ipa']['source_id'], source['id'])
+        self.assertIn('not public domain', source['selected_text_rights_reason'])
+        upstream = (ROOT / 'resources/lexique-3.83/UPSTREAM-README.txt').read_text(encoding='utf-8')
+        self.assertIn('Boris New & Christophe Pallier', upstream)
+        self.assertIn('LICENSE-CC-BY-SA4.0.txt', upstream)
+        usages = {u['frozen_row']: u for u in read('field-review.json')['usage']}
+        self.assertIn('2014', usages[2462]['review_reason'])
+        self.assertIn('2016', usages[2462]['review_reason'])
+        self.assertIn('feminine plural interrogative', usages[2482]['review_reason'])
+        self.assertIn('feminine plural relative', usages[2483]['review_reason'])
+        self.assertIn('lines 32/48', usages[2492]['review_reason'])
         for row, fragment in ((2482, "Interrogative"),(2483,"Relative"),(2462,"pejorative"),(2481,"language name")):
             self.assertIn(fragment, groups[row]["senses"][0]["use"])
         self.assertTrue(all(r["alias_admission"]=="not_admitted" for r in read("source-context.json")["spelling_relations"]))
+        for s in read('sources.json')['sources']:
+            for layer in s.get('original_historical_dictionary_layers', []):
+                self.assertEqual(layer['conservative_expiry'], '2006-01-01, using final publication in 1935')
+                self.assertEqual(layer['independent_review'], 'passed_at_selected_original_work_boundary')
+        author_source = next(s for s in read('sources.json')['sources'] if s['title'] == 'auteur')
+        self.assertIn('CFC cartographic definitions at 54/56', author_source['selected_text_rights_reason'])
 
 
 class Batch130Tests(unittest.TestCase):
@@ -176,11 +259,11 @@ class Batch130Tests(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    author_only = "--author-only" in sys.argv
-    if author_only:
-        sys.argv.remove("--author-only")
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(AuthorPackage130Tests)
-    if not author_only:
+    require_canonical = '--require-canonical' in sys.argv
+    if require_canonical:
+        sys.argv.remove('--require-canonical')
+    suite = unittest.defaultTestLoader.loadTestsFromTestCase(ReviewedPackage130Tests)
+    if require_canonical:
         suite.addTests(unittest.defaultTestLoader.loadTestsFromTestCase(Batch130Tests))
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     sys.exit(0 if result.wasSuccessful() else 1)

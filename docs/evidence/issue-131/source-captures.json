@@ -818,5 +818,8 @@
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-131\\prepare_candidates.py",
   "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-131\\selection.py",
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-131\\target\\issue-131",
-  "fallback": "Resolve target/issue-131/<relative path> under author_evidence_root when the local capture is absent; original captures remain available."
+  "fallback": "Resolve target/issue-131/<relative path> under author_evidence_root when the local capture is absent; original captures remain available.",
+  "review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-131\\independent-review-7e13502",
+  "review_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-131\\independent-review-7e13502\\author-captures",
+  "review_source_audit": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-131\\independent-review-7e13502\\source-audit.json"
 }

@@ -1,63 +1,109 @@
 {
   "ticket": 130,
-  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-130",
-  "branch": "codex/d2-content-130",
-  "diff_base": "e4005d868880dac12c84c412773049eea737bc67",
-  "tested_scope": "exact authored working-tree package, subsequently committed unchanged",
-  "platform": "Windows x64; PowerShell 7; uv Python",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-130",
+  "branch": "codex/d2-review-130",
+  "review_base": "d3725aa325ed9ac7222c2be80527efb798508485",
+  "author_commit": "d77da5c3b6b4c98b741dd449961bbf1d84dc0729",
+  "merged_integration_tip": "2a3e70a050f1356ae1cd03bb93e18558563768ac",
+  "integration_merge_commit": "4a9be2b740621de436976e45150c5d92087d28ba",
+  "tested_scope": "scoped independently reviewed working-tree shard; final tested commit identity is recorded in the independent archive",
+  "platform": "Windows x64; PowerShell 7; uv Python 3.14.10",
+  "reviewer": "Separate field/use/selected-rights reviewer #130; not the author or coordinator",
+  "independent_quality": "passed",
+  "selected_rights": "passed_at_selected_text_boundary",
+  "counts": {
+    "groups": 50,
+    "uses": 50,
+    "fields": 200,
+    "unchanged": 199,
+    "changed": 1,
+    "unresolved_selected_fields": 0,
+    "new_canonical_fields": 0,
+    "pending_canonical_fields": 200
+  },
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-130",
+  "review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-130\\issue-130-review",
   "checks": [
     {
-      "command": "uv run --no-project python scripts/test_core_batch_130.py",
-      "stage": "initial missing-admission regression",
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_130.py --author-only",
+      "stage": "focused semantic red before correction",
       "result": "expected_failure",
       "exit_code": 1,
-      "log": "target/issue-130/resource-red.log"
+      "log": "content-red.log"
     },
     {
-      "command": "uv run --no-project python scripts/test_core_batch_130.py --author-only",
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest scripts.test_core_batch_130.AuthorPackage130Tests.test_patrie_does_not_require_a_nation_state",
+      "stage": "focused semantic green before class rename",
       "result": "passed",
-      "tests": 4,
       "exit_code": 0,
-      "log": "target/issue-130/author-tests.log"
+      "tests": 1,
+      "log": "content-green.log"
     },
     {
-      "command": "uv run --no-project python scripts/test_core_batch_130.py",
-      "result": "expected_failure_missing_canonical_batch_content",
-      "tests": 5,
-      "passing_tests": 4,
-      "exit_code": 1,
-      "log": "target/issue-130/admission-pending.log"
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest scripts.test_core_batch_130.AuthorPackage130Tests.test_separate_review_covers_every_field_and_use_with_exact_acceptance",
+      "stage": "independent ledger red and green before class rename",
+      "result": "expected_failure_then_passed",
+      "tests": 1,
+      "logs": [
+        "review-red.log",
+        "review-green.log"
+      ]
     },
     {
-      "command": "uv run --no-project python target/issue-130/check_links.py",
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-130-review/audit.py",
       "result": "passed",
-      "links": 38,
       "exit_code": 0,
-      "log": "target/issue-130/link-check.log"
+      "log": "source-audit.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 --with pypdf python -B -X utf8 target/issue-130-review/check_manual.py",
+      "result": "passed_actual_pdf_selected_tables",
+      "exit_code": 0,
+      "log": "manual-audit.log",
+      "extractor": "pypdf 7.1.1",
+      "full_text_byte_equality": "not claimed: current extractor changes spacing outside selected tables; actual PDF tables independently verified"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_130.py",
+      "result": "passed",
+      "log": "final-shard.log",
+      "exit_code": 0,
+      "tests": 6
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "log": "docs.log",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-130-review/check_links.py",
+      "result": "passed",
+      "log": "links.log",
+      "exit_code": 0
     },
     {
       "command": "git diff --cached --check",
       "result": "passed",
-      "exit_code": 0,
-      "log": "target/issue-130/diff-check.log"
+      "log": "diff-check.log",
+      "exit_code": 0
     },
     {
-      "command": "uv run --no-project python target/issue-130-review-copy/scripts/test_core_batch_130.py --author-only",
-      "result": "passed_without_local_captures_using_stable_archive",
-      "exit_code": 0,
-      "tests": 4,
-      "log": "target/issue-130/archive-fallback-tests.log"
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest scripts.test_core_batch_130.Batch130Tests",
+      "result": "expected_failure_missing_all_50_canonical_rows",
+      "exit_code": 1,
+      "log": "canonical-pending.log"
     }
   ],
-  "independent_quality": "pending_separate_reviewer",
   "native": "not_run_coordinator_owned",
-  "conversion": "not_run_coordinator_owned",
+  "conversion_and_combined_packaging": "not_run_coordinator_owned",
   "frontend_rust": "not_run_no_runtime_changes",
-  "resource_denominator": 4087,
-  "newly_admitted_fields": 0,
-  "identity_file": "target/issue-130/author-commit.txt",
-  "integration_identity_file": "target/issue-130/integration-tip.txt",
-  "merged_integration_tip": "6b9db47664581bfa26f2abaf112a6b33c2d0c78c",
-  "stable_author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-130",
-  "original_captures_retained": true
+  "learner_acceptance": "not_run",
+  "tracker_pr_push": "not_performed",
+  "documentation_result": {
+    "documents": 438,
+    "local_links": 3427,
+    "scoped_local_links": 38,
+    "problems": []
+  }
 }
