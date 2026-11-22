@@ -1,16 +1,65 @@
 # Category review acceptance (#195 / #201)
 
-The integrated category-review implementation passed the complete browser suite,
-storage and desktop checks, and twelve Windows x64 native scenarios. The native
-scenarios use the rebuilt application, real SQLite, fresh synthetic learning data,
-the existing CDP fixture, native backup dialogs, and the approved local resources.
+The review fixes passed the complete browser suite and twelve Windows x64 native
+scenarios from updated source. The earlier complete storage, desktop-library and
+speech-cache results retain their original source revision below.
 
-## Revision and environment
+## Updated-source review fixes (PR #208)
+
+Tested clean implementation: `ee8d3efee2ab21dc7a2fde535faf72902e0993d4`, tree
+`45617fdffc28d2884fc213da0078026835bfa789`, in
+`C:\Users\inthe\IdeaProjects\lexique-category-review-195\review-fixes`.
+The required start and integrated ancestor was
+`27624ed84b9b0b3e3e4bf6568ded579fe3fb1324`. Environment: Windows x64
+`10.0.26300`, pnpm `11.25.0`, Cargo `1.99.1`, uv Python `3.14.10`, initialized
+MSVC and installed Edge/WebView2; installation used the frozen lockfile.
+
+The Spec P2 is resolved: successful scope/category reads preserve a failed scope
+save's visible error and save-only retry. Changing/cancelling the choice or saving
+successfully clears that failure. Both rating and skip browser checks now refresh
+through focus and review-change before retry, retain the completed boundary and
+pending input, and assert no additional rating. The native failure journey uses
+real SQLite write locks, focus and an actual category-change event, then verifies
+unchanged ratings, progress and global usage after retry. The Standards P3 is
+resolved by naming the native categories `voyageCategory` and `ecoleCategory`.
+
+| Updated-source check | Outcome |
+| --- | --- |
+| `pnpm lint`, `pnpm typecheck`, `pnpm build` | Passed |
+| `pnpm test:e2e -- --workers=4` | 472 passed, 186.30 s |
+| `pnpm desktop:build --no-bundle` | New executable completed, 173.58 s; locked Cargo |
+| All twelve tracked native scenarios | 12 passed; three failed renderer attempts retained with fresh passing retries |
+
+All updated native attempts used this same source/tree and rebuilt executable.
+Resource input and approved shared Cargo cache were integration `target\release`
+and `target`; fixture destinations belong to this checkout's ignored
+`target\ticket-201\native-ee8d3ef`. Single-category, multiple-category and
+explicit-choice backups passed in their respective `*-retry` destinations.
+Metadata, real SQLite, lifecycle and cleanup records remain in each fixture.
+Passing fixtures also retain results, protected audio, backups and snapshots as
+exercised by their scenarios. Every attempt retained the hard 60 s
+execution limit; cleanup and final inventory report zero task-owned processes.
+
+Updated evidence root:
+`C:\Users\inthe\IdeaProjects\lexique-category-review-195\review-fixes\target\ticket-201`.
+`verification-run.json`, `native-runs.json`, `acceptance-summary.json`,
+`focused-native-failure.json`, browser reports and regression logs record the
+commands and results. The unchanged storage/desktop-library/speech-cache suites
+were not rerun on updated source; their complete results below remain tied to
+`a42f21e8664887aa899498dea6ae6ecb6d8ec822`. Final combined-head CI remains unrun.
+
+## Earlier full acceptance
+
+The following complete checks and T01–T19 table describe the original acceptance
+revision. Its runtime/tests match the review's required starting head; the updated
+review fixes above have their own execution evidence.
+
+### Revision and environment
 
 - Issue: [#195](https://github.com/zardonc/lexique/issues/195), acceptance slice
   [#201](https://github.com/zardonc/lexique/issues/201), draft
   [PR #208](https://github.com/zardonc/lexique/pull/208).
-- Checkout: `C:\Users\inthe\IdeaProjects\lexique-category-review-195\ticket-201`.
+- Original execution checkout (removed): `C:\Users\inthe\IdeaProjects\lexique-category-review-195\ticket-201`.
 - Required integration ancestor: `c658984141742c18bd54f6864bee6a30899f20d9`.
 - Tested implementation SHA: `a42f21e8664887aa899498dea6ae6ecb6d8ec822`;
   clean tree: `9d06c344b0d3f5e986f49094f238544319d38086`.
@@ -18,11 +67,12 @@ the existing CDP fixture, native backup dialogs, and the approved local resource
   `11.25.0`, pinned Cargo `1.99.1`, uv Python `3.14.10`, initialized MSVC,
   installed Edge/WebView2. The frozen dependency install preceded execution.
 - Evidence root:
-  `C:\Users\inthe\IdeaProjects\lexique-category-review-195\ticket-201\target\ticket-201`.
+  `C:\Users\inthe\IdeaProjects\lexique-category-review-195\evidence\ticket-201`.
+  `retained-location.md` maps the original metadata prefix to this retained root.
   `verification-run.json` records commands, versions, SHA/tree, timing and logs;
   `native-runs.json` records each final native invocation and artifact directory.
 
-## Complete checks
+### Complete checks
 
 | Command | Outcome |
 | --- | --- |
@@ -55,7 +105,7 @@ cover stale-current cleanup to remaining category IDs, Uncategorized, and
 `needs_selection`. Incoming malformed or dangling references still reject before
 replacement. The combined full suites include these regressions.
 
-## Native T01–T19 evidence
+### Native T01–T19 evidence
 
 Every scenario below lives under `native-a42f21e/<scenario>` in the evidence root;
 the passing All backup run is `backup-all-retry`, and `backup-all` retains the
@@ -103,13 +153,13 @@ implementation used for the full suites.
 
 For native acceptance, prepare a distribution-resource directory containing the
 current `dictionary`, `conjugation`, `frequency`, approved `speech`, `LICENSE`
-and `README.txt`. This run used this checkout's `target\release` as resource input
-and the single-writer shared Cargo cache
+and `README.txt`. Updated-source runs used the approved integration
+`target\release` as resource input and the single-writer shared Cargo cache
 `C:\Users\inthe\IdeaProjects\lexique-category-review-195\integration\target`.
 No existing learning data is used as fixture input. From `apps/desktop`, run:
 
 ```powershell
-$taskResources = (Resolve-Path ../../target/release).Path
+$taskResources = 'C:\Users\inthe\IdeaProjects\lexique-category-review-195\integration\target\release'
 $taskBinary = (Resolve-Path "$env:CARGO_TARGET_DIR/release/lexique-desktop.exe").Path
 New-Item -ItemType Directory -Force -Path ../../target/ticket-201 | Out-Null
 $taskRunRoot = Join-Path (Resolve-Path ../../target/ticket-201).Path 'native-fresh'
@@ -144,13 +194,24 @@ records old-reader compatibility; this acceptance does not relabel earlier runs.
 
 ## Limitations and failed checks
 
+Updated-source attempts for `backup-single`, `backup-multiple` and
+`backup-needs-selection` failed with WebView2 access violation `0xc0000005`.
+The retained dump analyses identify `RTSSHooks64.dll + 0x1490AF`, `+0x3B1D0`
+and `+0x1490AF`, respectively. Each failed fixture, dump, log, metadata and
+cleanup record remains under `native-ee8d3ef/<scenario>`; analyses are
+`native-<scenario>-crash-analysis.json` in the updated evidence root.
+Fresh retries passed from the same source and binary. No global RTSS shutdown
+or owner exclusion from #192 was applied; a controlled RTSS-disabled comparison
+remains unrun. These failures remain a material environment limitation.
+
 Other platforms, clean-machine installation, whole-machine offline operation and
 formal release acceptance remain unrun. The native fixture sets its WebView
 offline and uses local speech/resources; this does not prove complete OS network
 isolation or device-independent audible output. Playback evidence is the actual
 native audio element and application rating eligibility.
 
-Two attempts had WebView2 access violations, each with exception `0xc0000005`:
+Two earlier native attempts had WebView2 access violations, each with
+exception `0xc0000005`:
 
 - Exploratory undo: `native-undo-crash-analysis.json` identifies
   `RTSSHooks64.dll + 0x1490AF`; dump remains under
