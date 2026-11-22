@@ -1,9 +1,9 @@
 # #132 source and modification notices
 
-The proposed dictionary text is adapted from fixed Wiktionnaire contributions
+The independently reviewed dictionary text is adapted from fixed Wiktionnaire contributions
 under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The [complete legal text](COPYING), article attribution, full history links,
-original-work layers and modification notices accompany this author package.
+original-work layers and modification notices accompany this reviewed package.
 New French adaptations and English/Chinese explanatory translations are by
 Lexique contributors and retain CC BY-SA 4.0.
 
@@ -14,7 +14,11 @@ Frequency is not a CEFR level.
 
 ## Modifications and selected content
 
-One sense is proposed for each of 49 ordinary groups. The owner-approved
+Rock explanations specify the selected vocal configuration; the Chinese sentence
+explanation explicitly permits one or more clauses. Exact proposals, accepted
+wording and source spans remain in [replacement records](accepted-replacements.json).
+
+One sense is independently accepted for each of 49 ordinary groups. The owner-approved
 row-2560 annotation has zero fields and four missing fields; its rejected old-use
 proposal is retained as evidence only. French wording is scoped to the selected
 use, with markup removed and grammatical/register restrictions retained.
@@ -98,4 +102,4 @@ modifications are retained in [rights](rights.json) and [groups](groups.json).
 | [véhicule](https://fr.wiktionary.org/w/index.php?title=v%C3%A9hicule&oldid=39815933) | 39815933 | 2026-08-19T16:03:58Z | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=v%C3%A9hicule&action=history) |
 | [étendre](https://fr.wiktionary.org/w/index.php?title=%C3%A9tendre&oldid=39871435) | 39871435 | 2026-09-11T13:15:19Z | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=%C3%A9tendre&action=history) |
 
-Independent selected-field rights/quality review and actual combined resource packaging remain pending.
+Independent selected-field rights/quality review passed for 196 fields. Actual combined resource packaging remains coordinator-owned and pending.

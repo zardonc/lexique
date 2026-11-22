@@ -40,7 +40,7 @@ for coffin materials and rock instrumentation are also retained for review.
 Definition and IPA line numbers below refer to complete raw wikitext in the
 [retained captures](source-captures.json). [Field review](field-review.json)
 contains language/POS/headword grammar, construction and spelling evidence
-for each sense, plus exact proposed texts. All review decisions remain pending.
+for each sense, plus exact proposed texts. The original author decisions are preserved under authored/. Current independent decisions are recorded in field-review.json and README-independent-review.md.
 
 | Row | Exact group | Revision | Definition line | IPA line | Selected use |
 | ---: | --- | ---: | ---: | ---: | --- |
