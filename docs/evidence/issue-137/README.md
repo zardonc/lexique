@@ -44,7 +44,8 @@ Independent accepted new groups/fields: **0 / 0**. All **200 fields** remain pen
 quality and selected-span rights review and missing from admitted coverage.
 Author content blockers: **none**. The current canonical base is `core-129-v2`
 with 2,435 admitted groups; this package makes no change to the core or learner data.
-The converter currently stops at frozen row 2450. Combined conversion, notices,
+Shared registration includes rows through 2950 at integration `7e13502`.
+This batch still requires independently accepted assembly. Combined conversion, notices,
 native lookup of every group, trusted save/reopen and persisted-data preservation
 remain coordinator-owned. Learner acceptance, other-platform execution,
 whole-machine offline checks and release completion remain pending.

@@ -101,5 +101,9 @@
       "check": "other-platform execution, whole-machine offline and formal release",
       "reason": "existing separate release gates"
     }
-  ]
+  ],
+  "shared_registration_integration_tip": "7e135023bff4ed3ad5c681be4200ec9b0c79398d",
+  "post_merge_author_tests": "passed: four tests; committed-author-tests.log",
+  "post_merge_docs_check": "passed: 425 documents / 3290 local links; committed-docs-check.log",
+  "post_merge_admission_check": "failed_expected_missing_admission: four author tests passed, one admission test failed; committed-admission-pending.log"
 }

@@ -37,8 +37,8 @@ modern poetry and the three supporting lexical definitions.
 
 ## Integration and pending evidence
 
-The current converter stops at row 2450 and cannot admit this batch yet.
-The coordinator owns extending shared registration, assembling exact accepted
+Shared registration is committed at integration `7e13502`, including rows through
+2950. The coordinator owns assembling exact independently accepted
 records/notices, reproducible conversion and combined coverage. All four fields
 remain missing from admission for each of these 50 groups. The default batch check
 keeps that failure visible; `--author-only` checks the reviewable author package.
