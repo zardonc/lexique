@@ -4,7 +4,7 @@ Fixed Wiktionnaire contribution/transcription and Lexique’s scoped French
 adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The [complete legal text](COPYING), fixed articles, complete linked histories,
-contributor records and modifications accompany the author proposals.
+contributor records and modifications accompany the independently reviewed proposals.
 
 Exact word/POS membership and unchanged frequency strings derive from Boris New
 and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -96,3 +96,25 @@ Distribute the adaptation layer under CC BY-SA 4.0 without additional restrictio
 The coordinator verifies actual combined material and notices before admission.
 All 200 fields await independent quality/rights review; `damoiseau/NOM` also has
 four unresolved ordinary-content fields. Project-owned code remains MIT.
+
+## Independent review and territorial limits
+
+The actual selected/supporting boundaries were independently reviewed. The
+Chinese `bavarder` explanation now preserves lack of discretion/restraint;
+`témoignage` now says witness rather than eyewitness. Exact author text,
+accepted text and modifications are retained in accepted-replacements.json.
+
+DAF8's conservative 2006-01-01 economic expiry is France-only; no US/worldwide
+public-domain status is inferred. Twenty-five DAF8-marked selected expressions
+clear individually as conventional wording/facts. Four developed textual
+boundaries remain unresolved: catastrophe, conscient, reproduire and affecter.
+See territorial-rights-review.json for literal spans and reasons; affecter's
+matching DAF8 second entry is extracted from the retained response JSON. Article notices
+and bibliographic references do not prove selected text was copied or creative.
+All 50 IPA fields clear separately. Only 45 groups have complete joint acceptance.
+
+Additional historical dictionary bibliography credits appear in sources.json
+and source-context.json (bibliographic_original_credits). They are distinct from
+the declared import column above. Full original-author/work identities are
+retained there without claiming each cited work supplied the selected sentence.
+Damoiseau retains four unresolved everyday-use fields; no exception is admitted.

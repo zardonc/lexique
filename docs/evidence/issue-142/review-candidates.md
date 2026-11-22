@@ -1,462 +1,460 @@
-# Exact #142 author proposals
-
-Fifty exact groups retain 200 proposals. Forty-nine groups have an author-proposed
-everyday use; the dated `damoiseau/NOM` proposal is research with four unresolved
-ordinary-content fields. All quality and rights decisions await separate review.
-[groups.json](groups.json) and [field-review.json](field-review.json) bind every
-field to fixed spans. No learner acceptance or admission is recorded here.
-
-| Row | Exact group | French definition | IPA | English | Chinese |
-| --- | --- | --- | --- | --- | --- |
-| 3051 | `catastrophe/NOM` | Événement soudain qui provoque de graves destructions, la ruine ou la mort. | /ka.ta.stʁɔf/ | A disaster: a sudden event causing serious destruction, ruin or death (feminine noun). | 灾难：突然发生、造成严重破坏、毁灭或死亡的事件（阴性名词）。 |
-| 3052 | `extraterrestre/NOM` | Être venu d’une autre planète, notamment dans la science-fiction. | /ɛk.stʁa.tɛ.ʁɛstʁ/ | An alien or extraterrestrial being from another planet, especially in science fiction (noun, masculine or feminine). | 外星人；来自其他星球的生物，尤用于科幻作品（名词，阴阳性同形）。 |
-| 3053 | `jungle/NOM` | Forêt tropicale ou équatoriale dense, peuplée d’animaux sauvages, au sens familier. | /ʒœ̃ɡl/ | A jungle: a dense tropical or equatorial forest with wild animals (feminine noun; informal broad use). | 丛林：野生动物栖息的茂密热带或赤道森林（阴性名词；日常较宽泛的用法）。 |
-| 3054 | `cachet/NOM` | Somme versée à un artiste pour une représentation ou un concert. | /ka.ʃɛ/ | A fee paid to a performer for a performance or concert (masculine noun). | 演出酬金；支付给艺人参加一场演出或音乐会的报酬（阳性名词）。 |
-| 3055 | `bienvenu/NOM` | Personne accueillie avec plaisir ; nom masculin, notamment dans « être le bienvenu ». | /bjɛ̃.və.ny/ | A welcome person, someone received with pleasure; masculine noun, especially être le bienvenu (to be welcome). Feminine: bienvenue. | 受欢迎的人；受到热情接待的人（阳性名词，尤用于 être le bienvenu“受到欢迎”；阴性形式为 bienvenue）。 |
-| 3056 | `chaussette/NOM` | Vêtement qui couvre le pied et une partie de la jambe, porté dans une chaussure. | /ʃo.sɛt/ | A sock, covering the foot and part of the lower leg and worn inside a shoe (feminine noun). | 袜子；覆盖脚和部分小腿、穿在鞋内的衣物（阴性名词）。 |
-| 3057 | `hommage/NOM` | Marque de respect ou de déférence envers quelqu’un. | /ɔ.maʒ/ | A tribute or act showing respect or deference to someone (masculine noun; silent h). | 致敬；向某人表示尊敬或敬意的举动（阳性名词；h 为哑音）。 |
-| 3058 | `merder/VER` | Faire quelque chose mal, échouer ; emploi vulgaire. | /mɛʁ.de/ | To screw up or make a mess of something; vulgar verb, used intransitively or transitively. | 搞砸；做得很糟或失败（粗俗用语；可作不及物或及物动词）。 |
-| 3059 | `nucléaire/ADJ` | Qui concerne l’énergie fournie par les noyaux des atomes. | /ny.kle.ɛʁ/ | Nuclear: relating to energy obtained from atomic nuclei (adjective, same masculine and feminine form). | 核能的；与原子核释放的能量有关的（形容词，阴阳性同形）。 |
-| 3060 | `bavarder/VER` | Parler beaucoup, sans retenue ni discrétion. | /ba.vaʁ.de/ | To chatter or talk freely and at length, without restraint or discretion (intransitive verb). | 闲聊；毫无拘束或不加注意地说很多话（不及物动词）。 |
-| 3061 | `serviteur/NOM` | Personne qui se dévoue avec fidélité au service de quelqu’un ou d’une cause. | /sɛʁ.vi.tœʁ/ | A devoted servant or supporter of someone or a cause (masculine noun; formal personal use). | 忠实服务于某人或某项事业的人；尽心效力者（阳性名词；较正式的人物用法）。 |
-| 3062 | `envisager/VER` | Considérer une chose en pensée, l’examiner. | /ɑ̃.vi.za.ʒe/ | To consider or contemplate something, examining it in one’s mind (transitive verb). | 考虑；在心中审视某件事（及物动词）。 |
-| 3063 | `lent/ADJ` | Qui ne se déplace ou n’agit pas rapidement ; féminin : lente. | /lɑ̃/ | Slow, moving or acting without speed or promptness (masculine adjective; feminine lente). | 缓慢的；动作或行动不快的（阳性形容词；阴性为 lente）。 |
-| 3064 | `pipe/NOM` | Objet utilisé pour fumer du tabac ou une autre substance fumable. | /pip/ | A smoking pipe, used to smoke tobacco or another smokable substance (feminine noun). | 烟斗；用来吸食烟草或其他可吸食物质的器具（阴性名词）。 |
-| 3065 | `découverte/NOM` | Chose que l’on a découverte ou trouvée et qui était inconnue. | /de.ku.vɛʁt/ | A discovery or find: something previously unknown that has been found (feminine noun). | 发现；新找到或发现的、此前未知的事物（阴性名词）。 |
-| 3066 | `flotte/NOM` | Ensemble de navires. | /flɔt/ | A fleet: a group of ships (feminine noun). | 船队；一组船只（阴性名词）。 |
-| 3067 | `timide/ADJ` | Qui est craintif et manque d’assurance ou de hardiesse. | /ti.mid/ | Shy or timid, lacking confidence or boldness (adjective, same masculine and feminine form). | 害羞的；胆怯、缺乏自信或勇气的（形容词，阴阳性同形）。 |
-| 3068 | `ténèbres/NOM` | Obscurité due à l’absence de lumière ; nom féminin pluriel. | /te.nɛbʁ/ | Darkness, the absence of light (feminine plural noun; often literary or emphatic). | 黑暗；没有光线的状态（阴性复数名词；常带文学或强调色彩）。 |
-| 3069 | `bâtard/NOM` | Pain allongé à mie blanche, plus gros qu’une baguette. | /ba.taʁ/ | A bâtard loaf: an elongated white-bread loaf thicker than a baguette (masculine noun). | 较粗的长形白面包；比法棍更粗、内瓤为白色的面包（阳性名词）。 |
-| 3070 | `vitre/NOM` | Plaque de verre placée dans une ouverture, comme une porte ou une fenêtre. | /vitʁ/ | A pane of glass in an opening such as a door or window (feminine noun). | 玻璃窗片；装在门、窗等开口处的一片玻璃（阴性名词）。 |
-| 3071 | `beurre/NOM` | Matière grasse obtenue en battant la crème du lait de vache. | /bœʁ/ | Butter, the fat obtained by churning cow’s milk cream (masculine noun). | 黄油；搅打牛奶中的奶油而制得的脂肪食品（阳性名词）。 |
-| 3072 | `disparition/NOM` | Fait de disparaître, de ne plus être visible ou présent. | /dis.pa.ʁi.sjɔ̃/ | A disappearance: the act or result of no longer being visible or present (feminine noun). | 消失；不再可见或不再出现的过程或结果（阴性名词）。 |
-| 3073 | `troubler/VER` | Interrompre ou déranger quelqu’un d’une manière désagréable. | /tʁu.ble/ | To disturb or interrupt someone unpleasantly (transitive verb). | 打扰；令人不快地干扰或打断某人（及物动词）。 |
-| 3074 | `conscient/ADJ` | Qui sait ce qu’il fait et en comprend la portée ; féminin : consciente. | /kɔ̃.sjɑ̃/ | Aware of what one is doing and its implications (masculine adjective; feminine consciente). | 清楚自己在做什么并了解其意义的；有意识的（阳性形容词；阴性为 consciente）。 |
-| 3075 | `médaille/NOM` | Pièce de métal décernée à un sportif pour une réussite en compétition. | /me.daj/ | A medal awarded to an athlete for success in a competition (feminine noun). | 奖牌；因在体育竞赛中取得成绩而授予运动员的金属奖章（阴性名词）。 |
-| 3076 | `reproduire/VER` | Faire des copies d’un tableau, d’une statue ou d’une œuvre semblable. | /ʁə.pʁɔ.dɥiʁ/ | To reproduce or make copies of a painting, statue or similar work (transitive verb). | 复制；制作绘画、雕塑或类似作品的副本（及物动词）。 |
-| 3077 | `toast/NOM` | Proposition de boire à la santé de quelqu’un ou à la réalisation d’un souhait. | /tost/ | A toast: an invitation to drink to someone’s health or to the fulfilment of a wish (masculine noun). | 祝酒；提议为某人的健康或某个愿望的实现而举杯（阳性名词）。 |
-| 3078 | `tonne/NOM` | Unité de masse égale à mille kilogrammes ; symbole : t. | /tɔn/ | A metric tonne, a unit of mass equal to 1,000 kilograms; symbol t (feminine noun). | 公吨；等于 1,000 千克的质量单位，符号为 t（阴性名词）。 |
-| 3079 | `réchauffer/VER` | Rendre chaud quelque chose qui est froid ou qui a refroidi. | /ʁe.ʃo.fe/ | To warm up or reheat something that is cold or has cooled (transitive verb). | 加热；把冷的或已经凉下来的东西弄热（及物动词）。 |
-| 3080 | `panique/NOM` | Peur très forte et soudaine, souvent irraisonnée. | /pa.nik/ | Panic: sudden intense fear, often irrational (feminine noun). | 恐慌；突然而强烈、往往缺乏理性的恐惧（阴性名词）。 |
-| 3081 | `sympathique/ADJ` | Qui inspire de la sympathie, que l’on trouve agréable. | /sɛ̃.pa.tik/ | Nice, friendly or likeable; inspiring liking (adjective, same masculine and feminine form). | 亲切的；讨人喜欢、让人产生好感的（形容词，阴阳性同形）。 |
-| 3082 | `flipper/VER` | Avoir très peur, angoisser ; emploi populaire. | /fli.pe/ | To freak out, become frightened or anxious (informal intransitive verb). | 害怕得发慌；感到焦虑（口语不及物动词）。 |
-| 3083 | `pouce/NOM` | Doigt court et épais de la main, opposable aux autres doigts. | /pus/ | The thumb, the short thick finger of the hand that can oppose the other fingers (masculine noun). | 拇指；手上较短较粗、能与其他手指相对的手指（阳性名词）。 |
-| 3084 | `adjoint/NOM` | Personne chargée d’assister une autre personne dans certaines fonctions ; féminin : adjointe. | /ad.ʒwɛ̃/ | A deputy or assistant appointed to help another person in certain duties (masculine noun; feminine adjointe). | 副职；受委派协助他人履行某些职务的人（阳性名词；阴性为 adjointe）。 |
-| 3085 | `procédure/NOM` | Méthode ou suite de démarches à suivre pour obtenir un résultat. | /pʁɔ.se.dyʁ/ | A procedure: a method or sequence of steps to follow to achieve a result (feminine noun). | 程序；为取得某个结果而遵循的方法或步骤（阴性名词）。 |
-| 3086 | `tricher/VER` | Tromper au jeu en utilisant des manœuvres frauduleuses. | /tʁi.ʃe/ | To cheat at a game through dishonest manoeuvres (intransitive verb). | 作弊；在游戏或比赛中采取欺骗手段（不及物动词）。 |
-| 3087 | `confondre/VER` | Prendre une personne ou une chose pour une autre, sans faire la distinction. | /kɔ̃.fɔ̃dʁ/ | To confuse or mistake one person or thing for another (transitive verb). | 混淆；把一个人或一件事物误认为另一个（及物动词）。 |
-| 3088 | `remède/NOM` | Substance ou médicament utilisé pour soigner un mal ou une maladie. | /ʁə.mɛd/ | A remedy or medicine used to treat an ailment or illness (masculine noun). | 药物；用来治疗不适或疾病的药剂（阳性名词）。 |
-| 3089 | `agneau/NOM` | Petit du bélier et de la brebis ; pluriel : agneaux. | /a.ɲo/ | A lamb, a young sheep (masculine noun; plural agneaux; the female is an agnelle). | 羔羊；绵羊的幼崽（阳性名词，复数为 agneaux；专指雌性时用 agnelle）。 |
-| 3090 | `marrer/VER` | Rire, s’amuser en riant ; emploi familier, uniquement dans « se marrer ». | /ma.ʁe/ | To laugh or have a laugh; informal, only in the pronominal construction se marrer. | 笑；开怀大笑（口语，仅用于代词式 se marrer）。 |
-| 3091 | `témoignage/NOM` | Récit oral ou écrit d’un ou de plusieurs témoins au sujet d’un fait. | /te.mwa.ɲaʒ/ | Testimony or a witness account: an oral or written report of a fact by one or more witnesses (masculine noun). | 证言；一名或多名目击者对事实所作的口头或书面陈述（阳性名词）。 |
-| 3092 | `pose/NOM` | Action de placer ou d’installer quelque chose à un endroit. | /poz/ | Placement or installation: the act of putting something in position (feminine noun). | 安放；安装，把某物放到指定位置的动作（阴性名词）。 |
-| 3093 | `affecter/VER` | Causer de la peine ou du chagrin à quelqu’un, le toucher douloureusement. | /a.fɛk.te/ | To distress or upset someone emotionally, causing sorrow (transitive verb). | 使难过；使某人在情感上受到伤害或感到悲伤（及物动词）。 |
-| 3094 | `par-dessus/PRE` | Au-dessus de, ou en passant au-delà d’un obstacle ; préposition suivie d’un complément. | /paʁ də.sy/ | Over or across the top of something; preposition followed by a complement, as in par-dessus un mur. | 在……上方；从……上面越过（介词，后接补语，如 par-dessus un mur“越过一堵墙”）。 |
-| 3095 | `ô/ONO` | Interjection qui exprime un sentiment vif, comme la joie, l’admiration ou la douleur ; emploi emphatique ou littéraire. | /o/ | Oh! An emphatic or literary interjection expressing a strong feeling, such as joy, admiration or distress; often before a noun phrase. | 啊！表达喜悦、赞叹或痛苦等强烈感情的感叹词；带强调或文学色彩，常放在名词短语之前。 |
-| 3096 | `confesser/VER` | Reconnaître et avouer une faute ou un crime. | /kɔ̃.fe.se/ | To confess or admit a fault or crime (transitive verb). | 承认；坦白自己的过错或罪行（及物动词）。 |
-| 3097 | `nain/NOM` | Créature des récits fantastiques ou mythologiques, semblable à un homme de très petite taille. | /nɛ̃/ | A dwarf in fantasy or mythology, a human-like creature of very small stature (masculine noun). | 奇幻或神话中的矮人；外形像人但身材很小的生物（阳性名词）。 |
-| 3098 | `damoiseau/NOM` | Homme qui fait le beau ou le galant auprès des femmes ; emploi ironique et vieilli. | /da.mwa.zo/ | A man who plays the handsome gallant with women; an ironic, dated masculine noun. | 在女性面前摆出风流倜傥姿态的男子（阳性名词；讽刺且陈旧的用法）。 |
-| 3099 | `carton/NOM` | Boîte ou emballage fait le plus souvent de carton. | /kaʁ.tɔ̃/ | A cardboard box or carton, usually made of cardboard (masculine noun). | 纸箱；通常由硬纸板制成的盒子或包装（阳性名词）。 |
-| 3100 | `humilier/VER` | Abaisser quelqu’un en le mortifiant ou en lui faisant honte. | /y.mi.lje/ | To humiliate or demean someone, making them feel ashamed or mortified (transitive verb). | 羞辱；贬低某人，使其感到羞耻或难堪（及物动词）。 |
+# Exact #142 reviewed proposals
 
-## Selected and excluded uses
+All 50 frozen groups and 200 proposals remain. Quality passes 196 fields;
+rights passes 188; joint acceptance passes 184 (182 unchanged, two replacements).
+Only 45 groups have all four fields jointly accepted. Text shown for unresolved
+fields is retained research/proposal text, not admitted content.
 
-### 3051 — catastrophe/NOM
+[Field decisions](field-review.json) retain every exact original and accepted
+text, source span and reason. [Author snapshot](authored/snapshot.json) preserves
+the original package. No annotation or specialist exception is authorized.
 
-Selected: Feminine noun; a sudden destructive disaster.
+## 3051 catastrophe / NOM
 
-Excluded: Tragic-play ending; verb forms; additional figurative uses.
+- **french_definition** (quality accepted; rights unresolved): Événement soudain qui provoque de graves destructions, la ruine ou la mort.
+- **ipa** (quality accepted; rights cleared): /ka.ta.stʁɔf/
+- **english** (quality accepted; rights unresolved): A disaster: a sudden event causing serious destruction, ruin or death (feminine noun).
+- **chinese** (quality accepted; rights unresolved): 灾难：突然发生、造成严重破坏、毁灭或死亡的事件（阴性名词）。
 
-Source: [catastrophe, revision 39826923](https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923); lexical line 10, IPA line 9.
+Use review: An ordinary disaster noun; the feminine nominal frame, not catastropher flexion, supplies this use.
 
-### 3052 — extraterrestre/NOM
+## 3052 extraterrestre / NOM
 
-Selected: Noun, both genders; an extraterrestrial being in ordinary discussion of science fiction.
+- **french_definition** (quality accepted; rights cleared): Être venu d’une autre planète, notamment dans la science-fiction.
+- **ipa** (quality accepted; rights cleared): /ɛk.stʁa.tɛ.ʁɛstʁ/
+- **english** (quality accepted; rights cleared): An alien or extraterrestrial being from another planet, especially in science fiction (noun, masculine or feminine).
+- **chinese** (quality accepted; rights cleared): 外星人；来自其他星球的生物，尤用于科幻作品（名词，阴阳性同形）。
 
-Excluded: Adjective; figurative exceptionally gifted person; no claim that aliens exist.
+Use review: Science-fiction conversation is ordinary use of this both-gender noun; no scientific specialist exception is needed.
 
-Source: [extraterrestre, revision 39619259](https://fr.wiktionary.org/w/index.php?title=extraterrestre&oldid=39619259); lexical line 46, IPA line 45.
+## 3053 jungle / NOM
 
-### 3053 — jungle/NOM
+- **french_definition** (quality accepted; rights cleared): Forêt tropicale ou équatoriale dense, peuplée d’animaux sauvages, au sens familier.
+- **ipa** (quality accepted; rights cleared): /ʒœ̃ɡl/
+- **english** (quality accepted; rights cleared): A jungle: a dense tropical or equatorial forest with wild animals (feminine noun; informal broad use).
+- **chinese** (quality accepted; rights cleared): 丛林：野生动物栖息的茂密热带或赤道森林（阴性名词；日常较宽泛的用法）。
 
-Selected: Feminine noun; informal broad forest sense. The source recommends more precise forest names where appropriate; current /ʒœ̃ɡl/ selected.
+Use review: Select the familiar forest extension; source usage advice recommends precise forest names, and the obsolete and music pronunciations remain excluded.
 
-Excluded: Obsolete /ʒɔ̃ɡl/; music genre and its /dʒəŋ.ɡəl/ pronunciation; migrant camp; figurative hostile milieu.
+## 3054 cachet / NOM
 
-Source: [jungle, revision 39760638](https://fr.wiktionary.org/w/index.php?title=jungle&oldid=39760638); lexical line 14, IPA line 8.
+- **french_definition** (quality accepted; rights cleared): Somme versée à un artiste pour une représentation ou un concert.
+- **ipa** (quality accepted; rights cleared): /ka.ʃɛ/
+- **english** (quality accepted; rights cleared): A fee paid to a performer for a performance or concert (masculine noun).
+- **chinese** (quality accepted; rights cleared): 演出酬金；支付给艺人参加一场演出或音乐会的报酬（阳性名词）。
 
-### 3054 — cachet/NOM
+Use review: Artist fees are everyday occupational discussion; the ordinary noun frame supports the fee without requiring additional seal or medicine senses.
 
-Selected: Masculine noun; a performer’s fee per performance.
+## 3055 bienvenu / NOM
 
-Excluded: Seal, stamped mark, postage mark; distinctive character; medicinal capsule.
+- **french_definition** (quality accepted; rights cleared): Personne accueillie avec plaisir ; nom masculin, notamment dans « être le bienvenu ».
+- **ipa** (quality accepted; rights cleared): /bjɛ̃.və.ny/
+- **english** (quality accepted; rights cleared): A welcome person, someone received with pleasure; masculine noun, especially être le bienvenu (to be welcome). Feminine: bienvenue.
+- **chinese** (quality accepted; rights cleared): 受欢迎的人；受到热情接待的人（阳性名词，尤用于 être le bienvenu“受到欢迎”；阴性形式为 bienvenue）。
 
-Source: [cachet, revision 39863319](https://fr.wiktionary.org/w/index.php?title=cachet&oldid=39863319); lexical line 28, IPA line 12.
+Use review: The fixed nominal header and noun definition support le bienvenu/les bienvenus; bienvenue is a gender counterpart, not a replacement frozen headword.
 
-### 3055 — bienvenu/NOM
+## 3056 chaussette / NOM
 
-Selected: Masculine noun for a welcome person; le bienvenu / les bienvenus, not the distinct adjective or the greeting bienvenue.
+- **french_definition** (quality accepted; rights cleared): Vêtement qui couvre le pied et une partie de la jambe, porté dans une chaussure.
+- **ipa** (quality accepted; rights cleared): /ʃo.sɛt/
+- **english** (quality accepted; rights cleared): A sock, covering the foot and part of the lower leg and worn inside a shoe (feminine noun).
+- **chinese** (quality accepted; rights cleared): 袜子；覆盖脚和部分小腿、穿在鞋内的衣物（阴性名词）。
 
-Excluded: Timely adjective; standalone greeting; substitution of feminine bienvenue for the frozen masculine headword.
+Use review: Ordinary sock use is in the feminine clothing frame; animal markings and technical sleeves are separate.
 
-Source: [bienvenu, revision 39522109](https://fr.wiktionary.org/w/index.php?title=bienvenu&oldid=39522109); lexical line 49, IPA line 48.
+## 3057 hommage / NOM
 
-### 3056 — chaussette/NOM
+- **french_definition** (quality accepted; rights cleared): Marque de respect ou de déférence envers quelqu’un.
+- **ipa** (quality accepted; rights cleared): /ɔ.maʒ/
+- **english** (quality accepted; rights cleared): A tribute or act showing respect or deference to someone (masculine noun; silent h).
+- **chinese** (quality accepted; rights cleared): 致敬；向某人表示尊敬或敬意的举动（阳性名词；h 为哑音）。
 
-Selected: Feminine noun; ordinary sock.
+Use review: The figurative respect sense is current ordinary homage; h muet supports l’hommage, and no feudal sense is admitted.
 
-Excluded: Animal coat marking; obsolete footless stocking or coffee filter; reactor tube; tyre snow sock.
+## 3058 merder / VER
 
-Source: [chaussette, revision 39977502](https://fr.wiktionary.org/w/index.php?title=chaussette&oldid=39977502); lexical line 11, IPA line 10.
+- **french_definition** (quality accepted; rights cleared): Faire quelque chose mal, échouer ; emploi vulgaire.
+- **ipa** (quality accepted; rights cleared): /mɛʁ.de/
+- **english** (quality accepted; rights cleared): To screw up or make a mess of something; vulgar verb, used intransitively or transitively.
+- **chinese** (quality accepted; rights cleared): 搞砸；做得很糟或失败（粗俗用语；可作不及物或及物动词）。
 
-### 3057 — hommage/NOM
+Use review: Vulgar everyday speech is still an ordinary use; the header permits transitive and intransitive constructions.
 
-Selected: Masculine noun; respectful tribute, silent h permits elision in l’hommage.
+## 3059 nucléaire / ADJ
 
-Excluded: Feudal duty; dedicated gift as a separate sense.
+- **french_definition** (quality accepted; rights cleared): Qui concerne l’énergie fournie par les noyaux des atomes.
+- **ipa** (quality accepted; rights cleared): /ny.kle.ɛʁ/
+- **english** (quality accepted; rights cleared): Nuclear: relating to energy obtained from atomic nuclei (adjective, same masculine and feminine form).
+- **chinese** (quality accepted; rights cleared): 核能的；与原子核释放的能量有关的（形容词，阴阳性同形）。
 
-Source: [hommage, revision 39849210](https://fr.wiktionary.org/w/index.php?title=hommage&oldid=39849210); lexical line 16, IPA line 11.
+Use review: Énergie nucléaire belongs to ordinary energy discussion; the noun le nucléaire and cell biology are excluded.
 
-### 3058 — merder/VER
+## 3060 bavarder / VER
 
-Selected: Vulgar lexical verb; failing or doing something badly. Retain source intransitive/transitive possibilities.
+- **french_definition** (quality accepted; rights cleared): Parler beaucoup, sans retenue ni discrétion.
+- **ipa** (quality accepted; rights cleared): /ba.vaʁ.de/
+- **english** (quality accepted; rights cleared): To chatter or talk freely and at length, without restraint or discretion (intransitive verb).
+- **chinese** (quality accepted; rights cleared): 喋喋不休地聊天；说话不加节制或不顾分寸（不及物动词）。
 
-Excluded: Neutral-register paraphrase as an unrestricted learner equivalent.
+Use review: Intransitive unrestrained chatter is selected; revealing secrets is a separately excluded sense.
 
-Source: [merder, revision 38495924](https://fr.wiktionary.org/w/index.php?title=merder&oldid=38495924); lexical line 7, IPA line 6.
+## 3061 serviteur / NOM
 
-### 3059 — nucléaire/ADJ
+- **french_definition** (quality accepted; rights cleared): Personne qui se dévoue avec fidélité au service de quelqu’un ou d’une cause.
+- **ipa** (quality accepted; rights cleared): /sɛʁ.vi.tœʁ/
+- **english** (quality accepted; rights cleared): A devoted servant or supporter of someone or a cause (masculine noun; formal personal use).
+- **chinese** (quality accepted; rights cleared): 忠实服务于某人或某项事业的人；尽心效力者（阳性名词；较正式的人物用法）。
 
-Selected: Adjective; ordinary nuclear-energy use, as in énergie nucléaire.
+Use review: A present-day devoted-servant use remains in formal discourse, corroborated by current Robert’s literary institutional use and the Europarl patents example. Domestic employment remains dated.
 
-Excluded: Cell nucleus; central/essential; the noun le nucléaire.
+## 3062 envisager / VER
 
-Source: [nucléaire, revision 39504316](https://fr.wiktionary.org/w/index.php?title=nucl%C3%A9aire&oldid=39504316); lexical line 10, IPA line 7.
+- **french_definition** (quality accepted; rights cleared): Considérer une chose en pensée, l’examiner.
+- **ipa** (quality accepted; rights cleared): /ɑ̃.vi.za.ʒe/
+- **english** (quality accepted; rights cleared): To consider or contemplate something, examining it in one’s mind (transitive verb).
+- **chinese** (quality accepted; rights cleared): 考虑；在心中审视某件事（及物动词）。
 
-### 3060 — bavarder/VER
+Use review: The mental figurative verb is an ordinary selected use; the source explicitly marks only the face-looking sense vieilli.
 
-Selected: Intransitive verb; expansive chatter, retaining the source’s lack-of-restraint nuance.
+## 3063 lent / ADJ
 
-Excluded: Separate disclosure-of-secrets sense; transitive direct-object construction.
+- **french_definition** (quality accepted; rights cleared): Qui ne se déplace ou n’agit pas rapidement ; féminin : lente.
+- **ipa** (quality accepted; rights cleared): /lɑ̃/
+- **english** (quality accepted; rights cleared): Slow, moving or acting without speed or promptness (masculine adjective; feminine lente).
+- **chinese** (quality accepted; rights cleared): 缓慢的；动作或行动不快的（阳性形容词；阴性为 lente）。
 
-Source: [bavarder, revision 40047743](https://fr.wiktionary.org/w/index.php?title=bavarder&oldid=40047743); lexical line 8, IPA line 7.
+Use review: Masculine lent is the exact frozen adjective; lente is its documented inflection, and long duration is unselected.
 
-### 3061 — serviteur/NOM
+## 3064 pipe / NOM
 
-Selected: Masculine noun; devoted person, often serviteur de. Formal personal use distinguished from dated domestic employment.
+- **french_definition** (quality accepted; rights cleared): Objet utilisé pour fumer du tabac ou une autre substance fumable.
+- **ipa** (quality accepted; rights cleared): /pip/
+- **english** (quality accepted; rights cleared): A smoking pipe, used to smoke tobacco or another smokable substance (feminine noun).
+- **chinese** (quality accepted; rights cleared): 烟斗；用来吸食烟草或其他可吸食物质的器具（阴性名词）。
 
-Excluded: Dated domestic servant; archaic letter closing; ironic refusal; serving stand or fireplace tool holder; region-specific waiter.
+Use review: Ordinary smoking-implement use uses the feminine /pip/ frame; computing, pasta and sexual meanings have separate boundaries.
 
-Source: [serviteur, revision 39704200](https://fr.wiktionary.org/w/index.php?title=serviteur&oldid=39704200); lexical line 20, IPA line 8.
+## 3065 découverte / NOM
 
-### 3062 — envisager/VER
+- **french_definition** (quality accepted; rights cleared): Chose que l’on a découverte ou trouvée et qui était inconnue.
+- **ipa** (quality accepted; rights cleared): /de.ku.vɛʁt/
+- **english** (quality accepted; rights cleared): A discovery or find: something previously unknown that has been found (feminine noun).
+- **chinese** (quality accepted; rights cleared): 发现；新找到或发现的、此前未知的事物（阴性名词）。
 
-Selected: Transitive lexical verb; mental consideration.
+Use review: The result noun is ordinary discovery use; the separate feminine participle/adjective frames do not supply the noun.
 
-Excluded: Dated looking at someone’s face; unrestricted promise to carry out a contemplated plan.
+## 3066 flotte / NOM
 
-Source: [envisager, revision 39864426](https://fr.wiktionary.org/w/index.php?title=envisager&oldid=39864426); lexical line 19, IPA line 7.
+- **french_definition** (quality accepted; rights cleared): Ensemble de navires.
+- **ipa** (quality accepted; rights cleared): /flɔt/
+- **english** (quality accepted; rights cleared): A fleet: a group of ships (feminine noun).
+- **chinese** (quality accepted; rights cleared): 船队；一组船只（阴性名词）。
 
-### 3063 — lent/ADJ
+Use review: Ship fleet is a familiar noun in ordinary maritime/news discussion; adjacent military and merchant specifications need no additional selected sense.
 
-Selected: Masculine adjective for slow movement/action; feminine lente has its separate pronounced final consonant.
+## 3067 timide / ADJ
 
-Excluded: Adverbial substitution; long-duration sense as a separate selection.
+- **french_definition** (quality accepted; rights cleared): Qui est craintif et manque d’assurance ou de hardiesse.
+- **ipa** (quality accepted; rights cleared): /ti.mid/
+- **english** (quality accepted; rights cleared): Shy or timid, lacking confidence or boldness (adjective, same masculine and feminine form).
+- **chinese** (quality accepted; rights cleared): 害羞的；胆怯、缺乏自信或勇气的（形容词，阴阳性同形）。
 
-Source: [lent, revision 39902930](https://fr.wiktionary.org/w/index.php?title=lent&oldid=39902930); lexical line 9, IPA line 8.
+Use review: The adjective of personal timidity is everyday use, distinct from the timid-person noun and moth noun.
 
-### 3064 — pipe/NOM
+## 3068 ténèbres / NOM
 
-Selected: Feminine noun; smoking implement with /pip/.
+- **french_definition** (quality accepted; rights cleared): Obscurité due à l’absence de lumière ; nom féminin pluriel.
+- **ipa** (quality accepted; rights cleared): /te.nɛbʁ/
+- **english** (quality accepted; rights cleared): Darkness, the absence of light (feminine plural noun; often literary or emphatic).
+- **chinese** (quality accepted; rights cleared): 黑暗；没有光线的状态（阴性复数名词；常带文学或强调色彩）。
 
-Excluded: Vulgar sexual sense; cask; obsolete instrument; masculine computing pipe /pajp/; pasta /pi.pe/; verb forms.
+Use review: Literal darkness is a current emphatic/literary use, not the obsolete religious service; frozen ténèbres remains plural.
 
-Source: [pipe, revision 39797880](https://fr.wiktionary.org/w/index.php?title=pipe&oldid=39797880); lexical line 17, IPA line 12.
+## 3069 bâtard / NOM
 
-### 3065 — découverte/NOM
+- **french_definition** (quality accepted; rights cleared): Pain allongé à mie blanche, plus gros qu’une baguette.
+- **ipa** (quality accepted; rights cleared): /ba.taʁ/
+- **english** (quality accepted; rights cleared): A bâtard loaf: an elongated white-bread loaf thicker than a baguette (masculine noun).
+- **chinese** (quality accepted; rights cleared): 较粗的长形白面包；比法棍更粗、内瓤为白色的面包（阳性名词）。
 
-Selected: Feminine noun; the thing discovered rather than the act.
+Use review: The ordinary bakery loaf is an eligible food sense in the second noun frame; no family-status or specialist weapon sense is substituted.
 
-Excluded: Inventing; mining overburden; adjective or past-participle forms.
+## 3070 vitre / NOM
 
-Source: [découverte, revision 39774510](https://fr.wiktionary.org/w/index.php?title=d%C3%A9couverte&oldid=39774510); lexical line 31, IPA line 8.
+- **french_definition** (quality accepted; rights cleared): Plaque de verre placée dans une ouverture, comme une porte ou une fenêtre.
+- **ipa** (quality accepted; rights cleared): /vitʁ/
+- **english** (quality accepted; rights cleared): A pane of glass in an opening such as a door or window (feminine noun).
+- **chinese** (quality accepted; rights cleared): 玻璃窗片；装在门、窗等开口处的一片玻璃（阴性名词）。
 
-### 3066 — flotte/NOM
+Use review: The feminine pane noun is ordinary use; verb flexions and Canadian whole-window/material senses remain separate.
 
-Selected: Feminine noun; ship fleet.
+## 3071 beurre / NOM
 
-Excluded: Aircraft/vehicle fleet; slang water or rain; obsolete abundance; silk skein; verb forms.
+- **french_definition** (quality accepted; rights cleared): Matière grasse obtenue en battant la crème du lait de vache.
+- **ipa** (quality accepted; rights cleared): /bœʁ/
+- **english** (quality accepted; rights cleared): Butter, the fat obtained by churning cow’s milk cream (masculine noun).
+- **chinese** (quality accepted; rights cleared): 黄油；搅打牛奶中的奶油而制得的脂肪食品（阳性名词）。
 
-Source: [flotte, revision 39926685](https://fr.wiktionary.org/w/index.php?title=flotte&oldid=39926685); lexical line 14, IPA line 13.
+Use review: The masculine dairy-food noun is everyday use; colour, money and chemical senses are not selected.
 
-### 3067 — timide/ADJ
+## 3072 disparition / NOM
 
-Selected: Adjective; personal shyness or timidity.
+- **french_definition** (quality accepted; rights cleared): Fait de disparaître, de ne plus être visible ou présent.
+- **ipa** (quality accepted; rights cleared): /dis.pa.ʁi.sjɔ̃/
+- **english** (quality accepted; rights cleared): A disappearance: the act or result of no longer being visible or present (feminine noun).
+- **chinese** (quality accepted; rights cleared): 消失；不再可见或不再出现的过程或结果（阴性名词）。
 
-Excluded: Shy person as noun; moth; weak artistic work; excessive caution as a separate sense.
+Use review: Ordinary disappearance is selected; no inferred cause or death euphemism is admitted.
 
-Source: [timide, revision 39914136](https://fr.wiktionary.org/w/index.php?title=timide&oldid=39914136); lexical line 8, IPA line 7.
+## 3073 troubler / VER
 
-### 3068 — ténèbres/NOM
+- **french_definition** (quality accepted; rights cleared): Interrompre ou déranger quelqu’un d’une manière désagréable.
+- **ipa** (quality accepted; rights cleared): /tʁu.ble/
+- **english** (quality accepted; rights cleared): To disturb or interrupt someone unpleasantly (transitive verb).
+- **chinese** (quality accepted; rights cleared): 打扰；令人不快地干扰或打断某人（及物动词）。
 
-Selected: Feminine plural noun for darkness; frozen plural headword retained.
+Use review: Direct-object disturbance of a person is ordinary use; pronominal loss of composure and legal possession are excluded.
 
-Excluded: Singular spelling substitution; hell or Holy Week service; incomprehensibility; verb flexions.
+## 3074 conscient / ADJ
 
-Source: [ténèbres, revision 39955578](https://fr.wiktionary.org/w/index.php?title=t%C3%A9n%C3%A8bres&oldid=39955578); lexical line 10, IPA line 9.
+- **french_definition** (quality accepted; rights unresolved): Qui sait ce qu’il fait et en comprend la portée ; féminin : consciente.
+- **ipa** (quality accepted; rights cleared): /kɔ̃.sjɑ̃/
+- **english** (quality accepted; rights unresolved): Aware of what one is doing and its implications (masculine adjective; feminine consciente).
+- **chinese** (quality accepted; rights unresolved): 清楚自己在做什么并了解其意义的；有意识的（阳性形容词；阴性为 consciente）。
 
-### 3069 — bâtard/NOM
+Use review: The adjective is awareness of one’s actions; feminine consciente and the supported de construction remain, without importing an awake/unconscious medical contrast.
 
-Selected: Masculine bakery noun; current recorded /ba.taʁ/ variant selected for the loaf.
+## 3075 médaille / NOM
 
-Excluded: Dated birth-status noun; insult; adjective; knife; coarse sugar; interjection.
+- **french_definition** (quality accepted; rights cleared): Pièce de métal décernée à un sportif pour une réussite en compétition.
+- **ipa** (quality accepted; rights cleared): /me.daj/
+- **english** (quality accepted; rights cleared): A medal awarded to an athlete for success in a competition (feminine noun).
+- **chinese** (quality accepted; rights cleared): 奖牌；因在体育竞赛中取得成绩而授予运动员的金属奖章（阴性名词）。
 
-Source: [bâtard, revision 39934517](https://fr.wiktionary.org/w/index.php?title=b%C3%A2tard&oldid=39934517); lexical line 233, IPA line 232.
+Use review: Sporting medals are ordinary public discussion; the adaptation does not assert that a gold medal is pure gold.
 
-### 3070 — vitre/NOM
+## 3076 reproduire / VER
 
-Selected: Feminine noun; glass pane.
+- **french_definition** (quality accepted; rights unresolved): Faire des copies d’un tableau, d’une statue ou d’une œuvre semblable.
+- **ipa** (quality accepted; rights cleared): /ʁə.pʁɔ.dɥiʁ/
+- **english** (quality accepted; rights unresolved): To reproduce or make copies of a painting, statue or similar work (transitive verb).
+- **chinese** (quality accepted; rights unresolved): 复制；制作绘画、雕塑或类似作品的副本（及物动词）。
 
-Excluded: Canadian material-glass or whole-window use; obsolete stained glass; verb forms.
+Use review: Art-copying is ordinary transitive reproduire; the pronominal biological use and newspaper republication are separate.
 
-Source: [vitre, revision 39796046](https://fr.wiktionary.org/w/index.php?title=vitre&oldid=39796046); lexical line 11, IPA line 10.
+## 3077 toast / NOM
 
-### 3071 — beurre/NOM
+- **french_definition** (quality accepted; rights cleared): Proposition de boire à la santé de quelqu’un ou à la réalisation d’un souhait.
+- **ipa** (quality accepted; rights cleared): /tost/
+- **english** (quality accepted; rights cleared): A toast: an invitation to drink to someone’s health or to the fulfilment of a wish (masculine noun).
+- **chinese** (quality accepted; rights cleared): 祝酒；提议为某人的健康或某个愿望的实现而举杯（阳性名词）。
 
-Selected: Masculine food noun; dairy butter.
+Use review: A drinking toast is everyday social use, including porter un toast; no neighbouring photograph or toast notification is admitted.
 
-Excluded: Plant seed fat; colour/adjective; rare money slang; obsolete chemical sense; verb forms.
+## 3078 tonne / NOM
 
-Source: [beurre, revision 39879581](https://fr.wiktionary.org/w/index.php?title=beurre&oldid=39879581); lexical line 13, IPA line 12.
+- **french_definition** (quality accepted; rights cleared): Unité de masse égale à mille kilogrammes ; symbole : t.
+- **ipa** (quality accepted; rights cleared): /tɔn/
+- **english** (quality accepted; rights cleared): A metric tonne, a unit of mass equal to 1,000 kilograms; symbol t (feminine noun).
+- **chinese** (quality accepted; rights cleared): 公吨；等于 1,000 千克的质量单位，符号为 t（阴性名词）。
 
-### 3072 — disparition/NOM
+Use review: The metric tonne is an everyday unit; its SI-accepted/non-SI status does not require a specialist exception, and ton-force is excluded.
 
-Selected: Feminine noun; disappearance, without presuming death or abduction.
+## 3079 réchauffer / VER
 
-Excluded: Death euphemism as a separate sense; presumed cause of a disappearance.
+- **french_definition** (quality accepted; rights cleared): Rendre chaud quelque chose qui est froid ou qui a refroidi.
+- **ipa** (quality accepted; rights cleared): /ʁe.ʃo.fe/
+- **english** (quality accepted; rights cleared): To warm up or reheat something that is cold or has cooled (transitive verb).
+- **chinese** (quality accepted; rights cleared): 加热；把冷的或已经凉下来的东西弄热（及物动词）。
 
-Source: [disparition, revision 39791847](https://fr.wiktionary.org/w/index.php?title=disparition&oldid=39791847); lexical line 10, IPA line 9.
+Use review: Ordinary transitive warming is selected; oneself and figurative comfort/rekindling are separate.
 
-### 3073 — troubler/VER
+## 3080 panique / NOM
 
-Selected: Transitive lexical verb; unwelcome interruption.
+- **french_definition** (quality accepted; rights cleared): Peur très forte et soudaine, souvent irraisonnée.
+- **ipa** (quality accepted; rights cleared): /pa.nik/
+- **english** (quality accepted; rights cleared): Panic: sudden intense fear, often irrational (feminine noun).
+- **chinese** (quality accepted; rights cleared): 恐慌；突然而强烈、往往缺乏理性的恐惧（阴性名词）。
 
-Excluded: Clouding liquid/vision; loss of composure; legal possession; pronominal se troubler.
+Use review: The feminine panic emotion is everyday use; adjectival/mythological and crowd-motion frames remain distinct.
 
-Source: [troubler, revision 40046043](https://fr.wiktionary.org/w/index.php?title=troubler&oldid=40046043); lexical line 39, IPA line 7.
+## 3081 sympathique / ADJ
 
-### 3074 — conscient/ADJ
+- **french_definition** (quality accepted; rights cleared): Qui inspire de la sympathie, que l’on trouve agréable.
+- **ipa** (quality accepted; rights cleared): /sɛ̃.pa.tik/
+- **english** (quality accepted; rights cleared): Nice, friendly or likeable; inspiring liking (adjective, same masculine and feminine form).
+- **chinese** (quality accepted; rights cleared): 亲切的；讨人喜欢、让人产生好感的（形容词，阴阳性同形）。
 
-Selected: Masculine adjective; deliberate awareness of one’s actions, not merely being awake; conscious awareness with de is evidenced separately.
+Use review: The same-form adjective of likeability is everyday use; anatomical and musical sympathy are excluded.
 
-Excluded: Unconscious-versus-awake medical contrast without a selected matching definition; noun substitution.
+## 3082 flipper / VER
 
-Source: [conscient, revision 39702182](https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182); lexical line 8, IPA line 7.
+- **french_definition** (quality accepted; rights cleared): Avoir très peur, angoisser ; emploi populaire.
+- **ipa** (quality accepted; rights cleared): /fli.pe/
+- **english** (quality accepted; rights cleared): To freak out, become frightened or anxious (informal intransitive verb).
+- **chinese** (quality accepted; rights cleared): 害怕得发慌；感到焦虑（口语不及物动词）。
 
-### 3075 — médaille/NOM
+Use review: Select the ordinary informal intransitive fear use; transitive nasal-piercing concealment and drug delirium do not supply this meaning.
 
-Selected: Feminine noun; sporting medal. Ordinary gold/silver/bronze ranking does not assert metal purity.
+## 3083 pouce / NOM
 
-Excluded: Antique coin; religious medal; commemorative issue; window defect; fish; verb forms.
+- **french_definition** (quality accepted; rights cleared): Doigt court et épais de la main, opposable aux autres doigts.
+- **ipa** (quality accepted; rights cleared): /pus/
+- **english** (quality accepted; rights cleared): The thumb, the short thick finger of the hand that can oppose the other fingers (masculine noun).
+- **chinese** (quality accepted; rights cleared): 拇指；手上较短较粗、能与其他手指相对的手指（阳性名词）。
 
-Source: [médaille, revision 39715541](https://fr.wiktionary.org/w/index.php?title=m%C3%A9daille&oldid=39715541); lexical line 23, IPA line 11.
+Use review: Human-thumb use is everyday anatomy, not a specialist substitution; the noun is distinct from the game-stopping interjection.
 
-### 3076 — reproduire/VER
+## 3084 adjoint / NOM
 
-Selected: Transitive verb; reproducing an artwork.
+- **french_definition** (quality accepted; rights cleared): Personne chargée d’assister une autre personne dans certaines fonctions ; féminin : adjointe.
+- **ipa** (quality accepted; rights cleared): /ad.ʒwɛ̃/
+- **english** (quality accepted; rights cleared): A deputy or assistant appointed to help another person in certain duties (masculine noun; feminine adjointe).
+- **chinese** (quality accepted; rights cleared): 副职；受委派协助他人履行某些职务的人（阳性名词；阴性为 adjointe）。
 
-Excluded: Biological se reproduire; recurrence; obsolete return to society; republication of an article as a separate use.
+Use review: The masculine person noun has feminine adjointe; mayoral deputy is a narrower unselected use.
 
-Source: [reproduire, revision 39829187](https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187); lexical line 23, IPA line 6.
+## 3085 procédure / NOM
 
-### 3077 — toast/NOM
+- **french_definition** (quality accepted; rights cleared): Méthode ou suite de démarches à suivre pour obtenir un résultat.
+- **ipa** (quality accepted; rights cleared): /pʁɔ.se.dyʁ/
+- **english** (quality accepted; rights cleared): A procedure: a method or sequence of steps to follow to achieve a result (feminine noun).
+- **chinese** (quality accepted; rights cleared): 程序；为取得某个结果而遵循的方法或步骤（阴性名词）。
 
-Selected: Masculine noun; drinking toast, as in porter un toast.
+Use review: The general procedure noun is everyday administrative/practical use; judicial and programming meanings are excluded.
 
-Excluded: Toasted bread and its adjacent photograph; computing notification.
+## 3086 tricher / VER
 
-Source: [toast, revision 39855453](https://fr.wiktionary.org/w/index.php?title=toast&oldid=39855453); lexical line 11, IPA line 10.
+- **french_definition** (quality accepted; rights cleared): Tromper au jeu en utilisant des manœuvres frauduleuses.
+- **ipa** (quality accepted; rights cleared): /tʁi.ʃe/
+- **english** (quality accepted; rights cleared): To cheat at a game through dishonest manoeuvres (intransitive verb).
+- **chinese** (quality accepted; rights cleared): 作弊；在游戏或比赛中采取欺骗手段（不及物动词）。
 
-### 3078 — tonne/NOM
+Use review: The ordinary game-cheating construction is intransitive; the separately rare/désuet transitive uses are unselected.
 
-Selected: Feminine noun; metric tonne, SI-accepted non-SI unit.
+## 3087 confondre / VER
 
-Excluded: British long ton; American short ton; tonne-force; barrel; hunting hut; verb forms.
+- **french_definition** (quality accepted; rights cleared): Prendre une personne ou une chose pour une autre, sans faire la distinction.
+- **ipa** (quality accepted; rights cleared): /kɔ̃.fɔ̃dʁ/
+- **english** (quality accepted; rights cleared): To confuse or mistake one person or thing for another (transitive verb).
+- **chinese** (quality accepted; rights cleared): 混淆；把一个人或一件事物误认为另一个（及物动词）。
 
-Source: [tonne, revision 39917945](https://fr.wiktionary.org/w/index.php?title=tonne&oldid=39917945); lexical line 11, IPA line 10.
+Use review: The everyday transitive distinction failure includes confondre X avec Y; formal se confondre en politesses is separate.
 
-### 3079 — réchauffer/VER
+## 3088 remède / NOM
 
-Selected: Transitive verb; warming something cold or cooled.
+- **french_definition** (quality accepted; rights cleared): Substance ou médicament utilisé pour soigner un mal ou une maladie.
+- **ipa** (quality accepted; rights cleared): /ʁə.mɛd/
+- **english** (quality accepted; rights cleared): A remedy or medicine used to treat an ailment or illness (masculine noun).
+- **chinese** (quality accepted; rights cleared): 药物；用来治疗不适或疾病的药剂（阳性名词）。
 
-Excluded: Pronominal warming oneself as a separate selection; figurative rekindling or comforting.
+Use review: Ordinary medicinal remedy is selected; enema and figurative fixes remain excluded, and no cure is promised.
 
-Source: [réchauffer, revision 39600218](https://fr.wiktionary.org/w/index.php?title=r%C3%A9chauffer&oldid=39600218); lexical line 7, IPA line 6.
+## 3089 agneau / NOM
 
-### 3080 — panique/NOM
+- **french_definition** (quality accepted; rights cleared): Petit du bélier et de la brebis ; pluriel : agneaux.
+- **ipa** (quality accepted; rights cleared): /a.ɲo/
+- **english** (quality accepted; rights cleared): A lamb, a young sheep (masculine noun; plural agneaux; the female is an agnelle).
+- **chinese** (quality accepted; rights cleared): 羔羊；绵羊的幼崽（阳性名词，复数为 agneaux；专指雌性时用 agnelle）。
 
-Selected: Feminine emotion noun.
+Use review: Ordinary young-sheep use preserves masculine agneau and irregular plural agneaux; culinary/skin/religious senses are separate.
 
-Excluded: Adjective; mythology; crowd disorder as a separate sense; verb forms.
+## 3090 marrer / VER
 
-Source: [panique, revision 39961436](https://fr.wiktionary.org/w/index.php?title=panique&oldid=39961436); lexical line 59, IPA line 58.
+- **french_definition** (quality accepted; rights cleared): Rire, s’amuser en riant ; emploi familier, uniquement dans « se marrer ».
+- **ipa** (quality accepted; rights cleared): /ma.ʁe/
+- **english** (quality accepted; rights cleared): To laugh or have a laugh; informal, only in the pronominal construction se marrer.
+- **chinese** (quality accepted; rights cleared): 笑；开怀大笑（口语，仅用于代词式 se marrer）。
 
-### 3081 — sympathique/ADJ
+Use review: The expressly pronominal laughing sense is everyday familiar use of frozen marrer; agriculture and factitive faire marrer remain excluded.
 
-Selected: Adjective; likeable person or thing, not English sympathetic in the sense of compassionate.
+## 3091 témoignage / NOM
 
-Excluded: Autonomic nervous system; sympathetic ink; resonating string; noun.
+- **french_definition** (quality accepted; rights cleared): Récit oral ou écrit d’un ou de plusieurs témoins au sujet d’un fait.
+- **ipa** (quality accepted; rights cleared): /te.mwa.ɲaʒ/
+- **english** (quality accepted; rights cleared): Testimony or a witness account: an oral or written report of a fact by one or more witnesses (masculine noun).
+- **chinese** (quality accepted; rights cleared): 证言；一名或多名证人就某一事实所作的口头或书面陈述（阳性名词）。
 
-Source: [sympathique, revision 39819266](https://fr.wiktionary.org/w/index.php?title=sympathique&oldid=39819266); lexical line 12, IPA line 7.
+Use review: The ordinary witness-account noun is selected without a courtroom-only restriction; evidence/token as figurative proof is excluded.
 
-### 3082 — flipper/VER
+## 3092 pose / NOM
 
-Selected: Popular/informal verb of fear or anxiety; /fli.pe/, not the pinball noun /fli.pœʁ/.
+- **french_definition** (quality accepted; rights cleared): Action de placer ou d’installer quelque chose à un endroit.
+- **ipa** (quality accepted; rights cleared): /poz/
+- **english** (quality accepted; rights cleared): Placement or installation: the act of putting something in position (feminine noun).
+- **chinese** (quality accepted; rights cleared): 安放；安装，把某物放到指定位置的动作（阴性名词）。
 
-Excluded: Drug-induced delirium as a separate use; hiding a nose piercing; pinball noun.
+Use review: Ordinary installation, such as a window, is the feminine noun; exposure, posture and pause spelling are excluded.
 
-Source: [flipper, revision 39256108](https://fr.wiktionary.org/w/index.php?title=flipper&oldid=39256108); lexical line 53, IPA line 48.
+## 3093 affecter / VER
 
-### 3083 — pouce/NOM
+- **french_definition** (quality accepted; rights unresolved): Causer de la peine ou du chagrin à quelqu’un, le toucher douloureusement.
+- **ipa** (quality accepted; rights cleared): /a.fɛk.te/
+- **english** (quality accepted; rights unresolved): To distress or upset someone emotionally, causing sorrow (transitive verb).
+- **chinese** (quality accepted; rights unresolved): 使难过；使某人在情感上受到伤害或感到悲伤（及物动词）。
 
-Selected: Masculine noun; human thumb.
+Use review: Emotional distress is ordinary transitive affecter; the multiple unrelated assignment/pretence/alteration senses are excluded.
 
-Excluded: Inch; screen diagonal; clothing part; children’s time-out interjection; verb forms.
+## 3094 par-dessus / PRE
 
-Source: [pouce, revision 39975235](https://fr.wiktionary.org/w/index.php?title=pouce&oldid=39975235); lexical line 11, IPA line 10.
+- **french_definition** (quality accepted; rights cleared): Au-dessus de, ou en passant au-delà d’un obstacle ; préposition suivie d’un complément.
+- **ipa** (quality accepted; rights cleared): /paʁ də.sy/
+- **english** (quality accepted; rights cleared): Over or across the top of something; preposition followed by a complement, as in par-dessus un mur.
+- **chinese** (quality accepted; rights cleared): 在……上方；从……上面越过（介词，后接补语，如 par-dessus un mur“越过一堵墙”）。
 
-### 3084 — adjoint/NOM
+Use review: The exact hyphenated preposition takes a complement; no adverb without complement or pardessus coat noun is substituted.
 
-Selected: Masculine personal noun; deputy/assistant.
+## 3095 ô / ONO
 
-Excluded: Adjective or verb form; municipal deputy as a narrower unselected sense.
+- **french_definition** (quality accepted; rights cleared): Interjection qui exprime un sentiment vif, comme la joie, l’admiration ou la douleur ; emploi emphatique ou littéraire.
+- **ipa** (quality accepted; rights cleared): /o/
+- **english** (quality accepted; rights cleared): Oh! An emphatic or literary interjection expressing a strong feeling, such as joy, admiration or distress; often before a noun phrase.
+- **chinese** (quality accepted; rights cleared): 啊！表达喜悦、赞叹或痛苦等强烈感情的感叹词；带强调或文学色彩，常放在名词短语之前。
 
-Source: [adjoint, revision 39722748](https://fr.wiktionary.org/w/index.php?title=adjoint&oldid=39722748); lexical line 21, IPA line 20.
+Use review: Fixed French particule line 60 has interjection value; current Robert separately labels exact ô interjection. Retained 2018 campus Ô joie demonstrates a modern short emphatic construction, not a replacement oh or letter-name use.
 
-### 3085 — procédure/NOM
+## 3096 confesser / VER
 
-Selected: Feminine noun; ordinary method or procedure.
+- **french_definition** (quality accepted; rights cleared): Reconnaître et avouer une faute ou un crime.
+- **ipa** (quality accepted; rights cleared): /kɔ̃.fe.se/
+- **english** (quality accepted; rights cleared): To confess or admit a fault or crime (transitive verb).
+- **chinese** (quality accepted; rights cleared): 承认；坦白自己的过错或罪行（及物动词）。
 
-Excluded: Judicial proceedings; programming subroutine without return value.
+Use review: Ordinary transitive confession of wrongdoing is selected; priestly/pronominal religious and belief-profession uses are separate.
 
-Source: [procédure, revision 39774910](https://fr.wiktionary.org/w/index.php?title=proc%C3%A9dure&oldid=39774910); lexical line 10, IPA line 9.
+## 3097 nain / NOM
 
-### 3086 — tricher/VER
+- **french_definition** (quality accepted; rights cleared): Créature des récits fantastiques ou mythologiques, semblable à un homme de très petite taille.
+- **ipa** (quality accepted; rights cleared): /nɛ̃/
+- **english** (quality accepted; rights cleared): A dwarf in fantasy or mythology, a human-like creature of very small stature (masculine noun).
+- **chinese** (quality accepted; rights cleared): 奇幻或神话中的矮人；外形像人但身材很小的生物（阳性名词）。
 
-Selected: Intransitive lexical verb; game cheating, no direct object required.
+Use review: Fantasy discussion is ordinary noun use; no medical or other specialist exception is needed for this selected fictional being.
 
-Excluded: Rare/obsolete transitive use; artistic concealment of asymmetry; broader figurative deception.
+## 3098 damoiseau / NOM
 
-Source: [tricher, revision 39984216](https://fr.wiktionary.org/w/index.php?title=tricher&oldid=39984216); lexical line 8, IPA line 7.
+- **french_definition** (quality unresolved; rights cleared): Homme qui fait le beau ou le galant auprès des femmes ; emploi ironique et vieilli.
+- **ipa** (quality unresolved; rights cleared): /da.mwa.zo/
+- **english** (quality unresolved; rights cleared): A man who plays the handsome gallant with women; an ironic, dated masculine noun.
+- **chinese** (quality unresolved; rights cleared): 在女性面前摆出风流倜傥姿态的男子（阳性名词；讽刺且陈旧的用法）。
 
-### 3087 — confondre/VER
+Use review: Fresh Larousse includes an ironic young gallant without vieilli; fresh Robert has anciennement, plaisant synonyms, and historical/reenactment/literary examples. These establish a possible ironic value but not an independently attested modern everyday gallant-man use. No exemption or new eligibility is established.
 
-Selected: Transitive verb; failure to distinguish, confondre X avec Y.
+## 3099 carton / NOM
 
-Excluded: Merging; shaming; exposing a culprit; amazement; formal se confondre en politesses.
+- **french_definition** (quality accepted; rights cleared): Boîte ou emballage fait le plus souvent de carton.
+- **ipa** (quality accepted; rights cleared): /kaʁ.tɔ̃/
+- **english** (quality accepted; rights cleared): A cardboard box or carton, usually made of cardboard (masculine noun).
+- **chinese** (quality accepted; rights cleared): 纸箱；通常由硬纸板制成的盒子或包装（阳性名词）。
 
-Source: [confondre, revision 39839205](https://fr.wiktionary.org/w/index.php?title=confondre&oldid=39839205); lexical line 18, IPA line 7.
+Use review: Ordinary packaging is selected; line 53’s CFC cartographic inset is a different definition outside this selected boundary.
 
-### 3088 — remède/NOM
+## 3100 humilier / VER
 
-Selected: Masculine noun; medicinal remedy, no guarantee of cure.
+- **french_definition** (quality accepted; rights cleared): Abaisser quelqu’un en le mortifiant ou en lui faisant honte.
+- **ipa** (quality accepted; rights cleared): /y.mi.lje/
+- **english** (quality accepted; rights cleared): To humiliate or demean someone, making them feel ashamed or mortified (transitive verb).
+- **chinese** (quality accepted; rights cleared): 羞辱；贬低某人，使其感到羞耻或难堪（及物动词）。
 
-Excluded: Figurative solution; enema; popular reduced /ʁmɛd/ not selected.
-
-Source: [remède, revision 40039542](https://fr.wiktionary.org/w/index.php?title=rem%C3%A8de&oldid=40039542); lexical line 9, IPA line 8.
-
-### 3089 — agneau/NOM
-
-Selected: Masculine animal noun; young sheep with source irregular plural.
-
-Excluded: Meat; skin/leather; first-shearing wool; figurative meek person; religious symbol; heraldry.
-
-Source: [agneau, revision 39791419](https://fr.wiktionary.org/w/index.php?title=agneau&oldid=39791419); lexical line 11, IPA line 10.
-
-### 3090 — marrer/VER
-
-Selected: Frozen lexical verb marrer bound to modern se marrer; obligatory reflexive pronoun for the selected laughing sense.
-
-Excluded: Cultivating with a marre; unrestricted bare marrer meaning laugh; distinct factitive faire marrer.
-
-Source: [marrer, revision 38367318](https://fr.wiktionary.org/w/index.php?title=marrer&oldid=38367318); lexical line 19, IPA line 14.
-
-### 3091 — témoignage/NOM
-
-Selected: Masculine noun; witness testimony, not necessarily in court.
-
-Excluded: Outward evidence or token as a separate figurative use.
-
-Source: [témoignage, revision 40040376](https://fr.wiktionary.org/w/index.php?title=t%C3%A9moignage&oldid=40040376); lexical line 9, IPA line 8.
-
-### 3092 — pose/NOM
-
-Selected: Feminine noun; installation/placement, as in la pose d’une fenêtre.
-
-Excluded: Photographic pose/exposure; affectation; pause spelling; regional area unit; verb forms.
-
-Source: [pose, revision 39771599](https://fr.wiktionary.org/w/index.php?title=pose&oldid=39771599); lexical line 10, IPA line 9.
-
-### 3093 — affecter/VER
-
-Selected: Transitive verb; emotional distress, narrower than unrestricted English affect.
-
-Excluded: Assigning to a use; pretending; disease affecting an organ; general alteration; programming assignment.
-
-Source: [affecter, revision 39716112](https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112); lexical line 59, IPA line 6.
-
-### 3094 — par-dessus/PRE
-
-Selected: Invariable preposition with complement; source space in /paʁ də.sy/ retained.
-
-Excluded: Adverb without complement; noun pardessus (overcoat); spelling without hyphen.
-
-Source: [par-dessus, revision 39839978](https://fr.wiktionary.org/w/index.php?title=par-dessus&oldid=39839978); lexical line 9, IPA line 8.
-
-### 3095 — ô/ONO
-
-Selected: Frozen ONO bound to interjection use; Wiktionnaire labels the same frame particule, corroborated by current Le Robert interjection classification. Modern emphatic Ô joie attestation; not the letter name.
-
-Excluded: Letter-name pronunciation; other languages; replacing the frozen ô with oh; unrestricted neutral conversation claim.
-
-Source: [ô, revision 39939228](https://fr.wiktionary.org/w/index.php?title=%C3%B4&oldid=39939228); lexical line 60, IPA line 27.
-
-### 3096 — confesser/VER
-
-Selected: Transitive verb; admission of wrongdoing; /kɔ̃.fe.se/ selected from two recorded variants.
-
-Excluded: Hearing a penitent’s confession; pronominal religious confession; professing a belief; extracting confidences.
-
-Source: [confesser, revision 39979866](https://fr.wiktionary.org/w/index.php?title=confesser&oldid=39979866); lexical line 15, IPA line 6.
-
-### 3097 — nain/NOM
-
-Selected: Masculine noun; ordinary discussion of fantasy/mythological dwarfs.
-
-Excluded: Adjective; person with dwarfism; pejorative figurative insignificance; medical labelling of people.
-
-Source: [nain, revision 39998547](https://fr.wiktionary.org/w/index.php?title=nain&oldid=39998547); lexical line 143, IPA line 129.
-
-### 3098 — damoiseau/NOM
-
-Selected: Dated ironic noun proposal only; the source explicitly marks vieilli. No modern everyday selected sense is established; four required ordinary-content fields remain unresolved.
-
-Excluded: Historical aspirant knight; surname/rum brand; animal; silent relabelling as a modern everyday young man; annotation exemption.
-
-Source: [damoiseau, revision 39460790](https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790); lexical line 9, IPA line 7.
-
-### 3099 — carton/NOM
-
-Selected: Masculine noun; cardboard packaging.
-
-Excluded: Paper material as a separate selected sense; film intertitle; success; crash; cartographic inset with CFC import at line 53.
-
-Source: [carton, revision 39952915](https://fr.wiktionary.org/w/index.php?title=carton&oldid=39952915); lexical line 26, IPA line 11.
-
-### 3100 — humilier/VER
-
-Selected: Transitive verb; personal humiliation, modern negative connotation.
-
-Excluded: Religious self-humbling; pronominal construction as a separate sense; comparison making an object look inferior.
-
-Source: [humilier, revision 39725883](https://fr.wiktionary.org/w/index.php?title=humilier&oldid=39725883); lexical line 14, IPA line 6.
+Use review: Ordinary negative transitive humiliation is selected; the source contrasts it with religious self-humbling and object comparison.

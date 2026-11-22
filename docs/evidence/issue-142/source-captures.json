@@ -727,5 +727,163 @@
   "archived_preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\prepare_candidates.py",
   "archived_selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\selection.py",
   "network_retry_log": "target/issue-142/fetch.log",
-  "corroboration_manifest": "target/issue-142/corroboration/captures.json"
+  "corroboration_manifest": "target/issue-142/corroboration/captures.json",
+  "independent_audit": {
+    "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
+    "review_base": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
+    "author_commit": "0b177a99e2d7809d18a80bb37fd2c39e7da153fd",
+    "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142",
+    "audit": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\source-audit.json",
+    "literal_article_bytes": true,
+    "field_spans": 200,
+    "nested_span_checks": 2360,
+    "contributor_parts": 6,
+    "all_chains_complete": true
+  },
+  "independent_external_captures": [
+    {
+      "name": "daf8-affecter",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/affecter",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/affecter",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:24.819053+00:00",
+      "bytes": 179121,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-catastrophe",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/catastrophe",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/catastrophe",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:22.940073+00:00",
+      "bytes": 65571,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-catastrophe.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-catastrophe.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-conscient-adj",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/conscient/adjectif",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/conscient/adjectif",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:18:10.132278+00:00",
+      "bytes": 53662,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient-adj.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient-adj.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-conscient",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/conscient",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/conscient",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:23.703191+00:00",
+      "bytes": 19039,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-reproduire",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/reproduire",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/reproduire",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:25.963615+00:00",
+      "bytes": 104942,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-reproduire.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-reproduire.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-tonne",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/tonne",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/tonne",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:26.914369+00:00",
+      "bytes": 79647,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-tonne.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-tonne.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "larousse-damoiseau",
+      "request_url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21586",
+      "final_url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21586",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:00.090207+00:00",
+      "bytes": 50586,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\larousse-damoiseau.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\larousse-damoiseau.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "robert-damoiseau",
+      "request_url": "https://dictionnaire.lerobert.com/definition/damoiseau",
+      "final_url": "https://dictionnaire.lerobert.com/definition/damoiseau",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:00.773368+00:00",
+      "bytes": 119688,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-damoiseau.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-damoiseau.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "robert-o",
+      "request_url": "https://dictionnaire.lerobert.com/definition/o",
+      "final_url": "https://dictionnaire.lerobert.com/definition/o",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:56.810906+00:00",
+      "bytes": 114073,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-o.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-o.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "robert-serviteur",
+      "request_url": "https://dictionnaire.lerobert.com/definition/serviteur",
+      "final_url": "https://dictionnaire.lerobert.com/definition/serviteur",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:57.122496+00:00",
+      "bytes": 124003,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-serviteur.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-serviteur.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "us-chapter1",
+      "request_url": "https://www.copyright.gov/title17/92chap1.html",
+      "final_url": "https://www.copyright.gov/title17/92chap1.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:15:58.850558+00:00",
+      "bytes": 675161,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter1.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter1.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "us-chapter3",
+      "request_url": "https://www.copyright.gov/title17/92chap3.html",
+      "final_url": "https://www.copyright.gov/title17/92chap3.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:15:58.930800+00:00",
+      "bytes": 72370,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter3.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter3.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "us-faq-protect",
+      "request_url": "https://www.copyright.gov/help/faq/faq-protect.html",
+      "final_url": "https://www.copyright.gov/help/faq/faq-protect.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:15:58.979970+00:00",
+      "bytes": 34865,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-faq-protect.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-faq-protect.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    }
+  ],
+  "independent_external_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration"
 }
