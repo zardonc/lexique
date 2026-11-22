@@ -283,7 +283,7 @@ async function pilot() {
 
 async function contentBatch() {
   const issue = Number(input);
-  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 129, 'Expected batch issue 84–129');
+  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 139, 'Expected batch issue 84–139');
   const firstRow = 151 + (issue - 84) * 50;
   const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
   const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934],
@@ -693,9 +693,9 @@ async function replacement() {
       assert.deepEqual(await invoke('vocabulary_find', { headword: 'lâche' }), existing);
       evidence.checks.push({ check: 'The existing lâche adjective and noun digests remain frozen after the resource update', status: 'passed' });
     }
-    for (const row of [1951, 2450]) {
+    for (const row of [2451, 2950]) {
       const key = curation.groups.find((group) => group.frozen_row === row).headword;
-      await save(key, `batch-120-129-upgrade-${key}`);
+      await save(key, `batch-130-139-upgrade-${key}`);
     }
   }
   await openRecord(record);
