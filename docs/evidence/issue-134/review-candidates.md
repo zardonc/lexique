@@ -1,7 +1,8 @@
 # Exact #134 author proposals
 
-These 50 selected senses and 200 fields remain pending separate independent
-review. [groups.json](groups.json) contains the exact complete records;
+These are the exact original proposals. Independent review accepts 49 selected
+uses / 196 fields unchanged; row 2675 retains four unresolved fields and no
+exemption. [groups.json](groups.json) contains the exact complete records;
 [field-review.json](field-review.json) binds each proposed field, usage and
 spelling relationship to fixed source spans and supporting context.
 

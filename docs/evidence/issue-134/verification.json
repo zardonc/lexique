@@ -1,92 +1,80 @@
 {
   "ticket": 134,
-  "role": "content_author",
-  "branch": "codex/d2-content-134",
-  "integration_base": "6b9db47664581bfa26f2abaf112a6b33c2d0c78c",
-  "owned_paths": ["docs/evidence/issue-134/**", "scripts/test_core_batch_134.py"],
-  "resource_seam": "Frozen resource/admission records and literal fixed-source bindings; parent #78 Testing Decisions authorize this boundary.",
-  "counts": {
-    "frozen_groups": 50,
-    "proposed_senses": 50,
-    "proposed_fields": 200,
-    "source_articles": 51,
-    "contributor_capture_parts": 7,
-    "named_article_contributor_credits": 2981,
-    "reused_groups": 0,
-    "independently_accepted_fields": 0,
-    "pending_quality_fields": 200,
-    "pending_rights_fields": 200,
-    "missing_authored_fields": 0,
-    "missing_admitted_fields": 200,
-    "author_unresolved_content_rows": [],
-    "global_denominator_groups": 4087,
-    "proposed_field_characters": 9450,
-    "longest_field_characters": 152,
-    "retained_source_api_raw_request_bytes": 1204192
-  },
+  "status": "review_checks_passed_with_one_required_group_unresolved",
+  "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+  "author_commit": "2937688639cde50a9ad919292b7803a3225b03db",
+  "initial_review_base": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+  "final_integration_merge": "75a7edda18012d2e20345494fadc497e2edc3103",
+  "tested_state": "Scoped staged and working-tree review changes over the final integration base; exact final patches retained in the reviewer archive.",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-134",
+  "branch": "codex/d2-review-134",
+  "platform": "Windows x64; PowerShell 7; Python 3.14.10 via uv; pnpm 11.25.0",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-134\\issue-134-review",
+  "live_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-134\\target\\issue-134-review",
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134",
+  "accepted_groups": 49,
+  "accepted_fields": 196,
+  "changed_fields": 0,
+  "unresolved_rows": [
+    2675
+  ],
+  "unresolved_quality_fields": 4,
+  "pending_rights_fields": 4,
+  "root_source_context_rights_passes": 50,
+  "explicit_unadmitted_sources": 1,
+  "daf8_original_boundary_sources": 35,
+  "daf8_selected_boundaries_cleared": 34,
   "checks": [
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py",
-      "phase": "initial_resource_red",
-      "status": "expected_failure",
-      "exit_code": 1,
-      "observed": "The unchanged canonical resource has no records for any of the 50 frozen #134 groups.",
-      "log": "target/issue-134/RED.log"
-    },
-    {
-      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py Batch134Tests.test_original_proposals_keep_review_and_admission_pending",
-      "phase": "author_original_preservation_red",
-      "status": "expected_failure",
-      "exit_code": 1,
-      "observed": "Original author-proposal records had not yet been preserved for separate review.",
-      "log": "target/issue-134/RED-author-preservation.log"
-    },
-    {
-      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py",
-      "phase": "author_resource_green",
       "status": "passed",
-      "exit_code": 0,
-      "tests": 4,
-      "observed": "All 50 exact groups, 200 field bindings, raw/API revisions, actual contributor continuations, original pending decisions and selected boundary cases pass.",
-      "log": "target/issue-134/GREEN.log"
+      "tests": 5,
+      "log": "final-batch.log"
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-134/reproduce.py",
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-134-review/audit.py",
       "status": "passed",
-      "exit_code": 0,
-      "observed": "All nine original proposal JSON files reproduce byte for byte from the stable archive, without reading original target captures; no live request or independent acceptance is involved.",
-      "log": "target/issue-134/reproduce.log"
+      "log": "final-audit.log"
     },
     {
       "command": "pnpm test:docs",
       "status": "passed",
-      "exit_code": 0,
-      "documents": 394,
-      "local_links": 3062,
-      "problems": [],
-      "log": "target/issue-134/docs.log"
+      "documents": 446,
+      "local_links": 3483,
+      "log": "docs.log"
     },
     {
-      "command": "git diff --check; git diff --cached --check",
+      "command": "git diff --cached --check",
       "status": "passed",
-      "exit_code": 0,
-      "log": "target/issue-134/diff-check.log"
+      "log": "diff-check.log"
     }
   ],
-  "author_cache": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-134",
-  "original_cache_retained": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/ticket-134/target/issue-134",
-  "capture_resolution": "Admission author_evidence_root and source-captures capture_root both identify the stable archive. Logical target/issue-134 paths resolve to archive-relative sources/ paths for source tests and reproduction.",
-  "integration_tip_merged": "6b9db47664581bfa26f2abaf112a6b33c2d0c78c",
-  "rights_authorities": "Reused fixed #129 policy/template and CC BY-SA 4.0/Wikimedia terms captures; paths, source URLs and reuse origins are retained in rights.json.",
-  "original_work_obligations": "Credit Académie française DAF8 (1932–1935) separately; retain the 2006-01-01 original collective-work expiry basis, fixed Wiktionnaire contributors/history, CC BY-SA 4.0 adaptation/share-alike terms, full legal text, selected source material and modification notices. Unselected CFC cartography is excluded.",
-  "coordinator_gates": {
-    "separate_independent_quality_rights_review": "pending",
-    "everyday_use_construction_spelling_review": "pending",
-    "combined_assembly_conversion_notices": "not_run_coordinator_owned",
-    "actual_native_all_group_lookup_save_reopen": "not_run_coordinator_owned",
-    "saved_learner_data_preservation_acceptance": "not_run_coordinator_owned",
-    "learner_acceptance": "not_run",
-    "issue_pr_operations": "coordinator_owned"
+  "focused_red": {
+    "status": "expected_failure",
+    "log": "review-red.log",
+    "failure": "Author-prepared review kind did not satisfy independent acceptance records."
   },
-  "unrun_checks": "Frontend lint/typecheck/build, Rust formatting/compilation/tests, browser/native/packaging and release checks: no application or shared-resource implementation is in this worker scope."
+  "retained_originals": {
+    "nine_json_files": "verified byte-for-byte against author commit",
+    "prose_and_legal": "original bytes preserved under authored/",
+    "record": "authored/snapshot.json"
+  },
+  "audit_report": "source-audit.json",
+  "full_patch": "accepted-shard.patch",
+  "test_patch": "tests.patch",
+  "limitations": [
+    "Content filtering limited row 2675 source inspection; quality and selected rights remain unresolved without an exemption.",
+    "Direct Légifrance retrieval returned HTTP 403; retained fixed policy and first-party indexed statutory text were inspected."
+  ],
+  "coordinator_owned_unrun": [
+    "Resolve row 2675",
+    "Canonical assembly/conversion",
+    "Actual combined notices/source obligations",
+    "Native all-group lookup/save/reopen and preservation",
+    "Global coverage/size gates",
+    "Learner acceptance",
+    "Offline/platform/release checks",
+    "Tracker operations"
+  ],
+  "recorded_at_utc": "2026-11-22T02:46:54.434371+00:00"
 }

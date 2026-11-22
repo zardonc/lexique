@@ -1,11 +1,14 @@
 # Source and modification notices for #134
 
-The proposed content selects fixed Wiktionnaire contributions under
+The independently accepted content selects fixed Wiktionnaire contributions under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Lexique contributors authored the French adaptations and new English/Chinese
 explanations under the same licence. Project source code remains MIT.
 The [complete legal text](COPYING), fixed-source/history links, contributors,
-original-work credits and modification notices accompany the author package.
+original-work credits and modification notices accompany this evidence shard.
+196 fields are independently accepted; row 2675 retains four unresolved fields.
+The full list preserves every author credit, including the unadmitted source,
+without granting that source redistribution acceptance.
 
 Exact word/POS membership and unchanged frequency strings derive from Boris
 New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -99,12 +102,14 @@ the selection, scoped adaptations and new explanations.
 | lequel | [39771005](https://fr.wiktionary.org/w/index.php?title=lequel&oldid=39771005) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=lequel&action=history) | No original-work import marker identified |
 
 Thirty-five articles declare the Académie française’s eighth-edition dictionary
-(1932–1935). The [selected-rights proposal](selected-rights.md) retains the separate
+(1932–1935). The [selected-rights decisions](selected-rights.md) retain the separate
 original collective-work basis and current CC BY-SA 4.0 contribution/adaptation
 layers. An article import marker does not identify the selected sentence’s author.
 `légende` also has a CFC import at cartographic subsense line 18, outside the
 selected traditional-narrative definition at line 28. No CFC text or rights are
-admitted through this proposal.
+admitted through this shard.
+`donnée`'s cartographic/informatics definition at line 31 and CFC reference at
+line 150 are also excluded; information definition 11 is the selected use.
 
 ## Redistribution obligations
 
@@ -114,5 +119,5 @@ source material. Adaptations share CC BY-SA 4.0 with no additional restrictions.
 Other source works keep their own rights. The coordinator verifies actual
 combined conversion, source material and notices before canonical admission.
 
-All 200 proposed fields await separate independent quality and selected-span
-rights review. This author package admits zero new fields.
+196 fields pass independent quality and selected-span rights review; four fields
+on row 2675 remain unresolved. No new canonical fields are admitted by this shard.
