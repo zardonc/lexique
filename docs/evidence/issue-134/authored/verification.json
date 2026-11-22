@@ -1,0 +1,92 @@
+{
+  "ticket": 134,
+  "role": "content_author",
+  "branch": "codex/d2-content-134",
+  "integration_base": "6b9db47664581bfa26f2abaf112a6b33c2d0c78c",
+  "owned_paths": ["docs/evidence/issue-134/**", "scripts/test_core_batch_134.py"],
+  "resource_seam": "Frozen resource/admission records and literal fixed-source bindings; parent #78 Testing Decisions authorize this boundary.",
+  "counts": {
+    "frozen_groups": 50,
+    "proposed_senses": 50,
+    "proposed_fields": 200,
+    "source_articles": 51,
+    "contributor_capture_parts": 7,
+    "named_article_contributor_credits": 2981,
+    "reused_groups": 0,
+    "independently_accepted_fields": 0,
+    "pending_quality_fields": 200,
+    "pending_rights_fields": 200,
+    "missing_authored_fields": 0,
+    "missing_admitted_fields": 200,
+    "author_unresolved_content_rows": [],
+    "global_denominator_groups": 4087,
+    "proposed_field_characters": 9450,
+    "longest_field_characters": 152,
+    "retained_source_api_raw_request_bytes": 1204192
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py",
+      "phase": "initial_resource_red",
+      "status": "expected_failure",
+      "exit_code": 1,
+      "observed": "The unchanged canonical resource has no records for any of the 50 frozen #134 groups.",
+      "log": "target/issue-134/RED.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py Batch134Tests.test_original_proposals_keep_review_and_admission_pending",
+      "phase": "author_original_preservation_red",
+      "status": "expected_failure",
+      "exit_code": 1,
+      "observed": "Original author-proposal records had not yet been preserved for separate review.",
+      "log": "target/issue-134/RED-author-preservation.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py",
+      "phase": "author_resource_green",
+      "status": "passed",
+      "exit_code": 0,
+      "tests": 4,
+      "observed": "All 50 exact groups, 200 field bindings, raw/API revisions, actual contributor continuations, original pending decisions and selected boundary cases pass.",
+      "log": "target/issue-134/GREEN.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-134/reproduce.py",
+      "status": "passed",
+      "exit_code": 0,
+      "observed": "All nine original proposal JSON files reproduce byte for byte from the stable archive, without reading original target captures; no live request or independent acceptance is involved.",
+      "log": "target/issue-134/reproduce.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "documents": 394,
+      "local_links": 3062,
+      "problems": [],
+      "log": "target/issue-134/docs.log"
+    },
+    {
+      "command": "git diff --check; git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-134/diff-check.log"
+    }
+  ],
+  "author_cache": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-134",
+  "original_cache_retained": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/ticket-134/target/issue-134",
+  "capture_resolution": "Admission author_evidence_root and source-captures capture_root both identify the stable archive. Logical target/issue-134 paths resolve to archive-relative sources/ paths for source tests and reproduction.",
+  "integration_tip_merged": "6b9db47664581bfa26f2abaf112a6b33c2d0c78c",
+  "rights_authorities": "Reused fixed #129 policy/template and CC BY-SA 4.0/Wikimedia terms captures; paths, source URLs and reuse origins are retained in rights.json.",
+  "original_work_obligations": "Credit Académie française DAF8 (1932–1935) separately; retain the 2006-01-01 original collective-work expiry basis, fixed Wiktionnaire contributors/history, CC BY-SA 4.0 adaptation/share-alike terms, full legal text, selected source material and modification notices. Unselected CFC cartography is excluded.",
+  "coordinator_gates": {
+    "separate_independent_quality_rights_review": "pending",
+    "everyday_use_construction_spelling_review": "pending",
+    "combined_assembly_conversion_notices": "not_run_coordinator_owned",
+    "actual_native_all_group_lookup_save_reopen": "not_run_coordinator_owned",
+    "saved_learner_data_preservation_acceptance": "not_run_coordinator_owned",
+    "learner_acceptance": "not_run",
+    "issue_pr_operations": "coordinator_owned"
+  },
+  "unrun_checks": "Frontend lint/typecheck/build, Rust formatting/compilation/tests, browser/native/packaging and release checks: no application or shared-resource implementation is in this worker scope."
+}

@@ -1,0 +1,26 @@
+{
+  "author_commit": "2937688639cde50a9ad919292b7803a3225b03db",
+  "review_initial_base": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+  "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+  "preserved_json": [
+    "groups.json",
+    "admission.json",
+    "field-review.json",
+    "rights.json",
+    "sources.json",
+    "source-context.json",
+    "source-excerpts.json",
+    "source-captures.json",
+    "reuse.json"
+  ],
+  "preserved_prose_and_legal": [
+    "README.md.txt",
+    "selected-rights.md.txt",
+    "NOTICES.md.txt",
+    "review-candidates.md.txt",
+    "COPYING",
+    "verification.json"
+  ],
+  "method": "Original tracked author snapshots verified byte-for-byte against the author commit before accepted records changed.",
+  "prose_storage": "Original Markdown bytes are preserved as .md.txt so their original relative links are not interpreted from the snapshot directory."
+}

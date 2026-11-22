@@ -733,5 +733,8 @@
   "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134",
   "captured_at_utc": "2026-11-22T00:35:10.202048+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134\\selection.py",
+  "independent_review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-134\\issue-134-review",
+  "independent_source_audit": "source-audit.json",
+  "independent_audit_boundary": "51 API/raw byte identities and 200 structural field spans; 49 groups / 196 fields independently accepted. Row 2675 remains unresolved; structural checks do not clear it."
 }

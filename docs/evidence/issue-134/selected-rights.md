@@ -1,90 +1,73 @@
-# Issue #134 selected-rights author proposal
+# Issue #134 independent selected-rights decisions
 
-**200 fields have source-specific rights proposals; none has new independent
-rights acceptance.** [rights.json](rights.json) records each exact selected field
-and construction span, attribution, modification and pending decision.
-[field-review.json](field-review.json) separately preserves quality proposals.
+**196 fields pass selected-text rights review; four fields on row 2675 remain
+pending.** Reviewer: Independent semantic and selected-rights reviewer #134,
+separate from author and integration owner. Author: `2937688`; initial review
+base: `7b619a7`. [Rights](rights.json) and [field decisions](field-review.json)
+preserve exact proposals/current text, selected spans, modifications and separate
+quality/rights verdicts. No acceptance is inferred from historical review.
 
-## Contribution and explanation layers
+## Contribution and original-work boundaries
 
-All 51 fixed source articles are French Wiktionnaire captures. Selected lexical
-definitions, French/POS/inflection/construction frames and isolated IPA notation
-use the scoped CC BY-SA 4.0 contribution/adaptation route. The complete named
-contributor registries, returned anonymous counts and full article histories
-are retained in [source-context.json](source-context.json). These are article
-credits, not proof of selected-sentence authorship.
+Fixed French Wiktionnaire contributions/transcription and Lexique's French
+adaptations and new English/Chinese explanations retain **CC BY-SA 4.0**.
+[COPYING](COPYING), sections 2(a), 3(a), 3(b) and 4, allows sharing, adaptation
+and applicable database extraction with attribution, modification notices,
+ShareAlike and no additional restrictions. Wikimedia Terms section 7 permits
+article/history attribution and retains imported text's separate obligations.
+Copyright-policy revision **38903168** and DAF8-template revision **22113837**
+were independently inspected against their retained first-party API. Policy
+captures match after CRLF normalization; article captures match literally.
 
-Lexique contributors select and adapt the French meanings, add original English
-and Chinese explanations of those selected meanings and choose one applicable
-IPA variant. These adaptations/explanations remain CC BY-SA 4.0. A French source
-supports their semantic basis and rights route; a separate reviewer must assess
-their actual language and exact scope. Project-source MIT applies to code.
-
-The [complete CC BY-SA 4.0 text](COPYING), sections 2(a), 3(a), 3(b) and 4,
-permits sharing, adaptations and applicable database extraction, subject to
-attribution, licence/source identification, modification notices, ShareAlike and
-no additional downstream restrictions. The retained Wikimedia Terms section 7
-supports article/history attribution while preserving imported content’s separate
-conditions. Fixed Wiktionnaire copyright-policy revision **38903168** and
-DAF8-template revision **22113837** distinguish external material and original
-imports. Their raw/API authority captures and full legal/terms responses were
-reused from the established #129 archive; exact paths and reuse origins are in
-`rights.json.authority_captures`.
-
-## Historical original-work boundary
-
-Thirty-five fixed articles declare imports from **Académie française,
-Dictionnaire de l’Académie française, eighth edition, 1932–1935**. Original
-institutional collective-work credit remains separate from Wiktionnaire
-transcription/adaptation and Lexique’s new wording. The
-[already independently reviewed #129 original-work basis](../issue-129/selected-rights.md)
-applies only to that unchanged historical author/work layer.
-
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20)
-provides seventy years from the January following collective publication.
-Final publication in 1935 gives **1936-01-01 + 70 years = 2006-01-01**.
+The author package records 35 DAF8-marked articles, including the unresolved
+source. The 34 such articles used by accepted fields retain separate original
+credit to **Académie française, Dictionnaire de l’Académie française,
+eighth edition, 1932–1935**. The institution's
+[publication history](https://www.academie-francaise.fr/linstitution/les-missions)
+identifies this edition. The retained policy quotes
+[CPI L123-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941/2026-10-28):
+collective works use seventy years from the January after publication. Final
+1935 publication gives **1936-01-01 + 70 years = 2006-01-01**, conservatively
+across the original edition. Direct statutory requests returned 403; the fixed
+policy and current indexed first-party statutory text were inspected and retained.
 Original author/work respect continues under
-[L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891).
-This basis does not cover a modern publisher’s electronic editorial layer,
-unrelated quotations or new #134 quality/selected-span review. Article-level
-import notices alone do not identify a selected sentence’s author.
+[L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891/2026-11-09).
+No modern publisher's electronic editorial edition is imported.
 
-## Actual selected and excluded material
+Article import markers do not prove who wrote a selected sentence. Complete
+returned contributor registries, anonymous-history credit, fixed URLs, full
+histories and original-work credits remain in [context](source-context.json)
+and [notices](NOTICES.md). Wiki and Lexique adaptation layers remain CC BY-SA 4.0;
+project-source MIT applies to code.
 
-All 200 field spans are bound to retained fixed API/raw article text. Meaning
-fields adapt the selected lexical definition; IPA copies only the selected
-notation and adds slashes. Supporting French language/POS/grammar/inflection
-spans remain separately recorded. The exact `lesquels` and `bijoux` source
-relationships are inflection bindings and authorize no runtime aliases.
+## Selected and excluded material
 
-`arrestation` uses the applicable notation in the pronunciation section rather
-than the inconsistent header. `tester` retains the modern test definition and
-records its inconsistent grammatical tag. `nègre` preserves the lexical register
-restrictions; none of the adjoining historical, literary or 2020 discussion
-quotation prose is adapted into the field text. Bibliographic identities supply
-context only; neighbouring quotations retain their own rights.
+Accepted French meanings adapt their exact lexical definitions. English and
+Chinese are independently assessed new explanations, not copied bilingual
+quotes. IPA selects one applicable isolated notation and adds slashes; no audio
+or media is imported. The explicit French inflections for `lesquels` and
+`bijoux` preserve plural/POS frames and add no runtime aliases.
 
-`légende` contains an **Import:CFC** marker at cartographic subsense line **18**.
-That subsense and its original text are unselected. The proposed traditional
-narrative meaning binds to line **28**, and its field/construction spans do not
-use line 18. The marker is explicitly recorded as excluded from selected content;
-no broad CFC licence or original-work eligibility is asserted.
+`donnée` selects information definition **11** and nominal IPA **10**;
+cartographic/informatics representation **31** and CFC reference **150** are
+excluded. `légende` selects narrative **28** and nominal IPA **11**;
+Import:CFC subsenses **18** and **20** are excluded. Neither decision asserts
+CFC permission or an article-wide licence. Bibliographic references to modern
+external dictionaries do not supply redistribution rights; their external prose,
+neighboring news/literary quotations, etymologies, other-language sections and
+media are outside selected adaptations.
 
-No media, etymologies, other-language content, news/literary example prose or
-external dictionary text is proposed as a learner field. Full raw captures stay
-in the ignored author cache for inspection; the selected redistribution material
-is identified in the tracked source-excerpts/context/rights records.
+All **50 source nodes used by accepted fields** have root
+`selected_text_rights_status = passed_at_selected_text_boundary` in
+`source-context.current_content`, with their actual independent reasons.
+Row 2675's source remains explicitly unadmitted with pending rights because
+content filtering limited inspection. Byte checks and earlier original-work
+decisions do not grant new rights for it.
 
-## Redistribution and remaining review
+## Package boundary
 
-The coordinator must preserve fixed source/licence identifiers, complete
-contributor/history and historical original-work credits, modification notices,
-CC BY-SA 4.0 legal text and selected-source materials in the actual combined
-artifact. Adaptation layers must share CC BY-SA 4.0 without additional
-restrictions. External works keep their own conditions.
-
-[NOTICES.md](NOTICES.md) lists all 51 fixed article credits.
-[authored originals](authored/) retain the exact author proposals for independent
-decisions and any accepted replacements. New selected-span rights, independent
-language quality and everyday-use/construction/spelling acceptance remain
-pending; combined conversion, notices and native acceptance are coordinator-owned.
+The coordinator must carry fixed source/licence identity, full attribution,
+original-work credits, modification notices, the complete licence and selected
+materials into the actual combined artifact. Adaptations remain CC BY-SA 4.0
+without additional restrictions. **196 selected-rights passes and four pending
+fields** do not certify conversion, combined notices, native execution or release.
