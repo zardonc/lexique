@@ -6,7 +6,37 @@ PR 更新运行 `scaffold checks`，`main` push 检查目标分支上的新提�
 
 排查失败时用 `V03` 样本区分事务／竞争写入性能断言（100／250 ms）与 Rust runner 的 60 秒执行硬限。GitHub Actions job 超时另查 job 的 conclusion。比较同一提交的运行时，同时记录平台和实际争用结果。V03 日志入口见 [README](../README.md#检查与构建)。
 
-Ubuntu 后端与原生矩阵串行调度 Rust 测试用例，隔离同一测试程序中其他用例的数据库写入。V03 用例内仍由两个 SQLite 连接竞争写入，每个批次大小须取得三次实际争用样本。
+## V03 后端 CI 计时（PR #208）
+
+在[同一源码的对照运行](https://github.com/zardonc/lexique/actions/runs/45053860476)中，Ubuntu 24.04 和 26.04 的工作区磁盘共 96 次执行，4 次超过 V03 的建卡或竞争写入预算，或触发 SQLite 写锁超时。系统调用跟踪捕获到建卡日志单次 `fsync` 耗时 217.446 ms。另一个样本中，笔记和评分的六次 `fsync` 合计约 354 ms，竞争写入共耗时 434 ms。相同 runner 上的 `tmpfs` 定向测试 96 次全过，最高事务／竞争写入耗时为 21.0／36.9 ms。原始 CI 未记录系统调用，无法逐次归因。
+
+Ubuntu backend 作业将 V03 计时数据库放在独立的 `/dev/shm` 目录，使用文件型 SQLite、两个连接及实际锁竞争，每次尝试均按 100／250 ms 判定，整个后端套件的执行硬限为 60 秒。其他数据库测试和未指定该目录的 V03 运行使用默认磁盘路径。Ubuntu CI 上的 V03 衡量事务和竞争写入，物理磁盘的持久化延迟由磁盘环境复核。
+
+## 分类复习读取失败重试（PR #208）
+
+整合已准入的最新 `main`（`7ba54109e55dcb068a23be688a0d478aa68832eb`／#209）后，从干净提交 `0f51ca974e448004f7823edaab51af263bb5fed2`（tree `cb3a2bcc75f359480dfe1375a0da3f8d05837d2a`）再次完成 lint、typecheck、build 和六项读取／保存失败回归。应用、浏览器夹具／spec 与 Rust 源码与下述 `1765757` 相同；资源与准入后的 `main` 字节一致。两套原生夹具保留双方目录白名单，验证记录也完整保留。匹配新资源的 locked 原生重构建通过（120.04 秒），新程序的真实 SQLite 写锁 `failure` 场景再次通过（34.61 秒），硬限不变，来源元数据为干净提交、SQLite 检查通过、所属进程清理为零。新原生根为相同 integration checkout 的 `target/ticket-201/read-retry/native-merged-failure`，日志以 `merged-` 开头。下述完整本地浏览器结果保留原始 SHA；最终整合 CI 在 PR 中记录。
+
+2026-11-21，从干净提交 `17657572109e0285885a7b82239f46101ffa6b7e`（tree `c8ab6d0e6e9a4f2593f8a27a5f31676b3318e74f`）完成 Windows x64 验证：lint、typecheck、build 通过，bundled Chromium／`CI=true`／2 workers 的完整浏览器套件 **474 项通过**。新增范围读取和分类读取两项回归：首次成功加载后触发刷新读取失败，正确显示读取失败及重读按钮，重试发出新读取请求、恢复后清除错误，并断言不发送范围保存请求。既有首次读取失败、评分／跳过后的保存失败和仅保存重试回归也通过。
+
+hook 向选择器保留已有 `saveError`，失败文案及按钮按实际保存错误选择保存路径，其余读取错误调用 `retryRead()`；不再以 `applied` 是否存在判断失败类型。没有修改 Rust、持久化、IPC 或原生测试 harness。相同干净源码重新完成 locked 原生构建（130.84 秒），新可执行文件的真实 SQLite 写锁 `failure` 场景通过（37.48 秒，60 秒硬限不变）：评分／保存失败保留输入，focus／review-change 后仍可仅保存重试，评分、进度和全局额度不重复；SQLite schema 20、完整性和外键检查通过，host／worker／helper 清理为零。
+
+命令、来源身份及日志保留于 `integration/target/spec-195/read-retry`，真实原生夹具位于 `integration/target/ticket-201/read-retry/native-failure`，根目录为 `C:\Users\inthe\IdeaProjects\lexique-category-review-195`。构建脚本旧路径缓存和夹具目录准入的前置失败均保留，未到达原生断言；重新编译构建脚本时只刷新文件时间，不修改源码或放宽准入。其他原生 UI 场景、完整本地 Rust／speech-cache 套件及发行验收未重跑，下面旧证据保留其原始 SHA。精确整合提交的 CI 见 [PR #208](https://github.com/zardonc/lexique/pull/208)。
+
+## 分类复习前端 CI 收尾（#195／PR #208）
+
+2026-11-21，整合 `b1c39c07fa49826c7d591ecd7efcc23437bf7b44` 后，从干净测试修复提交 `03ef643bbc4cc8e116fd3a09b7f6ad24f4a9ab18`（tree `8c4201e8c36eb006efd655e6f4fcb6cce808cf67`）验证：lint、typecheck、build 通过，评分／跳过 T06 **2 项通过**，完整浏览器 **472 项通过（261.91 秒）**。Windows x64 `10.0.26300` 使用与失败 CI 相同的 Playwright `1.64.1`、bundled Chromium `156.0.8078.4`／revision `1248`、`CI=true` 与 **2 workers**，未设置浏览器可执行文件覆盖。CI trace 显示 focus 与 review-change 在 50 ms 队列刷新防抖内合并，而测试按每个事件排入旧范围回复，导致保存 Voyage 后仍返回旧范围并触发严格校验。暂停浏览器时钟后，两项回归先重现相同错误；修复让后续队列回复按实际保存范围生成，并确定性验证两次范围读取合并为一次队列刷新。保留失败可见性、待应用选择、完成卡边界、仅保存重试、无残余 alert／重复评分断言；未修改生产校验。
+
+原始 b1 [PR run 44977549743 attempt 1](https://github.com/zardonc/lexique/actions/runs/44977549743/attempts/1) 的 [frontend 137070714276](https://github.com/zardonc/lexique/actions/runs/44977549743/job/137070714276) 与 [backend 137070714258](https://github.com/zardonc/lexique/actions/runs/44977549743/job/137070714258)，以及 [push run 44977547321](https://github.com/zardonc/lexique/actions/runs/44977547321) 的 [frontend 137070706549](https://github.com/zardonc/lexique/actions/runs/44977547321/job/137070706549) 与 [backend 137070706296](https://github.com/zardonc/lexique/actions/runs/44977547321/job/137070706296) 均失败：前端为两项 T06，后端为 V03 时间门限。后端负责人在相同 b1 的 Windows x64 Debug 检查中，focused V03 0.77 秒通过，默认线程的完整四项 preflight 0.81 秒通过；9 个计数样本均有竞争，transaction max 18.2263 ms／100 ms 门限、writer max 40.1496 ms／250 ms 门限，执行硬限仍为 60 秒。负责人确认 `ensure_review_cards`／`review_cards` 与 spec base `e4005d868880dac12c84c412773049eea737bc67` 字节等同，backend 源码／测试／runner 与通过的 `27624ed84b9b0b3e3e4bf6568ded579fe3fb1324` 不变。[PR attempt 2 backend 137079648762](https://github.com/zardonc/lexique/actions/runs/44977549743/job/137079648762) 在未修改的 b1 成功，所有限值保留；这仅证明恢复，原始 V03 变慢原因仍未解释，workflow aggregate 因 b1 前端失败仍为 failure。
+
+本次仅修改浏览器 fixture 与文档；生产／原生 harness／backend 层及其测试均不变，因此不重复原生与后端验收，也不重标下面的旧结果。证据保留在本 worktree `target/ticket-201/ci-closeout`：精确 SHA／tree 与命令结果、先红后绿与完整浏览器日志／报告、两次原始 CI artifacts／raw 与 plain logs、V03 本地观察及 CI 恢复 snapshot；额外 `--` 导致参数未解析的两次 8-worker 完整通过也保留，但由正确 2-worker 检查替代。路径及详细命令见[验收记录](evidence/issue-195/README.md)。修复后 Ubuntu／最终 combined-head CI 尚未运行，由后续 PR CI 记录；原始失败证据保留。
+
+## 分类复习整合验收（#195／#201）
+
+2026-11-21，在 Windows x64 `10.0.26300`，从干净修复提交 `ee8d3efee2ab21dc7a2fde535faf72902e0993d4`（tree `45617fdffc28d2884fc213da0078026835bfa789`）完成更新源码验收：lint、typecheck、build 通过，完整 Playwright **472 项通过**（186.30 秒），同一源码的 Windows release 可执行文件重新完成构建。Spec P2 的评分／跳过后保存失败回归新增 focus 与 review-change：成功读取保留失败信息、待应用输入和仅保存重试，阻止下一卡及重复评分／额度影响；成功保存或修改／取消选择清除失败。原生真实写锁回归验证刷新后重试不改变评分、进度和全局额度；Standards P3 的原生分类变量改为 `voyageCategory`／`ecoleCategory`。
+
+同一更新源码与新可执行文件的 **12 个原生场景通过**：真实 SQLite、合成音频播放／评分、单分类／并集／未分类／混合 All、待应用切换、实时分类修改、重启、共享额度、跨范围全局撤销、真实写锁失败和七种完整备份／恢复；每次执行保持 60 秒硬限。单分类、并集、明确选择备份各有一次 WebView2 access violation `0xc0000005`，dump 分别定位 `RTSSHooks64.dll + 0x1490AF`、`+0x3B1D0`、`+0x1490AF`，各自新目录重试通过。全部 15 次执行保留来源 SHA／tree、新二进制身份、SQLite、生命周期及清理记录；12 个通过场景另保留结果及各自实际验收的受保护音频、备份与快照。所属 host／worker／helper 与最终进程清单均为零。未全局关闭 RTSS，也未沿用 #192 的 owner exclusion；禁用对照仍未运行。
+
+更新证据根为 `C:\Users\inthe\IdeaProjects\lexique-category-review-195\review-fixes\target\ticket-201`，包括 `verification-run.json`、`native-runs.json`、`acceptance-summary.json`、`focused-native-failure.json`、浏览器回归和三份新 dump 分析；原生根为 `native-ee8d3ef`。此前干净提交 `a42f21e8664887aa899498dea6ae6ecb6d8ec822`（tree `9d06c344b0d3f5e986f49094f238544319d38086`）的完整 storage **242 项通过**（44.06 秒）、desktop library **147 项通过**、speech cache **11 项通过**及 472 个浏览器／12 个原生场景，保留于相邻 `evidence\ticket-201`，原生 All 备份和探索性 undo 的 RTSS 失败证据也保留。更新未修改 backend／desktop／speech 层及其测试，因此未重跑这三套测试，也不将旧结果改标为更新源码结果。命令、T01–T19 边界、元数据路径映射与重复步骤见[验收记录](evidence/issue-195/README.md)；#196–#200 的证据保留各自版本。SQLite schema 仍为 20，旧 v1–v4 缺少范围时默认 All；旧 strict v4 reader 会拒绝整份新范围备份，回滚须使用受支持的旧备份并另行保留当前数据。其他平台、干净机器安装、全机断网、正式发行验收未运行；本次修复后的最终 combined-head CI 待后续运行。
 
 ## D2 冻结批次 #130–#139
 

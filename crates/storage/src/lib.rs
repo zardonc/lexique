@@ -21,6 +21,8 @@ mod interface;
 pub use interface::*;
 mod review;
 pub use review::*;
+mod review_scope;
+pub use review_scope::*;
 mod speech_work;
 pub use speech_work::*;
 mod speech_demand;

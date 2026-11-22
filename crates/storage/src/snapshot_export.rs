@@ -331,6 +331,7 @@ pub fn export_learning_snapshot(
         )?,
         preferences: SnapshotPreferences {
             review: review_settings(&tx)?,
+            review_scope: review_scope(&tx)?,
             auto_enroll: auto_enroll(&tx)?,
             speech: speech_preferences(&tx)?,
             interface: interface_preferences(&tx)?,
@@ -344,6 +345,18 @@ pub fn export_learning_snapshot(
         },
         dictionary_catalog: read_dictionary_catalog(&tx)?,
     };
+    if let ReviewScope::Vocabulary { category_ids, .. } = &snapshot.preferences.review_scope {
+        let categories: HashSet<_> = snapshot
+            .categories
+            .iter()
+            .map(|category| category.id)
+            .collect();
+        if !category_ids.iter().all(|id| categories.contains(id)) {
+            return Err(StorageError::Invalid(
+                "Review scope references a missing snapshot category".into(),
+            ));
+        }
+    }
     for (index, rating) in snapshot.ratings.iter_mut().enumerate() {
         rating.sequence = index as u64 + 1;
     }

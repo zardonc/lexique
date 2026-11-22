@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useReviewQueue } from './use-review-queue';
+import { ReviewScopeSelector, useReviewScope } from './use-review-scope';
 import type { Locale } from './content';
 import type { SpeechAudio } from './platform/speech';
 import type { NotebookText } from './notebook-content';
@@ -10,9 +11,9 @@ import { QueueReviewCard } from './review-cards';
 import { pendingReviewRevision, pendingUndoKey, readPendingUndo, removePendingReview } from './pending-review-requests';
 
 const messages = {
-  zh: { loading: '正在读取复习队列', preview: '浏览器预览无法读取复习队列。', done: '本轮完成', waiting: '尚未到期', quota: '今日额度已用完', verifying: '听音待校验', error: '队列读取失败', retry: '刷新队列', undo: '撤销最近评分', undoError: '撤销失败', rebuilt: '旧版评分已撤销，队列顺序可能变化。', counts: (count: number) => `待复习：${count} 张` },
-  en: { loading: 'Loading review queue', preview: 'Review queue is unavailable in browser preview.', done: 'Review complete', waiting: 'Not due yet', quota: 'Daily limit reached', verifying: 'Audio awaiting verification', error: 'Could not load review queue', retry: 'Refresh queue', undo: 'Undo last rating', undoError: 'Could not undo rating', rebuilt: 'Earlier rating undone. The queue order may change.', counts: (count: number) => `Cards remaining: ${count}` },
-  fr: { loading: 'Chargement de la file', preview: 'La file est indisponible dans l’aperçu web.', done: 'Révision terminée', waiting: 'Pas encore à réviser', quota: 'Limite quotidienne atteinte', verifying: 'Audio en attente de vérification', error: 'Lecture de la file impossible', retry: 'Actualiser la file', undo: 'Annuler la dernière évaluation', undoError: 'Annulation impossible', rebuilt: 'Ancienne évaluation annulée. L’ordre de la file peut changer.', counts: (count: number) => `Cartes restantes : ${count}` },
+  zh: { loading: '正在读取复习队列', preview: '浏览器预览无法读取复习队列。', done: '本轮完成', chooseScope: '请选择复习范围', emptyScope: '此范围内没有已加入复习的生词', waiting: '尚未到期', quota: '今日额度已用完', verifying: '听音待校验', error: '队列读取失败', retry: '刷新队列', undo: '撤销最近评分', undoError: '撤销失败', rebuilt: '旧版评分已撤销，队列顺序可能变化。', counts: (count: number) => `待复习：${count} 张` },
+  en: { loading: 'Loading review queue', preview: 'Review queue is unavailable in browser preview.', done: 'Review complete', chooseScope: 'Choose a review scope', emptyScope: 'No enrolled vocabulary in this scope', waiting: 'Not due yet', quota: 'Daily limit reached', verifying: 'Audio awaiting verification', error: 'Could not load review queue', retry: 'Refresh queue', undo: 'Undo last rating', undoError: 'Could not undo rating', rebuilt: 'Earlier rating undone. The queue order may change.', counts: (count: number) => `Cards remaining: ${count}` },
+  fr: { loading: 'Chargement de la file', preview: 'La file est indisponible dans l’aperçu web.', done: 'Révision terminée', chooseScope: 'Choisissez un périmètre', emptyScope: 'Aucun vocabulaire inscrit dans ce périmètre', waiting: 'Pas encore à réviser', quota: 'Limite quotidienne atteinte', verifying: 'Audio en attente de vérification', error: 'Lecture de la file impossible', retry: 'Actualiser la file', undo: 'Annuler la dernière évaluation', undoError: 'Annulation impossible', rebuilt: 'Ancienne évaluation annulée. L’ordre de la file peut changer.', counts: (count: number) => `Cartes restantes : ${count}` },
 } as const;
 
 
@@ -21,15 +22,13 @@ function QueueCard({ view, audio, runtime, text, refresh, skip }: { readonly vie
   const record = view.record;
   if (!card || !record) return null;
   if (card.kind === 'listening' && !audio) return null;
-  const enabled = view.summary.admitted_count > 0 || view.queue.reason === null;
-  return <QueueReviewCard key={card.id} card={card} record={record} runtime={runtime} text={text} enabled={enabled} progressRevision={view.window[0].progress.revision} audio={card.kind === 'listening' ? audio : null} onRated={() => { void refresh(); }} onSkip={() => skip(card.id)} />;
+  return <QueueReviewCard key={card.id} card={card} record={record} runtime={runtime} text={text} progressRevision={view.window[0].progress.revision} audio={card.kind === 'listening' ? audio : null} onRated={() => { void refresh(); }} onSkip={() => skip(card.id)} />;
 }
 
 function emptyMessage(view: QueueView, labels: (typeof messages)[Locale], text: NotebookText) {
-  if (view.queue.reason === 'quota') return labels.quota;
-  if (view.queue.reason === 'clock') return text.availability.clock;
-  if (view.queue.reason === 'deferred') return text.availability.deferred;
-  if (view.queue.reason) return labels.waiting;
+  const reasons = { needs_selection: labels.chooseScope, empty_scope: labels.emptyScope, paused: text.availability.paused,
+    quota: labels.quota, clock: text.availability.clock, deferred: text.availability.deferred, due: labels.waiting };
+  if (view.queue.reason) return reasons[view.queue.reason];
   if (view.audio_error) return labels.error;
   if (view.summary.audio_pending_count > 0) return text.listeningPending;
   if (view.summary.verification_pending) return labels.verifying;
@@ -55,13 +54,18 @@ export function ReviewQueuePanel({ runtime, locale, text }: { readonly runtime: 
   const labels = messages[locale];
   const [rebuilt, setRebuilt] = useState(false);
   const [ratingVersion, setRatingVersion] = useState(0);
-  const { view, audio, status, error, refresh, next, retry, skip } = useReviewQueue(runtime, text.listeningPending);
-  async function rated() { setRatingVersion((version) => version + 1); await next(); }
+  const [completed, setCompleted] = useState(false);
+  const scope = useReviewScope(runtime);
+  const { view, audio, status, error, refresh, next, retry, skip } = useReviewQueue(runtime, text.listeningPending, scope);
+  useEffect(() => { if (!scope.pending) setCompleted(false); }, [scope.pending]);
+  async function rated() { setCompleted(true); setRatingVersion((version) => version + 1); await next(); if (await scope.applyPending()) setCompleted(false); }
+  async function skipped(id: number) { if (scope.busy) return; setCompleted(true); skip(id); if (await scope.applyPending()) setCompleted(false); }
   return <section aria-label={labels.loading}>
+    <ReviewScopeSelector state={scope} locale={locale} hasCard={!completed && Boolean(view?.queue.cards.length)} />
     {status === 'loading' && <p role="status">{labels.loading}</p>}
     {status === 'preview' && <p>{labels.preview}</p>}
     {error && <p role="alert">{labels.error}: {error}</p>}
-    {view && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={rated} labels={labels} skip={skip} />}
+    {view && !scope.busy && !completed && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={rated} labels={labels} skip={(id) => { void skipped(id); }} />}
     {rebuilt && <p role="status">{labels.rebuilt}</p>}
     <QueueActions status={status} view={view} runtime={runtime} text={text} labels={labels} refresh={refresh} retry={retry} setRebuilt={setRebuilt} ratingVersion={ratingVersion} />
   </section>;

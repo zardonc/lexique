@@ -41,9 +41,9 @@ mod vocabulary;
 mod webview_diagnostics;
 use vocabulary::{
     DatabasePath, finish_close, review_add, review_auto_enroll, review_availability, review_cards,
-    review_pause, review_progress, review_queue, review_rate, review_settings, review_undo,
-    review_undo_target, speech_cached, speech_generate, speech_preferences, speech_preview,
-    vocabulary_find, vocabulary_list, vocabulary_save, vocabulary_sort,
+    review_pause, review_progress, review_queue, review_rate, review_scope, review_settings,
+    review_undo, review_undo_target, speech_cached, speech_generate, speech_preferences,
+    speech_preview, vocabulary_find, vocabulary_list, vocabulary_save, vocabulary_sort,
 };
 
 mod status;
@@ -223,6 +223,7 @@ pub fn run() {
             review_auto_enroll,
             review_cards,
             review_availability,
+            review_scope,
             review_progress,
             review_rate,
             review_undo_target,

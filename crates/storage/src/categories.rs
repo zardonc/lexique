@@ -103,6 +103,7 @@ pub fn delete_category(connection: &Connection, id: i64) -> Result<(), StorageEr
     }
     tx.execute("UPDATE vocabulary SET revision = revision + 1, updated_at = MAX(updated_at + 1, CAST(unixepoch('subsec') * 1000 AS INTEGER)) WHERE id IN (SELECT record_id FROM record_categories WHERE category_id = ?1)", [id])?;
     tx.execute("DELETE FROM learning_categories WHERE id = ?1", [id])?;
+    crate::review_scope::review_scope(&tx)?;
     tx.commit()?;
     Ok(())
 }

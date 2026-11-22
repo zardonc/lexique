@@ -1,13 +1,13 @@
 //! V03 isolated candidate. Product callers and schema remain unchanged.
 use std::{
-    path::PathBuf,
+    path::{Path, PathBuf},
     sync::atomic::{AtomicU64, Ordering},
     time::Instant,
 };
 
 use candidate as review;
 pub use candidate::{QueueAudioMetadata, QueueCard, ReviewProgress};
-pub use lexique_storage::StorageError;
+pub use lexique_storage::{ReviewScope, StorageError, review_scope};
 #[path = "../src/queue_cache.rs"]
 mod queue_cache;
 pub use queue_cache::*;
@@ -53,28 +53,35 @@ mod candidate {
     }
 }
 
-fn database_root(nonce: u128) -> PathBuf {
+fn default_database_parent() -> PathBuf {
+    Path::new(env!("CARGO_MANIFEST_DIR")).join("../../target/issue-24")
+}
+
+fn database_root(parent: &Path, nonce: u128) -> PathBuf {
     static NEXT_DATABASE_ID: AtomicU64 = AtomicU64::new(0);
     let id = NEXT_DATABASE_ID.fetch_add(1, Ordering::Relaxed);
-    PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .join("../../target/issue-24")
-        .join(format!(
-            "preflight-sqlite-{}-{nonce}-{id}",
-            std::process::id()
-        ))
+    parent.join(format!(
+        "preflight-sqlite-{}-{nonce}-{id}",
+        std::process::id()
+    ))
 }
 
 #[test]
 fn database_roots_stay_unique_when_clock_values_repeat() {
-    assert_ne!(database_root(0), database_root(0));
+    let parent = default_database_parent();
+    assert_ne!(database_root(&parent, 0), database_root(&parent, 0));
 }
 
 fn database(count: i64) -> (PathBuf, Connection) {
+    database_at(&default_database_parent(), count)
+}
+
+fn database_at(parent: &Path, count: i64) -> (PathBuf, Connection) {
     let nonce = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .unwrap()
         .as_nanos();
-    let root = database_root(nonce);
+    let root = database_root(parent, nonce);
     std::fs::create_dir_all(&root).unwrap();
     let path = root.join("test.sqlite3");
     let mut connection = Connection::open(&path).unwrap();
@@ -174,10 +181,13 @@ fn v03_per_word_failure_rolls_back_first_card_and_commit_failure_reports_no_succ
 
 #[test]
 fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
+    let parent = std::env::var_os("V03_TIMING_DB_ROOT")
+        .map(PathBuf::from)
+        .unwrap_or_else(default_database_parent);
     for size in [20, 50, 100] {
         let mut contended_samples = 0;
         for repeat in 0..10 {
-            let (path, mut connection) = database(size + 1);
+            let (path, mut connection) = database_at(&parent, size + 1);
             let existing = lexique_storage::add_review(&mut connection, size + 1).unwrap();
             let barrier = std::sync::Barrier::new(2);
             let contended = std::thread::scope(|scope| {
