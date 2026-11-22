@@ -38,18 +38,50 @@ impl ReviewScope {
 }
 
 pub fn review_scope(connection: &Connection) -> Result<ReviewScope, StorageError> {
-    let value: Option<String> = connection
+    let tx = connection
+        .is_autocommit()
+        .then(|| rusqlite::Transaction::new_unchecked(connection, TransactionBehavior::Immediate))
+        .transpose()?;
+    let reader = tx.as_deref().unwrap_or(connection);
+    let value: Option<String> = reader
         .query_row(
             "SELECT value FROM app_metadata WHERE key = 'review-scope'",
             [],
             |row| row.get(0),
         )
         .optional()?;
-    let scope: ReviewScope = value
+    let mut scope: ReviewScope = value
         .map(|value| serde_json::from_str(&value))
         .transpose()?
         .unwrap_or_default();
     scope.validate()?;
+    let saved = scope.clone();
+    if let ReviewScope::Vocabulary {
+        category_ids,
+        include_uncategorized,
+    } = &mut scope
+    {
+        let mut valid = Vec::new();
+        for id in category_ids.iter() {
+            if reader.query_row(
+                "SELECT EXISTS(SELECT 1 FROM learning_categories WHERE id = ?1)",
+                [id],
+                |row| row.get::<_, bool>(0),
+            )? {
+                valid.push(*id);
+            }
+        }
+        *category_ids = valid;
+        if category_ids.is_empty() && !*include_uncategorized {
+            scope = ReviewScope::NeedsSelection {};
+        }
+    }
+    if scope != saved {
+        persist_review_scope(reader, &scope)?;
+    }
+    if let Some(tx) = tx {
+        tx.commit()?;
+    }
     Ok(scope)
 }
 
@@ -67,11 +99,16 @@ pub fn set_review_scope(connection: &Connection, scope: &ReviewScope) -> Result<
             }
         }
     }
-    tx.execute("INSERT INTO app_metadata(key,value) VALUES('review-scope',?1) ON CONFLICT(key) DO UPDATE SET value=excluded.value", [serde_json::to_string(scope)?])?;
-    tx.execute(
+    persist_review_scope(&tx, scope)?;
+    tx.commit()?;
+    Ok(())
+}
+
+fn persist_review_scope(connection: &Connection, scope: &ReviewScope) -> Result<(), StorageError> {
+    connection.execute("INSERT INTO app_metadata(key,value) VALUES('review-scope',?1) ON CONFLICT(key) DO UPDATE SET value=excluded.value", [serde_json::to_string(scope)?])?;
+    connection.execute(
         "INSERT INTO review_queue_changes(kind) VALUES('context')",
         [],
     )?;
-    tx.commit()?;
     Ok(())
 }

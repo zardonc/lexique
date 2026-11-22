@@ -113,7 +113,10 @@ impl QueueCache {
                     && changes
                         .first()
                         .is_none_or(|c| c.revision != self.revision + 1)));
-        let collection = changes.iter().any(|change| change.kind == "collection");
+        let collection = changes.iter().any(|change| {
+            change.kind == "collection"
+                || (scope != crate::ReviewScope::All {} && change.kind == "record")
+        });
         let context = self.day != day
             || self.timezone != timezone
             || self.scope != scope

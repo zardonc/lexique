@@ -22,8 +22,7 @@ function QueueCard({ view, audio, runtime, text, refresh, skip }: { readonly vie
   const record = view.record;
   if (!card || !record) return null;
   if (card.kind === 'listening' && !audio) return null;
-  const enabled = view.summary.admitted_count > 0 || view.queue.reason === null;
-  return <QueueReviewCard key={card.id} card={card} record={record} runtime={runtime} text={text} enabled={enabled} progressRevision={view.window[0].progress.revision} audio={card.kind === 'listening' ? audio : null} onRated={() => { void refresh(); }} onSkip={() => skip(card.id)} />;
+  return <QueueReviewCard key={card.id} card={card} record={record} runtime={runtime} text={text} progressRevision={view.window[0].progress.revision} audio={card.kind === 'listening' ? audio : null} onRated={() => { void refresh(); }} onSkip={() => skip(card.id)} />;
 }
 
 function emptyMessage(view: QueueView, labels: (typeof messages)[Locale], text: NotebookText) {
@@ -55,16 +54,18 @@ export function ReviewQueuePanel({ runtime, locale, text }: { readonly runtime: 
   const labels = messages[locale];
   const [rebuilt, setRebuilt] = useState(false);
   const [ratingVersion, setRatingVersion] = useState(0);
+  const [completed, setCompleted] = useState(false);
   const scope = useReviewScope(runtime);
-  const { view, audio, status, error, refresh, next, retry, skip } = useReviewQueue(runtime, text.listeningPending, scope.applied);
-  async function rated() { setRatingVersion((version) => version + 1); await next(); await scope.applyPending(); }
-  function skipped(id: number) { if (scope.busy) return; skip(id); void scope.applyPending(); }
+  const { view, audio, status, error, refresh, next, retry, skip } = useReviewQueue(runtime, text.listeningPending, scope);
+  useEffect(() => { if (!scope.pending) setCompleted(false); }, [scope.pending]);
+  async function rated() { setCompleted(true); setRatingVersion((version) => version + 1); await next(); if (await scope.applyPending()) setCompleted(false); }
+  async function skipped(id: number) { if (scope.busy) return; setCompleted(true); skip(id); if (await scope.applyPending()) setCompleted(false); }
   return <section aria-label={labels.loading}>
-    <ReviewScopeSelector state={scope} locale={locale} hasCard={Boolean(view?.queue.cards.length)} />
+    <ReviewScopeSelector state={scope} locale={locale} hasCard={!completed && Boolean(view?.queue.cards.length)} />
     {status === 'loading' && <p role="status">{labels.loading}</p>}
     {status === 'preview' && <p>{labels.preview}</p>}
     {error && <p role="alert">{labels.error}: {error}</p>}
-    {view && !scope.busy && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={rated} labels={labels} skip={skipped} />}
+    {view && !scope.busy && !completed && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={rated} labels={labels} skip={(id) => { void skipped(id); }} />}
     {rebuilt && <p role="status">{labels.rebuilt}</p>}
     <QueueActions status={status} view={view} runtime={runtime} text={text} labels={labels} refresh={refresh} retry={retry} setRebuilt={setRebuilt} ratingVersion={ratingVersion} />
   </section>;

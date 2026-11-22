@@ -745,8 +745,26 @@ pub fn review_availability(
     now: i64,
     timezone: &str,
 ) -> Result<ReviewAvailability, StorageError> {
+    review_presentation_availability(connection, card_id, now, timezone, None)
+}
+
+pub fn review_presentation_availability(
+    connection: &Connection,
+    card_id: i64,
+    now: i64,
+    timezone: &str,
+    presentation_revision: Option<i64>,
+) -> Result<ReviewAvailability, StorageError> {
     let progress = review_progress(connection, card_id)?;
-    let (reason, available_at) = eligibility(connection, card_id, &progress.card, now, timezone)?;
+    // Only the platform's current queue presentation carries a completion revision.
+    let (reason, available_at) = eligibility(
+        connection,
+        card_id,
+        &progress.card,
+        now,
+        timezone,
+        presentation_revision == Some(progress.revision),
+    )?;
     Ok(ReviewAvailability {
         progress,
         reason,
@@ -760,8 +778,9 @@ fn eligibility(
     card: &Card,
     now: i64,
     timezone: &str,
+    finish_presentation: bool,
 ) -> Result<(Option<String>, Option<i64>), StorageError> {
-    if !card_in_scope(connection, card_id)? {
+    if !finish_presentation && !card_in_scope(connection, card_id)? {
         return Ok((Some("scope".into()), None));
     }
     let paused: bool = connection.query_row(
@@ -869,6 +888,14 @@ pub fn rate_card(
     connection: &mut Connection,
     request: &RatingRequest,
 ) -> Result<serde_json::Value, StorageError> {
+    rate_presented_card(connection, request, None)
+}
+
+pub fn rate_presented_card(
+    connection: &mut Connection,
+    request: &RatingRequest,
+    presentation_revision: Option<i64>,
+) -> Result<serde_json::Value, StorageError> {
     if request.operation.is_empty()
         || request.operation.len() > 128
         || request.card_id <= 0
@@ -939,9 +966,14 @@ pub fn rate_card(
         "review"
     };
     let latest = latest_review_time(&tx)?;
-    if let (Some(reason), _) =
-        eligibility(&tx, request.card_id, &card, request.now, &request.timezone)?
-    {
+    if let (Some(reason), _) = eligibility(
+        &tx,
+        request.card_id,
+        &card,
+        request.now,
+        &request.timezone,
+        presentation_revision == Some(revision),
+    )? {
         return Err(StorageError::RatingUnavailable(reason));
     }
     let before = serde_json::to_string(&card)?;
