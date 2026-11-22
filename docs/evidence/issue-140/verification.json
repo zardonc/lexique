@@ -1,0 +1,64 @@
+{
+  "ticket": 140,
+  "role": "content_author",
+  "checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/author-140",
+  "branch": "codex/d2-content-140",
+  "platform": "Windows x64, PowerShell 7, uv Python 3.14.10",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-140",
+  "independent_acceptance": false,
+  "integration_merge": {
+    "command": "git merge --no-edit codex/d2-content-140-149",
+    "branch_head": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
+    "result": "passed: already up to date; integration HEAD is an ancestor"
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py",
+      "phase": "initial missing-content check",
+      "result": "expected failure: all 50 frozen groups missing batch content",
+      "log": "target/issue-140/RED.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_handoff_retains_pending_independent_quality_and_rights",
+      "phase": "missing author rights handoff",
+      "result": "expected failure: rights.json absent",
+      "log": "target/issue-140/RED-rights.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py",
+      "phase": "resource and admission boundary",
+      "result": "passed five checks before snapshot verification was added",
+      "log": "target/issue-140/GREEN-source-boundary.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-140/reproduce.py",
+      "result": "passed: all nine author JSON files reproduced byte for byte from retained captures",
+      "log": "reproduction.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py",
+      "phase": "final author proposals and snapshots",
+      "result": "passed all six tests",
+      "log": "GREEN.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed: no documentation or repository-link problems",
+      "log": "docs.log"
+    }
+  ],
+  "author_unresolved_content_rows": [],
+  "missing_authored_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_selected_rights_fields": 200,
+  "newly_admitted_fields": 0,
+  "missing_admitted_batch_fields": 200,
+  "unrun": [
+    "Independent quality and selected-text rights review",
+    "Independent construction and spelling review",
+    "Canonical conversion and actual combined packaged notices",
+    "Native lookup/save/reopen and resource-update preservation",
+    "Learner acceptance and release gates"
+  ],
+  "closeout_record": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-140/closeout.json"
+}
