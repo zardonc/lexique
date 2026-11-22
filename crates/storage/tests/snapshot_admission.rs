@@ -1701,6 +1701,7 @@ fn portable_preferences_and_ordered_catalog_exclude_private_device_metadata() {
         snapshot["preferences"],
         json!({
             "review":{"retention_percent":95,"new_limit":3,"review_limit":7,"new_cards_ignore_review_limit":true},
+            "review_scope":{"kind":"all"},
             "auto_enroll":true,"speech":{"voice":"male","wpm":100},"interface":{"locale":"fr","theme":"dark"},
             "conjugation":{"mode":"main","block_order":order},"vocabulary_sort":"headword-asc",
             "grammar_sort":"updated-desc","undo_blocked":false,

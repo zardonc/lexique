@@ -44,6 +44,109 @@ fn saved_word(connection: &mut Connection, headword: &str) -> i64 {
 }
 
 #[test]
+fn invalid_review_scopes_are_rejected_before_snapshot_import_changes_learning_data() {
+    use lexique_storage::*;
+    use serde_json::json;
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    create_category(&source, "Voyage").unwrap();
+    let snapshot = export_learning_snapshot(&mut source, 1_800_000_000).unwrap();
+    let mut destination = Connection::open_in_memory().unwrap();
+    initialize(&destination).unwrap();
+    let id = saved_word(&mut destination, "destination");
+    let before =
+        serde_json::to_value(export_learning_snapshot(&mut destination, 1_800_000_000).unwrap())
+            .unwrap();
+    for scope in [
+        json!({"kind":"vocabulary","category_ids":[1,1],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[2],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[0],"include_uncategorized":true}),
+        json!({"kind":"vocabulary","category_ids":[-1],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[9_007_199_254_740_992_i64],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[1]}),
+        json!({"kind":"vocabulary","include_uncategorized":true}),
+        json!({"kind":"vocabulary","category_ids":[1.5],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":["1"],"include_uncategorized":false}),
+        json!({"kind":"vocabulary","category_ids":[1],"include_uncategorized":"yes"}),
+        json!({"kind":"all","category_ids":[1]}),
+        json!({"kind":"needs_selection","pending":{"kind":"all"}}),
+        json!({"kind":"unknown"}),
+        json!({}),
+        json!(null),
+    ] {
+        let mut value = serde_json::to_value(&snapshot).unwrap();
+        value["preferences"]["review_scope"] = scope.clone();
+        let bytes = serde_json::to_vec(&value).unwrap();
+        assert!(
+            read_learning_snapshot(bytes.as_slice(), 1_800_000_000).is_err(),
+            "{scope}"
+        );
+        if let Ok(decoded) = serde_json::from_value::<LearningSnapshot>(value) {
+            let mut empty = Connection::open_in_memory().unwrap();
+            initialize(&empty).unwrap();
+            assert!(import_learning_snapshot(&mut empty, &decoded, 1_800_000_000).is_err());
+            assert!(learning_categories(&empty).unwrap().is_empty());
+        }
+        assert_eq!(get(&destination, id).unwrap().headword, "destination");
+        assert_eq!(
+            serde_json::to_value(
+                export_learning_snapshot(&mut destination, 1_800_000_000).unwrap()
+            )
+            .unwrap(),
+            before
+        );
+    }
+}
+
+#[test]
+fn export_normalizes_stale_current_scope_and_roundtrips_the_remaining_choice() {
+    use lexique_storage::*;
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let category = create_category(&connection, "Voyage").unwrap();
+    for (ids, uncategorized, expected) in [
+        (
+            vec![category.id, 99],
+            false,
+            ReviewScope::Vocabulary {
+                category_ids: vec![category.id],
+                include_uncategorized: false,
+            },
+        ),
+        (
+            vec![99],
+            true,
+            ReviewScope::Vocabulary {
+                category_ids: vec![],
+                include_uncategorized: true,
+            },
+        ),
+        (vec![99], false, ReviewScope::NeedsSelection {}),
+    ] {
+        let stale = ReviewScope::Vocabulary {
+            category_ids: ids,
+            include_uncategorized: uncategorized,
+        };
+        connection
+            .execute(
+                "INSERT OR REPLACE INTO app_metadata(key,value) VALUES('review-scope',?1)",
+                [serde_json::to_string(&stale).unwrap()],
+            )
+            .unwrap();
+        let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
+        assert_eq!(snapshot.preferences.review_scope, expected);
+        assert_eq!(review_scope(&connection).unwrap(), expected);
+        let bytes = serde_json::to_vec(&snapshot).unwrap();
+        let decoded = read_learning_snapshot(bytes.as_slice(), 1_800_000_000).unwrap();
+        let mut destination = Connection::open_in_memory().unwrap();
+        initialize(&destination).unwrap();
+        import_learning_snapshot(&mut destination, &decoded, 1_800_000_000).unwrap();
+        assert_eq!(review_scope(&destination).unwrap(), expected);
+    }
+}
+
+#[test]
 fn historical_batch_voice_survives_a_later_audio_replacement() {
     use lexique_storage::*;
     let mut connection = Connection::open_in_memory().unwrap();
@@ -150,6 +253,10 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
         serde_json::json!({"voice": "female", "wpm": 180})
     );
     assert_eq!(value["preferences"]["auto_enroll"], false);
+    assert_eq!(
+        value["preferences"]["review_scope"],
+        serde_json::json!({"kind": "all"})
+    );
     assert_eq!(value["preferences"]["grammar_sort"], "updated-desc");
     assert_eq!(value["preferences"]["undo_blocked"], false);
     assert_eq!(

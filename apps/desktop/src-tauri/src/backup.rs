@@ -1324,6 +1324,10 @@ mod tests {
         for version in [4, 3, 2, 1] {
             let mut value = serde_json::to_value(&snapshot).unwrap();
             value["snapshot_version"] = version.into();
+            value["preferences"]
+                .as_object_mut()
+                .unwrap()
+                .remove("review_scope");
             if version < 3 {
                 for key in [
                     "grammar_records",
@@ -1385,6 +1389,10 @@ mod tests {
                 storage::DEFAULT_SORT
             );
             assert!(!admitted.snapshot.preferences.undo_blocked);
+            assert_eq!(
+                admitted.snapshot.preferences.review_scope,
+                storage::ReviewScope::All {}
+            );
             drop(staging);
             manifest_value["snapshot_version"] = if version == 1 { 2 } else { 1 }.into();
             entries[0].1 = serde_json::to_vec(&manifest_value).unwrap();

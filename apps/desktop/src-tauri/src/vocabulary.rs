@@ -547,23 +547,30 @@ pub async fn review_availability(
     maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     card_id: i64,
     timezone: String,
+    presentation_revision: Option<i64>,
 ) -> Result<lexique_storage::ReviewAvailability, String> {
-    if card_id <= 0 || card_id > 9_007_199_254_740_991 || timezone.len() > 128 {
+    if card_id <= 0
+        || card_id > 9_007_199_254_740_991
+        || timezone.len() > 128
+        || presentation_revision
+            .is_some_and(|revision| !(0..=9_007_199_254_740_991).contains(&revision))
+    {
         return Err("Invalid card ID or timezone".into());
     }
-    let reader = maintenance.admit_reader()?;
+    let admission = maintenance.admit()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
-        let _reader = reader;
+        let _admission = admission;
         let now = std::time::SystemTime::now()
             .duration_since(std::time::UNIX_EPOCH)
             .map_err(|e| e.to_string())?
             .as_secs();
-        lexique_storage::review_availability(
+        lexique_storage::review_presentation_availability(
             &open(&path)?,
             card_id,
             i64::try_from(now).map_err(|e| e.to_string())?,
             &timezone,
+            presentation_revision,
         )
         .map_err(|e| e.to_string())
     })
@@ -673,11 +680,14 @@ pub async fn review_rate(
     app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     request: RateInput,
+    presentation_revision: Option<i64>,
 ) -> Result<RateOutcome, String> {
     let admission = crate::maintenance::admit_app(&app)?;
     if request.card_id <= 0
         || request.card_id > 9_007_199_254_740_991
         || request.expected_revision > 9_007_199_254_740_991
+        || presentation_revision
+            .is_some_and(|revision| !(0..=9_007_199_254_740_991).contains(&revision))
     {
         return Err("Invalid card ID or revision".into());
     }
@@ -697,7 +707,11 @@ pub async fn review_rate(
             now,
             timezone: request.timezone,
         };
-        match lexique_storage::rate_card(&mut open(&path)?, &rating) {
+        match lexique_storage::rate_presented_card(
+            &mut open(&path)?,
+            &rating,
+            presentation_revision,
+        ) {
             Ok(result) => {
                 crate::speech_tasks::changed(&app);
                 Ok(RateOutcome::Committed { result })
@@ -1156,4 +1170,26 @@ pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
         close.commit();
     }
     result
+}
+
+#[tauri::command]
+pub async fn review_scope(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+    scope: Option<lexique_storage::ReviewScope>,
+) -> Result<lexique_storage::ReviewScope, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        let connection = open(&path)?;
+        if let Some(scope) = scope {
+            lexique_storage::set_review_scope(&connection, &scope)
+                .map_err(|error| error.to_string())?;
+            crate::speech_tasks::changed(&app);
+        }
+        lexique_storage::review_scope(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review scope task failed: {error}"))?
 }

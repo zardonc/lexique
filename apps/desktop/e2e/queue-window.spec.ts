@@ -13,7 +13,7 @@ const entries = [entry(1, 'listening'), entry(2, 'recognition')];
 function payload(revision: number, changed = entries, before: number | null = null) {
   return { queue: { cards: entries.map((entry) => entry.card), reason: null, available_at: null }, record: entries[0].record,
     audio_pending: false, audio_error: null, audio_vocabulary_id: null, window: changed,
-    summary: { admitted_count: 20 + revision, audio_pending_count: 0, missing_vocabulary_ids: [], verification_pending: false,
+    summary: { scope: { kind: 'all' }, admitted_count: 20 + revision, audio_pending_count: 0, missing_vocabulary_ids: [], verification_pending: false,
       learning_day: '2026-11-04', timezone: 'UTC', revision },
     delta: { before_revision: before, after_revision: revision, removed: [], order: [1, 2] },
     metrics: { metadata_candidates: 20, strict_probes: 0, compressed_bytes: audio.bytes.length, payload_bytes: changed.reduce((sum, entry) => sum + (entry.audio?.bytes.length ?? 0), 0),

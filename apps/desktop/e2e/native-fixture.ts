@@ -45,7 +45,7 @@ class NativeFixture {
         { id: 'builtin-core', title: 'Lexique core pilot', content_hash: null, availability: 'available' }],
       vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
       grammar_list: [], grammar_get: null, grammar_sort: 'updated-desc', grammar_delete: null,
-      learning_categories: [], category_delete: null,
+      learning_categories: [], category_delete: null, review_scope: { kind: 'all' },
       interface_preferences: { locale: 'zh', theme: 'white' },
       speech_preferences: { voice: 'female', wpm: 180 }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
@@ -70,8 +70,8 @@ class NativeFixture {
       items: request.vocabulary_ids.map((vocabulary_id) => ({ vocabulary_id, created_cards: 2, error: null, audio_state: 'queued', audio_error: null })) };
   }
   private settings(command: string, args?: Record<string, unknown>) {
-    const settingKey = command === 'speech_preferences' || command === 'interface_preferences' ? 'preferences' : 'settings';
-    if (['speech_preferences', 'interface_preferences', 'review_settings'].includes(command) && args?.[settingKey]) this.defaults[command] = args[settingKey];
+    const settingKey = { speech_preferences: 'preferences', interface_preferences: 'preferences', review_settings: 'settings', review_scope: 'scope' }[command];
+    if (settingKey && args?.[settingKey]) this.defaults[command] = args[settingKey];
     const booleanKey = { review_auto_enroll: 'enabled', review_pause: 'paused' }[command];
     if (booleanKey && typeof args?.[booleanKey] === 'boolean') this.defaults[command] = args[booleanKey];
   }
@@ -125,6 +125,7 @@ class NativeFixture {
     return this.response(command, response.value, args);
   }
   private response(command: string, value: unknown, args?: Record<string, unknown>) {
+    if (command === 'review_scope') this.defaults[command] = value;
     if (command === 'ocr_image') { this.emit('selection-input', value); return null; }
     if (command === 'vocabulary_save') this.defaults.vocabulary_find = (value as { record: unknown }).record;
     if (command === 'grammar_save' || command === 'grammar_card_save') this.defaults.grammar_get = (value as { record: unknown }).record;
@@ -135,7 +136,7 @@ class NativeFixture {
     const view=value as { queue: { cards: { id:number; vocabulary_id:number; kind:string }[] }; record:typeof record|null; audio_pending:boolean; window?:unknown };
     if (!view || view.window !== undefined) return value;
     const audio=this.responses.speech_cached?.[0]?.value ?? { bytes: [79,103,103,83], voice: 'female' };
-    return { ...view, summary: { admitted_count:view.queue.cards.length,audio_pending_count:view.audio_pending?1:0,missing_vocabulary_ids:[],verification_pending:false,learning_day:'2026-11-04',timezone:'UTC',revision:0,unknown_legacy:false },
+    return { ...view, summary: { scope: this.defaults.review_scope, admitted_count:view.queue.cards.length,audio_pending_count:view.audio_pending?1:0,missing_vocabulary_ids:[],verification_pending:false,learning_day:'2026-11-04',timezone:'UTC',revision:0,unknown_legacy:false },
       window:view.queue.cards.map((card)=>({ card,record:{...view.record,id:card.vocabulary_id},progress:this.responses.review_progress?.[0]?.value ?? this.defaults.review_progress,
         version:card.kind==='listening'?'a'.repeat(64):null,content_hash:card.kind==='listening'?'b'.repeat(64):null,audio:card.kind==='listening'?audio:null })),
       delta: { before_revision:null,after_revision:0,removed:[],order:view.queue.cards.map((card)=>card.id) },

@@ -191,6 +191,7 @@ fn main() {
             "review_auto_enroll",
             "review_cards",
             "review_availability",
+            "review_scope",
             "review_progress",
             "review_rate",
             "review_undo_target",
