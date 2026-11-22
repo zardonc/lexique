@@ -93,3 +93,11 @@ the review archive. `--admitted` is a separate canonical-content oracle; this
 shard does not satisfy all 50 groups. Native/global assembly, full/Lite packaging,
 release gates, learner feedback and tracker operations belong to the coordinator.
 The scoped review commit changes only its evidence and focused test.
+
+The [metadata alignment follow-up](metadata-alignment-verification.json) merges
+integration `75a7edd` and replaces 50 stale root source-context rights markers
+with the completed selected-text verdicts. The focused check compares each
+marker with its retained source audit and source/field rights decisions.
+Accepted prose is unchanged; `halte/ONO` retains its rights pass and unresolved
+quality status. Follow-up logs and the committed diff are archived separately
+under `metadata-alignment/` in the reviewer evidence root above.

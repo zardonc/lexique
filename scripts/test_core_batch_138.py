@@ -279,6 +279,51 @@ class Batch138Tests(unittest.TestCase):
                          if r["frozen_row"] == row and r["field"] == "french_definition")
             self.assertTrue(any(noun_number in r["reviewed_excerpt"] for r in field["supporting_sources"]))
 
+    def test_source_context_markers_match_completed_selected_text_verdicts(self):
+        context = read('source-context.json')
+        contexts = context['current_content']
+        rights = read('rights.json')
+        sources = {s['source_id']: s for s in rights['sources']}
+        audit = {s['source_id']: s for s in read('source-audit.json')['sources']}
+        reviews = {(f['sense_id'], f['field']): f
+                   for f in read('field-review.json')['fields']}
+        fields = {(f['sense_id'], f['field']): f for f in rights['fields']}
+        passed = 'passed_at_selected_text_boundary'
+        self.assertEqual(len(contexts), 50)
+        self.assertEqual({c['id'] for c in contexts}, set(sources))
+        self.assertEqual(set(sources), set(audit))
+        for c in contexts:
+            with self.subTest(source=c['id']):
+                source, capture = sources[c['id']], audit[c['id']]
+                self.assertEqual(c.get('selected_text_rights_status'), passed)
+                self.assertEqual(c['status'], 'passed_independent_selected_source_audit')
+                self.assertEqual(source['independent_review'], passed)
+                self.assertEqual(c['current_content_revid'], source['revid'])
+                self.assertEqual(c['current_content_revid'], capture['selected_revid'])
+                self.assertEqual(c['selected_locations'], source['selected_locations'])
+                self.assertEqual(c['selected_locations'], capture['selected_locations'])
+                self.assertEqual(c['independent_source_audit'], 'source-audit.json#' + c['id'])
+                self.assertTrue(c['selected_text_rights_reason'])
+                self.assertEqual(c['selected_text_rights_reason'], source['selected_text_rights_reason'])
+                self.assertEqual(c['selected_text_rights_reason'], capture['selected_source_rights_reason'])
+                for verdict in (c, source, capture):
+                    self.assertEqual(verdict['reviewer'], context['independent_reviewer'])
+                self.assertEqual({p['field'] for p in c['selected_locations']}, set(LANGUAGES))
+                for location in c['selected_locations']:
+                    key = (location['sense_id'], location['field'])
+                    field, review = fields[key], reviews[key]
+                    self.assertEqual(field['source_id'], c['id'])
+                    self.assertEqual(field['source_revision'], c['current_content_revid'])
+                    self.assertEqual(field['independent_review'], passed)
+                    self.assertEqual(review['rights_eligibility_status'], passed)
+                    self.assertTrue(review['selected_text_rights_reason'])
+                    self.assertEqual(field['selected_text_rights_reason'], review['selected_text_rights_reason'])
+                    if location['frozen_row'] == 2894:
+                        self.assertEqual(field['quality_admission_status'], 'unresolved_everyday_eligibility')
+                        self.assertEqual(review['accepted_text_quality_status'], 'unresolved_everyday_eligibility')
+                        self.assertIsNone(field['accepted_text'])
+                        self.assertIsNone(review['accepted_text'])
+
     def test_actual_import_boundary_and_retained_policy_material(self):
         contexts = read("source-context.json")["current_content"]
         signature = next(c for c in contexts if c["title"] == "signature")
