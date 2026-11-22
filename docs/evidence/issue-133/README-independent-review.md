@@ -27,6 +27,11 @@ their own reasons. [Authored snapshots](authored/snapshot.json) preserve origina
 records, including unresolved `r`. [Replacements](accepted-replacements.json) is empty.
 Historical helpers and structural checks do not supply linguistic verdicts.
 
+The canonical ledger records row 2626 under `annotation_exceptions` with the
+matching owner decision and four explicit `unresolved_fields`. Every source-context
+node carries its existing `selected_text_rights_status`: 50 admitted sources pass
+at the selected-text boundary; `r` remains `inspected_no_admitted_content`.
+
 ## Content and rights decisions
 
 All French definition, IPA, English and Chinese fields were read against their
@@ -85,9 +90,11 @@ git diff --cached --check
 ```
 
 The focused annotation regression failed on the authored unresolved status and
-passes on the exact owner-approved annotation. Five shard checks and the independent
+passes on the exact owner-approved annotation. Seven shard checks and the independent
 source audit pass. Documentation/link and diff results are recorded in
 [delivery identity](delivery.json) and the external archive.
+Canonical ledger and source-status regressions, preservation comparisons and the
+tested correction commit are retained in the archive's `metadata-alignment-0dbd00b/`.
 
 The shard has 196 accepted fields, zero ordinary missing fields and four annotation
 missing fields. Canonical assembly has zero newly installed fields and 196 pending

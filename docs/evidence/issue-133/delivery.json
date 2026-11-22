@@ -6,7 +6,7 @@
   "review_date": "2026-11-21",
   "author_commit": "afca8fa7a4a09121ed77fb99e72cbbc67b4ceae0",
   "review_base": "fdd2f3b1f057a9a5b7af05641502651253beb439",
-  "integration_tip_merged": "a15ed6345371399c177a33dbbfa2cad5ec8f922e",
+  "integration_tip_merged": "0dbd00bfe2dfeb673470edae2baac1231d750c78",
   "covered_work": "Scoped owned working-tree changes; resulting commit and post-commit checks retained in external final-verification.json.",
   "changed_paths": [
     "docs/evidence/issue-133/**",
@@ -54,8 +54,8 @@
   "checks": [
     {
       "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_133.py",
-      "result": "passed 5 focused shard checks",
-      "log": "accepted-shard-check.log"
+      "result": "passed 7 focused shard checks",
+      "log": "metadata-alignment-0dbd00b/metadata-schema-green.log"
     },
     {
       "command": "uv run --no-project python -B -X utf8 target/issue-133-review/audit.py",
@@ -78,30 +78,37 @@
     {
       "command": "pnpm test:docs",
       "result": "passed",
-      "log": "docs-check.log"
+      "log": "metadata-alignment-0dbd00b/metadata-docs-check.log"
     },
     {
       "command": "git diff --cached --check",
       "result": "passed",
-      "log": "diff-check.log"
+      "log": "metadata-alignment-0dbd00b/metadata-diff-check.log"
     },
     {
       "command": "uv run --no-project python -B -X utf8 target/issue-133-review/archive.py",
       "result": "passed literal authored-file and archive-byte comparisons",
       "log": "archive-check.json"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 target/issue-133-review/archive_metadata_alignment.py",
+      "result": "passed literal accepted-review preservation and source/cache archive comparisons",
+      "log": "metadata-alignment-0dbd00b/final-verification.json"
     }
   ],
   "regression_evidence": [
     "annotation-red.log",
     "annotation-green.log",
     "accepted-shape-red.log",
-    "accepted-shard-check.log"
+    "accepted-shard-check.log",
+    "metadata-alignment-0dbd00b/metadata-schema-red.log",
+    "metadata-alignment-0dbd00b/metadata-schema-green.log"
   ],
   "reviewer_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-133\\issue-133-review",
   "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-133",
   "author_preservation": "19 literal authored files match the supplied base; original unresolved r evidence retained.",
-  "patch_command": "git diff a15ed6345371399c177a33dbbfa2cad5ec8f922e -- docs/evidence/issue-133 scripts/test_core_batch_133.py",
-  "patch_path": "accepted-shard.patch",
+  "patch_command": "git diff 0dbd00bfe2dfeb673470edae2baac1231d750c78 -- docs/evidence/issue-133 scripts/test_core_batch_133.py",
+  "patch_path": "metadata-alignment-0dbd00b/accepted-shard.patch",
   "unrun_checks": [
     "canonical assembly/conversion and global annotation registration",
     "combined packaged obligations",
@@ -112,5 +119,20 @@
   ],
   "tracker_operations": "none",
   "canonical_newly_installed_fields": 0,
-  "canonical_pending_fields": 196
+  "canonical_pending_fields": 196,
+  "metadata_alignment_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-133\\issue-133-review\\metadata-alignment-0dbd00b",
+  "metadata_alignment": {
+    "annotation_exceptions": [
+      [
+        2626,
+        "r",
+        "ADV"
+      ]
+    ],
+    "explicit_missing_field_records": 4,
+    "canonical_source_context_passed_records": 50,
+    "inspected_unadmitted_source_records": 1,
+    "accepted_text_changes": 0,
+    "new_quality_or_rights_verdicts": 0
+  }
 }
