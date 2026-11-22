@@ -1,5 +1,11 @@
 # 骨架验证记录
 
+## V03 后端 CI 计时（PR #208）
+
+在[同一源码的对照运行](https://github.com/zardonc/lexique/actions/runs/45053860476)中，Ubuntu 24.04 和 26.04 的工作区磁盘共 96 次执行，4 次超过 V03 的建卡或竞争写入预算，或触发 SQLite 写锁超时。系统调用跟踪捕获到建卡日志单次 `fsync` 耗时 217.446 ms。另一个样本中，笔记和评分的六次 `fsync` 合计约 354 ms，竞争写入共耗时 434 ms。相同 runner 上的 `tmpfs` 定向测试 96 次全过，最高事务／竞争写入耗时为 21.0／36.9 ms。原始 CI 未记录系统调用，无法逐次归因。
+
+Ubuntu backend 作业将 V03 计时数据库放在独立的 `/dev/shm` 目录，使用文件型 SQLite、两个连接及实际锁竞争，每次尝试均按 100／250 ms 判定，整个后端套件的执行硬限为 60 秒。其他数据库测试和未指定该目录的 V03 运行使用默认磁盘路径。Ubuntu CI 上的 V03 衡量事务和竞争写入，物理磁盘的持久化延迟由磁盘环境复核。
+
 ## 分类复习读取失败重试（PR #208）
 
 整合已准入的最新 `main`（`7ba54109e55dcb068a23be688a0d478aa68832eb`／#209）后，从干净提交 `0f51ca974e448004f7823edaab51af263bb5fed2`（tree `cb3a2bcc75f359480dfe1375a0da3f8d05837d2a`）再次完成 lint、typecheck、build 和六项读取／保存失败回归。应用、浏览器夹具／spec 与 Rust 源码与下述 `1765757` 相同；资源与准入后的 `main` 字节一致。两套原生夹具保留双方目录白名单，验证记录也完整保留。匹配新资源的 locked 原生重构建通过（120.04 秒），新程序的真实 SQLite 写锁 `failure` 场景再次通过（34.61 秒），硬限不变，来源元数据为干净提交、SQLite 检查通过、所属进程清理为零。新原生根为相同 integration checkout 的 `target/ticket-201/read-retry/native-merged-failure`，日志以 `merged-` 开头。下述完整本地浏览器结果保留原始 SHA；最终整合 CI 在 PR 中记录。

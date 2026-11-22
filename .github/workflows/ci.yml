@@ -60,7 +60,16 @@ jobs:
       - run: python -B -X utf8 scripts/frequency_sample.py target/desktop-frequency-v1
       - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
       - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
-      - run: node scripts/test-rust.mjs
+      - name: Run backend tests
+        shell: bash
+        env:
+          RUST_TEST_NOCAPTURE: '1'
+        run: |
+          # Isolate V03 timing from runner disk stalls while keeping SQLite file locking.
+          V03_TIMING_DB_ROOT=$(mktemp -d /dev/shm/lexique-v03.XXXXXXXX)
+          export V03_TIMING_DB_ROOT
+          trap 'rm -rf -- "$V03_TIMING_DB_ROOT"' EXIT
+          node scripts/test-rust.mjs
       - run: cargo fmt --manifest-path tools/mdict-probe/Cargo.toml --check
       - run: cargo clippy --locked --manifest-path tools/mdict-probe/Cargo.toml --all-targets -- -D warnings
       - run: cargo test --locked --manifest-path tools/mdict-probe/Cargo.toml --no-run
