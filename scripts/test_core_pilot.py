@@ -60,6 +60,7 @@ class CorePilotPreparationTests(unittest.TestCase):
             self.assertIn("A8T0594-1935-tome2-page659", source["version"])
             self.assertNotIn("revision", source["version"])
             self.assertIn("capture line", source["span"])
+            self.assertIn("github.com/chrplr/openlexicon/tree/298010e765c49673317aa5b5c3b068df0351725a", source["attribution"])
         for change in ("unreviewed_publication", "incompatible_adaptation", "missing_edition"):
             with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
                 root = Path(temporary)

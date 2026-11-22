@@ -212,6 +212,8 @@ def load_inputs(source_dir):
                     "span": f"Fixed {'capture' if captured else 'wikitext'} line {span['line_1_based']}; exact selected excerpt in selected-source-excerpts.json",
                     "modification": text(field["modification"], "field modification notice"),
                 }
+                if source.get("source_frame") == "fixed_licensed_dataset_capture":
+                    provenance[target]["attribution"] += f"; dataset credits: {source['history_url']}"
             payload["field_sources"] = provenance
             selected.append((group["frozen_row"], index, group["headword"], payload))
     if len(selected) != len(ROWS) or len(seen) != len(ROWS):
