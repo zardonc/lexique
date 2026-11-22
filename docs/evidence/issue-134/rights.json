@@ -1,6 +1,6 @@
 {
-  "status": "partially_independently_reviewed_selected_rights_parent_package_pending",
-  "independent_review": "196_passed_4_pending",
+  "status": "independently_reviewed_selected_rights_parent_package_pending",
+  "independent_review": "200_passed",
   "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
   "proposed_adaptation_license": "CC-BY-SA-4.0",
   "complete_legal_text": "resources/core-pilot-79/COPYING",
@@ -80,7 +80,7 @@
     }
   ],
   "original_daf8_basis_source": "selected-rights.md",
-  "original_daf8_basis_scope": "Independently inspected historical collective original and the specific selected boundaries; separate new wiki/Lexique layers retain CC BY-SA 4.0. This does not admit row 2675 or certify combined packaging.",
+  "original_daf8_basis_scope": "Historical collective original and selected imported boundaries assessed separately; nègre definition 56 is a later wiki addition, compared with actual DAF8/TLFi originals. Combined packaging remains pending.",
   "redistribution_obligations": [
     "Retain fixed article URLs, complete linked histories, contributor attribution and separately credited original-work layers.",
     "Provide CC BY-SA 4.0 legal text and licence link, modification notices and the same licence for the adaptation layer.",
@@ -2504,9 +2504,9 @@
           "sense_id": "b134-2675-nègre-nom-selected",
           "frozen_row": 2675,
           "field": "french_definition",
-          "line_1_based": 39,
+          "line_1_based": 56,
           "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+          "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
         },
         {
           "sense_id": "b134-2675-nègre-nom-selected",
@@ -2520,17 +2520,17 @@
           "sense_id": "b134-2675-nègre-nom-selected",
           "frozen_row": 2675,
           "field": "english",
-          "line_1_based": 39,
+          "line_1_based": 56,
           "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+          "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
         },
         {
           "sense_id": "b134-2675-nègre-nom-selected",
           "frozen_row": 2675,
           "field": "chinese",
-          "line_1_based": 39,
+          "line_1_based": 56,
           "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+          "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
         }
       ],
       "import_notices": [
@@ -2538,7 +2538,7 @@
           "line_1_based": 278,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "DAF8 import confirmed in initial revision 434860; paid-writer definition added separately in 448299 by Ericdec."
         }
       ],
       "original_historical_dictionary_layers": [
@@ -2553,8 +2553,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+          "independent_review": "historical_original_assessed_separately_not_selected_definition",
+          "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+          "selected_boundary": "Fresh DAF8 and initial import comparison distinguish the original workshop-auxiliary wording from selected definition 56."
         }
       ],
       "reference_markers": [
@@ -2562,19 +2563,21 @@
           "line_1_based": 278,
           "raw_reference": "* {{Import:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship",
-          "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
+          "selected_boundary": "DAF8 initial wording differs; TLFi bibliography compared, with distinct wording not selected. See ghostwriter-review.json."
         },
         {
           "line_1_based": 279,
           "raw_reference": "* {{R:TLFi}}",
-          "role": "reference_identity_not_selected_sentence_authorship"
+          "role": "reference_identity_not_selected_sentence_authorship",
+          "selected_boundary": "DAF8 initial wording differs; TLFi bibliography compared, with distinct wording not selected. See ghostwriter-review.json."
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "selected_text_boundary": "Definition 56 and French noun/IPA support 3,13–15 only.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "selected_boundary_review": "ghostwriter-review.json"
     },
     {
       "source_id": "b134_fr_178213",
@@ -4513,7 +4516,7 @@
     }
   ],
   "proposed_fields": 200,
-  "independent_rights_fields_accepted": 196,
+  "independent_rights_fields_accepted": 200,
   "final_combined_package_status": "pending_parent_conversion_notices_and_admission",
   "fields": [
     {
@@ -7984,12 +7987,12 @@
       "source_revision": 39904725,
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
       "exact_source_span": {
-        "line_1_based": 39,
+        "line_1_based": 56,
         "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+        "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
       },
       "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors via full article history and complete retained registry; Ericdec for the early paid-writer addition; Lexique contributors for adaptations/translations. Académie française DAF8 article import credited separately.",
       "contributors_record": "source-context.json#b134_fr_168876",
       "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
       "original_historical_dictionary_layers": [
@@ -8004,16 +8007,18 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+          "independent_review": "historical_original_assessed_separately_not_selected_definition",
+          "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+          "selected_boundary": "Initial imported DAF8 wording differs from the selected paid-book/byline definition; original import remains separately credited."
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
-      "accepted_text": "Terme injurieux et péjoratif désignant un homme noir, généralement afrodescendant ; emploi vieilli ou vulgaire, non neutre.",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "selected_boundary": "Fixed definition 56 and French masculine noun/IPA 3,13–15 only; no quoted prose or media.",
+      "modification": "Lexique adaptation of fixed paid-ghostwriter definition 56; markup removed and figurative scope made explicit.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "accepted_text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2675-nègre-nom-selected",
@@ -8028,7 +8033,7 @@
         "raw_source_excerpt": "'''nègre''' {{pron|nɛɡʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|négresse}} {{hispanisme|fr}}"
       },
       "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors via full article history and complete retained registry; Ericdec for the early paid-writer addition; Lexique contributors for adaptations/translations. Académie française DAF8 article import credited separately.",
       "contributors_record": "source-context.json#b134_fr_168876",
       "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
       "original_historical_dictionary_layers": [
@@ -8043,16 +8048,18 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+          "independent_review": "historical_original_assessed_separately_not_selected_definition",
+          "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+          "selected_boundary": "Initial imported DAF8 wording differs from the selected paid-book/byline definition; original import remains separately credited."
         }
       ],
-      "selected_boundary": "Isolated IPA notation only, not audio or linked media.",
+      "selected_boundary": "Fixed definition 56 and French masculine noun/IPA 3,13–15 only; no quoted prose or media.",
       "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
-      "independent_review": "pending",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
       "accepted_text": "/nɛɡʁ/",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2675-nègre-nom-selected",
@@ -8062,12 +8069,12 @@
       "source_revision": 39904725,
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
       "exact_source_span": {
-        "line_1_based": 39,
+        "line_1_based": 56,
         "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+        "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
       },
       "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors via full article history and complete retained registry; Ericdec for the early paid-writer addition; Lexique contributors for adaptations/translations. Académie française DAF8 article import credited separately.",
       "contributors_record": "source-context.json#b134_fr_168876",
       "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
       "original_historical_dictionary_layers": [
@@ -8082,16 +8089,18 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+          "independent_review": "historical_original_assessed_separately_not_selected_definition",
+          "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+          "selected_boundary": "Initial imported DAF8 wording differs from the selected paid-book/byline definition; original import remains separately credited."
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
-      "accepted_text": "An insulting, derogatory term for a Black man, generally of African descent; dated or vulgar usage, not a neutral designation. Masculine noun.",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "selected_boundary": "Fixed definition 56 and French masculine noun/IPA 3,13–15 only; no quoted prose or media.",
+      "modification": "New Lexique explanatory translation of definition 56; authorship credit clarified by independent reviewer.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "accepted_text": "In figurative use, a paid ghostwriter who writes a book credited to another person as its author. Masculine noun.",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2675-nègre-nom-selected",
@@ -8101,12 +8110,12 @@
       "source_revision": 39904725,
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
       "exact_source_span": {
-        "line_1_based": 39,
+        "line_1_based": 56,
         "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+        "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
       },
       "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors via full article history and complete retained registry; Ericdec for the early paid-writer addition; Lexique contributors for adaptations/translations. Académie française DAF8 article import credited separately.",
       "contributors_record": "source-context.json#b134_fr_168876",
       "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
       "original_historical_dictionary_layers": [
@@ -8121,16 +8130,18 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+          "independent_review": "historical_original_assessed_separately_not_selected_definition",
+          "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+          "selected_boundary": "Initial imported DAF8 wording differs from the selected paid-book/byline definition; original import remains separately credited."
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending",
-      "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
-      "accepted_text": "对黑人男性、通常是非洲裔男性的侮辱性贬称；用法陈旧或粗俗，并非中性称谓。阳性名词。",
-      "selected_text_rights_reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "selected_boundary": "Fixed definition 56 and French masculine noun/IPA 3,13–15 only; no quoted prose or media.",
+      "modification": "New Lexique explanatory translation of definition 56; paid book writing, byline credit and figurative masculine scope retained.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "accepted_text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
+      "selected_text_rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
     },
     {
       "sense_id": "b134-2676-cardiaque-adj-selected",
@@ -17583,5 +17594,10 @@
       "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
       "selected_text_rights_reason": "légende, revision 40003278, exact selected field lines 11, 28: fixed French definition/IPA/POS and necessary agreement/construction spans were independently inspected. DAF8 import at 263 retains separate original credit to Académie française, eighth edition 1932–1935. The collective original’s conservative economic-rights expiry is 2006-01-01 under L123-3; fixed Wiktionnaire transcription/adaptation and new Lexique explanations remain CC BY-SA 4.0. The article marker does not prove selected-sentence authorship. The Import:CFC subsense at 18 and its reused reference at 20 are excluded; selected traditional-narrative line 28 has no CFC attachment. No CFC licence or broad article-wide rights grant is inferred. Literary/news example prose, media, etymology and other-language text are not adapted into selected fields. Complete returned named registries, anonymous-history credit, fixed URLs and full histories supply article attribution; modification notices, CC BY-SA 4.0 and ShareAlike apply. Combined canonical package obligations remain pending."
     }
-  ]
+  ],
+  "alternative_review": {
+    "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+    "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+    "evidence": "ghostwriter-review.json"
+  }
 }

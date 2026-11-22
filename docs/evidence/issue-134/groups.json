@@ -2049,28 +2049,29 @@
       {
         "sense_id": "b134-2675-nègre-nom-selected",
         "source_headword": "nègre",
-        "use": "Masculine noun; derogatory racial designation, for comprehension of offensive dated or vulgar language.",
+        "use": "Masculine noun in figurative use: a paid ghostwriter writes a book signed under another person's name.",
         "use_language": "en",
-        "excluded_uses": "Slave sense, ghostwriter, editorial rewriter, military top student, blackface performer and colour adjective.",
-        "independent_review": "pending",
-        "resource_admission": "not_admitted_unresolved_selected_use_and_rights",
+        "excluded_uses": "Racial designation (39), slave sense, editorial revision (61), military, performer and adjective uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "independently_reviewed_parent_assembly_pending",
         "cefr": null,
         "fields": {
           "french_definition": {
             "language": "fr",
-            "text": "Terme injurieux et péjoratif désignant un homme noir, généralement afrodescendant ; emploi vieilli ou vulgaire, non neutre.",
+            "text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
             "source_id": "b134_fr_168876",
             "source_span": {
-              "line_1_based": 39,
+              "line_1_based": 56,
               "column_1_based": 1,
-              "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+              "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit",
-            "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+            "modification": "Lexique adaptation of fixed paid-ghostwriter definition 56; markup removed and figurative scope made explicit.",
+            "author_validation": "coordinator_alternative_preserved_in_authored_proposal",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+            "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
           },
           "ipa": {
             "language": "und",
@@ -2083,44 +2084,48 @@
             },
             "content_license": "CC-BY-SA-4.0",
             "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit",
-            "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+            "author_validation": "coordinator_alternative_preserved_in_authored_proposal",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+            "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
           },
           "english": {
             "language": "en",
-            "text": "An insulting, derogatory term for a Black man, generally of African descent; dated or vulgar usage, not a neutral designation. Masculine noun.",
+            "text": "In figurative use, a paid ghostwriter who writes a book credited to another person as its author. Masculine noun.",
             "source_id": "b134_fr_168876",
             "source_span": {
-              "line_1_based": 39,
+              "line_1_based": 56,
               "column_1_based": 1,
-              "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+              "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit",
-            "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+            "modification": "New Lexique explanatory translation of definition 56; authorship credit clarified by independent reviewer.",
+            "author_validation": "coordinator_alternative_preserved_in_authored_proposal",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+            "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
           },
           "chinese": {
             "language": "zh",
-            "text": "对黑人男性、通常是非洲裔男性的侮辱性贬称；用法陈旧或粗俗，并非中性称谓。阳性名词。",
+            "text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
             "source_id": "b134_fr_168876",
             "source_span": {
-              "line_1_based": 39,
+              "line_1_based": 56,
               "column_1_based": 1,
-              "raw_source_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+              "raw_source_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit",
-            "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner"
+            "modification": "New Lexique explanatory translation of definition 56; paid book writing, byline credit and figurative masculine scope retained.",
+            "author_validation": "coordinator_alternative_preserved_in_authored_proposal",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+            "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
           }
-        }
+        },
+        "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56"
       }
     ]
   },

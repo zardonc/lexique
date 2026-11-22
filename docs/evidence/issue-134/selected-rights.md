@@ -1,7 +1,11 @@
 # Issue #134 independent selected-rights decisions
 
-**196 fields pass selected-text rights review; four fields on row 2675 remain
-pending.** Reviewer: Independent semantic and selected-rights reviewer #134,
+**200 fields pass selected-text rights review.** The prior 196 accepted fields
+are unchanged; row 2675 has a fresh four-field ghostwriter review by a reviewer
+separate from the coordinator alternative author and original author.
+[Actual selected-boundary decisions](ghostwriter-review.json) and the
+[proposal/replacement ledger](accepted-replacements.json) identify that review.
+Reviewer of the prior 196 fields: Independent semantic and selected-rights reviewer #134,
 separate from author and integration owner. Author: `2937688`; initial review
 base: `7b619a7`. [Rights](rights.json) and [field decisions](field-review.json)
 preserve exact proposals/current text, selected spans, modifications and separate
@@ -19,8 +23,7 @@ Copyright-policy revision **38903168** and DAF8-template revision **22113837**
 were independently inspected against their retained first-party API. Policy
 captures match after CRLF normalization; article captures match literally.
 
-The author package records 35 DAF8-marked articles, including the unresolved
-source. The 34 such articles used by accepted fields retain separate original
+The author package records 35 DAF8-marked articles. These articles retain separate original
 credit to **Académie française, Dictionnaire de l’Académie française,
 eighth edition, 1932–1935**. The institution's
 [publication history](https://www.academie-francaise.fr/linstitution/les-missions)
@@ -57,17 +60,44 @@ external dictionaries do not supply redistribution rights; their external prose,
 neighboring news/literary quotations, etymologies, other-language sections and
 media are outside selected adaptations.
 
-All **50 source nodes used by accepted fields** have root
+All **51 source nodes used by accepted fields** have root
 `selected_text_rights_status = passed_at_selected_text_boundary` in
 `source-context.current_content`, with their actual independent reasons.
-Row 2675's source remains explicitly unadmitted with pending rights because
-content filtering limited inspection. Byte checks and earlier original-work
-decisions do not grant new rights for it.
+
+Row 2675 selects definition **56**, with French noun/IPA support **3, 13–15**.
+The initial DAF8 import, revision **434860** by DaftBot, lacks this paid-writer
+definition. Its next revision, **448299** by **Ericdec**, adds the paid-book/byline
+wording. Fresh first-party DAF8 HTTP 200 content retains the different workshop
+auxiliary definition. The actual TLFi HTTP 200 entry uses different wording about
+an anonymous person composing a known author's works. Its article bibliography
+does not establish an import of the selected sentence or grant redistribution
+permission. The recorded wiki addition and these original-work comparisons
+support the selected wiki contribution boundary; they do not license the whole
+article or the external dictionaries.
+
+The complete contributor chain records **83 named / 19 anonymous article
+credits** for this source. The registry is article attribution; the retained
+early revision identifies the recorded paid-writer addition. Wiki wording and
+the Lexique adaptations/translations retain CC BY-SA 4.0. DAF8 original credit
+remains separately identified, with the historical collective-work and moral
+rights basis above. Fresh direct Légifrance requests returned **403**; the actual
+retained indexed first-party statutory records and fixed policy quotation were
+read independently. No earlier reviewer verdict supplies this new pass.
+
+Robert's original HTTP 200 HTML corroborates a contemporary **nom masculin /
+au figuré** ghostwriter use. Its publisher notice restricts reuse to personal
+use; no Robert prose enters the resource and no permission is asserted.
+TLFi prose, literary quotations, media and the racial definition **39** likewise
+remain outside the selected fields. English explicitly describes authorship
+credit rather than an autograph. Exact proposals and accepted texts, response
+metadata, raw bytes, comparisons and decisions are retained in
+`context/reviewer-evidence/issue-134/ghostwriter-review/` under the shared context
+root stated in [the review](README-independent-review.md).
 
 ## Package boundary
 
 The coordinator must carry fixed source/licence identity, full attribution,
 original-work credits, modification notices, the complete licence and selected
 materials into the actual combined artifact. Adaptations remain CC BY-SA 4.0
-without additional restrictions. **196 selected-rights passes and four pending
-fields** do not certify conversion, combined notices, native execution or release.
+without additional restrictions. **200 selected-rights passes** do not certify
+conversion, combined notices, native execution or release.

@@ -6,9 +6,10 @@ Lexique contributors authored the French adaptations and new English/Chinese
 explanations under the same licence. Project source code remains MIT.
 The [complete legal text](COPYING), fixed-source/history links, contributors,
 original-work credits and modification notices accompany this evidence shard.
-196 fields are independently accepted; row 2675 retains four unresolved fields.
-The full list preserves every author credit, including the unadmitted source,
-without granting that source redistribution acceptance.
+200 fields are independently accepted; the prior 196 accepted fields are
+unchanged. Row 2675 selects the independently reviewed paid-ghostwriter noun.
+The full list preserves article and original-work credits at their actual
+selected boundaries.
 
 Exact word/POS membership and unchanged frequency strings derive from Boris
 New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -30,9 +31,15 @@ articles supply inflection and IPA. These are source relationships; no lookup
 alias is admitted. The selected `voile` is feminine (a boat’s sail), `orange` is
 feminine (fruit), and `piper` is the dice-manipulation verb pronounced /pi.pe/.
 
-`nègre` retains the selected noun’s insulting, pejorative and dated/vulgar labels
-in all meaning languages. Its contemporary bibliographic context is retained
-for review; no quotation from that discussion is redistributed as a field.
+`nègre` selects the figurative masculine paid-ghostwriter noun at fixed revision
+39904725, definition 56, and /nɛɡʁ/ at line 15. French and Chinese preserve the
+coordinator's scoped wording; English clarifies the book's authorship credit.
+The recorded paid-writer addition is by Ericdec, revision 448299. The initial
+DAF8 article import is credited separately; its workshop-auxiliary wording is
+not the selected definition. The actual TLFi bibliography and Robert publisher
+entry are comparison/corroboration context only, with no external prose or
+permission transferred into the resource. The four fields and use retain
+CC BY-SA 4.0 and the complete article/history credits.
 `arrestation` uses the explicitly recorded /a.ʁɛs.ta.sjɔ̃/ in the pronunciation
 section, while the inconsistent lexical header remains only in source evidence.
 `tester` uses the modern object-taking test definition, with the inconsistent
@@ -75,7 +82,7 @@ the selection, scoped adaptations and new explanations.
 | cardiaque | [39721100](https://fr.wiktionary.org/w/index.php?title=cardiaque&oldid=39721100) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=cardiaque&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | congé | [39721148](https://fr.wiktionary.org/w/index.php?title=cong%C3%A9&oldid=39721148) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=cong%C3%A9&action=history) | No original-work import marker identified |
 | musée | [39773768](https://fr.wiktionary.org/w/index.php?title=mus%C3%A9e&oldid=39773768) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=mus%C3%A9e&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
-| nègre | [39904725](https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| nègre | [39904725](https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935: article import credit; selected paid-writer wording added separately by Ericdec |
 | tester | [39728451](https://fr.wiktionary.org/w/index.php?title=tester&oldid=39728451) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=tester&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | occupé | [39740014](https://fr.wiktionary.org/w/index.php?title=occup%C3%A9&oldid=39740014) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=occup%C3%A9&action=history) | No original-work import marker identified |
 | bijoux | [34693483](https://fr.wiktionary.org/w/index.php?title=bijoux&oldid=34693483) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=bijoux&action=history) | No original-work import marker identified |

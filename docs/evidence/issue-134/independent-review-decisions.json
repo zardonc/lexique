@@ -2,21 +2,43 @@
   "reviewer": "Independent semantic and selected-rights reviewer #134; separate from author and integration owner",
   "reviewed_author_commit": "2937688639cde50a9ad919292b7803a3225b03db",
   "review_base": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
-  "accepted_groups": 49,
-  "accepted_fields": 196,
+  "accepted_groups": 50,
+  "accepted_fields": 200,
   "unchanged_accepted_fields": 196,
-  "replacements": [],
-  "unresolved_rows": [
-    2675
-  ],
-  "unresolved_fields": [
+  "replacements": [
     {
       "frozen_row": 2675,
       "headword": "nègre",
       "pos": "NOM",
       "sense_id": "b134-2675-nègre-nom-selected",
       "field": "french_definition",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+      "original_author": "Original batch #134 author, commit 2937688",
+      "alternative_author": "Coordinator, paid-ghostwriter alternative",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "proposed_text": "Terme injurieux et péjoratif désignant un homme noir, généralement afrodescendant ; emploi vieilli ou vulgaire, non neutre.",
+      "coordinator_proposed_text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
+      "accepted_text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
+      "original_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 39,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+      },
+      "accepted_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      },
+      "reason": "Passed unchanged from coordinator proposal. Au figuré states the contemporary figurative restriction. Écrivain payé, écrire un livre and another person’s authorship credit faithfully scope fixed noun definition 56; signer de son nom denotes byline credit, not a physical autograph.",
+      "replacement_boundary": "All four fields rebound to the replacement selected use, including text-identical IPA."
     },
     {
       "frozen_row": 2675,
@@ -24,7 +46,37 @@
       "pos": "NOM",
       "sense_id": "b134-2675-nègre-nom-selected",
       "field": "ipa",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+      "original_author": "Original batch #134 author, commit 2937688",
+      "alternative_author": "Coordinator, paid-ghostwriter alternative",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "proposed_text": "/nɛɡʁ/",
+      "coordinator_proposed_text": "/nɛɡʁ/",
+      "accepted_text": "/nɛɡʁ/",
+      "original_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 15,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''nègre''' {{pron|nɛɡʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|négresse}} {{hispanisme|fr}}",
+        "ipa_variant_column_1_based": 20,
+        "ipa_variant_excerpt": "nɛɡʁ"
+      },
+      "accepted_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 15,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''nègre''' {{pron|nɛɡʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|négresse}} {{hispanisme|fr}}",
+        "ipa_variant_column_1_based": 20,
+        "ipa_variant_excerpt": "nɛɡʁ"
+      },
+      "reason": "Passed unchanged. Fixed French masculine noun frame 13–15 records nɛɡʁ; /nɛɡʁ/ retains that isolated-headword variant with no adjective, feminine, liaison or audio substitution.",
+      "replacement_boundary": "All four fields rebound to the replacement selected use, including text-identical IPA."
     },
     {
       "frozen_row": 2675,
@@ -32,7 +84,33 @@
       "pos": "NOM",
       "sense_id": "b134-2675-nègre-nom-selected",
       "field": "english",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+      "original_author": "Original batch #134 author, commit 2937688",
+      "alternative_author": "Coordinator, paid-ghostwriter alternative",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "proposed_text": "An insulting, derogatory term for a Black man, generally of African descent; dated or vulgar usage, not a neutral designation. Masculine noun.",
+      "coordinator_proposed_text": "In figurative use, a paid ghostwriter who writes a book that another person signs under their own name. Masculine noun.",
+      "accepted_text": "In figurative use, a paid ghostwriter who writes a book credited to another person as its author. Masculine noun.",
+      "original_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 39,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+      },
+      "accepted_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      },
+      "reason": "Passed after clarification. Paid ghostwriter, writes a book and credit to another person as author match definition 56. The byline wording removes ambiguity about a physical autograph while retaining figurative use and masculine noun.",
+      "replacement_boundary": "All four fields rebound to the replacement selected use, including text-identical IPA."
     },
     {
       "frozen_row": 2675,
@@ -40,9 +118,37 @@
       "pos": "NOM",
       "sense_id": "b134-2675-nègre-nom-selected",
       "field": "chinese",
-      "reason": "Source review could not be completed because a content filter blocked part of the inspection. Modern everyday selected-use quality and selected-span rights remain unresolved; no exemption or alternate sense is approved."
+      "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+      "original_author": "Original batch #134 author, commit 2937688",
+      "alternative_author": "Coordinator, paid-ghostwriter alternative",
+      "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+      "proposed_text": "对黑人男性、通常是非洲裔男性的侮辱性贬称；用法陈旧或粗俗，并非中性称谓。阳性名词。",
+      "coordinator_proposed_text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
+      "accepted_text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
+      "original_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 39,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|anthropologie|histoire|fr}} {{injurieux|fr}} {{péjoratif|fr}} {{vieilli|fr}} ou {{vulgaire|fr}} Homme à la peau [[noir]]e, généralement [[afrodescendant]]. {{note}} Entre la majuscule initiale et la minuscule initiale, l’usage hésite et il n'y a pas de norme incontestée. {{note}} Ce terme était neutre et non injurieux au {{siècle2|xvii}} siècle<ref>Sophie Piron, « Le dérèglement linguistique à l'ère de l'Université numérique », ''[[w:Argument (revue)|Argument]]'', vol. {{pc|xxiv}}, {{n°|1}}, automne-hiver 2021-2022, p. 86.</ref>."
+      },
+      "accepted_source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      },
+      "reason": "Passed unchanged from coordinator proposal. 受雇 retains paid employment; 替他人写书 and 由对方署名 express writing a book with another person’s authorship credit; 代笔者 is the scoped explanation. 转义 and 阳性名词 preserve use and POS.",
+      "replacement_boundary": "All four fields rebound to the replacement selected use, including text-identical IPA."
     }
   ],
+  "unresolved_rows": [],
+  "unresolved_fields": 0,
   "field_order": [
     "french_definition",
     "english",
@@ -392,7 +498,19 @@
       "A popular story, more or less fantastic, handed down by tradition preserves the narrative sense rather than a map key.",
       "民间流传、带有一定幻想成分 and 传统传承 retain the popular traditional narrative rather than a caption.",
       "The feminine noun head at 11 records le.ʒɑ̃d; no English legend pronunciation is borrowed."
+    ],
+    "2675": [
+      "Passed as an ordinary contemporary figurative masculine noun, with the paid-book-writing/byline sense limited to fixed definition 56. Original Robert HTTP 200 HTML separately identifies nom masculin / au figuré without an obsolete label on that sense. Definition 39’s racial restrictions and definition 61’s editorial revision are different uses. No specialist or annotation exception is needed.",
+      "Passed unchanged from coordinator proposal. Au figuré states the contemporary figurative restriction. Écrivain payé, écrire un livre and another person’s authorship credit faithfully scope fixed noun definition 56; signer de son nom denotes byline credit, not a physical autograph.",
+      "Passed after clarification. Paid ghostwriter, writes a book and credit to another person as author match definition 56. The byline wording removes ambiguity about a physical autograph while retaining figurative use and masculine noun.",
+      "Passed unchanged from coordinator proposal. 受雇 retains paid employment; 替他人写书 and 由对方署名 express writing a book with another person’s authorship credit; 代笔者 is the scoped explanation. 转义 and 阳性名词 preserve use and POS.",
+      "Passed unchanged. Fixed French masculine noun frame 13–15 records nɛɡʁ; /nɛɡʁ/ retains that isolated-headword variant with no adjective, feminine, liaison or audio substitution."
     ]
   },
-  "recorded_at_utc": "2026-11-22T02:38:03.389308+00:00"
+  "recorded_at_utc": "2026-11-22T02:38:03.389308+00:00",
+  "ghostwriter_review": {
+    "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+    "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+    "evidence": "ghostwriter-review.json"
+  }
 }

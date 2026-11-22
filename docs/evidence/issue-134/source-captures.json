@@ -736,5 +736,13 @@
   "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134\\selection.py",
   "independent_review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-134\\issue-134-review",
   "independent_source_audit": "source-audit.json",
-  "independent_audit_boundary": "51 API/raw byte identities and 200 structural field spans; 49 groups / 196 fields independently accepted. Row 2675 remains unresolved; structural checks do not clear it."
+  "independent_audit_boundary": "The prior structural source audit is retained. All 200 fields / 50 ordinary groups now pass independent review; the fresh row 2675 source/history/licensing audit is recorded in ghostwriter-review.json and its separate archive.",
+  "ghostwriter_review": {
+    "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+    "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+    "selected_source_id": "b134_fr_168876",
+    "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-134\\ghostwriter-review",
+    "source_audit": "ghostwriter-review.json#source_audit",
+    "status": "passed_selected_source_audit"
+  }
 }
