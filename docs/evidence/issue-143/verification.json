@@ -1,114 +1,99 @@
 {
   "ticket": 143,
-  "role": "content_author",
-  "independent_acceptance": false,
-  "recorded_at_utc": "2026-11-22T22:53:26.473980+00:00",
-  "author_base_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
-  "merged_integration_commit": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
+  "role": "separate_independent_reviewer",
+  "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+  "recorded_at_utc": "2026-11-22T23:39:12.665821+00:00",
+  "author_commit": "e2e1cf27e8957dff8b00d80f65152af86f9bb752",
+  "review_base_commit": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
+  "tested_integration_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "reviewed_changes": "Author committed #143 snapshot plus owned independent review records and four approved pars additions.",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-143",
+  "platform": "Windows; PowerShell 7; uv Python 3.14.10",
+  "patch_command": "git diff b69fbf62 -- docs/evidence/issue-143 scripts/test_core_batch_143.py",
+  "retained_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-143\\scoped-review.patch",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-143",
   "scope": {
     "frozen_groups": 50,
-    "proposed_groups": 49,
-    "proposed_fields": 196,
-    "unresolved_groups": 1,
-    "missing_authored_fields": 4,
-    "independently_accepted_fields": 0,
-    "missing_admitted_fields": 200,
-    "denominator_groups": 4087,
-    "source_captures": 54,
-    "selected_or_construction_support_sources": 51
+    "quality_fields_passed": 200,
+    "quality_uses_passed": 50,
+    "unchanged_authored_fields": 196,
+    "owner_approved_added_fields": 4,
+    "rights_fields_passed": 182,
+    "rights_fields_unresolved": 18,
+    "joint_four_field_groups": 44,
+    "everyday_groups": 49,
+    "approved_specialist_groups": 1,
+    "new_canonical_fields": 0,
+    "missing_canonical_batch_fields": 200
   },
+  "source_audit": {
+    "status": "passed",
+    "tested_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+    "lexical_raw_api_byte_matches": 54,
+    "span_occurrences_checked": 3567,
+    "author_snapshot_files_verified": 16,
+    "contributor_chains": 4,
+    "contributor_responses": 9,
+    "named_article_memberships": 3203,
+    "anonymous_article_counts": 555,
+    "sentence_authorship_proved": false,
+    "legal_reuse": "US Copyright Office captures reused from reviewer-140 archive; its field verdicts are not reused. New CNRTL original comparisons retained separately."
+  },
+  "owner_approval": "owner-approval.json",
   "checks": [
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_143.py",
       "status": "passed",
-      "tests": 3,
-      "archive_log": "GREEN.log"
+      "tests": 4,
+      "archive_log": "audit/GREEN-final.log"
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 ../context/author-evidence/issue-143/reproduce.py",
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-143-review/audit.py",
       "status": "passed",
-      "exact_materials": 14,
-      "network": "not_used",
-      "archive_log": "reproduction.log"
+      "archive_log": "audit/source-audit.log"
     },
     {
       "command": "pnpm test:docs",
       "status": "passed",
-      "documents": 476,
-      "local_links": 3677,
-      "archive_log": "docs.log"
+      "documents": 503,
+      "local_links": 3873,
+      "archive_log": "audit/docs-final.log"
     },
     {
       "command": "git diff --cached --check",
       "status": "passed",
-      "archive_log": "diff-check.log"
+      "archive_log": "audit/diff-check-final.log"
+    },
+    {
+      "command": "git diff --cached --name-only; verify every path is owned",
+      "status": "passed",
+      "archive_log": "audit/changed-paths.txt"
     }
   ],
-  "tdd": {
-    "initial_missing_content_check": "failed_as_expected",
-    "archive_log": "RED.log",
-    "seam": "parent-spec-approved resource/admission boundary"
-  },
-  "measurements": {
-    "author_material_bytes": 3342914,
-    "raw_capture_bytes": 1356734,
-    "proposed_field_characters": 11153,
-    "longest_proposed_field_characters": 171
-  },
-  "unresolved_fields": [
-    {
-      "frozen_row": 3128,
-      "headword": "pars",
-      "pos": "NOM",
-      "field": "french_definition",
-      "reason": "The exact French pars/NOM frame is only the plural of par and supplies no noun IPA. The inspected par nouns are golf terminology and a Georgian letter name. The owner’s specialist approval for singular row 128 par/NOM does not authorize this distinct row. Modern everyday noun sense, applicable noun IPA and all four fields remain unresolved; no partir verb or singular substitute is proposed.",
-      "status": "unresolved",
-      "owner_exception_approval": null
-    },
-    {
-      "frozen_row": 3128,
-      "headword": "pars",
-      "pos": "NOM",
-      "field": "ipa",
-      "reason": "The exact French pars/NOM frame is only the plural of par and supplies no noun IPA. The inspected par nouns are golf terminology and a Georgian letter name. The owner’s specialist approval for singular row 128 par/NOM does not authorize this distinct row. Modern everyday noun sense, applicable noun IPA and all four fields remain unresolved; no partir verb or singular substitute is proposed.",
-      "status": "unresolved",
-      "owner_exception_approval": null
-    },
-    {
-      "frozen_row": 3128,
-      "headword": "pars",
-      "pos": "NOM",
-      "field": "english",
-      "reason": "The exact French pars/NOM frame is only the plural of par and supplies no noun IPA. The inspected par nouns are golf terminology and a Georgian letter name. The owner’s specialist approval for singular row 128 par/NOM does not authorize this distinct row. Modern everyday noun sense, applicable noun IPA and all four fields remain unresolved; no partir verb or singular substitute is proposed.",
-      "status": "unresolved",
-      "owner_exception_approval": null
-    },
-    {
-      "frozen_row": 3128,
-      "headword": "pars",
-      "pos": "NOM",
-      "field": "chinese",
-      "reason": "The exact French pars/NOM frame is only the plural of par and supplies no noun IPA. The inspected par nouns are golf terminology and a Georgian letter name. The owner’s specialist approval for singular row 128 par/NOM does not authorize this distinct row. Modern everyday noun sense, applicable noun IPA and all four fields remain unresolved; no partir verb or singular substitute is proposed.",
-      "status": "unresolved",
-      "owner_exception_approval": null
-    }
+  "focused_failing_checks": [
+    "audit/RED.log",
+    "audit/RED-owner-admission.log",
+    "audit/RED-admission-metadata.log"
   ],
-  "gates": {
-    "independent_quality": "pending",
-    "independent_selected_span_rights": "pending",
-    "canonical_conversion": "integration_owned_not_run",
-    "combined_package_obligations": "integration_owned_pending",
-    "native_lookup_save_reopen": "integration_owned_not_run",
-    "learner_acceptance": "not_run",
-    "release": "incomplete"
-  },
-  "skipped_checks": [
-    "Frontend lint/typecheck/build: no frontend code changed.",
-    "Rust formatting/compilation/storage tests: no Rust code changed.",
-    "Native/offline lookup/save/reopen and canonical assembly: outside author ownership."
+  "unresolved_rights_rows": [
+    3102,
+    3110,
+    3115,
+    3123,
+    3129,
+    3141
   ],
-  "original_work_obligations": "Retain CC BY-SA 4.0 contribution/adaptation terms, full article/history and contributor credit, selected material and modification notices; retain separate Académie française eighth-edition (1932–1935) original-work credits and established 2006-01-01 collective-work expiry basis. New selected spans await separate rights review.",
-  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-143",
-  "push": "not_requested_not_run",
-  "tracker_changes": "not_requested_not_run"
+  "unrun": [
+    "learner acceptance",
+    "canonical conversion and combined redistribution package",
+    "global specialist registration",
+    "native lookup/save/reopen",
+    "whole-machine offline acceptance",
+    "release readiness"
+  ],
+  "final_commit_record": "External closeout.json binds final commit to this tested checkout and scoped patch.",
+  "integration_merge_logs": [
+    "audit/integration-merge.log",
+    "audit/integration-merge-final.log"
+  ]
 }

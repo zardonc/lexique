@@ -780,5 +780,231 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\author-143\\target\\issue-143",
   "captured_at_utc": "2026-11-22T22:31:55.002737+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-143\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-143\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-143\\selection.py",
+  "independent_review": {
+    "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+    "review_base": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
+    "author_commit": "e2e1cf27e8957dff8b00d80f65152af86f9bb752",
+    "source_audit": {
+      "status": "passed",
+      "tested_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+      "lexical_raw_api_byte_matches": 54,
+      "span_occurrences_checked": 3567,
+      "author_snapshot_files_verified": 16,
+      "contributor_chains": 4,
+      "contributor_responses": 9,
+      "named_article_memberships": 3203,
+      "anonymous_article_counts": 555,
+      "sentence_authorship_proved": false,
+      "legal_reuse": "US Copyright Office captures reused from reviewer-140 archive; its field verdicts are not reused. New CNRTL original comparisons retained separately."
+    },
+    "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-143",
+    "original_comparison_captures": [
+      {
+        "title": "distraire",
+        "url": "https://www.cnrtl.fr/definition/academie8/distraire",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:37.326214+00:00",
+        "bytes": 116241,
+        "html": "distraire.html",
+        "text": "distraire.txt"
+      },
+      {
+        "title": "impressionnant",
+        "url": "https://www.cnrtl.fr/definition/academie8/impressionnant",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:38.239180+00:00",
+        "bytes": 50218,
+        "html": "impressionnant.html",
+        "text": "impressionnant.txt"
+      },
+      {
+        "title": "saucisse",
+        "url": "https://www.cnrtl.fr/definition/academie8/saucisse",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:39.179069+00:00",
+        "bytes": 57306,
+        "html": "saucisse.html",
+        "text": "saucisse.txt"
+      },
+      {
+        "title": "grève",
+        "url": "https://www.cnrtl.fr/definition/academie8/gr%C3%A8ve",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:40.359853+00:00",
+        "bytes": 138215,
+        "html": "grève.html",
+        "text": "grève.txt"
+      },
+      {
+        "title": "bidon",
+        "url": "https://www.cnrtl.fr/definition/academie8/bidon",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:41.287209+00:00",
+        "bytes": 68178,
+        "html": "bidon.html",
+        "text": "bidon.txt"
+      },
+      {
+        "title": "lecture",
+        "url": "https://www.cnrtl.fr/definition/academie8/lecture",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:42.435112+00:00",
+        "bytes": 120945,
+        "html": "lecture.html",
+        "text": "lecture.txt"
+      },
+      {
+        "title": "congrès",
+        "url": "https://www.cnrtl.fr/definition/academie8/congr%C3%A8s",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:43.356158+00:00",
+        "bytes": 68215,
+        "html": "congrès.html",
+        "text": "congrès.txt"
+      },
+      {
+        "title": "panier",
+        "url": "https://www.cnrtl.fr/definition/academie8/panier",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:44.506129+00:00",
+        "bytes": 167724,
+        "html": "panier.html",
+        "text": "panier.txt"
+      },
+      {
+        "title": "galerie",
+        "url": "https://www.cnrtl.fr/definition/academie8/galerie",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:45.626327+00:00",
+        "bytes": 142332,
+        "html": "galerie.html",
+        "text": "galerie.txt"
+      },
+      {
+        "title": "braquer",
+        "url": "https://www.cnrtl.fr/definition/academie8/braquer",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:46.722649+00:00",
+        "bytes": 69880,
+        "html": "braquer.html",
+        "text": "braquer.txt"
+      },
+      {
+        "title": "jusque",
+        "url": "https://www.cnrtl.fr/definition/academie8/jusque",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:47.646551+00:00",
+        "bytes": 51983,
+        "html": "jusque.html",
+        "text": "jusque.txt"
+      }
+    ],
+    "earlier_original_comparison_captures": [
+      {
+        "title": "distraire",
+        "url": "https://www.cnrtl.fr/definition/academie4/distraire",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:40.061288+00:00",
+        "bytes": 115802,
+        "html": "distraire.html",
+        "text": "distraire.txt"
+      },
+      {
+        "title": "impressionnant",
+        "url": "https://www.cnrtl.fr/definition/academie4/impressionnant",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:41.013150+00:00",
+        "bytes": 49437,
+        "html": "impressionnant.html",
+        "text": "impressionnant.txt"
+      },
+      {
+        "title": "saucisse",
+        "url": "https://www.cnrtl.fr/definition/academie4/saucisse",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:41.978451+00:00",
+        "bytes": 57466,
+        "html": "saucisse.html",
+        "text": "saucisse.txt"
+      },
+      {
+        "title": "grève",
+        "url": "https://www.cnrtl.fr/definition/academie4/gr%C3%A8ve",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:43.129210+00:00",
+        "bytes": 137774,
+        "html": "grève.html",
+        "text": "grève.txt"
+      },
+      {
+        "title": "bidon",
+        "url": "https://www.cnrtl.fr/definition/academie4/bidon",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:44.085192+00:00",
+        "bytes": 67932,
+        "html": "bidon.html",
+        "text": "bidon.txt"
+      },
+      {
+        "title": "lecture",
+        "url": "https://www.cnrtl.fr/definition/academie4/lecture",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:45.251403+00:00",
+        "bytes": 119267,
+        "html": "lecture.html",
+        "text": "lecture.txt"
+      },
+      {
+        "title": "congrès",
+        "url": "https://www.cnrtl.fr/definition/academie4/congr%C3%A8s",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:46.217943+00:00",
+        "bytes": 68277,
+        "html": "congrès.html",
+        "text": "congrès.txt"
+      },
+      {
+        "title": "panier",
+        "url": "https://www.cnrtl.fr/definition/academie4/panier",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:47.369140+00:00",
+        "bytes": 165901,
+        "html": "panier.html",
+        "text": "panier.txt"
+      },
+      {
+        "title": "galerie",
+        "url": "https://www.cnrtl.fr/definition/academie4/galerie",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:48.525582+00:00",
+        "bytes": 141145,
+        "html": "galerie.html",
+        "text": "galerie.txt"
+      },
+      {
+        "title": "braquer",
+        "url": "https://www.cnrtl.fr/definition/academie4/braquer",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:49.499925+00:00",
+        "bytes": 69913,
+        "html": "braquer.html",
+        "text": "braquer.txt"
+      },
+      {
+        "title": "jusque",
+        "url": "https://www.cnrtl.fr/definition/academie4/jusque",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:22:50.427578+00:00",
+        "bytes": 51983,
+        "html": "jusque.html",
+        "text": "jusque.txt"
+      }
+    ],
+    "raw_lexical_recapture": false,
+    "quality_fields": 200,
+    "rights_fields_passed": 182,
+    "rights_fields_unresolved": 18,
+    "tested_integration_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6"
+  }
 }
