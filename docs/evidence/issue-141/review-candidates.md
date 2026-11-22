@@ -1,8 +1,8 @@
-# Exact #141 author proposals
+# Exact #141 independently reviewed content
 
-50 exact groups, one selected sense per group and 200 fields await separate review.
-[groups.json](groups.json) contains exact text; [field-review.json](field-review.json)
-binds every field/use to fixed spans and keeps reviewer and acceptance pending.
+50 exact groups, 50 everyday selected uses and 200 fields pass independent quality and
+selected-text rights review. [groups.json](groups.json) contains accepted text;
+[field-review.json](field-review.json) records exact proposals, decisions and fixed spans.
 
 | Row | Exact group | French | IPA | English | Chinese |
 | --- | --- | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ binds every field/use to fixed spans and keeps reviewer and acceptance pending.
 | 3027 | `polonais/ADJ` | Relatif à la Pologne ou à ses habitants. | /pɔ.lɔ.nɛ/ | Polish; relating to Poland or its inhabitants | 波兰的；与波兰或其居民有关的。 |
 | 3028 | `tissu/NOM` | Matériau formé de fils entrelacés. | /ti.sy/ | fabric or cloth made of interlaced threads | 织物；由纱线交织而成的材料。 |
 | 3029 | `do/NOM` | Note appelée ut, correspondant à C en solfège à sons fixes. | /do/ | do or ut; the note C in fixed-do solfège | do 或 ut；固定唱名法中对应 C 的音。 |
-| 3030 | `brigade/NOM` | Groupe d’ouvriers travaillant ensemble sous l’autorité d’un même responsable. | /bʁi.ɡad/ | crew; a group of workers working together under the same supervisor | 工作班组；在同一负责人领导下共同工作的工人群体。 |
+| 3030 | `brigade/NOM` | Dans certains métiers, groupe d’ouvriers travaillant ensemble sous l’autorité d’un même responsable. | /bʁi.ɡad/ | in certain trades, a crew of workers working together under the same supervisor | 某些行业中的工作班组；在同一负责人领导下共同工作的工人群体。 |
 | 3031 | `poumon/NOM` | Organe spongieux situé dans la poitrine et servant principalement à la respiration. | /pu.mɔ̃/ | lung; a spongy organ in the chest used for breathing | 肺；位于胸腔内、主要用于呼吸的海绵状器官。 |
 | 3032 | `tente/NOM` | Abri de camping, souvent en toile imperméable tendue sur une armature légère. | /tɑ̃t/ | tent; a camping shelter, often of waterproof fabric on a light frame | 帐篷；露营用的遮蔽物，通常由防水布和轻型支架构成。 |
 | 3033 | `villa/NOM` | Maison de plaisance située à la campagne. | /vil.la/ | villa; a country house used for leisure | 乡间别墅；用于休闲居住的乡村住宅。 |
@@ -393,7 +393,7 @@ Excluded: street or cul-de-sac name.
 
 Masculine noun for the French rank, with the rank relationship retained; no NATO code is proposed.
 
-Masculine adjudant; feminine adjudante; France restriction comes from the selected definition. Source OR-8 code is excluded from all proposed fields.
+Masculine adjudant; feminine adjudante; France restriction comes from the selected definition. Source OR-8 code is excluded from all accepted fields.
 
 Excluded: Canadian rank; bird name; source NATO-code assertion.
 

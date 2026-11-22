@@ -1,0 +1,94 @@
+# Issue #146 selected rights
+
+The 200 fields have source-specific author rights proposals, with independent
+quality, selected-span rights and admission still pending. [rights.json](rights.json)
+records exact versions/spans, article/history attribution, contributor records,
+modifications, original-work layers and exclusions. Content adaptations retain
+CC BY-SA 4.0; project code remains MIT.
+
+## Contribution and adaptation layers
+
+Selected Wiktionnaire lexical semantics, grammatical facts, spelling relations
+and isolated IPA notation use the recorded contribution layer under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
+French definitions adapt the selected meaning and construction; English/Chinese
+are newly authored Lexique explanations of that same use. They are not quotations
+from bilingual dictionaries. Every new field and its language quality require
+separate review, including unchanged pronunciations bound to newly selected uses.
+
+The [complete legal text](COPYING), sections 2(a), 3(a), 3(b) and 4, permits
+commercial sharing/adaptation with attribution, supplied notices, licence and
+modification information, ShareAlike and no additional restrictions. Wikimedia
+Terms section 7 and fixed copyright-policy revision 38903168 distinguish the
+contribution layer from imported/external works and media. Retained authority
+responses and their actual original/copy paths are listed in rights.json.
+
+Every article has a fixed URL, full history link and complete paginated current
+named registry plus returned anonymous count. History credits anonymous edits;
+the current registry can extend beyond the fixed revision. Neither article
+credits nor the last editor establish authorship of a selected sentence.
+
+## Historical original works
+
+Thirty-two of the 54 captured articles declare Académie française eighth-edition
+imports. The original work is **Académie française, Dictionnaire de l’Académie
+française, eighth edition, 1932–1935**. Preserve that credit separately from
+the wiki and Lexique contribution/adaptation layers.
+
+The established [#129 original-work basis](../issue-129/selected-rights.md)
+applies only to this institutional collective edition. CPI
+[L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20)
+uses seventy years from the January following publication: final publication
+in 1935 gives 1936-01-01 plus seventy years, **2006-01-01**.
+[L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891)
+preserves author/work respect. A page import marker does not identify a selected
+sentence’s author or license a later publisher’s edition/electronic work.
+The template at revision 22113837 explicitly allows extraction and later changes.
+The original-work review is historical; it accepts no new #146 field.
+
+## Selected source boundaries
+
+- `écart` selects the economic gap/difference sense at line 28. Its entire
+  CFC cartographic-locality sense at 43 is excluded; its inline licence marker
+  supplies no permission for the selected sense.
+- `mêmes/PRO:ind` uses clean `le même`, revision 35210050, definition 17 and
+  the agreement table explicitly naming `les mêmes` for both plural genders.
+  The exact `mêmes` page is adjective-only and supports spelling/inflection,
+  not a pronoun meaning. IPA comes from the uncited French pronoun line 239
+  of `même`. The Reverso-linked note/meanings at 240/241/244/247 and the
+  Alexandria noun body at 211/212/218/220 are excluded, following the
+  [earlier independently reviewed boundary](../issue-83/quality-review.md).
+  No historical review is reused as acceptance of the new plural explanations.
+- `la plupart/PRO:ind` retains the coordinator’s exact redirect revision 49400.
+  Supporting `plupart` labels its lemma NOM but records the absolute plural
+  meaning and agreement. The selected complete expression has indefinite
+  pronominal value without a complement; the noun alone and determiner
+  `la plupart de` are excluded. The
+  [Académie ninth-edition entry A9P2969](https://www.dictionnaire-academie.fr/article/A9P2969)
+  corroborates that grammatical function as read-only research. Its prose is
+  not redistributed. `/la ply.paʁ/` is explicitly composed from the fixed
+  `la` article and `plupart` IPA components, with both source spans retained.
+- `ceux-là/PRO:dem` retains its exact masculine plural form and IPA. Meaning
+  comes from the French `celui-là` demonstrative frame and its explicit
+  `mp=ceux-là` agreement; no singular form replaces the frozen group.
+- `divers/ADJ` and `divers/ADJ:ind` select separate qualifying and indefinite
+  adjective frames, definitions and agreement. The latter precedes a plural
+  noun and expresses an indefinite number of distinct entities.
+
+Other bibliographic markers retain their identities without licensing external
+dictionary prose. Literary/news examples, images/captions, audio, etymologies,
+other-language sections and unselected meanings remain raw research context
+outside the content package. No such example prose supplies a learner field.
+
+## Redistribution and remaining gates
+
+Distribution retains CC BY-SA 4.0 legal text, attribution, fixed source/version
+and span records, full history credits, applicable original-work credits,
+modification notices and selected source material. The adaptation layer uses
+the same licence without additional restrictions; external works retain their
+separate rights. [NOTICES.md](NOTICES.md) supplies the batch attribution.
+
+All 200 proposed fields await independent language/construction and selected-span
+rights review. The coordinator verifies actual combined conversion, materials,
+notices and native lookup/save/reopen. This package has zero newly admitted
+groups/fields and establishes no learner or release acceptance.
