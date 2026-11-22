@@ -5,6 +5,8 @@
   "author_checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/author-141",
   "branch": "codex/d2-content-141",
   "baseline_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
+  "merged_integration_commit": "a72f0411da8f1bb698ab4f0bdb995f6a6595c05e",
+  "tested_author_package_commit": "100af3398fde83ecd5f8f69cee645f41fe64c20b",
   "baseline_content_version": "core-139-v1",
   "baseline_admitted_groups": 2932,
   "baseline_admitted_fields": 11728,
@@ -54,7 +56,7 @@
     },
     {
       "command": "pnpm test:docs",
-      "result": "passed_460_documents_3569_local_links_404_skipped_links"
+      "result": "passed_on_committed_package_468_documents_3622_local_links_404_skipped_links"
     },
     {
       "command": "git diff --cached --check and staged-path scope inspection",
