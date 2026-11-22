@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany this independently reviewed selected content.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,14 +14,16 @@ Rows 2901–2950 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected sense is retained per exact group. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
-the selected and excluded uses.
+aliases. [Readable content](review-candidates.md) retains every accepted field
+and the selected and excluded uses. [Authored snapshots](authored/snapshot.json)
+retain original proposals; [field review](field-review.json) and
+[replacements](accepted-replacements.json) record the exact accepted adaptations.
 
 ## Article credits
 
@@ -93,6 +95,11 @@ Historical original-work review does not review any new #139 field.
 `portefeuille`’s CFC nautical-chart definition at line 62 is excluded; the pocket
 wallet definition at line 49 is selected. The wallet photograph/caption and
 `injuste` grammar-line photograph/caption are outside the selected spans.
+The inline TLFi IPA reference on `muet` line 7 is retained as a factual
+pronunciation reference; no TLFi definition prose is selected. The ninth-edition
+Académie reference at `portefeuille` line 189 remains bibliography, without
+granting rights in that edition. Short `soumettre` construction fragments
+remain source support and are not displayed learner examples.
 
 ## Redistribution obligations
 
@@ -103,5 +110,5 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 200 fields passed separate quality and selected-text rights review.
+Canonical conversion and actual packaged-obligation acceptance remain pending.
