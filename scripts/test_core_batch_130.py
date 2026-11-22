@@ -126,7 +126,12 @@ class ReviewedPackage130Tests(unittest.TestCase):
         accepted = {g['frozen_row']: g for g in groups}
         for group in canonical['groups']:
             if group['frozen_row'] in ROWS:
-                self.assertEqual(group, accepted[group['frozen_row']])
+                expected = dict(accepted[group['frozen_row']])
+                expected['senses'] = [
+                    dict(sense, independent_review='passed_after_exact_accepted_replacements')
+                    for sense in expected['senses']
+                ]
+                self.assertEqual(group, expected)
         self.assertEqual(read("reuse.json")["reused_fields"], 0)
 
     def test_fixed_sources_and_every_field_span_match_actual_captures(self):
