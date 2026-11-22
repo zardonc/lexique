@@ -1,133 +1,224 @@
 {
   "ticket": 142,
-  "role": "content_author",
-  "author_content_commit": "d216259117d2c2bcc4b6a9e2a1ef7055a012d4ab",
-  "integration_commit_merged": "481d4fcc935e1746f520696d3dd4cf9cca833d09",
-  "integration_merge_commit": "6c3d1c38f9679b449b895465c068458c4f195908",
-  "parent_base_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
-  "canonical_baseline_version": "core-139-v1",
-  "canonical_baseline_groups": 2932,
-  "scope_denominator_groups": 4087,
+  "parent": 78,
+  "role": "independent_source_semantic_rights_reviewer",
+  "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
+  "author_head": "0b177a99e2d7809d18a80bb37fd2c39e7da153fd",
+  "review_base": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
+  "tested_head": "8ac008c1af3af2605aa6bf124948bc5b8fdeec17",
+  "tested_changes": "Latest integration merge HEAD plus owned staged/unstaged reviewer evidence/test patch",
+  "integration_commit_merged": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "integration_merge_commit": "8ac008c1af3af2605aa6bf124948bc5b8fdeec17",
+  "platform": "Windows / PowerShell 7 / Python 3.14.10 via uv",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-142",
+  "branch": "codex/d2-review-142",
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142",
+  "reviewer_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142",
   "exact_groups": 50,
   "proposed_fields": 200,
-  "author_proposed_everyday_groups": 49,
-  "author_proposed_everyday_fields": 196,
+  "quality_accepted_fields": 196,
+  "rights_accepted_fields": 188,
+  "jointly_accepted_fields": 184,
+  "unchanged_accepted_fields": 182,
+  "replacement_fields": 2,
+  "complete_four_field_groups": 45,
+  "complete_group_fields": 180,
+  "accepted_ipa_fields_held_with_incomplete_groups": 4,
+  "unresolved_quality_fields": 4,
+  "unresolved_rights_fields": 12,
+  "unresolved_fields": 16,
   "unresolved_modern_everyday_rows": [
     3098
   ],
-  "unresolved_ordinary_fields": 4,
-  "new_independently_accepted_fields": 0,
-  "pending_independent_quality_fields": 200,
-  "pending_independent_rights_fields": 200,
-  "missing_admitted_fields": 200,
+  "unresolved_textual_rights_rows": [
+    3051,
+    3074,
+    3076,
+    3093
+  ],
+  "newly_admitted_fields": 0,
   "annotations_added": 0,
   "specialist_exceptions_added": 0,
-  "reused_groups": 0,
-  "reused_fields": 0,
-  "fixed_source_articles": 50,
-  "field_spans_checked": 200,
-  "contributor_parts": 6,
-  "contributor_continuation_complete": true,
-  "contributor_registry_is_sentence_authorship_proof": false,
-  "original_daf8_marked_articles": 29,
-  "original_littre_marked_articles": 1,
-  "network_retry": {
-    "http_status": 429,
-    "stage": "contributor_part_6",
-    "attempts_before_success": 1,
-    "backoff_seconds": 30,
-    "successes_preserved": true,
-    "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\fetch.log"
-  },
-  "reproduction": {
-    "status": "passed",
-    "byte_identical_files": [
-      "groups.json",
-      "sources.json",
-      "source-context.json",
-      "source-excerpts.json",
-      "source-captures.json",
-      "field-review.json",
-      "rights.json",
-      "admission.json",
-      "reuse.json",
-      "usage-corroboration.json",
-      "NOTICES.md",
-      "selected-rights.md",
-      "review-candidates.md",
-      "COPYING"
-    ],
-    "fixed_articles": 50,
-    "exact_groups": 50,
-    "proposed_fields": 200,
-    "independently_accepted_fields": 0
-  },
-  "capture_archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142",
-  "longest_proposed_field_characters": 134,
   "checks": [
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py (initial admission tracer)",
-      "status": "failed_as_expected",
-      "exit_code": 1,
-      "reason": "All 50 exact rows lacked admitted baseline content.",
-      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\red-admission.log"
+      "command": "focused Chinese regression before correction",
+      "result": "failed_as_expected_both_subtests",
+      "log": "red-chinese.log"
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py (initial author tracer)",
-      "status": "failed_as_expected",
-      "exit_code": 1,
-      "reason": "Author evidence was absent.",
-      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\red-author.log"
+      "command": "focused independent review before completion",
+      "result": "failed_as_expected",
+      "log": "red-review.log"
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-142/reproduce.py",
-      "status": "passed",
-      "exit_code": 0,
-      "result": "14 evidence files byte-identical from fixed captures.",
-      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\reproduction.log"
+      "command": "focused territorial review before completion",
+      "result": "failed_as_expected",
+      "log": "red-territorial.log"
     },
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py",
-      "status": "passed",
-      "exit_code": 0,
-      "tests_passed": 4,
-      "tests_skipped": 1,
-      "result": "After integration merge; raw spans, contributors and rights checks read archived captures.",
-      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\post-merge-batch.log"
+      "result": "passed_8_tests_1_canonical_skip",
+      "log": "green-post-merge.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-142-review/audit.py",
+      "result": "passed",
+      "log": "source-audit-final.log"
     },
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py --admitted",
-      "status": "failed_as_expected",
-      "exit_code": 1,
-      "reason": "Canonical admission remains incomplete.",
-      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\post-merge-admission.log"
+      "result": "failed_expected_batch_absent_from_canonical",
+      "log": "admitted-final.log"
     },
     {
-      "command": "pnpm test:docs",
-      "status": "passed",
-      "exit_code": 0,
-      "documents": 468,
-      "local_links": 3618,
-      "skipped_local_links": 404,
-      "result": "After integration merge.",
-      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\post-merge-docs.log"
+      "command": "pnpm test:docs before staging new files",
+      "result": "failed_missing_tracked_link_targets",
+      "log": "docs-final.log"
     },
     {
-      "command": "git diff --check; git diff --cached --check",
-      "status": "passed",
-      "exit_code": 0,
-      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\diff-check.log"
+      "command": "pnpm test:docs after staging live author Markdown copies",
+      "result": "failed_relocated_author_relative_links",
+      "log": "docs-staged-failed.log"
+    },
+    {
+      "command": "pnpm test:docs after staging owned files",
+      "result": "passed",
+      "log": "docs-staged.log"
+    },
+    {
+      "command": "git diff --check HEAD -- docs/evidence/issue-142 scripts/test_core_batch_142.py",
+      "result": "passed",
+      "log": "diff-check-delivery.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-142-review/verify_delivery.py --final",
+      "result": "passed",
+      "log": "delivery-consistency.log"
     }
   ],
-  "independent_quality_review": "not_run_pending_separate_reviewer",
-  "independent_selected_rights_review": "not_run_pending_separate_reviewer",
-  "actual_native_lookup_save_reopen": "not_run_coordinator_owned",
-  "combined_conversion_and_packaging": "not_run_coordinator_owned",
-  "frontend_and_rust_application_checks": "not_run_no_application_changes_authored",
-  "learner_acceptance": "not_run",
-  "whole_machine_offline": "not_run",
-  "other_platform_execution": "not_run",
-  "release_acceptance": "not_claimed",
-  "tracker_mutations": "none",
-  "push": "none"
+  "coordinator_gates_not_run": [
+    "canonical admission/combined conversion",
+    "portable packaging",
+    "native lookup/save/reopen",
+    "learner acceptance"
+  ],
+  "application_checks_not_run": "No frontend/Rust runtime code changed",
+  "push_or_tracker_actions": false,
+  "authored_byte_preservation": {
+    "files": [
+      {
+        "name": "admission.json",
+        "authored_filename": "admission.json",
+        "sha256": "a8d8c19388f1af1745da72ae4507b525b0f38b3f90544370bb30e4c7381c2680"
+      },
+      {
+        "name": "COPYING",
+        "authored_filename": "COPYING",
+        "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+      },
+      {
+        "name": "field-review.json",
+        "authored_filename": "field-review.json",
+        "sha256": "d80d2796dcfc2a2770e39fd724e3eccda2d1cdb3b6b5abde0d4258f4642c674b"
+      },
+      {
+        "name": "groups.json",
+        "authored_filename": "groups.json",
+        "sha256": "f1e9fb9454a577543d80aa2cded7dff91730687327f0fd0978fb0406360eee89"
+      },
+      {
+        "name": "NOTICES.md",
+        "authored_filename": "NOTICES.md.txt",
+        "sha256": "d495c1a0d9610243903c612f8f0f251112081573b4ff8bd0d5592a398a0e38a6"
+      },
+      {
+        "name": "README.md",
+        "authored_filename": "README.md.txt",
+        "sha256": "adc7ef243e6c308ea154ea42ad55a0d1a0ef95324172300be10d573602aede2f"
+      },
+      {
+        "name": "reuse.json",
+        "authored_filename": "reuse.json",
+        "sha256": "4ce3696e189769cc133da9d8d1d1fc049d44edc188b2a4b6b42b99787780eaca"
+      },
+      {
+        "name": "review-candidates.md",
+        "authored_filename": "review-candidates.md.txt",
+        "sha256": "f5c6f57fccc9440e3f83193942855aeca03f323f654ce34725761d610fd67a38"
+      },
+      {
+        "name": "rights.json",
+        "authored_filename": "rights.json",
+        "sha256": "c11b9d73d0ae88f0b13be93ee1c40475fa7b0642225cda61367e38f78f5cdbc0"
+      },
+      {
+        "name": "selected-rights.md",
+        "authored_filename": "selected-rights.md.txt",
+        "sha256": "cb04f74a3102fbea8f964dd406a607b8b7a68fb08bc61ba35eb456ac80155ab8"
+      },
+      {
+        "name": "source-captures.json",
+        "authored_filename": "source-captures.json",
+        "sha256": "672d27ca126f60911ef2acfcd19df1a40e92f5369360ee590c5048b4d534b553"
+      },
+      {
+        "name": "source-context.json",
+        "authored_filename": "source-context.json",
+        "sha256": "b68fe33bb5dc4475e9a6a4200fb09d239571a6ec057852723152c9df1524a611"
+      },
+      {
+        "name": "source-excerpts.json",
+        "authored_filename": "source-excerpts.json",
+        "sha256": "37fa5798dd036b9e10d4b8b7801cf6a0dbc731cb98ca043fa25698080f301256"
+      },
+      {
+        "name": "sources.json",
+        "authored_filename": "sources.json",
+        "sha256": "965bfb3fd22d6a67e81be0abf251133c520981443de98149c4c82c2d134832f6"
+      },
+      {
+        "name": "usage-corroboration.json",
+        "authored_filename": "usage-corroboration.json",
+        "sha256": "228428a9393a01e0122def8498a30a02bff6de26351a77ecae2137369af47774"
+      },
+      {
+        "name": "verification.json",
+        "authored_filename": "verification.json",
+        "sha256": "440610391dd8dd813de06bb11c637e78e42ef7c4b9b4cac4fa35d6d3dc330c6e"
+      }
+    ],
+    "count": 16,
+    "status": "passed"
+  },
+  "focused_count_and_supporting_boundary_consistency": "passed",
+  "affecter_embedded_second_entry_match": "passed_ACA8_535_selected_sentence",
+  "source_audit": {
+    "source_count": 50,
+    "field_spans_checked": 200,
+    "nested_span_checks": 2678,
+    "contributor_parts": 6,
+    "named_article_memberships": 2827,
+    "anonymous_counts_total": 443
+  },
+  "retained_patch_commands": [
+    {
+      "command": "git diff --binary HEAD -- docs/evidence/issue-142 scripts/test_core_batch_142.py",
+      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\final-owned.patch"
+    },
+    {
+      "command": "git diff --binary HEAD -- scripts/test_core_batch_142.py",
+      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\final-test.patch"
+    }
+  ],
+  "tested_patch_identity": "Final patch and its SHA256 are retained in external final-closeout.json to avoid a self-referential tracked hash.",
+  "integration_merge_history": [
+    {
+      "integration_tip": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+      "review_merge": "76102363c4166066fab725f761258db72bb6f035"
+    },
+    {
+      "integration_tip": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+      "review_merge": "8ac008c1af3af2605aa6bf124948bc5b8fdeec17"
+    }
+  ]
 }
