@@ -33,6 +33,91 @@ def read(name):
 
 
 class Batch144Tests(unittest.TestCase):
+    def test_luxe_evidence_selects_lexical_facts_instead_of_extended_exposition(self):
+        group = next(g for g in read("groups.json") if g["headword"] == "luxe")
+        sense = group["senses"][0]
+        authored = next(g for g in read("authored/groups.json") if g["headword"] == "luxe")["senses"][0]
+        for name in ("french_definition", "english", "chinese"):
+            self.assertEqual(sense["fields"][name]["source_span"]["raw_source_excerpt"],
+                             "[[dépense]]s [[somptuaire]]s et [[superflu]]es")
+            self.assertEqual(sense["fields"][name]["text"], authored["fields"][name]["text"])
+        support = [s["reviewed_excerpt"] for s in read("source-excerpts.json")["supporting_evidence"]
+                   if s["sense_id"] == sense["sense_id"]]
+        for fact in ("s’[[entourer]] d’un [[raffinement]] [[fastueux]]",
+                     "pur [[goût]] de l’[[ostentation]]", "la [[strict]]e [[nécessité]]"):
+            self.assertIn(fact, support)
+
+    def test_ipa_modification_notices_describe_the_stored_notation(self):
+        for group in read("groups.json"):
+            field = group["senses"][0]["fields"]["ipa"]
+            self.assertNotIn("slashes added", field["modification"])
+            self.assertFalse(field["text"].startswith("/"))
+
+    def test_fee_evidence_keeps_the_short_type_and_power_facts(self):
+        sense = next(g for g in read("groups.json") if g["headword"] == "fée")["senses"][0]
+        for name in ("french_definition", "english", "chinese"):
+            self.assertEqual(sense["fields"][name]["source_span"]["raw_source_excerpt"], "Être [[imaginaire]]")
+        support = [s["reviewed_excerpt"] for s in read("source-excerpts.json")["supporting_evidence"]
+                   if s["sense_id"] == sense["sense_id"]]
+        for fact in ("une [[puissance]] [[surnaturel]]le", "la [[tradition]] [[populaire]]",
+                     "l’[[imagination]] des [[conteur]]s"):
+            self.assertIn(fact, support)
+
+    def test_reviewed_resource_has_joint_field_use_source_and_rights_acceptance(self):
+        review = read("field-review.json")
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertTrue(review["independent_acceptance"])
+        self.assertEqual(len(review["fields"]), 200)
+        self.assertEqual(len(review["usage"]), 50)
+        fields = {(f["sense_id"], f["field"]): f for f in review["fields"]}
+        originals = {(f["sense_id"], f["field"]): f for f in read("authored/field-review.json")["fields"]}
+        rights = {(f["sense_id"], f["field"]): f for f in read("rights.json")["fields"]}
+        uses = {u["sense_id"]: u for u in review["usage"]}
+        excerpts = {(f["sense_id"], f["field"]): f for f in read("source-excerpts.json")["fields"]}
+        self.assertEqual(len(fields), 200)
+        self.assertEqual(set(fields), set(rights))
+        self.assertEqual(set(fields), set(excerpts))
+        reviewer = review["reviewer"]
+        self.assertIn("separate from author", reviewer)
+        for group in read("groups.json"):
+            sense = group["senses"][0]
+            use = uses[sense["sense_id"]]
+            self.assertEqual(use["accepted_usage"], sense["use"])
+            self.assertEqual(use["accepted_usage_quality_status"], "passed")
+            self.assertEqual(use["everyday_sense_status"], "passed")
+            self.assertTrue(use["review_reason"].strip())
+            self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
+            for name, field in sense["fields"].items():
+                key = sense["sense_id"], name
+                entry, right = fields[key], rights[key]
+                self.assertEqual(entry["proposed_text"], originals[key]["proposed_text"])
+                self.assertEqual(entry["proposed_exact_source"], originals[key]["exact_source"])
+                self.assertEqual(entry["accepted_text"], field["text"])
+                self.assertEqual(entry["accepted_text_quality_status"], "passed")
+                self.assertEqual(entry["rights_eligibility_status"], "passed_at_selected_text_boundary")
+                self.assertEqual(right["independent_review"], "passed_at_selected_text_boundary")
+                self.assertEqual(entry["reviewer"], reviewer)
+                self.assertEqual(right["reviewer"], reviewer)
+                self.assertTrue(entry["review_reason"].strip())
+                self.assertTrue(entry["selected_text_rights_reason"].strip())
+                exact = entry["exact_source"]
+                for column in ("source_id", "revid", "line_1_based", "column_1_based", "reviewed_excerpt"):
+                    self.assertEqual(exact[column], excerpts[key][column])
+                self.assertEqual(field["source_span"]["column_1_based"], exact["column_1_based"])
+                self.assertEqual(field["source_span"]["raw_source_excerpt"], exact["reviewed_excerpt"])
+                self.assertEqual(right["exact_source_span"]["raw_source_excerpt"], exact["reviewed_excerpt"])
+        for source in read("sources.json")["sources"]:
+            self.assertEqual(source["selected_text_review"], "passed_for_selected_spans")
+            for layer in source["original_historical_dictionary_layers"]:
+                self.assertFalse(layer["worldwide_expression_clearance"])
+                self.assertEqual(layer["territorial_basis"], "France")
+        admission = read("admission.json")
+        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (50, 200))
+        self.assertEqual((admission["changed_text_fields"], admission["changed_source_span_fields"], admission["changed_modification_notice_fields"]), (0, 6, 50))
+        self.assertEqual((admission["missing_admitted_fields"], admission["pending_canonical_fields"], admission["newly_admitted_fields"]), (0, 200, 0))
+        self.assertEqual((admission["annotation_exception_groups"], admission["specialist_exception_groups"]), (0, 0))
+        self.assertEqual(len(read("accepted-replacements.json")), 56)
+
     def test_exact_frozen_groups_have_complete_resource_records(self):
         path = EVIDENCE / "groups.json"
         if path.exists():

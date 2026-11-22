@@ -1,0 +1,32 @@
+{
+  "author_commit": "652d6779ec264268b5518f09b72290deeaeb4125",
+  "review_base": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+  "files": [
+    "COPYING",
+    "NOTICES.md",
+    "README.md",
+    "admission.json",
+    "field-review.json",
+    "final-verification.json",
+    "groups.json",
+    "reuse.json",
+    "review-candidates.md",
+    "rights.json",
+    "selected-rights.md",
+    "source-captures.json",
+    "source-context.json",
+    "source-excerpts.json",
+    "sources.json"
+  ],
+  "identity": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-144",
+  "author_files_verified_against_git": true,
+  "prose_file": "prose.json",
+  "prose_original_files": [
+    "README.md",
+    "NOTICES.md",
+    "selected-rights.md",
+    "review-candidates.md"
+  ],
+  "prose_preservation": "Each original UTF-8 byte sequence reconstructs exactly from its prose.json string; original relative links retain their original document base."
+}

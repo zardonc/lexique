@@ -14,7 +14,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -23,7 +23,14 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3152: The selected text describes observable arterial-pressure and palpation facts in routine anatomical language, without a creative example or exposition. The DAF8 reference at 83 grants no rights; this decision concerns those physiological facts and the new explanations.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_19565",
@@ -39,10 +46,17 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3160: The agreement table, regular feminine relation, required article and recorded pronunciation are grammatical facts. The pronoun definition is a brief possession formula; both fixed pages and their complete histories are credited.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_26224",
@@ -58,7 +72,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -71,7 +85,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -122,7 +140,14 @@
           "raw_reference": "* {{RÉF|1}} {{R:BaTelÒc}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3159: The selected sentence contains routine organ, contraction and movement facts rather than literary description. Etymology and its Gaffiot/Bailly/Pokorny quotations are outside the chosen span; the DAF8 import credit does not clear those unselected paragraphs.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_119655",
@@ -138,10 +163,17 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3153: The chosen two commerce equivalents and regional genders are short lexical/grammatical facts. No import marker attaches to them; the wiki and independently authored explanation layers remain CC BY-SA 4.0.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_137754",
@@ -157,7 +189,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -170,7 +202,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -181,7 +217,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3155: The selected assure/assert-that-true clause is a conventional short lexical paraphrase, not distinctive exposition. Its truth-claim concept and grammar are facts even if this brief formula came from DAF8; original institutional credit remains separately recorded.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_158002",
@@ -197,7 +240,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -210,7 +253,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -221,7 +268,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3157: The unobtrusive/reserved characterization uses ordinary short descriptive phrases, with no original illustration or narrative. The article import marker does not establish this chosen modern clause as historical expression; the assessment is specific to these conventional characterizations.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_166898",
@@ -237,7 +291,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -250,7 +304,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -281,7 +339,14 @@
           "raw_reference": "* {{R:Ubaud}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3154: Only the short expenditure, refinement, ostentation and necessity fragments are accepted. The former extended definition closely parallels the TLFi exposition returned in the CNRTL capture; its underlying expressive wording is not cleared. Actual DAF8 luxe instead begins Somptuosité dans le vêtement..., so the article-wide DAF8 marker does not establish the selected paragraph as DAF8. Fresh explanations convey the selected facts; no long exposition is selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_167832",
@@ -297,7 +362,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -310,7 +375,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -326,7 +395,14 @@
           "raw_reference": "* {{RÉF}} {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3158: A compact synonym list plus speech/writing channels contains conventional lexical facts. DAF8 and TLFi are separately credited references; neither is treated as a licence for unselected dictionary exposition.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_223356",
@@ -342,7 +418,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -351,7 +427,14 @@
           "raw_reference": ": {{siècle|XV}} {{composé de|base|-er|lang=fr|m=1}}{{R|TLFi}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3156: Fonder/prendre pour assise is a short conventional synonym construction. The TLFi marker belongs to the etymology; that etymological paragraph and any external expression are unselected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_2219169",
@@ -367,7 +450,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -376,7 +459,14 @@
           "raw_reference": "* {{R:DAF8|afin}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3151: The selected definition is a brief list of conventional purpose equivalents; the infinitive requirement is a grammatical fact. The DAF8 reference at 59 is a bibliographic identity, not proof that these words were imported.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_8460",
@@ -392,7 +482,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -446,7 +536,14 @@
           "raw_reference": ": De l’{{étyl|en|pandunia|brown}}, {{étyl|de|pandunia|brun}}, {{étyl|fr|pandunia|brun}}, {{étyl|ru|pandunia|бурый|tr=buryï}}, {{étyl|hi|pandunia|भूरा|tr=bhūrā}}, {{étyl|ar|fr|بُنِّيّ|tr=bunniyy}}{{R|pandunia|''[https://www.pandunia.info/fra/leksaslia.html Dictionnaire étymologique]'', www.pandunia.info}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3170: Brown/black colour terms, adjective agreement and IPA are facts and short conventional descriptions. The colour swatch and other-language etymologies are not selected media or prose.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_68852",
@@ -462,7 +559,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -486,7 +583,14 @@
           "raw_reference": "* {{R:Trémeur|vue=b}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3169: Strike with the foot is a minimal conventional action phrase. TLFi/Littré etymology and regional references are unselected; no long historical action description is carried over.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_134460",
@@ -502,7 +606,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -515,7 +619,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -526,7 +634,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3165: Great pleasure/admiration is a short conventional emotional characterization; no incantation or story expression is selected. The separately declared DAF8 layer supplies institutional history, not a global permission inference.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_141430",
@@ -542,7 +657,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -556,7 +671,14 @@
           "raw_reference": "*{{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3163: Emit light is a minimal conventional lexical definition and light emission is a fact. TLFi/Godefroy references do not license their longer prose, which is outside the selected boundary.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_153404",
@@ -572,7 +694,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -585,7 +707,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -611,7 +737,14 @@
           "raw_reference": "* {{R:Meyer|article=poissons-chirurgiens}} et article ''acanthures''",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3164: The selected practitioner-of-surgery formula and gender counterpart are short lexical and morphological facts. Huguet and fish-related Meyer bibliography do not license any excluded exposition; the DAF8 import layer retains separate credit.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_166048",
@@ -627,7 +760,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -640,7 +773,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -651,7 +788,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3168: Truth, claim and proof are factual lexical relationships in a conventional short clause. The DAF8 import identity is retained without licensing unrelated dictionary paragraphs.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_167130",
@@ -667,7 +811,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -680,7 +824,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -696,7 +844,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3166: Connaître parfaitement is a two-word conventional lexical equivalence. Accent, variants and transitivity are facts; Bescherelle/DAF8 identities do not license their other content.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_176970",
@@ -712,7 +867,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -725,7 +880,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -736,7 +895,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3161: Warship and underwater navigation are factual object characteristics expressed in a routine compact definition. The DAF8 marker remains historical credit, without extending a French expiry into worldwide permission.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_178653",
@@ -752,7 +918,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -771,7 +937,14 @@
           "raw_reference": "*{{R:ÚJČ}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3162: The selected current wiki definition explains catastrophe and apparent inevitability using conventional lexical clauses, without a cited external quotation. The etymological scholarly exposition and its bibliographic chain are unselected; a TLFi reference at 153 is not proof of imported authorship or an external licence.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_179858",
@@ -787,7 +960,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -800,7 +973,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -811,7 +988,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3167: Offend/upset and touch someone’s amour-propre are conventional short emotional equivalents. No distinctive old example is selected; the DAF8 marker is recorded separately from this phrase-specific assessment.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_4863",
@@ -827,7 +1011,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -836,7 +1020,14 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3176: The selected cooking-compartment mechanism is factual; its obsolete flame detail is not reproduced in learner wording. The short electric-oven cooking fact supports the modern scope. No literary examples or TLFi reference prose are selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_8427",
@@ -852,7 +1043,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -866,7 +1057,14 @@
           "raw_reference": "* {{R:DAF9}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3178: Duper/tromper are two short lexical equivalents with register facts. Neighbouring sexual/literary/news examples and DAF9/TLFi referenced prose are outside the selected licence assessment.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_39290",
@@ -882,7 +1080,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -895,7 +1093,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -916,7 +1118,14 @@
           "raw_reference": "* {{R:Noël 1839}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3172: Opinion/belief, unfavourable and doubt are brief conventional lexical descriptors. Babault/Noël and DAF8 identities provide historical credits, not licensing for unselected illustrative prose.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_149877",
@@ -932,7 +1141,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -945,7 +1154,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -961,7 +1174,14 @@
           "raw_reference": "* {{R:Trémeur|vue=b}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3179: Simple human depiction by drawing/craft is a factual object description in conventional short phrases. The DAF8 marker does not demonstrate that this selected depiction clause copies historical creative expression.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_149916",
@@ -977,7 +1197,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -990,7 +1210,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1011,7 +1235,14 @@
           "raw_reference": "*{{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3177: The selected uneven-step/side-inclination description states physical gait facts in conventional bodily-action language, with no individual scene or creative illustration. DAF8/TLFi identities are retained separately; their unselected examples are not licensed by this decision.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_151302",
@@ -1027,7 +1258,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1063,7 +1294,14 @@
           "raw_reference": "*{{R:Mistral}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3180: Head protection is a short factual object definition. Etymological Littré/TLFi and Bescherelle markers are outside the selected clause; no unselected literary or dictionary exposition is copied.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_157205",
@@ -1079,7 +1317,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1092,7 +1330,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1103,7 +1345,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3171: Company hierarchy and organizational unit are conventional factual lexical relationships. The article-wide DAF8 import marker does not identify this chosen contemporary organizational clause as an imported expressive passage.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_158292",
@@ -1119,7 +1368,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1132,7 +1381,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1143,7 +1396,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3173: Multiplication by two is a numerical procedure/fact under 102(b); the selected synonym list uses brief conventional terms, without creative historical examples.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_170410",
@@ -1159,7 +1419,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1173,7 +1433,14 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3174: Traverse an area is a short conventional action/construction phrase. The Latin derivation and TLFi/Littré etymology are not selected expression.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_232897",
@@ -1189,7 +1456,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1202,7 +1469,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1236,7 +1507,14 @@
           "raw_reference": "* {{R:DDO|filet}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3175: Cord/thread mesh and opening-size capture are observable construction facts in routine language. The actual CFC import marker at 93 belongs to an unselected cartographic definition, not the net at 15. No CFC wording or modern cartographic rights are accepted.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_651",
@@ -1252,7 +1530,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1261,7 +1539,14 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3181: Changing linguistic representation across languages is a functional lexical concept under 102(b); the selected wording is a routine compact description, without a creative translation example or protected passage.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_771",
@@ -1277,7 +1562,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1286,7 +1571,14 @@
           "raw_reference": ": {{date|lang=fr|1121}}{{R|TLFi}} Du {{étyl|frm|fr|éléphant}}{{R|DMF|elephant}}, de l’{{étyl|fro|fr|elefant}}, {{lien|''elefan''|fro}}, emprunt savant au {{étyl|la|fr|elephantus}}{{R|TLFi}} – qui a remplacé la variante populaire {{lien|''olifant''|fro}}{{R|TLFi}} –, du {{étyl|grc|fr|mot=ἐλέφαντος|tr=eléphantos}}, génitif singulier de {{lien|ἐλέφας|tr=eléphas|sens=éléphant|grc}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3188: The current selected wiki sentence lists zoological body, diet, tusk and vocalization facts in standard taxonomic language. Learner text selects the familiar animal characteristics; no creative animal scene, etymological prose or external example is reproduced.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_2164",
@@ -1302,7 +1594,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1311,7 +1603,14 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3185: Population member and individual/collectivity distinction are factual lexical relationships in ordinary compact language. A DAF8 reference is not treated as a grant for other prose.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_5090",
@@ -1327,7 +1626,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1340,7 +1639,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1351,7 +1654,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3183: Specialist in teeth care is a brief conventional occupation formula; gender and pronunciation are facts. No historical clinical narrative or example is selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_13090",
@@ -1367,7 +1677,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1376,7 +1686,14 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3189: Grandiose/incredible/real are a short conventional adjective contrast, not protected fabulous storytelling. The DAF8 reference is separate bibliography, and no story is selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_133803",
@@ -1392,7 +1709,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1405,7 +1722,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1416,7 +1737,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3190: Action de se promener is a minimal nominalization/lexical fact. No historical walking scene or creative example is selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_138418",
@@ -1432,7 +1760,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1445,7 +1773,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1456,7 +1788,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3182: Examining in different parts is a short conventional analytical procedure/concept. The DAF8 import marker is historical credit rather than a blanket license.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_138846",
@@ -1472,7 +1811,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1485,7 +1824,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1496,7 +1839,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3184: Consider acceptable is a minimal conventional lexical formula, not creative historical exposition. Transitivity is a grammatical fact.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_145143",
@@ -1512,7 +1862,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1525,7 +1875,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1536,7 +1890,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3186: Small shelter, rudimentary construction and material examples are common factual object descriptors, not a creative architectural scene. The DAF8 import marker does not identify this chosen clause’s sentence author.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_171560",
@@ -1552,7 +1913,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1565,7 +1926,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1581,7 +1946,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3187: Urine is a one-word lexical equivalence; childish register and typical singular are facts. The DEL etymology and old examples remain unselected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_5174",
@@ -1597,7 +1969,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1685,7 +2057,14 @@
           "raw_reference": "* {{R:FVDP}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3194: Chinese origin, two players and strategy-game type are factual game characteristics. Actual Zone/Aya/Rossignol markers attach to unselected girlfriend/verb or other-language material; no creative game commentary or quoted newspaper example is selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_21230",
@@ -1701,7 +2080,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1715,7 +2094,14 @@
           "raw_reference": "* {{R:Littré}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3197: Evening meal and the four geographical usage labels are short lexical and usage facts. DAF8/Littré references do not license their unselected dining descriptions.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_87677",
@@ -1731,7 +2117,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1750,7 +2136,14 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3191: The selected acts and lack of consent are factual lexical elements of the crime, not a reproduced statute or creative victim narrative. Neighbouring cited news/legal examples are unselected and furnish no licence.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_103633",
@@ -1766,7 +2159,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1780,7 +2173,14 @@
           "raw_reference": "* {{R:SAOB|gage}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3195: Loss/failure triggering a forfeit is a game rule/procedure under 102(b), stated in ordinary short clauses. No creative challenge instructions or historical examples are selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_133611",
@@ -1796,7 +2196,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1809,7 +2209,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1820,7 +2224,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3198: Gratitude and received benefits are short conventional lexical equivalents. The historical marker is retained with original credit but grants no blanket worldwide rights.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_159356",
@@ -1836,7 +2247,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1845,7 +2256,14 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3200: Inciter à avoir du courage is a short conventional emotional-action formula. No creative motivational passage or quoted example is selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_161083",
@@ -1861,7 +2279,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1874,7 +2292,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1895,7 +2317,14 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3193: CNRTL’s DAF8 capture confirms the complete source sentence as historical wording. Its worldwide expressive rights are not inferred from French expiry. The selected replacement consists only of Être imaginaire and separate short supernatural-power and tradition/story facts; the complete old sentence and its examples remain outside selected materials.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_171763",
@@ -1911,7 +2340,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1924,7 +2353,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1935,7 +2368,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3196: Keratin covering, barbs, down and birds are standard anatomical facts in conventional terms. No evocative feather description, artwork or literary example is selected; DAF8 remains a separately identified original work.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_177557",
@@ -1951,7 +2391,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1964,7 +2404,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "French_term_basis_only_not_worldwide_expression_clearance",
+          "territorial_basis": "France",
+          "worldwide_expression_clearance": false,
+          "original_work_decision": "Final 1935 publication gives French economic expiry 2006-01-01 under L123-3. Original expression outside France is not cleared by this date; selected facts/short conventional phrases are assessed separately.",
+          "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator"
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1975,7 +2419,14 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3199: Above all/superior is a conventional short comparative relationship. No creative hierarchical exposition or historical example is selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_430999",
@@ -1991,7 +2442,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2000,7 +2451,14 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3192: Au revoir is a short conventional farewell; language borrowing, register and IPA are facts. Italian or other-language examples are outside the chosen French boundary.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_159481",
@@ -2016,10 +2474,17 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3160: The agreement table, regular feminine relation, required article and recorded pronunciation are grammatical facts. The pronoun definition is a brief possession formula; both fixed pages and their complete histories are credited.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     },
     {
       "id": "b144_fr_5150478",
@@ -2035,10 +2500,17 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_rights_review": {
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewer": "Independent semantic and selected-rights reviewer #144; separate from author and coordinator",
+        "reason": "Row 3176: The selected cooking-compartment mechanism is factual; its obsolete flame detail is not reproduced in learner wording. The short electric-oven cooking fact supports the modern scope. No literary examples or TLFi reference prose are selected.",
+        "selected_sentence_authorship_proved": false,
+        "article_marker_is_selected_expression_proof": false
+      }
     }
   ]
 }
