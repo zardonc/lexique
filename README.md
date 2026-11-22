@@ -57,7 +57,8 @@ pnpm scheduling:build     # 编译同一调度入口的原生 CLI 与 WASM，编
 pnpm test:scheduling      # 固定向量 + 4,096 个校准向量，实际执行并严格比较日期 / 阶段
 pnpm desktop:build       # 默认 Cargo --locked；仅构建原生可执行文件，暂未开启安装包与签名
 pnpm desktop:portable    # Windows x64 release ZIP，免安装，解压后运行 Lexique.exe
-pnpm test:tooling        # 构建参数传递与隔离打包回归，不编译原生程序
+pnpm test:native:fixtures # Windows 原生批次目录准入；检查后不启动应用
+pnpm test:tooling        # 原生目录准入、构建参数传递与隔离打包回归，不编译原生程序
 pnpm test:speech:cleanup # Windows 缓存清理；需设置 LEXIQUE_TEST_EXECUTABLE
 cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run
 pnpm test:speech:cache   # Windows 缓存发布 / 并发 / 重解析点；执行硬限 60 秒
