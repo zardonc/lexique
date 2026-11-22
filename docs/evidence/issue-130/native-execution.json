@@ -1,0 +1,21 @@
+{
+  "issue": 130,
+  "status": "passed",
+  "buildSha": "d34efc046d3fd6e4d9e980253228830f42c6aea8",
+  "binarySha256": "fd940094701928acaeeb0609e34eece1efe12a98ffb8b2970506518b026eaba3",
+  "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\integration\\target\\issue-130\\native-admitted",
+  "checks": [
+    {
+      "check": "Batch #130: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 48 headwords saved and reopened with unchanged provenance and learning state",
+      "status": "passed"
+    }
+  ],
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "replaced_fields": 1,
+  "content_version": "core-139-v1",
+  "core_sha256": "7d480491c094f89100b9f1767816d4e9e753b12a8b26ba2ccf338d0aabf04051",
+  "hard_timeout_seconds": 60,
+  "external_webview_requests": 0,
+  "remaining_owned_processes": 0
+}

@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # D2 #132 reviewed content package
 
 **49 exact groups / 49 everyday selected uses / 196 independently accepted

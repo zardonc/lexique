@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # D2 issue #138 reviewed content shard
 
 **50 independently accepted groups / 200 fields** cover the exact frozen groups

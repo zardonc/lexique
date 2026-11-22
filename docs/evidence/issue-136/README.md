@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # Issue #136 independently reviewed shard
 
 **49 content groups / 196 reviewed fields, plus one owner-approved zero-field annotation with four missing fields.** All 50 frozen groups, rows 2751–2800, identities, frequencies and order remain; the denominator is 4,087.

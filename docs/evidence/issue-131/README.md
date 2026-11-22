@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # Issue #131: independently reviewed core batch
 
 **50 exact groups, 50 current everyday uses and 200 fields pass separate quality

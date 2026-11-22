@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # Issue #139: independently reviewed rows 2901–2950
 
 **50 exact groups, 50 everyday uses and 200 independently accepted fields.**

@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # Issue #134 independent review
 
 **50 ordinary groups / 200 fields accepted; zero unresolved fields.** The prior

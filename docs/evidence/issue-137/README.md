@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # Issue #137 reviewed content
 
 **50 exact frozen groups / 50 modern everyday selected uses / 200 fields accepted

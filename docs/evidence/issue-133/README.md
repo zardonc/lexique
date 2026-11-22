@@ -1,3 +1,5 @@
+Current result: [final admission and native verification](README-admission.md). The preparation record below retains its original scope.
+
 # D2 #133 independently reviewed shard
 
 **49 ordinary groups / 49 selected uses / 196 fields accepted**, all wording unchanged.
