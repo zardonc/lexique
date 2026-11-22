@@ -1,0 +1,44 @@
+{
+  "frozen_row": 3128,
+  "headword": "pars",
+  "pos": "NOM",
+  "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+  "owner_decision": null,
+  "status": "awaiting_explicit_owner_scope_decision",
+  "recommendation": "Admit the modern specialist golf plural under an explicit exception for this exact frozen row, keeping pars/NOM. No substitution or annotation is authorized.",
+  "recommended_ipa": "/paʁ/",
+  "ipa_basis": "pars noun-flexion explicitly plural of par; par noun 1 explicitly /paʁ/ and fr-rég|paʁ establish the regular, same-pronunciation plural. Do not borrow the neighbouring partir verb IPA.",
+  "proposed_french_definition": "Pluriel de « par » : nombres conventionnels de coups prévus pour terminer des trous de golf.",
+  "proposed_english": "Pars: the standard numbers of strokes assigned to golf holes; plural masculine noun.",
+  "proposed_chinese": "高尔夫各洞的标准杆数；par 的阳性复数形式。",
+  "proposal_quality_status": "passed",
+  "proposal_rights_status": "passed_selected_facts_and_short_phrases",
+  "proposal_review_reason": "Conventional assigned golf-hole stroke counts, masculine plural and noun-derived regular-plural /paʁ/ agree across the exact four proposed fields. Inflection, pronunciation and the short stroke-count rule are facts; wiki/Lexique CC BY-SA 4.0 notices remain required.",
+  "coordinator_recommendation_path": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/pars-scope-review.md",
+  "sources": [
+    {
+      "title": "pars",
+      "revid": 39518389,
+      "source_id": "b143_fr_67055",
+      "lines": [
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "title": "par",
+      "revid": 39972270,
+      "source_id": "b143_fr_2252",
+      "lines": [
+        291,
+        292,
+        294,
+        295
+      ]
+    }
+  ],
+  "existing_approval": "Only singular frozen row 128 par/NOM; not this row.",
+  "alternatives": "Without a specialist exception, retain four unresolved fields. An annotation also requires explicit owner approval."
+}

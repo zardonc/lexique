@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations use
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code retains MIT. The [complete legal text](COPYING), fixed
 article links, full histories, contributor records and modification notices
-accompany the proposals.
+accompany the reviewed shard.
 
 Exact membership and both unchanged frequency strings derive from Boris New
 and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -15,7 +15,8 @@ and order. CEFR remains unknown.
 
 ## Modifications
 
-Forty-nine groups have one proposed selected sense and four fields each.
+Fifty groups have one quality-reviewed selected sense and four fields each;
+49 are everyday uses and `pars/NOM` is the approved specialist exception.
 French definitions adapt the selected lexical semantics; EN/ZH are new Lexique
 explanations, not upstream bilingual quotations. POS, construction, gender,
 number, register and selected restrictions remain explicit. Applicable IPA
@@ -23,8 +24,10 @@ notation is retained; `chevalier` keeps its recorded optional-schwa notation.
 The `uns` field isolates the recorded /œ̃/ segment of `les uns`, with the article
 and liaison excluded, and retains the obligatory construction.
 No source relation adds a runtime alias. [Exact proposals](review-candidates.md)
-retain all fields and selected/excluded uses. `pars/NOM` has no proposed sense
-and four unresolved fields.
+retain the 196 original fields and selected/excluded uses. The four approved
+`pars/NOM` additions retain the exact proposal and accepted text in
+[added fields](accepted-replacements.json). Original proposals remain in
+[authored snapshot](authored/snapshot.json).
 
 ## Article credits
 
@@ -108,7 +111,22 @@ quotations, other-language content, media, audio, etymologies and unselected
 external dictionary prose supply no learner field. Complete raw captures remain
 in the external research archive, separately from redistribution inputs.
 
-All 196 proposed fields await independent quality and selected-span rights
-review; no new field is independently accepted or canonically admitted here.
+All 200 fields pass independent quality review; 182 pass selected-span rights.
+Canonical admission remains a coordinator gate.
 The coordinator owns assembly, notices verification, native lookup/save/reopen
 and release gates.
+
+## Independent selected-span decisions
+
+All 200 fields pass quality review; 182 pass rights review. Eighteen textual
+fields across distraire, impressionnant, grève, lecture, congrès and galerie
+remain pending original-expression territorial clearance. [Selected rights](selected-rights.md)
+and [original boundaries](original-boundaries.json) retain the actual reasons.
+An article-wide DAF8 marker does not establish selected-sentence authorship or
+protectable expression. French collective economic expiry is not automatic
+worldwide clearance.
+
+[Owner approval](owner-approval.json) dated 2026-11-22 applies only to exact
+row 3128 pars/NOM: the masculine plural golf standard counts. The noun par
+IPA and exact pars regular-plural relation ground /paʁ/. No alias is added.
+The four selected fields retain CC BY-SA 4.0 for contribution/adaptation layers.
