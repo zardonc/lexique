@@ -8104,7 +8104,7 @@
         "evidence": "rights.json and source-context.json",
         "selected_span_independent_rights_review": "pending"
       },
-      "accepted_text": "Racler une surface pour la nettoyer, l’effacer ou la polir (verbe transitif).",
+      "accepted_text": "Racler une surface pour la nettoyer, effacer quelque chose qui s’y trouve ou la polir (verbe transitif).",
       "accepted_source": {
         "source_id": "b154_fr_9678",
         "revid": 39773451,
@@ -8114,7 +8114,7 @@
         "column_1_based": 1,
         "reviewed_excerpt": "# [[racler|Racler]] pour [[nettoyer]], pour [[effacer]] ou pour [[polir]]."
       },
-      "review_reason": "Racler surface and three purposes match L8. Transitive gratter selects surface scraping for cleaning/erasure/polish; body scratching is a different sense.",
+      "review_reason": "Cleaning and polishing apply to the surface; erasure applies to something on it, as the English and Chinese fields correctly state. The exact replacement resolves the proposed l’effacer referent while retaining the three purposes at L8. Transitive gratter selects surface scraping for cleaning/erasure/polish; body scratching is a different sense.",
       "rights_review_reason": "gratter, fixed French revision 39773451, selected field lines [7, 8]. The three scraping purposes match DAF8 despite the reference-only Littré marker. Original correspondence is not a claim of sentence authorship. Modern Montigny prose and scratching uses are excluded. The retained original DAF8 expression is: Racler pour nettoyer, pour effacer ou pour polir. The established institutional collective edition 1932–1935 and CPI L123-3 basis gives conservative French original-work expiry 2006-01-01. This checks the identified expression, not unspecified modern electronic editorial material or sentence authorship. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0; no original is relicensed as MIT.",
       "independence": true
     },

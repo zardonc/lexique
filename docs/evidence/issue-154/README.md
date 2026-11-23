@@ -2,7 +2,7 @@
 
 Rows 3651–3700 retain all 50 exact frozen word/POS groups. All 200 selected
 fields and 50 everyday-use restrictions pass independent quality/source and
-selected-rights review: 199 fields unchanged, one French replacement, zero
+selected-rights review: 198 fields unchanged, two French replacements, zero
 unresolved fields. Canonical admission and native/combined-package gates remain
 coordinator-owned.
 

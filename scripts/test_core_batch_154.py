@@ -40,6 +40,13 @@ def read(name):
 
 
 class Batch154Tests(unittest.TestCase):
+    def test_scraping_erases_a_mark_on_the_surface(self):
+        group = next(g for g in read("groups.json") if g["frozen_row"] == 3676)
+        fields = group["senses"][0]["fields"]
+        self.assertEqual(fields["french_definition"]["text"],
+                         "Racler une surface pour la nettoyer, effacer quelque chose qui s’y trouve ou la polir (verbe transitif).")
+        self.assertIn("erase something on it", fields["english"]["text"])
+
     def test_muslim_adherence_does_not_require_practising(self):
         group = next(g for g in read("groups.json") if g["frozen_row"] == 3685)
         field = group["senses"][0]["fields"]["french_definition"]
@@ -130,8 +137,9 @@ class Batch154Tests(unittest.TestCase):
             self.assertEqual(spelling["independent_review"], "passed")
             self.assertEqual(spelling["alias_admission"], "not_admitted")
         replacements = read("accepted-replacements.json")
-        self.assertEqual([(r["frozen_row"], r["field"]) for r in replacements], [(3685, "french_definition")])
-        self.assertEqual((admission["accepted_unchanged_fields"], admission["accepted_changed_fields"]), (199, 1))
+        self.assertEqual([(r["frozen_row"], r["field"]) for r in replacements],
+                         [(3676, "french_definition"), (3685, "french_definition")])
+        self.assertEqual((admission["accepted_unchanged_fields"], admission["accepted_changed_fields"]), (198, 2))
 
     def test_author_review_cannot_enter_the_existing_admission_pipeline(self):
         with tempfile.TemporaryDirectory(prefix="core-batch-154-") as folder:

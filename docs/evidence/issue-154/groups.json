@@ -2243,7 +2243,7 @@
         "fields": {
           "french_definition": {
             "language": "fr",
-            "text": "Racler une surface pour la nettoyer, l’effacer ou la polir (verbe transitif).",
+            "text": "Racler une surface pour la nettoyer, effacer quelque chose qui s’y trouve ou la polir (verbe transitif).",
             "source_id": "b154_fr_9678",
             "source_span": {
               "line_1_based": 8,
@@ -2251,7 +2251,7 @@
               "raw_source_excerpt": "# [[racler|Racler]] pour [[nettoyer]], pour [[effacer]] ou pour [[polir]]."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained. Scoped independent semantic review; accepted text and reason retained in field-review.json.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
             "independent_review": "passed",
             "rights_eligibility_status": "passed_at_selected_text_boundary",

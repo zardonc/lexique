@@ -1,10 +1,11 @@
 # Independent content review for #154
 
 All 50 exact frozen groups (3651–3700), 200 fields and 50 selected everyday
-uses pass independent linguistic/source and selected-rights review. **199
-fields are unchanged; one French field changes; zero fields are unresolved.**
+uses pass independent linguistic/source and selected-rights review. **198
+fields are unchanged; two French fields change; zero fields are unresolved.**
 The Muslim noun denotes an adherent of Islam, consistent with the source and
-English/Chinese explanations. The exact replacement is in
+English/Chinese explanations. The scraping verb erases something on a surface
+while cleaning or polishing the surface itself. The exact replacements are in
 [accepted-replacements.json](accepted-replacements.json); all 200 per-field and
 50 per-use reasons are in [field-review.json](field-review.json).
 

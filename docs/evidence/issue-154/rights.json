@@ -9554,10 +9554,10 @@
         }
       ],
       "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained. Scoped independent semantic review; accepted text and reason retained in field-review.json.",
       "independent_review": "passed",
       "reviewer": "Independent content and selected-rights reviewer for issue #154; codex/d2-review-154; separate from content author and coordinator",
-      "accepted_text": "Racler une surface pour la nettoyer, l’effacer ou la polir (verbe transitif).",
+      "accepted_text": "Racler une surface pour la nettoyer, effacer quelque chose qui s’y trouve ou la polir (verbe transitif).",
       "rights_eligibility_status": "passed_at_selected_text_boundary",
       "review_reason": "gratter, fixed French revision 39773451, selected field lines [7, 8]. The three scraping purposes match DAF8 despite the reference-only Littré marker. Original correspondence is not a claim of sentence authorship. Modern Montigny prose and scratching uses are excluded. The retained original DAF8 expression is: Racler pour nettoyer, pour effacer ou pour polir. The established institutional collective edition 1932–1935 and CPI L123-3 basis gives conservative French original-work expiry 2006-01-01. This checks the identified expression, not unspecified modern electronic editorial material or sentence authorship. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0; no original is relicensed as MIT."
     },
