@@ -188,7 +188,7 @@ Feminine noun possession: present possession or enjoyment of property, not a cla
 
 - french_definition: Fait de disposer actuellement d’un bien ou d’en jouir ; nom féminin.
 - ipa: /pɔ.sɛ.sjɔ̃/
-- english: Possession: currently having a property or being able to use or enjoy it; feminine noun.
+- english: Possession: currently holding or being able to use or enjoy an item of property; feminine noun.
 - chinese: 占有：当前持有、支配或享用某项财物；阴性名词。
 
 ## 3572 `soviétique/ADJ`

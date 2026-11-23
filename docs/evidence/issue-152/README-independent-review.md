@@ -1,6 +1,6 @@
 # Issue #152 independent field/use/selected-rights review
 
-**50 exact groups, 50 selected uses and 200 fields accepted.** **194 fields unchanged; six meaning fields corrected; zero unresolved.** Frozen identities, order, frequencies and the 4,087-group denominator are preserved. There are no annotation/specialist exceptions or new aliases.
+**50 exact groups, 50 selected uses and 200 fields accepted.** **193 fields unchanged; seven meaning fields corrected; zero unresolved.** Frozen identities, order, frequencies and the 4,087-group denominator are preserved. There are no annotation/specialist exceptions or new aliases.
 
 Reviewer: separate independent field/use/selected-rights reviewer #152, `codex/d2-review-152`, working at `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/review-152`. This is an agent review; human learner acceptance is separate. The exact [ticket #152](https://github.com/zardonc/lexique/issues/152), parent #78 and reviewer guide were read from the supplied context. Standards, glossary/resource ADRs and local development guidance were read.
 
@@ -10,7 +10,7 @@ Author commit: `0b447a3549d3812b299f165cc608fc54dfa2caf8`; author branch head: `
 
 `décès` now means a person's death, including unnatural causes. The retained Littré line's natural-cause wording is identified at its original boundary; the retained modern Académie entry and DAF8 personal-death meaning corroborate removing that historical restriction. `coma` now includes deep unconsciousness alongside loss of sensation and voluntary movement. Its retained modern Académie entry supplies the missing factual feature. French/English/Chinese use independently phrased explanations; neither modern publisher sentence becomes a learner field. The exact historic wiki spans remain preserved and the factual corrections are explicitly documented in the review and [replacement records](accepted-replacements.json).
 
-All other texts passed individual reading. `s’emparer de` and `s’évader` preserve pronominal constructions; `branler` uses its independently labelled intransitive wobbling definition. `homo` preserves familiar register and gender/number invariance. Canadian `boy` retains its region and borrowing. `mis/ADJ` is the attested adjectival component of `bien mis`, with isolated `/mi/` and feminine `mise`; no `bien mis` query alias is admitted. `soviétique` has a historical referent but remains current vocabulary.
+The English `possession` field now says an item of property, covering any asset rather than suggesting only a house or land; the French and Chinese fields are unchanged. All other texts passed individual reading. `s’emparer de` and `s’évader` preserve pronominal constructions; `branler` uses its independently labelled intransitive wobbling definition. `homo` preserves familiar register and gender/number invariance. Canadian `boy` retains its region and borrowing. `mis/ADJ` is the attested adjectival component of `bien mis`, with isolated `/mi/` and feminine `mise`; no `bien mis` query alias is admitted. `soviétique` has a historical referent but remains current vocabulary.
 
 The source audit passes **52 fixed article/API identities**, **200 selected field spans**, **195 supporting spans**, **18 contributor responses**, **2,933 named article memberships** and **515 anonymous article counts**. Registries and histories provide article attribution, not sentence authorship. Original-expression comparisons identify **27 DAF8 and two Littré boundaries**, including DAF8 `rempli` under `remplir` and first-party entries for the pronominal verbs, `précédent` and `infini`. Other article-level imports are distinguished from unselected historical meanings or ordinary lexical facts. DAF8's collective original-work term expires 2006-01-01; Littré's original-author term expires 1952-01-01. Wiki/Lexique adaptation and attribution obligations remain CC BY-SA 4.0.
 
@@ -18,7 +18,7 @@ Source captures remain intact at `C:/Users/inthe/IdeaProjects/lexique-d2-150-159
 
 Verification at the approved resource/admission seam:
 
-- `uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_152.py`: nine tests passed, including the real existing resource admission function with this shard's 50 rows and unchanged canonical annotation/alias evidence; all 200 output fields and modification notices match the review. Focused failing checks are retained for all six meaning corrections, the omitted Littré boundary and resource acceptance flags.
+- `uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_152.py`: nine tests passed, including the real existing resource admission function with this shard's 50 rows and unchanged canonical annotation/alias evidence; all 200 output fields and modification notices match the review. Focused failing checks are retained for all seven meaning corrections, the omitted Littré boundary and resource acceptance flags.
 - `uv run --python 3.14.10 python -B -X utf8 target/issue-152-review/audit.py`: retained API/request/source/selected-span/contributor/policy/original-expression identities passed.
 - Documentation/link checks and `git diff --check`: results retained in final verification.
 

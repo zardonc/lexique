@@ -12,6 +12,8 @@ Thirty article-level DAF8 notices remain preserved. Contemporary cellphone, post
 
 The six `décès`/`coma` replacements retain the historical source context and explicitly identify the retained modern factual evidence used for the semantic correction. Modern publisher sentences are neither translated verbatim nor selected learner fields. New explanations retain the disclosed CC BY-SA adaptation layer.
 
+The English `possession` replacement preserves the same fixed un bien source span and contribution/adaptation licence. An item of property retains its general scope without suggesting that only real estate is meant; the French and Chinese fields retain their accepted original text.
+
 The complete contributor chains provide 2,933 named article memberships and 515 anonymous article counts across 52 fixed articles. Full linked histories provide anonymous and other attribution; the registry can include later editors and does not prove who authored a selected sentence. Literary/news examples, bibliography prose, etymologies, media and other-language sections are excluded. The GDT reference on supporting `homosexuel` is bibliographic metadata, not selected publisher expression.
 
 The complete source/API/request/selected-span/original-expression proof is archived externally under `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-152`. The shard-level obligations and review are complete; canonical assembly must still include the actual combined notices and source obligations. Canonical conversion, native execution, learner acceptance and release validation remain separate coordinator-owned gates.

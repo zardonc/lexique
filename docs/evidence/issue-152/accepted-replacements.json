@@ -116,6 +116,72 @@
       "reason": "一个人的死亡 removes 自然死亡, which wrongly excludes accident or homicide. Modern décès names the death of a person without a natural-cause restriction. Retained Académie ninth-edition text explicitly says Mort, en parlant des personnes; DAF8 agrees. The Littré restriction is historical wording, not a separate modern everyday sense."
     },
     {
+      "frozen_row": 3571,
+      "headword": "possession",
+      "pos": "NOM",
+      "sense_id": "b152-3571-possession-nom-selected",
+      "field": "english",
+      "proposed_text": "Possession: currently having a property or being able to use or enjoy it; feminine noun.",
+      "accepted_text": "Possession: currently holding or being able to use or enjoy an item of property; feminine noun.",
+      "proposed_source": {
+        "source_id": "b152_fr_120706",
+        "revid": 39715490,
+        "url": "https://fr.wiktionary.org/w/index.php?title=possession&oldid=39715490",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=possession&action=history",
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|droit de propriété|fr}} [[jouissance|Jouissance]], [[faculté]] [[actuel]]le de [[disposer]] ou de [[jouir]] d’un [[bien]]."
+      },
+      "accepted_source": {
+        "source_id": "b152_fr_120706",
+        "revid": 39715490,
+        "url": "https://fr.wiktionary.org/w/index.php?title=possession&oldid=39715490",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=possession&action=history",
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|droit de propriété|fr}} [[jouissance|Jouissance]], [[faculté]] [[actuel]]le de [[disposer]] ou de [[jouir]] d’un [[bien]]."
+      },
+      "supporting_quality_evidence": [
+        {
+          "source_id": "b152_fr_120706",
+          "revid": 39715490,
+          "url": "https://fr.wiktionary.org/w/index.php?title=possession&oldid=39715490",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=possession&action=history",
+          "line_1_based": 1,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b152_fr_120706",
+          "revid": 39715490,
+          "url": "https://fr.wiktionary.org/w/index.php?title=possession&oldid=39715490",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=possession&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b152_fr_120706",
+          "revid": 39715490,
+          "url": "https://fr.wiktionary.org/w/index.php?title=possession&oldid=39715490",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=possession&action=history",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|pɔ.sɛ.sjɔ̃|pron2=pɔ.se.sjɔ̃}}"
+        },
+        {
+          "source_id": "b152_fr_120706",
+          "revid": 39715490,
+          "url": "https://fr.wiktionary.org/w/index.php?title=possession&oldid=39715490",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=possession&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''possession''' {{pron|pɔ.sɛ.sjɔ̃|fr}} ou {{pron|pɔ.se.sjɔ̃|fr}} {{f}}"
+        }
+      ],
+      "reason": "Holding or using/enjoying an item of property covers any asset. Replacing a property avoids narrowing un bien to real estate and does not assert legal ownership. The selected sense is having/enjoying a property and remains usable in ordinary possession expressions; it does not assert legal ownership. Colonies and demonic possession are excluded."
+    },
+    {
       "frozen_row": 3589,
       "headword": "coma",
       "pos": "NOM",
@@ -230,7 +296,7 @@
       "reason": "深度失去意识 restores consciousness loss as the defining feature and retains 感觉和自主运动丧失. Modern coma denotes profound unconsciousness, not simply absent sensation or voluntary movement. The retained modern Académie entry supplies abolition de la conscience alongside the historical DAF8 physical features; this remains a lexical explanation."
     }
   ],
-  "unchanged_fields": 194,
-  "changed_fields": 6,
+  "unchanged_fields": 193,
+  "changed_fields": 7,
   "unresolved_fields": []
 }

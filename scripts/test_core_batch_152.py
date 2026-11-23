@@ -187,7 +187,7 @@ class Batch152Tests(unittest.TestCase):
                     self.assertTrue(field["source_id"])
                     self.assertEqual(field["independent_review"], "passed")
 
-    def test_modern_death_and_coma_retain_the_correct_defining_features(self):
+    def test_selected_semantic_corrections_preserve_defining_features_and_scope(self):
         groups = {g["frozen_row"]: g for g in read("groups.json")}
         expected = {
             3556: {"french_definition": "Mort d’une personne ; nom masculin.",
@@ -196,6 +196,7 @@ class Batch152Tests(unittest.TestCase):
             3589: {"french_definition": "État de profonde inconscience, avec perte de la sensibilité et des mouvements volontaires ; nom masculin.",
                    "english": "Coma: a state of deep unconsciousness with loss of sensation and voluntary movement; masculine noun.",
                    "chinese": "昏迷：深度失去意识，并丧失感觉和自主运动的状态；阳性名词。"},
+            3571: {"english": "Possession: currently holding or being able to use or enjoy an item of property; feminine noun."},
         }
         for row, texts in expected.items():
             for name, text in texts.items():
