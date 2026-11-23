@@ -1,4 +1,4 @@
-/* global window */
+/* global window, URL, Response */
 import assert from 'node:assert/strict';
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -8,16 +8,21 @@ import { fixtureSql, readState, compareLearning } from './native-backup-state.mj
 export async function grammarImportCheck({ scenario, page, destination, invoke, picker, evidence, python }) {
   const records = () => invoke('grammar_list', { query: '', sort: 'created-asc' });
   await page.evaluate(() => {
-    const original = window.__TAURI_INTERNALS__.invoke.bind(window.__TAURI_INTERNALS__);
+    // Tauri's invoke property is immutable. Observe the real IPC fetch and only
+    // replace delivery of one successful response, after native work finishes.
+    const original = window.fetch.bind(window);
     window.grammarImportCalls = [];
-    window.__TAURI_INTERNALS__.invoke = async (command, args, options) => {
-      const result = await original(command, args, options);
-      if (command === 'note_import_preview' || command === 'note_import_commit') window.grammarImportCalls.push({ command, args, result });
+    window.fetch = async (url, options) => {
+      const response = await original(url, options);
+      const command = new URL(String(url)).pathname.slice(1);
+      if (!['note_import_preview', 'note_import_commit'].includes(command) || response.headers.get('Tauri-Response') !== 'ok') return response;
+      const result = await response.clone().json(), args = JSON.parse(options.body);
+      window.grammarImportCalls.push({ command, args, result });
       if (command === 'note_import_commit' && window.dropGrammarCommitResponse) {
         window.dropGrammarCommitResponse = false;
-        throw new Error('Committed response lost');
+        return new Response('Committed response lost', { headers: { 'Tauri-Response': 'error', 'content-type': 'text/plain' } });
       }
-      return result;
+      return response;
     };
   });
   await page.getByRole('banner').getByRole('combobox').first().selectOption('zh');
