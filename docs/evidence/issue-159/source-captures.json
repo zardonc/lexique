@@ -723,5 +723,12 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159",
   "captured_at_utc": "2026-11-23T17:39:02.337879+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\selection.py",
+  "independent_audit": {
+    "reviewer_branch": "codex/d2-review-159",
+    "proof_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-159",
+    "proof": "source-audit.json",
+    "new_article_captures": 0,
+    "source_capture_origin": "retained author archive; independently inspected bytes"
+  }
 }

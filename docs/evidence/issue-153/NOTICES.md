@@ -1,38 +1,51 @@
 # Source and modification notices for #153
 
-These author proposals retain CC BY-SA 4.0 for fixed Wiktionnaire contributions,
-scoped French adaptations and new Lexique English/Chinese explanations.
-The [complete legal text](COPYING) accompanies the records. Project code is MIT.
+All 200 independently reviewed fields retain CC BY-SA 4.0 for fixed
+Wiktionnaire contributions, scoped French adaptations and new Lexique
+English/Chinese explanations. [COPYING](COPYING) contains the complete licence.
+Project source code is MIT; content licences remain separate.
 
-Exact rows 3601–3650 and both unchanged frequency strings derive from Boris New
-and Christophe Pallier's Lexique 3.83, CC BY-SA 4.0, through the
+Exact frozen rows 3601–3650 and both unchanged frequency strings derive from
+Boris New and Christophe Pallier, Lexique 3.83, CC BY-SA 4.0, through the
 [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
 Source: https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html
 
-French definitions select one precise use; IPA selects a recorded isolated form
-and adds slashes. English and Chinese are new scoped Lexique explanations,
-not upstream bilingual quotations. CEFR is unknown. No audio, pictures or
-literary/news examples enter the proposed fields. Source binding of vôtres to
-les vôtres and volé to its participle/theft meaning admits no runtime alias.
+French definitions adapt one selected use. IPA selects a recorded isolated form
+and adds slashes; no sound recording is copied. English/Chinese are new Lexique
+explanations. No literary/news quotation, image or publisher definition enters
+the fields. vôtres remains bound to les vôtres; volé retains its participle/theft
+meaning. No runtime alias is admitted. CEFR remains unknown.
 
-Articles declaring DAF8 imports retain credit to Académie française,
-Dictionnaire de l'Académie française, eighth edition (1932–1935). The original
-institutional collective-work route has conservative expiry 2006-01-01 under
-CPI L123-3; later contribution and adaptation layers retain CC BY-SA 4.0.
-Article import markers do not prove selected-sentence authorship.
+## Original works and modifications
 
-## Redistribution obligations and status
+DAF8 original credit: Académie française, Dictionnaire de l’Académie française,
+eighth edition (1932–1935), institutional collective edition, expired
+2006-01-01 under CPI L123-3. Littré original credit: Émile Littré,
+Dictionnaire de la langue française (1872–1877), expired 1952-01-01 under L123-1.
+The R:Rivarol original credit is Antoine de Rivarol manuscript material and
+quatre professeurs de l’Université, the anonymous compilers of Dictionnaire
+classique de la langue française, Paris: Brunot-Labbé and Baudouin frères, 1827.
+The anonymous original compilation expired 1898-01-01 under L123-3. Original
+author/work respect and wiki/Lexique adaptation credits are retained.
+Import/bibliography markers and article credits do not prove sentence authorship.
+These findings concern original editions, not modern proprietary transcriptions.
 
-Retain the licence text/link, fixed sources, complete linked article histories,
-contributor/original-work credits and modification notices. Adaptations retain
-CC BY-SA 4.0 and no additional restrictions. The independent selected-text,
-quality, rights and combined-package gates remain pending. by/NOM also lacks
-established modern everyday use and needs its Rivarol original-expression
-comparison. These are proposals, with zero independently admitted new fields.
+by/NOM retains geography and pond-drainage scope. Its English/Chinese explain
+bonde as a drain outlet without requiring a gate. The current publisher page
+corroborates use/domain facts only; its definition/example prose is not bundled.
+Exact proposals, replacements and source spans are retained in
+[accepted-replacements.json](accepted-replacements.json) and [authored](authored/snapshot.json).
+
+## Redistribution obligations
+
+Retain the complete CC BY-SA 4.0 text/link, fixed article URLs, full history
+links, captured contributor and original-work credits, and modification notices.
+Adaptations remain CC BY-SA 4.0 without additional restrictions. The combined
+canonical conversion/package and native gates remain parent-integration work.
 
 Licence: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
 Terms: https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en
-Original-work basis: https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20
+Original compilation basis: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941
 
 ## Fixed source records
 
@@ -695,3 +708,55 @@ Revision 39719086, 2026-08-01T00:17:32Z.
 Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.
 
 Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.
+
+## Independently retained original-work credits by source
+
+- racine (b153_fr_11270): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- industrie (b153_fr_69267): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- aborder (b153_fr_137358): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- chômage (b153_fr_153428): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- destiner (b153_fr_157587): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- formule (b153_fr_161799): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- frotter (b153_fr_162167): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- spirituel (b153_fr_177061): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- vôtres (b153_fr_20506): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- humble (b153_fr_25079): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- by (b153_fr_116491): Antoine de Rivarol manuscript material; quatre professeurs de l’Université, anonymous compilers named collectively on the title page, Dictionnaire classique de la langue française, Paris: Brunot-Labbé and Baudouin frères, 1827.
+- civilisation (b153_fr_153798): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- coq (b153_fr_155533): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- économiser (b153_fr_158642): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- mourant (b153_fr_168545): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- plaquer (b153_fr_171684): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- récent (b153_fr_174137): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- pris (b153_fr_18274): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- ambiance (b153_fr_122605): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- bourgeois (b153_fr_145021): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- baignoire (b153_fr_148993): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- baisse (b153_fr_149014): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- désespéré (b153_fr_157477): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- duc (b153_fr_158375): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- exposition (b153_fr_160773): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- héritage (b153_fr_163698): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- rétablir (b153_fr_174999): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- certificat (b153_fr_5141): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- manuel (b153_fr_22214): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- mannequin (b153_fr_104168): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.
+- vice (b153_fr_117993): Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.
+- flatter (b153_fr_119082): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- option (b153_fr_120420): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- défaire (b153_fr_156798): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- manipuler (b153_fr_167304): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- prophète (b153_fr_172891): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- régiment (b153_fr_174359): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- nid (b153_fr_7329): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- papillon (b153_fr_32790): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- énormément (b153_fr_37262): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.
+- corriger (b153_fr_41319): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- baraque (b153_fr_149179): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- cheville (b153_fr_153312): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Antoine de Rivarol manuscript material; quatre professeurs de l’Université, anonymous compilers named collectively on the title page, Dictionnaire classique de la langue française, Paris: Brunot-Labbé and Baudouin frères, 1827.
+- défi (b153_fr_156813): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- deuil (b153_fr_157709): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- facteur (b153_fr_160969): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- voler (b153_fr_83): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- prendre (b153_fr_160): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- vôtre (b153_fr_180221): Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.

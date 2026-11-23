@@ -1,0 +1,60 @@
+{
+  "status": "approved_by_project_owner",
+  "approval_date": "2026-11-23",
+  "timezone": "America/Vancouver",
+  "exact_reply": "Annotate both groups with zero fields",
+  "issue": 159,
+  "parent_issue": 78,
+  "approved_annotation_rows": [
+    3922,
+    3944
+  ],
+  "approved_annotations": [
+    {
+      "status": "approved_by_project_owner",
+      "approval_date": "2026-11-23",
+      "timezone": "America/Vancouver",
+      "exact_reply": "Annotate both groups with zero fields",
+      "issue": 159,
+      "parent_issue": 78,
+      "frozen_row": 3922,
+      "headword": "haver",
+      "lexique_cgram": "VER",
+      "subtitle_lemma_per_million": "10.73",
+      "subtitle_pos_per_million": "10.73",
+      "admitted_fields": 0,
+      "missing_fields": [
+        "french_definition",
+        "ipa",
+        "english_meaning",
+        "chinese_meaning"
+      ],
+      "annotation_exception_decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+      "proposal": "context/approved-scope-decisions.md",
+      "review": "review-159/docs/evidence/issue-159/README-independent-review.md"
+    },
+    {
+      "status": "approved_by_project_owner",
+      "approval_date": "2026-11-23",
+      "timezone": "America/Vancouver",
+      "exact_reply": "Annotate both groups with zero fields",
+      "issue": 159,
+      "parent_issue": 78,
+      "frozen_row": 3944,
+      "headword": "da",
+      "lexique_cgram": "ONO",
+      "subtitle_lemma_per_million": "10.6",
+      "subtitle_pos_per_million": "8.02",
+      "admitted_fields": 0,
+      "missing_fields": [
+        "french_definition",
+        "ipa",
+        "english_meaning",
+        "chinese_meaning"
+      ],
+      "annotation_exception_decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+      "proposal": "context/approved-scope-decisions.md",
+      "review": "review-159/docs/evidence/issue-159/README-independent-review.md"
+    }
+  ]
+}

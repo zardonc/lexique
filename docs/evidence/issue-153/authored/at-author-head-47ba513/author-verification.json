@@ -1,0 +1,71 @@
+{
+  "ticket": 153,
+  "kind": "author_resource_boundary_verification",
+  "independent_review": "pending",
+  "independent_reviewer": null,
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-153",
+  "baseline_commit": "03a27e42c261afda7ffd4a927a4d2810f8221e8a",
+  "baseline_content_version": "core-149-v1",
+  "baseline_admitted_groups": 3431,
+  "baseline_annotation_groups": 19,
+  "scope_denominator_groups": 4087,
+  "frozen_rows": [
+    3601,
+    3650
+  ],
+  "proposed_groups": 50,
+  "proposed_fields": 200,
+  "proposed_everyday_groups": 49,
+  "unresolved_content_rows": [
+    3612
+  ],
+  "independently_admitted_new_fields": 0,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_153.py -v",
+      "result": "passed",
+      "tests": 5,
+      "log": "green.log",
+      "boundary": "Frozen resource/admission records, literal fixed sources, contributor pagination, construction and pending-review rejection. Corrupt raw capture rejected."
+    },
+    {
+      "command": "pwsh -NoProfile -File scripts/check-docs.ps1",
+      "result": "passed",
+      "log": "docs.log",
+      "documents": 516,
+      "local_links": 4007
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed",
+      "staged_command": "git diff --cached --check",
+      "log": "diff-check.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-153\\reproduce.py",
+      "result": "passed",
+      "files": 12,
+      "byte_equality": true,
+      "log": "reproduction.log"
+    }
+  ],
+  "tdd": {
+    "membership_red": "red.log: failed with all 50 batch resource records absent",
+    "membership_green": "membership-green.log: one test passed after content preparation",
+    "rights_red": "rights-red.log: failed before rights.json existed",
+    "rights_green": "green.log: author gates and field rights records pass"
+  },
+  "native_lookup_save_reopen": "not_run_integration_owned",
+  "canonical_conversion_packaging": "not_run_integration_owned",
+  "learner_acceptance": "not_run",
+  "frontend_rust_checks": "not_run_no_frontend_or_rust_changes",
+  "limitations": [
+    "by/NOM has no established modern everyday use and no approved annotation or specialist exception.",
+    "The by article R:Rivarol reference requires actual selected-original-expression comparison.",
+    "All 200 fields, usage/spelling decisions and selected-text rights await independent review.",
+    "Canonical assembly, native behavior and release readiness are not established by author boundary checks."
+  ],
+  "platform": "Windows x64, PowerShell 7, uv Python 3.14.10",
+  "verified_at_utc": "2026-11-23T17:20:29.624232+00:00",
+  "test_scope": "Staged owned author evidence and scripts/test_core_batch_153.py; final git head is recorded in the external handoff."
+}
