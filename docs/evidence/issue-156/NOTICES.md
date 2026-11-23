@@ -14,7 +14,10 @@ Rows 3751–3800 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+The selected shard contains one sense for each of 49 ordinary groups and an
+owner-approved zero-field annotation for row 3783 `ya/NOM`, with four missing
+fields. [Rejected proposals](rejected-proposals.json) and [authored records](authored/groups.json)
+retain the slang-knife proposal separately. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
@@ -100,9 +103,13 @@ The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
 All 200 fields and 50 selected-use rights boundaries were independently reviewed.
-196 unchanged fields / 49 groups pass quality; ya/NOM retains four unresolved
-fields and one unresolved everyday use. All selected-text rights pass;
-canonical redistribution remains pending. See [independent review](README-independent-review.md).
+196 unchanged fields / 49 ordinary groups pass quality and are selected for
+scope admission. The [owner decision](owner-approval.json) of 2026-11-23,
+America/Vancouver, approves only the exact zero-field ya annotation; it admits
+no rare-slang content, alias or substitution. Four explicit unresolved missing
+fields carry that decision. All 200 proposal selected-text rights pass; this
+audit does not admit the rejected ya texts. Canonical redistribution remains
+pending. See [independent review](README-independent-review.md).
 
 Mouchoir's fixed source credits inspiration from the Dictionnaire encyclopédique
 Quillet (Aristide Quillet, Paris, 1934; direction Raoul Mortier), independently

@@ -1,0 +1,24 @@
+{
+  "status": "approved_by_project_owner",
+  "approval_date": "2026-11-23",
+  "timezone": "America/Vancouver",
+  "exact_reply": "Annotate ya and cm with zero fields",
+  "issue": 156,
+  "parent_issue": 78,
+  "frozen_row": 3783,
+  "headword": "ya",
+  "lexique_cgram": "NOM",
+  "subtitle_lemma_per_million": "11.45",
+  "subtitle_pos_per_million": "11.45",
+  "admitted_fields": 0,
+  "missing_fields": [
+    "french_definition",
+    "ipa",
+    "english_meaning",
+    "chinese_meaning"
+  ],
+  "annotation_exception_decision": "The project owner approved frozen row 3783 ya/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, by selecting \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, frequencies and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This #156 decision applies only to row 3783; row 3885 cm/NOM belongs to #158.",
+  "proposal": "context/approved-scope-decisions.md",
+  "review": "review-156/docs/evidence/issue-156/README-independent-review.md",
+  "scope_proof": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156-owner-scope\\approved-scope-decisions.md"
+}

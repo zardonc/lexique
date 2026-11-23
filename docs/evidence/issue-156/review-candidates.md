@@ -1,9 +1,13 @@
 # Exact #156 author proposals
 
-These 50 exact groups and 200 fields are pending separate independent review.
-[groups.json](groups.json) preserves all text; [field-review.json](field-review.json)
-binds each field and use to exact fixed-source spans. The author’s source and
-scope checks are separate from independent language/rights decisions.
+These 50 exact groups and 200 fields are the retained author proposals.
+[Authored groups](authored/groups.json) preserve all original text.
+[Selected groups](groups.json) and [field review](field-review.json) contain
+49 independently accepted ordinary senses / 196 fields and the owner-approved
+zero-field annotation for row 3783 `ya/NOM`, with four missing fields.
+The ya row below is research only; its [rejected proposal](rejected-proposals.json)
+retains the independent review separately. The author’s source and scope checks
+remain distinct from independent language/rights decisions and owner scope approval.
 
 | Row | Exact group | French definition | IPA | English | Chinese |
 | --- | --- | --- | --- | --- | --- |

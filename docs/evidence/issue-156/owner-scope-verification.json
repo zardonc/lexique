@@ -1,0 +1,95 @@
+{
+  "ticket": 156,
+  "status": "owner_scope_annotation_verified",
+  "platform": "Windows x64 / PowerShell 7.6.9 / uv Python",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\review-156",
+  "branch": "codex/d2-review-156",
+  "reviewed_head_preserved": "8535bddedef6635ccae677fd402e9b6bfe873171",
+  "committed_integration_tip_merged": "453736d7d6b28d35d66076f716aa5361dc55f122",
+  "scope_proof": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156-owner-scope\\approved-scope-decisions.md",
+  "owner_approval": "docs/evidence/issue-156/owner-approval.json",
+  "ordinary_groups": 49,
+  "selected_fields": 196,
+  "annotation_rows": [
+    3783
+  ],
+  "annotation_admitted_fields": 0,
+  "annotation_missing_fields": 4,
+  "ordinary_missing_fields": 0,
+  "denominator": 4087,
+  "selected_rights_audit": {
+    "proposal_fields": 200,
+    "proposal_uses": 50,
+    "scope_fields": 196,
+    "scope_uses": 49
+  },
+  "preservation": {
+    "frozen_identities_and_frequency_strings_preserved": 50,
+    "ordinary_group_records_unchanged": 49,
+    "accepted_field_records_unchanged": 196,
+    "ordinary_use_records_unchanged": 49,
+    "authored_files_byte_preserved": 16,
+    "original_review_archive_files_byte_preserved": 140,
+    "selected_rights_and_source_files_byte_preserved": [
+      "rights.json",
+      "sources.json",
+      "source-context.json",
+      "source-excerpts.json",
+      "source-captures.json",
+      "source-audit.json",
+      "selected-original-work-review.json",
+      "ya-modern-use-review.json",
+      "COPYING",
+      "accepted-replacements.json",
+      "reuse.json",
+      "author-verification.json"
+    ],
+    "rejected_reviewed_proposal_preserved": true,
+    "rejected_reviewed_fields_preserved": 4,
+    "rejected_reviewed_use_preserved": 1,
+    "rejected_reviewed_blockers_preserved": 4,
+    "changed_paths_within_owned_scope": true
+  },
+  "checks": [
+    {
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_156.py Batch156Tests.test_only_owner_approved_ya_has_zero_fields_and_four_explicit_missing_fields",
+      "result": "failed_before_implementation_on_populated_senses_then_passed",
+      "evidence": [
+        "red-annotation.log",
+        "green-annotation.log"
+      ]
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_156.py",
+      "result": "passed_9_tests",
+      "evidence": "final-batch.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156-owner-scope\\verify_preservation.py",
+      "result": "passed",
+      "evidence": "preservation.json"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "documents": 558,
+      "local_links": 4294,
+      "problems": 0,
+      "evidence": "docs-check.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "evidence": "diff-check.log"
+    }
+  ],
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156-owner-scope",
+  "original_review_archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156-owner-scope\\original-review-archive",
+  "not_run": [
+    "canonical conversion and global resource assembly",
+    "combined packaged redistribution obligations",
+    "native lookup/save/reopen and learning-data upgrade verification",
+    "learner/offline/other-platform/release acceptance",
+    "frontend lint/typecheck/build and Rust checks: no application source changes"
+  ]
+}
