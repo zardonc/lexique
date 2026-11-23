@@ -66,6 +66,12 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     await picker('导入语法 Markdown', renamed);
     await expect(region).toContainText('内容有差异');
     await region.getByLabel('导入决定：Renamed').selectOption('update');
+    const beforeFailure = readState(destination);
+    fixtureSql(destination, "c.executescript(\"CREATE TRIGGER fail_markdown_update BEFORE UPDATE ON vocabulary BEGIN SELECT RAISE(FAIL,'markdown update failed'); END;\"); c.commit()", {});
+    await region.getByRole('button', { name: '确认导入', exact: true }).click();
+    await expect(region.getByRole('alert')).toContainText('markdown update failed');
+    compareLearning(readState(destination), beforeFailure);
+    fixtureSql(destination, "c.execute('DROP TRIGGER fail_markdown_update'); c.commit()", {});
     await confirm();
     [saved] = await records(); assert.equal(saved.title, 'Renamed'); assert.equal(saved.body, body); assert.equal(saved.card.question, question);
     await writeFile(renamed, '# Lexique grammar note v1\n\n' + section('exchange_id', 'native-markdown-216') + section('title', 'Renamed') + section('body', '') + section('question', ' ') + section('answer', '\t'));
@@ -75,7 +81,7 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     await picker('导入语法 Markdown', invalid); await expect(region.getByRole('alert')).toContainText('invalid.md');
     await region.getByRole('button', { name: '取消导入', exact: true }).click();
     await picker('导入语法 Markdown', ''); await expect(region.getByRole('status')).toContainText('已取消');
-    evidence.sqlite = sqlPause(); evidence.checks.push('T28-T31/T37: real Markdown file picker, saved export, raw text, identity rename, omitted and empty body, blank pair, invalid marker and cancellation');
+    evidence.sqlite = sqlPause(); evidence.checks.push('T28-T31/T37: real Markdown file picker, saved export, raw text, identity rename, omitted and empty body, blank pair, invalid marker, cancellation and failed update rollback');
   } else if (scenario === 'grammar-markdown-restart') {
     const [saved] = await records(); assert.equal(saved.title, 'Renamed'); assert.equal(saved.body, '');
     assert.equal(saved.card.question, question); assert.equal(saved.card.answer, answer);
