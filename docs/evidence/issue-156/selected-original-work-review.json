@@ -1,0 +1,41 @@
+{
+  "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+  "author_commit": "a40ecb51abf607e0a69fd1899ccc1fdb4fa8a377",
+  "boundaries": {
+    "3772": [
+      {
+        "work": "Dictionnaire encyclopédique Quillet",
+        "edition": "1934",
+        "wiki_notice_line_1_based": 142,
+        "bibliographic_authority": "https://catalogue.bnf.fr/ark:/12148/cb31164348q",
+        "bibliographic_basis": "BnF FRBNF31164348: six volumes, Paris, Aristide Quillet, 1934; directed by Raoul Mortier with contributions merged from professors, teachers and technicians.",
+        "original_work_basis": "Collective lexical dictionary under direction/name of its publisher (L113-2); 1935-01-01 plus 70 years (L123-3) gives 2005-01-01 for the 1934 original. This does not clear later editions or separately authored illustrations.",
+        "selected_sentence_authorship": "Not proved; the page-level inspiration notice is conservatively retained as original-work credit.",
+        "external_expression_admitted": false,
+        "selected_boundary": "Only the current lexical cloth/cellulose square and nose/wiping facts are adapted, with new scoped explanations; no original facsimile or illustration is bundled."
+      },
+      {
+        "work": "Dictionnaire de l’Académie française, ninth edition",
+        "wiki_notice_line_1_based": 141,
+        "original_work_basis": "Bibliographic reference, not an import notice or permission. No ninth-edition prose is selected or cleared.",
+        "external_expression_admitted": false,
+        "selected_boundary": "The accepted wording is the scoped Wiktionnaire cloth/cellulose description; the ninth-edition book is not a field source."
+      }
+    ],
+    "3795": [
+      {
+        "work": "Dictionnaire encyclopédique Quillet",
+        "edition": "1979",
+        "wiki_notice_line_1_based": 155,
+        "original_work_basis": "No general clearance for the 1979 edition. The selected card definition already occurs in the primary Académie eighth edition, 1935, tome 2, page 705.",
+        "primary_selected_expression_authority": "https://www.dictionnaire-academie.fr/article/A8V0052",
+        "primary_selected_expression_location": "8e edition (1935), tome 2, p. 705, card paragraph; captured web text line 851.",
+        "external_expression_admitted": false,
+        "selected_boundary": "Later-edition Quillet additions, examples and illustrations are excluded; the selected lexical card wording follows the separately cleared DAF8 original and current wiki adaptation."
+      }
+    ]
+  },
+  "actual_original_facsimiles_read": [],
+  "sentence_authorship_proved": false,
+  "basis": "Primary bibliography identifies the 1934 collective publication; the primary 1935 Académie text identifies the selected valet expression. No Quillet 1979 or DAF9 expression is granted redistribution rights."
+}

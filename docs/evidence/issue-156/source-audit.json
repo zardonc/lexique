@@ -1,0 +1,33 @@
+{
+  "articles": 50,
+  "article_comparison": "literal_utf8_byte_equality",
+  "selected_field_spans": 200,
+  "total_checked_span_occurrences": 1540,
+  "contributor_responses": 7,
+  "finished_contributor_chains": 5,
+  "named_article_memberships": 2508,
+  "anonymous_article_counts": 382,
+  "authorities": [
+    {
+      "title": "Convention:Droit d’auteur",
+      "revision": 38903168,
+      "comparison": "equal_after_newline_normalization"
+    },
+    {
+      "title": "Modèle:Import:DAF8",
+      "revision": 22113837,
+      "comparison": "equal_after_newline_normalization"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "retained": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-156\\rights\\cc-legal.html"
+    },
+    {
+      "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "retained": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-156\\rights\\terms.html"
+    }
+  ],
+  "unique_supporting_spans": 190,
+  "daf8_import_articles": 32,
+  "legal_or_linguistic_verdict": "None: separate recorded editorial decisions are required."
+}
