@@ -1,6 +1,7 @@
 import { invoke, isTauri } from '@tauri-apps/api/core';
 import { z } from 'zod';
 import { noteEnrichmentSchema } from './note-enrichment';
+import { grammarImportRuntime } from './grammar-import';
 import { importSourceSchema, recordSchema } from './vocabulary';
 
 const operationSchema = z.string().min(1).max(110).regex(/^[a-zA-Z0-9-]+$/);
@@ -32,6 +33,7 @@ const resultSchema = z.object({ created: z.number().int().nonnegative().safe(), 
 export type NoteImportResult = z.infer<typeof resultSchema>;
 
 export const noteImportRuntime = {
+  ...grammarImportRuntime,
   async previewNoteImport(operation: string, options: NoteImportOptions): Promise<NoteImportPreview | null> {
     operationSchema.parse(operation); optionsSchema.parse(options);
     if (!isTauri()) throw new Error(`${options.format === 'markdown' ? 'Markdown' : 'CSV'} import requires the desktop application`);

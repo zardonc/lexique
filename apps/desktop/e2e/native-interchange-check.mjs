@@ -6,9 +6,11 @@ import { isAbsolute, join, relative, resolve } from 'node:path';
 import { expect } from '@playwright/test';
 import { native24Fixture } from './native-24-harness.mjs';
 import { inspectPackage, readState, seedAudio, compareLearning, fixtureSql } from './native-backup-state.mjs';
+import { grammarImportCheck } from './native-grammar-import.mjs';
 
 const [resources, binary, destinationPath, scenario, source] = process.argv.slice(2);
-assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary'].includes(scenario));
+const grammarImportScenarios = ['grammar-import', 'grammar-import-restart', 'grammar-import-identifiers', 'grammar-import-validation', 'grammar-import-failure', 'grammar-import-replay', 'grammar-import-known'];
+assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', ...grammarImportScenarios].includes(scenario));
 const fixture = await native24Fixture(resources, binary, destinationPath);
 const { destination } = fixture;
 const revision = spawnSync('git', ['rev-parse', 'HEAD', 'HEAD^{tree}'], { encoding: 'utf8', windowsHide: true, timeout: 5000 });
@@ -392,12 +394,23 @@ async function grammarVocabulary() {
   const rows = python("import csv,json,sys\nwith open(sys.argv[1],encoding='utf-8-sig',newline='') as f: print(json.dumps(list(csv.DictReader(f)),ensure_ascii=False))", [filename]);
   assert.deepEqual(rows, [{ headword: 'or', notes: 'Preserved vocabulary', example_fr: '', example_zh: '' }]);
   compareLearning(readState(destination), before);
-  evidence.checks.push('T38: existing vocabulary CSV export retains its four fields and leaves grammar and all learning data intact');
+  const original = await words(), originalGrammar = await grammars(), importFile = join(destination, 'vocabulary-import.csv');
+  await writeFile(importFile, 'headword,notes,example_fr,example_zh\r\nnative-grammar-preserved-214,Imported vocabulary,,\r\n');
+  await picker('导入 CSV', importFile); await confirm();
+  const imported = (await words()).find((record) => record.headword === 'native-grammar-preserved-214');
+  assert.equal(imported.notes, 'Imported vocabulary'); assert.equal(imported.import_source.filename, 'vocabulary-import.csv');
+  assert.deepEqual((await words()).filter((record) => record.id !== imported.id), original);
+  assert.deepEqual(await grammars(), originalGrammar);
+  assert.deepEqual(await invoke('review_cards', { vocabularyId: imported.id }), []);
+  const after = readState(destination);
+  compareLearning({ ...after, records: before.records, saves: before.saves }, before);
+  evidence.checks.push('T38: real vocabulary CSV export/import retains its four fields, provenance and no-card behavior while preserving existing vocabulary, grammar and all learning data');
 }
 try {
   for (const name of ['conjugation', 'frequency']) await cp(join(resolve(resources), name), join(destination, name), { recursive: true });
   if (source) {
-    const owned = relative(resolve(scenario.startsWith('grammar-') ? '../../target/ticket-213' : '../../target/issue-189'), resolve(source)); assert.ok(owned && !owned.startsWith('..') && !isAbsolute(owned));
+    const roots = scenario.startsWith('grammar-') ? ['../../target/ticket-213', '../../target/ticket-214'] : ['../../target/issue-189'];
+    assert.ok(roots.some((root) => { const owned = relative(resolve(root), resolve(source)); return owned && !owned.startsWith('..') && !isAbsolute(owned); }));
     await cp(join(resolve(source), 'Lexique-data'), join(destination, 'Lexique-data'), { recursive: true, filter: (path) => !path.includes('webview') });
     if (scenario.startsWith('grammar-')) evidence.sourceIdentities = readState(resolve(source)).grammar_exchange_identities;
     if (!scenario.startsWith('grammar-')) evidence.initialCsv = JSON.parse(await readFile(join(resolve(source), 'results.json'), 'utf8')).initialCsv;
@@ -408,7 +421,8 @@ try {
   }
   page = await fixture.start(); page.setDefaultTimeout(8000); await page.context().setOffline(true); await expect(page.getByRole('banner')).toBeVisible();
   if (evidence.sourceIdentities && scenario !== 'grammar-csv') assert.deepEqual(readState(destination).grammar_exchange_identities, evidence.sourceIdentities);
-  await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary })[scenario]();
+  if (grammarImportScenarios.includes(scenario)) await grammarImportCheck({ scenario, page, destination, invoke, picker, evidence, python });
+  else await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary })[scenario]();
   if (scenario !== 'seed') { evidence.records = await words(); await page.screenshot({ path: join(destination, 'native-interchange.png') }); await fixture.stop(true); }
   evidence.state = readState(destination);
   await writeFile(join(destination, 'results.json'), JSON.stringify(evidence, null, 2)); console.log(JSON.stringify({ scenario, passed: true, checks: evidence.checks.length }));

@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useMemo, useState } from 'react';
 import { NoteImport } from './note-import';
+import { GrammarImport } from './grammar-import';
 import { FrequencyBadge, FrequencyState, useFrequency } from './frequency';
 import type { RuntimeAdapter } from './platform/runtime';
 import { digestMeaning, errorMessage, sortSchema } from './platform/vocabulary';
@@ -149,7 +150,8 @@ function NotesActions({ kind, runtime, text, onOpen, onSaved, onPrepare, onCreat
   readonly onSaved: () => void; readonly onPrepare: (action: () => void) => void; readonly onCreateGrammar: () => void;
   readonly batch: BatchReview;
 }) {
-  return kind === 'grammar' ? <button onClick={onCreateGrammar}>{text.notesText.create}</button>
+  return kind === 'grammar' ? <><button onClick={onCreateGrammar}>{text.notesText.create}</button>
+    <GrammarImport runtime={runtime} text={text} onSaved={onSaved} onOpen={onOpen} onPrepare={onPrepare} /></>
     : <NoteImport runtime={runtime} text={text} onSaved={onSaved} onOpen={onOpen} onPrepare={onPrepare} batch={batch} />;
 }
 
