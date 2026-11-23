@@ -1,9 +1,9 @@
 {
   "reviewer": "Independent field/use/selected-rights reviewer #153; codex/d2-review-153; separate from author and integration owner",
   "review_base": "291d265b80d6c8f302f058a8de6b541bc521e7a7",
-  "merged_integration_tip": "79e6b44f5a1f0a44b9074806046cc9505611f9b5",
-  "merged_review_head": "d1e062ad10bbe19d2e2092128c77fb57c7a58dae",
-  "tested_source_state": "Merged review head plus the scoped package diff retained as review.patch in the external archive; final commit identity is recorded in the external handoff.",
+  "merged_integration_tip": "e7db3a58473191f762b1ebd3ff72fb29a45687e3",
+  "merged_review_head": "653ae7a51b2b70714ac0571913dd9ad1384cb9f9",
+  "tested_source_state": "Merged review head plus scoped verification metadata; external final-verification.json records the final commit and exact tested source identity.",
   "platform": "Windows x64; PowerShell 7; uv Python 3.14.10; pnpm 11.25.0",
   "archive": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-153",
   "accepted_groups": 50,
@@ -47,12 +47,12 @@
     },
     {
       "command": "pnpm test:docs",
-      "status": "pending_final_run",
+      "status": "passed",
       "result": "Complete output retained as final-docs.log"
     },
     {
       "command": "git diff --check",
-      "status": "pending_final_run",
+      "status": "passed",
       "result": "Complete output retained as final-diff-check.log"
     }
   ],

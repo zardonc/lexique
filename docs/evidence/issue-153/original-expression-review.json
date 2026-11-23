@@ -24,7 +24,18 @@
     "comparison": "Visual inspection of original printed page 146 gives the same ditch/pond/outlet relation. Wiktionnaire removes et and uses aboutissant instead of aboutit; no modern publisher definition enters the fields.",
     "legal_retrieval": "Direct Légifrance returned HTTP 403; externally retained official cached search excerpts confirm L123-3. Existing independently reviewed original-work bases are reused for DAF8/Littré, not inferred as sentence authorship.",
     "legal_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-153\\captures\\legal-search-response.json",
-    "scan_metadata_note": "Commons image metadata contains an inconsistent Landais object-name field. The visually inspected title page and entry scan identify the actual 1827 Rivarol compilation; the metadata title is not used as edition authority."
+    "scan_metadata_note": "Commons image metadata contains an inconsistent Landais object-name field. The visually inspected title page and entry scan identify the actual 1827 Rivarol compilation; the metadata title is not used as edition authority.",
+    "cheville_original_comparison": {
+      "source_id": "b153_fr_153312",
+      "wiki_revid": 39952932,
+      "selected_definition_line": 31,
+      "retained_original_ocr_lines": [
+        62165,
+        62187
+      ],
+      "independent_reason": "The original entry begins with the peg sense and separately has Cheville du pied, a bony projection at the sides of the foot. The accepted fixed Wiktionnaire anatomy line identifies the ankle joint and prominence. Original reference credit covers the 1827 compilation without importing the peg definition or claiming individual sentence authorship.",
+      "role": "Original reference/semantic comparison only; no OCR wording supplies a bundled field."
+    }
   },
   "source_boundaries": [
     {
