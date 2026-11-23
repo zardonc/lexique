@@ -16,6 +16,21 @@ test('grammar Markdown import shows located errors and uses the desktop file ses
     .toEqual({ record_kind: 'grammar', delimiter: 'comma', mapping: null, grammar_mapping: null, format: 'markdown' });
 });
 
+test('grammar Markdown update requires an explicit choice before commit', async ({ page }) => {
+  await nativeFixture(page, { note_import_preview: [{ value: { ...preview, source: { format: 'markdown', filename: 'renamed.md' }, columns: [], groups: [{ ...group, status: 'different', existing: record }] } }],
+    note_import_commit: [{ value: { created: 0, updated: 1, skipped: 0, records: [record], new_card_ids: [] } }] });
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
+  await page.getByRole('tab', { name: '语法', exact: true }).click();
+  const region = page.getByRole('region', { name: '导入语法 CSV', exact: true });
+  await region.getByRole('button', { name: '导入语法 Markdown', exact: true }).click();
+  await expect(region.getByRole('button', { name: '确认导入', exact: true })).toBeDisabled();
+  await region.getByLabel('导入决定：Une règle').selectOption('update');
+  await region.getByRole('button', { name: '确认导入', exact: true }).click();
+  await expect(region.getByRole('status')).toContainText('导入已保存');
+  expect(await page.evaluate(() => window.testNative.calls.find((call) => call.command === 'note_import_commit')?.args?.selections))
+    .toEqual([{ index: 0, action: 'update', allow_unlinked: false }]);
+});
+
 test('grammar CSV shows content and identity, saves first and reports start-review failure without losing the note', async ({ page }) => {
   await nativeFixture(page, {
     grammar_list: [{ value: [] }], note_import_preview: [{ value: preview }],
