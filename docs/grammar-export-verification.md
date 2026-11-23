@@ -16,9 +16,13 @@ records that base SHA, dirty tree, executable identity and platform. The evidenc
 root's `handoff.json` maps the final committed source to these runs; retained
 `tested-source.patch` captures the final change from the base.
 
-Complete local evidence remains at
+The durable handoff archive destination is
+`C:/Users/inthe/IdeaProjects/lexique-grammar-exchange-212/evidence/ticket-213/`.
+The parent copies reports and relevant artifacts there before removing the clean
+author worktree. Until that copy, the complete source evidence remains at
 `C:/Users/inthe/IdeaProjects/lexique-grammar-exchange-212/author-213/target/ticket-213/`.
-Keep this directory when copying evidence before removing the worktree.
+All relative evidence paths below are relative to either copy of this evidence
+root; retain `handoff.json` and `tested-source.patch` with the reports.
 
 ## Checks
 
