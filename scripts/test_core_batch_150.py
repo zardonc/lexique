@@ -2,10 +2,11 @@
 import csv
 import json
 from pathlib import Path
+import tempfile
 from urllib.parse import parse_qs, urlparse
 import unittest
 
-from core_batch_test_helpers import verify_archived_source_captures
+from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/evidence/issue-150"
@@ -165,30 +166,13 @@ class Batch150Tests(unittest.TestCase):
             exact = by_field[field["sense_id"], field["field"]]
             for key in ("source_id", "revid", "line_1_based", "column_1_based", "reviewed_excerpt"):
                 self.assertEqual(field["exact_source"][key], exact[key])
-        names, anonymous, chains = {}, {}, {}
-        for name in captures["contributor_registry"]["parts"]:
-            path = Path(name)
+        def resolve(value):
+            path = Path(value)
             self.assertTrue(path.is_relative_to(archive))
-            data = json.loads(path.read_bytes())
-            prefix, part = path.name.removesuffix(".api.json").rsplit("-", 1)
-            chains.setdefault(prefix, {})[int(part)] = (path, data)
-            for page in data["query"]["pages"]:
-                names.setdefault(page["title"], set()).update(p["name"] for p in page.get("contributors", []))
-                if "anoncontributors" in page:
-                    anonymous[page["title"]] = page["anoncontributors"]
+            return path
+        names, anonymous, chains = verify_archived_contributor_captures(
+            self, captures["contributor_registry"]["parts"], resolve)
         self.assertEqual(set(chains), {*(f"contributors-new-{n}" for n in range(1, 6)), "contributors-support"})
-        for parts in chains.values():
-            self.assertEqual(sorted(parts), list(range(1, len(parts) + 1)))
-            for part, (_, data) in parts.items():
-                continuation = data.get("continue")
-                if part == len(parts):
-                    self.assertFalse(continuation)
-                else:
-                    self.assertTrue(continuation)
-                    request = parts[part + 1][0].with_suffix(".request.txt").read_text(encoding="utf-8")
-                    query = parse_qs(urlparse(request).query)
-                    for key, value in continuation.items():
-                        self.assertEqual(query[key], [str(value)])
         self.assertEqual(set(names), {s["title"] for s in sources.values()})
         for context in read("source-context.json")["current_content"]:
             self.assertEqual(context["current_contributors"], sorted(names[context["title"]]))
@@ -259,6 +243,66 @@ class Batch150Tests(unittest.TestCase):
         calm = next(s for s in sources if s["title"] == "tranquillement")
         self.assertEqual({l["original_authors"] for l in calm["original_historical_dictionary_layers"]},
                          {"Académie française", "Émile Littré"})
+
+
+class ContributorCaptureTests(unittest.TestCase):
+    def setUp(self):
+        scratch = ROOT / "target/final-review-fixes"
+        scratch.mkdir(parents=True, exist_ok=True)
+        folder = tempfile.TemporaryDirectory(dir=scratch)
+        self.addCleanup(folder.cleanup)
+        self.archive = Path(folder.name)
+        self.parts = [self.archive / f"contributors-new-1-{part}.api.json" for part in (1, 2)]
+        self.responses = [
+            {"query": {"pages": [{"title": "pull", "contributors": [{"name": "Alice"}], "anoncontributors": 2}]},
+             "continue": {"continue": "||", "pccontinue": "10|20"}},
+            {"query": {"pages": [{"title": "pull", "contributors": [{"name": "Alice"}, {"name": "Bob"}]},
+                                  {"title": "cavalier", "contributors": []}]}},
+        ]
+        self.request = "https://fr.wiktionary.org/w/api.php?continue=%7C%7C&pccontinue=10%7C20"
+
+    def verify(self):
+        for path, response in zip(self.parts, self.responses):
+            path.write_text(json.dumps(response), encoding="utf-8")
+        self.parts[1].with_suffix(".request.txt").write_text(self.request, encoding="utf-8")
+        return verify_archived_contributor_captures(self, list(reversed(self.parts)), Path)
+
+    def test_complete_pagination_aggregates_unique_names_and_anonymous_counts(self):
+        names, anonymous, chains = self.verify()
+        self.assertEqual(names, {"pull": {"Alice", "Bob"}, "cavalier": set()})
+        self.assertEqual(anonymous, {"pull": 2})
+        self.assertEqual(set(chains), {"contributors-new-1"})
+
+    def test_incomplete_pagination_and_mismatched_requests_are_rejected(self):
+        with self.subTest("missing continuation"):
+            continuation = self.responses[0].pop("continue")
+            with self.assertRaises(AssertionError):
+                self.verify()
+            self.responses[0]["continue"] = continuation
+        with self.subTest("empty continuation"):
+            self.responses[0]["continue"] = {}
+            with self.assertRaises(AssertionError):
+                self.verify()
+            self.responses[0]["continue"] = continuation
+        with self.subTest("missing intermediate part"):
+            terminal = self.parts[1]
+            self.parts[1] = self.archive / "contributors-new-1-3.api.json"
+            with self.assertRaises(AssertionError):
+                self.verify()
+            self.parts[1] = terminal
+        with self.subTest("unfinished final part"):
+            self.responses[1]["continue"] = continuation
+            with self.assertRaises(AssertionError):
+                self.verify()
+            del self.responses[1]["continue"]
+        with self.subTest("wrong next request token"):
+            self.request = self.request.replace("10%7C20", "10%7C21")
+            with self.assertRaises(AssertionError):
+                self.verify()
+        with self.subTest("missing next request token"):
+            self.request = "https://fr.wiktionary.org/w/api.php?continue=%7C%7C"
+            with self.assertRaises(KeyError):
+                self.verify()
 
 
 if __name__ == "__main__":

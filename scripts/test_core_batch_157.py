@@ -5,9 +5,8 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
-from urllib.parse import parse_qs, urlparse
 
-from core_batch_test_helpers import verify_archived_source_captures
+from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
 from core_pilot import load_inputs, MATERIALS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -104,28 +103,8 @@ class Batch157Tests(unittest.TestCase):
                 else:
                     pos = next(line for line in reversed(before) if line.startswith("=== {{S|"))
                     self.assertIn("{{S|" + pos_frames[group["lexique_cgram"]] + "|fr", pos)
-        names, anonymous, chains = {}, {}, {}
-        for value in captures["contributor_registry"]["parts"]:
-            path = resolve(value)
-            data = json.loads(path.read_text(encoding="utf-8"))
-            prefix, number = path.name.removesuffix(".api.json").rsplit("-", 1)
-            chains.setdefault(prefix, {})[int(number)] = (path, data)
-            for page in data["query"]["pages"]:
-                names.setdefault(page["title"], set()).update(p["name"] for p in page.get("contributors", []))
-                if "anoncontributors" in page:
-                    anonymous[page["title"]] = page["anoncontributors"]
-        for parts in chains.values():
-            self.assertEqual(sorted(parts), list(range(1, len(parts) + 1)))
-            for number, (_, data) in parts.items():
-                continuation = data.get("continue")
-                if number == len(parts):
-                    self.assertFalse(continuation)
-                else:
-                    self.assertTrue(continuation)
-                    request = resolve(str(parts[number + 1][0].with_suffix(".request.txt"))).read_text(encoding="utf-8")
-                    query = parse_qs(urlparse(request).query)
-                    for key, value in continuation.items():
-                        self.assertEqual(query[key], [str(value)])
+        names, anonymous, chains = verify_archived_contributor_captures(
+            self, captures["contributor_registry"]["parts"], resolve)
         for context in read("source-context.json")["current_content"]:
             self.assertEqual(context["current_contributors"], sorted(names[context["title"]]))
             self.assertEqual(context["current_registry_names"], len(names[context["title"]]))

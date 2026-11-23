@@ -6,7 +6,7 @@ import tempfile
 from urllib.parse import parse_qs, urlparse
 import unittest
 
-from core_batch_test_helpers import verify_archived_source_captures
+from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
 import core_pilot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -87,29 +87,13 @@ class Batch151Tests(unittest.TestCase):
     def test_contributor_pagination_and_credits_match_the_retained_responses(self):
         captures = read("source-captures.json")
         archive = Path(captures["capture_root"])
-        names, anonymous, chains = {}, {}, {}
-        for name in captures["contributor_registry"]["parts"]:
-            path = Path(name)
+        def resolve(value):
+            path = Path(value)
             self.assertTrue(path.is_relative_to(archive))
-            data = json.loads(path.read_bytes())
-            prefix, part = path.name.removesuffix(".api.json").rsplit("-", 1)
-            chains.setdefault(prefix, {})[int(part)] = (path, data)
-            for page in data["query"]["pages"]:
-                names.setdefault(page["title"], set()).update(p["name"] for p in page.get("contributors", []))
-                if "anoncontributors" in page:
-                    anonymous[page["title"]] = page["anoncontributors"]
+            return path
+        names, anonymous, chains = verify_archived_contributor_captures(
+            self, captures["contributor_registry"]["parts"], resolve)
         self.assertEqual(set(chains), {*(f"contributors-new-{n}" for n in range(1, 6)), "contributors-support"})
-        for parts in chains.values():
-            self.assertEqual(sorted(parts), list(range(1, len(parts) + 1)))
-            for part, (_, data) in parts.items():
-                continuation = data.get("continue")
-                if part == len(parts):
-                    self.assertFalse(continuation)
-                else:
-                    self.assertTrue(continuation)
-                    query = parse_qs(urlparse(parts[part + 1][0].with_suffix(".request.txt").read_text(encoding="utf-8")).query)
-                    for key, value in continuation.items():
-                        self.assertEqual(query[key], [str(value)])
         self.assertEqual(set(names), {s["title"] for s in read("sources.json")["sources"]})
         for context in read("source-context.json")["current_content"]:
             self.assertEqual(context["current_contributors"], sorted(names[context["title"]]))

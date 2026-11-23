@@ -2,10 +2,9 @@
 import csv
 import json
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
 import unittest
 
-from core_batch_test_helpers import verify_archived_source_captures
+from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/evidence/issue-155"
@@ -82,28 +81,8 @@ class Batch155Tests(unittest.TestCase):
 
     def test_contributor_histories_are_complete_and_match_source_credits(self):
         captures = read("source-captures.json")
-        chains, names, anonymous = {}, {}, {}
-        for name in captures["contributor_registry"]["parts"]:
-            path = Path(name)
-            data = json.loads(path.read_text(encoding="utf-8"))
-            prefix, part = path.name.removesuffix(".api.json").rsplit("-", 1)
-            chains.setdefault(prefix, {})[int(part)] = path, data
-            for page in data["query"]["pages"]:
-                names.setdefault(page["title"], set()).update(p["name"] for p in page.get("contributors", []))
-                if "anoncontributors" in page:
-                    anonymous[page["title"]] = page["anoncontributors"]
-        for parts in chains.values():
-            self.assertEqual(sorted(parts), list(range(1, len(parts) + 1)))
-            for part, (_, data) in parts.items():
-                continuation = data.get("continue")
-                if part == len(parts):
-                    self.assertFalse(continuation)
-                else:
-                    self.assertTrue(continuation)
-                    request = parts[part + 1][0].with_suffix(".request.txt").read_text(encoding="utf-8")
-                    query = parse_qs(urlparse(request).query)
-                    for key, value in continuation.items():
-                        self.assertEqual(query[key], [str(value)])
+        names, anonymous, chains = verify_archived_contributor_captures(
+            self, captures["contributor_registry"]["parts"], Path)
         for context in read("source-context.json")["current_content"]:
             self.assertEqual(set(context["current_contributors"]), names[context["title"]])
             self.assertEqual(context["anonymous_contributors_count"], anonymous.get(context["title"], 0))
