@@ -25,15 +25,18 @@ ANNOTATIONS = (
     (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
     (2560, "oublie", "NOM", 132), (2626, "r", "ADV", 133),
     (2792, "man", "NOM", 136), (3098, "damoiseau", "NOM", 142),
+    (3783, "ya", "NOM", 156), (3885, "cm", "NOM", 158),
+    (3922, "haver", "VER", 159), (3944, "da", "ONO", 159),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = tuple(row for row in range(1, 3451) if row not in ANNOTATION_ROWS)
+ROWS = tuple(row for row in range(1, 3951) if row not in ANNOTATION_ROWS)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
     "COPYING", "curated-inputs.json", "field-review.json", "MEMBERSHIP-NOTICES.txt",
     "scope-manifest.csv", "selected-source-context.json", "selected-source-excerpts.json",
     "LEXIQUE-UPSTREAM-README.txt", "lexique-provenance.json", "README.md", "NOTICES.md",
+    "LICENSE-FranceTerme.pdf",
 )
 
 
@@ -102,7 +105,7 @@ def load_inputs(source_dir):
         raise ValueError("Annotation exceptions must retain their exact approved frozen identities")
     for entry, (_, _, _, issue) in zip(annotations, ANNOTATIONS, strict=True):
         decision = entry.get("decision", {})
-        approved_on = "2026-11-22" if issue == 142 else "2026-11-21" if issue >= 130 else "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
+        approved_on = "2026-11-23" if issue >= 150 else "2026-11-22" if issue == 142 else "2026-11-21" if issue >= 130 else "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
         if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != approved_on:
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
         text(decision.get("decision"), "annotation exception decision")
@@ -365,7 +368,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
                   "content_batches": content_batches,
                   "limits": {"query_utf8_bytes": 512, "matching_senses": 200, "response_bytes": 4 * 1024 * 1024,
-                             "resource_bytes": 16_000_000, "field_unicode_scalars": 20_000},
+                             "resource_bytes": 20_000_000, "field_unicode_scalars": 20_000},
                   "measurements": {"maximum_sense_json_bytes": max(len(compact(row[3]).encode()) for row in selected),
                                    "maximum_field_unicode_scalars": max(len(row[3][name]) for row in selected for name in ("definition_fr", "meaning_en", "meaning_zh")),
                                    "read_only_sqlite_bytes": database.stat().st_size}}

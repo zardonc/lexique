@@ -77,6 +77,15 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         if hashlib.sha256((frequency / filename).read_bytes()).hexdigest() != expected:
             raise ValueError(f"Release frequency source or notice differs: {filename}")
     verify(root, conjugation / "freedict-fra-eng-0.4.1")
+    core_admission = core_report["admission"]
+    core_description = (
+        f"Lexique FR–EN–ZH is a reviewed development core: {core_admission['accepted_groups']:,} of 4,087 frozen POS groups.\n"
+        "Its four fields and English usage notes, selected source excerpts, attribution and\n"
+        "CC BY-SA 4.0 license are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
+        f"Settings opens these bundled source materials offline. {core_admission['remaining_unaccepted_groups']:,} groups remain unaccepted,\n"
+        f"including {core_admission['annotation_exception_groups']} approved zero-field annotations; "
+        f"{core_admission['approved_specialist_exception_groups']} specialist senses are counted separately.\n"
+    )
     if all(speech_inputs):
         with tempfile.TemporaryDirectory(prefix="lexique-speech-stage-") as temporary:
             staged = Path(temporary) / "speech"
@@ -123,11 +132,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
-        "Lexique FR–EN–ZH is a reviewed development core: 2,932 of 4,087 frozen POS groups.\n"
-        "Its four fields and English usage notes, selected source excerpts, attribution and\n"
-        "CC BY-SA 4.0 license are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
-        "Settings opens these bundled source materials offline. 1,155 groups remain unaccepted,\n"
-        "including eighteen approved zero-field annotations; two specialist senses are counted separately.\n"
+        f"{core_description}"
         "learner acceptance and the full D2 resource are not complete.\n"
         "Selection shortcut: Ctrl+Alt+Shift+D. Screen OCR shortcut: Ctrl+Alt+Shift+O.\n"
         "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"
