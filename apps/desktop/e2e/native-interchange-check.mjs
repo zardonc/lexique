@@ -10,7 +10,7 @@ import { grammarImportCheck } from './native-grammar-import.mjs';
 
 const [resources, binary, destinationPath, scenario, source] = process.argv.slice(2);
 const grammarImportScenarios = ['grammar-markdown', 'grammar-markdown-restart', 'grammar-markdown-validation', 'grammar-batch-mapping', 'grammar-batch-learning', 'grammar-batch-stale', 'grammar-batch-occupied', 'grammar-batch-failure', 'grammar-batch-replay', 'grammar-batch-restart', 'grammar-batch-selection', 'grammar-import', 'grammar-import-restart', 'grammar-import-identifiers', 'grammar-import-validation', 'grammar-import-failure', 'grammar-import-replay', 'grammar-import-known'];
-assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', ...grammarImportScenarios].includes(scenario));
+assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', 'grammar-vocabulary-markdown', ...grammarImportScenarios].includes(scenario));
 const fixture = await native24Fixture(resources, binary, destinationPath);
 const { destination } = fixture;
 const revision = spawnSync('git', ['rev-parse', 'HEAD', 'HEAD^{tree}'], { encoding: 'utf8', windowsHide: true, timeout: 5000 });
@@ -406,6 +406,21 @@ async function grammarVocabulary() {
   compareLearning({ ...after, records: before.records, saves: before.saves }, before);
   evidence.checks.push('T38: real vocabulary CSV export/import retains its four fields, provenance and no-card behavior while preserving existing vocabulary, grammar and all learning data');
 }
+async function grammarVocabularyMarkdown() {
+  await page.getByRole('banner').getByRole('combobox').first().selectOption('zh');
+  const before = readState(destination), original = await words(), filename = join(destination, 'vocabulary.md');
+  await notebook();
+  await page.getByRole('searchbox', { name: '搜索词头、摘要或笔记' }).fill('or');
+  await expect(page.locator('.vocabulary-list button')).toHaveCount(1);
+  await page.locator('.vocabulary-list button').click();
+  await page.locator('.vocabulary-editor').getByRole('button', { name: '导出 Markdown', exact: true }).click();
+  await picker('保存 Markdown', filename, true);
+  await page.getByRole('dialog', { name: '导出笔记' }).getByRole('button', { name: '关闭', exact: true }).click();
+  await picker('导入 Markdown', filename);
+  await expect(page.getByRole('region', { name: 'Markdown 导入预览', exact: true })).toContainText('内容相同，将跳过');
+  await confirm(); assert.deepEqual(await words(), original); compareLearning(readState(destination), before);
+  evidence.checks.push('T38: real vocabulary Markdown export/import remains intact and preserves grammar and learning state');
+}
 try {
   for (const name of ['conjugation', 'frequency']) await cp(join(resolve(resources), name), join(destination, name), { recursive: true });
   if (source) {
@@ -422,7 +437,7 @@ try {
   page = await fixture.start(); page.setDefaultTimeout(8000); await page.context().setOffline(true); await expect(page.getByRole('banner')).toBeVisible();
   if (evidence.sourceIdentities && scenario !== 'grammar-csv') assert.deepEqual(readState(destination).grammar_exchange_identities, evidence.sourceIdentities);
   if (grammarImportScenarios.includes(scenario)) await grammarImportCheck({ scenario, page, destination, invoke, picker, evidence, python });
-  else await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary })[scenario]();
+  else await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary, 'grammar-vocabulary-markdown': grammarVocabularyMarkdown })[scenario]();
   if (scenario !== 'seed') { evidence.records = await words(); await page.screenshot({ path: join(destination, 'native-interchange.png') }); await fixture.stop(true); }
   evidence.state = readState(destination);
   await writeFile(join(destination, 'results.json'), JSON.stringify(evidence, null, 2)); console.log(JSON.stringify({ scenario, passed: true, checks: evidence.checks.length }));
