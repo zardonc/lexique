@@ -39,6 +39,35 @@ enum ExportSnapshot {
 }
 
 impl ExportSnapshot {
+    fn save_markdown(&self, destination: Option<&Path>) -> Result<ExportResult, String> {
+        let (records, rows) = self.counts();
+        if records != 1 {
+            return Err("Single Markdown export requires one saved record".into());
+        }
+        let state = if let Some(path) = destination {
+            match self {
+                Self::Vocabulary(snapshot) => write_note_markdown(snapshot, path)?,
+                Self::Grammar(snapshot) => {
+                    std::fs::write(
+                        path,
+                        crate::note_markdown::format_grammar_markdown(&snapshot.records[0]),
+                    )
+                    .map_err(|error| {
+                        format!("Could not write Markdown file {}: {error}", path.display())
+                    })?;
+                }
+            }
+            "saved"
+        } else {
+            "cancelled"
+        };
+        Ok(ExportResult {
+            state,
+            records,
+            rows,
+        })
+    }
+
     fn counts(&self) -> (usize, usize) {
         match self {
             Self::Vocabulary(snapshot) => (snapshot.records.len(), snapshot.row_count()),
@@ -301,16 +330,19 @@ pub async fn note_export_markdown(
     crate::backup_operations::main_window(&window)?;
     let snapshot = token
         .as_deref()
-        .map(|token| exports.retained(token))
+        .map(|token| exports.retained_snapshot(token))
         .transpose()?;
     let (filename, rows) = if let Some(snapshot) = &snapshot {
-        let [record] = snapshot.records.as_slice() else {
-            return Err("Single Markdown export requires one saved vocabulary record".into());
+        if snapshot.counts().0 != 1 {
+            return Err("Single Markdown export requires one saved record".into());
+        }
+        let filename = match snapshot.as_ref() {
+            ExportSnapshot::Vocabulary(snapshot) => {
+                crate::note_markdown::note_markdown_filename(&snapshot.records[0])
+            }
+            ExportSnapshot::Grammar(_) => "lexique-grammar.md".into(),
         };
-        (
-            crate::note_markdown::note_markdown_filename(record),
-            snapshot.row_count(),
-        )
+        (filename, snapshot.counts().1)
     } else {
         ("lexique-note-v1.md".into(), 1)
     };
@@ -322,21 +354,24 @@ pub async fn note_export_markdown(
             .add_filter("Markdown", &["md"])
             .set_file_name(&filename)
             .blocking_save_file();
-        let state = if let Some(destination) = destination {
-            let path = destination
-                .into_path()
-                .map_err(|error| format!("Could not resolve Markdown destination: {error}"))?;
-            if let Some(snapshot) = &snapshot {
-                write_note_markdown(snapshot, &path)?;
-            } else {
-                std::fs::write(
-                    &path,
-                    include_str!("../../../../docs/examples/lexique-note-v1.md"),
-                )
-                .map_err(|error| {
-                    format!("Could not write Markdown file {}: {error}", path.display())
-                })?;
-            }
+        let path = destination
+            .map(|destination| {
+                destination
+                    .into_path()
+                    .map_err(|error| format!("Could not resolve Markdown destination: {error}"))
+            })
+            .transpose()?;
+        if let Some(snapshot) = &snapshot {
+            return snapshot.save_markdown(path.as_deref());
+        }
+        let state = if let Some(path) = path {
+            std::fs::write(
+                &path,
+                include_str!("../../../../docs/examples/lexique-note-v1.md"),
+            )
+            .map_err(|error| {
+                format!("Could not write Markdown file {}: {error}", path.display())
+            })?;
             "saved"
         } else {
             "cancelled"

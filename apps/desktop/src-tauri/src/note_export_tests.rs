@@ -8,6 +8,30 @@ use rusqlite::Connection;
 
 use super::write_note_csv;
 
+#[test]
+fn grammar_snapshot_exports_one_saved_markdown_file_and_reports_write_failure() {
+    let snapshot = super::ExportSnapshot::Grammar(lexique_storage::GrammarExportSnapshot {
+        records: vec![lexique_storage::GrammarExportRecord {
+            id: 9,
+            exchange_id: "saved-id".into(),
+            title: "Saved".into(),
+            body: "中文".into(),
+            question: String::new(),
+            answer: String::new(),
+        }],
+    });
+    let fixture = Fixture::new();
+    let path = fixture.0.join("saved.md");
+    snapshot.save_markdown(Some(&path)).unwrap();
+    let text = std::fs::read_to_string(&path).unwrap();
+    let parsed = crate::note_markdown::parse_grammar_markdown(&text).unwrap();
+    assert_eq!(parsed.exchange_id.as_deref(), Some("saved-id"));
+    assert_eq!(parsed.body.as_deref(), Some("中文"));
+    assert!(parsed.question.is_none());
+    assert!(snapshot.save_markdown(Some(&fixture.0)).is_err());
+    assert_eq!(snapshot.save_markdown(None).unwrap().state, "cancelled");
+}
+
 static NEXT_DIRECTORY: AtomicU64 = AtomicU64::new(1);
 static NEXT_OPERATION: AtomicU64 = AtomicU64::new(1);
 

@@ -123,12 +123,18 @@ fn preview_note_bytes(
         options.record_kind,
         crate::note_export::ExportRecordKind::Grammar
     ) {
-        if !matches!(source.format, NoteFormat::Csv) || options.mapping.is_some() {
+        if options.mapping.is_some() {
             return Err("Grammar import requires grammar CSV mapping".into());
         }
-        return crate::grammar_import::preview_csv_with_options(
-            connection, source, bytes, operation, options,
-        )
+        return match source.format {
+            NoteFormat::Csv => crate::grammar_import::preview_csv_with_options(
+                connection, source, bytes, operation, options,
+            ),
+            NoteFormat::Markdown => {
+                crate::grammar_import::preview_markdown_bytes(connection, source, bytes, operation)
+            }
+            NoteFormat::Zip => Err("Grammar ZIP import is not supported".into()),
+        }
         .map(ExchangePreview::Grammar);
     }
     match source.format {

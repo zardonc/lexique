@@ -1,6 +1,6 @@
 /* global window, URL, Response */
 import assert from 'node:assert/strict';
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { expect } from '@playwright/test';
 import { fixtureSql, readState, compareLearning } from './native-backup-state.mjs';
@@ -44,7 +44,69 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
   const queue = async () => (await invoke('review_queue', { timezone: 'UTC', skipped: [] })).queue.cards;
   const sqlPause = () => fixtureSql(destination, "print(json.dumps([dict(r) for r in c.execute('SELECT v.id,e.exchange_id,g.question,g.answer,p.vocabulary_id AS paused FROM vocabulary v JOIN grammar_exchange_identities e ON e.record_id=v.id LEFT JOIN review_cards r ON r.vocabulary_id=v.id LEFT JOIN grammar_cards g ON g.card_id=r.id LEFT JOIN review_paused p ON p.vocabulary_id=v.id ORDER BY v.id')],ensure_ascii=False))", {}, true);
   if (scenario.startsWith('grammar-batch')) return grammarBatchCheck({ scenario, page, destination, invoke, picker, evidence, region, file, headers, confirm, records, queue, sqlPause });
-  if (scenario === 'grammar-import') {
+  if (scenario === 'grammar-markdown') {
+    const filename = join(destination, 'incoming.md');
+    const section = (name, value) => `## ${name}\n\n\`\`\`\`\`\`text\n${value}\n\`\`\`\`\`\`\n\n`;
+    const template = '# Lexique grammar note v1\n\n' + section('exchange_id', 'native-markdown-216') + section('title', 'Original') + section('body', body) + section('question', question) + section('answer', answer);
+    await writeFile(filename, template);
+    await picker('导入语法 Markdown', filename); await confirm();
+    let [saved] = await records();
+    assert.equal(saved.body, body); assert.equal(saved.card.question, question); assert.equal(saved.card.answer, answer);
+    assert.equal(sqlPause()[0].paused, saved.id); assert.deepEqual(await queue(), []);
+    fixtureSql(destination, "c.executescript(\"CREATE TRIGGER fail_markdown_start BEFORE DELETE ON review_paused BEGIN SELECT RAISE(FAIL,'markdown start failed'); END;\"); c.commit()", {});
+    await region.getByRole('button', { name: '开始复习', exact: true }).click();
+    await expect(region.getByRole('alert')).toContainText('markdown start failed');
+    assert.equal(sqlPause()[0].paused, saved.id); assert.deepEqual(await queue(), []);
+    fixtureSql(destination, "c.execute('DROP TRIGGER fail_markdown_start'); c.commit()", {});
+    await page.locator('.vocabulary-list button').first().click();
+    await page.locator('.grammar-editor').getByRole('button', { name: '导出 CSV', exact: true }).click();
+    const dialog = page.getByRole('dialog', { name: '导出语法笔记' });
+    const exported = join(destination, 'exported.md');
+    await picker('保存 Markdown', '', true); await expect(dialog.getByRole('status').last()).toContainText('已取消');
+    await picker('保存 Markdown', exported, true); await expect(dialog.getByRole('status').last()).toHaveText('已导出');
+    await dialog.getByRole('button', { name: '关闭', exact: true }).click();
+    const exportedText = await readFile(exported, 'utf8');
+    assert.ok(exportedText.includes('native-markdown-216')); assert.ok(exportedText.includes(body));
+    const renamed = join(destination, 'renamed.md');
+    await writeFile(renamed, '# Lexique grammar note v1\n\n' + section('exchange_id', 'native-markdown-216') + section('title', 'Renamed'));
+    await picker('导入语法 Markdown', renamed);
+    await expect(region).toContainText('内容有差异');
+    await region.getByLabel('导入决定：Renamed').selectOption('update');
+    const beforeFailure = readState(destination);
+    fixtureSql(destination, "c.executescript(\"CREATE TRIGGER fail_markdown_update BEFORE UPDATE ON vocabulary BEGIN SELECT RAISE(FAIL,'markdown update failed'); END;\"); c.commit()", {});
+    await region.getByRole('button', { name: '确认导入', exact: true }).click();
+    await expect(region.getByRole('alert')).toContainText('markdown update failed');
+    compareLearning(readState(destination), beforeFailure);
+    fixtureSql(destination, "c.execute('DROP TRIGGER fail_markdown_update'); c.commit()", {});
+    await confirm();
+    [saved] = await records(); assert.equal(saved.title, 'Renamed'); assert.equal(saved.body, body); assert.equal(saved.card.question, question);
+    await writeFile(renamed, '# Lexique grammar note v1\n\n' + section('exchange_id', 'native-markdown-216') + section('title', 'Renamed') + section('body', '') + section('question', ' ') + section('answer', '\t'));
+    await picker('导入语法 Markdown', renamed); await region.getByLabel('导入决定：Renamed').selectOption('update'); await confirm();
+    [saved] = await records(); assert.equal(saved.body, ''); assert.equal(saved.card.question, question); assert.equal(saved.card.answer, answer);
+    evidence.sqlite = sqlPause(); evidence.checks.push('T28/T29/T31/T37/T39: real Markdown file picker, saved export, raw text, identity rename, omitted and empty body, blank pair, failed update rollback and visible start failure');
+  } else if (scenario === 'grammar-markdown-validation') {
+    const before = readState(destination), invalid = join(destination, 'invalid.md');
+    const section = (name, value) => `## ${name}\n\n\`\`\`text\n${value}\n\`\`\`\n\n`;
+    for (const [content, reason] of [
+      ['# Lexique note v1\n', 'template identifier'],
+      ['# Lexique grammar note v1\n', '## title'],
+      ['# Lexique grammar note v1\n' + section('title', 'Invalid') + section('question', 'Question'), 'Question and answer'],
+    ]) {
+      await writeFile(invalid, content); await picker('导入语法 Markdown', invalid);
+      await expect(region.getByRole('alert')).toContainText('invalid.md');
+      await expect(region.getByRole('alert')).toContainText(reason);
+      await region.getByRole('button', { name: '取消导入', exact: true }).click();
+    }
+    await picker('导入语法 Markdown', ''); await expect(region.getByRole('status')).toContainText('已取消');
+    compareLearning(readState(destination), before);
+    evidence.checks.push('T30/T37: wrong marker, missing title, incomplete pair and real picker cancellation leave learning unchanged');
+  } else if (scenario === 'grammar-markdown-restart') {
+    const [saved] = await records(); assert.equal(saved.title, 'Renamed'); assert.equal(saved.body, '');
+    assert.equal(saved.card.question, question); assert.equal(saved.card.answer, answer);
+    assert.equal(sqlPause()[0].exchange_id, 'native-markdown-216'); assert.equal(sqlPause()[0].paused, saved.id);
+    assert.deepEqual(await queue(), []); evidence.sqlite = sqlPause();
+    evidence.checks.push('T28/T31: real SQLite content, stable identity and paused card survive reopening');
+  } else if (scenario === 'grammar-import') {
     const filename = await file('paired', [headers, ['external-native-214', '  Une règle  ', body, question, answer]]);
     const before = readState(destination);
     await picker('导入语法 CSV', filename);

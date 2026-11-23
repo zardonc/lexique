@@ -80,6 +80,58 @@ pub struct GrammarImportPreview {
     pub groups: Vec<GrammarImportGroup>,
     pub error: Option<String>,
 }
+
+pub fn preview_markdown_bytes(
+    connection: &Connection,
+    source: ImportSource,
+    bytes: &[u8],
+    operation: &str,
+) -> Result<GrammarImportPreview, String> {
+    source.validate().map_err(|error| error.to_string())?;
+    let mut preview = GrammarImportPreview {
+        operation: operation.into(),
+        source,
+        columns: vec![],
+        mapping: GrammarImportMapping::default(),
+        groups: vec![],
+        error: None,
+    };
+    let content = std::str::from_utf8(bytes)
+        .map_err(|error| format!("Markdown must be UTF-8: {error}"))
+        .and_then(crate::note_markdown::parse_grammar_markdown);
+    match content {
+        Ok(content) => {
+            let existing = content
+                .exchange_id
+                .as_deref()
+                .filter(|id| !id.is_empty())
+                .map(|id| lexique_storage::find_grammar_exchange(connection, id))
+                .transpose()
+                .map_err(|error| error.to_string())?
+                .flatten();
+            let status = match &existing {
+                Some(record)
+                    if content
+                        .unchanged(record)
+                        .map_err(|error| error.to_string())? =>
+                {
+                    "identical"
+                }
+                Some(_) => "different",
+                None => "create",
+            };
+            preview.groups.push(GrammarImportGroup {
+                content,
+                rows: vec![1],
+                existing,
+                status,
+                error: None,
+            });
+        }
+        Err(error) => preview.error = Some(format!("{}: {error}", preview.source.filename)),
+    }
+    Ok(preview)
+}
 #[cfg(test)]
 pub fn preview_csv_bytes(
     connection: &Connection,

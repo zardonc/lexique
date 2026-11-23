@@ -11,6 +11,65 @@ mod batch;
 #[path = "note_zip_tests.rs"]
 mod zip;
 
+#[test]
+fn grammar_markdown_preview_commits_and_matches_identity_after_file_and_title_rename() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        format: Some(NoteFormat::Markdown),
+        ..Default::default()
+    };
+    let source = |filename: &str| ImportSource {
+        filename: filename.into(),
+        format: NoteFormat::Markdown,
+    };
+    let input = "# Lexique grammar note v1\n\n## exchange_id\n\n```text\nidentity-one\n```\n\n## title\n\n```text\nOriginal\n```\n\n## body\n\n```text\nSaved body\n```\n";
+    let ExchangePreview::Grammar(first) = preview_note_bytes(
+        &connection,
+        source("first.md"),
+        input.as_bytes(),
+        "markdown-first",
+        &options,
+    )
+    .unwrap() else {
+        panic!("grammar preview")
+    };
+    assert_eq!(first.groups[0].status, "create");
+    let selected = [NoteImportSelection {
+        index: 0,
+        action: NoteImportAction::Create,
+        allow_unlinked: false,
+    }];
+    let saved = crate::grammar_import::commit_preview(&mut connection, &first, &selected).unwrap();
+    let renamed = input
+        .replace("Original", "Renamed")
+        .replace("## body\n\n```text\nSaved body\n```\n", "");
+    let ExchangePreview::Grammar(second) = preview_note_bytes(
+        &connection,
+        source("renamed.md"),
+        renamed.as_bytes(),
+        "markdown-second",
+        &options,
+    )
+    .unwrap() else {
+        panic!("grammar preview")
+    };
+    assert_eq!(second.groups[0].status, "different");
+    assert_eq!(
+        second.groups[0].existing.as_ref().unwrap().id,
+        saved.records[0].id
+    );
+    let update = [NoteImportSelection {
+        index: 0,
+        action: NoteImportAction::Update,
+        allow_unlinked: false,
+    }];
+    let updated = crate::grammar_import::commit_preview(&mut connection, &second, &update).unwrap();
+    assert_eq!(updated.records[0].body, "Saved body");
+    assert_eq!(updated.records[0].title, "Renamed");
+}
+
 fn preview_file(
     connection: &Connection,
     path: &Path,
