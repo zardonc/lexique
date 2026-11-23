@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations use
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany this independently reviewed shard.
 
 Exact word/POS membership and unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,12 +14,15 @@ Rows 3301–3350 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One sense is proposed per exact group. French definitions adapt the selected
-lexical semantics; English and Chinese are newly authored Lexique explanations,
+One sense is selected per exact group. French definitions explain the selected
+lexical facts; English and Chinese are Lexique explanations,
 not upstream bilingual quotations. Gender, number, register and construction
 restrictions are retained. IPA selects one recorded isolated variant. Source
-spelling bindings add no query aliases. [Readable proposals](review-candidates.md)
-retain all four fields, selected uses and excluded alternatives.
+spelling bindings add no query aliases. [Accepted fields](accepted-fields.md)
+retain all four fields, selected uses and excluded alternatives. Thirty uses
+retain separate minimal factual source fragments; twenty retain individually
+reviewed short expressions. Five field texts have exact proposal/acceptance
+records in [accepted replacements](accepted-replacements.json).
 
 ## Article credits
 
@@ -83,9 +86,10 @@ are credited for selection, French adaptation and new English/Chinese wording.
 | rarement | [39774442](https://fr.wiktionary.org/w/index.php?title=rarement&oldid=39774442) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=rarement&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 
 Thirty-four articles declare Académie française eighth-edition imports
-(1932–1935). The original collective-work rights basis conservatively expired
-2006-01-01; historical independent review of that basis is retained separately
-from the pending new field reviews. [Selected rights](selected-rights.md)
+(1932–1935). The retained French collective-work term calculation reaches
+2006-01-01; this does not establish worldwide original-work clearance.
+Each selected expression or factual unit has its own recorded decision,
+without relying on whole DAF8 clearance. [Selected rights](selected-rights.md)
 describes the contribution/adaptation and original-work boundaries.
 
 `marge` line 40 and `grain` lines 89–90 are unselected CFC cartographic
@@ -104,5 +108,6 @@ source material. Adaptations use CC BY-SA 4.0 without additional restrictions.
 External works retain their separate rights. The coordinator verifies combined
 conversion and actual packaged obligations before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 200 fields pass separate quality and specific selected-expression rights
+review. Canonical admission, combined packaged obligations and native checks
+remain coordinator-owned and pending.

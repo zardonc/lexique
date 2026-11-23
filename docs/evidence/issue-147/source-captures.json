@@ -718,10 +718,13 @@
     },
     "selected_sentence_authorship_proved": false
   },
-  "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-147",
-  "capture_root_fallback": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-147",
+  "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-147",
+  "capture_root_fallback": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-147",
   "original_capture_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/source-preparation/issue-147",
   "captured_at_utc": "2026-11-22T22:16:04.449159+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-147\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-147\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-147\\selection.py",
+  "author_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-147",
+  "independent_audit_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-147",
+  "independent_audit_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-147\\audit.py"
 }

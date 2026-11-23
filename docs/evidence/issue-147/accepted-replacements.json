@@ -1,0 +1,102 @@
+[
+  {
+    "frozen_row": 3311,
+    "headword": "poignarder",
+    "pos": "VER",
+    "sense_id": "b147-3311-poignarder-ver-selected",
+    "field": "english",
+    "proposed_text": "To stab someone with a dagger, injuring or killing them; transitive verb.",
+    "accepted_text": "To strike, wound or kill someone with a dagger; transitive verb.",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[frapper|Frapper]], [[blesser]] ou [[tuer]] avec un [[poignard]]."
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[frapper|Frapper]], [[blesser]] ou [[tuer]] avec un [[poignard]]."
+    },
+    "reason": "Strike, wound or kill preserves the source’s alternatives rather than requiring injury as a result."
+  },
+  {
+    "frozen_row": 3317,
+    "headword": "avenue",
+    "pos": "NOM",
+    "sense_id": "b147-3317-avenue-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Voie de circulation importante dans une ville.",
+    "accepted_text": "Voie de circulation en ville, de taille et d’importance variables.",
+    "proposed_source_span": {
+      "line_1_based": 19,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{voies|fr|de circulation}} [[voie|Voie]] [[urbaine]] d’[[importance]] et de [[taille]] [[diverses]]. Toutefois, en général, une avenue est moins importante qu’un [[boulevard]]."
+    },
+    "accepted_source_span": {
+      "line_1_based": 19,
+      "column_1_based": 31,
+      "raw_source_excerpt": "[[voie|Voie]] [[urbaine]]"
+    },
+    "reason": "Taille et importance variables retains the source’s variable street characteristics; no obligatory importance or trees."
+  },
+  {
+    "frozen_row": 3317,
+    "headword": "avenue",
+    "pos": "NOM",
+    "sense_id": "b147-3317-avenue-nom-selected",
+    "field": "english",
+    "proposed_text": "An avenue: an important urban street; feminine noun.",
+    "accepted_text": "An avenue: an urban street whose size and importance may vary; feminine noun.",
+    "proposed_source_span": {
+      "line_1_based": 19,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{voies|fr|de circulation}} [[voie|Voie]] [[urbaine]] d’[[importance]] et de [[taille]] [[diverses]]. Toutefois, en général, une avenue est moins importante qu’un [[boulevard]]."
+    },
+    "accepted_source_span": {
+      "line_1_based": 19,
+      "column_1_based": 31,
+      "raw_source_excerpt": "[[voie|Voie]] [[urbaine]]"
+    },
+    "reason": "Urban street whose size/importance may vary accurately explains avenue at this source sense."
+  },
+  {
+    "frozen_row": 3317,
+    "headword": "avenue",
+    "pos": "NOM",
+    "sense_id": "b147-3317-avenue-nom-selected",
+    "field": "chinese",
+    "proposed_text": "大街、城市中的重要道路；阴性名词。",
+    "accepted_text": "大街：城市道路，其规模和重要程度不一；阴性名词。",
+    "proposed_source_span": {
+      "line_1_based": 19,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{voies|fr|de circulation}} [[voie|Voie]] [[urbaine]] d’[[importance]] et de [[taille]] [[diverses]]. Toutefois, en général, une avenue est moins importante qu’un [[boulevard]]."
+    },
+    "accepted_source_span": {
+      "line_1_based": 19,
+      "column_1_based": 31,
+      "raw_source_excerpt": "[[voie|Voie]] [[urbaine]]"
+    },
+    "reason": "规模和重要程度不一 restores the variable-characteristics condition for 大街."
+  },
+  {
+    "frozen_row": 3323,
+    "headword": "manche",
+    "pos": "NOM",
+    "sense_id": "b147-3323-manche-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Partie d’un vêtement dans laquelle on passe le bras et qui le couvre en tout ou en partie.",
+    "accepted_text": "Élément d’un vêtement qui couvre tout ou partie du bras.",
+    "proposed_source_span": {
+      "line_1_based": 16,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{vête|fr}} {{lexique|couture|fr}} Partie du [[vêtement]], de forme et de dimension variable, dans laquelle on passe le bras et qui le recouvre en totalité ou en partie."
+    },
+    "accepted_source_span": {
+      "line_1_based": 16,
+      "column_1_based": 38,
+      "raw_source_excerpt": "Partie du [[vêtement]]"
+    },
+    "reason": "Élément d’un vêtement and covering all/part of the arm express the selected object/function facts without the longer arm-entry sentence."
+  }
+]
