@@ -4,10 +4,6 @@
 
 ## Independent source-review record
 
-`core-149-v1` canonically admits **50 groups / 200 fields** from this batch. Exact native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-140-149/README.md) record the matching package, preservation checks and remaining acceptance gates.
-
-## Independent source-review record
-
 **50 exact groups, 50 everyday selected uses and 200 fields pass independent quality
 and selected-text rights review.** There are **197 unchanged fields, three brigade
 meaning replacements and zero unresolved fields**. Rows 3001–3050 preserve spelling,
