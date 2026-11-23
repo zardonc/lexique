@@ -78,9 +78,14 @@ from `apps/desktop`, `node e2e/native-interchange-check.mjs <package-directory>
 | `grammar-vocabulary` | `native-vocabulary-retry` (copied seed fixture) |
 | `grammar-backup` | `native-backup` (backup, restore and controlled restart) |
 
-Each directory retains `results.json`, clean source metadata, actual picker files,
+Each directory retains `results.json`, actual source metadata, picker files,
 SQLite state, screenshots, lifecycle and `cleanup.json`. All owned host, worker
-and helper counts are zero. The first `native-selection`, `native-single` and
+and helper counts are zero. The binary was built from clean 6cc; the first four
+native runs also report a clean worktree. Later runs report `dirty: true` because
+this verification document and architecture notes were being written during
+acceptance. The final diff from 6cc changes documentation only; application and
+harness bytes are unchanged. Original metadata flags are retained.
+The first `native-selection`, `native-single` and
 `native-vocabulary` attempts failed when WebView2 exited with access violation
 `0xc0000005`; their dumps locate the exception address in
 `RTSSHooks64.dll + 0x1490af`. `crash-analysis.json` and `dump-module.py` document
