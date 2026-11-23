@@ -1,0 +1,55 @@
+{
+  "frozen_row": 3783,
+  "headword": "ya",
+  "pos": "NOM",
+  "ipa": "/ja/",
+  "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+  "fixed_source": {
+    "revision": 39362597,
+    "noun_head_line": 12,
+    "definition_line": 13
+  },
+  "semantic_alignment": "confirmed_exact_masculine_slang_knife_noun",
+  "everyday_sense_status": "unresolved",
+  "primary_bob": {
+    "url": "https://www.languefrancaise.net/Bob/39498",
+    "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156\\bob-capture.json",
+    "observed_revision": "2026-08-15 15:40",
+    "page_review_status": "Page non révisée",
+    "frequency": "002",
+    "current_register": 10,
+    "dated_sources": [
+      "1956, Frédéric Dard, Fais gaffe à tes os",
+      "2002, Mini-Dico de l’argot"
+    ]
+  },
+  "register_authority": {
+    "url": "https://www.languefrancaise.net/Aide/Registre",
+    "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156\\bob-register-help-capture.json",
+    "meaning": "10 is strongly argotic on an approximate social-register scale; it is not a frequency or everyday-use certification."
+  },
+  "primary_cordial": {
+    "url": "https://www.cordial.fr/dictionnaire/definition/ya.php",
+    "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156\\cordial.html",
+    "http_status": 200,
+    "content": "nom masculin singulier; argot knife meaning",
+    "dated_use_attestation": null,
+    "copyright": "Dictionnaire Cordial 1994–2019, tous droits réservés; corroboration only, no prose imported"
+  },
+  "recent_primary_token": {
+    "url": "https://www.expressio.fr/expressions/a-couteaux-tires/page-16",
+    "comment": "#318, Psylocybe, 2020-11-10 21:14",
+    "classification": "Metalinguistic enumeration followed by deliberately constructed ya/yak/Yasmina wordplay. A contemporary playful token, not evidence of ordinary everyday deployment."
+  },
+  "secondary_dictionary": {
+    "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/ya",
+    "classification": "Lexical confirmation and the reused Dard literary quotation; no independent everyday attestation."
+  },
+  "decision": "Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+  "owner_exception": "not_approved",
+  "changed_spelling": false,
+  "field_text_changes": 0,
+  "quality_unresolved_fields": 4,
+  "selected_field_rights": "passed_at_lexical_fact_boundary",
+  "interpretation_limit": "Everyday support is unproved, not disproved; the noun is neither declared obsolete nor replaced."
+}

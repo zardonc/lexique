@@ -71,6 +71,69 @@ def read(name):
 
 
 class Batch156Tests(unittest.TestCase):
+    def test_independent_review_accepts_supported_fields_and_keeps_ya_blocked(self):
+        review = read('field-review.json')
+        self.assertTrue(review['independent_acceptance'])
+        self.assertTrue(review['reviewer'])
+        self.assertEqual(len(review['fields']), 200)
+        accepted = [r for r in review['fields'] if r['accepted_text_quality_status'] == 'passed']
+        self.assertEqual(len(accepted), 196)
+        self.assertEqual({r['frozen_row'] for r in review['unresolved_fields']}, {3783})
+        self.assertEqual(len(review['unresolved_fields']), 4)
+        for r in review['fields']:
+            self.assertTrue(r['review_reason'])
+            self.assertTrue(r['selected_text_rights_reason'])
+            self.assertEqual(r['rights_eligibility_status'], 'passed_at_selected_text_boundary')
+            self.assertEqual(r['reviewer'], review['reviewer'])
+            self.assertTrue(r['independence'])
+        for u in review['usage']:
+            self.assertTrue(u['review_reason'])
+            self.assertEqual(u['everyday_sense_status'], 'unresolved' if u['frozen_row'] == 3783 else 'passed')
+        admission = read('admission.json')
+        self.assertEqual(admission['independently_accepted_new_groups'], 49)
+        self.assertEqual(admission['independently_accepted_new_fields'], 196)
+        self.assertEqual(admission['canonical_admitted_new_fields'], 0)
+        expected = {(g['senses'][0]['sense_id'], name): (g, field)
+                    for g in read('groups.json') for name, field in g['senses'][0]['fields'].items()}
+        reviewed = {(r['sense_id'], r['field']): r for r in review['fields']}
+        self.assertEqual(set(reviewed), set(expected))
+        for key, (group, field) in expected.items():
+            record = reviewed[key]
+            self.assertEqual(record['proposed_text'], field['text'])
+            self.assertEqual(record['accepted_text'], field['text'] if group['frozen_row'] != 3783 else None)
+            self.assertEqual(record['exact_source']['reviewed_excerpt'], field['source_span']['raw_source_excerpt'])
+            self.assertEqual(record['exact_source']['source_id'], field['source_id'])
+        self.assertEqual(len({r['review_reason'] for r in review['fields']}), 200)
+        self.assertEqual(len({u['review_reason'] for u in review['usage']}), 50)
+        rights = read('rights.json')
+        self.assertEqual(rights['independent_rights_fields_accepted'], 200)
+        self.assertEqual(len(rights['sources']), 50)
+        self.assertEqual(len(rights['fields']), 200)
+        for record in rights['fields']:
+            group, field = expected[record['sense_id'], record['field']]
+            self.assertEqual(record['exact_source_span'], field['source_span'])
+            self.assertEqual(record['independent_review'], 'passed_at_selected_text_boundary')
+            self.assertEqual(record['accepted_text'], reviewed[record['sense_id'], record['field']]['accepted_text'])
+            self.assertEqual(record['modification'], field['modification'])
+        ya = read('ya-modern-use-review.json')
+        self.assertEqual(ya['semantic_alignment'], 'confirmed_exact_masculine_slang_knife_noun')
+        self.assertEqual(ya['everyday_sense_status'], 'unresolved')
+        self.assertEqual(ya['primary_bob']['current_register'], 10)
+        self.assertEqual(ya['primary_cordial']['http_status'], 200)
+        self.assertFalse(ya['changed_spelling'])
+
+    def test_mouchoir_selected_rights_separate_quillet_and_daf9_expression(self):
+        source = next(s for s in read('sources.json')['sources'] if s['title'] == 'mouchoir')
+        boundaries = source['selected_original_expression_boundaries']
+        self.assertEqual({b['work'] for b in boundaries}, {'Dictionnaire encyclopédique Quillet', 'Dictionnaire de l’Académie française, ninth edition'})
+        self.assertTrue(all(b['external_expression_admitted'] is False for b in boundaries))
+        self.assertIn('cellulose', source['selected_text_rights_reason'])
+        valet = next(s for s in read('sources.json')['sources'] if s['title'] == 'valet')
+        later = valet['selected_original_expression_boundaries'][0]
+        self.assertEqual(later['edition'], '1979')
+        self.assertFalse(later['external_expression_admitted'])
+        self.assertEqual(later['primary_selected_expression_authority'], 'https://www.dictionnaire-academie.fr/article/A8V0052')
+
     def test_difficult_bindings_preserve_pos_register_spelling_and_unresolved_use(self):
         groups = {g["frozen_row"]: g for g in read("groups.json")}
         scanner = groups[3782]["senses"][0]
@@ -99,7 +162,7 @@ class Batch156Tests(unittest.TestCase):
             staged = Path(folder)
             for name in (*MATERIALS, "input-checksums.json"):
                 shutil.copy2(ROOT / "resources/core-pilot-79" / name, staged / name)
-            shutil.copy2(EVIDENCE / "field-review.json", staged / "field-review.json")
+            shutil.copy2(EVIDENCE / "authored/field-review.json", staged / "field-review.json")
             with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
                 load_inputs(staged)
 
@@ -171,8 +234,8 @@ class Batch156Tests(unittest.TestCase):
             self.assertEqual(context["anonymous_contributors_count"], anonymous.get(context["title"], 0))
         self.assertFalse(captures["contributor_registry"]["selected_sentence_authorship_proved"])
 
-    def test_author_rights_proposals_keep_every_field_pending_independent_review(self):
-        rights, admission, review = read("rights.json"), read("admission.json"), read("field-review.json")
+    def test_authored_snapshot_preserves_pending_proposals_and_exact_text(self):
+        rights, admission, review = read("authored/rights.json"), read("authored/admission.json"), read("authored/field-review.json")
         self.assertEqual(rights["independent_review"], "pending")
         self.assertIsNone(rights["reviewer"])
         self.assertEqual(rights["independent_rights_fields_accepted"], 0)
@@ -217,7 +280,19 @@ class Batch156Tests(unittest.TestCase):
                 for field in sense["fields"].values():
                     self.assertTrue(field["text"].strip())
                     self.assertTrue(field["source_id"])
-                    self.assertEqual(field["independent_review"], "pending")
+                    self.assertEqual(field["independent_review"], "unresolved" if group['frozen_row'] == 3783 else "passed")
+
+    def test_real_admission_rejects_an_unresolved_independent_quality_decision(self):
+        temporary_root = ROOT / 'target/issue-156-review'
+        with tempfile.TemporaryDirectory(prefix='quality-156-', dir=temporary_root) as folder:
+            staged = Path(folder)
+            for name in (*MATERIALS, 'input-checksums.json'):
+                shutil.copy2(ROOT / 'resources/core-pilot-79' / name, staged / name)
+            review = json.loads((staged / 'field-review.json').read_text(encoding='utf-8'))
+            review['fields'][0]['accepted_text_quality_status'] = 'unresolved'
+            (staged / 'field-review.json').write_text(json.dumps(review), encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'A selected field is not independently reviewed or rights-eligible'):
+                load_inputs(staged)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,91 @@
+{
+  "ticket": 156,
+  "role": "author_verification_only",
+  "independent_review": "pending",
+  "independent_reviewer": null,
+  "authored_checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/author-156",
+  "diff_base": "cc72c0d7772fc742879cea77ff4ffd2621d5db61",
+  "tested_content": "Owned #156 source/admission/test working tree on the merged integration base; execution archive records final commit verification.",
+  "platform": "Windows x64, PowerShell 7, uv Python 3.14",
+  "evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-156",
+  "frozen_groups": 50,
+  "proposed_senses": 50,
+  "proposed_fields": 200,
+  "author_modern_everyday_supported_groups": 49,
+  "author_modern_everyday_unresolved_rows": [
+    3783
+  ],
+  "independently_accepted_groups": 0,
+  "independently_accepted_fields": 0,
+  "canonical_new_groups": 0,
+  "canonical_new_fields": 0,
+  "fixed_french_sources": 50,
+  "complete_contributor_parts": 7,
+  "checks": [
+    {
+      "command": "uv run --no-project scripts/test_core_batch_156.py Batch156Tests.test_exact_frozen_groups_have_four_scoped_candidate_fields",
+      "stage": "red",
+      "result": "expected_failure_missing_groups_json",
+      "log": "red-membership.log"
+    },
+    {
+      "command": "uv run --no-project scripts/test_core_batch_156.py Batch156Tests.test_author_rights_proposals_keep_every_field_pending_independent_review",
+      "stage": "red",
+      "result": "expected_failure_missing_rights_json",
+      "log": "red-rights.log"
+    },
+    {
+      "command": "uv run --no-project scripts/test_core_batch_156.py Batch156Tests.test_difficult_bindings_preserve_pos_register_spelling_and_unresolved_use",
+      "stage": "red",
+      "result": "expected_failure_missing_explicit_ya_blocker",
+      "log": "red-use-status.log"
+    },
+    {
+      "command": "uv run --no-project scripts/test_core_batch_156.py",
+      "stage": "green",
+      "result": "passed",
+      "tests": 5,
+      "log": "green-content.log"
+    },
+    {
+      "command": "uv run --no-project <author-evidence>/reproduce.py",
+      "result": "passed",
+      "byte_identical_files": 12,
+      "log": "reproduction.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "quality_boundary": "Author read of selected semantics, pronunciation and constructions; exact automated byte/span/frame checks and real admission rejection. These do not establish independent language/rights review.",
+  "preserved_scope": "No baseline resource, shared converter, native constants or learner records changed by the authored content commit.",
+  "unresolved": [
+    "ya/NOM modern everyday slang eligibility is not established; its four fields remain explicitly blocked.",
+    "All 200 fields await independent quality and selected-span rights review."
+  ],
+  "skipped": [
+    {
+      "check": "Canonical converter registration, assembly and packaged redistribution obligations",
+      "reason": "Coordinator-owned; no independent acceptance available."
+    },
+    {
+      "check": "Native lookup, trusted save, restart/reopen and upgrade preservation",
+      "reason": "Coordinator-owned; this author shard is not canonically admitted."
+    },
+    {
+      "check": "Learner acceptance, full/Lite, whole-machine offline and other platforms",
+      "reason": "Not run for this authored shard."
+    },
+    {
+      "check": "Frontend lint/typecheck/build and Rust compilation/tests",
+      "reason": "No frontend or Rust changes in the owned diff."
+    }
+  ]
+}
