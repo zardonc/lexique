@@ -753,5 +753,14 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-151",
   "captured_at_utc": "2026-11-23T16:57:02.527432+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-151\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-151\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-151\\selection.py",
+  "independent_review_audit": {
+    "reviewer": "Main agent reviewing issue 151 independently of its author",
+    "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151",
+    "raw_author_copy": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-151",
+    "original_expressions": "original-expression-review.json",
+    "audit_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\audit.py",
+    "source_bytes": "literal UTF-8 API/raw equality; all fixed selected/support spans; full contributor chains",
+    "phonetic_field_rights": "All 50 isolated phonetic fields reviewed separately; all 200 selected field rights passed."
+  }
 }

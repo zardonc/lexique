@@ -1,51 +1,19 @@
 # Selected source and adaptation rights for #152
 
-All 200 proposed fields have fixed source/version/span, contributor attribution,
-modification information and a field-level author rights proposal in
-[rights.json](rights.json). Independent selected-span rights review remains
-pending. French definitions adapt selected semantics; English and Chinese are
-new Lexique explanations, rather than quoted upstream bilingual translations.
-IPA selects a recorded isolated-headword variant, with slashes added.
+All **200 fields and 50 uses pass separate selected-boundary rights review**. [Rights](rights.json) and [field review](field-review.json) distinguish original-work rights, fixed contributor wording and new Lexique adaptations; their exact text, source span, attribution, modification and reviewer reasons are retained.
 
-## Contribution and adaptation layers
+Fixed Wiktionnaire contributions and scoped French/English/Chinese adaptations retain **CC BY-SA 4.0**. [COPYING](COPYING), [notices](NOTICES.md), source URLs/versions and linked histories accompany the shard. CC BY-SA sections 2(a), 3(a), 3(b) and 4 permit sharing, adaptation and database extraction subject to attribution, licence/source identification, retained modifications, ShareAlike and no additional restrictions. The retained Wikimedia Terms section 7 and fixed copyright-policy/import-template captures distinguish imported expression and media from contributor licensing. Code remains MIT.
 
-Fixed Wiktionnaire contributions and Lexique semantic adaptations/translations
-retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-The [complete legal text](COPYING), fixed article URLs, complete linked histories,
-paginated contributor records, original-work credits and modification notices
-accompany the proposed fields. Sharing/adaptation requires attribution,
-licence identification, modification notices, ShareAlike and no additional
-restrictions. Project code retains MIT.
+[Original-expression review](original-expression-review.json) independently compares **27 corresponding DAF8 lexical boundaries and two Littré boundaries** against retained original editions. DAF8 is the Académie française collective eighth edition, 1932–1935; CPI L123-3 gives the conservative original-work expiry **2006-01-01** from final 1935 publication. Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877, has the established CPI L123-1 expiry **1952-01-01**. Original credits and modification notices remain. Modern publisher typography, presentation and added expression are outside that original-work claim.
 
-The retained Wikimedia Terms of Use, section 7, distinguishes contribution
-licensing from imported content and media. Fixed Wiktionnaire copyright policy
-revision 38903168 and DAF8 import-template revision 22113837 retain that boundary.
-Actual authority captures and their historical capture metadata are identified
-in [rights.json](rights.json); copies preserve their origin bytes.
+The `décès` personal-death definition preserves identifiable Littré wording in its fixed wiki source. The natural-cause restriction is corrected by factual comparison with retained Académie definitions. `précisément` also corresponds to its retained Littré lexical synonyms. The missing selected original layer is now separately credited. DAF8 expression is also recorded where only bibliography or no import marker appears, such as `flèche` and `découper`; a page marker alone never supplies a selected-expression verdict. `rempli` is compared to DAF8's adjectival participle under `remplir`.
 
-## Original works and selected spans
+Thirty article-level DAF8 notices remain preserved. Contemporary cellphone, postal, activation and gambling meanings are distinguished from those articles' other imported historical definitions. Ordinary calendar, anatomical, geographic, attraction and grammatical facts are not treated as imported creative prose. All such individual decisions and exact corresponding expressions are in the source ledger; none asserts sentence-level wiki authorship.
 
-Thirty fixed articles declare imports from the Académie française eighth
-edition (1932–1935). Its original collective-work rights have the established
-L123-3 basis, conservatively expiring on 2006-01-01 using final publication in
-1935; see the [established original-work decision](../issue-129/selected-rights.md)
-and [article L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20).
-That original-work basis is separate from wiki transcription/adaptation and
-Lexique explanations, which retain CC BY-SA 4.0.
+The six `décès`/`coma` replacements retain the historical source context and explicitly identify the retained modern factual evidence used for the semantic correction. Modern publisher sentences are neither translated verbatim nor selected learner fields. New explanations retain the disclosed CC BY-SA adaptation layer.
 
-An article-level import or reference marker does not prove the origin or rights
-of an individual sentence. Each field's selected lexical span, source frame,
-original-work layer and modification is preserved for independent examination.
-Bibliographic identities provide context; external dictionary, literary/news
-quotation, image and audio expression is not proposed as learner content.
-The selected `bien mis` adjective definition is its lexical line 8, and the
-`homosexuel` support is its lexical line 29, outside their neighbouring quotations.
+The English `possession` replacement preserves the same fixed un bien source span and contribution/adaptation licence. An item of property retains its general scope without suggesting that only real estate is meant; the French and Chinese fields retain their accepted original text.
 
-## Combined redistribution obligations
+The complete contributor chains provide 2,933 named article memberships and 515 anonymous article counts across 52 fixed articles. Full linked histories provide anonymous and other attribution; the registry can include later editors and does not prove who authored a selected sentence. Literary/news examples, bibliography prose, etymologies, media and other-language sections are excluded. The GDT reference on supporting `homosexuel` is bibliographic metadata, not selected publisher expression.
 
-Keep the applicable legal text, article/history and contributor attribution,
-original-work credits, selected source materials and modification notices in
-the assembled package. Adaptation layers remain CC BY-SA 4.0; original works
-retain their own rights. Canonical conversion, actual combined obligations and
-native verification require separate integration evidence. Author consistency
-checks admit zero new fields.
+The complete source/API/request/selected-span/original-expression proof is archived externally under `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-152`. The shard-level obligations and review are complete; canonical assembly must still include the actual combined notices and source obligations. Canonical conversion, native execution, learner acceptance and release validation remain separate coordinator-owned gates.

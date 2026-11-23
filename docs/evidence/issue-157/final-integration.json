@@ -1,0 +1,71 @@
+{
+  "ticket": 157,
+  "recorded_at_utc": "2026-11-23T18:14:25.928437+00:00",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\author-157",
+  "branch": "codex/d2-content-157",
+  "author_proposal_commit": "2b465335c0d26fa323439c7763a50ca4bbb7eacd",
+  "integration_tip": "e7bbe0afe7ab156024f8c2bee61fd57a0e2057bc",
+  "tested_merged_head": "dc20accd0a8e80564d44767ee7426d53f012ffdc",
+  "integration_is_ancestor": true,
+  "changed_author_paths": [
+    "docs/evidence/issue-157/COPYING",
+    "docs/evidence/issue-157/NOTICES.md",
+    "docs/evidence/issue-157/README.md",
+    "docs/evidence/issue-157/admission.json",
+    "docs/evidence/issue-157/author-verification.json",
+    "docs/evidence/issue-157/field-review.json",
+    "docs/evidence/issue-157/groups.json",
+    "docs/evidence/issue-157/reuse.json",
+    "docs/evidence/issue-157/review-candidates.md",
+    "docs/evidence/issue-157/rights.json",
+    "docs/evidence/issue-157/selected-rights.md",
+    "docs/evidence/issue-157/source-captures.json",
+    "docs/evidence/issue-157/source-context.json",
+    "docs/evidence/issue-157/source-excerpts.json",
+    "docs/evidence/issue-157/sources.json",
+    "scripts/test_core_batch_157.py"
+  ],
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_157.py",
+      "status": "passed",
+      "exit_code": 0,
+      "tests": 5,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\resource-post-merge.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "documents": 549,
+      "problems": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\docs-post-merge.log"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\diff-post-merge.log"
+    }
+  ],
+  "reviewer_inputs": {
+    "spec": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\issue-157.json",
+    "parent_spec": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\issue-78.json",
+    "diff_base": "e7bbe0afe7ab156024f8c2bee61fd57a0e2057bc",
+    "diff_head": "dc20accd0a8e80564d44767ee7426d53f012ffdc",
+    "changes": "committed author proposals",
+    "diff_command": "git diff e7bbe0afe7ab156024f8c2bee61fd57a0e2057bc dc20accd0a8e80564d44767ee7426d53f012ffdc -- docs/evidence/issue-157 scripts/test_core_batch_157.py",
+    "full_diff": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\merged-author-scoped.patch",
+    "test_diff": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\merged-author-test.patch"
+  },
+  "candidate_groups": 50,
+  "candidate_fields": 200,
+  "independently_accepted_new_fields": 0,
+  "independent_quality": "pending",
+  "selected_span_rights": "pending",
+  "native_lookup_save_reopen": "integration_owned_not_run",
+  "conversion_and_packaging": "integration_owned_not_run",
+  "learner_acceptance": "not_run",
+  "scope_denominator_groups": 4087,
+  "metadata_scope": "This receipt adds verification metadata only to the tested merged state."
+}

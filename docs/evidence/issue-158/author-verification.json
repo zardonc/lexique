@@ -1,0 +1,86 @@
+{
+  "kind": "author_resource_boundary_verification",
+  "independent_review": false,
+  "source_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\author-158",
+  "branch": "codex/d2-content-158",
+  "baseline_commit": "1251bd57dbb37ebc90f2367177e783387b9c5c71",
+  "tested_changes": "Owned uncommitted #158 proposal files and resource-boundary test",
+  "platform": "Windows x64, PowerShell 7, uv Python 3.14.10",
+  "recorded_at_utc": "2026-11-23T18:02:29.904184+00:00",
+  "resource_seam": "Exact frozen membership, fixed source bytes/spans, four-field author records, rights/review gates and notices",
+  "commands": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_158.py -k test_exact_frozen_groups",
+      "status": "expected_failure",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\red-membership.log",
+      "result": "Missing resource records rejected before author content"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_158.py -k test_exact_frozen_groups",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\green-membership.log",
+      "result": "50 exact groups / 200 complete candidate fields"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_158.py -k test_author_rights",
+      "status": "expected_failure",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\red-rights.log",
+      "result": "Absent field rights record rejected"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_158.py -k test_author_rights",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\green-rights.log",
+      "result": "200 rights proposals remain independently unaccepted"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_158.py -k test_measurement",
+      "status": "expected_failure",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\red-measurement.log",
+      "result": "Missing modern measurement corroboration rejected"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_158.py -k test_measurement",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\green-measurement.log",
+      "result": "Exact g/cm, peso/péso, boeuf/bœuf, condoléances and excluded CFC boundaries"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_158.py",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\full-final.log",
+      "result": "All five resource/admission tests passed; admission loader rejects author review"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\reproduce.py",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\reproduction.log",
+      "result": "13 resource/notice/proposal files reproduced byte for byte in an isolated root"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\verify_preservation.py",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-158\\preservation.log",
+      "result": "Shared core resources byte-identical to baseline; only owned paths changed"
+    }
+  ],
+  "proposed_groups": 50,
+  "proposed_fields": 200,
+  "proposed_field_characters": 10123,
+  "longest_field_characters": 191,
+  "fixed_source_pages": 53,
+  "contributor_chains_complete": true,
+  "source_sentence_authorship_proved": false,
+  "independently_accepted_new_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "source_quality_claim": "Author inspection only; automation checks bindings and gates, not independent linguistic or rights acceptance",
+  "pending_focus": "g everyday-use eligibility; cm nominal symbol classification; exact spelling, lexical adjective, plural and original-expression decisions",
+  "unrun": [
+    "Canonical converter assembly and packaged notices",
+    "Native lookup, trusted save/reopen and upgrade preservation",
+    "Learner acceptance",
+    "Frontend lint/typecheck/build and Rust checks (no application changes)"
+  ],
+  "documentation_and_diff_check": "Recorded at the committed SHA in the external delivery-pointers.json"
+}

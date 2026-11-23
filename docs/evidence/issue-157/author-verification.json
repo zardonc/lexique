@@ -1,0 +1,104 @@
+{
+  "ticket": 157,
+  "parent": 78,
+  "recorded_at_utc": "2026-11-23T18:12:24.117918+00:00",
+  "role": "content_author",
+  "platform": "Windows x64 / PowerShell 7 / Python 3.14.10",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\author-157",
+  "branch": "codex/d2-content-157",
+  "tested_source_base": "574e4a47502b381ac9b9237e51493e36a9317d7e",
+  "tested_changes": "Scoped author evidence and resource-boundary test changes over tested_source_base.",
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157",
+  "comparison_baseline": {
+    "base_commit": "ecac9fefb21aead6f0e16b0ff60de3e20fc90b9a",
+    "content_version": "core-149-v1",
+    "selected_groups": 3431
+  },
+  "frozen_groups": 50,
+  "candidate_fields": 200,
+  "independently_accepted_new_groups": 0,
+  "independently_accepted_new_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_selected_span_rights_fields": 200,
+  "missing_authored_fields": 0,
+  "missing_admitted_fields": 200,
+  "fixed_source_articles": 51,
+  "contributor_capture_parts": 10,
+  "article_credit_names": 2972,
+  "selected_sentence_authorship_proved": false,
+  "article_daf8_import_markers": 34,
+  "field_characters": 8494,
+  "longest_field_characters": 150,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_157.py",
+      "status": "passed",
+      "exit_code": 0,
+      "tests": 5,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\resource-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 ../context/author-evidence/issue-157/reproduce.py",
+      "status": "passed",
+      "exit_code": 0,
+      "reproduced_files": 12,
+      "byte_equality": true,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\reproduction-final.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\docs-final.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\diff-final.log"
+    }
+  ],
+  "tdd_resource_checks": [
+    {
+      "boundary": "frozen membership and four candidate fields",
+      "red_exit": 1,
+      "green_exit": 0,
+      "red_log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\red-resume.log",
+      "green_log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\green-membership.log"
+    },
+    {
+      "boundary": "field rights proposal and pending admission",
+      "red_exit": 1,
+      "green_exit": 0,
+      "red_log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\red-rights.log",
+      "green_log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\logs\\resource-final.log"
+    }
+  ],
+  "preservation": "Pre-existing partial test/helpers retained in resume-originals; fixed article captures and requests retained without recapture.",
+  "review": {
+    "status": "pending",
+    "reviewer": null,
+    "independent_acceptance": false,
+    "full_diff": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\author-scoped.patch",
+    "test_diff": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\author-test.patch",
+    "diff_command": "git diff --cached -- docs/evidence/issue-157 scripts/test_core_batch_157.py"
+  },
+  "unrun_checks": [
+    {
+      "check": "Independent semantic, bilingual, construction/spelling and selected-expression rights review",
+      "reason": "Separate reviewer pending."
+    },
+    {
+      "check": "Canonical conversion, combined package obligations and native lookup/save/reopen",
+      "reason": "Integration-owned after independent admission."
+    },
+    {
+      "check": "Learner acceptance, whole-machine offline and other-platform checks",
+      "reason": "Unrun; existing release gates remain."
+    },
+    {
+      "check": "Frontend lint/typecheck/build and Rust compilation/tests",
+      "reason": "No frontend, Rust, persistence or resource-reader implementation changed in this shard."
+    }
+  ]
+}
