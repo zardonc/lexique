@@ -39,7 +39,7 @@ def read(name):
 
 
 def proposal(name):
-    original = EVIDENCE / "authored" / name
+    original = EVIDENCE / "authored/author-current" / name
     return json.loads(original.read_text(encoding="utf-8")) if original.exists() else read(name)
 
 
@@ -143,7 +143,7 @@ class Batch146AdmissionTests(unittest.TestCase):
             self.assertFalse(record["reviewed_excerpt"].lstrip().startswith("#*"))
         pos_tags = {"NOM": "nom", "VER": "verbe", "ADJ": "adjectif", "ADJ:ind": "adjectif indéfini",
                     "PRO:ind": "pronom indéfini", "PRO:dem": "pronom démonstratif", "ADV": "adverbe"}
-        for group in proposal("groups.json"):
+        for group in read("groups.json"):
             sense = group["senses"][0]
             for name, field in sense["fields"].items():
                 span = selected[sense["sense_id"], name]
@@ -239,7 +239,7 @@ class Batch146AdmissionTests(unittest.TestCase):
                          "Dictionnaire de l’Académie française, ninth edition, article A9P2969")
 
     def test_current_original_text_proposals_are_source_specific(self):
-        rights = read("rights.json")
+        rights = proposal("rights.json")
         self.assertFalse(rights["original_daf8_blanket_territorial_claim"])
         selected = [s for s in rights["sources"] if s["original_historical_dictionary_layers"]]
         self.assertEqual(len(selected), 32)
@@ -250,8 +250,95 @@ class Batch146AdmissionTests(unittest.TestCase):
             self.assertTrue(assessment["author_assessment"])
             self.assertIn("No worldwide public-domain inference", assessment["territorial_basis"])
             self.assertEqual(assessment["independent_review"], "pending")
-        self.assertEqual(read("groups.json"), proposal("groups.json"),
-                         "Source-specific rights assessment must preserve the original learner wording")
+        self.assertEqual(len(proposal("groups.json")), 50)
+
+    def test_plupart_selected_meaning_supports_people_and_things(self):
+        group = next(g for g in read("groups.json") if g["frozen_row"] == 3255)
+        for name in ("french_definition", "english", "chinese"):
+            span = group["senses"][0]["fields"][name]["source_span"]
+            self.assertEqual(span["line_1_based"], 9,
+                             "The absolute people-only line 23 does not bind the selected antecedent use")
+            self.assertEqual(span["raw_source_excerpt"],
+                             "La plus grande [[partie]], le plus grand nombre.")
+
+    def test_selected_patrol_support_excludes_historical_purpose_prose(self):
+        records = read("source-excerpts.json")["supporting_evidence"]
+        patrol = [r for r in records if r["frozen_row"] == 3292 and r["line_1_based"] == 15]
+        self.assertTrue(patrol)
+        for record in patrol:
+            self.assertNotIn("[[soit]]", record["reviewed_excerpt"],
+                             "The personnel fact does not require historical enemy/crime purpose prose")
+            self.assertTrue(record["reviewed_excerpt"].endswith("d’[[agent]]s de [[police]]"))
+
+    def test_independent_review_matches_actual_accepted_resource_shard(self):
+        groups, review, rights = read("groups.json"), read("field-review.json"), read("rights.json")
+        self.assertTrue(review["independent_acceptance"])
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertTrue(review["reviewer"])
+        self.assertEqual([g["frozen_row"] for g in groups], list(range(3251, 3301)))
+        self.assertEqual([(g["headword"],g["lexique_cgram"]) for g in groups], MEMBERSHIP)
+        self.assertEqual([(g["subtitle_lemma_per_million"],g["subtitle_pos_per_million"]) for g in groups],
+                         [(g["subtitle_lemma_per_million"],g["subtitle_pos_per_million"]) for g in proposal("groups.json")])
+        fields = {(s["sense_id"], name): f for g in groups for s in g["senses"]
+                  for name, f in s["fields"].items()}
+        proposals = {(s["sense_id"], name): f for g in proposal("groups.json")
+                     for s in g["senses"] for name, f in s["fields"].items()}
+        reviews = {(r["sense_id"], r["field"]): r for r in review["fields"]}
+        decisions = {(r["sense_id"], r["field"]): r for r in rights["fields"]}
+        self.assertEqual(set(fields), set(reviews))
+        self.assertEqual(set(fields), set(decisions))
+        self.assertEqual(len(fields), 200)
+        for key, f in fields.items():
+            r, legal = reviews[key], decisions[key]
+            self.assertEqual(f["independent_review"], "passed")
+            self.assertEqual(f["rights_eligibility_status"], "passed_at_selected_text_boundary")
+            self.assertEqual(r["accepted_text"], f["text"])
+            self.assertEqual(r["proposed_text"], proposals[key]["text"])
+            self.assertEqual(r["accepted_text_quality_status"], "passed")
+            self.assertEqual(r["rights_eligibility_status"], "passed_at_selected_text_boundary")
+            self.assertEqual(r["reviewer"], review["reviewer"])
+            group = next(g for g in groups if g["senses"][0]["sense_id"] == key[0])
+            self.assertEqual((r["frozen_row"],r["headword"],r["pos"]),
+                             (group["frozen_row"],group["headword"],group["lexique_cgram"]))
+            self.assertTrue(r["quality_reason"])
+            self.assertTrue(r["rights_reason"])
+            self.assertEqual(r["exact_source"]["source_id"], f["source_id"])
+            self.assertEqual(r["exact_source"]["reviewed_excerpt"], f["source_span"]["raw_source_excerpt"])
+            self.assertEqual(legal["exact_source_span"], f["source_span"])
+            self.assertEqual(legal["independent_review"], "passed_at_selected_text_boundary")
+            self.assertEqual(legal["reviewer"], review["reviewer"])
+        self.assertEqual(len(review["usage"]), 50)
+        for use in review["usage"]:
+            self.assertEqual(use["accepted_usage_quality_status"], "passed")
+            self.assertEqual(use["everyday_sense_status"], "passed")
+            self.assertTrue(use["quality_reason"])
+            sense = next(g["senses"][0] for g in groups if g["frozen_row"] == use["frozen_row"])
+            self.assertEqual(sense["use"], use["accepted_usage"])
+            self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
+        self.assertEqual(len(review["spelling_relations"]), 50)
+        for relation in review["spelling_relations"]:
+            self.assertEqual(relation["independent_review"], "passed")
+            self.assertEqual(relation["alias_admission"], "not_admitted")
+            self.assertTrue(relation["review_reason"])
+        source_records = {r["id"]: r for r in read("sources.json")["sources"]}
+        context_records = {r["id"]: r for r in read("source-context.json")["current_content"]}
+        for legal in rights["sources"]:
+            source = source_records[legal["source_id"]]
+            verdict = legal["independent_selected_original_text_assessment"]
+            self.assertEqual(verdict["source_revision"], source["revid"])
+            self.assertEqual(verdict["independent_review"], "passed_at_selected_text_boundary")
+            self.assertTrue(verdict["selected_span_assessment"])
+            self.assertEqual(legal["selected_locations"], source["selected_locations"])
+            self.assertEqual(legal["selected_locations"], context_records[source["id"]]["selected_locations"])
+        self.assertEqual(len(source_records), 54)
+        self.assertFalse(rights["original_daf8_blanket_territorial_claim"])
+        admission = read("admission.json")
+        self.assertEqual(admission["independently_accepted_new_fields"], 200)
+        self.assertEqual(admission["independently_accepted_new_groups"], 50)
+        self.assertEqual(admission["unresolved_field_blockers"], [])
+        self.assertEqual(admission["annotation_exception_groups"], 0)
+        self.assertEqual(admission["specialist_exception_groups"], 0)
+        self.assertEqual(admission["newly_admitted_fields"], 0)
 
 
 if __name__ == "__main__":
