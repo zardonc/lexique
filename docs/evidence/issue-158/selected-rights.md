@@ -1,11 +1,14 @@
 # Selected rights for #158
 
-All 200 selected field proposals have independent rights decisions in
+All 196 selected content fields have independent rights decisions in
 [rights.json](rights.json), with actual fixed source/version/span, article
 attribution, complete contributor/history records, modification notices and
 per-field reasons. The 53 fixed source captures and full contributor continuation
 chains were independently checked against raw/API bytes. This rights decision
-is distinct from quality acceptance: four `cm/NOM` fields remain unresolved.
+is distinct from quality acceptance: four `cm/NOM` fields remain unresolved
+under the [owner-approved zero-field annotation](owner-approval.json).
+The [rejected proposal](rejected-cm-proposal.json) retains the four cm rights
+reviews and exact expressions separately; all 200 original proposals were reviewed.
 
 Fixed Wiktionnaire contributions and Lexique French adaptations/new English and
 Chinese explanations retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).

@@ -1,0 +1,24 @@
+{
+  "status": "approved_by_project_owner",
+  "approval_date": "2026-11-23",
+  "timezone": "America/Vancouver",
+  "exact_reply": "Annotate ya and cm with zero fields",
+  "issue": 158,
+  "parent_issue": 78,
+  "frozen_row": 3885,
+  "headword": "cm",
+  "lexique_cgram": "NOM",
+  "subtitle_lemma_per_million": "10.89",
+  "subtitle_pos_per_million": "10.89",
+  "admitted_fields": 0,
+  "missing_fields": [
+    "french_definition",
+    "ipa",
+    "english_meaning",
+    "chinese_meaning"
+  ],
+  "annotation_exception_decision": "The project owner approved frozen row 3885 cm/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, with the exact reply \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This issue-158 implementation applies only to row 3885; row 3783 ya/NOM belongs to issue 156. Decision record: context/approved-scope-decisions.md.",
+  "decision_record": "context/approved-scope-decisions.md",
+  "proposal": "docs/evidence/issue-158/scope-gap.json",
+  "review": "review-158/docs/evidence/issue-158/README-independent-review.md"
+}

@@ -3031,88 +3031,32 @@
     "lexique_cgram": "NOM",
     "subtitle_lemma_per_million": "10.89",
     "subtitle_pos_per_million": "10.89",
-    "senses": [
-      {
-        "sense_id": "b158-3885-cm-nom-selected",
-        "source_headword": "centimètre",
-        "use": "Frozen NOM group bound to the nominal centimetre reading of the measurement symbol cm; source symbol classification is retained for independent review.",
-        "use_language": "en",
-        "excluded_uses": "Roman numeral 900, a tape measure, squared/cubed units, and treating the symbol as an independently attested lexical noun.",
-        "independent_review": "unresolved_exact_NOM_binding",
-        "resource_admission": "blocked_exact_NOM_binding",
-        "cefr": null,
-        "fields": {
-          "french_definition": {
-            "language": "fr",
-            "text": "Unité de longueur appelée centimètre, valant un centième de mètre ; écrite cm dans les mesures et lue centimètre. Le symbole cm reste invariable et ne prend pas de point.",
-            "source_id": "b158_fr_2093",
-            "source_span": {
-              "line_1_based": 10,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_exact_NOM_binding",
-            "rights_eligibility_status": "passed_at_selected_text_boundary",
-            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-            "resource_admission": "blocked_exact_NOM_binding"
-          },
-          "ipa": {
-            "language": "und",
-            "text": "/sɑ̃.ti.mɛtʁ/",
-            "source_id": "b158_fr_241139",
-            "source_span": {
-              "line_1_based": 22,
-              "column_1_based": 1,
-              "raw_source_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_exact_NOM_binding",
-            "rights_eligibility_status": "passed_at_selected_text_boundary",
-            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-            "resource_admission": "blocked_exact_NOM_binding"
-          },
-          "english": {
-            "language": "en",
-            "text": "Centimetre, one hundredth of a metre; written cm in measurements and read centimètre in French. The symbol cm is invariable and has no full stop.",
-            "source_id": "b158_fr_2093",
-            "source_span": {
-              "line_1_based": 10,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_exact_NOM_binding",
-            "rights_eligibility_status": "passed_at_selected_text_boundary",
-            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-            "resource_admission": "blocked_exact_NOM_binding"
-          },
-          "chinese": {
-            "language": "zh",
-            "text": "厘米，等于百分之一米；计量时写作 cm，法语读作 centimètre。符号 cm 不变形，末尾不加缩写点。",
-            "source_id": "b158_fr_2093",
-            "source_span": {
-              "line_1_based": 10,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_exact_NOM_binding",
-            "rights_eligibility_status": "passed_at_selected_text_boundary",
-            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-            "resource_admission": "blocked_exact_NOM_binding"
-          }
-        }
-      }
-    ]
+    "senses": [],
+    "status": "approved_annotation_exception",
+    "annotation_kind": "owner_approved_zero_field",
+    "admitted_fields": 0,
+    "missing_fields": 4,
+    "owner_approval": {
+      "issue": "https://github.com/zardonc/lexique/issues/158",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-23",
+      "timezone": "America/Vancouver",
+      "decision": "The project owner approved frozen row 3885 cm/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, with the exact reply \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This issue-158 implementation applies only to row 3885; row 3783 ya/NOM belongs to issue 156. Decision record: context/approved-scope-decisions.md.",
+      "exact_reply": "Annotate ya and cm with zero fields",
+      "evidence": "docs/evidence/issue-158/owner-approval.json"
+    },
+    "annotation_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/158",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-23",
+      "timezone": "America/Vancouver",
+      "decision": "The project owner approved frozen row 3885 cm/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, with the exact reply \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This issue-158 implementation applies only to row 3885; row 3783 ya/NOM belongs to issue 156. Decision record: context/approved-scope-decisions.md.",
+      "exact_reply": "Annotate ya and cm with zero fields",
+      "evidence": "docs/evidence/issue-158/owner-approval.json"
+    },
+    "alias_admission": "not_admitted",
+    "unresolved_reason": "Fixed cm classifies the measurement form as a symbol; centimètre supplies the noun meaning and cm its recorded pronunciation. OQLF independently labels centimètre n. m. and describes cm symbol orthography. Exact cm/NOM lexical binding remains unestablished. The owner resolved scope with this exact zero-field annotation; no proposed sense or specialist content is admitted.",
+    "rejected_proposal": "docs/evidence/issue-158/rejected-cm-proposal.json"
   },
   {
     "frozen_row": 3886,
