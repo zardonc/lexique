@@ -678,7 +678,15 @@ async function replacement() {
   }
   assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, record.digest);
   const preserved = readState(destination);
-  compareLearning(preserved, previous);
+  const expected = scenario === 'upgrade' ? {
+    ...previous,
+    preferences: [...previous.preferences.filter((item) => item.key !== 'interface-preferences'), {
+      key: 'interface-preferences',
+      value: { locale: 'en', theme: previous.preferences.find((item) => item.key === 'interface-preferences')?.value.theme ?? 'white' },
+    }].sort((left, right) => left.key.localeCompare(right.key)),
+  } : previous;
+  if (scenario === 'upgrade') evidence.fixtureInterfacePreferences = expected.preferences.find((item) => item.key === 'interface-preferences');
+  compareLearning(preserved, expected);
   preservedAudio(preserved, previous);
   if (scenario === 'upgrade') assert.ok((await invoke('speech_cached', { vocabularyId: record.id })).bytes.length > 0);
   const committed = previous.saves.find((operation) => operation.record_id === record.id && operation.outcome === 'created');

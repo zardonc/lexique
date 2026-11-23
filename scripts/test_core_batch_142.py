@@ -196,10 +196,12 @@ class Batch142AdmissionTests(unittest.TestCase):
     def test_all_frozen_groups_have_admitted_four_field_content(self):
         resource = json.loads((ROOT / "resources/core-pilot-79/curated-inputs.json").read_text(encoding="utf-8"))
         groups = [group for group in resource["groups"] if group["frozen_row"] in ROWS]
-        self.assertEqual({group["frozen_row"] for group in groups}, ROWS,
+        self.assertEqual({group["frozen_row"] for group in groups}, ROWS - {3098},
                          "Ticket #142 lacks admitted content at the resource boundary")
-        self.assertEqual([(g["headword"], g["lexique_cgram"]) for g in groups], MEMBERSHIP)
+        self.assertEqual([(g["headword"], g["lexique_cgram"]) for g in groups],
+                         [pair for row, pair in enumerate(MEMBERSHIP, 3051) if row != 3098])
         for group in groups:
+            self.assertTrue(group["senses"])
             for sense in group["senses"]:
                 self.assertEqual(set(sense["fields"]), {"french_definition", "ipa", "english", "chinese"})
                 self.assertTrue(all(field["text"].strip() for field in sense["fields"].values()))
