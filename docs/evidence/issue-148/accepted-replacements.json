@@ -1,0 +1,68 @@
+{
+  "ticket": 148,
+  "author_commit": "088cb317482b218b9827913bdc82382daed9a7b3",
+  "review_base": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "reviewer": "Independent field/use/selected-rights reviewer #148 (codex/d2-review-148); separate from content author and coordinator",
+  "replacements": [
+    {
+      "sense_id": "b148-3356-tonton-nom-selected",
+      "frozen_row": 3356,
+      "headword": "tonton",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "proposed_text": "叔叔、伯伯、舅舅等男性长辈亲属的儿童亲昵称呼（阳性名词）。",
+      "accepted_text": "叔叔、伯伯、舅舅、姑父或姨父的儿童亲昵称呼（阳性名词）。",
+      "exact_source": {
+        "source_id": "b148_fr_39110",
+        "revid": 38674954,
+        "url": "https://fr.wiktionary.org/w/index.php?title=tonton&oldid=38674954",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=tonton&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{enfantin|fr}} [[oncle|Oncle]]."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b148_fr_39110",
+          "revid": 38674954,
+          "url": "https://fr.wiktionary.org/w/index.php?title=tonton&oldid=38674954",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=tonton&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b148_fr_39110",
+          "revid": 38674954,
+          "url": "https://fr.wiktionary.org/w/index.php?title=tonton&oldid=38674954",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=tonton&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b148_fr_39110",
+          "revid": 38674954,
+          "url": "https://fr.wiktionary.org/w/index.php?title=tonton&oldid=38674954",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=tonton&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|tɔ̃.tɔ̃}}"
+        },
+        {
+          "source_id": "b148_fr_39110",
+          "revid": 38674954,
+          "url": "https://fr.wiktionary.org/w/index.php?title=tonton&oldid=38674954",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=tonton&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''tonton''' {{pron|tɔ̃.tɔ̃|fr}} {{m}}"
+        }
+      ],
+      "review_reason": "The accepted Chinese names uncle relationships, including uncles by marriage; it does not generalize to fathers or grandfathers.",
+      "selected_text_rights_reason": "New Lexique explanatory translation of this selected meaning; no upstream bilingual or adjacent quoted expression is copied. tonton, fixed French revision 38674954: selected field lines [9, 10]; selected grammar/construction lines [3, 7, 8, 9]. No text-import declaration is present at this selected boundary. Bibliographic/etymological reference lines [5, 73] do not establish imported original expression or license the referenced prose. The selected lexical/phonetic/grammatical expressions were inspected separately from literary/news quotations, media, etymology and other-language sections; none of those unselected expressions is adapted. Article/full-history URLs, complete named registry and anonymous-history credit are retained. Scoped FR adaptations and new Lexique EN/ZH explanatory translations retain CC BY-SA 4.0, modification notice and ShareAlike; code MIT is separate. The combined canonical package remains coordinator-owned.",
+      "reviewer": "Independent field/use/selected-rights reviewer #148 (codex/d2-review-148); separate from content author and coordinator"
+    }
+  ]
+}

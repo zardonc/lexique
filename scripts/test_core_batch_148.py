@@ -29,6 +29,11 @@ def read(name):
 
 
 class Batch148Tests(unittest.TestCase):
+    def test_tonton_chinese_retains_uncle_relationship(self):
+        group = next(g for g in read('groups.json') if g['frozen_row'] == 3356)
+        self.assertEqual(group['senses'][0]['fields']['chinese']['text'],
+                         '叔叔、伯伯、舅舅、姑父或姨父的儿童亲昵称呼（阳性名词）。')
+
     def test_exact_frozen_groups_have_complete_resource_records(self):
         if (EVIDENCE / 'groups.json').exists():
             groups = read('groups.json')
@@ -56,8 +61,9 @@ class Batch148Tests(unittest.TestCase):
                     self.assertTrue(field['text'].strip())
                     self.assertTrue(field['modification'].strip())
 
-    def test_author_rights_preserve_pending_admission(self):
-        rights, admission, review = read('rights.json'), read('admission.json'), read('field-review.json')
+    def test_authored_snapshot_preserves_pending_proposals(self):
+        rights, admission, review = (read('authored/' + name) for name in
+                                    ('rights.json', 'admission.json', 'field-review.json'))
         self.assertEqual((admission['proposed_groups'], admission['proposed_fields']), (50, 200))
         self.assertEqual(admission['scope_denominator_groups'], 4087)
         self.assertEqual(admission['missing_admitted_fields'], 200)
@@ -66,7 +72,7 @@ class Batch148Tests(unittest.TestCase):
         self.assertFalse(review['independent_acceptance'])
         self.assertIsNone(review['reviewer'])
         self.assertEqual((len(review['fields']), len(review['usage'])), (200, 50))
-        expected = {(g['senses'][0]['sense_id'], name): field for g in read('groups.json')
+        expected = {(g['senses'][0]['sense_id'], name): field for g in read('authored/groups.json')
                     for name, field in g['senses'][0]['fields'].items()}
         self.assertEqual({(f['sense_id'], f['field']) for f in rights['fields']}, set(expected))
         for field in rights['fields']:
@@ -77,6 +83,80 @@ class Batch148Tests(unittest.TestCase):
             self.assertIsNone(field['reviewer'])
             self.assertTrue(field['attribution'])
             self.assertTrue(field['modification'])
+
+    def test_reviewed_shard_has_exact_field_use_source_rights_alignment(self):
+        groups, review, rights = read('groups.json'), read('field-review.json'), read('rights.json')
+        admission = read('admission.json')
+        self.assertEqual(review['kind'], 'separate_independent_field_review')
+        self.assertTrue(review['independence'])
+        self.assertTrue(review['independent_acceptance'])
+        self.assertTrue(review['reviewer'])
+        self.assertEqual((admission['independently_accepted_new_groups'],
+                          admission['independently_accepted_new_fields']), (50, 200))
+        self.assertEqual(admission['newly_admitted_fields'], 0)
+        self.assertEqual(admission['missing_admitted_fields'], 200)
+        self.assertEqual(admission['pending_independent_review_fields'], 0)
+        self.assertEqual(admission['pending_independent_rights_fields'], 0)
+        self.assertEqual(admission['unresolved_field_blockers'], [])
+        self.assertEqual((rights['independent_rights_fields_accepted'], len(review['fields']),
+                          len(review['usage'])), (200, 200, 50))
+        authored = {(g['senses'][0]['sense_id'], name): f for g in read('authored/groups.json')
+                    for name, f in g['senses'][0]['fields'].items()}
+        fields = {(f['sense_id'], f['field']): f for f in review['fields']}
+        legal = {(f['sense_id'], f['field']): f for f in rights['fields']}
+        self.assertEqual(len(fields), 200)
+        self.assertEqual(set(fields), set(authored))
+        self.assertEqual(set(legal), set(fields))
+        usage = {u['sense_id']: u for u in review['usage']}
+        self.assertEqual(len(usage), 50)
+        sources = {s['id']: s for s in read('sources.json')['sources']}
+        changed = []
+        for group in groups:
+            self.assertEqual(len(group['senses']), 1)
+            sense = group['senses'][0]
+            u = usage[sense['sense_id']]
+            self.assertEqual(sense['independent_review'], 'passed_after_exact_accepted_replacements')
+            self.assertEqual((sense['use'], sense['use_language'], sense['source_headword']),
+                             (u['accepted_usage'], u['language'], u['source_headword']))
+            self.assertEqual(u['accepted_usage_quality_status'], 'passed')
+            self.assertEqual(u['everyday_sense_status'], 'passed')
+            self.assertEqual(u['reviewer'], review['reviewer'])
+            self.assertTrue(u['review_reason'])
+            self.assertTrue(u['everyday_sense_reason'])
+            for name, f in sense['fields'].items():
+                key = sense['sense_id'], name
+                r, l = fields[key], legal[key]
+                self.assertEqual(r['proposed_text'], authored[key]['text'])
+                self.assertEqual(r['accepted_text'], f['text'])
+                self.assertEqual(l['accepted_text'], f['text'])
+                self.assertEqual(f['source_span'], l['exact_source_span'])
+                self.assertEqual((f['source_id'], r['exact_source']['source_id'], l['source_id']),
+                                 (f['source_id'], f['source_id'], f['source_id']))
+                self.assertEqual(r['exact_source']['revid'], sources[f['source_id']]['revid'])
+                self.assertEqual(f['independent_review'], 'passed')
+                self.assertEqual(r['accepted_text_quality_status'], 'passed')
+                self.assertEqual(r['rights_eligibility_status'], 'passed_at_selected_text_boundary')
+                self.assertEqual(l['independent_review'], 'passed_at_selected_text_boundary')
+                self.assertEqual(r['reviewer'], review['reviewer'])
+                self.assertEqual(l['reviewer'], review['reviewer'])
+                self.assertTrue(r['review_reason'])
+                self.assertTrue(r['selected_text_rights_reason'])
+                self.assertEqual(l['review_reason'], r['selected_text_rights_reason'])
+                self.assertEqual(sources[f['source_id']]['selected_text_review'], 'passed_for_selected_spans')
+                if f['text'] != authored[key]['text']:
+                    changed.append((group['frozen_row'], name))
+        self.assertEqual(changed, [(3356, 'chinese')])
+        replacements = read('accepted-replacements.json')['replacements']
+        self.assertEqual(len(replacements), 1)
+        replacement = replacements[0]
+        self.assertEqual((replacement['frozen_row'], replacement['field']), (3356, 'chinese'))
+        key = replacement['sense_id'], replacement['field']
+        self.assertEqual((replacement['proposed_text'], replacement['accepted_text']),
+                         (fields[key]['proposed_text'], fields[key]['accepted_text']))
+        self.assertEqual(replacement['exact_source'], fields[key]['exact_source'])
+        for relation in review['spelling_relations']:
+            self.assertEqual(relation['alias_admission'], 'not_admitted')
+            self.assertTrue(relation['review_reason'])
 
     def test_fixed_source_bytes_spans_and_complete_contributor_chains(self):
         captures = read('source-captures.json')
