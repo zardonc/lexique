@@ -5,8 +5,10 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
+from unittest.mock import patch
 from urllib.parse import parse_qs, urlparse
 
+import core_pilot
 from core_batch_test_helpers import verify_archived_source_captures
 from core_pilot import load_inputs, MATERIALS
 
@@ -45,7 +47,7 @@ class Batch152Tests(unittest.TestCase):
             staged = Path(folder)
             for name in (*MATERIALS, "input-checksums.json"):
                 shutil.copy2(ROOT / "resources/core-pilot-79" / name, staged / name)
-            shutil.copy2(EVIDENCE / "field-review.json", staged / "field-review.json")
+            shutil.copy2(EVIDENCE / "authored/field-review.json", staged / "field-review.json")
             with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
                 load_inputs(staged)
 
@@ -137,7 +139,8 @@ class Batch152Tests(unittest.TestCase):
         self.assertIn("familière", homo["fields"]["french_definition"]["text"])
 
     def test_author_rights_proposals_keep_every_field_pending_independent_review(self):
-        rights, admission, review = read("rights.json"), read("admission.json"), read("field-review.json")
+        rights, admission, review = (read("authored/" + name) for name in
+                                    ("rights.json", "admission.json", "field-review.json"))
         self.assertEqual(rights["independent_review"], "pending")
         self.assertIsNone(rights["reviewer"])
         self.assertEqual(rights["independent_rights_fields_accepted"], 0)
@@ -149,7 +152,7 @@ class Batch152Tests(unittest.TestCase):
         self.assertFalse(review["independent_acceptance"])
         self.assertIsNone(review["reviewer"])
         expected = {(g["senses"][0]["sense_id"], name): field
-                    for g in read("groups.json")
+                    for g in read("authored/groups.json")
                     for name, field in g["senses"][0]["fields"].items()}
         self.assertEqual({(r["sense_id"], r["field"]) for r in rights["fields"]}, set(expected))
         for record in rights["fields"]:
@@ -182,7 +185,97 @@ class Batch152Tests(unittest.TestCase):
                 for field in sense["fields"].values():
                     self.assertTrue(field["text"].strip())
                     self.assertTrue(field["source_id"])
-                    self.assertEqual(field["independent_review"], "pending")
+                    self.assertEqual(field["independent_review"], "passed")
+
+    def test_modern_death_and_coma_retain_the_correct_defining_features(self):
+        groups = {g["frozen_row"]: g for g in read("groups.json")}
+        expected = {
+            3556: {"french_definition": "Mort d’une personne ; nom masculin.",
+                   "english": "A person’s death; masculine noun.",
+                   "chinese": "一个人的死亡；阳性名词。"},
+            3589: {"french_definition": "État de profonde inconscience, avec perte de la sensibilité et des mouvements volontaires ; nom masculin.",
+                   "english": "Coma: a state of deep unconsciousness with loss of sensation and voluntary movement; masculine noun.",
+                   "chinese": "昏迷：深度失去意识，并丧失感觉和自主运动的状态；阳性名词。"},
+        }
+        for row, texts in expected.items():
+            for name, text in texts.items():
+                with self.subTest(row=row, field=name):
+                    self.assertEqual(groups[row]["senses"][0]["fields"][name]["text"], text)
+        replacements = read("accepted-replacements.json")["fields"]
+        self.assertEqual({(r["frozen_row"], r["field"]) for r in replacements},
+                         {(row, name) for row, texts in expected.items() for name in texts})
+
+    def test_selected_littre_original_is_distinct_from_the_wiki_licence(self):
+        source = next(s for s in read("rights.json")["sources"] if s["title"] == "décès")
+        layer = next(l for l in source["original_historical_dictionary_layers"]
+                     if l["original_authors"] == "Émile Littré")
+        self.assertEqual(layer["conservative_expiry"], "1952-01-01")
+        self.assertIn("Mort naturelle d'une personne", layer["original_expression_evidence"]["original_expression"])
+        self.assertEqual(source["contribution_and_adaptation_license"], "CC-BY-SA-4.0")
+
+    def test_each_accepted_field_use_and_rights_record_agrees_with_the_shard(self):
+        review = read("field-review.json")
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertTrue(review["independent_acceptance"])
+        self.assertEqual(review["unresolved_fields"], [])
+        fields = {(r["sense_id"], r["field"]): r for r in review["fields"]}
+        rights = {(r["sense_id"], r["field"]): r for r in read("rights.json")["fields"]}
+        usages = {r["sense_id"]: r for r in review["usage"]}
+        self.assertEqual((len(fields), len(rights), len(usages)), (200, 200, 50))
+        for group in read("groups.json"):
+            sense = group["senses"][0]
+            usage = usages[sense["sense_id"]]
+            self.assertEqual(usage["accepted_usage"], sense["use"])
+            self.assertEqual(usage["accepted_usage_quality_status"], "passed")
+            self.assertTrue(usage["review_reason"])
+            for name, field in sense["fields"].items():
+                r, legal = fields[sense["sense_id"], name], rights[sense["sense_id"], name]
+                self.assertEqual(r["accepted_text"], field["text"])
+                self.assertEqual(legal["accepted_text"], field["text"])
+                self.assertEqual(r["accepted_source"]["reviewed_excerpt"],
+                                 field["source_span"]["raw_source_excerpt"])
+                self.assertEqual(legal["exact_source_span"], field["source_span"])
+                self.assertEqual(legal["modification"], field["modification"])
+                self.assertEqual(r["accepted_text_quality_status"], "passed")
+                self.assertEqual(r["rights_eligibility_status"], "passed_at_selected_text_boundary")
+                self.assertEqual(legal["independent_review"], "passed")
+                self.assertEqual(r["reviewer"], review["reviewer"])
+                self.assertTrue(r["review_reason"])
+                self.assertTrue(r["rights_review_reason"])
+        admission = read("admission.json")
+        self.assertEqual(admission["independently_accepted_new_fields"], 200)
+        self.assertEqual(admission["newly_admitted_fields"], 0)
+        self.assertEqual(admission["pending_independent_rights_fields"], 0)
+
+    def test_reviewed_shard_passes_the_existing_resource_admission_seam(self):
+        temporary_root = ROOT / "target/issue-152-review"
+        temporary_root.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="resource-152-", dir=temporary_root) as folder:
+            staged = Path(folder)
+            for name in (*MATERIALS, "input-checksums.json"):
+                shutil.copy2(ROOT / "resources/core-pilot-79" / name, staged / name)
+            curated = json.loads((staged / "curated-inputs.json").read_text(encoding="utf-8"))
+            reviewed = json.loads((staged / "field-review.json").read_text(encoding="utf-8"))
+            curated["groups"] = read("groups.json")
+            curated["sources"] = read("sources.json")["sources"]
+            shard = read("field-review.json")
+            reviewed["fields"], reviewed["usage"] = shard["fields"], shard["usage"]
+            # Retain the canonical annotation/alias evidence; evaluate only this shard's rows.
+            for name, value in (("curated-inputs.json", curated), ("field-review.json", reviewed)):
+                (staged / name).write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
+            (staged / "input-checksums.json").write_text(
+                json.dumps({name: core_pilot.digest(staged / name) for name in MATERIALS}),
+                encoding="utf-8")
+            with patch.object(core_pilot, "ROWS", list(range(3551, 3601))):
+                result = load_inputs(staged)
+            selected = result[2]
+            self.assertEqual([r[0] for r in selected], list(range(3551, 3601)))
+            for group, (_, _, headword, payload) in zip(curated["groups"], selected, strict=True):
+                self.assertEqual(headword, group["headword"])
+                for name, field in group["senses"][0]["fields"].items():
+                    target = core_pilot.FIELDS[name]
+                    self.assertEqual(payload[target], field["text"])
+                    self.assertEqual(payload["field_sources"][target]["modification"], field["modification"])
 
 
 if __name__ == "__main__":
