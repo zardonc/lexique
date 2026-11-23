@@ -1,0 +1,3345 @@
+{
+  "reviewer": "independent-content-reviewer-157 / codex/d2-review-157",
+  "author_commit": "2b465335c0d26fa323439c7763a50ca4bbb7eacd",
+  "final_author_commit": "70b0b05436f47991c31a565bb4c7ca0be4d61d0e",
+  "review_base": "79e6b44f5a1f0a44b9074806046cc9505611f9b5",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157",
+  "original_work_basis": "Established DAF8 institutional collective edition 1932–1935; CPI L123-3 conservative original French expiry 2006-01-01.",
+  "sources": [
+    {
+      "source_id": "b157_fr_1768",
+      "title": "cinquième",
+      "fixed_revision": 39956942,
+      "selected_locations": [
+        {
+          "frozen_row": 3809,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui vient après le [[quatrième]]."
+          }
+        },
+        {
+          "frozen_row": 3809,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''cinquième''' {{pron|sɛ̃.kjɛm|fr}} {{mf}}"
+          }
+        },
+        {
+          "frozen_row": 3809,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui vient après le [[quatrième]]."
+          }
+        },
+        {
+          "frozen_row": 3809,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui vient après le [[quatrième]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "cinquième",
+        "url": "https://www.cnrtl.fr/definition/academie8/cinqui%C3%A8me/adjectif",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-cinquième.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-cinquième.txt",
+        "original_expression": "Qui suit le quatrième.",
+        "plain_text_column_1_based": 586,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "cinquième",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/cinqui%C3%A8me",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-cinquième.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-cinquième.txt"
+        },
+        {
+          "title": "cinquième",
+          "edition": "daf8-pos",
+          "url": "https://www.cnrtl.fr/definition/academie8/cinqui%C3%A8me/adjectif",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-cinquième.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-cinquième.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "cinquième, French revision 39956942, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Qui suit le quatrième. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_66290",
+      "title": "slip",
+      "fixed_revision": 39773568,
+      "selected_locations": [
+        {
+          "frozen_row": 3805,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 14,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{France|fr}} {{vêtements|fr}} {{anglicisme|fr}} [[sous-vêtement|Sous-vêtement]] qui couvre le [[bas]] du [[ventre]], les [[parties génitales]] et les [[fesse]]s."
+          }
+        },
+        {
+          "frozen_row": 3805,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 13,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''slip''' {{pron|slip|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3805,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 14,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{France|fr}} {{vêtements|fr}} {{anglicisme|fr}} [[sous-vêtement|Sous-vêtement]] qui couvre le [[bas]] du [[ventre]], les [[parties génitales]] et les [[fesse]]s."
+          }
+        },
+        {
+          "frozen_row": 3805,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 14,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{France|fr}} {{vêtements|fr}} {{anglicisme|fr}} [[sous-vêtement|Sous-vêtement]] qui couvre le [[bas]] du [[ventre]], les [[parties génitales]] et les [[fesse]]s."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "slip",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/slip",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-slip.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-slip.txt"
+        },
+        {
+          "title": "slip",
+          "edition": "tlfi",
+          "url": "https://www.cnrtl.fr/definition/slip",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-slip.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-slip.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "slip, French revision 39773568, accepted field lines [13, 14]. DAF8 reports no content. The retained TLFi briefs definition uses a different petite culotte/caleçon description; accepted text supplies ordinary garment/body-area facts and does not copy that modern expressive description. Its borrowing is bound to the French head, not English or Czech sections. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_115971",
+      "title": "tennis",
+      "fixed_revision": 39034197,
+      "selected_locations": [
+        {
+          "frozen_row": 3801,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{sports|fr|de raquette}} [[sorte|Sorte]] de jeu de [[balle]] qui se joue avec des [[raquette]]s sur un [[terrain]] [[divisé]] en deux par un [[filet]]."
+          }
+        },
+        {
+          "frozen_row": 3801,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''tennis''' {{pron|tɛ.nis|fr}} {{m}} {{sp}}"
+          }
+        },
+        {
+          "frozen_row": 3801,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{sports|fr|de raquette}} [[sorte|Sorte]] de jeu de [[balle]] qui se joue avec des [[raquette]]s sur un [[terrain]] [[divisé]] en deux par un [[filet]]."
+          }
+        },
+        {
+          "frozen_row": 3801,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{sports|fr|de raquette}} [[sorte|Sorte]] de jeu de [[balle]] qui se joue avec des [[raquette]]s sur un [[terrain]] [[divisé]] en deux par un [[filet]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "tennis",
+        "url": "https://www.cnrtl.fr/definition/academie8/tennis",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-tennis.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-tennis.txt",
+        "original_expression": "Sorte de jeu de balle qui se joue avec des raquettes sur un terrain divisé en deux par un filet.",
+        "plain_text_column_1_based": 476,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "tennis",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/tennis",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-tennis.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-tennis.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "tennis, French revision 39034197, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Sorte de jeu de balle qui se joue avec des raquettes sur un terrain divisé en deux par un filet. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_118509",
+      "title": "obligation",
+      "fixed_revision": 39773695,
+      "selected_locations": [
+        {
+          "frozen_row": 3806,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[lien|Lien]] [[moral]] qui [[imposer|impose]] quelque [[devoir]] [[concernant]] la [[religion]], la [[morale]] ou la vie [[civil]]e."
+          }
+        },
+        {
+          "frozen_row": 3806,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''obligation''' {{pron|ɔ.bli.ɡa.sjɔ̃|fr}} {{f}}"
+          }
+        },
+        {
+          "frozen_row": 3806,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[lien|Lien]] [[moral]] qui [[imposer|impose]] quelque [[devoir]] [[concernant]] la [[religion]], la [[morale]] ou la vie [[civil]]e."
+          }
+        },
+        {
+          "frozen_row": 3806,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[lien|Lien]] [[moral]] qui [[imposer|impose]] quelque [[devoir]] [[concernant]] la [[religion]], la [[morale]] ou la vie [[civil]]e."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "obligation",
+        "url": "https://www.cnrtl.fr/definition/academie8/obligation",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-obligation.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-obligation.txt",
+        "original_expression": "Lien moral qui impose quelque devoir concernant la religion, la morale ou la vie civile.",
+        "plain_text_column_1_based": 528,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "obligation",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/obligation",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-obligation.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-obligation.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "obligation, French revision 39773695, accepted field lines [7, 8]. The retained original DAF8 expression independently corresponds to this selected use: Lien moral qui impose quelque devoir concernant la religion, la morale ou la vie civile. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_154402",
+      "title": "clocher",
+      "fixed_revision": 40005848,
+      "selected_locations": [
+        {
+          "frozen_row": 3810,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 144,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{familier|fr}} Ne pas [[aller bien]], avoir un [[défaut]], en parlant de quelque chose."
+          }
+        },
+        {
+          "frozen_row": 3810,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 132,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''clocher''' {{pron|klɔ.ʃe|fr}} {{i|fr}} {{conj|grp=1|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3810,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 144,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{familier|fr}} Ne pas [[aller bien]], avoir un [[défaut]], en parlant de quelque chose."
+          }
+        },
+        {
+          "frozen_row": 3810,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 144,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{familier|fr}} Ne pas [[aller bien]], avoir un [[défaut]], en parlant de quelque chose."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "clocher",
+        "url": "https://www.cnrtl.fr/definition/academie8/clocher",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-clocher.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-clocher.txt",
+        "original_expression": "Il y a quelque chose de défectueux.",
+        "plain_text_column_1_based": 911,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "clocher",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/clocher",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-clocher.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-clocher.txt"
+        },
+        {
+          "title": "clocher",
+          "edition": "tlfi",
+          "url": "https://www.cnrtl.fr/definition/clocher",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-clocher.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-clocher.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "clocher, French revision 40005848, accepted field lines [132, 144]. The retained original DAF8 expression independently corresponds to this selected use: Il y a quelque chose de défectueux. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_160555",
+      "title": "exclure",
+      "fixed_revision": 39715483,
+      "selected_locations": [
+        {
+          "frozen_row": 3807,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{plus courant}} [[repousser|Repousser]], [[écarter]], ne pas [[admettre]], [[parler|en parlant]] des [[chose]]s [[comme]] des [[personne]]s."
+          }
+        },
+        {
+          "frozen_row": 3807,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''exclure''' {{pron|ɛk.sklyʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}}"
+          }
+        },
+        {
+          "frozen_row": 3807,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{plus courant}} [[repousser|Repousser]], [[écarter]], ne pas [[admettre]], [[parler|en parlant]] des [[chose]]s [[comme]] des [[personne]]s."
+          }
+        },
+        {
+          "frozen_row": 3807,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{plus courant}} [[repousser|Repousser]], [[écarter]], ne pas [[admettre]], [[parler|en parlant]] des [[chose]]s [[comme]] des [[personne]]s."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "exclure",
+        "url": "https://www.cnrtl.fr/definition/academie8/exclure",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-exclure.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-exclure.txt",
+        "original_expression": "Repousser, écarter, ne point admettre; et alors il peut s'appliquer aux Choses comme aux personnes.",
+        "plain_text_column_1_based": 843,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "exclure",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/exclure",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-exclure.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-exclure.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "exclure, French revision 39715483, accepted field lines [6, 11]. The retained original DAF8 expression independently corresponds to this selected use: Repousser, écarter, ne point admettre; et alors il peut s'appliquer aux Choses comme aux personnes. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_162513",
+      "title": "gentiment",
+      "fixed_revision": 36443209,
+      "selected_locations": [
+        {
+          "frozen_row": 3808,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# D’une [[manière]] [[gentil]]le, [[avec]] [[gentillesse]]."
+          }
+        },
+        {
+          "frozen_row": 3808,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''gentiment''' {{pron|ʒɑ̃.ti.mɑ̃|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3808,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# D’une [[manière]] [[gentil]]le, [[avec]] [[gentillesse]]."
+          }
+        },
+        {
+          "frozen_row": 3808,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# D’une [[manière]] [[gentil]]le, [[avec]] [[gentillesse]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "gentiment",
+        "url": "https://www.cnrtl.fr/definition/academie8/gentiment",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gentiment.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gentiment.txt",
+        "original_expression": "D'une manière gentille.",
+        "plain_text_column_1_based": 514,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "gentiment",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/gentiment",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gentiment.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gentiment.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "gentiment, French revision 36443209, accepted field lines [6, 7]. The retained original DAF8 expression independently corresponds to this selected use: D'une manière gentille. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_163073",
+      "title": "gré",
+      "fixed_revision": 39717651,
+      "selected_locations": [
+        {
+          "frozen_row": 3802,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{en particulier}} [[bon|Bonne]], [[franc]]he volonté qu’on a de [[faire]] [[quelque chose]]."
+          }
+        },
+        {
+          "frozen_row": 3802,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''gré''' {{pron|ɡʁe|fr}} {{m}}, {{invar}}"
+          }
+        },
+        {
+          "frozen_row": 3802,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{en particulier}} [[bon|Bonne]], [[franc]]he volonté qu’on a de [[faire]] [[quelque chose]]."
+          }
+        },
+        {
+          "frozen_row": 3802,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{en particulier}} [[bon|Bonne]], [[franc]]he volonté qu’on a de [[faire]] [[quelque chose]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "gré",
+        "url": "https://www.cnrtl.fr/definition/academie8/gr%C3%A9",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gré.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gré.txt",
+        "original_expression": "Bonne, franche volonté qu'on a de faire quelque chose.",
+        "plain_text_column_1_based": 927,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "gré",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/gr%C3%A9",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gré.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gré.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "gré, French revision 39717651, accepted field lines [8, 23]. The retained original DAF8 expression independently corresponds to this selected use: Bonne, franche volonté qu'on a de faire quelque chose. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_176677",
+      "title": "sirène",
+      "fixed_revision": 39879017,
+      "selected_locations": [
+        {
+          "frozen_row": 3804,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 73,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[puissant|Puissant]] appareil [[sonore]] destiné à [[émettre]] [[de loin]] un [[signal]] de [[manœuvre]] ou d’[[alarme]]."
+          }
+        },
+        {
+          "frozen_row": 3804,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 17,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''sirène''' {{pron|si.ʁɛn|fr}} {{f}} {{équiv-pour|un homme-poisson|triton|sirin|lang=fr}}"
+          }
+        },
+        {
+          "frozen_row": 3804,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 73,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[puissant|Puissant]] appareil [[sonore]] destiné à [[émettre]] [[de loin]] un [[signal]] de [[manœuvre]] ou d’[[alarme]]."
+          }
+        },
+        {
+          "frozen_row": 3804,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 73,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[puissant|Puissant]] appareil [[sonore]] destiné à [[émettre]] [[de loin]] un [[signal]] de [[manœuvre]] ou d’[[alarme]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "sirène",
+        "url": "https://www.cnrtl.fr/definition/academie8/sir%C3%A8ne",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-sirène.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-sirène.txt",
+        "original_expression": "Puissant appareil sonore destiné à émettre de loin un signal de manœuvre ou d'alarme.",
+        "plain_text_column_1_based": 1113,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "sirène",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/sir%C3%A8ne",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-sirène.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-sirène.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "sirène, French revision 39879017, accepted field lines [17, 73]. The retained original DAF8 expression independently corresponds to this selected use: Puissant appareil sonore destiné à émettre de loin un signal de manœuvre ou d'alarme. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_193625",
+      "title": "flinguer",
+      "fixed_revision": 39314795,
+      "selected_locations": [
+        {
+          "frozen_row": 3803,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{familier|fr}} [[tuer|Tuer]] avec une [[arme à feu]]."
+          }
+        },
+        {
+          "frozen_row": 3803,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''flinguer''' {{pron|flɛ̃.ɡe|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3803,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{familier|fr}} [[tuer|Tuer]] avec une [[arme à feu]]."
+          }
+        },
+        {
+          "frozen_row": 3803,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{familier|fr}} [[tuer|Tuer]] avec une [[arme à feu]]."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "flinguer",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/flinguer",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-flinguer.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-flinguer.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "flinguer, French revision 39314795, accepted field lines [6, 7]. DAF8 reports no content. Tuer avec une arme à feu is a short ordinary action relation; newly scoped FR/EN/ZH express firearm killing. The TLFi reference and neighbouring literary examples are not selected prose. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_121",
+      "title": "avril",
+      "fixed_revision": 39943937,
+      "selected_locations": [
+        {
+          "frozen_row": 3820,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[quatrième|Quatrième]] [[mois]] de l’[[année]] dans le [[calendrier]] [[grégorien]], il [[placer|est placé]] entre [[mars]] et [[mai]] et il [[durer|dure]] [[30]] [[jour]]s."
+          }
+        },
+        {
+          "frozen_row": 3820,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''avril''' {{pron|a.vʁil|ɑ.vʁil|fr}} {{m|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3820,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[quatrième|Quatrième]] [[mois]] de l’[[année]] dans le [[calendrier]] [[grégorien]], il [[placer|est placé]] entre [[mars]] et [[mai]] et il [[durer|dure]] [[30]] [[jour]]s."
+          }
+        },
+        {
+          "frozen_row": 3820,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[quatrième|Quatrième]] [[mois]] de l’[[année]] dans le [[calendrier]] [[grégorien]], il [[placer|est placé]] entre [[mars]] et [[mai]] et il [[durer|dure]] [[30]] [[jour]]s."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "avril",
+        "url": "https://www.cnrtl.fr/definition/academie8/avril",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-avril.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-avril.txt",
+        "original_expression": "Le quatrième mois de l'année grégorienne.",
+        "plain_text_column_1_based": 508,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "avril",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/avril",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-avril.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-avril.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "avril, French revision 39943937, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Le quatrième mois de l'année grégorienne. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_11724",
+      "title": "album",
+      "fixed_revision": 39770810,
+      "selected_locations": [
+        {
+          "frozen_row": 3813,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[classeur#fr|Classeur]], [[cahier]] ou [[registre]] destiné à recevoir des [[photographie]]s, des [[dessin]]s, des [[autographe]]s, des [[carte postale|cartes postales]], des [[timbre]]s… ou autres objets à [[conserver]]."
+          }
+        },
+        {
+          "frozen_row": 3813,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''album''' {{pron|al.bɔm|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3813,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[classeur#fr|Classeur]], [[cahier]] ou [[registre]] destiné à recevoir des [[photographie]]s, des [[dessin]]s, des [[autographe]]s, des [[carte postale|cartes postales]], des [[timbre]]s… ou autres objets à [[conserver]]."
+          }
+        },
+        {
+          "frozen_row": 3813,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[classeur#fr|Classeur]], [[cahier]] ou [[registre]] destiné à recevoir des [[photographie]]s, des [[dessin]]s, des [[autographe]]s, des [[carte postale|cartes postales]], des [[timbre]]s… ou autres objets à [[conserver]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "album",
+        "url": "https://www.cnrtl.fr/definition/academie8/album",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-album.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-album.txt",
+        "original_expression": "Cahier ou registre destiné à recevoir des dessins, des autographes, des photographies, etc.",
+        "plain_text_column_1_based": 528,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "album",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/album",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-album.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-album.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "album, French revision 39770810, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Cahier ou registre destiné à recevoir des dessins, des autographes, des photographies, etc. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_36454",
+      "title": "chaos",
+      "fixed_revision": 39986672,
+      "selected_locations": [
+        {
+          "frozen_row": 3811,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 25,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} Ce qui est ou semble inorganisé, désordonné, confus, parfois incohérent ou obscur."
+          }
+        },
+        {
+          "frozen_row": 3811,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''chaos''' {{pron|ka.o|fr}} {{m}}, {{sp}}"
+          }
+        },
+        {
+          "frozen_row": 3811,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 25,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} Ce qui est ou semble inorganisé, désordonné, confus, parfois incohérent ou obscur."
+          }
+        },
+        {
+          "frozen_row": 3811,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 25,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} Ce qui est ou semble inorganisé, désordonné, confus, parfois incohérent ou obscur."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "chaos",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/chaos",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-chaos.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-chaos.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "chaos, French revision 39986672, accepted field lines [10, 25]. DAF8 gives figurative confusion without the selected expanded wording. The selected disorder/confusion synonyms are ordinary lexical facts, not a quoted philosophical or literary description. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_37175",
+      "title": "dernièrement",
+      "fixed_revision": 39002591,
+      "selected_locations": [
+        {
+          "frozen_row": 3818,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Il y a peu de temps, [[récemment]]."
+          }
+        },
+        {
+          "frozen_row": 3818,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''dernièrement''' {{pron|dɛʁ.njɛʁ.mɑ̃|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3818,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Il y a peu de temps, [[récemment]]."
+          }
+        },
+        {
+          "frozen_row": 3818,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Il y a peu de temps, [[récemment]]."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "dernièrement",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/derni%C3%A8rement",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-dernièrement.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-dernièrement.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "dernièrement, French revision 39002591, accepted field lines [6, 7]. DAF8 gives Depuis peu, il n’y a pas longtemps; the selected recent-past synonyms express ordinary temporal facts rather than distinctive imported expression. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_155912",
+      "title": "crapaud",
+      "fixed_revision": 39917914,
+      "selected_locations": [
+        {
+          "frozen_row": 3812,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{info lex|zoologie}} [[batracien|Batracien]] qui [[ressembler|ressemble]] à la [[grenouille]]"
+          }
+        },
+        {
+          "frozen_row": 3812,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''crapaud''' {{pron|kʁa.po|fr}} {{m}} {{équiv-pour|lang=fr|la femelle|crapaude}}"
+          }
+        },
+        {
+          "frozen_row": 3812,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{info lex|zoologie}} [[batracien|Batracien]] qui [[ressembler|ressemble]] à la [[grenouille]]"
+          }
+        },
+        {
+          "frozen_row": 3812,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{info lex|zoologie}} [[batracien|Batracien]] qui [[ressembler|ressemble]] à la [[grenouille]]"
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "crapaud",
+        "url": "https://www.cnrtl.fr/definition/academie8/crapaud",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-crapaud.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-crapaud.txt",
+        "original_expression": "Reptile batracien qui ressemble à la grenouille et dont le corps est couvert de pustules.",
+        "plain_text_column_1_based": 514,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "crapaud",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/crapaud",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-crapaud.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-crapaud.txt"
+        },
+        {
+          "title": "crapaud",
+          "edition": "tlfi",
+          "url": "https://www.cnrtl.fr/definition/crapaud",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-crapaud.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-crapaud.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "crapaud, French revision 39917914, accepted field lines [11, 12]. The retained original DAF8 expression independently corresponds to this selected use: Reptile batracien qui ressemble à la grenouille et dont le corps est couvert de pustules. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected. The Quillet (1934) inspiration marker does not establish sentence-level origin or its actual terms. The pattes/mœurs/pustules venimeuses extensions remain outside the accepted span and meaning fields; their original-expression rights are unresolved. The accepted span ends at grenouille and adds no reptile classification.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_157318",
+      "title": "déposition",
+      "fixed_revision": 39721091,
+      "selected_locations": [
+        {
+          "frozen_row": 3816,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 14,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|justice|fr}} Ce dont un [[témoin]] [[déposer|dépose]], ce qu’il [[affirmer|affirme]] par-[[devant]] le [[juge]] qui l’[[entendre|entend]]."
+          }
+        },
+        {
+          "frozen_row": 3816,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''déposition''' {{pron|de.po.zi.sjɔ̃|fr}} {{f}}"
+          }
+        },
+        {
+          "frozen_row": 3816,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 14,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|justice|fr}} Ce dont un [[témoin]] [[déposer|dépose]], ce qu’il [[affirmer|affirme]] par-[[devant]] le [[juge]] qui l’[[entendre|entend]]."
+          }
+        },
+        {
+          "frozen_row": 3816,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 14,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|justice|fr}} Ce dont un [[témoin]] [[déposer|dépose]], ce qu’il [[affirmer|affirme]] par-[[devant]] le [[juge]] qui l’[[entendre|entend]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "déposition",
+        "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9position",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-déposition.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-déposition.txt",
+        "original_expression": "Ce dont un témoin dépose, ce qu'il affirme par-devant le juge qui l'entend.",
+        "plain_text_column_1_based": 694,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "déposition",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9position",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-déposition.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-déposition.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "déposition, French revision 39721091, accepted field lines [11, 14]. The retained original DAF8 expression independently corresponds to this selected use: Ce dont un témoin dépose, ce qu'il affirme par-devant le juge qui l'entend. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_159470",
+      "title": "engin",
+      "fixed_revision": 39771836,
+      "selected_locations": [
+        {
+          "frozen_row": 3817,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 13,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[terme|Terme]] [[générique]] pour des [[machine]]s ou [[outil]]s ayant une [[fonction]] [[défini]]e."
+          }
+        },
+        {
+          "frozen_row": 3817,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''engin''' {{pron|ɑ̃.ʒɛ̃|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3817,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 13,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[terme|Terme]] [[générique]] pour des [[machine]]s ou [[outil]]s ayant une [[fonction]] [[défini]]e."
+          }
+        },
+        {
+          "frozen_row": 3817,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 13,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[terme|Terme]] [[générique]] pour des [[machine]]s ou [[outil]]s ayant une [[fonction]] [[défini]]e."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "engin",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/engin",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-engin.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-engin.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "engin, French revision 39771836, accepted field lines [7, 13]. DAF8’s Machine, instrument corresponds semantically; the modern machine/tool/function relation is ordinary equipment description, without copying quoted literary examples. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_166854",
+      "title": "lointain",
+      "fixed_revision": 40008339,
+      "selected_locations": [
+        {
+          "frozen_row": 3815,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui est [[fort]] [[éloigné]] du [[lieu]] où l’on est ou [[dont]] on [[parle]]."
+          }
+        },
+        {
+          "frozen_row": 3815,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''lointain''' {{pron|lwɛ̃.tɛ̃|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3815,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui est [[fort]] [[éloigné]] du [[lieu]] où l’on est ou [[dont]] on [[parle]]."
+          }
+        },
+        {
+          "frozen_row": 3815,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui est [[fort]] [[éloigné]] du [[lieu]] où l’on est ou [[dont]] on [[parle]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "lointain",
+        "url": "https://www.cnrtl.fr/definition/academie8/lointain/adjectif",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-lointain.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-lointain.txt",
+        "original_expression": "Qui est fort éloigné du lieu où l'on est ou dont on parle.",
+        "plain_text_column_1_based": 561,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "lointain",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/lointain",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-lointain.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-lointain.txt"
+        },
+        {
+          "title": "lointain",
+          "edition": "daf8-pos",
+          "url": "https://www.cnrtl.fr/definition/academie8/lointain/adjectif",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-lointain.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-lointain.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "lointain, French revision 40008339, accepted field lines [7, 8]. The retained original DAF8 expression independently corresponds to this selected use: Qui est fort éloigné du lieu où l'on est ou dont on parle. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_174556",
+      "title": "remarque",
+      "fixed_revision": 39774052,
+      "selected_locations": [
+        {
+          "frozen_row": 3819,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[observation|Observation]]."
+          }
+        },
+        {
+          "frozen_row": 3819,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''remarque''' {{pron|ʁə.maʁk|fr}} {{f}}"
+          }
+        },
+        {
+          "frozen_row": 3819,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[observation|Observation]]."
+          }
+        },
+        {
+          "frozen_row": 3819,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[observation|Observation]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "remarque",
+        "url": "https://www.cnrtl.fr/definition/academie8/remarque",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-remarque.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-remarque.txt",
+        "original_expression": "Il signifie aussi Observation.",
+        "plain_text_column_1_based": 574,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "remarque",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/remarque",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-remarque.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-remarque.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "remarque, French revision 39774052, accepted field lines [10, 15]. The retained original DAF8 expression independently corresponds to this selected use: Il signifie aussi Observation. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_249710",
+      "title": "gonzesse",
+      "fixed_revision": 39721249,
+      "selected_locations": [
+        {
+          "frozen_row": 3814,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{France|fr}} {{argot|fr}} {{familier|fr}} [[femme|Femme]] ou [[jeune]] femme, {{lien|nana|fr}}."
+          }
+        },
+        {
+          "frozen_row": 3814,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''gonzesse''' {{pron|ɡɔ̃.zɛs|fr}} {{f}} {{équiv-pour|lang=fr|un homme|gonze|gonz}}"
+          }
+        },
+        {
+          "frozen_row": 3814,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{France|fr}} {{argot|fr}} {{familier|fr}} [[femme|Femme]] ou [[jeune]] femme, {{lien|nana|fr}}."
+          }
+        },
+        {
+          "frozen_row": 3814,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{France|fr}} {{argot|fr}} {{familier|fr}} [[femme|Femme]] ou [[jeune]] femme, {{lien|nana|fr}}."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "gonzesse",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/gonzesse",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gonzesse.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-gonzesse.txt"
+        },
+        {
+          "title": "gonzesse",
+          "edition": "robert",
+          "url": "https://dictionnaire.lerobert.com/definition/gonzesse",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\robert-gonzesse.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\robert-gonzesse.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "gonzesse, French revision 39721249, accepted field lines [7, 8]. DAF8 reports no content after a gonze redirect. Retained Le Robert gives familier Femme, jeune fille; the adopted woman/register facts are short lexical data. The DicoHayard reference is not asserted as proven selected-sentence authorship or permission for a modern edition. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_9020",
+      "title": "défunt",
+      "fixed_revision": 39865619,
+      "selected_locations": [
+        {
+          "frozen_row": 3825,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 69,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Personne [[décédé]]e."
+          }
+        },
+        {
+          "frozen_row": 3825,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 68,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''défunt''' {{pron|de.fœ̃|fr}} {{m}} {{équiv-pour|lang=fr|une femme|défunte}}"
+          }
+        },
+        {
+          "frozen_row": 3825,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 69,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Personne [[décédé]]e."
+          }
+        },
+        {
+          "frozen_row": 3825,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 69,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Personne [[décédé]]e."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "défunt",
+        "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9funt/adjectif",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-défunt.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-défunt.txt",
+        "original_expression": "Il s'emploie aussi comme nom. Les enfants du défunt, de la défunte.",
+        "plain_text_column_1_based": 679,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "défunt",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9funt",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-défunt.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-défunt.txt"
+        },
+        {
+          "title": "défunt",
+          "edition": "daf8-pos",
+          "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9funt/adjectif",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-défunt.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-défunt.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "défunt, French revision 39865619, accepted field lines [68, 69]. The retained original DAF8 expression independently corresponds to this selected use: Il s'emploie aussi comme nom. Les enfants du défunt, de la défunte. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_25632",
+      "title": "joint",
+      "fixed_revision": 39968256,
+      "selected_locations": [
+        {
+          "frozen_row": 3830,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 46,
+            "column_1_based": 1,
+            "raw_source_excerpt": "## {{lexique|plomberie|fr}} Partie [[relier|reliant]] deux [[tuyau]]x ou [[conduite]]s. Par extension, nom de la [[pièce]] permettant d’[[assurer]] l’[[étanchéité]] entre deux tuyaux ou deux conduites."
+          }
+        },
+        {
+          "frozen_row": 3830,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 32,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''joint''' {{pron|ʒwɛ̃|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3830,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 46,
+            "column_1_based": 1,
+            "raw_source_excerpt": "## {{lexique|plomberie|fr}} Partie [[relier|reliant]] deux [[tuyau]]x ou [[conduite]]s. Par extension, nom de la [[pièce]] permettant d’[[assurer]] l’[[étanchéité]] entre deux tuyaux ou deux conduites."
+          }
+        },
+        {
+          "frozen_row": 3830,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 46,
+            "column_1_based": 1,
+            "raw_source_excerpt": "## {{lexique|plomberie|fr}} Partie [[relier|reliant]] deux [[tuyau]]x ou [[conduite]]s. Par extension, nom de la [[pièce]] permettant d’[[assurer]] l’[[étanchéité]] entre deux tuyaux ou deux conduites."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "joint",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/joint",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-joint.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-joint.txt"
+        },
+        {
+          "title": "joint",
+          "edition": "tlfi",
+          "url": "https://www.cnrtl.fr/definition/joint",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-joint.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\tlfi-joint.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "joint, French revision 39968256, accepted field lines [32, 46]. DAF8’s contact/stones definition is not the selected gasket. Retained TLFi B describes garniture assuring assembly tightness and tap replacement, with distinct wording. Accepted text states ordinary seal/function/pipe relations; the full modern sentence and examples are excluded. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_150524",
+      "title": "budget",
+      "fixed_revision": 39997691,
+      "selected_locations": [
+        {
+          "frozen_row": 3824,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 40,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{par extension|fr}} [[somme d’argent|Somme d’argent]] allouée pour une certaine [[dépense]], ou pour une certaine catégorie de dépenses."
+          }
+        },
+        {
+          "frozen_row": 3824,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''budget''' {{pron|byd.ʒɛ|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3824,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 40,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{par extension|fr}} [[somme d’argent|Somme d’argent]] allouée pour une certaine [[dépense]], ou pour une certaine catégorie de dépenses."
+          }
+        },
+        {
+          "frozen_row": 3824,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 40,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{par extension|fr}} [[somme d’argent|Somme d’argent]] allouée pour une certaine [[dépense]], ou pour une certaine catégorie de dépenses."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "budget",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/budget",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-budget.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-budget.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "budget, French revision 39997691, accepted field lines [9, 40]. DAF8 describes financial forecasts and household revenues/expenses. The selected amount allocated for an expense is a different short quantity/purpose relation, not the original account description or the English Merriam-Webster section. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_154896",
+      "title": "comptable",
+      "fixed_revision": 39771806,
+      "selected_locations": [
+        {
+          "frozen_row": 3828,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 82,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|comptabilité|fr}} Celui, celle qui fait profession de tenir la [[comptabilité]]."
+          }
+        },
+        {
+          "frozen_row": 3828,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 81,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''comptable''' {{pron|kɔ̃.tabl|fr}} {{mf}}"
+          }
+        },
+        {
+          "frozen_row": 3828,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 82,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|comptabilité|fr}} Celui, celle qui fait profession de tenir la [[comptabilité]]."
+          }
+        },
+        {
+          "frozen_row": 3828,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 82,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|comptabilité|fr}} Celui, celle qui fait profession de tenir la [[comptabilité]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "comptable",
+        "url": "https://www.cnrtl.fr/definition/academie8/comptable/adjectif",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-comptable.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-comptable.txt",
+        "original_expression": "Celui, celle qui fait profession de tenir les comptabilités.",
+        "plain_text_column_1_based": 870,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "comptable",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/comptable",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-comptable.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-comptable.txt"
+        },
+        {
+          "title": "comptable",
+          "edition": "daf8-pos",
+          "url": "https://www.cnrtl.fr/definition/academie8/comptable/adjectif",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-comptable.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-comptable.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "comptable, French revision 39771806, accepted field lines [81, 82]. The retained original DAF8 expression independently corresponds to this selected use: Celui, celle qui fait profession de tenir les comptabilités. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_158996",
+      "title": "élire",
+      "fixed_revision": 39817245,
+      "selected_locations": [
+        {
+          "frozen_row": 3822,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{en particulier}} {{lexique|politique|fr}} [[nommer|Nommer]] à une [[dignité]], à une [[fonction]], à une [[place]] par la [[voie]] des [[suffrage]]s."
+          }
+        },
+        {
+          "frozen_row": 3822,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''élire''' {{pron|e.liʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}}"
+          }
+        },
+        {
+          "frozen_row": 3822,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{en particulier}} {{lexique|politique|fr}} [[nommer|Nommer]] à une [[dignité]], à une [[fonction]], à une [[place]] par la [[voie]] des [[suffrage]]s."
+          }
+        },
+        {
+          "frozen_row": 3822,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{en particulier}} {{lexique|politique|fr}} [[nommer|Nommer]] à une [[dignité]], à une [[fonction]], à une [[place]] par la [[voie]] des [[suffrage]]s."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "élire",
+        "url": "https://www.cnrtl.fr/definition/academie8/%C3%A9lire",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-élire.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-élire.txt",
+        "original_expression": "Nommer à une dignité, à une fonction, à une place par la voie des suffrages.",
+        "plain_text_column_1_based": 534,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "élire",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/%C3%A9lire",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-élire.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-élire.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "élire, French revision 39817245, accepted field lines [6, 8]. The retained original DAF8 expression independently corresponds to this selected use: Nommer à une dignité, à une fonction, à une place par la voie des suffrages. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_161304",
+      "title": "fermier",
+      "fixed_revision": 39836500,
+      "selected_locations": [
+        {
+          "frozen_row": 3829,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{courant|fr}} [[agriculteur|Agriculteur]], [[cultivateur]], [[paysan]]."
+          }
+        },
+        {
+          "frozen_row": 3829,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''fermier''' {{pron|fɛʁ.mje|fr}} {{m}} {{équiv-pour|lang=fr|une femme|fermière}}"
+          }
+        },
+        {
+          "frozen_row": 3829,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{courant|fr}} [[agriculteur|Agriculteur]], [[cultivateur]], [[paysan]]."
+          }
+        },
+        {
+          "frozen_row": 3829,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{courant|fr}} [[agriculteur|Agriculteur]], [[cultivateur]], [[paysan]]."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "fermier",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/fermier",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-fermier.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-fermier.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "fermier, French revision 39836500, accepted field lines [8, 9]. DAF8’s tenant farmer is narrower than the explicitly courant agriculteur/cultivateur/paysan selection. Accepted text retains the general farmer and does not import tenant status. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_163967",
+      "title": "humide",
+      "fixed_revision": 39846231,
+      "selected_locations": [
+        {
+          "frozen_row": 3821,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{plus courant}} Qui [[charger|est chargé]] de quelque [[substance]] ou [[vapeur]] [[aqueux|aqueuse]]."
+          }
+        },
+        {
+          "frozen_row": 3821,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''humide''' {{h muet}}{{pron|y.mid|fr}} {{mf}}"
+          }
+        },
+        {
+          "frozen_row": 3821,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{plus courant}} Qui [[charger|est chargé]] de quelque [[substance]] ou [[vapeur]] [[aqueux|aqueuse]]."
+          }
+        },
+        {
+          "frozen_row": 3821,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{plus courant}} Qui [[charger|est chargé]] de quelque [[substance]] ou [[vapeur]] [[aqueux|aqueuse]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "humide",
+        "url": "https://www.cnrtl.fr/definition/academie8/humide",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-humide.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-humide.txt",
+        "original_expression": "Qui est chargé de quelque substance ou vapeur aqueuse.",
+        "plain_text_column_1_based": 745,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "humide",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/humide",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-humide.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-humide.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "humide, French revision 39846231, accepted field lines [7, 11]. The retained original DAF8 expression independently corresponds to this selected use: Qui est chargé de quelque substance ou vapeur aqueuse. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_166647",
+      "title": "limiter",
+      "fixed_revision": 39774068,
+      "selected_locations": [
+        {
+          "frozen_row": 3827,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} [[assigner|Assigner]] une [[limite]], en parlant du [[prix]] et de la [[quantité]] des choses, du [[nombre]] des personnes, de la [[durée]] du [[temps]]."
+          }
+        },
+        {
+          "frozen_row": 3827,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''limiter''' {{pron|li.mi.te|fr}} {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+          }
+        },
+        {
+          "frozen_row": 3827,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} [[assigner|Assigner]] une [[limite]], en parlant du [[prix]] et de la [[quantité]] des choses, du [[nombre]] des personnes, de la [[durée]] du [[temps]]."
+          }
+        },
+        {
+          "frozen_row": 3827,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} [[assigner|Assigner]] une [[limite]], en parlant du [[prix]] et de la [[quantité]] des choses, du [[nombre]] des personnes, de la [[durée]] du [[temps]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "limiter",
+        "url": "https://www.cnrtl.fr/definition/academie8/limiter",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-limiter.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-limiter.txt",
+        "original_expression": "Assigner une limite, en parlant du Prix et de la quantité des choses, du nombre des personnes, de la durée du temps.",
+        "plain_text_column_1_based": 634,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "limiter",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/limiter",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-limiter.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-limiter.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "limiter, French revision 39774068, accepted field lines [6, 11]. The retained original DAF8 expression independently corresponds to this selected use: Assigner une limite, en parlant du Prix et de la quantité des choses, du nombre des personnes, de la durée du temps. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_170970",
+      "title": "périr",
+      "fixed_revision": 39728375,
+      "selected_locations": [
+        {
+          "frozen_row": 3826,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 18,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[avoir|Avoir]] une [[fin]] [[malheureux|malheureuse]] ou [[violent]]e."
+          }
+        },
+        {
+          "frozen_row": 3826,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''périr''' {{pron|pe.ʁiʁ|fr}} {{i|fr}}, exceptionnellement {{prnl|fr}} {{conjugaison|fr|grp=2}} {{lien pronominal}}"
+          }
+        },
+        {
+          "frozen_row": 3826,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 18,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[avoir|Avoir]] une [[fin]] [[malheureux|malheureuse]] ou [[violent]]e."
+          }
+        },
+        {
+          "frozen_row": 3826,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 18,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[avoir|Avoir]] une [[fin]] [[malheureux|malheureuse]] ou [[violent]]e."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "périr",
+        "url": "https://www.cnrtl.fr/definition/academie8/p%C3%A9rir",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-périr.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-périr.txt",
+        "original_expression": "Avoir une fin malheureuse, violente.",
+        "plain_text_column_1_based": 560,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "périr",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/p%C3%A9rir",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-périr.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-périr.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "périr, French revision 39728375, accepted field lines [7, 18]. The retained original DAF8 expression independently corresponds to this selected use: Avoir une fin malheureuse, violente. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_177936",
+      "title": "taux",
+      "fixed_revision": 39770745,
+      "selected_locations": [
+        {
+          "frozen_row": 3823,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 25,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[proportion|Proportion]], [[rapport]] entre différentes grandeurs ; [[fréquence]] pendant un intervalle déterminé,"
+          }
+        },
+        {
+          "frozen_row": 3823,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''taux''' {{pron|to|fr}} {{m}}, {{invariable}}"
+          }
+        },
+        {
+          "frozen_row": 3823,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 25,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[proportion|Proportion]], [[rapport]] entre différentes grandeurs ; [[fréquence]] pendant un intervalle déterminé,"
+          }
+        },
+        {
+          "frozen_row": 3823,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 25,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[proportion|Proportion]], [[rapport]] entre différentes grandeurs ; [[fréquence]] pendant un intervalle déterminé,"
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "taux",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/taux",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-taux.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-taux.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "taux, French revision 39770745, accepted field lines [8, 25]. DAF8’s interest-rate/taxation definitions are narrower than the selected general quantity ratio. Proportion/rapport and their scoped explanations are ordinary quantitative relationships; the old expression is not imported. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_642",
+      "title": "latin",
+      "fixed_revision": 39628749,
+      "selected_locations": [
+        {
+          "frozen_row": 3840,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 118,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[langue|Langue]] [[italique]] [[indo-européen]]ne dont sont [[originaire]]s les [[langue romane|langues romanes]]."
+          }
+        },
+        {
+          "frozen_row": 3840,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 117,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''latin''' {{pron|la.tɛ̃|fr}} {{m}}, {{au singulier uniquement|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3840,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 118,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[langue|Langue]] [[italique]] [[indo-européen]]ne dont sont [[originaire]]s les [[langue romane|langues romanes]]."
+          }
+        },
+        {
+          "frozen_row": 3840,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 118,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[langue|Langue]] [[italique]] [[indo-européen]]ne dont sont [[originaire]]s les [[langue romane|langues romanes]]."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "latin",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/latin",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-latin.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-latin.txt"
+        },
+        {
+          "title": "latin",
+          "edition": "daf8-pos",
+          "url": "https://www.cnrtl.fr/definition/academie8/latin/adjectif",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-latin.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-latin.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "latin, French revision 39628749, accepted field lines [117, 118]. DAF8’s language-of-ancient-Romans description is different from the selected Italic/Indo-European/Romance genealogy. These accepted language-family facts and singular restriction are newly scoped explanations, not distinctive TLFi etymology or another language section. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_8641",
+      "title": "banane",
+      "fixed_revision": 39829289,
+      "selected_locations": [
+        {
+          "frozen_row": 3839,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 16,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{info lex|botanique}} Fruit comestible du [[bananier]], [[baie]] de forme allongée, d’abord vert puis jaune ponctué de taches noires à [[maturité]], à chair farineuse."
+          }
+        },
+        {
+          "frozen_row": 3839,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''banane''' {{pron|ba.nan|fr}} {{f}}"
+          }
+        },
+        {
+          "frozen_row": 3839,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 16,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{info lex|botanique}} Fruit comestible du [[bananier]], [[baie]] de forme allongée, d’abord vert puis jaune ponctué de taches noires à [[maturité]], à chair farineuse."
+          }
+        },
+        {
+          "frozen_row": 3839,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 16,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{info lex|botanique}} Fruit comestible du [[bananier]], [[baie]] de forme allongée, d’abord vert puis jaune ponctué de taches noires à [[maturité]], à chair farineuse."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "banane",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/banane",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-banane.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-banane.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "banane, French revision 39829289, accepted field lines [15, 16]. DAF8 names the banana fruit and elongated shape with a régime/grappe description. Accepted text is limited to fruit/plant/edibility/shape facts and does not import the longer colour/farinaceous description or multilingual references. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_42438",
+      "title": "ambition",
+      "fixed_revision": 39773239,
+      "selected_locations": [
+        {
+          "frozen_row": 3832,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 29,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[motivation|Motivation]] pour [[améliorer]] une [[situation]]."
+          }
+        },
+        {
+          "frozen_row": 3832,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''ambition''' {{pron|ɑ̃.bi.sjɔ̃|fr}} {{f}}"
+          }
+        },
+        {
+          "frozen_row": 3832,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 29,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[motivation|Motivation]] pour [[améliorer]] une [[situation]]."
+          }
+        },
+        {
+          "frozen_row": 3832,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 29,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[motivation|Motivation]] pour [[améliorer]] une [[situation]]."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "ambition",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/ambition",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-ambition.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-ambition.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "ambition, French revision 39773239, accepted field lines [9, 29]. DAF8’s desire for glory/honours is not the selected improvement-motivation expression. Motivation/améliorer/situation is an ordinary purpose relation, with new scoped bilingual wording and no copied neighbouring quotation. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_148871",
+      "title": "aveu",
+      "fixed_revision": 39934182,
+      "selected_locations": [
+        {
+          "frozen_row": 3833,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[déclaration|Déclaration]] [[verbal]]e ou [[écrire|écrite]] par [[laquelle]] on [[reconnaître|reconnaît]] [[faire|avoir fait]] ou [[dire|dit]] [[quelque chose]]."
+          }
+        },
+        {
+          "frozen_row": 3833,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''aveu''' {{pron|a.vø|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3833,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[déclaration|Déclaration]] [[verbal]]e ou [[écrire|écrite]] par [[laquelle]] on [[reconnaître|reconnaît]] [[faire|avoir fait]] ou [[dire|dit]] [[quelque chose]]."
+          }
+        },
+        {
+          "frozen_row": 3833,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[déclaration|Déclaration]] [[verbal]]e ou [[écrire|écrite]] par [[laquelle]] on [[reconnaître|reconnaît]] [[faire|avoir fait]] ou [[dire|dit]] [[quelque chose]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "aveu",
+        "url": "https://www.cnrtl.fr/definition/academie8/aveu",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-aveu.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-aveu.txt",
+        "original_expression": "Déclaration verbale ou écrite par laquelle on reconnaît avoir fait ou dit quelque chose.",
+        "plain_text_column_1_based": 503,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "aveu",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/aveu",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-aveu.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-aveu.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "aveu, French revision 39934182, accepted field lines [9, 10]. The retained original DAF8 expression independently corresponds to this selected use: Déclaration verbale ou écrite par laquelle on reconnaît avoir fait ou dit quelque chose. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_149516",
+      "title": "bénédiction",
+      "fixed_revision": 40014845,
+      "selected_locations": [
+        {
+          "frozen_row": 3834,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|religion|fr}} Action d’un [[prélat]] ou d’un [[prêtre]] qui bénit une [[personne]] ou une [[chose]] [[faire|en faisant]] sur elles le [[signe de la croix]]."
+          }
+        },
+        {
+          "frozen_row": 3834,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''bénédiction''' {{pron|be.ne.dik.sjɔ̃|fr}} {{f}}"
+          }
+        },
+        {
+          "frozen_row": 3834,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|religion|fr}} Action d’un [[prélat]] ou d’un [[prêtre]] qui bénit une [[personne]] ou une [[chose]] [[faire|en faisant]] sur elles le [[signe de la croix]]."
+          }
+        },
+        {
+          "frozen_row": 3834,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|religion|fr}} Action d’un [[prélat]] ou d’un [[prêtre]] qui bénit une [[personne]] ou une [[chose]] [[faire|en faisant]] sur elles le [[signe de la croix]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "bénédiction",
+        "url": "https://www.cnrtl.fr/definition/academie8/b%C3%A9n%C3%A9diction",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-bénédiction.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-bénédiction.txt",
+        "original_expression": "Action d'un prélat ou d'un prêtre qui bénit une personne ou une chose en faisant sur elles le signe de la croix.",
+        "plain_text_column_1_based": 775,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "bénédiction",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/b%C3%A9n%C3%A9diction",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-bénédiction.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-bénédiction.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "bénédiction, French revision 40014845, accepted field lines [9, 15]. The retained original DAF8 expression independently corresponds to this selected use: Action d'un prélat ou d'un prêtre qui bénit une personne ou une chose en faisant sur elles le signe de la croix. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_154905",
+      "title": "concierge",
+      "fixed_revision": 39904665,
+      "selected_locations": [
+        {
+          "frozen_row": 3835,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Celui, celle qui a la [[garde]] d’un [[immeuble]]."
+          }
+        },
+        {
+          "frozen_row": 3835,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''concierge''' {{pron|kɔ̃.sjɛʁʒ|fr}} {{mf}}"
+          }
+        },
+        {
+          "frozen_row": 3835,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Celui, celle qui a la [[garde]] d’un [[immeuble]]."
+          }
+        },
+        {
+          "frozen_row": 3835,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Celui, celle qui a la [[garde]] d’un [[immeuble]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "concierge",
+        "url": "https://www.cnrtl.fr/definition/academie8/concierge",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-concierge.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-concierge.txt",
+        "original_expression": "Celui, celle qui a la garde d'un immeuble.",
+        "plain_text_column_1_based": 530,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "concierge",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/concierge",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-concierge.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-concierge.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "concierge, French revision 39904665, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Celui, celle qui a la garde d'un immeuble. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_156072",
+      "title": "création",
+      "fixed_revision": 39770999,
+      "selected_locations": [
+        {
+          "frozen_row": 3836,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 26,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{par extension}} Ce que l’[[homme]] [[inventer|invente]], [[former|forme]], [[établir|établit]]."
+          }
+        },
+        {
+          "frozen_row": 3836,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''création''' {{pron|kʁe.a.sjɔ̃|fr}} {{f}}"
+          }
+        },
+        {
+          "frozen_row": 3836,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 26,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{par extension}} Ce que l’[[homme]] [[inventer|invente]], [[former|forme]], [[établir|établit]]."
+          }
+        },
+        {
+          "frozen_row": 3836,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 26,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{par extension}} Ce que l’[[homme]] [[inventer|invente]], [[former|forme]], [[établir|établit]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "création",
+        "url": "https://www.cnrtl.fr/definition/academie8/cr%C3%A9ation",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-création.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-création.txt",
+        "original_expression": "Ce que l'homme invente, forme, établit.",
+        "plain_text_column_1_based": 848,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "création",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/cr%C3%A9ation",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-création.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-création.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "création, French revision 39770999, accepted field lines [9, 26]. The retained original DAF8 expression independently corresponds to this selected use: Ce que l'homme invente, forme, établit. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_173695",
+      "title": "raide",
+      "fixed_revision": 39838529,
+      "selected_locations": [
+        {
+          "frozen_row": 3837,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui est très [[tendre|tendu]] et qui a de la [[peine]] à [[ployer]]."
+          }
+        },
+        {
+          "frozen_row": 3837,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''raide''' {{pron|ʁɛd|fr}} {{mf}}"
+          }
+        },
+        {
+          "frozen_row": 3837,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui est très [[tendre|tendu]] et qui a de la [[peine]] à [[ployer]]."
+          }
+        },
+        {
+          "frozen_row": 3837,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui est très [[tendre|tendu]] et qui a de la [[peine]] à [[ployer]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "raide",
+        "url": "https://www.cnrtl.fr/definition/academie8/raide",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-raide.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-raide.txt",
+        "original_expression": "Qui est très tendu et qui a de la peine à ployer.",
+        "plain_text_column_1_based": 591,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "raide",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/raide",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-raide.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-raide.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "raide, French revision 39838529, accepted field lines [8, 9]. The retained original DAF8 expression independently corresponds to this selected use: Qui est très tendu et qui a de la peine à ployer. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_174766",
+      "title": "reportage",
+      "fixed_revision": 39514112,
+      "selected_locations": [
+        {
+          "frozen_row": 3831,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|journalisme|fr}} [[action|Action]] de [[recueillir]] des [[nouvelle]]s pour en [[rendre compte]] dans un [[journal]] ; [[résultat]] de cette action."
+          }
+        },
+        {
+          "frozen_row": 3831,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''reportage''' {{pron|ʁə.pɔʁ.taʒ|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3831,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|journalisme|fr}} [[action|Action]] de [[recueillir]] des [[nouvelle]]s pour en [[rendre compte]] dans un [[journal]] ; [[résultat]] de cette action."
+          }
+        },
+        {
+          "frozen_row": 3831,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|journalisme|fr}} [[action|Action]] de [[recueillir]] des [[nouvelle]]s pour en [[rendre compte]] dans un [[journal]] ; [[résultat]] de cette action."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "reportage",
+        "url": "https://www.cnrtl.fr/definition/academie8/reportage",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-reportage.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-reportage.txt",
+        "original_expression": "Action de recueillir des nouvelles pour en rendre compte dans un journal ou Résultat de cette action.",
+        "plain_text_column_1_based": 508,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "reportage",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/reportage",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-reportage.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-reportage.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "reportage, French revision 39514112, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Action de recueillir des nouvelles pour en rendre compte dans un journal ou Résultat de cette action. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_180269",
+      "title": "voyageur",
+      "fixed_revision": 39803547,
+      "selected_locations": [
+        {
+          "frozen_row": 3838,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 53,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Celui qui voyage."
+          }
+        },
+        {
+          "frozen_row": 3838,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 52,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''voyageur''' {{pron|vwa.ja.ʒœʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|voyageuse}}"
+          }
+        },
+        {
+          "frozen_row": 3838,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 53,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Celui qui voyage."
+          }
+        },
+        {
+          "frozen_row": 3838,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 53,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Celui qui voyage."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "voyageur",
+        "url": "https://www.cnrtl.fr/definition/academie8/voyageur",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-voyageur.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-voyageur.txt",
+        "original_expression": "Celui, celle qui voyage.",
+        "plain_text_column_1_based": 559,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "voyageur",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/voyageur",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-voyageur.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-voyageur.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "voyageur, French revision 39803547, accepted field lines [52, 53]. The retained original DAF8 expression independently corresponds to this selected use: Celui, celle qui voyage. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_805",
+      "title": "fichier",
+      "fixed_revision": 39958158,
+      "selected_locations": [
+        {
+          "frozen_row": 3850,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 24,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|informatique|fr}} Contenant électronique auquel est assigné un nom unique, permettant de stocker dans une même entité un ensemble de données, situé dans un [[système de fichiers]], et dont le contenu est souvent structuré en suivant un certain format."
+          }
+        },
+        {
+          "frozen_row": 3850,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''fichier''' {{pron|fi.ʃje|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3850,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 24,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|informatique|fr}} Contenant électronique auquel est assigné un nom unique, permettant de stocker dans une même entité un ensemble de données, situé dans un [[système de fichiers]], et dont le contenu est souvent structuré en suivant un certain format."
+          }
+        },
+        {
+          "frozen_row": 3850,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 24,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|informatique|fr}} Contenant électronique auquel est assigné un nom unique, permettant de stocker dans une même entité un ensemble de données, situé dans un [[système de fichiers]], et dont le contenu est souvent structuré en suivant un certain format."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "fichier",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/fichier",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-fichier.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-fichier.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "fichier, French revision 39958158, accepted field lines [8, 24]. DAF8 describes collections of cards and their furniture, not computer files. The accepted data/named-entity/file-system description states ordinary computing facts with new scoped FR/EN/ZH wording. The obsolete card expression and etymological Godefroy reference are not selected. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_11026",
+      "title": "noeud",
+      "fixed_revision": 31042425,
+      "selected_locations": [],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "noeud",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/noeud",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-noeud.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-noeud.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "noeud, French revision 31042425, accepted field lines []. This source supplies only the exact typographic spelling relation to nœud. It selects no new definition. The bound nœud expression is separately compared with DAF8; the 404 noeud comparator is not treated as original evidence. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_26541",
+      "title": "logement",
+      "fixed_revision": 39773572,
+      "selected_locations": [
+        {
+          "frozen_row": 3843,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Local à usage d’[[habitation]]."
+          }
+        },
+        {
+          "frozen_row": 3843,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''logement''' {{pron|lɔ.ʒə.mɑ̃|fr}} ou {{pron|lɔʒ.mɑ̃|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3843,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Local à usage d’[[habitation]]."
+          }
+        },
+        {
+          "frozen_row": 3843,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Local à usage d’[[habitation]]."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "logement",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/logement",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-logement.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-logement.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "logement, French revision 39773572, accepted field lines [8, 12]. DAF8’s artisan-versus-bourgeois distinction is obsolete and excluded. Local à usage d’habitation is a short functional relation; accepted dwelling explanations do not import FranceTerme, etymology or historical social restriction. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_41032",
+      "title": "alibi",
+      "fixed_revision": 39729393,
+      "selected_locations": [
+        {
+          "frozen_row": 3842,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|police|fr}} [[présence|Présence]] d’une personne dans un [[lieu]] autre que celui où a été [[commis]] le [[crime]] ou le [[délit]] dont on l’[[accuser|accuse]]."
+          }
+        },
+        {
+          "frozen_row": 3842,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''alibi''' {{pron|a.li.bi|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3842,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|police|fr}} [[présence|Présence]] d’une personne dans un [[lieu]] autre que celui où a été [[commis]] le [[crime]] ou le [[délit]] dont on l’[[accuser|accuse]]."
+          }
+        },
+        {
+          "frozen_row": 3842,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|police|fr}} [[présence|Présence]] d’une personne dans un [[lieu]] autre que celui où a été [[commis]] le [[crime]] ou le [[délit]] dont on l’[[accuser|accuse]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "alibi",
+        "url": "https://www.cnrtl.fr/definition/academie8/alibi",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-alibi.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-alibi.txt",
+        "original_expression": "Présence d'une personne dans un lieu autre que celui où a été commis le crime ou le délit dont on l'accuse.",
+        "plain_text_column_1_based": 592,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "alibi",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/alibi",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-alibi.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-alibi.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "alibi, French revision 39729393, accepted field lines [9, 10]. The retained original DAF8 expression independently corresponds to this selected use: Présence d'une personne dans un lieu autre que celui où a été commis le crime ou le délit dont on l'accuse. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_53577",
+      "title": "fixe",
+      "fixed_revision": 39777138,
+      "selected_locations": [
+        {
+          "frozen_row": 3845,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[invariant|Invariant]], [[définitif]]."
+          }
+        },
+        {
+          "frozen_row": 3845,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''fixe''' {{pron|fiks|fr}} {{mf}}"
+          }
+        },
+        {
+          "frozen_row": 3845,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[invariant|Invariant]], [[définitif]]."
+          }
+        },
+        {
+          "frozen_row": 3845,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[invariant|Invariant]], [[définitif]]."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "fixe",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/fixe",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-fixe.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-fixe.txt"
+        },
+        {
+          "title": "fixe",
+          "edition": "daf8-pos",
+          "url": "https://www.cnrtl.fr/definition/academie8/fixe/adjectif",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-fixe.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-fixe.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "fixe, French revision 39777138, accepted field lines [9, 23]. DAF8’s fixed time/price/income examples corroborate invariance. The selected invariant/définitif synonyms are ordinary lexical data, not expressive chemistry or gaz permanent prose. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_153213",
+      "title": "chauve",
+      "fixed_revision": 40038318,
+      "selected_locations": [
+        {
+          "frozen_row": 3844,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui n’a plus de [[cheveu]]x, ou n’en a guère."
+          }
+        },
+        {
+          "frozen_row": 3844,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''chauve''' {{pron|ʃov|fr}} {{mf}}"
+          }
+        },
+        {
+          "frozen_row": 3844,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui n’a plus de [[cheveu]]x, ou n’en a guère."
+          }
+        },
+        {
+          "frozen_row": 3844,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui n’a plus de [[cheveu]]x, ou n’en a guère."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "chauve",
+        "url": "https://www.cnrtl.fr/definition/academie8/chauve",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-chauve.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-chauve.txt",
+        "original_expression": "Qui n'a plus de cheveux, ou qui n'en a guère.",
+        "plain_text_column_1_based": 516,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "chauve",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/chauve",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-chauve.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-chauve.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "chauve, French revision 40038318, accepted field lines [8, 9]. The retained original DAF8 expression independently corresponds to this selected use: Qui n'a plus de cheveux, ou qui n'en a guère. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_163508",
+      "title": "harceler",
+      "fixed_revision": 39628594,
+      "selected_locations": [
+        {
+          "frozen_row": 3846,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "## Tourmenter physiquement ou psychiquement une personne sans relâche, la {{lien|tyranniser|fr}} (surtout dans le contexte scolaire)."
+          }
+        },
+        {
+          "frozen_row": 3846,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''harceler''' {{h}}{{pron|aʁ.sə.le|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3846,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "## Tourmenter physiquement ou psychiquement une personne sans relâche, la {{lien|tyranniser|fr}} (surtout dans le contexte scolaire)."
+          }
+        },
+        {
+          "frozen_row": 3846,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 9,
+            "column_1_based": 1,
+            "raw_source_excerpt": "## Tourmenter physiquement ou psychiquement une personne sans relâche, la {{lien|tyranniser|fr}} (surtout dans le contexte scolaire)."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "harceler",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/harceler",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-harceler.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-harceler.txt"
+        },
+        {
+          "title": "harceler",
+          "edition": "robert",
+          "url": "https://dictionnaire.lerobert.com/definition/harceler",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\robert-harceler.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\robert-harceler.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "harceler, French revision 39628594, accepted field lines [6, 9]. Retained Le Robert’s petites attaques wording differs from the selected physical/psychological torment. Accepted person/persistence/modality facts and new explanations exclude the referenced modern dictionary sentences and military examples. School is frequent, not exclusive. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_167389",
+      "title": "maquiller",
+      "fixed_revision": 39773874,
+      "selected_locations": [
+        {
+          "frozen_row": 3841,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|cosmétologie|fr}} [[farder|Farder]] ; [[recouvrir]] de [[fard]]."
+          }
+        },
+        {
+          "frozen_row": 3841,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''maquiller''' {{pron|ma.ki.je|fr}} {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+          }
+        },
+        {
+          "frozen_row": 3841,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|cosmétologie|fr}} [[farder|Farder]] ; [[recouvrir]] de [[fard]]."
+          }
+        },
+        {
+          "frozen_row": 3841,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{lexique|cosmétologie|fr}} [[farder|Farder]] ; [[recouvrir]] de [[fard]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "maquiller",
+        "url": "https://www.cnrtl.fr/definition/academie8/maquiller",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-maquiller.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-maquiller.txt",
+        "original_expression": "Farder, recouvrir de fard.",
+        "plain_text_column_1_based": 506,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "maquiller",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/maquiller",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-maquiller.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-maquiller.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "maquiller, French revision 39773874, accepted field lines [7, 8]. The retained original DAF8 expression independently corresponds to this selected use: Farder, recouvrir de fard. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_168635",
+      "title": "mûr",
+      "fixed_revision": 40013086,
+      "selected_locations": [
+        {
+          "frozen_row": 3848,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui a [[atteint]] son [[plein]] [[développement]], [[parler|en parlant]] des [[produits]] de la [[terre]]."
+          }
+        },
+        {
+          "frozen_row": 3848,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''mûr''' {{pron|myʁ|fr}}"
+          }
+        },
+        {
+          "frozen_row": 3848,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui a [[atteint]] son [[plein]] [[développement]], [[parler|en parlant]] des [[produits]] de la [[terre]]."
+          }
+        },
+        {
+          "frozen_row": 3848,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui a [[atteint]] son [[plein]] [[développement]], [[parler|en parlant]] des [[produits]] de la [[terre]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "mûr",
+        "url": "https://www.cnrtl.fr/definition/academie8/m%C3%BBr/adjectif",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-mûr.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-mûr.txt",
+        "original_expression": "Qui a atteint son plein développement, en parlant des Produits de la terre.",
+        "plain_text_column_1_based": 536,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "mûr",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/m%C3%BBr",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-mûr.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-mûr.txt"
+        },
+        {
+          "title": "mûr",
+          "edition": "daf8-pos",
+          "url": "https://www.cnrtl.fr/definition/academie8/m%C3%BBr/adjectif",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-mûr.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-pos-mûr.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "mûr, French revision 40013086, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Qui a atteint son plein développement, en parlant des Produits de la terre. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_363271",
+      "title": "nous-mêmes",
+      "fixed_revision": 36366332,
+      "selected_locations": [
+        {
+          "frozen_row": 3849,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[nous|Nous]] comme le sujet naturellement ou directement responsable."
+          }
+        },
+        {
+          "frozen_row": 3849,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 6,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''nous-mêmes''' {{pron|nu.mɛm|fr}} {{p}}"
+          }
+        },
+        {
+          "frozen_row": 3849,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[nous|Nous]] comme le sujet naturellement ou directement responsable."
+          }
+        },
+        {
+          "frozen_row": 3849,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 7,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[nous|Nous]] comme le sujet naturellement ou directement responsable."
+          }
+        }
+      ],
+      "original_comparison": null,
+      "comparators": [
+        {
+          "title": "nous-mêmes",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/nous-m%C3%AAmes",
+          "status": null,
+          "error": "HTTP Error 404: Not Found",
+          "raw_path": null,
+          "plain_text_path": null
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "nous-mêmes, French revision 36366332, accepted field lines [6, 7]. DAF8 URL returned HTTP 404, not an original expression. The fixed French plural personal-pronoun head and short subject-agency relation are grammatical facts; the neighbouring Rougemont quotation is not a learner field. Fixed French wiki and scoped Lexique adaptation layers retain CC BY-SA 4.0, contributor/history attribution and modification notices.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    },
+    {
+      "source_id": "b157_fr_11025",
+      "title": "nœud",
+      "fixed_revision": 39867086,
+      "selected_locations": [
+        {
+          "frozen_row": 3847,
+          "field": "french_definition",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[enlacement|Enlacement]], [[entrecroisement]] serré de quelque chose de [[flexible]], ruban, soie, fil, corde, etc. que l’on fait soit à un bout pour l’[[arrêter]], soit avec deux bouts pour les [[unir]]."
+          }
+        },
+        {
+          "frozen_row": 3847,
+          "field": "ipa",
+          "source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''nœud''' {{pron|nø|fr}} {{m}}"
+          }
+        },
+        {
+          "frozen_row": 3847,
+          "field": "english",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[enlacement|Enlacement]], [[entrecroisement]] serré de quelque chose de [[flexible]], ruban, soie, fil, corde, etc. que l’on fait soit à un bout pour l’[[arrêter]], soit avec deux bouts pour les [[unir]]."
+          }
+        },
+        {
+          "frozen_row": 3847,
+          "field": "chinese",
+          "source_span": {
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[enlacement|Enlacement]], [[entrecroisement]] serré de quelque chose de [[flexible]], ruban, soie, fil, corde, etc. que l’on fait soit à un bout pour l’[[arrêter]], soit avec deux bouts pour les [[unir]]."
+          }
+        }
+      ],
+      "original_comparison": {
+        "dictionary": "DAF8",
+        "original_title": "nœud",
+        "url": "https://www.cnrtl.fr/definition/academie8/n%C5%93ud",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-nœud.html",
+        "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-nœud.txt",
+        "original_expression": "Enlacement, entrecroisement serré de quelque chose de flexible, ruban, soie, fil, corde, etc. que l'on fait soit à un bout pour l'arrêter, soit avec deux bouts pour les unir.",
+        "plain_text_column_1_based": 530,
+        "capture_format": "cnrtl_daf8_original_edition_html"
+      },
+      "comparators": [
+        {
+          "title": "nœud",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/n%C5%93ud",
+          "status": 200,
+          "error": null,
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-nœud.html",
+          "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\originals\\daf8-nœud.txt"
+        }
+      ],
+      "selected_original_expression_decision": "passed",
+      "review_reason": "nœud, French revision 39867086, accepted field lines [10, 11]. The retained original DAF8 expression independently corresponds to this selected use: Enlacement, entrecroisement serré de quelque chose de flexible, ruban, soie, fil, corde, etc. que l'on fait soit à un bout pour l'arrêter, soit avec deux bouts pour les unir. Original institutional collective edition 1932–1935: established CPI L123-3 basis, conservative French expiry 2006-01-01. Wiki and Lexique adaptations remain CC BY-SA 4.0; the original HTML layout/editorial material is not selected.",
+      "reviewer": "independent-content-reviewer-157 / codex/d2-review-157"
+    }
+  ],
+  "unresolved_sources": [],
+  "excluded_unresolved_original_material": [
+    {
+      "title": "crapaud",
+      "reference": "Dictionnaire encyclopédique Quillet, Paris, 1934",
+      "scope": "pattes/mœurs/pustules venimeuses extensions outside accepted source span and learner text",
+      "status": "original_expression_not_verified_not_admitted"
+    }
+  ]
+}

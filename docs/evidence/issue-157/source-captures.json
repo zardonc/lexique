@@ -739,5 +739,14 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157",
   "captured_at_utc": "2026-11-23T17:36:22.380833+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157\\selection.py",
+  "independent_review_audit": {
+    "reviewer": "independent-content-reviewer-157 / codex/d2-review-157",
+    "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157",
+    "audit_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-157\\audit.py",
+    "raw_author_copy": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-157",
+    "original_expressions": "original-expression-review.json",
+    "source_bytes": "literal API UTF-8/raw equality, exact selected/support spans, complete contributor chains",
+    "phonetic_field_rights": "50 independently reviewed isolated head variants"
+  }
 }
