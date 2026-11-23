@@ -2,7 +2,7 @@
   "ticket": 158,
   "parent": 78,
   "schema": "lexique-d2-content-candidate-handoff-1",
-  "status": "independent_review_complete_with_unresolved_group",
+  "status": "independently_reviewed_content_and_scoped_exceptions_parent_admission_pending",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     3851,
@@ -57,56 +57,27 @@
     3900
   ],
   "frozen_groups": 50,
-  "proposed_groups": 50,
-  "proposed_senses": 50,
-  "proposed_fields": 200,
+  "proposed_groups": 49,
+  "proposed_senses": 49,
+  "proposed_fields": 196,
   "source_count": 53,
   "independently_accepted_new_groups": 49,
   "independently_accepted_new_fields": 196,
   "independent_reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-  "resource_admission": "blocked_exact_cm_NOM_binding",
-  "unresolved_field_blockers": [
-    {
-      "frozen_row": 3885,
-      "headword": "cm",
-      "pos": "NOM",
-      "field": "french_definition",
-      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
-    },
-    {
-      "frozen_row": 3885,
-      "headword": "cm",
-      "pos": "NOM",
-      "field": "ipa",
-      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
-    },
-    {
-      "frozen_row": 3885,
-      "headword": "cm",
-      "pos": "NOM",
-      "field": "english",
-      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
-    },
-    {
-      "frozen_row": 3885,
-      "headword": "cm",
-      "pos": "NOM",
-      "field": "chinese",
-      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
-    }
-  ],
+  "resource_admission": "reviewed_shard_ready_for_coordinator_conversion",
+  "unresolved_field_blockers": [],
   "reused_groups": 0,
   "reused_fields": 0,
   "pending_independent_review_rows": [],
-  "independent_quality": "partial_196_accepted_4_unresolved",
+  "independent_quality": "passed_for_selected_content",
   "selected_span_rights": "passed_at_selected_text_boundary",
-  "construction_and_spelling_review": "49_passed_cm_NOM_unresolved",
+  "construction_and_spelling_review": "passed_for_selected_uses_and_source_binding_only",
   "final_output_validation": "passed_independent_shard_checks_canonical_conversion_pending",
   "native_checks": "integration_owned_not_run",
   "conversion_and_packaging": "integration_owned_not_run",
   "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158\\fixed-author-materials",
-  "proposed_field_characters": 10123,
-  "longest_field_characters": 191,
+  "proposed_field_characters": 9653,
+  "longest_field_characters": 162,
   "imported_original_boundary_sources": [
     "b158_fr_36621",
     "b158_fr_37586",
@@ -137,7 +108,7 @@
     "b158_fr_149876",
     "b158_fr_155014"
   ],
-  "annotation_exception_groups": 0,
+  "annotation_exception_groups": 1,
   "specialist_exception_groups": 0,
   "newly_admitted_fields": 0,
   "missing_authored_fields": 0,
@@ -145,10 +116,10 @@
   "pending_independent_review_fields": 0,
   "pending_independent_rights_fields": 0,
   "author_semantic_scope_check": "All 50 actual proposed uses and 200 authored fields read against their captured definition, POS, IPA and restrictions; this is the author check.",
-  "missing_admitted_fields": 200,
+  "missing_admitted_fields": 4,
   "learner_acceptance": "not_run",
   "pending_owner_choices": [],
-  "selected_original_expression_review": "passed_independent_review_at_all_200_selected_spans",
+  "selected_original_expression_review": "passed_independent_review_at_all_196_selected_spans",
   "modern_and_grammar_corroboration": "modern-corroboration.json",
   "baseline_admitted_groups": 3431,
   "baseline_admitted_fields": 13724,
@@ -163,13 +134,7 @@
     3898,
     3900
   ],
-  "unresolved_classification_decisions": [
-    {
-      "frozen_row": 3885,
-      "status": "pending_independent_construction_and_classification_review",
-      "proposal": "Nominal centimetre reading of the source-classified symbol cm; no frozen identity change or exemption requested."
-    }
-  ],
+  "unresolved_classification_decisions": [],
   "accepted_groups": 49,
   "accepted_fields": 196,
   "missing_fields": 4,
@@ -177,9 +142,7 @@
   "replacement_fields": 7,
   "replacement_text_fields": 6,
   "unchanged_accepted_fields": 189,
-  "unresolved_rows": [
-    3885
-  ],
+  "unresolved_rows": [],
   "reviewed_author_commit": "555ef4939ef551ce48a1b712c8bbc82e3b0f6382",
   "author_delivery_head": "07d273f949f25f9475d6add3b5bb1dd6a81e2c13",
   "review_base": "069d3caa54b97afbcb6ac5f93c1367cfa996c019",
@@ -187,12 +150,65 @@
   "review_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\review-158",
   "review_branch": "codex/d2-review-158",
   "pending_parent_gates": [
-    "Owner decision or new exact cm/NOM evidence",
     "Canonical conversion/global coverage and actual combined notices/source obligations",
     "Actual native all-group lookup, trusted save/reopen and learner-data preservation",
     "Learner acceptance; offline/platform/release verification"
   ],
-  "count_boundary": "50 groups and 200 fields reviewed; 49 groups/196 fields accepted in this shard, four cm/NOM fields unresolved. All 200 selected expression rights passed; zero new canonical fields admitted.",
+  "count_boundary": "50 frozen groups retained; 49 groups/196 fields accepted in this shard, one owner-approved cm/NOM zero-field annotation with four missing fields. 196 selected expression rights pass; four rejected proposals and their rights reviews are retained separately. Zero new canonical fields admitted.",
   "accepted_field_characters": 9653,
-  "integration_tip_included": "79e6b44f5a1f0a44b9074806046cc9505611f9b5"
+  "integration_tip_included": "e7db3a58473191f762b1ebd3ff72fb29a45687e3",
+  "reviewed_proposal_groups": 50,
+  "reviewed_proposal_fields": 200,
+  "annotation_missing_fields": 4,
+  "missing_annotation_fields": 4,
+  "canonical_missing_fields": 200,
+  "ordinary_missing_fields": 0,
+  "unresolved_quality_fields": 0,
+  "unresolved_rights_fields": 0,
+  "unresolved_review_fields": 4,
+  "approved_annotation_rows": [
+    3885
+  ],
+  "approved_annotations": [
+    {
+      "frozen_row": 3885,
+      "headword": "cm",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "10.89",
+      "subtitle_pos_per_million": "10.89",
+      "senses": [],
+      "status": "approved_annotation_exception",
+      "annotation_kind": "owner_approved_zero_field",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/158",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3885 cm/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, with the exact reply \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This issue-158 implementation applies only to row 3885; row 3783 ya/NOM belongs to issue 156. Decision record: context/approved-scope-decisions.md.",
+        "exact_reply": "Annotate ya and cm with zero fields",
+        "evidence": "docs/evidence/issue-158/owner-approval.json"
+      },
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/158",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3885 cm/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, with the exact reply \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This issue-158 implementation applies only to row 3885; row 3783 ya/NOM belongs to issue 156. Decision record: context/approved-scope-decisions.md.",
+        "exact_reply": "Annotate ya and cm with zero fields",
+        "evidence": "docs/evidence/issue-158/owner-approval.json"
+      },
+      "alias_admission": "not_admitted",
+      "unresolved_reason": "Fixed cm classifies the measurement form as a symbol; centimètre supplies the noun meaning and cm its recorded pronunciation. OQLF independently labels centimètre n. m. and describes cm symbol orthography. Exact cm/NOM lexical binding remains unestablished. The owner resolved scope with this exact zero-field annotation; no proposed sense or specialist content is admitted.",
+      "rejected_proposal": "docs/evidence/issue-158/rejected-cm-proposal.json"
+    }
+  ],
+  "quality_accepted_groups": 49,
+  "quality_accepted_fields": 196,
+  "rights_accepted_fields": 196,
+  "independently_rights_reviewed_fields": 196,
+  "required_content_fields": 196,
+  "owner_scope_decision": "docs/evidence/issue-158/owner-approval.json",
+  "owner_scope_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158-owner-scope"
 }

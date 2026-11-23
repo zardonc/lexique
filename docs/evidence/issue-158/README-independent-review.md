@@ -2,8 +2,10 @@
 
 All 50 frozen groups, 200 fields and 50 selected uses were independently reviewed
 against retained source text. **49 groups / 196 fields pass quality and use review;
-four `cm/NOM` fields remain unresolved.** Selected-expression rights pass for all
-200 reviewed field proposals, separately from linguistic admission.
+four `cm/NOM` fields remain unresolved under an approved annotation.**
+Selected-expression rights pass for all 196 retained content fields. The four
+rejected cm field proposals and their passed rights reviews are retained
+separately from linguistic admission.
 
 `g/NOM` selects the ordinary masculine invariable name of lowercase letter `g`,
 pronounced `/ʒe/`. Fixed Wiktionnaire revision 39772409, French letter frame
@@ -27,9 +29,16 @@ preserve the complete author proposals, including the acceleration-unit sense.
 The source classifies `cm` as a symbol and `centimètre` as a noun. Its recorded
 reading `/sɑ̃.ti.mɛtʁ/` and everyday measurement use are established, but the exact
 `cm/NOM` lexical binding is not. [OQLF](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8350387/centimetre)
-retains that distinction. The [scope-gap proposal](scope-gap.json) recommends an
-owner-decided zero-field annotation preserving row 3885 and four missing fields.
-It is a proposal; no approval or annotation is recorded as implemented.
+retains that distinction. The [scope decision](scope-gap.json) implements the
+[owner approval](owner-approval.json) from 2026-11-23, America/Vancouver:
+**Annotate ya and cm with zero fields**, recorded in
+`context/approved-scope-decisions.md`. Row 3885 has `senses: []`, zero admitted
+fields and four explicit unresolved fields carrying the exact decision pointer.
+All 50 frozen identities, both frequency strings, row order and the 4,087-group
+denominator are preserved. This shard applies the approval only to cm;
+issue 156 owns ya. No specialist sense or substitute noun is admitted.
+The [rejected proposal](rejected-cm-proposal.json) preserves both authored and
+reviewed cm content and its field/use/rights/source records.
 
 ## Evidence and verification
 
@@ -54,12 +63,17 @@ Focused checks cover exact frozen identity/frequencies, all four field bindings,
 per-field/per-use decisions, rights consistency, preserved proposals, accepted
 replacements and the unresolved group. Documentation links and diff whitespace
 are checked separately. Final commands, results and tested commit are recorded
-in the retained final verification file.
+in the retained final verification file. Owner-scope proof, pre-change snapshots,
+the focused red/green regression, final shard checks and coordinator-edit
+preservation evidence are archived outside the repository at
+`C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-158-owner-scope`.
+The committed integration tip is included in the review branch; its unstaged
+coordinator edits remain in the integration checkout.
 
 ## Remaining gates
 
-`cm/NOM` requires an owner scope decision or new exact noun evidence. This shard
-has zero newly admitted canonical fields. Canonical assembly, combined notices,
+The owner scope decision is implemented with four missing annotation fields.
+This shard has zero newly admitted canonical fields. Canonical assembly, combined notices,
 conversion/global coverage, actual native lookup/trusted save/reopen, upgrade
 preservation, learner acceptance and offline/platform/release checks remain
 coordinator-owned. No runtime, global resource, tracker or push changes are made.

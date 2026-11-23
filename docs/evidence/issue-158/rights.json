@@ -4296,8 +4296,8 @@
       "selected_text_rights_reason": "péso, fixed revision 39919518, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. No historical/imported original-work notice is attached to this selected lexical expression. Selected Wiktionnaire editorial text and Lexique adaptations retain CC BY-SA 4.0; no proprietary referenced wording is adopted. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
     }
   ],
-  "proposed_fields": 200,
-  "independent_rights_fields_accepted": 200,
+  "proposed_fields": 196,
+  "independent_rights_fields_accepted": 196,
   "final_combined_package_status": "pending_parent_conversion_notices_and_admission",
   "fields": [
     {
@@ -8707,106 +8707,6 @@
       "accepted_text": "遗嘱；一个人用来声明身后意愿的文书。",
       "reviewed_text": "遗嘱；一个人用来声明身后意愿的文书。",
       "selected_text_rights_reason": "New Chinese explanatory translation under CC BY-SA 4.0, not an upstream bilingual quote. testament, fixed revision 39698319, actual selected field lines [9, 10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 import markers at [86] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
-    },
-    {
-      "sense_id": "b158-3885-cm-nom-selected",
-      "frozen_row": 3885,
-      "field": "french_definition",
-      "source_id": "b158_fr_2093",
-      "source_revision": 39697323,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
-      "exact_source_span": {
-        "line_1_based": 10,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "contributors_record": "source-context.json#b158_fr_2093",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-      "accepted_text": null,
-      "reviewed_text": "Unité de longueur appelée centimètre, valant un centième de mètre ; écrite cm dans les mesures et lue centimètre. Le symbole cm reste invariable et ne prend pas de point.",
-      "selected_text_rights_reason": "Scoped French adaptation of selected semantics. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
-    },
-    {
-      "sense_id": "b158-3885-cm-nom-selected",
-      "frozen_row": 3885,
-      "field": "ipa",
-      "source_id": "b158_fr_241139",
-      "source_revision": 39962845,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
-      "exact_source_span": {
-        "line_1_based": 22,
-        "column_1_based": 1,
-        "raw_source_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "contributors_record": "source-context.json#b158_fr_241139",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [],
-      "selected_boundary": "Isolated IPA notation only, not audio or linked media.",
-      "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-      "accepted_text": null,
-      "reviewed_text": "/sɑ̃.ti.mɛtʁ/",
-      "selected_text_rights_reason": "One recorded French IPA variant selected with slashes; no audio or media copied. cm, fixed revision 39962845, actual selected field lines [22]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. No historical/imported original-work notice is attached to this selected lexical expression. Selected Wiktionnaire editorial text and Lexique adaptations retain CC BY-SA 4.0; no proprietary referenced wording is adopted. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
-    },
-    {
-      "sense_id": "b158-3885-cm-nom-selected",
-      "frozen_row": 3885,
-      "field": "english",
-      "source_id": "b158_fr_2093",
-      "source_revision": 39697323,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
-      "exact_source_span": {
-        "line_1_based": 10,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "contributors_record": "source-context.json#b158_fr_2093",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-      "accepted_text": null,
-      "reviewed_text": "Centimetre, one hundredth of a metre; written cm in measurements and read centimètre in French. The symbol cm is invariable and has no full stop.",
-      "selected_text_rights_reason": "New English explanatory translation under CC BY-SA 4.0, not an upstream bilingual quote. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
-    },
-    {
-      "sense_id": "b158-3885-cm-nom-selected",
-      "frozen_row": 3885,
-      "field": "chinese",
-      "source_id": "b158_fr_2093",
-      "source_revision": 39697323,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
-      "exact_source_span": {
-        "line_1_based": 10,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "contributors_record": "source-context.json#b158_fr_2093",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
-      "accepted_text": null,
-      "reviewed_text": "厘米，等于百分之一米；计量时写作 cm，法语读作 centimètre。符号 cm 不变形，末尾不加缩写点。",
-      "selected_text_rights_reason": "New Chinese explanatory translation under CC BY-SA 4.0, not an upstream bilingual quote. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
     },
     {
       "sense_id": "b158-3886-convoquer-ver-selected",
@@ -16327,5 +16227,6 @@
       "review_reason": "The selected difficult-situation use is labelled FAMILIER; the three learner meanings explicitly retain this restriction.",
       "rights_boundary": "External current grammatical/register facts only. Proprietary definitions and descriptions are not copied into learner fields or assigned the Wiktionnaire licence."
     }
-  ]
+  ],
+  "reviewed_proposal_fields": 200
 }
