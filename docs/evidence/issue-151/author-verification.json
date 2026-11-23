@@ -1,0 +1,95 @@
+{
+  "ticket": 151,
+  "role": "content_author",
+  "status": "author_resource_checks_passed_independent_review_pending",
+  "baseline_commit": "03a27e42c261afda7ffd4a927a4d2810f8221e8a",
+  "baseline_content_version": "core-149-v1",
+  "baseline_admitted_groups": 3431,
+  "scope_denominator_groups": 4087,
+  "scope_denominator_headwords": 3773,
+  "frozen_first_row": 3501,
+  "frozen_last_row": 3550,
+  "proposed_groups": 50,
+  "proposed_senses": 50,
+  "proposed_fields": 200,
+  "fixed_source_pages": 52,
+  "contributor_api_parts": 9,
+  "contributor_chains": 6,
+  "newly_admitted_groups": 0,
+  "newly_admitted_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "missing_admitted_fields": 200,
+  "independent_reviewer": null,
+  "unresolved_author_content_rows": [],
+  "rights_limitation": "Exact selected-expression originality, original-work correspondence and combined redistribution eligibility remain pending separate review. The established DAF8 French collective-work expiry does not establish worldwide rights or permission for modern external dictionary prose.",
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-151",
+  "helpers": [
+    "setup.py",
+    "adapt_helpers.py",
+    "capture.py",
+    "capture_support.py",
+    "capture_usage.py",
+    "selection.py",
+    "prepare_candidates.py",
+    "finish_author_package.py",
+    "write_notices.py",
+    "finalize_author.py",
+    "reproduce.py"
+  ],
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_151.py Batch151Tests.test_exact_frozen_groups_have_complete_resource_records",
+      "result": "failed_before_content_as_expected",
+      "failure": "All 50 exact frozen groups absent at the resource boundary",
+      "log": "red-membership.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_151.py Batch151Tests.test_author_proposals_and_rights_do_not_claim_independent_admission",
+      "result": "failed_before_preserved_proposals_as_expected",
+      "log": "red-rights.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_151.py",
+      "result": "passed",
+      "tests": 5,
+      "boundary": "exact membership, all four-field bindings, fixed source bytes, French/POS/IPA frames, contributor pagination, preserved author proposals, rights/notices and real converter rejection of pending independent review",
+      "log": "green-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 <author_evidence_root>/reproduce.py",
+      "result": "passed",
+      "reproduced_files": 29,
+      "byte_equality": true,
+      "network_requests": 0,
+      "log": "reproduction.log"
+    },
+    {
+      "command": "pwsh -NoProfile -File scripts/check-docs.ps1",
+      "result": "passed",
+      "documents": 517,
+      "local_links": 4025,
+      "problems": [],
+      "log": "docs-check-final.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "remaining_gates": {
+    "independent_quality": "pending",
+    "independent_use_and_spelling": "pending",
+    "independent_selected_expression_rights": "pending",
+    "canonical_conversion_and_actual_combined_notices": "integration_owned_not_run",
+    "native_all_group_lookup_save_reopen": "integration_owned_not_run",
+    "learner_acceptance": "not_run",
+    "whole_core_and_release": "incomplete"
+  },
+  "unrun_checks": [
+    "frontend lint, typecheck and build: no frontend changes",
+    "Rust formatting, compilation and tests: no Rust changes",
+    "browser/native flows and packaging: coordinator-owned integration boundary"
+  ]
+}
