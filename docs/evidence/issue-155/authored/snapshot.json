@@ -1,0 +1,84 @@
+{
+  "original_author_commit": "66c89c5853d53fc9343869e060791e3be7a9d580",
+  "review_base": "069d3caa54b97afbcb6ac5f93c1367cfa996c019",
+  "reviewer": "lexique-review-155 / codex/d2-review-155",
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-155",
+  "preserved_files": [
+    {
+      "proposed_path": "admission.json",
+      "preserved_path": "admission.json",
+      "bytes": 3338
+    },
+    {
+      "proposed_path": "COPYING",
+      "preserved_path": "COPYING",
+      "bytes": 20137
+    },
+    {
+      "proposed_path": "field-review.json",
+      "preserved_path": "field-review.json",
+      "bytes": 885848
+    },
+    {
+      "proposed_path": "groups.json",
+      "preserved_path": "groups.json",
+      "bytes": 204277
+    },
+    {
+      "proposed_path": "NOTICES.md",
+      "preserved_path": "NOTICES.md.txt",
+      "bytes": 16567
+    },
+    {
+      "proposed_path": "README.md",
+      "preserved_path": "README.md.txt",
+      "bytes": 3273
+    },
+    {
+      "proposed_path": "reuse.json",
+      "preserved_path": "reuse.json",
+      "bytes": 275
+    },
+    {
+      "proposed_path": "review-candidates.md",
+      "preserved_path": "review-candidates.md.txt",
+      "bytes": 35374
+    },
+    {
+      "proposed_path": "rights.json",
+      "preserved_path": "rights.json",
+      "bytes": 1037013
+    },
+    {
+      "proposed_path": "selected-rights.md",
+      "preserved_path": "selected-rights.md.txt",
+      "bytes": 4396
+    },
+    {
+      "proposed_path": "source-captures.json",
+      "preserved_path": "source-captures.json",
+      "bytes": 40088
+    },
+    {
+      "proposed_path": "source-context.json",
+      "preserved_path": "source-context.json",
+      "bytes": 677956
+    },
+    {
+      "proposed_path": "source-excerpts.json",
+      "preserved_path": "source-excerpts.json",
+      "bytes": 205170
+    },
+    {
+      "proposed_path": "sources.json",
+      "preserved_path": "sources.json",
+      "bytes": 135193
+    },
+    {
+      "proposed_path": "verification.json",
+      "preserved_path": "verification.json",
+      "bytes": 3041
+    }
+  ],
+  "snapshot_reason": "The review base had top-level proposals and no authored directory; all exact original proposal bytes are retained."
+}
