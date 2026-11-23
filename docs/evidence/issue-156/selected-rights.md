@@ -1,9 +1,12 @@
 # Selected source and adaptation rights for #156
 
 Separate selected-text rights review passes for **200 fields / 50 uses**.
-Quality acceptance is distinct: 196 fields / 49 uses pass; ya's four candidate
-fields and one everyday use remain unresolved. [Field review](field-review.json)
-and [rights](rights.json) retain exact spans and individual reasons.
+Scope admission selects **196 fields / 49 ordinary uses + one zero-field ya
+annotation**. The [owner decision](owner-approval.json) retains four unresolved
+missing fields. The [rejected proposal](rejected-proposals.json) preserves ya's
+four candidate fields and unresolved everyday use. [Field review](field-review.json)
+and the unchanged [rights audit](rights.json) retain exact spans and individual
+reasons; rights clearance of the proposal is separate from scope admission.
 
 ## Contributions and adaptations
 
@@ -65,7 +68,9 @@ references, not permissions to copy the referenced books.
 `ya` line 13 is an argot label plus the single lexical equivalent “couteau.”
 Grand Robert belongs to etymology; the 2019 regional-money reference belongs to
 another noun. The selected lexical-fact boundary passes rights; everyday
-eligibility remains unresolved. Bob/Cordial and the 2020 Expressio comment are
+eligibility remains unresolved. The owner approved the exact zero-field
+annotation on 2026-11-23, America/Vancouver; no rare-slang fields are selected.
+Bob/Cordial and the 2020 Expressio comment are
 corroboration only; their prose and dated quotations are not bundled. Bob's code
 10 is social register, not everyday frequency.
 

@@ -2,9 +2,16 @@
 
 All 200 proposed fields and 50 selected uses were inspected against the retained
 fixed French sources. **196 unchanged fields / 49 groups are independently
-accepted; four ya/NOM fields and one use remain unresolved.** Selected-text
-rights pass for all 200 fields / 50 uses. Two original-work boundary records
-were corrected; no field wording changed.
+accepted.** The independently reviewed ya/NOM proposal retains four unresolved
+fields and one unresolved everyday use under [rejected proposals](rejected-proposals.json).
+Selected-text rights pass for all 200 proposed fields / 50 uses. Two original-work
+boundary records were corrected; no field wording changed.
+
+The [owner decision](owner-approval.json) of 2026-11-23, America/Vancouver,
+approves frozen row 3783 as a zero-field annotation. The selected ledger now
+contains **196 fields / 49 ordinary uses + one annotation / four missing fields**.
+Scope approval does not change the independent linguistic conclusion or admit
+the rare-slang proposal. The original author and review archives remain separate.
 
 Reviewer: the separate #156 field/use/rights reviewer in
 `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/review-156`, branch
@@ -20,12 +27,15 @@ scripts/test_core_batch_156.py`. Original proposals and test are preserved
 byte-for-byte under [authored/](authored/README.md.txt). Markdown snapshots use
 the `.md.txt` suffix so their original relative links remain documentary text.
 
-[Field review](field-review.json) contains 200 individual linguistic reasons,
+[Field review](field-review.json) contains 196 accepted individual linguistic reasons,
 exact proposed/accepted text, fixed spans, reviewer identity and separate rights
-decisions. Its 50 use reasons cover POS, inflection, constructions, excluded
+decisions. Its 49 ordinary use reasons cover POS, inflection, constructions, excluded
 senses and contemporary interpretation. [Replacements](accepted-replacements.json)
 is empty. Source/context/excerpt/rights/capture records retain the existing
-schemas and actual article/contributor origins.
+schemas and actual article/contributor origins. The four rejected field reasons
+and one rejected use are preserved verbatim in [rejected proposals](rejected-proposals.json).
+Four explicit unresolved missing-field records carry the matching owner decision
+in the issue-142 annotation schema.
 
 The [source audit](source-audit.json) checked 50 literal API/raw UTF-8 byte
 matches, 200 selected field spans, 190 unique supporting spans, 1,540 span
@@ -58,29 +68,34 @@ support.
 
 [The decision](ya-modern-use-review.json) keeps everyday eligibility unresolved.
 The four texts/IPA are semantically supported candidates with no accepted text.
-No spelling replacement, annotation exception or owner approval is introduced.
+The owner selected exactly **Annotate ya and cm with zero fields** on 2026-11-23,
+America/Vancouver. For #156 this applies only to row 3783 `ya/NOM`: its selected
+senses are empty, with zero admitted fields and four missing fields. Its exact
+identity, order and frequency strings remain frozen. No specialist content,
+alias or spelling/POS substitution is approved.
 Everyday support is unproved; the noun is not declared obsolete or unused.
 External dictionary prose, the Dard quotation and the Expressio joke are not
 learner fields.
 
 ## Validation and limits
 
-- `uv run --no-project python -B -X utf8 scripts/test_core_batch_156.py`: eight
-  tests passed, including frozen membership/frequencies, four-field/rights
+- `uv run --no-project python -B -X utf8 scripts/test_core_batch_156.py`: nine
+  tests passed, including the exact approved annotation, frozen membership/frequencies, four-field/rights
   alignment, captures, preserved proposals and real converter rejection of
   author-only/unresolved quality decisions.
-- Focused missing-boundary and pending-acceptance failures plus passing checks
-  are retained in the external proof archive.
-- `pnpm test:docs`: 554 documents, 4,259 local links, zero problems.
-  `git diff --cached --check`: passed. Final commands and SHA are retained in
-  the external handoff.
+- The focused annotation regression failed on the populated ya sense before
+  implementation and passed with the empty-sense annotation. Actual command logs
+  and byte-preservation results are retained in the owner-scope archive and
+  [verification record](owner-scope-verification.json).
 - Canonical conversion, combined notices, native lookup/save/reopen, upgrade
   preservation, learner acceptance and offline/platform checks were not run.
   Frontend/Rust code did not change.
 
 Execution proof/helpers/corroboration are archived at
 `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-156`.
-The canonical baseline remains `core-149-v1`, 3,431 groups, nineteen annotations
-and the 4,087-group denominator. Zero new canonical fields are admitted; #156
-remains incomplete while ya everyday support and parent integration gates remain
-unresolved.
+The historical canonical baseline for this review is `core-149-v1`, 3,431 groups,
+nineteen annotations and the 4,087-group denominator. The owner-scope proof is at
+`C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-156-owner-scope`;
+its original-review copy is byte-for-byte preserved. Zero new canonical fields
+are admitted by this shard; conversion, native execution and parent acceptance
+remain separate gates.

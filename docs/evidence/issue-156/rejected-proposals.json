@@ -1,0 +1,641 @@
+{
+  "ticket": 156,
+  "status": "unadmitted_research_proposals",
+  "proposals": [
+    {
+      "frozen_row": 3783,
+      "headword": "ya",
+      "lexique_cgram": "NOM",
+      "reason": "The exact ya/NOM slang knife proposal is semantically sourced, but contemporary everyday eligibility remains unresolved in the independent review. The owner approved this exact zero-field annotation only; no rare-slang or specialist content, alias or substitution is admitted.",
+      "authored_proposal": {
+        "frozen_row": 3783,
+        "headword": "ya",
+        "lexique_cgram": "NOM",
+        "subtitle_lemma_per_million": "11.45",
+        "subtitle_pos_per_million": "11.45",
+        "senses": [
+          {
+            "sense_id": "b156-3783-ya-nom-selected",
+            "source_headword": "ya",
+            "use": "Slang knife noun; masculine; modern everyday status requires corroboration.",
+            "use_language": "en",
+            "excluded_uses": "Regional money, alphabet letters and informal contraction of il y a.",
+            "independent_review": "pending",
+            "resource_admission": "pending_separate_independent_review",
+            "cefr": null,
+            "fields": {
+              "french_definition": {
+                "language": "fr",
+                "text": "En argot, couteau.",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 13,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "pending",
+                "rights_eligibility_status": "pending_separate_selected_span_audit"
+              },
+              "ipa": {
+                "language": "und",
+                "text": "/ja/",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 12,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "pending",
+                "rights_eligibility_status": "pending_separate_selected_span_audit"
+              },
+              "english": {
+                "language": "en",
+                "text": "In slang, a knife.",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 13,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "pending",
+                "rights_eligibility_status": "pending_separate_selected_span_audit"
+              },
+              "chinese": {
+                "language": "zh",
+                "text": "俚语：刀子。",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 13,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "pending",
+                "rights_eligibility_status": "pending_separate_selected_span_audit"
+              }
+            }
+          }
+        ]
+      },
+      "independently_reviewed_proposal": {
+        "frozen_row": 3783,
+        "headword": "ya",
+        "lexique_cgram": "NOM",
+        "subtitle_lemma_per_million": "11.45",
+        "subtitle_pos_per_million": "11.45",
+        "senses": [
+          {
+            "sense_id": "b156-3783-ya-nom-selected",
+            "source_headword": "ya",
+            "use": "Slang knife noun; masculine; modern everyday status requires corroboration.",
+            "use_language": "en",
+            "excluded_uses": "Regional money, alphabet letters and informal contraction of il y a.",
+            "independent_review": "unresolved",
+            "resource_admission": "pending_separate_independent_review",
+            "cefr": null,
+            "fields": {
+              "french_definition": {
+                "language": "fr",
+                "text": "En argot, couteau.",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 13,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "unresolved",
+                "rights_eligibility_status": "passed_at_selected_text_boundary",
+                "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author"
+              },
+              "ipa": {
+                "language": "und",
+                "text": "/ja/",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 12,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "unresolved",
+                "rights_eligibility_status": "passed_at_selected_text_boundary",
+                "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author"
+              },
+              "english": {
+                "language": "en",
+                "text": "In slang, a knife.",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 13,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "unresolved",
+                "rights_eligibility_status": "passed_at_selected_text_boundary",
+                "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author"
+              },
+              "chinese": {
+                "language": "zh",
+                "text": "俚语：刀子。",
+                "source_id": "b156_fr_11978",
+                "source_span": {
+                  "line_1_based": 13,
+                  "column_1_based": 1,
+                  "raw_source_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+                },
+                "content_license": "CC-BY-SA-4.0",
+                "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+                "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+                "independent_review": "unresolved",
+                "rights_eligibility_status": "passed_at_selected_text_boundary",
+                "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author"
+              }
+            }
+          }
+        ]
+      },
+      "independently_reviewed_fields": [
+        {
+          "sense_id": "b156-3783-ya-nom-selected",
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "field": "french_definition",
+          "language": "fr",
+          "proposed_text": "En argot, couteau.",
+          "exact_source": {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 13,
+            "column_1_based": 1,
+            "reviewed_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 3,
+              "column_1_based": 1,
+              "reviewed_excerpt": "== {{langue|fr}} =="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "reviewed_excerpt": "{{fr-rég|ja}}"
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "reviewed_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+            }
+          ],
+          "author_validation": "passed_fixed_capture_binding_check",
+          "accepted_text_quality_status": "unresolved",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "author_rights_proposal": {
+            "source_id": "b156_fr_11978",
+            "evidence": "rights.json and source-context.json",
+            "selected_span_independent_rights_review": "pending"
+          },
+          "accepted_text": null,
+          "review_reason": "En argot, couteau is semantically exact for line 13; blocked by the unresolved everyday requirement, not a missing definition. Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "selected_text_rights_reason": "Scoped French adaptation of selected lexical semantics. ya, fixed revision 39362597, selected lines [12, 13]: Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved. Selected lexical definition/head/grammar are separated from literary/news quotations, image captions, etymological references, translations in other languages and unselected senses. No DAF8 import marker attaches to the selected text; bibliographic references are not permissions to copy external expression. Grand Robert is an etymology reference at line 4; the 2019 regional-money source at line 29 belongs to another noun. Line 13 supplies only the argot label and single lexical equivalent couteau. Bob, Cordial, the Dard quotation and the Expressio joke are corroboration, not redistributed fields or permission for their prose. Fixed revision and full history plus all returned named/anonymous article-contributor credits preserve attribution, without claiming sentence-level authorship. CC BY-SA 4.0 covers the wiki contribution/adaptation and new scoped Lexique wording, with retained source, modification, ShareAlike and no additional restrictions. Actual combined canonical redistribution remains pending.",
+          "independence": true,
+          "reviewed_candidate_text": "En argot, couteau.",
+          "semantic_alignment_status": "supported_exact_knife_noun_but_everyday_eligibility_unresolved"
+        },
+        {
+          "sense_id": "b156-3783-ya-nom-selected",
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "field": "ipa",
+          "language": "und",
+          "proposed_text": "/ja/",
+          "exact_source": {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "reviewed_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}",
+            "ipa_variant_column_1_based": 17,
+            "ipa_variant_excerpt": "ja"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 3,
+              "column_1_based": 1,
+              "reviewed_excerpt": "== {{langue|fr}} =="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "reviewed_excerpt": "{{fr-rég|ja}}"
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "reviewed_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+            }
+          ],
+          "author_validation": "passed_fixed_capture_binding_check",
+          "accepted_text_quality_status": "unresolved",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "author_rights_proposal": {
+            "source_id": "b156_fr_11978",
+            "evidence": "rights.json and source-context.json",
+            "selected_span_independent_rights_review": "pending"
+          },
+          "accepted_text": null,
+          "review_reason": "The exact masculine head at line 12 records /ja/; no changed spelling, contraction pronunciation or noun substitution is used. Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "selected_text_rights_reason": "Recorded isolated-head IPA variant with slashes; no audio/media reused. ya, fixed revision 39362597, selected lines [12, 13]: Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved. Selected lexical definition/head/grammar are separated from literary/news quotations, image captions, etymological references, translations in other languages and unselected senses. No DAF8 import marker attaches to the selected text; bibliographic references are not permissions to copy external expression. Grand Robert is an etymology reference at line 4; the 2019 regional-money source at line 29 belongs to another noun. Line 13 supplies only the argot label and single lexical equivalent couteau. Bob, Cordial, the Dard quotation and the Expressio joke are corroboration, not redistributed fields or permission for their prose. Fixed revision and full history plus all returned named/anonymous article-contributor credits preserve attribution, without claiming sentence-level authorship. CC BY-SA 4.0 covers the wiki contribution/adaptation and new scoped Lexique wording, with retained source, modification, ShareAlike and no additional restrictions. Actual combined canonical redistribution remains pending.",
+          "independence": true,
+          "reviewed_candidate_text": "/ja/",
+          "semantic_alignment_status": "supported_exact_knife_noun_but_everyday_eligibility_unresolved"
+        },
+        {
+          "sense_id": "b156-3783-ya-nom-selected",
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "field": "english",
+          "language": "en",
+          "proposed_text": "In slang, a knife.",
+          "exact_source": {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 13,
+            "column_1_based": 1,
+            "reviewed_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 3,
+              "column_1_based": 1,
+              "reviewed_excerpt": "== {{langue|fr}} =="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "reviewed_excerpt": "{{fr-rég|ja}}"
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "reviewed_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+            }
+          ],
+          "author_validation": "passed_fixed_capture_binding_check",
+          "accepted_text_quality_status": "unresolved",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "author_rights_proposal": {
+            "source_id": "b156_fr_11978",
+            "evidence": "rights.json and source-context.json",
+            "selected_span_independent_rights_review": "pending"
+          },
+          "accepted_text": null,
+          "review_reason": "In slang, a knife correctly conveys this noun; lexical corroboration does not settle everyday admission. Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "selected_text_rights_reason": "New English explanatory translation, not a quoted upstream bilingual definition. ya, fixed revision 39362597, selected lines [12, 13]: Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved. Selected lexical definition/head/grammar are separated from literary/news quotations, image captions, etymological references, translations in other languages and unselected senses. No DAF8 import marker attaches to the selected text; bibliographic references are not permissions to copy external expression. Grand Robert is an etymology reference at line 4; the 2019 regional-money source at line 29 belongs to another noun. Line 13 supplies only the argot label and single lexical equivalent couteau. Bob, Cordial, the Dard quotation and the Expressio joke are corroboration, not redistributed fields or permission for their prose. Fixed revision and full history plus all returned named/anonymous article-contributor credits preserve attribution, without claiming sentence-level authorship. CC BY-SA 4.0 covers the wiki contribution/adaptation and new scoped Lexique wording, with retained source, modification, ShareAlike and no additional restrictions. Actual combined canonical redistribution remains pending.",
+          "independence": true,
+          "reviewed_candidate_text": "In slang, a knife.",
+          "semantic_alignment_status": "supported_exact_knife_noun_but_everyday_eligibility_unresolved"
+        },
+        {
+          "sense_id": "b156-3783-ya-nom-selected",
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "field": "chinese",
+          "language": "zh",
+          "proposed_text": "俚语：刀子。",
+          "exact_source": {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 13,
+            "column_1_based": 1,
+            "reviewed_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 3,
+              "column_1_based": 1,
+              "reviewed_excerpt": "== {{langue|fr}} =="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "reviewed_excerpt": "{{fr-rég|ja}}"
+            },
+            {
+              "source_id": "b156_fr_11978",
+              "revid": 39362597,
+              "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "reviewed_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+            }
+          ],
+          "author_validation": "passed_fixed_capture_binding_check",
+          "accepted_text_quality_status": "unresolved",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "author_rights_proposal": {
+            "source_id": "b156_fr_11978",
+            "evidence": "rights.json and source-context.json",
+            "selected_span_independent_rights_review": "pending"
+          },
+          "accepted_text": null,
+          "review_reason": "俚语：刀子 accurately conveys the same knife noun; admission remains blocked by everyday eligibility. Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "selected_text_rights_reason": "New Chinese explanatory translation, not a quoted upstream bilingual definition. ya, fixed revision 39362597, selected lines [12, 13]: Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved. Selected lexical definition/head/grammar are separated from literary/news quotations, image captions, etymological references, translations in other languages and unselected senses. No DAF8 import marker attaches to the selected text; bibliographic references are not permissions to copy external expression. Grand Robert is an etymology reference at line 4; the 2019 regional-money source at line 29 belongs to another noun. Line 13 supplies only the argot label and single lexical equivalent couteau. Bob, Cordial, the Dard quotation and the Expressio joke are corroboration, not redistributed fields or permission for their prose. Fixed revision and full history plus all returned named/anonymous article-contributor credits preserve attribution, without claiming sentence-level authorship. CC BY-SA 4.0 covers the wiki contribution/adaptation and new scoped Lexique wording, with retained source, modification, ShareAlike and no additional restrictions. Actual combined canonical redistribution remains pending.",
+          "independence": true,
+          "reviewed_candidate_text": "俚语：刀子。",
+          "semantic_alignment_status": "supported_exact_knife_noun_but_everyday_eligibility_unresolved"
+        }
+      ],
+      "independently_reviewed_usage": {
+        "sense_id": "b156-3783-ya-nom-selected",
+        "frozen_row": 3783,
+        "headword": "ya",
+        "pos": "NOM",
+        "source_headword": "ya",
+        "proposed_usage": "Slang knife noun; masculine; modern everyday status requires corroboration.",
+        "language": "en",
+        "excluded_uses": "Regional money, alphabet letters and informal contraction of il y a.",
+        "exact_source": {
+          "source_id": "b156_fr_11978",
+          "revid": 39362597,
+          "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{argot|fr}} [[couteau#fr|Couteau]]"
+        },
+        "supporting_sources": [
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 3,
+            "column_1_based": 1,
+            "reviewed_excerpt": "== {{langue|fr}} =="
+          },
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+          },
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "reviewed_excerpt": "{{fr-rég|ja}}"
+          },
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "reviewed_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+          }
+        ],
+        "construction_and_flexion_evidence": [
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 3,
+            "column_1_based": 1,
+            "reviewed_excerpt": "== {{langue|fr}} =="
+          },
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+          },
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 11,
+            "column_1_based": 1,
+            "reviewed_excerpt": "{{fr-rég|ja}}"
+          },
+          {
+            "source_id": "b156_fr_11978",
+            "revid": 39362597,
+            "url": "https://fr.wiktionary.org/w/index.php?title=ya&oldid=39362597",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=ya&action=history",
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "reviewed_excerpt": "'''ya''' {{pron|ja|fr}} {{m}}"
+          }
+        ],
+        "author_construction_and_flexion_interpretation": "Exact frozen ya/NOM bound to its French NOM frame and recorded headword pronunciation. Slang knife noun; masculine; modern everyday status requires corroboration.",
+        "author_everyday_use_assessment": "unresolved_modern_everyday_slang_use",
+        "accepted_usage_quality_status": "unresolved",
+        "everyday_sense_status": "unresolved",
+        "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+        "author_content_blocker": "The fixed French noun frame labels knife as slang but supplies no dated modern usage example. The other noun meanings do not resolve ordinary everyday use.",
+        "accepted_usage": null,
+        "everyday_use_decision": "unresolved",
+        "review_reason": "Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+        "everyday_sense_reason": "Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+        "independence": true
+      },
+      "independently_reviewed_unresolved_fields": [
+        {
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "sense_id": "b156-3783-ya-nom-selected",
+          "field": "french_definition",
+          "blocker": "Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "source_evidence": "source-excerpts.json; source-context.json",
+          "independent_quality": "unresolved_modern_everyday_use",
+          "selected_span_rights": "passed_at_selected_text_boundary",
+          "owner_exception": "not_approved",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "evidence": "ya-modern-use-review.json"
+        },
+        {
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "sense_id": "b156-3783-ya-nom-selected",
+          "field": "ipa",
+          "blocker": "Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "source_evidence": "source-excerpts.json; source-context.json",
+          "independent_quality": "unresolved_modern_everyday_use",
+          "selected_span_rights": "passed_at_selected_text_boundary",
+          "owner_exception": "not_approved",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "evidence": "ya-modern-use-review.json"
+        },
+        {
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "sense_id": "b156-3783-ya-nom-selected",
+          "field": "english",
+          "blocker": "Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "source_evidence": "source-excerpts.json; source-context.json",
+          "independent_quality": "unresolved_modern_everyday_use",
+          "selected_span_rights": "passed_at_selected_text_boundary",
+          "owner_exception": "not_approved",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "evidence": "ya-modern-use-review.json"
+        },
+        {
+          "frozen_row": 3783,
+          "headword": "ya",
+          "pos": "NOM",
+          "sense_id": "b156-3783-ya-nom-selected",
+          "field": "chinese",
+          "blocker": "Exact masculine knife noun, argot, not il y a, a letter-name or another language. Fixed revision 39362597 lines 12–13 and primary Bob/Cordial confirm semantics. Bob’s code 10 means strongly argotic, not everyday frequency. A 2020 metalinguistic joke supplies recent playful use; ordinary contemporary everyday support remains unresolved.",
+          "source_evidence": "source-excerpts.json; source-context.json",
+          "independent_quality": "unresolved_modern_everyday_use",
+          "selected_span_rights": "passed_at_selected_text_boundary",
+          "owner_exception": "not_approved",
+          "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+          "evidence": "ya-modern-use-review.json"
+        }
+      ],
+      "selected_rights_audit": "docs/evidence/issue-156/rights.json",
+      "everyday_use_evidence": "docs/evidence/issue-156/ya-modern-use-review.json",
+      "owner_scope_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/156",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3783 ya/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, by selecting \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, frequencies and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This #156 decision applies only to row 3783; row 3885 cm/NOM belongs to #158.",
+        "exact_reply": "Annotate ya and cm with zero fields",
+        "evidence": "docs/evidence/issue-156/owner-approval.json"
+      }
+    }
+  ]
+}
