@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany these independently reviewed records.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,13 +14,13 @@ Rows 3501–3550 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected everyday sense is accepted per exact group. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
+aliases. [Preserved authored proposals](authored/groups.json) retain every exact field and
 the selected and excluded uses.
 
 ## Article credits
@@ -34,7 +34,7 @@ are credited for selection, French adaptation and the new English/Chinese text.
 
 | Source article | Fixed revision | Complete history | Declared original work |
 | --- | --- | --- | --- |
-| demeurer | [39718634](https://fr.wiktionary.org/w/index.php?title=demeurer&oldid=39718634) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=demeurer&action=history) | No original-work import marker identified |
+| demeurer | [39718634](https://fr.wiktionary.org/w/index.php?title=demeurer&oldid=39718634) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=demeurer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | morale | [39704298](https://fr.wiktionary.org/w/index.php?title=morale&oldid=39704298) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=morale&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | droguer | [39753162](https://fr.wiktionary.org/w/index.php?title=droguer&oldid=39753162) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=droguer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | marine | [39720418](https://fr.wiktionary.org/w/index.php?title=marine&oldid=39720418) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=marine&action=history) | No original-work import marker identified |
@@ -74,9 +74,9 @@ are credited for selection, French adaptation and the new English/Chinese text.
 | ivrogne | [39886982](https://fr.wiktionary.org/w/index.php?title=ivrogne&oldid=39886982) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=ivrogne&action=history) | No original-work import marker identified |
 | procéder | [39771851](https://fr.wiktionary.org/w/index.php?title=proc%C3%A9der&oldid=39771851) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=proc%C3%A9der&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | mouillé | [40003298](https://fr.wiktionary.org/w/index.php?title=mouill%C3%A9&oldid=40003298) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=mouill%C3%A9&action=history) | No original-work import marker identified |
-| querelle | [40054021](https://fr.wiktionary.org/w/index.php?title=querelle&oldid=40054021) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=querelle&action=history) | No original-work import marker identified |
+| querelle | [40054021](https://fr.wiktionary.org/w/index.php?title=querelle&oldid=40054021) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=querelle&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | basque | [39462811](https://fr.wiktionary.org/w/index.php?title=basque&oldid=39462811) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=basque&action=history) | No original-work import marker identified |
-| confession | [39978017](https://fr.wiktionary.org/w/index.php?title=confession&oldid=39978017) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=confession&action=history) | No original-work import marker identified |
+| confession | [39978017](https://fr.wiktionary.org/w/index.php?title=confession&oldid=39978017) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=confession&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | chanceux | [39918336](https://fr.wiktionary.org/w/index.php?title=chanceux&oldid=39918336) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=chanceux&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | douzaine | [39716091](https://fr.wiktionary.org/w/index.php?title=douzaine&oldid=39716091) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=douzaine&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | insensé | [39848861](https://fr.wiktionary.org/w/index.php?title=insens%C3%A9&oldid=39848861) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=insens%C3%A9&action=history) | No original-work import marker identified |
@@ -90,7 +90,7 @@ are credited for selection, French adaptation and the new English/Chinese text.
 Articles declaring Académie française eighth-edition imports (1932–1935)
 retain original credit separately from the wiki and Lexique adaptation layers.
 [Selected rights](selected-rights.md) records the established collective-work
-basis and its 2006-01-01 expiry. New fields require their own independent review.
+basis and its 2006-01-01 expiry. All 200 selected fields have separate quality and selected-expression rights decisions.
 
 ## Redistribution obligations
 
@@ -101,5 +101,5 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 200 selected fields and 50 everyday uses passed separate independent review.
+Canonical conversion and native verification are recorded by the coordinator.
