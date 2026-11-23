@@ -1,58 +1,59 @@
-# Selected source and adaptation rights for #157
+# Selected content rights for #157
 
-All 200 candidate fields have a fixed source/version/span, contributor credit,
-modification record and author rights proposal in [rights.json](rights.json).
-Independent selected-span rights review remains pending. French definitions
-adapt selected lexical semantics; English and Chinese are new Lexique
-explanations. IPA selects a recorded isolated form, with slashes added.
+All 200 accepted fields passed separate quality and selected-expression rights
+review. The 50 exact rows 3801–3850 each retain an ordinary selected use.
+[Field decisions](field-review.json) preserve the exact proposed/accepted text,
+fixed raw spans, POS, spelling, constructions and separate review reasons.
+[Original-expression decisions](original-expression-review.json) record each
+of the 51 source boundaries and the retained original-edition comparators.
 
-## Contribution and adaptation layers
+## Contribution, adaptation and original layers
 
-Fixed Wiktionnaire contributions and Lexique adaptations/translations retain
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-The [complete legal text](COPYING), article/history links, contributor registries,
-original-work credits and modification notices accompany these proposals.
-Sharing and adaptation require attribution, source/licence identification,
-modification notices, ShareAlike and no additional restrictions. Project source
-code retains MIT.
+Fixed French Wiktionnaire contributions and Lexique’s scoped French adaptations
+and new English/Chinese explanations retain CC BY-SA 4.0. IPA selects one
+applicable isolated head variant. [COPYING](COPYING), [NOTICES](NOTICES.md),
+article/history links and complete named/anonymous contributor registries
+accompany the selected material. Current registries provide article credits;
+they do not prove authorship of a selected sentence.
 
-Retained Wikimedia Terms of Use section 7 separates contribution licensing
-from imported content and media. Wiktionnaire copyright-policy revision
-38903168 and DAF8-template revision 22113837 retain that distinction.
-Three authority responses and two raw policy captures are copied byte for byte
-from the #152 archive, with source paths and historical metadata in
-[rights.json](rights.json). Policy raw copies retain their recorded CRLF
-serialization of API LF text. No fresh HTTP response or statute capture is
-claimed.
+Retained Wikimedia Terms of Use section 7, Wiktionnaire copyright-policy
+revision 38903168, DAF8-template revision 22113837 and the CC BY-SA 4.0 legal
+text were read independently. Sharing/adaptation requires creator/source and
+licence identification, modification notices, ShareAlike and no additional
+restrictions. Imported originals retain their separate rights. The reused
+policy captures retain their documented historical identity; this review does
+not claim new authority HTTP responses.
 
-## Original works and exact selected boundaries
+Original DAF8 expressions are compared with retained CNRTL original-edition
+HTML/text. The established institutional collective-work basis for the
+1932–1935 edition under CPI L123-3 uses conservative French expiry
+**2006-01-01**. That basis applies to the original edition; wiki and Lexique
+adaptations remain CC BY-SA 4.0. The electronic comparator’s modern layout and
+editorial material are outside selected content. [Prior original-work basis](../issue-129/selected-rights.md)
+and literal per-source comparisons remain distinct evidence.
 
-Thirty-four captured articles declare Académie française eighth-edition imports
-(1932–1935). The established institutional collective-work basis under
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20)
-uses the final publication in 1935 and conservatively expires on **2006-01-01**;
-see the [established original-work evidence](../issue-129/selected-rights.md).
-This basis applies to the original edition. Wiki transcription/adaptation and
-Lexique adaptations remain separate CC BY-SA 4.0 layers.
+Short lexical and grammatical relations are assessed at their actual selected
+boundary. References to TLFi, Le Robert, Larousse, Hayard and other works do
+not establish sentence origin. Retained modern comparators are read for
+selected meaning and expression differences; their proprietary wording,
+literary/news examples, media, etymologies and other-language sections supply
+no accepted learner field. French spelling/POS and head paradigms support the
+50 source bindings, including `noeud` to `nœud`; none admits a runtime alias.
 
-An import marker or bibliographic reference does not establish the original
-author of a selected sentence. The exact #157 expressions and their historical
-correspondence still require independent examination; the established original
-edition's rights basis is not a passed review of these new fields.
-IPA uses phonetic contributor notation, rather than historical dictionary
-definition prose. Referenced external works, etymologies, neighbouring
-literary/news quotations, images and audio supply no proposed learner field.
+## Limitations and excluded material
 
-`gré` support retains isolated lexical construction fragments rather than
-the surrounding example text. `noeud` support retains the explicit typographic
-relationship to `nœud`. These support spans, language/POS frames, spelling and
-grammar carry the same pending rights-review status as the selected fields.
-Source bindings admit no additional frozen group or runtime alias.
+The full `crapaud` proposal adds short-leg, terrestrial and pustule clauses in
+an article citing Quillet (1934). The actual Quillet expression/terms were not
+established. The accepted three meanings and exact source span end with the
+DAF8-corresponding frog-resemblance description; no accepted field depends on
+those additions. [Authored proposals](authored/groups.json) and
+[exact replacements](accepted-replacements.json) retain both boundaries.
 
-## Combined redistribution obligations
+Several base DAF8 URLs returned another POS or “no content”; separate adjective
+URLs resolved applicable entries. `noeud` and `nous-mêmes` returned HTTP 404.
+Neither a redirect nor an absent entry is recorded as a matched original.
 
-The assembled package must retain licence text, article/history and contributor
-attribution, applicable original-work credit, selected source materials and
-modification notices. Adaptations retain CC BY-SA 4.0; external works retain
-their separate rights. Combined obligations, conversion and native execution
-require integration evidence. This author package admits zero new fields.
+Combined packaged obligations, canonical conversion, native lookup/save/reopen,
+learner acceptance and whole-core/release gates remain coordinator-owned.
+This shard passes 200 selected-field rights decisions and admits zero fields
+to the canonical resource by itself.
