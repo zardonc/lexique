@@ -1,0 +1,74 @@
+{
+  "ticket": 155,
+  "role": "content_author",
+  "source_base_commit": "03a27e42c261afda7ffd4a927a4d2810f8221e8a",
+  "baseline_content_version": "core-149-v1",
+  "baseline_admitted_groups": 3431,
+  "scope_denominator_groups": 4087,
+  "frozen_rows": [3701, 3750],
+  "proposed_groups": 50,
+  "proposed_senses": 50,
+  "proposed_fields": 200,
+  "fixed_source_articles": 52,
+  "contributor_capture_parts": 11,
+  "missing_authored_fields": 0,
+  "unresolved_author_content_rows": [],
+  "independently_accepted_groups": 0,
+  "independently_accepted_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-155",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_155.py",
+      "stage": "before_content",
+      "result": "expected_failure",
+      "exit_code": 1,
+      "reason": "The assigned groups.json author package did not exist.",
+      "log": "red.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_155.py Batch155Tests.test_author_proposals_keep_all_quality_and_rights_acceptance_pending",
+      "stage": "before_rights_package",
+      "result": "expected_failure",
+      "exit_code": 1,
+      "reason": "The assigned rights.json author package did not exist.",
+      "log": "red-rights.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_155.py -v",
+      "result": "passed",
+      "exit_code": 0,
+      "tests": 5,
+      "boundary": "Exact resource/admission candidates, fixed raw/API bytes and source spans, French/POS/variant frames, complete contributor pagination, pending author/independent decisions.",
+      "log": "green.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-155/reproduce.py",
+      "result": "passed",
+      "exit_code": 0,
+      "byte_equal_author_files": 12,
+      "boundary": "Rebuild the author records and notices from fixed captures and editorial selections; no independent acceptance or canonical conversion.",
+      "log": "reproduce.log"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "exit_code": 0,
+      "documents": 516,
+      "local_links": 4018,
+      "problems": [],
+      "log": "docs.log"
+    }
+  ],
+  "native_lookup_save_reopen": "not_run_integration_owned",
+  "canonical_conversion_and_packaging": "not_run_integration_owned",
+  "learner_acceptance": "not_run",
+  "frontend_and_rust_checks": "not_run_no_frontend_or_rust_changes",
+  "rights_boundary": "CC BY-SA 4.0 contribution/adaptation proposals; separately credited DAF8 and Littré historical original-work bases; CFC cartographic expression excluded; all selected-span independent decisions pending."
+}
