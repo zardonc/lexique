@@ -1,5 +1,8 @@
 # #157 independently reviewed content shard
 
+`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+
+
 Frozen rows 3801–3850 retain **50 exact groups / 200 accepted fields**:
 197 unchanged and three scoped `crapaud` meaning replacements. All 50 selected
 uses, exact POS subclasses, source spellings and applicable IPA were reviewed

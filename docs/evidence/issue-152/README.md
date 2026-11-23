@@ -1,5 +1,8 @@
 # Issue #152 reviewed content shard
 
+`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+
+
 Frozen rows **3551–3600** retain all **50 exact groups / 50 uses / 200 independently accepted fields**. There are **193 unchanged fields, seven corrected meaning fields and no unresolved field or selected-rights questions**. Canonical assembly remains pending; these are independent shard decisions.
 
 [Independent review](README-independent-review.md) identifies the reviewer, source/legal boundaries, checks and external evidence archive. [Groups](groups.json) contain accepted text; [field review](field-review.json) records exact proposals, accepted text/source, separate quality/rights reasons and every use/spelling decision. [Replacements](accepted-replacements.json) preserve both versions of the seven meaning fields for `décès`, `coma` and `possession`. [Authored snapshots](authored/snapshot.json) preserve all pre-review author files.

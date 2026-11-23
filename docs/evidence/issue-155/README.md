@@ -1,5 +1,8 @@
 # Issue #155 independent content review
 
+`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+
+
 **50 exact groups, 200 fields and 50 selected uses pass independent content
 review.** Rows 3701–3750 preserve their frozen word/POS identities, order and both
 frequency strings. 195 fields are unchanged and five have exact replacements;

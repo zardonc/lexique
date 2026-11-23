@@ -1,5 +1,8 @@
 # #150 independently reviewed content shard
 
+`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+
+
 **50 exact frozen groups / 50 selected everyday uses / 200 fields accepted**
 at the independent content and selected-rights boundary. Fields: **197 unchanged,
 3 changed, 0 unresolved**. Uses: **49 unchanged, 1 changed, 0 unresolved**.

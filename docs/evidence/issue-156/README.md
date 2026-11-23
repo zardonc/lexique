@@ -1,5 +1,8 @@
 # D2 batch #156: rows 3751–3800
 
+`core-159-v1` canonically admits **49 groups / 196 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+
+
 **49 ordinary groups / 196 unchanged fields**, plus one owner-approved zero-field
 annotation for frozen row 3783 `ya/NOM`, are ready for coordinator admission.
 The annotation retains four explicit unresolved missing fields and both original

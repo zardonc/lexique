@@ -1,5 +1,8 @@
 # Issue #159 reviewed content shard
 
+`core-159-v1` canonically admits **48 groups / 192 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+
+
 **48 admitted-content groups / 192 fields and two owner-approved zero-field
 annotations** retain all 50 frozen identities in rows 3901–3950. Both frequency
 strings, row order and the 4,087-group denominator are preserved. The annotations
