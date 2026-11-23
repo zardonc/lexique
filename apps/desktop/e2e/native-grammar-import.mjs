@@ -4,6 +4,7 @@ import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { expect } from '@playwright/test';
 import { fixtureSql, readState, compareLearning } from './native-backup-state.mjs';
+import { grammarBatchCheck } from './native-grammar-import-batch.mjs';
 
 export async function grammarImportCheck({ scenario, page, destination, invoke, picker, evidence, python }) {
   const records = () => invoke('grammar_list', { query: '', sort: 'created-asc' });
@@ -42,6 +43,7 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
   };
   const queue = async () => (await invoke('review_queue', { timezone: 'UTC', skipped: [] })).queue.cards;
   const sqlPause = () => fixtureSql(destination, "print(json.dumps([dict(r) for r in c.execute('SELECT v.id,e.exchange_id,g.question,g.answer,p.vocabulary_id AS paused FROM vocabulary v JOIN grammar_exchange_identities e ON e.record_id=v.id LEFT JOIN review_cards r ON r.vocabulary_id=v.id LEFT JOIN grammar_cards g ON g.card_id=r.id LEFT JOIN review_paused p ON p.vocabulary_id=v.id ORDER BY v.id')],ensure_ascii=False))", {}, true);
+  if (scenario.startsWith('grammar-batch')) return grammarBatchCheck({ scenario, page, destination, invoke, picker, evidence, region, file, headers, confirm, records, queue, sqlPause });
   if (scenario === 'grammar-import') {
     const filename = await file('paired', [headers, ['external-native-214', '  Une règle  ', body, question, answer]]);
     const before = readState(destination);
@@ -154,10 +156,11 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     await picker('导入语法 CSV', filename); await expect(region).toContainText('内容相同'); await confirm();
     await expect(region.getByRole('status')).toContainText('跳过 1'); compareLearning(readState(destination), before);
     await writeFile(filename, 'exchange_id,title\r\nexternal-native-214,Changed title\r\n');
-    await picker('导入语法 CSV', filename); await expect(region).toContainText('当前导入保留原内容');
+    await picker('导入语法 CSV', filename); await expect(region).toContainText('内容有差异');
     await expect(region.getByRole('button', { name: '确认导入', exact: true })).toBeDisabled();
-    await region.getByRole('button', { name: '取消导入', exact: true }).click();
+    await region.getByRole('combobox', { name: `导入决定：Changed title`, exact: true }).selectOption('skip');
+    await confirm();
     compareLearning(readState(destination), before);
-    evidence.checks.push('known unchanged effective content skips; changed known identity previews saved and incoming text, cannot overwrite; existing learning data preserved');
+    evidence.checks.push('known unchanged effective content skips; changed known identity previews saved and incoming text and explicitly skips; existing learning data preserved');
   } else throw new Error(`Unknown grammar import scenario ${scenario}`);
 }
