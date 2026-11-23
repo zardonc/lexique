@@ -1,0 +1,107 @@
+{
+  "issue": 145,
+  "parent": 78,
+  "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner",
+  "author_commit": "3a0dea3ce4292f82d3713a9516af36d8675a96e1",
+  "fixed_review_base": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+  "merged_integration_head": "fa142521e974fcf895afccab8d5f1dbae31195c3",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-145",
+  "branch": "codex/d2-review-145",
+  "reviewed_changes": "local reviewer changes to docs/evidence/issue-145/** and scripts/test_core_batch_145.py; original author shard at fixed base",
+  "platform": "Windows; PowerShell 7; uv Python 3.14.10; pnpm 11.25.0",
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-145",
+  "reviewer_archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-145",
+  "groups": 50,
+  "uses": 50,
+  "fields": 200,
+  "changed_field_texts": 11,
+  "unchanged_field_texts": 189,
+  "changed_source_spans": 6,
+  "changed_selected_uses": 1,
+  "quality": "passed_independent_field_and_use_review",
+  "selected_span_rights": "passed_at_selected_text_boundary",
+  "unresolved_fields": [],
+  "source_audit": {
+    "fixed_article_api_raw_byte_equal": 51,
+    "retained_exact_span_occurrences": 2683,
+    "snapshot_byte_equal_files": [
+      "admission.json",
+      "field-review.json",
+      "groups.json",
+      "NOTICES.md.txt",
+      "README.md.txt",
+      "reuse.json",
+      "rights.json",
+      "selected-rights.md.txt",
+      "source-captures.json",
+      "source-context.json",
+      "source-excerpts.json",
+      "sources.json"
+    ],
+    "reused_authority_files": [
+      "fr-policy.api.json",
+      "cc-legal.html",
+      "terms.html"
+    ],
+    "reused_policy_line_endings": [
+      {
+        "title": "Convention:Droit d’auteur",
+        "raw_bytes": 23479,
+        "api_utf8_bytes": 23341,
+        "difference": "CRLF-only raw-file formatting; original bytes preserved; text content identical"
+      },
+      {
+        "title": "Modèle:Import:DAF8",
+        "raw_bytes": 234,
+        "api_utf8_bytes": 232,
+        "difference": "CRLF-only raw-file formatting; original bytes preserved; text content identical"
+      }
+    ],
+    "selected_fields": 200,
+    "selected_uses": 50,
+    "source_count": 51,
+    "status": "passed",
+    "source_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-145",
+    "semantic_decisions": "decisions.py; independent field/use reasoning, not the audit oracle"
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_145.py",
+      "exit_code": 0,
+      "result": "passed, 10 focused tests",
+      "log": "GREEN.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-145-review/audit.py",
+      "exit_code": 0,
+      "result": "passed, 51 byte-equal lexical sources; 2683 exact span occurrences; 12 byte-equal authored snapshots",
+      "log": "audit.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "exit_code": 0,
+      "result": "passed, 505 documents and 3898 local links",
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "exit_code": 0,
+      "result": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "red_check": {
+    "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_145.py",
+    "exit_code": 1,
+    "focused_defects": 4,
+    "log": "RED.log"
+  },
+  "unrun": {
+    "native": "coordinator-owned",
+    "canonical_conversion": "coordinator-owned",
+    "combined_package_obligations": "coordinator-owned",
+    "frontend_and_rust": "application code unchanged",
+    "learner_acceptance": "separate release gate"
+  },
+  "source_and_authority_claim": "51 lexical API/raw byte checks pass; reused policy raw files differ from API only in CRLF/LF formatting, with exact text equality. Histories credit articles, not selected-sentence authorship."
+}
