@@ -38,8 +38,48 @@ def read(name):
 
 
 class Batch159Tests(unittest.TestCase):
+    def test_only_approved_rows_are_zero_field_annotations(self):
+        groups = read("groups.json")
+        annotations = [g for g in groups if not g["senses"]]
+        self.assertEqual([(g["frozen_row"], g["headword"], g["lexique_cgram"])
+                          for g in annotations], [(3922, "haver", "VER"), (3944, "da", "ONO")])
+        approvals = {a["frozen_row"]: a for a in read("owner-approval.json")["approved_annotations"]}
+        review, admission = read("field-review.json"), read("admission.json")
+        self.assertEqual(set(approvals), {3922, 3944})
+        for group in annotations:
+            approval = approvals[group["frozen_row"]]
+            decision = group["annotation_exception_decision"]
+            self.assertEqual(group["status"], "approved_annotation_exception")
+            self.assertEqual(group["annotation_kind"], "owner_approved_zero_field")
+            self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))
+            self.assertEqual(group["owner_approval"], decision)
+            self.assertEqual(decision["approved_by"], "project_owner")
+            self.assertEqual(decision["approved_on"], "2026-11-23")
+            self.assertEqual(decision["timezone"], "America/Vancouver")
+            self.assertEqual(decision["exact_reply"], "Annotate both groups with zero fields")
+            self.assertEqual(decision["decision"], approval["annotation_exception_decision"])
+            for frequency in ("subtitle_lemma_per_million", "subtitle_pos_per_million"):
+                self.assertEqual(group[frequency], approval[frequency])
+        self.assertEqual((len(review["fields"]), len(review["usage"])), (192, 48))
+        self.assertEqual(len(review["annotation_exceptions"]), 2)
+        self.assertEqual({(f["frozen_row"], f["field"]) for f in review["unresolved_fields"]},
+                         {(row, name) for row in (3922, 3944)
+                          for name in ("french_definition", "ipa", "english", "chinese")})
+        for field in review["unresolved_fields"]:
+            group = next(g for g in annotations if g["frozen_row"] == field["frozen_row"])
+            self.assertEqual(field["status"], "unresolved")
+            self.assertEqual(field["annotation_exception_decision"], group["owner_approval"])
+        for annotation, group in zip(review["annotation_exceptions"], annotations, strict=True):
+            self.assertEqual(annotation["frozen_row"], group["frozen_row"])
+            self.assertEqual(annotation["decision"], group["owner_approval"])
+        self.assertEqual(admission["approved_annotations"], annotations)
+        self.assertEqual(admission["approved_annotation_rows"], [3922, 3944])
+        self.assertEqual((admission["annotation_exception_groups"], admission["specialist_exception_groups"]), (2, 0))
+        self.assertEqual((admission["accepted_groups"], admission["accepted_fields"]), (48, 192))
+        self.assertEqual((admission["missing_annotation_fields"], admission["ordinary_missing_fields"]), (8, 0))
+
     def test_selected_live_prey_and_uncooked_steak_restrictions(self):
-        groups = {g["frozen_row"]: g["senses"][0] for g in read("groups.json")}
+        groups = {g["frozen_row"]: g["senses"][0] for g in read("groups.json") if g["senses"]}
         expected = {
             (3917, "chinese"): "用于煎制的肉排、鱼排或植物食材制成的排；不只指牛排。",
             (3943, "french_definition"): "Animal vivant qu’un animal carnassier capture pour le manger.",
@@ -88,6 +128,9 @@ class Batch159Tests(unittest.TestCase):
                 self.assertEqual((group["headword"], group["lexique_cgram"]), (row["word"], row["lexique_cgram"]))
                 for frequency in ("subtitle_lemma_per_million", "subtitle_pos_per_million"):
                     self.assertEqual(group[frequency], row[frequency])
+                if group["frozen_row"] in {3922, 3944}:
+                    self.assertEqual(group["senses"], [])
+                    continue
                 self.assertEqual(len(group["senses"]), 1)
                 sense = group["senses"][0]
                 self.assertTrue(sense["use"].strip())
@@ -99,24 +142,26 @@ class Batch159Tests(unittest.TestCase):
 
     def test_independent_field_use_source_and_rights_decisions(self):
         admission, review, rights = read("admission.json"), read("field-review.json"), read("rights.json")
-        self.assertEqual(admission["status"], "independently_reviewed_partial_shard_scope_unresolved")
+        self.assertEqual(admission["status"], "independently_reviewed_content_and_scoped_exceptions_parent_admission_pending")
         self.assertEqual(admission["scope_denominator_groups"], 4087)
-        self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
+        self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (48, 192))
         self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (48, 192))
         self.assertEqual(admission["pending_independent_review_fields"], 0)
         self.assertEqual(admission["pending_independent_rights_fields"], 0)
         self.assertEqual(admission["missing_admitted_fields"], 8)
         self.assertEqual(admission["newly_admitted_fields"], 0)
         self.assertFalse(admission["ticket_complete"])
-        self.assertEqual(admission["annotation_exception_groups"], 0)
+        self.assertEqual(admission["annotation_exception_groups"], 2)
         self.assertEqual(admission["specialist_exception_groups"], 0)
-        self.assertEqual([b["frozen_row"] for b in admission["unresolved_field_blockers"]], [3922, 3944])
+        self.assertEqual(admission["unresolved_field_blockers"], [])
         self.assertEqual(admission["ordinary_everyday_candidate_groups"], 48)
-        self.assertEqual(admission["blocked_research_candidate_groups"], 2)
-        self.assertFalse(review["independent_acceptance"])
+        self.assertEqual(admission["blocked_research_candidate_groups"], 0)
+        self.assertTrue(review["independent_acceptance"])
         self.assertEqual(review["kind"], "separate_independent_field_review")
         self.assertTrue(review["reviewer"])
         self.assertEqual(rights["independent_rights_fields_accepted"], 200)
+        self.assertEqual(rights["admissible_rights_fields"], 192)
+        self.assertEqual(rights["unadmitted_research_fields"], 8)
         self.assertEqual(rights["independent_review"], "passed_at_selected_text_boundary")
         captures = read("source-captures.json")
         archive = Path(captures["capture_root"])
@@ -142,24 +187,25 @@ class Batch159Tests(unittest.TestCase):
         authored = {(s["sense_id"], name): field for g in authored_groups
                     for s in g["senses"] for name, field in s["fields"].items()}
         usage = {u["sense_id"]: u for u in review["usage"]}
-        self.assertEqual(len(usage), 50)
+        self.assertEqual(len(usage), 48)
         languages = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
         pos_frames = {"NOM": "nom", "ADJ": "adjectif", "VER": "verbe", "ADV": "adverbe", "ONO": "interjection"}
         for group in read("groups.json"):
+            if not group["senses"]:
+                continue
             sense = group["senses"][0]
             self.assertEqual(sense["source_headword"], group["headword"])
-            blocked = group["frozen_row"] in {3922, 3944}
-            self.assertEqual(sense["independent_review"], "unresolved" if blocked else "passed_after_exact_accepted_replacements")
+            self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
             use = usage[sense["sense_id"]]
             self.assertEqual(use["accepted_usage"], sense["use"])
-            self.assertEqual(use["accepted_usage_quality_status"], "unresolved" if blocked else "passed")
-            self.assertEqual(use["everyday_sense_status"], "unresolved" if blocked else "passed")
+            self.assertEqual(use["accepted_usage_quality_status"], "passed")
+            self.assertEqual(use["everyday_sense_status"], "passed")
             self.assertTrue(use["review_reason"])
             self.assertEqual(use["reviewer"], review["reviewer"])
             for name, field in sense["fields"].items():
                 exact = by_field[sense["sense_id"], name]
                 expected[sense["sense_id"], name] = field
-                self.assertEqual(field["independent_review"], "unresolved" if blocked else "passed")
+                self.assertEqual(field["independent_review"], "passed")
                 self.assertEqual(field["language"], languages[name])
                 self.assertEqual(field["source_id"], exact["source_id"])
                 self.assertEqual(field["source_span"]["raw_source_excerpt"], exact["reviewed_excerpt"])
@@ -174,14 +220,16 @@ class Batch159Tests(unittest.TestCase):
                                      exact["ipa_variant_excerpt"])
                 else:
                     pos = next(line for line in reversed(preceding) if line.startswith("=== {{S|"))
-                    if group["frozen_row"] == 3944:
-                        self.assertIn("{{S|particule|fr", pos)
-                        self.assertEqual(sense["everyday_eligibility"], "unresolved")
-                    else:
-                        self.assertIn("{{S|" + pos_frames[group["lexique_cgram"]] + "|fr", pos)
-        self.assertEqual({(f["sense_id"], f["field"]) for f in rights["fields"]}, set(expected))
+                    self.assertIn("{{S|" + pos_frames[group["lexique_cgram"]] + "|fr", pos)
+        rejected = {(s["sense_id"], name): field for g in read("rejected-proposals.json")["groups"]
+                    for s in g["senses"] for name, field in s["fields"].items()}
+        audited = {**expected, **rejected}
+        self.assertEqual({(f["sense_id"], f["field"]) for f in rights["fields"]}, set(audited))
         for field in rights["fields"]:
-            proposed = expected[field["sense_id"], field["field"]]
+            key = field["sense_id"], field["field"]
+            proposed = audited[key]
+            self.assertEqual(field["admission"], "eligible_for_coordinator_admission" if key in expected
+                             else "not_admitted_owner_approved_zero_field_annotation")
             self.assertEqual(field["exact_source_span"], proposed["source_span"])
             self.assertEqual(field["license"], "CC-BY-SA-4.0")
             self.assertTrue(field["attribution"])
@@ -195,7 +243,7 @@ class Batch159Tests(unittest.TestCase):
             key = field["sense_id"], field["field"]
             self.assertEqual(field["proposed_text"], authored[key]["text"])
             self.assertEqual(field["accepted_text"], expected[key]["text"])
-            self.assertEqual(field["accepted_text_quality_status"], "unresolved" if field["frozen_row"] in {3922, 3944} else "passed")
+            self.assertEqual(field["accepted_text_quality_status"], "passed")
             self.assertEqual(field["rights_eligibility_status"], "passed_at_selected_text_boundary")
             self.assertEqual(field["source_use_semantic_quality_status"], "passed")
             self.assertTrue(field["review_reason"])
@@ -237,7 +285,7 @@ class Batch159Tests(unittest.TestCase):
             self.assertEqual(context["selected_text_rights_status"], "passed_at_selected_text_boundary")
             self.assertTrue(context["selected_text_rights_reason"])
         spelling = review["spelling_relations"]
-        self.assertEqual(len(spelling), 50)
+        self.assertEqual(len(spelling), 48)
         self.assertEqual({r["sense_id"] for r in spelling}, set(usage))
         for relation in spelling:
             self.assertEqual(relation["frozen_headword"], relation["source_headword"])
@@ -263,7 +311,11 @@ class Batch159Tests(unittest.TestCase):
                for s in g["senses"] for name, field in s["fields"].items()}
         new = {(s["sense_id"], name): field["text"] for g in read("groups.json")
                for s in g["senses"] for name, field in s["fields"].items()}
-        changed = {key for key in old if old[key] != new[key]}
+        changed = {key for key in new if old[key] != new[key]}
+        rejected = {(s["sense_id"], name) for g in read("rejected-proposals.json")["groups"]
+                    for s in g["senses"] for name in s["fields"]}
+        self.assertEqual(set(old) - set(new), rejected)
+        self.assertEqual(len(rejected), 8)
         self.assertEqual(changed, {(r["sense_id"], r["field"]) for r in replacements})
         for r in replacements:
             key = r["sense_id"], r["field"]
@@ -271,15 +323,24 @@ class Batch159Tests(unittest.TestCase):
             self.assertTrue(r["reason"])
         self.assertEqual(len(read("field-review.json")["unresolved_fields"]), 8)
 
-    def test_precise_scope_blockers_keep_fields_without_fictitious_approval(self):
-        groups = {g["frozen_row"]: g for g in read("groups.json")}
-        blockers = read("content-blockers.json")["blockers"]
+    def test_rejected_proposals_keep_independent_scope_decisions(self):
+        rejected = read("rejected-proposals.json")
+        groups = {g["frozen_row"]: g for g in rejected["groups"]}
+        blockers = rejected["blockers"]
+        self.assertEqual(read("content-blockers.json")["blockers"], [])
         self.assertEqual([b["frozen_row"] for b in blockers], [3922, 3944])
         for b in blockers:
             self.assertIsNone(b["owner_approval"])
             self.assertEqual(b["admission"], "blocked")
             self.assertTrue(b["owner_decision_proposal"])
             self.assertEqual(len(groups[b["frozen_row"]]["senses"][0]["fields"]), 4)
+        self.assertEqual((len(rejected["fields"]), len(rejected["usage"])), (8, 2))
+        for field in rejected["fields"]:
+            self.assertEqual(field["accepted_text_quality_status"], "unresolved")
+            self.assertEqual(field["source_use_semantic_quality_status"], "passed")
+            self.assertEqual(field["rights_eligibility_status"], "passed_at_selected_text_boundary")
+        for use in rejected["usage"]:
+            self.assertEqual(use["everyday_sense_status"], "unresolved")
         haver = groups[3922]["senses"][0]
         self.assertIn("Transitive mining", haver["use"])
         self.assertIn("h aspiré", haver["use"])

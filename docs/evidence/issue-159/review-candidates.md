@@ -1,6 +1,6 @@
 # Issue #159 reviewed fields and uses
 
-All 50 frozen groups are retained. Rights pass separately; two groups remain scope-blocked.
+All 50 frozen groups are retained. The shard has 48 ordinary groups / 192 fields and two owner-approved zero-field annotations. Rights audits remain separate.
 
 [Exact field decisions](field-review.json) and [original proposals](authored) retain the complete source bindings.
 
@@ -279,16 +279,10 @@ Admission eligibility: passed.
 
 ## 3922 haver / VER
 
-Transitive mining verb with h aspiré; research candidate blocked by the ordinary everyday requirement.
-
-Excluded uses: A general verb meaning to have; havir, hâver, a spelling substitution or an unapproved specialist exception.
-
-Admission eligibility: unresolved.
-
-- french_definition: Dans l’industrie minière, ouvrir une entaille parallèle au plan d’une couche pour la desserrer. (fixed source line 7)
-- ipa: /a.ve/ (fixed source line 6)
-- english: In mining, to cut a slot parallel to a seam in order to loosen it; initial h is aspirated in French grammar. (fixed source line 7)
-- chinese: 采矿术语：沿矿层平面平行开槽，使矿层松动；词首 h 为嘘音 h，不发生省音或联诵。 (fixed source line 7)
+Owner-approved zero-field annotation: no selected sense or admitted fields;
+four fields remain missing. [Owner decision](owner-approval.json) preserves
+this exact frozen identity and both frequency strings. The independently
+reviewed full research proposal remains in [the rejected ledger](rejected-proposals.json).
 
 ## 3923 karma / NOM
 
@@ -565,16 +559,10 @@ Admission eligibility: passed.
 
 ## 3944 da / ONO
 
-French old-fashioned emphatic particle; frozen ONO identity retained as a blocked research candidate.
-
-Excluded uses: The Russian word for yes, Antillean noun, fibre plant, SI symbol, Danish language code or an unapproved POS substitution.
-
-Admission eligibility: unresolved.
-
-- french_definition: Particule familière et vieillie qui renforce surtout oui, plus rarement nenni ; elle peut parfois s’employer seule. (fixed source line 30)
-- ipa: /da/ (fixed source line 29)
-- english: An old-fashioned, informal French emphatic particle, usually added to oui, less often nenni, and occasionally used alone. (fixed source line 30)
-- chinese: 旧式口语中的强调小品词，主要接在 oui 后，较少接在 nenni 后，有时也单独使用。 (fixed source line 30)
+Owner-approved zero-field annotation: no selected sense or admitted fields;
+four fields remain missing. [Owner decision](owner-approval.json) preserves
+this exact frozen identity and both frequency strings. The independently
+reviewed full research proposal remains in [the rejected ledger](rejected-proposals.json).
 
 ## 3945 rançon / NOM
 

@@ -14,7 +14,12 @@ Rows 3901–3950 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One reviewed research sense is retained per exact group; two remain scope-blocked. French wording is a scoped
+One reviewed sense is selected for each of 48 ordinary groups, totaling 192
+fields. Rows 3922 haver/VER and 3944 da/ONO are owner-approved zero-field
+annotations with eight missing fields; their complete research proposals remain
+in [the rejected ledger](rejected-proposals.json). All 200 rights audits are
+retained, with admission eligibility distinguished in [rights](rights.json).
+French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
@@ -91,8 +96,9 @@ retain original credit separately from the wiki and Lexique adaptation layers.
 [Selected rights](selected-rights.md) records the established collective-work
 basis and its 2006-01-01 expiry. New fields require their own independent review.
 `haver/VER` remains mining-only and `da/ONO` remains an old-fashioned particle
-in the fixed sources. These research candidates are blocked, with no approved
-exception or replacement. All other candidates still require independent review.
+in the fixed sources. The owner approved only zero-field
+annotations for these exact groups. The article credits retain provenance for both
+the 192 admissible fields and the eight unadmitted research fields.
 
 ## Redistribution obligations
 
@@ -103,5 +109,7 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+The independent review accepts 192 fields across 48 ordinary groups and
+retains selected-text rights clearance for all 200 audited texts. Eight research
+fields are not admitted; two owner-approved annotations retain their frozen
+identities and eight missing fields. Canonical admission remains pending.

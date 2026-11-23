@@ -2,7 +2,9 @@
 
 **200 selected fields pass independent rights review.** Quality/POS/everyday
 admission is separate: [the independent review](README-independent-review.md)
-retains eight scope-blocked fields. Reviewer identity and every exact decision
+retains two owner-approved zero-field annotations with eight missing fields.
+The rights ledger distinguishes 192 admissible fields from eight separately
+retained unadmitted research fields. Reviewer identity and every exact decision
 are recorded in [rights](rights.json) and [field review](field-review.json).
 
 ## Original-work and contribution layers
@@ -65,4 +67,5 @@ native delivery and release evidence remain coordinator-owned. Fresh official
 L123-3 retrieval was unavailable (HTTP 403); the established original-edition
 evidence and its conservative expiry are retained, without a claim of a new
 successful legal capture. Rights clearance grants no everyday/POS exception
-to `haver/VER` or `da/ONO`.
+to `haver/VER` or `da/ONO`. Their owner-approved zero-field annotations
+admit no learner text and do not alter these rights decisions.

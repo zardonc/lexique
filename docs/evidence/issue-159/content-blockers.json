@@ -1,94 +1,81 @@
 {
   "ticket": 159,
   "scope_denominator_groups": 4087,
-  "blocked_groups": 2,
-  "blocked_fields": 8,
+  "blocked_groups": 0,
+  "blocked_fields": 0,
   "dropped_groups": 0,
   "substituted_groups": 0,
-  "approved_annotation_exceptions": 0,
+  "approved_annotation_exceptions": 2,
   "approved_specialist_exceptions": 0,
-  "blockers": [
+  "blockers": [],
+  "annotation_missing_fields": 8,
+  "approved_annotations": [
     {
       "frozen_row": 3922,
       "headword": "haver",
       "lexique_cgram": "VER",
-      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
-      "source_title": "haver",
-      "lines_1_based": [
-        5,
-        6,
-        7
-      ],
-      "required_resolution": "Evidence for a modern everyday VER use, or an explicit owner decision. The frozen group is preserved.",
-      "revid": 39585385,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-      "source_id": "b159_fr_109795",
-      "spans": [
-        {
-          "line_1_based": 5,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "line_1_based": 6,
-          "reviewed_excerpt": "'''haver''' {{h aspiré}}{{pron|a.ve|fr}} {{t|fr}} {{conj|grp=1|fr}}"
-        },
-        {
-          "line_1_based": 7,
-          "reviewed_excerpt": "# {{lexique|industrie minière|fr}} [[desserrer|Desserrer]] la couche en ouvrant, parallèlement à son plan, une [[entaille]] d'une certaine profondeur dans une [[mine]]."
-        }
-      ],
-      "affected_fields": [
-        "french_definition",
-        "ipa",
-        "english",
-        "chinese"
-      ],
-      "owner_approval": null,
-      "admission": "blocked",
-      "independent_review": "completed_requirement_unresolved",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "owner_decision_proposal": "Explicitly approve the recorded transitive mining sense as a new specialist exception for row 3922, retaining h aspiré, or explicitly approve a zero-field annotation while keeping its denominator row. No exception exists yet."
+      "subtitle_lemma_per_million": "10.73",
+      "subtitle_pos_per_million": "10.73",
+      "senses": [],
+      "status": "approved_annotation_exception",
+      "annotation_kind": "owner_approved_zero_field",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "alias_admission": "not_admitted",
+      "unresolved_reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "rejected_proposal": "docs/evidence/issue-159/rejected-proposals.json"
     },
     {
       "frozen_row": 3944,
       "headword": "da",
       "lexique_cgram": "ONO",
-      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
-      "source_title": "da",
-      "lines_1_based": [
-        27,
-        29,
-        30
-      ],
-      "required_resolution": "Evidence for the exact modern French ONO use, or an explicit owner decision. No noun, foreign yes or symbol is substituted.",
-      "revid": 39926011,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-      "source_id": "b159_fr_7706",
-      "spans": [
-        {
-          "line_1_based": 27,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "line_1_based": 29,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        },
-        {
-          "line_1_based": 30,
-          "reviewed_excerpt": "# {{familier|fr}} {{vieilli|fr}} Se [[joint]] quelquefois à ''[[oui]]'' pour en [[renforcer]] le [[sens]]. Plus rarement accolé à ''[[nenni]]''. Parfois même employé isolément comme [[adverbe]]."
-        }
-      ],
-      "affected_fields": [
-        "french_definition",
-        "ipa",
-        "english",
-        "chinese"
-      ],
-      "owner_approval": null,
-      "admission": "blocked",
-      "independent_review": "completed_requirement_unresolved",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "owner_decision_proposal": "Explicitly approve a zero-field annotation exception for frozen da/ONO, retaining all four missing fields. Alternatively provide evidence for an exact contemporary French ONO use; the recorded old particle cannot be substituted."
+      "subtitle_lemma_per_million": "10.6",
+      "subtitle_pos_per_million": "8.02",
+      "senses": [],
+      "status": "approved_annotation_exception",
+      "annotation_kind": "owner_approved_zero_field",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "alias_admission": "not_admitted",
+      "unresolved_reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "rejected_proposal": "docs/evidence/issue-159/rejected-proposals.json"
     }
-  ]
+  ],
+  "rejected_proposals": "docs/evidence/issue-159/rejected-proposals.json"
 }

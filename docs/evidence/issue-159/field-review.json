@@ -2,7 +2,7 @@
   "schema": "lexique-d2-field-review-1",
   "kind": "separate_independent_field_review",
   "independence": "Reviewer on codex/d2-review-159 inspected retained raw/API text, every field/use, source frame and selected rights separately from the content author.",
-  "independent_acceptance": false,
+  "independent_acceptance": true,
   "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
   "fields": [
     {
@@ -5940,256 +5940,6 @@
       "selected_text_rights_reason": "vase, revision 39836336, selected lines [88, 92]: DAF8 marker(s) at 211: conservative original credit to Académie française, eighth edition 1932–1935, with the established collective-work expiry 2006-01-01 under CPI L123-3. The marker establishes a possible imported original layer, not individual selected-sentence authorship. Later Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Article boundary locations inspected: 209, 210, 211. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 77 returned named credits and 22 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
     },
     {
-      "sense_id": "b159-3922-haver-ver-selected",
-      "frozen_row": 3922,
-      "headword": "haver",
-      "pos": "VER",
-      "field": "french_definition",
-      "language": "fr",
-      "proposed_text": "Dans l’industrie minière, ouvrir une entaille parallèle au plan d’une couche pour la desserrer.",
-      "exact_source": {
-        "source_id": "b159_fr_109795",
-        "revid": 39585385,
-        "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-        "line_1_based": 7,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|industrie minière|fr}} [[desserrer|Desserrer]] la couche en ouvrant, parallèlement à son plan, une [[entaille]] d'une certaine profondeur dans une [[mine]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 6,
-          "column_1_based": 13,
-          "reviewed_excerpt": "{{h aspiré}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_109795",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "Dans l’industrie minière, ouvrir une entaille parallèle au plan d’une couche pour la desserrer.",
-      "independence": true,
-      "review_reason": "Mining groove parallel to a seam preserves entaille/desserrer semantics; lexical wording is sound but everyday eligibility is unresolved. Admission remains unresolved: Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "haver, revision 39585385, selected lines [6, 7]: No selected-span original-work import declaration. The lexical definition and nominal/verbal IPA are fixed Wiktionnaire content under CC BY-SA 4.0. Article boundary locations inspected: 35, 37. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 39 returned named credits and 4 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
-      "sense_id": "b159-3922-haver-ver-selected",
-      "frozen_row": 3922,
-      "headword": "haver",
-      "pos": "VER",
-      "field": "ipa",
-      "language": "und",
-      "proposed_text": "/a.ve/",
-      "exact_source": {
-        "source_id": "b159_fr_109795",
-        "revid": 39585385,
-        "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-        "line_1_based": 6,
-        "column_1_based": 1,
-        "reviewed_excerpt": "'''haver''' {{h aspiré}}{{pron|a.ve|fr}} {{t|fr}} {{conj|grp=1|fr}}",
-        "ipa_variant_column_1_based": 32,
-        "ipa_variant_excerpt": "a.ve"
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 6,
-          "column_1_based": 13,
-          "reviewed_excerpt": "{{h aspiré}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_109795",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "/a.ve/",
-      "independence": true,
-      "review_reason": "The captured French IPA variant /a.ve/ is literal within the recorded pronunciation template at line 6; h aspiré is a hiatus/elision restriction, not a voiced English h; the use and EN/ZH state it. Admission remains unresolved: Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "haver, revision 39585385, selected lines [6, 7]: No selected-span original-work import declaration. The lexical definition and nominal/verbal IPA are fixed Wiktionnaire content under CC BY-SA 4.0. Article boundary locations inspected: 35, 37. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 39 returned named credits and 4 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
-      "sense_id": "b159-3922-haver-ver-selected",
-      "frozen_row": 3922,
-      "headword": "haver",
-      "pos": "VER",
-      "field": "english",
-      "language": "en",
-      "proposed_text": "In mining, to cut a slot parallel to a seam in order to loosen it; initial h is aspirated in French grammar.",
-      "exact_source": {
-        "source_id": "b159_fr_109795",
-        "revid": 39585385,
-        "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-        "line_1_based": 7,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|industrie minière|fr}} [[desserrer|Desserrer]] la couche en ouvrant, parallèlement à son plan, une [[entaille]] d'une certaine profondeur dans une [[mine]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 6,
-          "column_1_based": 13,
-          "reviewed_excerpt": "{{h aspiré}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_109795",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "In mining, to cut a slot parallel to a seam in order to loosen it; initial h is aspirated in French grammar.",
-      "independence": true,
-      "review_reason": "Mining slot/loosen seam is accurate; aspirated h is grammatical, not a pronounced English h. Admission remains unresolved: Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "haver, revision 39585385, selected lines [6, 7]: No selected-span original-work import declaration. The lexical definition and nominal/verbal IPA are fixed Wiktionnaire content under CC BY-SA 4.0. Article boundary locations inspected: 35, 37. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 39 returned named credits and 4 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
-      "sense_id": "b159-3922-haver-ver-selected",
-      "frozen_row": 3922,
-      "headword": "haver",
-      "pos": "VER",
-      "field": "chinese",
-      "language": "zh",
-      "proposed_text": "采矿术语：沿矿层平面平行开槽，使矿层松动；词首 h 为嘘音 h，不发生省音或联诵。",
-      "exact_source": {
-        "source_id": "b159_fr_109795",
-        "revid": 39585385,
-        "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-        "line_1_based": 7,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|industrie minière|fr}} [[desserrer|Desserrer]] la couche en ouvrant, parallèlement à son plan, une [[entaille]] d'une certaine profondeur dans une [[mine]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 6,
-          "column_1_based": 13,
-          "reviewed_excerpt": "{{h aspiré}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_109795",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "采矿术语：沿矿层平面平行开槽，使矿层松动；词首 h 为嘘音 h，不发生省音或联诵。",
-      "independence": true,
-      "review_reason": "平行开槽/矿层松动 and 不省音或联诵 preserve mining meaning and h aspiré. Admission remains unresolved: Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "haver, revision 39585385, selected lines [6, 7]: No selected-span original-work import declaration. The lexical definition and nominal/verbal IPA are fixed Wiktionnaire content under CC BY-SA 4.0. Article boundary locations inspected: 35, 37. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 39 returned named credits and 4 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
       "sense_id": "b159-3923-karma-nom-selected",
       "frozen_row": 3923,
       "headword": "karma",
@@ -12052,292 +11802,6 @@
       "selected_text_rights_reason": "proie, revision 39597746, selected lines [7, 8]: DAF8 marker(s) at 133: conservative original credit to Académie française, eighth edition 1932–1935, with the established collective-work expiry 2006-01-01 under CPI L123-3. The marker establishes a possible imported original layer, not individual selected-sentence authorship. Later Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Article boundary locations inspected: 132, 133. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 49 returned named credits and 5 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
     },
     {
-      "sense_id": "b159-3944-da-ono-selected",
-      "frozen_row": 3944,
-      "headword": "da",
-      "pos": "ONO",
-      "field": "french_definition",
-      "language": "fr",
-      "proposed_text": "Particule familière et vieillie qui renforce surtout oui, plus rarement nenni ; elle peut parfois s’employer seule.",
-      "exact_source": {
-        "source_id": "b159_fr_7706",
-        "revid": 39926011,
-        "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-        "line_1_based": 30,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{familier|fr}} {{vieilli|fr}} Se [[joint]] quelquefois à ''[[oui]]'' pour en [[renforcer]] le [[sens]]. Plus rarement accolé à ''[[nenni]]''. Parfois même employé isolément comme [[adverbe]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 22,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 27,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 28,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|da}}"
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 29,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_7706",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "Particule familière et vieillie qui renforce surtout oui, plus rarement nenni ; elle peut parfois s’employer seule.",
-      "independence": true,
-      "review_reason": "Old familiar particle reinforcing oui/nenni is semantically accurate, but its particle POS cannot establish frozen ONO. Admission remains unresolved: French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "da, revision 39926011, selected lines [29, 30]: DAF8 marker(s) at 79: conservative original credit to Académie française, eighth edition 1932–1935, with the established collective-work expiry 2006-01-01 under CPI L123-3. The marker establishes a possible imported original layer, not individual selected-sentence authorship. Later Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Article boundary locations inspected: 78, 79. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 101 returned named credits and 14 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
-      "sense_id": "b159-3944-da-ono-selected",
-      "frozen_row": 3944,
-      "headword": "da",
-      "pos": "ONO",
-      "field": "ipa",
-      "language": "und",
-      "proposed_text": "/da/",
-      "exact_source": {
-        "source_id": "b159_fr_7706",
-        "revid": 39926011,
-        "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-        "line_1_based": 29,
-        "column_1_based": 1,
-        "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}",
-        "ipa_variant_column_1_based": 4,
-        "ipa_variant_excerpt": "da"
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 22,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 27,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 28,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|da}}"
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 29,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_7706",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "/da/",
-      "independence": true,
-      "review_reason": "The captured French IPA variant /da/ is literal within the recorded pronunciation template at line 29; source spelling and French lexical frame bind the variant to this selected sense. Admission remains unresolved: French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "da, revision 39926011, selected lines [29, 30]: DAF8 marker(s) at 79: conservative original credit to Académie française, eighth edition 1932–1935, with the established collective-work expiry 2006-01-01 under CPI L123-3. The marker establishes a possible imported original layer, not individual selected-sentence authorship. Later Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Article boundary locations inspected: 78, 79. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 101 returned named credits and 14 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
-      "sense_id": "b159-3944-da-ono-selected",
-      "frozen_row": 3944,
-      "headword": "da",
-      "pos": "ONO",
-      "field": "english",
-      "language": "en",
-      "proposed_text": "An old-fashioned, informal French emphatic particle, usually added to oui, less often nenni, and occasionally used alone.",
-      "exact_source": {
-        "source_id": "b159_fr_7706",
-        "revid": 39926011,
-        "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-        "line_1_based": 30,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{familier|fr}} {{vieilli|fr}} Se [[joint]] quelquefois à ''[[oui]]'' pour en [[renforcer]] le [[sens]]. Plus rarement accolé à ''[[nenni]]''. Parfois même employé isolément comme [[adverbe]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 22,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 27,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 28,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|da}}"
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 29,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_7706",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "An old-fashioned, informal French emphatic particle, usually added to oui, less often nenni, and occasionally used alone.",
-      "independence": true,
-      "review_reason": "Old-fashioned/informal emphatic particle retains oui/nenni and isolated use without inventing an interjection. Admission remains unresolved: French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "da, revision 39926011, selected lines [29, 30]: DAF8 marker(s) at 79: conservative original credit to Académie française, eighth edition 1932–1935, with the established collective-work expiry 2006-01-01 under CPI L123-3. The marker establishes a possible imported original layer, not individual selected-sentence authorship. Later Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Article boundary locations inspected: 78, 79. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 101 returned named credits and 14 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
-      "sense_id": "b159-3944-da-ono-selected",
-      "frozen_row": 3944,
-      "headword": "da",
-      "pos": "ONO",
-      "field": "chinese",
-      "language": "zh",
-      "proposed_text": "旧式口语中的强调小品词，主要接在 oui 后，较少接在 nenni 后，有时也单独使用。",
-      "exact_source": {
-        "source_id": "b159_fr_7706",
-        "revid": 39926011,
-        "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-        "line_1_based": 30,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{familier|fr}} {{vieilli|fr}} Se [[joint]] quelquefois à ''[[oui]]'' pour en [[renforcer]] le [[sens]]. Plus rarement accolé à ''[[nenni]]''. Parfois même employé isolément comme [[adverbe]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 22,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 27,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 28,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|da}}"
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 29,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "unresolved",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b159_fr_7706",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "accepted_text": "旧式口语中的强调小品词，主要接在 oui 后，较少接在 nenni 后，有时也单独使用。",
-      "independence": true,
-      "review_reason": "旧式口语/强调小品词/oui/nenni retains construction, but cannot satisfy exact ONO independently. Admission remains unresolved: French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved",
-      "selected_text_rights_reason": "da, revision 39926011, selected lines [29, 30]: DAF8 marker(s) at 79: conservative original credit to Académie française, eighth edition 1932–1935, with the established collective-work expiry 2006-01-01 under CPI L123-3. The marker establishes a possible imported original layer, not individual selected-sentence authorship. Later Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Article boundary locations inspected: 78, 79. Reference lists identify sources consulted; they do not establish direct quotation or license external prose. Selected lexical/grammar spans have no attached external quotation attribution; neighbouring examples, multiline literary quotations, illustrations, etymology, other POS and other languages are outside the selected learner text. Attribution retains 101 returned named credits and 14 anonymous contributors through the full article history; current registry totals do not identify fixed-revision sentence authors. All response continuation tokens match the next retained request. CC BY-SA 4.0 licence/disclaimer, attribution, modifications and ShareAlike are retained for the contribution/adaptation layers."
-    },
-    {
       "sense_id": "b159-3945-rançon-nom-selected",
       "frozen_row": 3945,
       "headword": "rançon",
@@ -16138,94 +15602,6 @@
       "frozen_scope_eligibility_status": "passed"
     },
     {
-      "sense_id": "b159-3922-haver-ver-selected",
-      "frozen_row": 3922,
-      "headword": "haver",
-      "pos": "VER",
-      "source_headword": "haver",
-      "proposed_usage": "Transitive mining verb with h aspiré; research candidate blocked by the ordinary everyday requirement.",
-      "language": "en",
-      "excluded_uses": "A general verb meaning to have; havir, hâver, a spelling substitution or an unapproved specialist exception.",
-      "exact_source": {
-        "source_id": "b159_fr_109795",
-        "revid": 39585385,
-        "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-        "line_1_based": 7,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|industrie minière|fr}} [[desserrer|Desserrer]] la couche en ouvrant, parallèlement à son plan, une [[entaille]] d'une certaine profondeur dans une [[mine]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 6,
-          "column_1_based": 13,
-          "reviewed_excerpt": "{{h aspiré}}"
-        }
-      ],
-      "construction_and_flexion_evidence": [
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 6,
-          "column_1_based": 13,
-          "reviewed_excerpt": "{{h aspiré}}"
-        }
-      ],
-      "author_construction_and_flexion_interpretation": "Transitive mining verb with h aspiré; research candidate blocked by the ordinary everyday requirement.",
-      "author_everyday_use_assessment": "The retained French source has only a mining sense. No modern everyday sense or owner-approved specialist exception is established.",
-      "accepted_usage_quality_status": "unresolved",
-      "everyday_sense_status": "unresolved",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "accepted_usage": "Transitive mining verb with h aspiré; research candidate blocked by the ordinary everyday requirement.",
-      "independence": true,
-      "review_reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
-      "everyday_sense_reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved"
-    },
-    {
       "sense_id": "b159-3923-karma-nom-selected",
       "frozen_row": 3923,
       "headword": "karma",
@@ -18380,112 +17756,6 @@
       "frozen_scope_eligibility_status": "passed"
     },
     {
-      "sense_id": "b159-3944-da-ono-selected",
-      "frozen_row": 3944,
-      "headword": "da",
-      "pos": "ONO",
-      "source_headword": "da",
-      "proposed_usage": "French old-fashioned emphatic particle; frozen ONO identity retained as a blocked research candidate.",
-      "language": "en",
-      "excluded_uses": "The Russian word for yes, Antillean noun, fibre plant, SI symbol, Danish language code or an unapproved POS substitution.",
-      "exact_source": {
-        "source_id": "b159_fr_7706",
-        "revid": 39926011,
-        "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-        "line_1_based": 30,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{familier|fr}} {{vieilli|fr}} Se [[joint]] quelquefois à ''[[oui]]'' pour en [[renforcer]] le [[sens]]. Plus rarement accolé à ''[[nenni]]''. Parfois même employé isolément comme [[adverbe]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 22,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 27,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 28,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|da}}"
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 29,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        }
-      ],
-      "construction_and_flexion_evidence": [
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 22,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 27,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 28,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|da}}"
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 29,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        }
-      ],
-      "author_construction_and_flexion_interpretation": "French old-fashioned emphatic particle; frozen ONO identity retained as a blocked research candidate.",
-      "author_everyday_use_assessment": "The retained French source labels the selected use particule, familier and vieilli. A modern everyday ONO use is unestablished.",
-      "accepted_usage_quality_status": "unresolved",
-      "everyday_sense_status": "unresolved",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "accepted_usage": "French old-fashioned emphatic particle; frozen ONO identity retained as a blocked research candidate.",
-      "independence": true,
-      "review_reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
-      "everyday_sense_reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "unresolved"
-    },
-    {
       "sense_id": "b159-3945-rançon-nom-selected",
       "frozen_row": 3945,
       "headword": "rançon",
@@ -20123,48 +19393,6 @@
       "review_reason": "Exact vase appears in the French lexical frame at the retained revision; source binding only, no alias or subclass substitution. French noun section 2 at 85/88 is masculine; section 1's feminine mud is outside this selection."
     },
     {
-      "sense_id": "b159-3922-haver-ver-selected",
-      "frozen_row": 3922,
-      "frozen_headword": "haver",
-      "source_headword": "haver",
-      "relation": "exact_french_source_spelling",
-      "relation_role": "source_binding_only",
-      "alias_admission": "not_admitted",
-      "proposed_evidence": [
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_109795",
-          "revid": 39585385,
-          "url": "https://fr.wiktionary.org/w/index.php?title=haver&oldid=39585385",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=haver&action=history",
-          "line_1_based": 6,
-          "column_1_based": 13,
-          "reviewed_excerpt": "{{h aspiré}}"
-        }
-      ],
-      "construction_and_flexion_interpretation": "Transitive mining verb with h aspiré; research candidate blocked by the ordinary everyday requirement.",
-      "independent_review": "passed",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "review_reason": "Exact haver appears in the French lexical frame at the retained revision; source binding only, no alias or subclass substitution. Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved."
-    },
-    {
       "sense_id": "b159-3923-karma-nom-selected",
       "frozen_row": 3923,
       "frozen_headword": "karma",
@@ -21200,57 +20428,6 @@
       "review_reason": "Exact proie appears in the French lexical frame at the retained revision; source binding only, no alias or subclass substitution. Feminine noun for a living animal caught by a carnivore is ordinary animal-life vocabulary; booty and figurative victims remain excluded."
     },
     {
-      "sense_id": "b159-3944-da-ono-selected",
-      "frozen_row": 3944,
-      "frozen_headword": "da",
-      "source_headword": "da",
-      "relation": "exact_french_source_spelling",
-      "relation_role": "source_binding_only",
-      "alias_admission": "not_admitted",
-      "proposed_evidence": [
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 22,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 27,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|particule|fr}} ==="
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 28,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|da}}"
-        },
-        {
-          "source_id": "b159_fr_7706",
-          "revid": 39926011,
-          "url": "https://fr.wiktionary.org/w/index.php?title=da&oldid=39926011",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=da&action=history",
-          "line_1_based": 29,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''da''' {{pron|da|fr}} {{invariable|fr}}"
-        }
-      ],
-      "construction_and_flexion_interpretation": "French old-fashioned emphatic particle; frozen ONO identity retained as a blocked research candidate.",
-      "independent_review": "passed",
-      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
-      "review_reason": "Exact da appears in the French lexical frame at the retained revision; source binding only, no alias or subclass substitution. French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved."
-    },
-    {
       "sense_id": "b159-3945-rançon-nom-selected",
       "frozen_row": 3945,
       "frozen_headword": "rançon",
@@ -21532,76 +20709,148 @@
   ],
   "unresolved_fields": [
     {
-      "sense_id": "b159-3922-haver-ver-selected",
       "frozen_row": 3922,
       "headword": "haver",
       "pos": "VER",
       "field": "french_definition",
-      "requirement": "modern_everyday_sense",
-      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved."
+      "language": "fr",
+      "status": "unresolved",
+      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     },
     {
-      "sense_id": "b159-3922-haver-ver-selected",
       "frozen_row": 3922,
       "headword": "haver",
       "pos": "VER",
       "field": "ipa",
-      "requirement": "modern_everyday_sense",
-      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved."
+      "language": "und",
+      "status": "unresolved",
+      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     },
     {
-      "sense_id": "b159-3922-haver-ver-selected",
       "frozen_row": 3922,
       "headword": "haver",
       "pos": "VER",
       "field": "english",
-      "requirement": "modern_everyday_sense",
-      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved."
+      "language": "en",
+      "status": "unresolved",
+      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     },
     {
-      "sense_id": "b159-3922-haver-ver-selected",
       "frozen_row": 3922,
       "headword": "haver",
       "pos": "VER",
       "field": "chinese",
-      "requirement": "modern_everyday_sense",
-      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved."
+      "language": "zh",
+      "status": "unresolved",
+      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     },
     {
-      "sense_id": "b159-3944-da-ono-selected",
       "frozen_row": 3944,
       "headword": "da",
       "pos": "ONO",
       "field": "french_definition",
-      "requirement": "exact_ONO_binding_and_modern_everyday_sense",
-      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved."
+      "language": "fr",
+      "status": "unresolved",
+      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     },
     {
-      "sense_id": "b159-3944-da-ono-selected",
       "frozen_row": 3944,
       "headword": "da",
       "pos": "ONO",
       "field": "ipa",
-      "requirement": "exact_ONO_binding_and_modern_everyday_sense",
-      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved."
+      "language": "und",
+      "status": "unresolved",
+      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     },
     {
-      "sense_id": "b159-3944-da-ono-selected",
       "frozen_row": 3944,
       "headword": "da",
       "pos": "ONO",
       "field": "english",
-      "requirement": "exact_ONO_binding_and_modern_everyday_sense",
-      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved."
+      "language": "en",
+      "status": "unresolved",
+      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     },
     {
-      "sense_id": "b159-3944-da-ono-selected",
       "frozen_row": 3944,
       "headword": "da",
       "pos": "ONO",
       "field": "chinese",
-      "requirement": "exact_ONO_binding_and_modern_everyday_sense",
-      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved."
+      "language": "zh",
+      "status": "unresolved",
+      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      }
     }
   ],
   "review_inputs": {
@@ -21613,5 +20862,45 @@
     "review_branch": "codex/d2-review-159",
     "review_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\review-159",
     "proof_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-159"
-  }
+  },
+  "accepted_fields": 192,
+  "quality_accepted_fields": 192,
+  "rights_accepted_fields": 192,
+  "unresolved_fields_count": 8,
+  "annotation_exceptions": [
+    {
+      "frozen_row": 3922,
+      "headword": "haver",
+      "pos": "VER",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "independent_evidence_decision": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved."
+    },
+    {
+      "frozen_row": 3944,
+      "headword": "da",
+      "pos": "ONO",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "independent_evidence_decision": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved."
+    }
+  ]
 }
