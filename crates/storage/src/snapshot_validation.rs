@@ -108,7 +108,7 @@ pub fn validate_learning_snapshot(
     captured_at: i64,
 ) -> Result<(), StorageError> {
     require(
-        matches!(snapshot.snapshot_version, 1..=4),
+        matches!(snapshot.snapshot_version, 1..=5),
         "unsupported snapshot version",
     )?;
     timestamp(captured_at)?;
@@ -400,6 +400,22 @@ fn validate_notes(
             known(*id, &categories)?;
         }
     }
+    let mut exchange_records = HashSet::new();
+    let mut exchange_ids = HashSet::new();
+    for identity in &snapshot.grammar_exchange_identities {
+        known(identity.record_id, &grammars)?;
+        crate::grammar::validate_operation(&identity.exchange_id)?;
+        require(
+            snapshot.snapshot_version >= 5
+                && exchange_records.insert(identity.record_id)
+                && exchange_ids.insert(&identity.exchange_id),
+            "duplicate or invalid grammar exchange identity",
+        )?;
+    }
+    require(
+        snapshot.snapshot_version < 5 || exchange_records == grammars,
+        "missing grammar exchange identity",
+    )?;
     let mut operations = HashSet::new();
     for saved in &snapshot.grammar_save_operations {
         known(saved.record_id, &grammars)?;

@@ -36,6 +36,8 @@ pub struct LearningSnapshot {
     #[serde(default)]
     pub grammar_records: Vec<GrammarRecord>,
     #[serde(default)]
+    pub grammar_exchange_identities: Vec<crate::GrammarExchangeIdentity>,
+    #[serde(default)]
     pub grammar_save_operations: Vec<SnapshotGrammarSaveOperation>,
     #[serde(default)]
     pub deleted_grammar_operations: Vec<String>,

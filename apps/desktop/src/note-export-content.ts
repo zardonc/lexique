@@ -12,4 +12,13 @@ export const noteExportMessages = {
     openMarkdown: 'Exporter en Markdown', saveMarkdown: 'Enregistrer le Markdown', save: 'Enregistrer le CSV', busy: 'Export en cours…', saved: 'Exporté', cancelled: 'Annulé ; aucun fichier exporté.', close: 'Fermer', retry: 'Relire',
     saveZip: 'Enregistrer le ZIP Markdown', detail: 'Exporte les mots, notes et tous les exemples enregistrés.' },
 };
-export type NoteExportText = (typeof noteExportMessages)[keyof typeof noteExportMessages];
+export type NoteExportText = { readonly [Key in keyof typeof noteExportMessages.zh]: string };
+
+export const grammarExportMessages = {
+  zh: { ...noteExportMessages.zh, heading: '导出语法笔记', all: '全部语法', single: '当前语法', records: '条语法记录', rows: '行',
+    empty: '此范围没有已保存的语法记录，无法导出。', detail: '仅导出已保存的交换身份、标题、正文、问题和答案。未保存的修改不进入文件。' },
+  en: { ...noteExportMessages.en, heading: 'Export grammar notes', all: 'All grammar', single: 'Current grammar record', records: 'grammar records', rows: 'rows',
+    empty: 'No saved grammar records in this scope to export.', detail: 'Exports saved exchange identity, title, body, question and answer. Unsaved changes are excluded.' },
+  fr: { ...noteExportMessages.fr, heading: 'Exporter les notes de grammaire', all: 'Toute la grammaire', single: 'Fiche actuelle', records: 'fiches de grammaire', rows: 'lignes',
+    empty: 'Aucune fiche de grammaire enregistrée à exporter.', detail: 'Exporte l’identité d’échange, le titre, le corps, la question et la réponse enregistrés. Les modifications non enregistrées sont exclues.' },
+};

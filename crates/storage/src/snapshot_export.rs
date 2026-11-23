@@ -50,7 +50,8 @@ pub fn export_learning_snapshot(
     )?;
     let mut records = get_batch(&tx, &ids)?;
     let mut snapshot = LearningSnapshot {
-        snapshot_version: 4,
+        snapshot_version: 5,
+        grammar_exchange_identities: crate::grammar_export::grammar_exchange_identities(&tx)?,
         grammar_records: list_grammar(&tx, "", "created-asc")?,
         grammar_save_operations: rows(
             &tx,

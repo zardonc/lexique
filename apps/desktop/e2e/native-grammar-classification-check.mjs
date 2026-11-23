@@ -147,7 +147,7 @@ async function backup() {
   let exported;
   await expect.poll(async () => { exported = await latest('lexique-backup-progress'); return exported?.state; }, { timeout: 10000 }).toBe('completed');
   assert.equal(exported.result.counts.grammar, original.length); assert.equal(exported.result.counts.categories, originalCategories.length);
-  const archive = inspectPackage(destination, filename); assert.equal(archive.snapshot.snapshot_version, 4);
+  const archive = inspectPackage(destination, filename); assert.equal(archive.snapshot.snapshot_version, 5);
   assert.ok(archive.snapshot.deleted_grammar_operations.includes('native-note-second'));
   assert.ok(archive.snapshot.retained_review_usage.length); assert.equal(archive.snapshot.preferences.undo_blocked, true);
   const transient = (await invoke('grammar_save', { request: noteRequest('native-after-backup', 'Après la sauvegarde', 'Une modification') })).record;

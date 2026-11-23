@@ -531,7 +531,7 @@ pub fn validate_backup(
     .map_err(|e| format!("Invalid backup manifest: {e}"))?;
     if manifest.kind != "lexique-backup"
         || manifest.format_version != 1
-        || !matches!(manifest.snapshot_version, 1..=4)
+        || !matches!(manifest.snapshot_version, 1..=5)
         || !(0..=SAFE_INTEGER as i64).contains(&manifest.created_at)
         || manifest.application_version.trim().is_empty()
         || manifest.application_version.len() > 200
@@ -1320,8 +1320,8 @@ mod tests {
         storage::initialize(&connection).unwrap();
         let time = 1_794_564_000;
         let snapshot = storage::export_learning_snapshot(&mut connection, time).unwrap();
-        assert_eq!(snapshot.snapshot_version, 4);
-        for version in [4, 3, 2, 1] {
+        assert_eq!(snapshot.snapshot_version, 5);
+        for version in [5, 4, 3, 2, 1] {
             let mut value = serde_json::to_value(&snapshot).unwrap();
             value["snapshot_version"] = version.into();
             value["preferences"]
@@ -2494,7 +2494,7 @@ mod tests {
         for (field, value) in [
             ("kind", serde_json::json!("other")),
             ("format_version", serde_json::json!(2)),
-            ("snapshot_version", serde_json::json!(5)),
+            ("snapshot_version", serde_json::json!(6)),
             ("created_at", serde_json::json!(9_007_199_254_740_992_i64)),
             ("application_version", serde_json::json!("")),
             ("unknown", serde_json::json!(true)),

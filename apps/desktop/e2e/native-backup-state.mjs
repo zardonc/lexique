@@ -4,7 +4,7 @@ import { resolve, join, relative, isAbsolute } from 'node:path';
 
 function ownedDestination(destination) {
   const root = resolve(destination);
-  assert.ok(['issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83', 'issue-84', 'issue-85', 'issue-86', 'issue-87', 'issue-88', 'issue-89', 'issue-90', 'issue-91', 'issue-92', 'issue-93', 'issue-94', 'issue-95', 'issue-96', 'issue-97', 'issue-98', 'issue-99', 'issue-100', 'issue-101', 'issue-102', 'issue-103', 'issue-104', 'issue-105', 'issue-106', 'issue-107', 'issue-108', 'issue-109', 'issue-110', 'issue-111', 'issue-112', 'issue-113', 'issue-114', 'issue-115', 'issue-116', 'issue-117', 'issue-118', 'issue-119', 'issue-120', 'issue-121', 'issue-122', 'issue-123', 'issue-124', 'issue-125', 'issue-126', 'issue-127', 'issue-128', 'issue-129', 'issue-130', 'issue-131', 'issue-132', 'issue-133', 'issue-134', 'issue-135', 'issue-136', 'issue-137', 'issue-138', 'issue-139', 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201'].some(issue => {
+  assert.ok(['issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83', 'issue-84', 'issue-85', 'issue-86', 'issue-87', 'issue-88', 'issue-89', 'issue-90', 'issue-91', 'issue-92', 'issue-93', 'issue-94', 'issue-95', 'issue-96', 'issue-97', 'issue-98', 'issue-99', 'issue-100', 'issue-101', 'issue-102', 'issue-103', 'issue-104', 'issue-105', 'issue-106', 'issue-107', 'issue-108', 'issue-109', 'issue-110', 'issue-111', 'issue-112', 'issue-113', 'issue-114', 'issue-115', 'issue-116', 'issue-117', 'issue-118', 'issue-119', 'issue-120', 'issue-121', 'issue-122', 'issue-123', 'issue-124', 'issue-125', 'issue-126', 'issue-127', 'issue-128', 'issue-129', 'issue-130', 'issue-131', 'issue-132', 'issue-133', 'issue-134', 'issue-135', 'issue-136', 'issue-137', 'issue-138', 'issue-139', 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201', 'ticket-213'].some(issue => {
     const owned = relative(resolve('../../target', issue), root);
     return owned && !owned.startsWith('..') && !isAbsolute(owned);
   }));
@@ -107,6 +107,7 @@ export function readState(destination) {
 queries={
  'records':'SELECT id,record_kind,headword,snapshot,notes,example_fr,example_zh,example_source,example_sense,more_examples,revision,created_at,updated_at FROM vocabulary ORDER BY id',
  'grammar_cards':'SELECT * FROM grammar_cards ORDER BY card_id',
+ 'grammar_exchange_identities':'SELECT record_id,exchange_id FROM grammar_exchange_identities ORDER BY record_id',
  'categories':'SELECT * FROM learning_categories ORDER BY id',
  'record_categories':'SELECT * FROM record_categories ORDER BY record_id,category_id',
  'retained_review_usage':'SELECT * FROM retained_review_usage ORDER BY learning_day,reviewed_at',
@@ -155,8 +156,8 @@ print(json.dumps(result,ensure_ascii=False))`, {}, true);
 }
 
 export function compareLearning(actual, expected) {
-  assert.equal(actual.schema, 20); assert.deepEqual(actual.integrity, ['ok']); assert.deepEqual(actual.foreign_keys, []);
-  for (const key of ['records', 'saves', 'cards', 'progress', 'ratings', 'queue_context', 'queue', 'paused', 'batches', 'batch_items', 'settings', 'preferences', 'absent_progress', 'grammar_cards', 'categories', 'record_categories', 'retained_review_usage', 'deleted_grammar_operations']) {
+  assert.equal(actual.schema, 21); assert.deepEqual(actual.integrity, ['ok']); assert.deepEqual(actual.foreign_keys, []);
+  for (const key of ['records', 'saves', 'cards', 'progress', 'ratings', 'queue_context', 'queue', 'paused', 'batches', 'batch_items', 'settings', 'preferences', 'absent_progress', 'grammar_cards', 'grammar_exchange_identities', 'categories', 'record_categories', 'retained_review_usage', 'deleted_grammar_operations']) {
     assert.deepEqual(actual[key], expected[key], `Independent restored ${key}`);
   }
 }

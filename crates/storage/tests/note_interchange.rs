@@ -35,7 +35,7 @@ fn imported_notes_bypass_auto_enrollment_and_survive_portable_snapshot_restore()
     let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
     assert!(snapshot.speech_tasks.is_empty());
     assert!(snapshot.speech_owners.is_empty());
-    assert_eq!(snapshot.snapshot_version, 4);
+    assert_eq!(snapshot.snapshot_version, 5);
     let bytes = serde_json::to_vec(&snapshot).unwrap();
     let portable = read_learning_snapshot(bytes.as_slice(), 1_800_000_000).unwrap();
     let mut restored = Connection::open_in_memory().unwrap();

@@ -6,8 +6,11 @@ use std::{
     },
 };
 
-use lexique_storage::{NoteExportScope, NoteExportSnapshot, capture_note_export};
-use serde::Serialize;
+use lexique_storage::{
+    GrammarExportSnapshot, NoteExportScope, NoteExportSnapshot, capture_grammar_export,
+    capture_note_export,
+};
+use serde::{Deserialize, Serialize};
 use tauri::{Manager, State};
 use tauri_plugin_dialog::DialogExt;
 
@@ -20,10 +23,60 @@ static NEXT_SNAPSHOT: AtomicU64 = AtomicU64::new(1);
 mod tests;
 
 #[derive(Default)]
-pub struct NoteExports(Mutex<Option<(String, Arc<NoteExportSnapshot>)>>);
+pub struct NoteExports(Mutex<Option<(String, Arc<ExportSnapshot>)>>);
+
+#[derive(Clone, Copy, Default, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ExportRecordKind {
+    #[default]
+    Vocabulary,
+    Grammar,
+}
+
+enum ExportSnapshot {
+    Vocabulary(Arc<NoteExportSnapshot>),
+    Grammar(GrammarExportSnapshot),
+}
+
+impl ExportSnapshot {
+    fn counts(&self) -> (usize, usize) {
+        match self {
+            Self::Vocabulary(snapshot) => (snapshot.records.len(), snapshot.row_count()),
+            Self::Grammar(snapshot) => (snapshot.records.len(), snapshot.records.len()),
+        }
+    }
+
+    fn save_csv(&self, destination: Option<&Path>) -> Result<ExportResult, String> {
+        let (records, rows) = self.counts();
+        if records == 0 {
+            return Err("No saved records in this export scope".into());
+        }
+        let state = if let Some(path) = destination {
+            match self {
+                Self::Vocabulary(snapshot) => write_note_csv(snapshot, path)?,
+                Self::Grammar(snapshot) => write_grammar_csv(snapshot, path)?,
+            }
+            "saved"
+        } else {
+            "cancelled"
+        };
+        Ok(ExportResult {
+            state,
+            records,
+            rows,
+        })
+    }
+}
 
 impl NoteExports {
     pub(crate) fn retained(&self, token: &str) -> Result<Arc<NoteExportSnapshot>, String> {
+        match self.retained_snapshot(token)?.as_ref() {
+            ExportSnapshot::Vocabulary(snapshot) => Ok(snapshot.clone()),
+            ExportSnapshot::Grammar(_) => Err("Grammar export supports CSV".into()),
+        }
+    }
+
+    fn retained_snapshot(&self, token: &str) -> Result<Arc<ExportSnapshot>, String> {
         self.0
             .lock()
             .map_err(|_| "Note export snapshot unavailable")?
@@ -32,6 +85,36 @@ impl NoteExports {
             .map(|(_, snapshot)| snapshot.clone())
             .ok_or_else(|| "Note export snapshot changed; select the scope again".into())
     }
+}
+
+pub fn write_grammar_csv(
+    snapshot: &GrammarExportSnapshot,
+    destination: &Path,
+) -> Result<(), String> {
+    if snapshot.records.is_empty() {
+        return Err("No saved grammar records in this export scope".into());
+    }
+    let mut writer = csv::WriterBuilder::new()
+        .terminator(csv::Terminator::CRLF)
+        .from_writer(vec![0xef, 0xbb, 0xbf]);
+    writer
+        .write_record(["exchange_id", "title", "body", "question", "answer"])
+        .map_err(|error| format!("Could not serialize CSV header: {error}"))?;
+    for record in &snapshot.records {
+        writer
+            .write_record([
+                &record.exchange_id,
+                &record.title,
+                &record.body,
+                &record.question,
+                &record.answer,
+            ])
+            .map_err(|error| format!("Could not serialize grammar CSV record: {error}"))?;
+    }
+    let bytes = writer
+        .into_inner()
+        .map_err(|error| format!("Could not finish CSV: {error}"))?;
+    std::fs::write(destination, bytes).map_err(|error| format!("Could not write CSV file: {error}"))
 }
 
 #[derive(Serialize)]
@@ -132,22 +215,32 @@ pub async fn note_export_snapshot(
     path: State<'_, DatabasePath>,
     maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     scope: NoteExportScope,
+    record_kind: Option<ExportRecordKind>,
 ) -> Result<ExportSummary, String> {
     crate::backup_operations::main_window(&window)?;
     let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let _reader = reader;
-        let snapshot =
-            capture_note_export(&mut open(&path)?, &scope).map_err(|error| error.to_string())?;
+        let mut connection = open(&path)?;
+        let snapshot = match record_kind.unwrap_or_default() {
+            ExportRecordKind::Vocabulary => ExportSnapshot::Vocabulary(Arc::new(
+                capture_note_export(&mut connection, &scope).map_err(|error| error.to_string())?,
+            )),
+            ExportRecordKind::Grammar => ExportSnapshot::Grammar(
+                capture_grammar_export(&mut connection, &scope)
+                    .map_err(|error| error.to_string())?,
+            ),
+        };
         let token = format!(
             "note-export-{}",
             NEXT_SNAPSHOT.fetch_add(1, Ordering::Relaxed)
         );
+        let (records, rows) = snapshot.counts();
         let summary = ExportSummary {
             token: token.clone(),
-            records: snapshot.records.len(),
-            rows: snapshot.row_count(),
+            records,
+            rows,
         };
         *app.state::<NoteExports>()
             .0
@@ -167,9 +260,9 @@ pub async fn note_export_csv(
     token: String,
 ) -> Result<ExportResult, String> {
     crate::backup_operations::main_window(&window)?;
-    let snapshot = exports.retained(&token)?;
-    if snapshot.records.is_empty() {
-        return Err("No saved vocabulary in this export scope".into());
+    let snapshot = exports.retained_snapshot(&token)?;
+    if snapshot.counts().0 == 0 {
+        return Err("No saved records in this export scope".into());
     }
     tauri::async_runtime::spawn_blocking(move || {
         let window = app
@@ -180,22 +273,19 @@ pub async fn note_export_csv(
             .file()
             .set_parent(&window)
             .add_filter("CSV", &["csv"])
-            .set_file_name("lexique-notes.csv")
+            .set_file_name(match snapshot.as_ref() {
+                ExportSnapshot::Grammar(_) => "lexique-grammar.csv",
+                _ => "lexique-notes.csv",
+            })
             .blocking_save_file();
-        let state = if let Some(destination) = destination {
-            let path = destination
-                .into_path()
-                .map_err(|error| format!("Could not resolve CSV destination: {error}"))?;
-            write_note_csv(&snapshot, &path)?;
-            "saved"
-        } else {
-            "cancelled"
-        };
-        Ok(ExportResult {
-            state,
-            records: snapshot.records.len(),
-            rows: snapshot.row_count(),
-        })
+        let path = destination
+            .map(|destination| {
+                destination
+                    .into_path()
+                    .map_err(|error| format!("Could not resolve CSV destination: {error}"))
+            })
+            .transpose()?;
+        snapshot.save_csv(path.as_deref())
     })
     .await
     .map_err(|error| format!("CSV export task failed: {error}"))?
