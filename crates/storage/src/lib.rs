@@ -13,6 +13,8 @@ mod grammar_export;
 pub use grammar_export::*;
 mod grammar;
 pub use grammar::*;
+mod grammar_import;
+pub use grammar_import::*;
 mod categories;
 pub use categories::*;
 mod speech;

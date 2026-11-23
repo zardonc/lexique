@@ -4,7 +4,7 @@ use tauri::Manager;
 
 use crate::vocabulary::{DatabasePath, open};
 
-fn now_millis(connection: &Connection) -> Result<i64, StorageError> {
+pub(crate) fn now_millis(connection: &Connection) -> Result<i64, StorageError> {
     Ok(connection.query_row(
         "SELECT CAST(unixepoch('subsec') * 1000 AS INTEGER)",
         [],

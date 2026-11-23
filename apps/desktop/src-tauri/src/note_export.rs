@@ -25,7 +25,7 @@ mod tests;
 #[derive(Default)]
 pub struct NoteExports(Mutex<Option<(String, Arc<ExportSnapshot>)>>);
 
-#[derive(Clone, Copy, Default, Deserialize)]
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize)]
 #[serde(rename_all = "snake_case")]
 pub enum ExportRecordKind {
     #[default]

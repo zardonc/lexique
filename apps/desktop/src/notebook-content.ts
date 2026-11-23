@@ -2,11 +2,13 @@ import type { Locale } from './content';
 import { coreMessages } from './core-sense';
 import { notesMessages } from './notes-content';
 import { noteImportMessages } from './note-import-content';
+import { grammarImportMessages } from './grammar-import-content';
 import { noteExportMessages, grammarExportMessages } from './note-export-content';
 
 export const notebookMessages = {
   zh: {
     interchange: noteImportMessages.zh,
+    grammarImport: grammarImportMessages.zh,
     exportText: noteExportMessages.zh,
     grammarExportText: grammarExportMessages.zh,
     notesText: notesMessages.zh,
@@ -48,6 +50,7 @@ export const notebookMessages = {
   },
   en: {
     interchange: noteImportMessages.en,
+    grammarImport: grammarImportMessages.en,
     exportText: noteExportMessages.en,
     grammarExportText: grammarExportMessages.en,
     notesText: notesMessages.en,
@@ -89,6 +92,7 @@ export const notebookMessages = {
   },
   fr: {
     interchange: noteImportMessages.fr,
+    grammarImport: grammarImportMessages.fr,
     exportText: noteExportMessages.fr,
     grammarExportText: grammarExportMessages.fr,
     notesText: notesMessages.fr,
