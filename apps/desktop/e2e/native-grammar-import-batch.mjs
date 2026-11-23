@@ -93,6 +93,15 @@ export async function grammarBatchCheck(ctx) {
     assert.equal(calls.length, 2); assert.deepEqual(calls[0], calls[1]); compareLearning(readState(destination), before); assert.deepEqual(await records(), saved);
     await assert.rejects(invoke('note_import_commit', { ...calls[0].args, selections: [{ index: 0, action: 'skip' }, { index: 1, action: 'create' }] }), /selection|content/i);
     evidence.calls = calls; evidence.checks.push('T24/T26: committed native batch response dropped; same UI submission returns identical receipt and two independent id-free paused cards without replaying writes; changed request reuse rejected');
+  } else if (scenario === 'grammar-batch-selection') {
+    await picker('导入语法 CSV', await file('independent-selection', [['title', 'question', 'answer'], ['Independent', 'Q', 'A'], ['Independent', 'Q', 'A']]));
+    await decision('Independent').nth(1).selectOption('skip'); await confirm();
+    const call = await page.evaluate(() => window.grammarImportCalls.find((value) => value.command === 'note_import_commit'));
+    const before = readState(destination); assert.equal((await records()).length, 1);
+    assert.deepEqual(await invoke('note_import_commit', call.args), call.result);
+    await assert.rejects(invoke('note_import_commit', { ...call.args, selections: [{ index: 0, action: 'skip' }, { index: 1, action: 'create' }] }), /selection|content/i);
+    compareLearning(readState(destination), before);
+    evidence.checks.push('independent equal id-free rows retain their selected source-group identity; identical retry replays, changed row selection is rejected despite equal text');
   } else if (scenario === 'grammar-batch-restart') {
     const saved = await records(); assert.equal(saved.length, 2); assert.ok(sqlPause().every((r) => r.paused === r.id)); assert.deepEqual(await queue(), []);
     assert.ok(saved.every((r) => r.card.question === 'Q' && r.card.answer === 'A'));

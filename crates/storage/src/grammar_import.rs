@@ -106,6 +106,7 @@ pub fn save_grammar_import(
         connection,
         operation,
         &[GrammarImportItem {
+            source_index: 0,
             content: content.clone(),
             existing: existing.cloned(),
         }],
@@ -117,6 +118,8 @@ pub fn save_grammar_import(
 #[derive(Clone, Debug, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct GrammarImportItem {
+    /// Distinguishes independent source groups even when their parsed text is equal.
+    pub source_index: usize,
     pub content: GrammarImportContent,
     pub existing: Option<GrammarRecord>,
 }

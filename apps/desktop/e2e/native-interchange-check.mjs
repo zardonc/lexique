@@ -9,7 +9,7 @@ import { inspectPackage, readState, seedAudio, compareLearning, fixtureSql } fro
 import { grammarImportCheck } from './native-grammar-import.mjs';
 
 const [resources, binary, destinationPath, scenario, source] = process.argv.slice(2);
-const grammarImportScenarios = ['grammar-batch-mapping', 'grammar-batch-learning', 'grammar-batch-stale', 'grammar-batch-occupied', 'grammar-batch-failure', 'grammar-batch-replay', 'grammar-batch-restart', 'grammar-import', 'grammar-import-restart', 'grammar-import-identifiers', 'grammar-import-validation', 'grammar-import-failure', 'grammar-import-replay', 'grammar-import-known'];
+const grammarImportScenarios = ['grammar-batch-mapping', 'grammar-batch-learning', 'grammar-batch-stale', 'grammar-batch-occupied', 'grammar-batch-failure', 'grammar-batch-replay', 'grammar-batch-restart', 'grammar-batch-selection', 'grammar-import', 'grammar-import-restart', 'grammar-import-identifiers', 'grammar-import-validation', 'grammar-import-failure', 'grammar-import-replay', 'grammar-import-known'];
 assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', ...grammarImportScenarios].includes(scenario));
 const fixture = await native24Fixture(resources, binary, destinationPath);
 const { destination } = fixture;

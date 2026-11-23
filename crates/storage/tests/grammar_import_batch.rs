@@ -17,7 +17,9 @@ fn failed_second_pause_write_rolls_back_first_note_identity_card_and_receipt_the
     initialize(&db).unwrap();
     let items: Vec<_> = ["First", "Second"]
         .into_iter()
-        .map(|title| GrammarImportItem {
+        .enumerate()
+        .map(|(source_index, title)| GrammarImportItem {
+            source_index,
             content: GrammarImportContent {
                 question: Some("Q".into()),
                 answer: Some("A".into()),
@@ -67,10 +69,12 @@ fn revision_or_new_identity_occupancy_rejects_whole_selected_batch() {
     .records
     .remove(0);
     let pending = GrammarImportItem {
+        source_index: 0,
         content: content(None, "Must roll back"),
         existing: None,
     };
     let stale = GrammarImportItem {
+        source_index: 1,
         content: content(Some("known"), "Updated"),
         existing: Some(saved.clone()),
     };
@@ -100,6 +104,7 @@ fn revision_or_new_identity_occupancy_rejects_whole_selected_batch() {
             &[
                 pending,
                 GrammarImportItem {
+                    source_index: 0,
                     content: content(Some("known"), "Unseen at preview"),
                     existing: None
                 }
@@ -128,6 +133,7 @@ fn selected_updates_preserve_omitted_body_and_card_then_explicit_empty_clears_bo
         .records
         .remove(0);
     let items = [GrammarImportItem {
+        source_index: 0,
         content: content(Some("batch-known"), "Renamed"),
         existing: Some(saved.clone()),
     }];
@@ -140,6 +146,7 @@ fn selected_updates_preserve_omitted_body_and_card_then_explicit_empty_clears_bo
     assert!(review_paused(&db, saved.id).unwrap());
     assert!(result.new_card_ids.is_empty());
     let clear = [GrammarImportItem {
+        source_index: 0,
         content: GrammarImportContent {
             body: Some(String::new()),
             question: Some(" \n".into()),
@@ -199,6 +206,7 @@ fn paired_updates_preserve_active_and_paused_learning_and_categories_without_ree
         .unwrap();
         set_review_paused(&mut db, saved.id, paused).unwrap();
         items.push(GrammarImportItem {
+            source_index: index,
             content: GrammarImportContent {
                 question: Some(" New Q \n".into()),
                 answer: Some(" New A \n".into()),

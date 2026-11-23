@@ -11,6 +11,33 @@ fn batch_csv_previews_multiple_independent_rows() {
 }
 
 #[test]
+fn receipt_cannot_reassign_a_selected_identifier_free_row_to_an_equal_independent_row() {
+    let mut db = Connection::open_in_memory().unwrap();
+    initialize(&db).unwrap();
+    let batch = preview(
+        &db,
+        "title\nIndependent\nIndependent\n",
+        "selected-row-replay",
+    );
+    let mut first = decide(&batch);
+    first[1].action = NoteImportAction::Skip;
+    let saved = commit_preview(&mut db, &batch, &first).unwrap();
+    assert_eq!(saved.created, 1);
+    assert_eq!(
+        commit_preview(&mut db, &batch, &first).unwrap().records,
+        saved.records
+    );
+    let mut changed = first;
+    changed[0].action = NoteImportAction::Skip;
+    changed[1].action = NoteImportAction::Create;
+    assert!(
+        commit_preview(&mut db, &batch, &changed).is_err(),
+        "independent rows must retain distinct submission identity even when their text is equal"
+    );
+    assert_eq!(list_grammar(&db, "", "created-asc").unwrap().len(), 1);
+}
+
+#[test]
 fn mapped_bom_variants_and_delimiters_preserve_raw_fields_and_validate_mapping() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();

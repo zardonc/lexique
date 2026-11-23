@@ -250,7 +250,7 @@ pub fn commit_preview(
     }
     let mut items = vec![];
     let mut skipped = 0;
-    for (group, decision) in preview.groups.iter().zip(decisions) {
+    for (source_index, (group, decision)) in preview.groups.iter().zip(decisions).enumerate() {
         let decision = decision.ok_or("Decide every grammar import group")?;
         if *decision == NoteImportAction::Skip {
             skipped += 1;
@@ -265,6 +265,7 @@ pub fn commit_preview(
             return Err("Invalid grammar import decision; choose create, update or skip".into());
         }
         items.push(GrammarImportItem {
+            source_index,
             content: group.content.clone(),
             existing: group.existing.clone(),
         });
