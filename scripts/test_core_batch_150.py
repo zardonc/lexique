@@ -35,6 +35,25 @@ def read(name):
 
 
 class Batch150Tests(unittest.TestCase):
+    def test_publicite_selects_the_daf8_advertisement_boundary(self):
+        group = next(g for g in read("groups.json") if g["headword"] == "publicité")
+        sense = group["senses"][0]
+        self.assertEqual(sense["use"], "Feminine count noun for a commercial advertisement, in any medium.")
+        accepted = {
+            "french_definition": "Annonce commerciale diffusée dans un journal, sur une affiche ou par un autre moyen de réclame.",
+            "english": "A commercial advertisement carried in a newspaper, on a poster or through another advertising medium.",
+            "chinese": "通过报纸、海报或其他宣传媒介发布的商业广告。",
+        }
+        for name, text in accepted.items():
+            with self.subTest(field=name):
+                field = sense["fields"][name]
+                self.assertEqual(field["text"], text)
+                self.assertEqual(field["source_span"]["line_1_based"], 26)
+                self.assertIn("[[annonce|Annonce]]", field["source_span"]["raw_source_excerpt"])
+        selected = [r for r in read("source-excerpts.json")["fields"]
+                    if r["sense_id"] == sense["sense_id"] and r["field"] != "ipa"]
+        self.assertEqual([r["line_1_based"] for r in selected], [26, 26, 26])
+
     def test_exact_frozen_groups_have_complete_resource_records(self):
         if (EVIDENCE / "groups.json").exists():
             groups = read("groups.json")
@@ -62,19 +81,22 @@ class Batch150Tests(unittest.TestCase):
                     self.assertTrue(field["text"].strip())
                     self.assertTrue(field["modification"].strip())
 
-    def test_fixed_fields_have_rights_material_and_honest_pending_review(self):
+    def test_fixed_fields_have_independent_review_and_selected_rights(self):
         admission, review, rights = read("admission.json"), read("field-review.json"), read("rights.json")
-        self.assertEqual(admission["status"], "authored_candidates_pending_separate_independent_review")
+        self.assertEqual(admission["status"], "independently_reviewed_selected_content_pending_canonical_assembly")
         self.assertEqual(admission["scope_denominator_groups"], 4087)
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
-        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (0, 0))
-        self.assertEqual(admission["pending_independent_review_fields"], 200)
-        self.assertEqual(admission["pending_independent_rights_fields"], 200)
+        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (50, 200))
+        self.assertEqual(admission["pending_independent_review_fields"], 0)
+        self.assertEqual(admission["pending_independent_rights_fields"], 0)
+        self.assertEqual(admission["newly_admitted_fields"], 0)
         self.assertEqual(admission["missing_admitted_fields"], 200)
         self.assertEqual(admission["unresolved_field_blockers"], [])
-        self.assertFalse(review["independent_acceptance"])
-        self.assertIsNone(review["reviewer"])
-        self.assertEqual(rights["independent_rights_fields_accepted"], 0)
+        self.assertTrue(review["independent_acceptance"])
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertTrue(review["independence"])
+        self.assertEqual(review["reviewer"], admission["independent_reviewer"])
+        self.assertEqual(rights["independent_rights_fields_accepted"], 200)
         captures = read("source-captures.json")
         archive = Path(captures["capture_root"])
         self.assertEqual((archive.name, archive.parent.name), ("issue-150", "author-evidence"))
@@ -100,7 +122,7 @@ class Batch150Tests(unittest.TestCase):
         for group in read("groups.json"):
             sense = group["senses"][0]
             self.assertEqual(sense["source_headword"], group["headword"])
-            self.assertEqual(sense["independent_review"], "pending")
+            self.assertIn(sense["independent_review"], ("passed", "passed_after_exact_accepted_replacements"))
             for name, field in sense["fields"].items():
                 exact = by_field[sense["sense_id"], name]
                 expected[sense["sense_id"], name] = field
@@ -126,13 +148,23 @@ class Batch150Tests(unittest.TestCase):
             self.assertEqual(field["license"], "CC-BY-SA-4.0")
             self.assertTrue(field["attribution"])
             self.assertTrue(field["modification"])
-            self.assertEqual(field["independent_review"], "pending")
-            self.assertIsNone(field["reviewer"])
+            self.assertEqual(field["independent_review"], "passed_at_selected_text_boundary")
+            self.assertEqual(field["reviewer"], review["reviewer"])
+            self.assertEqual(field["accepted_text"], proposed["text"])
+            self.assertTrue(field["selected_text_rights_reason"].strip())
         self.assertEqual({(f["sense_id"], f["field"]) for f in review["fields"]}, set(expected))
         for field in review["fields"]:
-            self.assertEqual(field["proposed_text"], expected[field["sense_id"], field["field"]]["text"])
-            self.assertEqual(field["accepted_text_quality_status"], "pending")
-            self.assertIsNone(field["reviewer"])
+            accepted = expected[field["sense_id"], field["field"]]
+            self.assertEqual(field["accepted_text"], accepted["text"])
+            self.assertEqual(field["accepted_text_quality_status"], accepted["independent_review"])
+            self.assertEqual(field["rights_eligibility_status"], accepted["rights_eligibility_status"])
+            self.assertEqual(field["reviewer"], review["reviewer"])
+            self.assertTrue(field["independence"])
+            self.assertTrue(field["review_reason"].strip())
+            self.assertTrue(field["selected_text_rights_reason"].strip())
+            exact = by_field[field["sense_id"], field["field"]]
+            for key in ("source_id", "revid", "line_1_based", "column_1_based", "reviewed_excerpt"):
+                self.assertEqual(field["exact_source"][key], exact[key])
         names, anonymous, chains = {}, {}, {}
         for name in captures["contributor_registry"]["parts"]:
             path = Path(name)
@@ -169,6 +201,64 @@ class Batch150Tests(unittest.TestCase):
             self.assertIn(source["history_url"], notices)
         self.assertEqual((EVIDENCE / "COPYING").read_bytes().rstrip(),
                          (ROOT / "resources/core-pilot-79/COPYING").read_bytes().rstrip())
+
+    def test_proposals_replacements_uses_and_original_credits_align(self):
+        authored = {s["sense_id"]: s for g in read("authored/groups.json") for s in g["senses"]}
+        accepted = {s["sense_id"]: s for g in read("groups.json") for s in g["senses"]}
+        self.assertEqual(set(authored), set(accepted))
+        replacements = {(r["sense_id"], r["field"]): r for r in read("accepted-replacements.json")}
+        changes = set()
+        for decision in read("field-review.json")["fields"]:
+            key = decision["sense_id"], decision["field"]
+            proposal = authored[key[0]]["fields"][key[1]]
+            field = accepted[key[0]]["fields"][key[1]]
+            self.assertEqual(decision["proposed_text"], proposal["text"])
+            self.assertEqual(decision["proposed_source"]["line_1_based"], proposal["source_span"]["line_1_based"])
+            self.assertEqual(decision["proposed_source"]["reviewed_excerpt"], proposal["source_span"]["raw_source_excerpt"])
+            if field["text"] != proposal["text"]:
+                changes.add(key)
+                replacement = replacements[key]
+                self.assertEqual(replacement["proposed_text"], proposal["text"])
+                self.assertEqual(replacement["accepted_text"], field["text"])
+                self.assertEqual(replacement["proposed_source_span"], proposal["source_span"])
+                self.assertEqual(replacement["accepted_source_span"], field["source_span"])
+            else:
+                self.assertEqual(field["source_span"], proposal["source_span"])
+        self.assertEqual(changes, set(replacements))
+        self.assertEqual(len(changes), 3)
+        review = read("field-review.json")
+        self.assertEqual(len(review["usage"]), 50)
+        self.assertEqual({u["sense_id"] for u in review["usage"]}, set(accepted))
+        changed_uses = 0
+        for use in review["usage"]:
+            sense = accepted[use["sense_id"]]
+            self.assertEqual(use["proposed_usage"], authored[use["sense_id"]]["use"])
+            self.assertEqual(use["accepted_usage"], sense["use"])
+            self.assertEqual(use["excluded_uses"], sense["excluded_uses"])
+            self.assertEqual(use["accepted_usage_quality_status"], "passed")
+            self.assertEqual(use["everyday_sense_status"], "passed")
+            self.assertEqual(use["reviewer"], review["reviewer"])
+            self.assertTrue(use["review_reason"].strip())
+            changed_uses += use["accepted_usage"] != use["proposed_usage"]
+        self.assertEqual(changed_uses, 1)
+        originals = read("original-expression-review.json")["sources"]
+        self.assertEqual(len(originals), 54)
+        sources = read("sources.json")["sources"]
+        self.assertEqual({s["source_id"] for s in originals}, {s["id"] for s in sources})
+        for source in sources:
+            self.assertEqual(source["selected_text_review"], "passed_for_selected_spans")
+            for layer in source["original_historical_dictionary_layers"]:
+                self.assertEqual(layer["independent_review"], "passed_at_original_work_boundary")
+                if layer["original_authors"] == "Académie française":
+                    self.assertTrue(layer["conservative_expiry"].startswith("2006-01-01"))
+                else:
+                    self.assertEqual(layer["original_authors"], "Émile Littré")
+                    self.assertEqual(layer["conservative_expiry"], "1952-01-01")
+        tailler = next(s for s in sources if s["title"] == "tailler")
+        self.assertEqual(tailler["original_historical_dictionary_layers"][0]["original_authors"], "Académie française")
+        calm = next(s for s in sources if s["title"] == "tranquillement")
+        self.assertEqual({l["original_authors"] for l in calm["original_historical_dictionary_layers"]},
+                         {"Académie française", "Émile Littré"})
 
 
 if __name__ == "__main__":

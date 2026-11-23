@@ -722,5 +722,20 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-156",
   "captured_at_utc": "2026-11-23T17:25:02.165039+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-156\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-156\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-156\\selection.py",
+  "independent_audit": {
+    "reviewer": "Independent field/use/selected-rights reviewer #156; review-156 / codex/d2-review-156; separate from the content author",
+    "review_base": "3729d677a9d4549a2f8e9a24690aa05becaa6792",
+    "author_commit": "a40ecb51abf607e0a69fd1899ccc1fdb4fa8a377",
+    "author_head": "b33db9fef0cd4266bbdc9a727551b2bd2b5397ae",
+    "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-156",
+    "source_audit": "source-audit.json",
+    "raw_api_byte_match_sources": 50,
+    "selected_field_spans": 200,
+    "unique_supporting_spans": 190,
+    "contributor_responses": 7,
+    "complete_contributor_chains": 5,
+    "fresh_article_recaptures": 0,
+    "external_corroboration": "ya-modern-use-review.json; selected-original-work-review.json"
+  }
 }

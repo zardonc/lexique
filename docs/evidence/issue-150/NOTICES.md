@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany these independently reviewed selected fields.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,13 +14,13 @@ Rows 3451–3500 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected sense is accepted per exact group. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
+aliases. [Readable fields](review-candidates.md) retain every exact field and
 the selected and excluded uses.
 
 ## Article credits
@@ -92,7 +92,13 @@ are credited for selection, French adaptation and the new English/Chinese text.
 Articles declaring Académie française eighth-edition imports (1932–1935)
 retain original credit separately from the wiki and Lexique adaptation layers.
 [Selected rights](selected-rights.md) records the established collective-work
-basis and its 2006-01-01 expiry. New fields require their own independent review.
+basis and its 2006-01-01 expiry. Every selected field has independent review.
+The selected `tailler` shaping sentence also matches DAF8 and retains original
+Académie credit. `tranquillement` retains original DAF8 and Émile Littré,
+*Dictionnaire de la langue française*, credit; Littré's original-work expiry is
+1952-01-01. The selected `publicité` commercial-advertisement sentence at line 26
+matches DAF8. Original credits remain separate from the CC BY-SA wiki and
+Lexique adaptation layers.
 The CFC cartographic-letter definition in `capitale` at line 42 is excluded;
 the capital-city definition at line 8 is selected. No CFC prose supplies a field or support.
 
@@ -105,5 +111,6 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 200 selected fields pass independent quality and selected-span rights review.
+Canonical conversion, combined packaging obligations and native gates remain
+coordinator-owned; this shard admits no new canonical field by itself.

@@ -1,59 +1,86 @@
 # Selected source and adaptation rights for #156
 
-All 200 proposed fields retain their fixed source/version/span, contributors,
-modifications and author rights proposals in [rights.json](rights.json).
-Independent decisions remain pending. [Source context](source-context.json)
-preserves selected locations, article import/reference markers and the actual
-named registry plus anonymous counts and complete history links.
+Separate selected-text rights review passes for **200 fields / 50 uses**.
+Quality acceptance is distinct: 196 fields / 49 uses pass; ya's four candidate
+fields and one everyday use remain unresolved. [Field review](field-review.json)
+and [rights](rights.json) retain exact spans and individual reasons.
 
-## Contribution and adaptation layers
+## Contributions and adaptations
 
-Fixed Wiktionnaire contributions and Lexique scoped French adaptations/new
-English and Chinese explanations are proposed under
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-The [complete legal text](COPYING), fixed article/history links, original-work
-credits, source materials and modification notices accompany the proposed shard.
-Attribution, ShareAlike and no additional restrictions continue. Project code
-remains MIT. IPA is an isolated recorded variant with slashes added; media,
-literary/news quotation and entire source articles are not learner fields.
+Fixed Wiktionnaire lexical/head/grammar text and new scoped Lexique French,
+English and Chinese explanations retain [CC BY-SA 4.0](COPYING). English/Chinese
+are explanatory translations, not upstream bilingual quotations. IPA is the
+recorded isolated-head variant with slashes; no audio is copied.
 
-Retained copyright policy revision 38903168, DAF8-template revision 22113837,
-Wikimedia Terms of Use section 7 and CC legal text preserve the distinction
-between contributor licensing and imported expression. The actual authority
-files and their historical metadata are retained in the external archive;
-[rights.json](rights.json) records their paths and origins.
+Keep fixed source/version/history links, all returned article contributors and
+anonymous-history attribution, modification statements and the complete legal
+text. ShareAlike and no additional restrictions apply. Project code remains MIT.
+Article attribution is not asserted to identify a selected sentence's author.
 
-## Original works and selected expression
+The fixed copyright policy (38903168), DAF8 template (22113837), Wikimedia Terms
+of Use section 7 and CC legal text were independently read. Imported expression,
+external works and media retain separate rights; a wiki licence does not clear
+them automatically.
 
-Articles declaring DAF8 imports retain Académie française credit separately
-from wiki and Lexique adaptations. The eighth edition (1932–1935) uses the
-established collective-work L123-3 basis, conservatively expiring 2006-01-01;
-see [the earlier original-work decision](../issue-129/selected-rights.md) and
-[article L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20).
-That basis does not independently clear these newly selected spans.
+## Original expression
 
-Every selected source is a French lexical definition or recorded headword IPA.
-Article-level import and bibliography markers do not prove selected-sentence
-authorship. Grand Robert is referenced in the etymology of `ya`; its selected
-slang-noun line 13 is the lexical label and “couteau,” without copied external
-dictionary prose. The regional-money definition's 2019 dictionary reference
-at line 29 is outside the proposed fields. The author proposes a fact/lexical
-contribution boundary for line 13, subject to independent selected-span review.
-Its modern everyday eligibility remains unresolved; no broad source licence
-settles that content requirement.
+Thirty-two articles identify DAF8 imports. Académie française original credit
+is conservatively retained for potentially inherited lexical wording. The
+collective 1932–1935 edition uses the final-publication boundary:
+1936-01-01 plus seventy years = **2006-01-01**, under
+[L123-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941).
+This basis is independently applied to these selected spans; previous verdicts
+supply no new acceptance.
 
-`bail` selects its real-estate-contract definition at line 22; its neighbouring
-slang frame and Dictionnaire de la Zone references supply no field.
-`antenne` line 31 has a media-link marker; the proposed French definition
-adapts only the radio-device semantics and copies no image or caption.
-`tâcher` construction support isolates the short grammatical equivalence
-at line 37, outside neighbouring attributed literary examples.
+[Original-work review](selected-original-work-review.json) also records:
 
-## Actual combined obligations
+- **mouchoir**: fixed revision 39771861, head/definition lines 8–9;
+  Quillet 1934 inspiration at line 142 and DAF9 reference at line 141.
+  [BnF FRBNF31164348](https://catalogue.bnf.fr/ark:/12148/cb31164348q) identifies
+  the six-volume 1934 publication under Raoul Mortier with merged contributions,
+  issued by Aristide Quillet. For this collective lexical original,
+  1935-01-01 plus seventy years gives **2005-01-01**. This applies to the
+  original, not later editions or separately authored illustrations. Its credit
+  is retained even though sentence authorship is not proved. Current
+  cloth/cellulose-square and nose/wiping semantics are adapted under the
+  wiki/Lexique contribution terms. DAF9 is a reference, with no ninth-edition
+  prose selected or granted redistribution rights.
+- **valet**: fixed revision 39879165, head/definition lines 11/21;
+  Quillet **1979** reference at line 155. The primary
+  [Académie eighth edition](https://www.dictionnaire-academie.fr/article/A8V0052),
+  1935, tome 2 p.705, independently contains the selected page/valet card
+  expression in each of four suits. The original-expression basis is DAF8;
+  Quillet 1979 additions, examples and illustrations are excluded.
 
-Canonical conversion must carry applicable legal texts, fixed sources,
-complete contributor/history credits, original-work attribution and modification
-notices. Adaptation layers retain CC BY-SA 4.0. Rights of imported expression
-are assessed at their actual boundaries. Every new field and support record
-remains pending independent rights review; the combined package and native
-acceptance require coordinator evidence.
+Primary bibliography and primary Académie wording were inspected. Original
+facsimiles and sentence authorship were not verified. The current L113-2
+collective-work definition was available through primary official search text;
+fresh direct Légifrance opening was blocked. L123-3's full primary text is
+retained from the earlier capture, with current official search corroboration.
+No fresh legal-page acquisition is claimed. Bibliographic references are
+references, not permissions to copy the referenced books.
+
+## Other selected boundaries
+
+`ya` line 13 is an argot label plus the single lexical equivalent “couteau.”
+Grand Robert belongs to etymology; the 2019 regional-money reference belongs to
+another noun. The selected lexical-fact boundary passes rights; everyday
+eligibility remains unresolved. Bob/Cordial and the 2020 Expressio comment are
+corroboration only; their prose and dated quotations are not bundled. Bob's code
+10 is social register, not everyday frequency.
+
+`antenne` line 31's image/caption is excluded; only radio-apparatus semantics
+are adapted. `bail` selects real-estate-contract line 22, excluding slang frames
+and their references. `tâcher` support takes the short grammatical equivalence
+at line 37 and excludes neighbouring quotations and old `tâcher à`.
+Every other source has its own retained boundary reason in
+[sources](sources.json) and [context](source-context.json).
+
+## Combined redistribution
+
+Keep legal text, fixed sources, article/history and original-work credits,
+modification notices and reproducible selected inputs. External rights and
+wiki/Lexique adaptation rights remain separate. Actual canonical conversion,
+combined source materials/notices and packaging remain coordinator gates.
+This shard clears no full source articles, later external editions, media or
+corroborating quotations.

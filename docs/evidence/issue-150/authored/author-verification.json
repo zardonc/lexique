@@ -1,0 +1,89 @@
+{
+  "ticket": 150,
+  "role": "content_author",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\author-150",
+  "branch": "codex/d2-content-150",
+  "initial_base": "03a27e42c261afda7ffd4a927a4d2810f8221e8a",
+  "tested_base": "97129df7fc799675055a24cea322e475362f64db",
+  "merged_integration": "cc72c0d7772fc742879cea77ff4ffd2621d5db61",
+  "verified_at_utc": "2026-11-23T17:17:53.051156+00:00",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_150.py",
+      "status": "passed",
+      "exit_code": 0,
+      "tests": 2,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\final-resource.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\reproduce.py",
+      "status": "passed",
+      "exit_code": 0,
+      "reproduced_files": 12,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\reproduction.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\docs-check.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\diff-check.log"
+    }
+  ],
+  "red_checks": [
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\red-membership.log",
+      "status": "expected_failure_before_required_author_content_or_evidence"
+    },
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\red-rights.log",
+      "status": "expected_failure_before_required_author_content_or_evidence"
+    }
+  ],
+  "frozen_groups": 50,
+  "selected_uses": 50,
+  "proposed_fields": 200,
+  "fixed_french_sources": 54,
+  "selected_field_spans": 200,
+  "supporting_span_occurrences": 207,
+  "contributor_parts": 11,
+  "contributor_chains": 6,
+  "named_article_credits": 3232,
+  "anonymous_article_credits": 480,
+  "article_credits_prove_selected_sentence_authorship": false,
+  "independent_acceptance": false,
+  "independently_accepted_fields": 0,
+  "newly_admitted_fields": 0,
+  "missing_admitted_batch_fields": 200,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "unresolved_author_fields": [],
+  "unresolved_author_content_rows": [],
+  "canonical_content_version": "core-149-v1",
+  "canonical_groups": 3431,
+  "canonical_fields": 13724,
+  "canonical_batch_groups": 0,
+  "reused_groups": 0,
+  "scope_denominator_groups": 4087,
+  "remaining_gates": [
+    "Separate independent field/use, construction and spelling review",
+    "Independent selected-span rights and original-expression review",
+    "Canonical conversion, combined notices and all-group native lookup/save/reopen",
+    "Learner acceptance and whole-core/release gates"
+  ],
+  "unrun_checks": [
+    "Frontend lint/typecheck/build: no frontend change",
+    "Rust formatting/compilation/tests: no Rust change",
+    "Browser/native and canonical conversion/packaging: coordinator-owned pending admission"
+  ],
+  "no_canonical_writes": true,
+  "no_push": true,
+  "no_tracker_actions": true,
+  "helper_origins": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\helper-origins.json"
+}

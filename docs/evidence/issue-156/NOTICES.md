@@ -99,5 +99,16 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 200 fields and 50 selected-use rights boundaries were independently reviewed.
+196 unchanged fields / 49 groups pass quality; ya/NOM retains four unresolved
+fields and one unresolved everyday use. All selected-text rights pass;
+canonical redistribution remains pending. See [independent review](README-independent-review.md).
+
+Mouchoir's fixed source credits inspiration from the Dictionnaire encyclopédique
+Quillet (Aristide Quillet, Paris, 1934; direction Raoul Mortier), independently
+identified by [BnF FRBNF31164348](https://catalogue.bnf.fr/ark:/12148/cb31164348q).
+The original collective publication term ends 2005-01-01; later editions and
+separately authored images are not covered. The DAF9 reference is not permission
+to copy its prose. Valet's Quillet 1979 reference receives no blanket clearance:
+its selected card expression is independently present in the primary Académie
+eighth edition (1935, tome 2 p.705). See [original-work boundaries](selected-original-work-review.json).
