@@ -25,4 +25,6 @@ All prior **3,431 groups / 13,724 fields**, source arrays, reviews, contexts, sp
 
 [Verification](verification-final.json) and [commands/results](commands-results.md) record the tested build, artifact identities, each of the ten native batch runs and resource-upgrade evidence. Each run preserves the hard 60-second limit, observes zero external WebView requests after routing begins and finishes with no owned hosts, workers or helpers left running.
 
+[Final review and reuse verification](final-review.md) records both review axes, the shared-helper fixes and native execution with the revised harness.
+
 Learner acceptance, whole-machine offline behavior, other-platform native execution, full D2 / CEFR and formal release acceptance remain unverified. Parent #78 remains open. Resource upgrade and rollback use matching executable/core pairs and preserve the learning data directory and backups. [PR #219](https://github.com/zardonc/lexique/pull/219) contains these ten batches.
