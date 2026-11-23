@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany this independently reviewed shard.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,13 +14,13 @@ Rows 3651–3700 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected sense is retained per exact group. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
+aliases. [Authored proposals](authored/review-candidates.md) retain every exact field and
 the selected and excluded uses.
 
 ## Article credits
@@ -105,3 +105,60 @@ conversion before canonical admission.
 
 All 200 new fields await separate quality and selected-span rights review.
 No new field is independently accepted or admitted by this author package.
+
+## Selected original expressions and reviewed text
+
+The original institutional collective Dictionnaire de l’Académie française,
+eighth edition (1932–1935), is separately credited where a selected expression
+corresponds to the original edition. The established CPI L123-3 French
+original-work calculation expires conservatively on 2006-01-01. This basis
+does not license modern electronic editorial content or establish selected
+sentence authorship. Fixed Wiktionnaire contributions and Lexique adaptations
+remain CC BY-SA 4.0, with the attribution and modification information above.
+The exact original quotations and retained original-edition responses are in
+[original-expression-review.json](original-expression-review.json).
+
+| Selected source | Corresponding original edition | Retained original response |
+| --- | --- | --- |
+| grotte | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/grotte) |
+| vital | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/vital) |
+| autopsie | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/autopsie) |
+| déplaire | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/d%C3%A9plaire) |
+| désespérer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/d%C3%A9sesp%C3%A9rer) |
+| tordre | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/tordre) |
+| trinquer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/trinquer) |
+| amer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/amer/adjectif) |
+| allée | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/all%C3%A9e) |
+| sot | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/sot/adjectif) |
+| balayer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/balayer) |
+| calculer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/calculer) |
+| priorité | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/priorit%C3%A9) |
+| gratter | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/gratter) |
+| routine | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/routine) |
+| engagement | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/engagement) |
+| assaut | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/assaut) |
+| classer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/classer) |
+| vaisselle | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/vaisselle) |
+| jadis | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/jadis/adverbe) |
+| cognac | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/cognac) |
+| cadet | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/cadet) |
+| indépendant | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/ind%C3%A9pendant/adjectif) |
+| juillet | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/juillet) |
+| discipline | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/discipline) |
+| province | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/province) |
+| favori | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/favori/adjectif) |
+| refermer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/refermer) |
+| trancher | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/trancher) |
+| chacun | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/chacun/pronom) |
+| tuer | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/tuer) |
+| se repentir | Académie française, DAF8, 1932–1935 | [Original expression](https://www.cnrtl.fr/definition/academie8/se%20repentir) |
+
+The exact authored and accepted texts, fixed source spans and modification
+reasons are retained in [field-review.json](field-review.json) and
+[accepted-replacements.json](accepted-replacements.json). English and Chinese
+explanations are new Lexique wording based on the selected French semantics.
+The selected tattoo result has its insertion-of-colour antecedent at fixed
+tatouage line 10. CNRTL/TLFi, Le Robert and OQLF corroboration supplies review
+evidence only; its proprietary definitions and attributed examples supply no
+learner field. The separate [selected rights record](selected-rights.md)
+identifies accepted text and the pending final combined-package boundary.
