@@ -1,0 +1,78 @@
+[
+  {
+    "frozen_row": 3917,
+    "headword": "steak",
+    "pos": "NOM",
+    "sense_id": "b159-3917-steak-nom-selected",
+    "field": "chinese",
+    "proposed_text": "煎制的肉排、鱼排或植物食材制成的排；不只指牛排。",
+    "accepted_text": "用于煎制的肉排、鱼排或植物食材制成的排；不只指牛排。",
+    "reason": "用于煎制 replaces 煎制的 to keep intended cooking distinct from cooked food; fish and plant preparations remain.",
+    "exact_source": {
+      "source_id": "b159_fr_118606",
+      "revid": 39732944,
+      "url": "https://fr.wiktionary.org/w/index.php?title=steak&oldid=39732944",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=steak&action=history",
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{anglicisme|fr}} [[tranche|Tranche]] de [[viande]] de bœuf, de thon, de [[chair]] de [[poisson]] ou à base de légumes prêt à une cuisson à la poêle."
+    }
+  },
+  {
+    "frozen_row": 3943,
+    "headword": "proie",
+    "pos": "NOM",
+    "sense_id": "b159-3943-proie-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Animal qu’un animal carnassier capture pour le manger.",
+    "accepted_text": "Animal vivant qu’un animal carnassier capture pour le manger.",
+    "reason": "Animal vivant restores the selected definition's living-animal restriction.",
+    "exact_source": {
+      "source_id": "b159_fr_30389",
+      "revid": 39597746,
+      "url": "https://fr.wiktionary.org/w/index.php?title=proie&oldid=39597746",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=proie&action=history",
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|zoologie|fr}} Animal vivant qu’un [[animal]] [[carnassier]] [[ravir|ravit]] pour le [[manger]]."
+    }
+  },
+  {
+    "frozen_row": 3943,
+    "headword": "proie",
+    "pos": "NOM",
+    "sense_id": "b159-3943-proie-nom-selected",
+    "field": "english",
+    "proposed_text": "Prey: an animal caught by a carnivorous animal to be eaten.",
+    "accepted_text": "Prey: a living animal caught by a carnivorous animal to be eaten.",
+    "reason": "Living animal restores vivant while preserving carnivorous capture for food.",
+    "exact_source": {
+      "source_id": "b159_fr_30389",
+      "revid": 39597746,
+      "url": "https://fr.wiktionary.org/w/index.php?title=proie&oldid=39597746",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=proie&action=history",
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|zoologie|fr}} Animal vivant qu’un [[animal]] [[carnassier]] [[ravir|ravit]] pour le [[manger]]."
+    }
+  },
+  {
+    "frozen_row": 3943,
+    "headword": "proie",
+    "pos": "NOM",
+    "sense_id": "b159-3943-proie-nom-selected",
+    "field": "chinese",
+    "proposed_text": "猎物；被食肉动物捕获以供食用的动物。",
+    "accepted_text": "猎物；被食肉动物捕获以供食用的活体动物。",
+    "reason": "活体动物 restores vivant rather than allowing a carcass; capture for food remains.",
+    "exact_source": {
+      "source_id": "b159_fr_30389",
+      "revid": 39597746,
+      "url": "https://fr.wiktionary.org/w/index.php?title=proie&oldid=39597746",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=proie&action=history",
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|zoologie|fr}} Animal vivant qu’un [[animal]] [[carnassier]] [[ravir|ravit]] pour le [[manger]]."
+    }
+  }
+]

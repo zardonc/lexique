@@ -1,58 +1,71 @@
-# #159 selected-span author rights proposals
+# Issue #159 selected-text rights review
 
-All 200 fields await separate independent quality and selected-span rights review.
-The Wiktionnaire contribution layer and Lexique’s French adaptations and new
-English/Chinese explanations use the proposed **CC BY-SA 4.0** route.
-[Legal text](COPYING), [notices](NOTICES.md), [rights records](rights.json),
-[fixed spans](source-excerpts.json) and [contributor context](source-context.json)
-retain the source, revision, complete article history and modification information.
-Article contributor registries do not establish selected-sentence authorship.
+**200 selected fields pass independent rights review.** Quality/POS/everyday
+admission is separate: [the independent review](README-independent-review.md)
+retains two owner-approved zero-field annotations with eight missing fields.
+The rights ledger distinguishes 192 admissible fields from eight separately
+retained unadmitted research fields. Reviewer identity and every exact decision
+are recorded in [rights](rights.json) and [field review](field-review.json).
 
-## Original expression
+## Original-work and contribution layers
 
-Thirty-nine source articles have DAF8 import or reference markers. Their records
-retain separate credit to Académie française, Dictionnaire de l’Académie française,
-eighth edition, 1932–1935. The established
-[original collective-work basis](../issue-129/selected-rights.md) under
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20)
-gives a conservative expiry of 2006-01-01 using final publication in 1935.
-The wiki transcription/adaptation and Lexique contribution layers retain their
-separate CC BY-SA 4.0 obligations.
+The 39 articles with **DAF8 import/reference markers** retain conservative
+original credit to **Académie française, Dictionnaire de l’Académie française,
+eighth edition, 1932–1935**. The original institutional collective-work basis
+is established in [#99](../issue-99/source-context.json) and
+[#123](../issue-123/selected-rights.md), and retained in
+[#129](../issue-129/selected-rights.md). It concerns the original volumes, not
+the enriched modern electronic edition. CPI L123-3 gives seventy years from
+the January following collective publication: **1936-01-01 + 70 years =
+2006-01-01**, using the final original volume. Original attribution and respect
+for the author/work remain distinct from the economic-rights expiry.
 
-An article-level DAF8 marker, TLFi/Littré/Rivarol reference or broad wiki licence
-does not identify or clear a selected sentence’s original expression. Exact
-imported-expression origins and their applicable rights remain pending separate
-audit for every new field. [Source context](source-context.json) preserves all
-non-example import/reference markers. Literary/news quotations, images, audio,
-etymologies and other-language entries supply no proposed learner wording.
-The retained CNRTL pages are external research captures; their definitions and
-examples are not used as proposed learner fields.
+The fixed DAF8-template revision **22113837** states that all or part was
+extracted and may have changed. An article marker does not identify the author
+of a selected sentence. Each actual selected lexical/IPA/grammar boundary was
+inspected alongside imports, references, other definitions and attributed
+examples. Conservative original credit is preserved wherever DAF8 is declared.
+TLFi, Littré, Rivarol, DAF1, Usito, Robert, GDT, IATE and other bibliographic
+references do not establish quotation of their prose or grant their licences.
+No such reference licenses neighbouring literary/news examples or media.
 
-## Language, spelling and construction
+Fixed Wiktionnaire transcription/adaptation and Lexique's scoped French
+definitions and new EN/ZH explanations retain **CC BY-SA 4.0**, separately
+from the original-work layer. English/Chinese are independently assessed
+explanations of the selected French meanings, not claimed upstream bilingual
+quotes. IPA selects an applicable literal French template variant; no audio
+rights are used.
 
-All fifty identities retain their exact frozen French spelling and POS subclass.
-`hello` is a French greeting borrowing; its IPA includes the captured optional h.
-`rencard` retains that spelling; a recorded `rancard` variant adds no lookup alias.
-`vase` selects the masculine container section, excluding the feminine mud noun.
-`exemplaire` and `traité` select nouns; `payé` and `brûlé` select adjectives.
-`remords` retains its final s in singular and plural; `maths` is feminine and
-plural-only. `défiler`, `déprimer` and `grossir` select intransitive uses;
-`vanter` and `disperser` select transitive uses. The exact IPA and supporting
-grammar spans remain bound to the captured French sections.
+## Applicable obligations
 
-`haver/VER` has aspirated h and only a mining candidate. `da/ONO` retains the
-frozen identity while its source labels the use an old-fashioned particle.
-[Content blockers](content-blockers.json) preserve the exact source evidence.
-Neither is counted as an eligible everyday candidate or an approved exception.
+Retained CC BY-SA 4.0 legal text, sections **2(a), 3(a), 3(b), 4**, permits
+sharing, adaptation and applicable database extraction with attribution,
+source/licence and warranty notices, modification notices, ShareAlike and no
+additional downstream restrictions. Wikimedia Terms **section 7** permits
+article/history attribution and preserves separate imported attribution.
+Copyright-policy revision **38903168** permits text reuse while retaining
+external material's distinct rights. These texts were read independently.
 
-## Redistribution and admission
+Each fixed revision and full article history appears in [notices](NOTICES.md).
+[Contributor context](source-context.json) retains the complete returned named
+registry and anonymous-history credit for each of 50 articles. All response
+continuations match the next retained request; their terminal responses have
+no continuation. Current registries may include later contributors and do not
+prove selected-sentence authorship.
 
-Retain licence/source/history identifiers, all applicable contributor and
-original-work credits, modification notices and the selected source material;
-share adaptations under CC BY-SA 4.0 without additional restrictions. Project
-source code remains MIT. The fixed legal and Wikimedia policy captures, including
-their historical reuse origins, are recorded in [rights.json](rights.json).
+[COPYING](COPYING) retains the full licence and disclaimer; adaptation and
+translation modifications retain the same licence. [Exact spans](source-excerpts.json)
+and [source captures](source-captures.json) identify the selected wording.
+[Authored originals](authored) preserve the source proposals unchanged.
+The CNRTL captures serve read-only research: no TLFi/CNRTL definition or
+example is redistributed as learner text.
 
-All independent reviews remain pending. Canonical conversion, combined notices,
-native lookup/save/reopen, learner acceptance and whole-core release checks are
-coordinator-owned and unrun for these proposals.
+## Limitations
+
+The rights decisions cover this selected shard. Combined converter notices,
+native delivery and release evidence remain coordinator-owned. Fresh official
+L123-3 retrieval was unavailable (HTTP 403); the established original-edition
+evidence and its conservative expiry are retained, without a claim of a new
+successful legal capture. Rights clearance grants no everyday/POS exception
+to `haver/VER` or `da/ONO`. Their owner-approved zero-field annotations
+admit no learner text and do not alter these rights decisions.
