@@ -6,6 +6,8 @@ import sys
 from urllib.parse import parse_qs, urlparse
 import unittest
 
+from core_batch_test_helpers import verify_archived_source_captures
+
 ROOT = Path(__file__).resolve().parents[1]
 ROWS = set(range(3051, 3101))
 EVIDENCE = ROOT / "docs/evidence/issue-142"
@@ -253,17 +255,7 @@ class Batch142AdmissionTests(unittest.TestCase):
     def test_all_field_spans_match_fixed_raw_api_language_pos_and_ipa(self):
         captures = read("source-captures.json")
         sources = {s["id"]: s for s in read("sources.json")["sources"]}
-        raw_lines = {}
-        for capture in captures["sources"]:
-            api = json.loads(retained(capture["api_path"]).read_text(encoding="utf-8"))
-            page = next(p for p in api["query"]["pages"] if p["pageid"] == capture["pageid"])
-            rev = next(r for r in page["revisions"] if r["revid"] == capture["revid"])
-            raw = retained(capture["raw_path"]).read_bytes()
-            self.assertEqual(raw, rev["slots"]["main"]["content"].encode("utf-8"))
-            self.assertEqual(rev["timestamp"], capture["timestamp"])
-            self.assertEqual(page["title"], capture["title"])
-            raw_lines[capture["source_id"]] = raw.decode("utf-8").splitlines()
-            self.assertEqual(sources[capture["source_id"]]["revid"], rev["revid"])
+        raw_lines = verify_archived_source_captures(self, captures["sources"], sources, retained)
         excerpts = read("source-excerpts.json")
         selected = {(r["sense_id"], r["field"]): r for r in excerpts["fields"]}
         self.assertEqual(len(selected), 196)
