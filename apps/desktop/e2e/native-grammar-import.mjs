@@ -77,9 +77,17 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     await writeFile(renamed, '# Lexique grammar note v1\n\n' + section('exchange_id', 'native-markdown-216') + section('title', 'Renamed') + section('body', '') + section('question', ' ') + section('answer', '\t'));
     await picker('导入语法 Markdown', renamed); await region.getByLabel('导入决定：Renamed').selectOption('update'); await confirm();
     [saved] = await records(); assert.equal(saved.body, ''); assert.equal(saved.card.question, question); assert.equal(saved.card.answer, answer);
-    const invalid = join(destination, 'invalid.md'); await writeFile(invalid, '# Lexique note v1\n');
-    await picker('导入语法 Markdown', invalid); await expect(region.getByRole('alert')).toContainText('invalid.md');
-    await region.getByRole('button', { name: '取消导入', exact: true }).click();
+    const invalid = join(destination, 'invalid.md');
+    for (const [content, reason] of [
+      ['# Lexique note v1\n', 'template identifier'],
+      ['# Lexique grammar note v1\n', '## title'],
+      ['# Lexique grammar note v1\n' + section('title', 'Invalid') + section('question', 'Question'), 'Question and answer'],
+    ]) {
+      await writeFile(invalid, content); await picker('导入语法 Markdown', invalid);
+      await expect(region.getByRole('alert')).toContainText('invalid.md');
+      await expect(region.getByRole('alert')).toContainText(reason);
+      await region.getByRole('button', { name: '取消导入', exact: true }).click();
+    }
     await picker('导入语法 Markdown', ''); await expect(region.getByRole('status')).toContainText('已取消');
     evidence.sqlite = sqlPause(); evidence.checks.push('T28-T31/T37: real Markdown file picker, saved export, raw text, identity rename, omitted and empty body, blank pair, invalid marker, cancellation and failed update rollback');
   } else if (scenario === 'grammar-markdown-restart') {
