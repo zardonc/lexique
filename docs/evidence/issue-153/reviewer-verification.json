@@ -1,0 +1,73 @@
+{
+  "reviewer": "Independent field/use/selected-rights reviewer #153; codex/d2-review-153; separate from author and integration owner",
+  "review_base": "291d265b80d6c8f302f058a8de6b541bc521e7a7",
+  "merged_integration_tip": "79e6b44f5a1f0a44b9074806046cc9505611f9b5",
+  "merged_review_head": "d1e062ad10bbe19d2e2092128c77fb57c7a58dae",
+  "tested_source_state": "Merged review head plus the scoped package diff retained as review.patch in the external archive; final commit identity is recorded in the external handoff.",
+  "platform": "Windows x64; PowerShell 7; uv Python 3.14.10; pnpm 11.25.0",
+  "archive": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-153",
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "unchanged_fields": 197,
+  "changed_fields": 3,
+  "unresolved_fields": 0,
+  "selected_source_count": 55,
+  "selected_field_spans": 200,
+  "supporting_span_occurrences": 199,
+  "contributor_responses": 9,
+  "finished_contributor_chains": 6,
+  "named_article_contributor_memberships": 3098,
+  "anonymous_article_contributor_counts": 554,
+  "selected_sentence_authorship_proved": false,
+  "regression_checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_153.py",
+      "result": "Expected two focused failures before reviewed field/use/rights records; content-rights-red.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_153.py",
+      "result": "Expected focused failure on pending supporting construction-rights records; support-rights-red.log"
+    }
+  ],
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_153.py",
+      "status": "passed",
+      "result": "Six focused resource/admission tests; final-batch.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-153-review/audit.py",
+      "status": "passed",
+      "result": "55 byte-identical raw/API sources; 200 selected and 199 supporting spans; completed contributor pagination; source-audit.json"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-153-review/reproduce_author.py",
+      "status": "passed",
+      "result": "12 original author files reproduced byte for byte in an isolated reviewer root; author-reproduction.json"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "pending_final_run",
+      "result": "Complete output retained as final-docs.log"
+    },
+    {
+      "command": "git diff --check",
+      "status": "pending_final_run",
+      "result": "Complete output retained as final-diff-check.log"
+    }
+  ],
+  "retrieval": {
+    "publisher": "Actual first-party L’Internaute HTML captured successfully; POS, Geography, displayed date and contemporary maintenance example independently read.",
+    "original_expression": "Actual original title and printed page 146 scans inspected; first-party R:Rivarol template and source-index API responses retained.",
+    "legifrance": "Direct pages returned HTTP 403. Retained official cached statutory search excerpts support L123-3; this is not a claim of successful live page retrieval.",
+    "tavily": "Extraction quota unavailable; the working search service and actual HTTP captures were used."
+  },
+  "remaining_gates": [
+    "Canonical resource assembly and combined conversion/notices",
+    "Native all-group lookup/save/reopen",
+    "Learner acceptance",
+    "Offline, other platform and release verification"
+  ],
+  "newly_admitted_canonical_fields": 0,
+  "pending_canonical_admission_fields": 200
+}

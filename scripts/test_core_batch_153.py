@@ -65,35 +65,81 @@ class Batch153Tests(unittest.TestCase):
                     self.assertTrue(field["text"].strip())
                     self.assertTrue(field["modification"].strip())
 
-    def test_author_proposals_keep_independent_admission_closed(self):
+    def test_reviewed_package_has_exact_independent_field_use_and_rights_alignment(self):
         admission, review, rights = read("admission.json"), read("field-review.json"), read("rights.json")
         self.assertEqual(admission["scope_denominator_groups"], 4087)
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
-        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (0, 0))
-        self.assertEqual(admission["pending_independent_review_fields"], 200)
-        self.assertEqual(admission["pending_independent_rights_fields"], 200)
+        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (50, 200))
+        self.assertEqual(admission["pending_independent_review_fields"], 0)
+        self.assertEqual(admission["pending_independent_rights_fields"], 0)
         self.assertEqual(admission["missing_admitted_fields"], 200)
         self.assertEqual(admission["author_unresolved_content_rows"], [3612])
         self.assertEqual(admission["annotation_exception_groups"], 0)
         self.assertEqual(admission["specialist_exception_groups"], 0)
-        self.assertFalse(review["independent_acceptance"])
-        self.assertIsNone(review["reviewer"])
-        self.assertEqual(rights["independent_rights_fields_accepted"], 0)
+        self.assertTrue(review["independent_acceptance"])
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertTrue(review["independence"])
+        self.assertTrue(review["reviewer"])
+        self.assertEqual(rights["independent_rights_fields_accepted"], 200)
+        self.assertEqual(review["unresolved_fields"], [])
         expected = {(g["senses"][0]["sense_id"], name): field for g in read("groups.json")
                     for name, field in g["senses"][0]["fields"].items()}
+        original = {(g["senses"][0]["sense_id"], name): field for g in read("authored/groups.json")
+                    for name, field in g["senses"][0]["fields"].items()}
         self.assertEqual(len(review["fields"]), 200)
+        self.assertEqual({(f["sense_id"], f["field"]) for f in review["fields"]}, set(expected))
         self.assertEqual({(f["sense_id"], f["field"]) for f in rights["fields"]}, set(expected))
+        review_fields = {(f["sense_id"], f["field"]): f for f in review["fields"]}
         for field in rights["fields"]:
-            proposed = expected[field["sense_id"], field["field"]]
-            self.assertEqual(field["exact_source_span"], proposed["source_span"])
+            key = field["sense_id"], field["field"]
+            accepted = expected[key]
+            self.assertEqual(field["exact_source_span"], accepted["source_span"])
+            self.assertEqual(field["accepted_text"], accepted["text"])
             self.assertEqual(field["license"], "CC-BY-SA-4.0")
             self.assertTrue(field["attribution"])
-            self.assertTrue(field["modification"])
-            self.assertEqual(field["independent_review"], "pending")
-            self.assertIsNone(field["reviewer"])
-        for field in review["fields"]:
-            self.assertEqual(field["accepted_text_quality_status"], "pending")
-            self.assertIsNone(field["reviewer"])
+            self.assertEqual(field["modification"], accepted["modification"])
+            self.assertEqual(field["independent_review"], "passed")
+            self.assertEqual(field["reviewer"], review["reviewer"])
+            self.assertTrue(field["review_reason"])
+            decision = review_fields[key]
+            self.assertEqual(decision["proposed_text"], original[key]["text"])
+            self.assertEqual(decision["accepted_text"], accepted["text"])
+            self.assertEqual(decision["accepted_text_quality_status"], "passed")
+            self.assertEqual(decision["rights_eligibility_status"], "passed_at_selected_text_boundary")
+            self.assertEqual(decision["reviewer"], field["reviewer"])
+            self.assertTrue(decision["review_reason"])
+            self.assertEqual(decision["exact_source"]["reviewed_excerpt"], accepted["source_span"]["raw_source_excerpt"])
+        self.assertEqual(len(review["usage"]), 50)
+        for group, usage in zip(read("groups.json"), review["usage"], strict=True):
+            self.assertEqual(usage["frozen_row"], group["frozen_row"])
+            self.assertEqual(usage["accepted_usage"], group["senses"][0]["use"])
+            self.assertEqual(usage["accepted_usage_quality_status"], "passed")
+            self.assertEqual(usage["everyday_sense_status"], "passed")
+            self.assertTrue(usage["everyday_sense_reason"])
+        replacements = read("accepted-replacements.json")["replacements"]
+        changed = {(key[0], key[1]) for key in expected if expected[key]["text"] != original[key]["text"]}
+        self.assertEqual({(r["sense_id"], r["field"]) for r in replacements}, changed)
+        self.assertEqual({(r["frozen_row"], r["field"]) for r in replacements},
+                         {(3612, "french_definition"), (3612, "english"), (3612, "chinese")})
+        sources = {s["id"]: s for s in read("sources.json")["sources"]}
+        support = read("source-excerpts.json")["supporting_evidence"]
+        support_keys = {(r["sense_id"], r["source_id"], r["line_1_based"], r["column_1_based"],
+                         r["reviewed_excerpt"]) for r in support}
+        self.assertEqual(len(rights["construction_sources"]), len(support))
+        self.assertEqual({(r["sense_id"], r["source_id"], r["line_1_based"], r["column_1_based"],
+                           r["reviewed_excerpt"]) for r in rights["construction_sources"]}, support_keys)
+        for record in rights["construction_sources"]:
+            source = sources[record["source_id"]]
+            self.assertEqual(record["independent_review"], "passed")
+            self.assertEqual(record["reviewer"], review["reviewer"])
+            self.assertEqual(record["attribution"], source["attribution"])
+            self.assertEqual(record["original_historical_dictionary_layers"],
+                             source["original_historical_dictionary_layers"])
+
+    def test_author_snapshot_remains_unaccepted_at_the_admission_seam(self):
+        review = read("authored/field-review.json")
+        self.assertFalse(review["independent_acceptance"])
+        self.assertIsNone(review["reviewer"])
         temporary_root = ROOT / "target/issue-153"
         temporary_root.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=temporary_root) as directory:
@@ -102,7 +148,7 @@ class Batch153Tests(unittest.TestCase):
                 shutil.copy2(ROOT / "resources/core-pilot-79" / name, candidate / name)
             curated_path = candidate / "curated-inputs.json"
             curated = json.loads(curated_path.read_text(encoding="utf-8"))
-            curated["groups"].extend(read("groups.json"))
+            curated["groups"].extend(read("authored/groups.json"))
             curated_path.write_text(json.dumps(curated), encoding="utf-8")
             (candidate / "field-review.json").write_text(json.dumps(review), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "separate independent field review is required"):
@@ -188,7 +234,7 @@ class Batch153Tests(unittest.TestCase):
             self.assertIn(source["history_url"], notices)
         self.assertEqual((EVIDENCE / "COPYING").read_bytes().rstrip(), (ROOT / "resources/core-pilot-79/COPYING").read_bytes().rstrip())
 
-    def test_difficult_groups_keep_their_exact_construction_and_pending_choice(self):
+    def test_difficult_groups_keep_their_exact_construction_and_evidenced_scope(self):
         groups = {g["frozen_row"]: g for g in read("groups.json")}
         pronoun = groups[3613]["senses"][0]
         self.assertEqual(pronoun["source_headword"], "les vôtres")
@@ -203,12 +249,35 @@ class Batch153Tests(unittest.TestCase):
         blocked = groups[3612]["senses"][0]
         self.assertEqual((groups[3612]["headword"], groups[3612]["lexique_cgram"]), ("by", "NOM"))
         self.assertEqual(blocked["fields"]["ipa"]["text"], "/bi/")
-        self.assertIn("everyday status not established", blocked["fields"]["english"]["text"])
+        self.assertEqual(blocked["fields"]["french_definition"]["text"],
+                         "Fossé traversant un étang et aboutissant à sa bonde (nom masculin ; géographie, drainage d’un étang).")
+        self.assertEqual(blocked["fields"]["english"]["text"],
+                         "A ditch crossing a pond and ending at its drain outlet (masculine French noun; geography, pond drainage).")
+        self.assertEqual(blocked["fields"]["chinese"]["text"],
+                         "穿过池塘并通向其排水口的沟渠（法语阳性名词；地理用语，池塘排水）。")
         usage = next(u for u in read("field-review.json")["usage"] if u["frozen_row"] == 3612)
-        self.assertEqual(usage["everyday_sense_status"], "unresolved_modern_everyday_use")
+        self.assertEqual(usage["everyday_sense_status"], "passed")
+        corroboration = read("modern-use-corroboration.json")
+        self.assertEqual(corroboration["frozen_row"], 3612)
+        self.assertEqual(corroboration["publisher_definition_copied"], False)
+        self.assertEqual(corroboration["publisher_usage_label"], "Géographie")
+        self.assertEqual(corroboration["frequency_claim"], None)
+        self.assertEqual(corroboration["owner_exception"], None)
+        original = read("original-expression-review.json")
+        self.assertEqual(original["rivarol"]["selected_by_expression"],
+                         "Fossé qui traverse un étang et aboutit à sa bonde.")
+        self.assertEqual(original["rivarol"]["conservative_expiry"], "1898-01-01")
+        self.assertIn("quatre professeurs", original["rivarol"]["original_authors"])
+        self.assertEqual(original["rivarol"]["status"], "passed_at_original_work_boundary")
+        source = next(s for s in read("sources.json")["sources"] if s["title"] == "by")
+        self.assertTrue(any(layer["conservative_expiry"] == "1898-01-01"
+                            for layer in source["original_historical_dictionary_layers"]))
+        notices = (EVIDENCE / "NOTICES.md").read_text(encoding="utf-8")
+        self.assertIn("quatre professeurs", notices)
+        self.assertIn("1827", notices)
         relations = read("source-context.json")["spelling_relations"]
         self.assertEqual(len(relations), 50)
-        self.assertTrue(all(r["alias_admission"] == "not_admitted" and r["independent_review"] == "pending" for r in relations))
+        self.assertTrue(all(r["alias_admission"] == "not_admitted" and r["independent_review"] == "passed" for r in relations))
 
 
 if __name__ == "__main__":

@@ -1,36 +1,72 @@
-# #153 selected-text rights proposals
+# Issue #153 independent selected-text rights
 
-All 200 fields remain pending independent rights review. The author proposes
-CC BY-SA 4.0 for the fixed Wiktionnaire contribution layer and the scoped
-French adaptations/new English and Chinese explanations. Article histories
-and captured complete contributor registries supply attribution, including
-anonymous counts; they do not prove who wrote a selected sentence.
+**All 200 fields pass independent selected-text rights review.** The exact
+accepted spans, modifications, source credits and reviewer decisions are in
+[rights.json](rights.json) and [field-review.json](field-review.json).
+Current and original-work layers are separate.
 
-Forty captured articles declare DAF8 imports. Preserve Académie française,
-Dictionnaire de l'Académie française, eighth edition (1932–1935), separately
-from wiki/Lexique adaptations. The established [#129 original-work basis](../issue-129/selected-rights.md)
-applies CPI L123-3 to the institutional collective edition, with conservative
-expiry **2006-01-01**. It does not establish this batch's sentence origins or
-authorize later proprietary electronic editorial material. New selected spans
-retain independent_review=pending. Retained legal/policy captures are listed
-in rights.json with unchanged source bytes and their original capture pointers.
+## Original editions
 
-The by/NOM article references R:Rivarol. The selected historical-expression
-comparison is unresolved; broad Wiktionary licensing is not a substitute for
-that decision. The only identified French meaning is drainage terminology,
-so modern everyday eligibility is also unresolved. No owner exception exists.
+The retained article references identify DAF8, Littré and the 1827 compilation
+referenced by R:Rivarol. DAF8 credit remains Académie française,
+Dictionnaire de l’Académie française, eighth edition (1932–1935): the original
+institutional collective edition expired **2006-01-01** under
+[CPI L123-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941).
+Littré original credit is Émile Littré (1801–1881), Dictionnaire de la langue
+française (1872–1877), expired **1952-01-01** under
+[L123-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937).
+These established original-work bases are independently applied to the actual
+new selected-source references, not accepted as proof of sentence authorship.
 
-vôtres uses the captured les vôtres pronoun grammar and its /votʁ/ component.
-volé uses the fixed masculine-singular participle and the separate theft verb
-meaning. Le Robert confirms the stolen-property adjective externally. CNRTL's
-rare victim adjective is distinct and excluded. External Robert/CNRTL wording
-is retained only in the external capture archive; it supplies no proposed
-definition or bilingual text. Their captures are author corroboration, not
-independent review or permission to redistribute their prose.
+R:Rivarol template revision **36999843** identifies the **1827** Dictionnaire
+classique de la langue française. The original title scan credits Rivarol
+manuscript material and **quatre professeurs de l’Université**, anonymous
+compilers; Paris publishers are Brunot-Labbé and Baudouin frères. Original
+printed page **146** contains the same pond-ditch expression as fixed
+Wiktionnaire by revision **39744914**, line **10**. The anonymous original
+compilation’s term is 1828-01-01 plus seventy years, ending **1898-01-01**
+under L123-3. The decision covers the original expression and compilation,
+with full original credit; it does not attribute that sentence exclusively
+to Rivarol or license modern proprietary editorial material.
+[Original-expression review](original-expression-review.json) retains the
+visual comparison, title/entry scans, template and legal retrieval evidence.
+cheville’s Rivarol reference also retains this original-edition credit;
+the accepted anatomy line is distinct from the original peg sense.
 
-Every proposed field in [rights.json](rights.json) retains its exact revision,
-span, attribution, original-work context, modification and pending reviewer.
-[NOTICES.md](NOTICES.md) and [COPYING](COPYING) preserve attribution, licensing
-and ShareAlike obligations. Final combined redistribution and native admission
-belong to parent integration after independent decisions. No new accepted
-content is claimed in the 4,087-group coverage denominator.
+Article import/bibliographic markers and contributor registries do not identify
+selected sentence authors. TLFi/Robert bibliography and neighbouring
+literary/news quotations, etymologies, media and other-language sections supply
+no bundled field. The selected /ʃə.vij/ cheville pronunciation is the first
+recorded variant, not the separately TLFi-cited /ʃvij/ variant.
+
+## Contribution and adaptation obligations
+
+Fixed Wiktionnaire transcription/adaptation and scoped Lexique French definitions,
+new English/Chinese explanations and selected IPA retain **CC BY-SA 4.0**.
+[COPYING](COPYING), sections 2(a), 3(a), 3(b) and 4 permit sharing, adaptation
+and applicable database reuse with attribution, source/licence identification,
+modification notices, ShareAlike and no additional downstream restrictions.
+The retained Wikimedia Terms section 7 permits article/history attribution
+and preserves imported content’s separate conditions. Copyright-policy revision
+38903168 and DAF8-template revision 22113837 distinguish external originals
+from wiki contributions. Project-source MIT does not replace content rights.
+
+[NOTICES.md](NOTICES.md), [sources](sources.json) and
+[source context](source-context.json) retain complete article/history credits,
+captured named registries/anonymous counts and all applicable original credits.
+IPA includes no audio. EN/ZH are new explanatory translations of the fixed
+French meaning, not upstream bilingual or publisher quotations.
+
+by’s [current publisher support](modern-use-corroboration.json) is limited to
+POS/domain/current-use facts. Its definition/example prose is not reused.
+The bundled three explanations retain the fixed historical lexical meaning
+and Geography/pond-drainage scope; bonde is an outlet without a required gate.
+
+## Package boundary
+
+The retained audit verifies 55 literal article/API revisions, all 200 selected
+spans, 199 supporting occurrences and all nine contributor responses.
+No selected rights question remains unresolved. Direct Légifrance pages were
+HTTP 403; retained official cached excerpts support the stated statutory term.
+Actual combined canonical conversion/notices and native/release checks remain
+parent-integration gates. The reviewer shard does not alter the canonical core.
