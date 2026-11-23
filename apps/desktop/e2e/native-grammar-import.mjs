@@ -13,6 +13,10 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     window.__TAURI_INTERNALS__.invoke = async (command, args, options) => {
       const result = await original(command, args, options);
       if (command === 'note_import_preview' || command === 'note_import_commit') window.grammarImportCalls.push({ command, args, result });
+      if (command === 'note_import_commit' && window.dropGrammarCommitResponse) {
+        window.dropGrammarCommitResponse = false;
+        throw new Error('Committed response lost');
+      }
       return result;
     };
   });
@@ -118,9 +122,19 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     evidence.checks.push('T16/T39: real failed pause write rolls back complete import; same preview retries; real failed postcommit resume is visible, preserves content and pause; explicit retry enters real queue');
   } else if (scenario === 'grammar-import-replay') {
     const filename = await file('replay', [['title', 'question', 'answer'], ['Replay note', 'Question', 'Answer']]);
-    await picker('导入语法 CSV', filename); await confirm();
+    await picker('导入语法 CSV', filename);
+    await page.evaluate(() => { window.dropGrammarCommitResponse = true; });
+    await region.getByRole('button', { name: '确认导入', exact: true }).click();
+    await expect(region.getByRole('alert')).toContainText('Committed response lost');
     const commit = await page.evaluate(() => window.grammarImportCalls.find((call) => call.command === 'note_import_commit'));
     const before = readState(destination);
+    const [saved] = await records();
+    assert.ok(saved.card); assert.equal((await records()).length, 1);
+    assert.equal(sqlPause()[0].paused, saved.id); assert.deepEqual(await queue(), []);
+    await confirm();
+    const retried = await page.evaluate(() => window.grammarImportCalls.filter((call) => call.command === 'note_import_commit').at(-1));
+    assert.deepEqual(retried, commit);
+    assert.deepEqual(await records(), [saved]); compareLearning(readState(destination), before);
     assert.deepEqual(await invoke('note_import_commit', commit.args), commit.result);
     compareLearning(readState(destination), before);
     await assert.rejects(invoke('note_import_commit', { ...commit.args, selections: [{ index: 0, action: 'skip' }] }), /decision|selection/i);
@@ -128,7 +142,7 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     await assert.rejects(invoke('note_import_commit', commit.args), /preview no longer available/i);
     await picker('导入语法 CSV', filename); await confirm(); assert.equal((await records()).length, 2);
     evidence.sqlite = sqlPause(); evidence.calls = await page.evaluate(() => window.grammarImportCalls);
-    evidence.checks.push('T10/T15/T37: real retained native session replay returns saved receipt, conflicting selection rejected, cancelled session unavailable, separate identifier-free submission creates another note');
+    evidence.checks.push('T10/T15/T37: first response dropped after real native IPC commit; UI retry with same submission returns identical receipt despite already committed preview, SQLite unchanged with one paused note/card; conflicting selection rejected, cancelled session unavailable, separate identifier-free submission creates another note');
   } else if (scenario === 'grammar-import-known') {
     const [saved] = await records(), before = readState(destination);
     const filename = await file('known', [headers, ['external-native-214', saved.title, saved.body, saved.card.question, saved.card.answer]]);
