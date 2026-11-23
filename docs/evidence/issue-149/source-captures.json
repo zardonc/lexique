@@ -770,5 +770,14 @@
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-149",
   "captured_at_utc": "2026-11-22T23:14:58.613019+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-149\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-149\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-149\\selection.py",
+  "independent_review_audit": {
+    "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+    "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149",
+    "raw_author_copy": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\raw-author-evidence",
+    "original_expressions": "original-expression-review.json",
+    "audit_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\audit.py",
+    "source_bytes": "literal UTF-8 API/raw equality; all fixed selected/support spans; full contributor chains",
+    "phonetic_field_rights": "194 fields accepted; six selected meaning fields unresolved, not blanket cleared"
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "ticket": 149,
+  "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+  "author_commit": "ba24dc74199cffe2c39f5096455eee2900e9a643",
+  "review_base": "f1a2fb0cba08d0132654d9fda418a1c89e3f713e",
+  "integration_tip_merged": "44899e1574eefbcd28f5af564c2375c67a7a61a9",
+  "python_command": "uv run --python 3.14.10 python -B -X utf8",
+  "pnpm_version": "11.25.0",
+  "counts": {"groups": 50, "fields": 200, "uses": 50, "unchanged_texts": 194, "changed_texts": 6, "unresolved_fields": 0, "pending_owner_choices": 0},
+  "checks": [
+    {"command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_149.py", "result": "passed", "tests": 10, "log": "audit/final-batch.log"},
+    {"command": "uv run --python 3.14.10 python -B -X utf8 target/issue-149-review/audit.py", "result": "passed", "log": "audit/final-source-audit.log"},
+    {"command": "pnpm test:docs", "result": "passed", "documents": 511, "local_links": 3953, "problems": [], "log": "audit/final-docs.log"},
+    {"command": "git diff --check", "result": "passed", "log": "audit/final-diff-check.log"},
+    {"command": "git diff --cached --check", "result": "passed", "log": "audit/final-staged-diff-check.log"}
+  ],
+  "focused_regressions": [
+    {"case": "organe Chinese internal-location overrestriction", "result": "RED then GREEN", "logs": ["audit/organe-red.log", "audit/organe-green.log"]},
+    {"case": "choquer offence versus generic surprise", "result": "RED then GREEN", "logs": ["audit/choquer-red.log", "audit/choquer-green.log"]},
+    {"case": "lady daughters courtesy ranks", "result": "RED then GREEN", "logs": ["audit/lady-red.log", "audit/lady-green.log"]},
+    {"case": "silencieux/menu actual historical original-expression evidence", "result": "RED then GREEN", "logs": ["audit/primary-rights-red.log", "audit/primary-rights-green.log"]}
+  ],
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/reviewer-evidence/issue-149",
+  "initial_documentation_result": "New link targets were not yet tracked by Git; staging the owned new review files resolved all eight reported targets. The initial failed log is retained at audit/docs-before-stage.log.",
+  "unrun_coordinator_checks": ["canonical/global assembly and conversion", "native lookup/save/reopen", "learner acceptance", "release readiness", "tracker and push"],
+  "unrun_outside_change_boundary": ["frontend lint/typecheck/build", "Rust formatting/compilation/tests", "browser and native UI"],
+  "limitations": ["Current article-contributor registries do not identify sentence authorship", "Fresh official statute requests returned HTTP 403; established retained CPI L123-3 basis was read", "The shard records independent eligibility, not canonical admission or native execution"]
+}

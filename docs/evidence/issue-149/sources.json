@@ -14,7 +14,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -58,7 +58,10 @@
           "raw_reference": "* {{R:DicionárioFonético|onze|id=22259}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "onze, fixed French revision 39996791, field lines [12, 13]. Selected French head/grammar and lexical wording are fixed wiki contributions or ordinary lexical facts. No externally imported expressive wording is identified at these selected spans; adjacent literary/news examples, etymology and other languages are excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_2162"
     },
     {
       "id": "b149_fr_11672",
@@ -70,12 +73,36 @@
       "timestamp": "2026-08-24T11:08:50Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=organe&oldid=39827445",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=organe&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "organe",
+            "url": "https://www.cnrtl.fr/definition/academie8/organe",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\organe.html",
+            "serialized_key": "payload.responses.entry:organe::.content[3].content",
+            "original_expression": "Partie d'un corps organisé, laquelle remplit quelque fonction nécessaire ou utile à la vie.",
+            "plain_text_column_1_based": 21
+          },
+          "review_reason": "organe, fixed French revision 39827445, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Partie d'un corps organisé, laquelle remplit quelque fonction nécessaire ou utile à la vie. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -88,7 +115,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "organe, fixed French revision 39827445, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Partie d'un corps organisé, laquelle remplit quelque fonction nécessaire ou utile à la vie. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_11672"
     },
     {
       "id": "b149_fr_69963",
@@ -104,7 +134,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -117,7 +147,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "sien, fixed French revision 38579229, field lines []. DAF8-marked old adjective is spelling/phonetic support only; selected pronoun semantics are the separate fixed le sien article. The inspected Littré old adjective text is not redistributed. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -128,7 +159,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "sien, fixed French revision 38579229, field lines []. DAF8-marked old adjective is spelling/phonetic support only; selected pronoun semantics are the separate fixed le sien article. The inspected Littré old adjective text is not redistributed. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_69963"
     },
     {
       "id": "b149_fr_110385",
@@ -144,7 +178,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -157,7 +191,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "massacre, fixed French revision 39719420, field lines [9, 11]. Selected lexical wording corresponds to the identified DAF8 expression: Action de massacrer. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "massacre",
+            "url": "https://www.cnrtl.fr/definition/academie8/massacre",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\massacre.html",
+            "serialized_key": "payload.responses.entry:massacre::.content[3].content",
+            "original_expression": "Action de massacrer.",
+            "plain_text_column_1_based": 23
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -183,7 +227,10 @@
           "raw_reference": "* {{R:DicionárioFonético|massacre|id=20011}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "massacre, fixed French revision 39719420, field lines [9, 11]. Selected lexical wording corresponds to the identified DAF8 expression: Action de massacrer. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_110385"
     },
     {
       "id": "b149_fr_156966",
@@ -199,7 +246,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -212,7 +259,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "délirer, fixed French revision 39942271, field lines [6, 17]. DAF8 has only the medical delirium definition; selected familiar amusement is separate modern wiki wording with a contemporary example. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -223,7 +271,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "délirer, fixed French revision 39942271, field lines [6, 17]. DAF8 has only the medical delirium definition; selected familiar amusement is separate modern wiki wording with a contemporary example. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_156966"
     },
     {
       "id": "b149_fr_159156",
@@ -235,12 +286,36 @@
       "timestamp": "2024-10-11T12:48:58Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=emm%C3%A9nager&oldid=36186945",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=emm%C3%A9nager&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "emménager",
+            "url": "https://www.cnrtl.fr/definition/academie8/emm%C3%A9nager",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\emménager.html",
+            "serialized_key": "payload.responses.entry:emménager::.content[3].content",
+            "original_expression": "S'installer dans un nouveau logement, y transporter son mobilier.",
+            "plain_text_column_1_based": 239
+          },
+          "review_reason": "emménager, fixed French revision 36186945, field lines [7, 22]. Selected lexical wording corresponds to the identified DAF8 expression: S'installer dans un nouveau logement, y transporter son mobilier. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -248,7 +323,10 @@
           "raw_reference": "*{{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "emménager, fixed French revision 36186945, field lines [7, 22]. Selected lexical wording corresponds to the identified DAF8 expression: S'installer dans un nouveau logement, y transporter son mobilier. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_159156"
     },
     {
       "id": "b149_fr_166753",
@@ -264,7 +342,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -277,7 +355,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "livraison, fixed French revision 39774741, field lines [7, 8]. Selected lexical wording corresponds to the identified DAF8 expression: Action de livrer de la marchandise qu'on a vendue. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "livraison",
+            "url": "https://www.cnrtl.fr/definition/academie8/livraison",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\livraison.html",
+            "serialized_key": "payload.responses.entry:livraison::.content[3].content",
+            "original_expression": "Action de livrer de la marchandise qu'on a vendue.",
+            "plain_text_column_1_based": 32
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -288,7 +376,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "livraison, fixed French revision 39774741, field lines [7, 8]. Selected lexical wording corresponds to the identified DAF8 expression: Action de livrer de la marchandise qu'on a vendue. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_166753"
     },
     {
       "id": "b149_fr_166789",
@@ -300,12 +391,36 @@
       "timestamp": "2026-08-01T00:56:14Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=loge&oldid=39720052",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=loge&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "loge",
+            "url": "https://www.cnrtl.fr/definition/academie8/loge",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\loge.html",
+            "serialized_key": "payload.responses.entry:loge::.content[3].content",
+            "original_expression": "des Pièces, généralement fort petites, réservées à chaque acteur ou actrice pour s'y costumer.",
+            "plain_text_column_1_based": 1670
+          },
+          "review_reason": "loge, fixed French revision 39720052, field lines [9, 36]. Selected lexical wording corresponds to the identified DAF8 expression: des Pièces, généralement fort petites, réservées à chaque acteur ou actrice pour s'y costumer. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -323,7 +438,10 @@
           "raw_reference": "* {{R:Trémeur|vue=k-l}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "loge, fixed French revision 39720052, field lines [9, 36]. Selected lexical wording corresponds to the identified DAF8 expression: des Pièces, généralement fort petites, réservées à chaque acteur ou actrice pour s'y costumer. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_166789"
     },
     {
       "id": "b149_fr_170849",
@@ -339,7 +457,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -352,7 +470,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "pénible, fixed French revision 39786893, field lines [7, 8]. Selected lexical wording corresponds to the identified DAF8 expression: Qui se fait avec peine, qui donne de la peine, de la fatigue. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "pénible",
+            "url": "https://www.cnrtl.fr/definition/academie8/p%C3%A9nible",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\pénible.html",
+            "serialized_key": "payload.responses.entry:pénible::.content[3].content",
+            "original_expression": "Qui se fait avec peine, qui donne de la peine, de la fatigue.",
+            "plain_text_column_1_based": 34
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -363,7 +491,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "pénible, fixed French revision 39786893, field lines [7, 8]. Selected lexical wording corresponds to the identified DAF8 expression: Qui se fait avec peine, qui donne de la peine, de la fatigue. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_170849"
     },
     {
       "id": "b149_fr_528530",
@@ -375,12 +506,36 @@
       "timestamp": "2026-11-15T12:32:19Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=zut&oldid=40025933",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=zut&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "zut",
+            "url": "https://www.cnrtl.fr/definition/academie8/zut",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\zut.html",
+            "serialized_key": "payload.responses.entry:zut::.content[2].content",
+            "original_expression": "Exclamation familière pour exprimer l'impatience, le dépit",
+            "plain_text_column_1_based": 18
+          },
+          "review_reason": "zut, fixed French revision 40025933, field lines [11, 12]. Selected lexical wording corresponds to the identified DAF8 expression: Exclamation familière pour exprimer l'impatience, le dépit The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -418,7 +573,10 @@
           "raw_reference": "{{R:Elhuyar}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "zut, fixed French revision 40025933, field lines [11, 12]. Selected lexical wording corresponds to the identified DAF8 expression: Exclamation familière pour exprimer l'impatience, le dépit The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_528530"
     },
     {
       "id": "b149_fr_5089",
@@ -430,12 +588,36 @@
       "timestamp": "2026-11-21T17:54:05Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gendarme&oldid=40051819",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=gendarme&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "gendarme",
+            "url": "https://www.cnrtl.fr/definition/academie8/gendarme",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\gendarme.html",
+            "serialized_key": "payload.responses.entry:gendarme::.content[3].content",
+            "original_expression": "Soldat d'un corps de troupes spécialement chargé de maintenir la sécurité et la tranquillité publique.",
+            "plain_text_column_1_based": 23
+          },
+          "review_reason": "gendarme, fixed French revision 40051819, field lines [27, 28]. Selected lexical wording corresponds to the identified DAF8 expression: Soldat d'un corps de troupes spécialement chargé de maintenir la sécurité et la tranquillité publique. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -448,7 +630,10 @@
           "raw_reference": "* {{R:DicionárioFonético|gendarme|id=15707}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "gendarme, fixed French revision 40051819, field lines [27, 28]. Selected lexical wording corresponds to the identified DAF8 expression: Soldat d'un corps de troupes spécialement chargé de maintenir la sécurité et la tranquillité publique. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_5089"
     },
     {
       "id": "b149_fr_9425",
@@ -464,7 +649,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -477,7 +662,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "écriture, fixed French revision 39752983, field lines [10, 11]. DAF8 represents writing as a system of signs; the selected wiki process wording is different, expressing the ordinary linguistic fact. Article-level DAF8 credit remains without asserting selected-sentence authorship. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -493,7 +679,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "écriture, fixed French revision 39752983, field lines [10, 11]. DAF8 represents writing as a system of signs; the selected wiki process wording is different, expressing the ordinary linguistic fact. Article-level DAF8 credit remains without asserting selected-sentence authorship. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_9425"
     },
     {
       "id": "b149_fr_15360",
@@ -505,14 +694,41 @@
       "timestamp": "2026-09-28T14:11:54Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=condamn%C3%A9&oldid=39908332",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=condamn%C3%A9&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "condamner",
+            "url": "https://www.cnrtl.fr/definition/academie8/condamner",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\variant-condamner.html",
+            "serialized_key": "payload.responses.entry:condamner::.content[academie8].content",
+            "original_expression": "de Celui, de celle contre qui une peine afflictive ou infamante a été prononcée.",
+            "plain_text_column_1_based": 1221
+          },
+          "review_reason": "condamné, fixed French revision 39908332, field lines [28, 29]. Selected lexical wording corresponds to the identified DAF8 expression: de Celui, de celle contre qui une peine afflictive ou infamante a été prononcée. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_text_rights_reason": "condamné, fixed French revision 39908332, field lines [28, 29]. Selected lexical wording corresponds to the identified DAF8 expression: de Celui, de celle contre qui une peine afflictive ou infamante a été prononcée. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_15360"
     },
     {
       "id": "b149_fr_141902",
@@ -528,7 +744,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -541,7 +757,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "éclair, fixed French revision 39837756, field lines [12, 13]. Selected lexical wording corresponds to the identified DAF8 expression: Lumière vive et soudaine qui brille entre les nuages au moment de l'explosion électrique et qui précède le bruit du tonnerre. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "éclair",
+            "url": "https://www.cnrtl.fr/definition/academie8/%C3%A9clair",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\éclair.html",
+            "serialized_key": "payload.responses.entry:éclair::.content[3].content",
+            "original_expression": "Lumière vive et soudaine qui brille entre les nuages au moment de l'explosion électrique et qui précède le bruit du tonnerre.",
+            "plain_text_column_1_based": 21
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -557,7 +783,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "éclair, fixed French revision 39837756, field lines [12, 13]. Selected lexical wording corresponds to the identified DAF8 expression: Lumière vive et soudaine qui brille entre les nuages au moment de l'explosion électrique et qui précède le bruit du tonnerre. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_141902"
     },
     {
       "id": "b149_fr_148488",
@@ -573,7 +802,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -586,7 +815,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "associer, fixed French revision 39719908, field lines [7, 14]. Selected lexical wording corresponds to the identified DAF8 expression: L'y faire participer. Il signifie aussi Unir, joindre. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "associer",
+            "url": "https://www.cnrtl.fr/definition/academie8/associer",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\associer.html",
+            "serialized_key": "payload.responses.entry:associer::.content[3].content",
+            "original_expression": "L'y faire participer. Il signifie aussi Unir, joindre.",
+            "plain_text_column_1_based": 621
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -597,7 +836,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "associer, fixed French revision 39719908, field lines [7, 14]. Selected lexical wording corresponds to the identified DAF8 expression: L'y faire participer. Il signifie aussi Unir, joindre. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_148488"
     },
     {
       "id": "b149_fr_157494",
@@ -613,7 +855,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -626,7 +868,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "désordre, fixed French revision 39983574, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Manque d'ordre. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "désordre",
+            "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9sordre",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\désordre.html",
+            "serialized_key": "payload.responses.entry:désordre::.content[3].content",
+            "original_expression": "Manque d'ordre.",
+            "plain_text_column_1_based": 23
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -637,7 +889,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "désordre, fixed French revision 39983574, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Manque d'ordre. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_157494"
     },
     {
       "id": "b149_fr_165733",
@@ -649,12 +904,36 @@
       "timestamp": "2026-06-07T21:14:08Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=jalousie&oldid=39573228",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=jalousie&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "jalousie",
+            "url": "https://www.cnrtl.fr/definition/academie8/jalousie",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\jalousie.html",
+            "serialized_key": "payload.responses.entry:jalousie::.content[3].content",
+            "original_expression": "la Crainte que la personne aimée n'éprouve un sentiment de préférence pour quelque autre, ne soit infidèle.",
+            "plain_text_column_1_based": 527
+          },
+          "review_reason": "jalousie, fixed French revision 39573228, field lines [12, 29]. Selected lexical wording corresponds to the identified DAF8 expression: la Crainte que la personne aimée n'éprouve un sentiment de préférence pour quelque autre, ne soit infidèle. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -662,7 +941,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "jalousie, fixed French revision 39573228, field lines [12, 29]. Selected lexical wording corresponds to the identified DAF8 expression: la Crainte que la personne aimée n'éprouve un sentiment de préférence pour quelque autre, ne soit infidèle. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_165733"
     },
     {
       "id": "b149_fr_173057",
@@ -678,7 +960,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -691,7 +973,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "provenir, fixed French revision 36491538, field lines [6, 7]. Selected lexical wording corresponds to the identified DAF8 expression: Procéder, venir, dériver, résulter. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "provenir",
+            "url": "https://www.cnrtl.fr/definition/academie8/provenir",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\provenir.html",
+            "serialized_key": "payload.responses.entry:provenir::.content[3].content",
+            "original_expression": "Procéder, venir, dériver, résulter.",
+            "plain_text_column_1_based": 28
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -722,7 +1014,10 @@
           "raw_reference": "* {{R:Ubaud}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "provenir, fixed French revision 36491538, field lines [6, 7]. Selected lexical wording corresponds to the identified DAF8 expression: Procéder, venir, dériver, résulter. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_173057"
     },
     {
       "id": "b149_fr_363860",
@@ -738,7 +1033,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -767,7 +1062,10 @@
           "raw_reference": "* {{R:Ubaud}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "violon, fixed French revision 39728093, field lines [11, 12]. DAF8 instrument definition lacks the selected luth/short-neck/fretless wording; those properties are factual wiki lexical content, not a copied literary example. No other selected import is declared. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_363860"
     },
     {
       "id": "b149_fr_1252336",
@@ -783,7 +1081,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -797,7 +1095,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "thérapie, fixed French revision 39957214, field lines [9, 10]. Littré describes the medical suffix; the selected treatment-purpose definition is separate modern lexical wiki content, not that suffix expression. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_1252336"
     },
     {
       "id": "b149_fr_4924",
@@ -813,7 +1114,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -826,7 +1127,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "sagesse, fixed French revision 39500225, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Prudence, circonspection, sentiment juste des choses. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "sagesse",
+            "url": "https://www.cnrtl.fr/definition/academie8/sagesse",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\sagesse.html",
+            "serialized_key": "payload.responses.entry:sagesse::.content[3].content",
+            "original_expression": "Prudence, circonspection, sentiment juste des choses.",
+            "plain_text_column_1_based": 21
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -837,7 +1148,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "sagesse, fixed French revision 39500225, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Prudence, circonspection, sentiment juste des choses. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_4924"
     },
     {
       "id": "b149_fr_5177",
@@ -853,7 +1167,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -866,7 +1180,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "user, fixed French revision 39417438, field lines [6, 7]. Selected lexical wording corresponds to the identified DAF8 expression: Détériorer les choses, à force de s'en servir. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "user",
+            "url": "https://www.cnrtl.fr/definition/academie8/user",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\user.html",
+            "serialized_key": "payload.responses.entry:user::.content[2].content",
+            "original_expression": "Détériorer les choses, à force de s'en servir.",
+            "plain_text_column_1_based": 1299
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -877,7 +1201,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "user, fixed French revision 39417438, field lines [6, 7]. Selected lexical wording corresponds to the identified DAF8 expression: Détériorer les choses, à force de s'en servir. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_5177"
     },
     {
       "id": "b149_fr_23697",
@@ -889,12 +1216,36 @@
       "timestamp": "2026-08-19T15:21:28Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=poign%C3%A9e&oldid=39815800",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=poign%C3%A9e&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "poignée",
+            "url": "https://www.cnrtl.fr/definition/academie8/poign%C3%A9e",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\poignée.html",
+            "serialized_key": "payload.responses.entry:poignée::.content[3].content",
+            "original_expression": "la Partie d'un objet par où on le saisit avec la main.",
+            "plain_text_column_1_based": 524
+          },
+          "review_reason": "poignée, fixed French revision 39815800, field lines [10, 31]. Selected lexical wording corresponds to the identified DAF8 expression: la Partie d'un objet par où on le saisit avec la main. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -907,7 +1258,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "poignée, fixed French revision 39815800, field lines [10, 31]. Selected lexical wording corresponds to the identified DAF8 expression: la Partie d'un objet par où on le saisit avec la main. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_23697"
     },
     {
       "id": "b149_fr_36443",
@@ -919,12 +1273,36 @@
       "timestamp": "2026-10-19T21:53:37Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=casse&oldid=39947420",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=casse&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "casse",
+            "url": "https://www.cnrtl.fr/definition/academie8/casse",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\casse.html",
+            "serialized_key": "payload.responses.entry:casse::.content[3].content",
+            "original_expression": "Action de casser ou Résultat de cette action.",
+            "plain_text_column_1_based": 228
+          },
+          "review_reason": "casse, fixed French revision 39947420, field lines [80, 81]. Selected lexical wording corresponds to the identified DAF8 expression: Action de casser ou Résultat de cette action. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -982,7 +1360,10 @@
           "raw_reference": "* {{R:Verhulst|28|36}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "casse, fixed French revision 39947420, field lines [80, 81]. Selected lexical wording corresponds to the identified DAF8 expression: Action de casser ou Résultat de cette action. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_36443"
     },
     {
       "id": "b149_fr_37505",
@@ -998,7 +1379,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1012,7 +1393,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "effectivement, fixed French revision 40053950, field lines [7, 10]. DAF8 discusses effective manner and conversation oui; the selected reality/confirmation line is a separate wiki explanation using ordinary lexical equivalents. Littré is bibliographic, not a licence for quoted examples. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_37505"
     },
     {
       "id": "b149_fr_37657",
@@ -1024,12 +1408,36 @@
       "timestamp": "2026-07-29T23:16:02Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sinc%C3%A8rement&oldid=39710924",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=sinc%C3%A8rement&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "sincèrement",
+            "url": "https://www.cnrtl.fr/definition/academie8/sinc%C3%A8rement",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\sincèrement.html",
+            "serialized_key": "payload.responses.entry:sincèrement::.content[3].content",
+            "original_expression": "D'une manière sincère.",
+            "plain_text_column_1_based": 21
+          },
+          "review_reason": "sincèrement, fixed French revision 39710924, field lines [6, 7]. Selected lexical wording corresponds to the identified DAF8 expression: D'une manière sincère. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -1037,7 +1445,10 @@
           "raw_reference": "* {{R:Littré}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "sincèrement, fixed French revision 39710924, field lines [6, 7]. Selected lexical wording corresponds to the identified DAF8 expression: D'une manière sincère. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_37657"
     },
     {
       "id": "b149_fr_144243",
@@ -1053,7 +1464,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1062,7 +1473,10 @@
           "raw_reference": "* {{RÉF|1}} {{R:RobertDHLF}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "lesbien, fixed French revision 39799009, field lines [23, 24]. Selected French head/grammar and lexical wording are fixed wiki contributions or ordinary lexical facts. No externally imported expressive wording is identified at these selected spans; adjacent literary/news examples, etymology and other languages are excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_144243"
     },
     {
       "id": "b149_fr_147033",
@@ -1078,7 +1492,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1091,7 +1505,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "déesse, fixed French revision 39514660, field lines [10, 11]. Selected lexical wording corresponds to the identified DAF8 expression: Divinité païenne du sexe féminin. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "déesse",
+            "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9esse",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\déesse.html",
+            "serialized_key": "payload.responses.entry:déesse::.content[3].content",
+            "original_expression": "Divinité païenne du sexe féminin.",
+            "plain_text_column_1_based": 20
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1107,7 +1531,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "déesse, fixed French revision 39514660, field lines [10, 11]. Selected lexical wording corresponds to the identified DAF8 expression: Divinité païenne du sexe féminin. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_147033"
     },
     {
       "id": "b149_fr_153462",
@@ -1123,7 +1550,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1136,7 +1563,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "choquer, fixed French revision 39000943, field lines [6, 21]. Selected lexical wording corresponds to the identified DAF8 expression: Il signifie au figuré Offenser. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "choquer",
+            "url": "https://www.cnrtl.fr/definition/academie8/choquer",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\choquer.html",
+            "serialized_key": "payload.responses.entry:choquer::.content[3].content",
+            "original_expression": "Il signifie au figuré Offenser.",
+            "plain_text_column_1_based": 345
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1152,7 +1589,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "choquer, fixed French revision 39000943, field lines [6, 21]. Selected lexical wording corresponds to the identified DAF8 expression: Il signifie au figuré Offenser. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_153462"
     },
     {
       "id": "b149_fr_161316",
@@ -1168,7 +1608,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1181,7 +1621,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "fierté, fixed French revision 40054896, field lines [10, 33]. DAF8 gives the character of being fier, not the selected achievement-based autosatisfaction wording. The modern feeling explanation is separately wiki-licensed; its adjacent Werber/Jackson examples are not fields. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1197,7 +1638,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "fierté, fixed French revision 40054896, field lines [10, 33]. DAF8 gives the character of being fier, not the selected achievement-based autosatisfaction wording. The modern feeling explanation is separately wiki-licensed; its adjacent Werber/Jackson examples are not fields. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_161316"
     },
     {
       "id": "b149_fr_19768",
@@ -1213,10 +1657,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_text_rights_reason": "surpris, fixed French revision 39873517, field lines [7, 8]. Selected French head/grammar and lexical wording are fixed wiki contributions or ordinary lexical facts. No externally imported expressive wording is identified at these selected spans; adjacent literary/news examples, etymology and other languages are excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_19768"
     },
     {
       "id": "b149_fr_32265",
@@ -1228,12 +1675,36 @@
       "timestamp": "2026-11-01T21:45:55Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cadre&oldid=39975257",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=cadre&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "cadre",
+            "url": "https://www.cnrtl.fr/definition/academie8/cadre",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\cadre.html",
+            "serialized_key": "payload.responses.entry:cadre::.content[3].content",
+            "original_expression": "Bordure de bois, de marbre, de bronze, etc., dans laquelle on place un tableau, une estampe, un ouvrage de sculpture, etc.",
+            "plain_text_column_1_based": 20
+          },
+          "review_reason": "cadre, fixed French revision 39975257, field lines [13, 14]. Selected lexical wording corresponds to the identified DAF8 expression: Bordure de bois, de marbre, de bronze, etc., dans laquelle on place un tableau, une estampe, un ouvrage de sculpture, etc. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0. The separate CFC cartographic expression at line 103 is excluded from every selected and supporting span; it receives no redistribution approval."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -1258,7 +1729,10 @@
           "raw_reference": "* {{R:Mistral}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "cadre, fixed French revision 39975257, field lines [13, 14]. Selected lexical wording corresponds to the identified DAF8 expression: Bordure de bois, de marbre, de bronze, etc., dans laquelle on place un tableau, une estampe, un ouvrage de sculpture, etc. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0. The separate CFC cartographic expression at line 103 is excluded from every selected and supporting span; it receives no redistribution approval.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_32265"
     },
     {
       "id": "b149_fr_33912",
@@ -1274,7 +1748,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1288,7 +1762,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "silencieux, fixed French revision 39959265, selected lexical row 3433. Actual first-party DAF8 article A8S0941 was retained and compared: Il se dit aussi des Choses qui font peu de bruit. The selected Wiktionnaire line 22 adapts the DAF8 things-making-little-noise sense, adding the zero-noise alternative and replacing the article framing. The retained original separates quiet things from taciturn people, silent places and the mechanical noun; those other meanings are excluded. The original Académie française institutional collective edition was published 1932–1935; applying the established CPI L123-3 basis to final 1935 publication gives expiry 2006-01-01. This decision concerns the identified historical expression; no modern website interface or ninth-edition prose is copied. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0. Article contributor credits do not prove sentence authorship.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_33912"
     },
     {
       "id": "b149_fr_148711",
@@ -1304,7 +1781,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1317,7 +1794,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "aussitôt, fixed French revision 38924813, field lines [7, 8]. Selected lexical wording corresponds to the identified DAF8 expression: Dans le moment même, sur l'heure. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "aussitôt",
+            "url": "https://www.cnrtl.fr/definition/academie8/aussit%C3%B4t",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\aussitôt.html",
+            "serialized_key": "payload.responses.entry:aussitôt::.content[3].content",
+            "original_expression": "Dans le moment même, sur l'heure.",
+            "plain_text_column_1_based": 27
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1328,7 +1815,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "aussitôt, fixed French revision 38924813, field lines [7, 8]. Selected lexical wording corresponds to the identified DAF8 expression: Dans le moment même, sur l'heure. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_148711"
     },
     {
       "id": "b149_fr_156976",
@@ -1344,7 +1834,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1357,7 +1847,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "délit, fixed French revision 39830098, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Toute infraction, consciente ou non, aux lois. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "délit",
+            "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9lit",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\délit.html",
+            "serialized_key": "payload.responses.entry:délit::.content[3].content",
+            "original_expression": "Toute infraction, consciente ou non, aux lois.",
+            "plain_text_column_1_based": 34
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1378,7 +1878,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "délit, fixed French revision 39830098, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Toute infraction, consciente ou non, aux lois. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_156976"
     },
     {
       "id": "b149_fr_167094",
@@ -1394,7 +1897,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1407,7 +1910,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "mairie, fixed French revision 39829983, field lines [8, 11]. Selected lexical wording corresponds to the identified DAF8 expression: le Bâtiment où se tient l'administration municipale. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "mairie",
+            "url": "https://www.cnrtl.fr/definition/academie8/mairie",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\mairie.html",
+            "serialized_key": "payload.responses.entry:mairie::.content[3].content",
+            "original_expression": "le Bâtiment où se tient l'administration municipale.",
+            "plain_text_column_1_based": 163
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1418,7 +1931,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "mairie, fixed French revision 39829983, field lines [8, 11]. Selected lexical wording corresponds to the identified DAF8 expression: le Bâtiment où se tient l'administration municipale. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_167094"
     },
     {
       "id": "b149_fr_173118",
@@ -1434,7 +1950,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1447,7 +1963,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "psychiatre, fixed French revision 39234949, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Médecin qui se spécialise dans la psychiatrie. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "psychiatre",
+            "url": "https://www.cnrtl.fr/definition/academie8/psychiatre",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\psychiatre.html",
+            "serialized_key": "payload.responses.entry:psychiatre::.content[3].content",
+            "original_expression": "Médecin qui se spécialise dans la psychiatrie.",
+            "plain_text_column_1_based": 90
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1468,7 +1994,10 @@
           "raw_reference": "* {{R:Cordial}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "psychiatre, fixed French revision 39234949, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Médecin qui se spécialise dans la psychiatrie. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_173118"
     },
     {
       "id": "b149_fr_177025",
@@ -1480,12 +2009,36 @@
       "timestamp": "2026-09-18T14:47:34Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sous-sol&oldid=39881801",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=sous-sol&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "sous-sol",
+            "url": "https://www.cnrtl.fr/definition/academie8/sous-sol",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\sous-sol.html",
+            "serialized_key": "payload.responses.entry:sous-sol::.content[2].content",
+            "original_expression": "la Partie d'une maison qui est au-dessous du rez-de-chaussée.",
+            "plain_text_column_1_based": 109
+          },
+          "review_reason": "sous-sol, fixed French revision 39881801, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: la Partie d'une maison qui est au-dessous du rez-de-chaussée. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -1493,7 +2046,10 @@
           "raw_reference": "*{{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "sous-sol, fixed French revision 39881801, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: la Partie d'une maison qui est au-dessous du rez-de-chaussée. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_177025"
     },
     {
       "id": "b149_fr_179417",
@@ -1509,7 +2065,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1522,7 +2078,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "vallée, fixed French revision 39288907, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Espace resserré entre deux ou plusieurs montagnes. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "vallée",
+            "url": "https://www.cnrtl.fr/definition/academie8/vall%C3%A9e",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\vallée.html",
+            "serialized_key": "payload.responses.entry:vallée::.content[2].content",
+            "original_expression": "Espace resserré entre deux ou plusieurs montagnes.",
+            "plain_text_column_1_based": 20
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1533,7 +2099,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "vallée, fixed French revision 39288907, field lines [9, 10]. Selected lexical wording corresponds to the identified DAF8 expression: Espace resserré entre deux ou plusieurs montagnes. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_179417"
     },
     {
       "id": "b149_fr_179579",
@@ -1549,7 +2118,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1573,7 +2142,10 @@
           "raw_reference": "* {{R:etymonline}} ",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "vedette, fixed French revision 39772679, field lines [10, 35]. DAF8 has poster prominence and the performer named on a poster; selected celebrity across film/TV/pop music is a modern wiki extension, not an inherited entire DAF8 sentence. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_179579"
     },
     {
       "id": "b149_fr_10001",
@@ -1589,7 +2161,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1613,7 +2185,10 @@
           "raw_reference": "* {{RÉF|1}} {{R:Larousse10vol1960}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "bouquin, fixed French revision 39634590, field lines [14, 15]. DAF8 restricts the book to an old/disregarded one. The selected familiar generic livre is a lexical equivalent, not copied protected old-book prose; no source-age restriction is imported. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_10001"
     },
     {
       "id": "b149_fr_16276",
@@ -1629,10 +2204,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_text_rights_reason": "endormi, fixed French revision 39977088, field lines [7, 9]. Selected French head/grammar and lexical wording are fixed wiki contributions or ordinary lexical facts. No externally imported expressive wording is identified at these selected spans; adjacent literary/news examples, etymology and other languages are excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_16276"
     },
     {
       "id": "b149_fr_39450",
@@ -1644,12 +2222,36 @@
       "timestamp": "2026-09-18T19:15:12Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9fier&oldid=39882211",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9fier&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding historical original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Identified selected DAF8 lexical expression; fixed wiki and Lexique contribution layers remain separately licensed.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "défier",
+            "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9fier",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\défier.html",
+            "serialized_key": "payload.responses.entry:défier::.content[3].content",
+            "original_expression": "Mettre quelqu'un en demeure de faire quelque chose en laissant entendre qu'on le croit incapable de réussir.",
+            "plain_text_column_1_based": 436
+          },
+          "review_reason": "défier, fixed French revision 39882211, field lines [8, 31]. Selected lexical wording corresponds to the identified DAF8 expression: Mettre quelqu'un en demeure de faire quelque chose en laissant entendre qu'on le croit incapable de réussir. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -1657,7 +2259,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "défier, fixed French revision 39882211, field lines [8, 31]. Selected lexical wording corresponds to the identified DAF8 expression: Mettre quelqu'un en demeure de faire quelque chose en laissant entendre qu'on le croit incapable de réussir. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_39450"
     },
     {
       "id": "b149_fr_104195",
@@ -1673,7 +2278,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1686,7 +2291,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "menu, fixed French revision 39821038, selected lexical row 3443. Actual first-party DAF8 article A8M0869 was retained and compared: Il se dit aussi de la Liste détaillée des mets qui seront servis au cours du repas. The selected Wiktionnaire noun line 89 closely preserves the DAF8 detailed meal-list expression, adding written and markup. Its original follows the substantivized noun paragraph and precedes the adverb; the accompanying placing/consulting/engraving examples identify the written list, rather than the dishes themselves or an adjective. The original Académie française institutional collective edition was published 1932–1935; applying the established CPI L123-3 basis to final 1935 publication gives expiry 2006-01-01. This decision concerns the identified historical expression; no modern website interface or ninth-edition prose is copied. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0. Article contributor credits do not prove sentence authorship.",
+          "evidence": "original-expression-review.json#b149_fr_104195",
+          "selected_layer_scope": "Lexical original expression; excluded from isolated IPA fields."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1737,7 +2345,10 @@
           "raw_reference": ":* {{R:DÉT}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "menu, fixed French revision 39821038, selected lexical row 3443. Actual first-party DAF8 article A8M0869 was retained and compared: Il se dit aussi de la Liste détaillée des mets qui seront servis au cours du repas. The selected Wiktionnaire noun line 89 closely preserves the DAF8 detailed meal-list expression, adding written and markup. Its original follows the substantivized noun paragraph and precedes the adverb; the accompanying placing/consulting/engraving examples identify the written list, rather than the dishes themselves or an adjective. The original Académie française institutional collective edition was published 1932–1935; applying the established CPI L123-3 basis to final 1935 publication gives expiry 2006-01-01. This decision concerns the identified historical expression; no modern website interface or ninth-edition prose is copied. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0. Article contributor credits do not prove sentence authorship.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_104195"
     },
     {
       "id": "b149_fr_116158",
@@ -1753,7 +2364,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1767,7 +2378,10 @@
           "raw_reference": "* {{R:Newman2014|p=125}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "boss, fixed French revision 39764972, field lines [9, 10]. Selected French head/grammar and lexical wording are fixed wiki contributions or ordinary lexical facts. No externally imported expressive wording is identified at these selected spans; adjacent literary/news examples, etymology and other languages are excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_116158"
     },
     {
       "id": "b149_fr_117496",
@@ -1783,7 +2397,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1796,7 +2410,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "lady, fixed French revision 39807015, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Titre qui appartient en Angleterre aux femmes des lords et des chevaliers, et qu'on donne aussi, par courtoisie, aux filles des lords en y joignant les noms de baptême. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0. The old daughter-title generalization is qualified by actual modern factual courtesy-title evidence; no modern publisher prose is used as a learner field.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "lady",
+            "url": "https://www.cnrtl.fr/definition/academie8/lady",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\lady.html",
+            "serialized_key": "payload.responses.entry:lady::.content[3].content",
+            "original_expression": "Titre qui appartient en Angleterre aux femmes des lords et des chevaliers, et qu'on donne aussi, par courtoisie, aux filles des lords en y joignant les noms de baptême.",
+            "plain_text_column_1_based": 68
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1812,7 +2436,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "lady, fixed French revision 39807015, field lines [8, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Titre qui appartient en Angleterre aux femmes des lords et des chevaliers, et qu'on donne aussi, par courtoisie, aux filles des lords en y joignant les noms de baptême. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0. The old daughter-title generalization is qualified by actual modern factual courtesy-title evidence; no modern publisher prose is used as a learner field.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_117496"
     },
     {
       "id": "b149_fr_119421",
@@ -1828,7 +2455,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1841,7 +2468,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "bracelet, fixed French revision 39954305, field lines [7, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Ornement qui se porte principalement au bras, autour du poignet. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "bracelet",
+            "url": "https://www.cnrtl.fr/definition/academie8/bracelet",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\bracelet.html",
+            "serialized_key": "payload.responses.entry:bracelet::.content[3].content",
+            "original_expression": "Ornement qui se porte principalement au bras, autour du poignet.",
+            "plain_text_column_1_based": 23
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1852,7 +2489,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "bracelet, fixed French revision 39954305, field lines [7, 9]. Selected lexical wording corresponds to the identified DAF8 expression: Ornement qui se porte principalement au bras, autour du poignet. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_119421"
     },
     {
       "id": "b149_fr_121724",
@@ -1868,7 +2508,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1881,7 +2521,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "adapter, fixed French revision 39721211, field lines [7, 25]. DAF8 contains s’adapter aux circonstances as an example, not the selected new attitude/circumstances definition. Only the lexical fact/construction is used; no example sentence is redistributed. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1892,7 +2533,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "adapter, fixed French revision 39721211, field lines [7, 25]. DAF8 contains s’adapter aux circonstances as an example, not the selected new attitude/circumstances definition. Only the lexical fact/construction is used; no example sentence is redistributed. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_121724"
     },
     {
       "id": "b149_fr_177519",
@@ -1908,7 +2552,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1921,7 +2565,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "supprimer, fixed French revision 39880876, field lines [6, 37]. DAF8 covers abolition, censorship and deletion generally, but no computing memory-data definition. Selected computing wording is a modern wiki contribution; quoted examples remain excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1932,7 +2577,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "supprimer, fixed French revision 39880876, field lines [6, 37]. DAF8 covers abolition, censorship and deletion generally, but no computing memory-data definition. Selected computing wording is a modern wiki contribution; quoted examples remain excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_177519"
     },
     {
       "id": "b149_fr_195790",
@@ -1948,10 +2596,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_text_rights_reason": "pneu, fixed French revision 39795510, field lines [8, 9]. Selected French head/grammar and lexical wording are fixed wiki contributions or ordinary lexical facts. No externally imported expressive wording is identified at these selected spans; adjacent literary/news examples, etymology and other languages are excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_195790"
     },
     {
       "id": "b149_fr_17316",
@@ -1967,10 +2618,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "selected_text_rights_reason": "le sien, fixed French revision 36133454, field lines [16, 17]. Selected French head/grammar and lexical wording are fixed wiki contributions or ordinary lexical facts. No externally imported expressive wording is identified at these selected spans; adjacent literary/news examples, etymology and other languages are excluded. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_17316"
     },
     {
       "id": "b149_fr_167484",
@@ -1986,7 +2640,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1999,7 +2653,17 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "review_reason": "massacrer, fixed French revision 39648501, field lines []. Selected lexical wording corresponds to the identified DAF8 expression: Tuer, égorger des hommes qui ne se défendent point. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+          "original_expression_evidence": {
+            "dictionary": "academie8",
+            "original_title": "massacrer",
+            "url": "https://www.cnrtl.fr/definition/academie8/massacrer",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-149\\originals\\massacrer.html",
+            "serialized_key": "payload.responses.entry:massacrer::.content[3].content",
+            "original_expression": "Tuer, égorger des hommes qui ne se défendent point.",
+            "plain_text_column_1_based": 27
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2015,7 +2679,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "selected_text_rights_reason": "massacrer, fixed French revision 39648501, field lines []. Selected lexical wording corresponds to the identified DAF8 expression: Tuer, égorger des hommes qui ne se défendent point. The original Académie française institutional collective edition was published 1932–1935; applying CPI L123-3 to final 1935 publication gives expiry 2006-01-01. This is an original-expression comparison, not a claim that an article contributor personally authored that sentence. Wiki transcription/adaptation and Lexique adaptations retain CC BY-SA 4.0.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_167484"
     },
     {
       "id": "b149_fr_353101",
@@ -2031,7 +2698,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2040,7 +2707,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "selected_text_rights_reason": "lesbianisme, fixed French revision 39739268, field lines []. Selected Homosexualité féminine is a two-word ordinary lexical identification, not expressive Canadian government text. The reference and neighbouring examples are outside the excerpt; no government licence is asserted. The wiki/Lexique layers retain CC BY-SA 4.0, attributed histories, modification notices and ShareAlike. No external bibliography entry is treated as permission to reproduce that external work. The Canadian government reference metadata after the two-word lexical excerpt is not selected or copied into explanations.",
+      "reviewer": "Independent issue 149 field/use and selected-expression rights reviewer; separate from author and coordinator",
+      "original_expression_evidence": "original-expression-review.json#b149_fr_353101"
     }
   ]
 }
