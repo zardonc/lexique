@@ -1,32 +1,40 @@
 # Source and modification notices for #146
 
-The fixed Wiktionnaire contribution layer, scoped French adaptations and new
-English/Chinese explanations retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-The [complete legal text](COPYING), article/history links, contributor records,
-original-work credits and modification notices accompany the proposals.
-Project source code remains MIT.
+The fixed Wiktionnaire contributions, scoped French adaptations and new
+Lexique English/Chinese explanations retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
+[COPYING](COPYING) supplies the legal text and warranty/liability disclaimer.
+Project-owned code remains MIT. No endorsement by a source is implied.
 
 Exact word/POS values, order and unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
 CC BY-SA 4.0, through the [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
-Rows 3251–3300 keep all 50 groups, including both divers subclasses. CEFR is unknown.
+All 50 rows 3251–3300 remain, including both `divers` subclasses. CEFR is unknown.
 
-## Modifications and source material
+## Modifications and attribution
 
-One selected sense per group retains four fields. French text adapts lexical
-semantics; English/Chinese are new Lexique explanations, not upstream bilingual
-quotations. Gender, number, register, constructions and selected IPA variants
-are recorded in [the readable proposals](review-candidates.md). The complete
-la plupart IPA is explicitly composed from recorded la and plupart components.
-Source spelling/construction relations add no lookup aliases.
+One everyday use per group retains four independently reviewed fields.
+French definitions adapt selected semantics and remove markup. EN/ZH are newly
+written Lexique explanations of the same use. Isolated IPA retains selected
+variants; `la plupart` is composed from fixed `la`/`plupart` components.
+Lexique contributors receive credit for selection, explanations/adaptations
+and source-boundary corrections. The `la plupart` primary binding uses a
+short general-majority fragment; `patrouille` support omits historical purpose
+prose. [Exact replacements](accepted-replacements.json) retain both boundaries.
 
-Wiktionnaire contributors are credited through full linked histories and the
-complete named registries/returned anonymous counts in [source-context.json](source-context.json).
-Current registries can extend beyond fixed revisions and do not identify the
-author of a selected sentence. Lexique contributors receive credit for selection,
-French adaptations and new English/Chinese explanations. Full raw research
-captures stay in the external author archive; selected lexical/grammar/IPA
-excerpts and notices accompany the package.
+Fixed article/full-history links and the complete contributor registries and
+anonymous counts in [source-context.json](source-context.json) credit Wiktionnaire
+contributors. Registries can extend beyond the fixed revision and do not prove
+sentence authorship. Declared DAF8 original-work credits remain separate; the
+historical France-specific expiry is not worldwide permission. Actual selected
+facts/conventional formulations and contribution rights are assessed in
+[selected-rights.md](selected-rights.md). No article marker supplies blanket
+clearance or blanket exclusion.
+
+Selected source material, legal text, attributions, modifications and notices
+accompany the reviewed shard. Full raw/API/request captures remain in the
+external author/reviewer evidence archives. Historical expressive quotations,
+examples and media are not accepted selected material. Downstream adaptations
+retain ShareAlike and these applicable notices without additional restrictions.
 
 | Article | Fixed revision | Full history | Declared original work |
 | --- | --- | --- | --- |
@@ -84,28 +92,3 @@ excerpts and notices accompany the package.
 | plupart | [39772625](https://fr.wiktionary.org/w/index.php?title=plupart&oldid=39772625) | [History](https://fr.wiktionary.org/w/index.php?title=plupart&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | le même | [35210050](https://fr.wiktionary.org/w/index.php?title=le%20m%C3%AAme&oldid=35210050) | [History](https://fr.wiktionary.org/w/index.php?title=le%20m%C3%AAme&action=history) | No original-work import marker identified |
 | la | [40041384](https://fr.wiktionary.org/w/index.php?title=la&oldid=40041384) | [History](https://fr.wiktionary.org/w/index.php?title=la&action=history) | No original-work import marker identified |
-
-Thirty-two captured articles declare Académie française eighth-edition imports
-(1932–1935). Their selected boundaries receive individual author assessments of
-lexical/phonetic facts, conventional short phrases and new adaptations.
-The historical French collective-work calculation gives 2006-01-01 for that
-boundary; it supplies no worldwide expiry or selected-expression permission.
-Original expression, originality and applicable territories remain for separate
-review. Wiki and Lexique contributions retain CC BY-SA 4.0.
-
-## Selected boundaries and obligations
-
-The CFC cartographic écart sense at line 43 is excluded. Même’s Reverso-linked
-note/meanings and Alexandria noun body are excluded; mêmes uses the clean
-le même meaning and uncited pronoun IPA. Literary/news examples, images, audio,
-etymologies and other-language text supply no field. Académie ninth-edition
-grammar corroborates la plupart’s pronominal value as read-only research;
-its prose is not redistributed. [Selected rights](selected-rights.md) and
-[rights.json](rights.json) preserve the precise boundaries and proposals.
-
-Distribution retains legal text, creator/source attribution, fixed versions,
-modification notices, applicable original-work credits and selected source
-materials, with CC BY-SA 4.0 for the adaptation layer and no added restrictions.
-External works retain separate rights. Combined conversion/materials/notices
-are verified by integration. All 200 new fields await independent quality and
-selected-span rights review; none is independently accepted or admitted here.

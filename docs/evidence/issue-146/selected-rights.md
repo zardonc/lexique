@@ -1,115 +1,76 @@
-# Issue #146 selected rights
+# Issue #146 independently selected rights
 
-The 200 fields have source-specific author rights proposals, with independent
-quality, selected-span rights and admission still pending. [rights.json](rights.json)
-records exact versions/spans, article/history attribution, contributor records,
-modifications, original-work layers and exclusions. Content adaptations retain
-CC BY-SA 4.0; project code remains MIT.
+All **200 selected fields** pass independent selected-span rights review,
+separately from their language/construction quality. [Rights records](rights.json)
+and [field decisions](field-review.json) name exact sources, revisions, spans,
+reviewer, individual reasons, original-work layers and exclusions. All **54
+sources**, including five supporting titles, have source-specific verdicts.
+The author's 32 DAF8 assessments remain proposals in the preserved handoff;
+new independent verdicts identify the actual accepted boundaries.
 
-## Contribution and adaptation layers
+## Facts, formulations and original expression
 
-Selected Wiktionnaire lexical semantics, grammatical facts, spelling relations
-and isolated IPA notation use the recorded contribution layer under
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-French definitions adapt the selected meaning and construction; English/Chinese
-are newly authored Lexique explanations of that same use. They are not quotations
-from bilingual dictionaries. Every new field and its language quality require
-separate review, including unchanged pronunciations bound to newly selected uses.
+The selected meaning, gender/number, spelling/inflection and isolated IPA are
+lexical, grammatical or phonetic facts. Actual formulations were inspected
+individually: `faucher` uses the two stealing equivalents; `extrêmement` uses
+degree synonyms; `faiblesse` retains the conventional six-word lack-of-strength
+phrase; `efficace` uses the four-word effect relation. Longer functional
+descriptions such as `laboratoire`, `préserver` and `chariot` describe their
+ordinary factual categories without illustrative or distinctive narrative.
+`divers`' two frames have separate diversity/indefinite-number decisions.
+The `même` boundary supplies only phonetic/grammar material, not a historical
+pronoun sentence. An article marker neither licenses nor blocks every span.
 
-The [complete legal text](COPYING), sections 2(a), 3(a), 3(b) and 4, permits
-commercial sharing/adaptation with attribution, supplied notices, licence and
-modification information, ShareAlike and no additional restrictions. Wikimedia
-Terms section 7 and fixed copyright-policy revision 38903168 distinguish the
-contribution layer from imported/external works and media. Retained authority
-responses and their actual original/copy paths are listed in rights.json.
+The retained US Copyright Office [Compendium chapter 300](https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf),
+313.3(C) and 313.4(C), [37 CFR 202.1](https://www.copyright.gov/title37/202/37cfr202-1.html),
+and [17 USC 102(b)](https://www.copyright.gov/title17/92chap1.html#102) distinguish
+facts/common information and short formulations from protectable expression.
+There is no word-count safe harbour; a factual work can contain protected
+expression. These authorities support the actual span assessments rather than
+a blanket dictionary exemption or a worldwide historical expiry conclusion.
 
-Every article has a fixed URL, full history link and complete paginated current
-named registry plus returned anonymous count. History credits anonymous edits;
-the current registry can extend beyond the fixed revision. Neither article
-credits nor the last editor establish authorship of a selected sentence.
+`la plupart` now selects the short general-majority fragment at fixed
+`plupart` line 9. Its original absolute people-only note at 23 is outside the
+accepted primary binding; fixed usage notes and separately read A9P2969 confirm
+the complement-free antecedent pronoun and plural agreement. A9 prose is
+research-only. `patrouille` uses the short personnel definition at 18 and
+only the surveillance/personnel fragment at 15: historical enemy-surprise/crime
+purpose prose is excluded, with the full raw capture preserved in research.
+The exact proposals and accepted replacements remain separately recorded.
 
-## Historical original works
+## Contribution and original-work layers
 
-Thirty-two of the 54 captured articles declare Académie française eighth-edition
-imports. The original work is **Académie française, Dictionnaire de l’Académie
-française, eighth edition, 1932–1935**. Preserve that credit separately from
-the wiki and Lexique contribution/adaptation layers.
+The fixed Wiktionnaire contribution layer and Lexique's scoped French
+adaptations/new EN/ZH explanations retain **CC BY-SA 4.0**. They are not
+upstream bilingual quotations and do not become MIT. [COPYING](COPYING),
+sections 2(a), 3(a), 3(b) and 4, permits sharing/adaptation in the chosen format
+with attribution, licence/modification/disclaimer notices, ShareAlike and no
+additional restrictions. Wikimedia Terms section 7 and fixed copyright-policy
+revision 38903168 distinguish imported/external works and media. Fixed DAF8
+template revision 22113837 explicitly permits later article modifications.
 
-The historical [#129 original-work reading](../issue-129/selected-rights.md)
-concerns the original French institutional collective-work boundary only. CPI
-[L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20)
-uses seventy years from the January following publication: final publication
-in 1935 gives 1936-01-01 plus seventy years, **2006-01-01**, under that
-France-specific reading. This is not a worldwide expiry conclusion or a grant
-for all wording on a DAF8-marked page.
-[L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891)
-preserves author/work respect. A page import marker does not identify a selected
-sentence’s author or license a later publisher’s edition/electronic work.
-The template at revision 22113837 explicitly allows extraction and later changes.
-The original-work review is historical; it accepts no new #146 field.
+Preserve **Académie française, Dictionnaire de l’Académie française, eighth
+edition, 1932–1935** as the declared original-work credit for 32 marked sources,
+separately from wiki and Lexique contributions. The earlier CPI L123-3
+France-specific collective-work calculation, ending 2006-01-01, remains
+historical provenance. It establishes neither worldwide expiry nor permission
+for a later publisher's edition/electronic work. No new expressive historical
+quotation is admitted on that basis. Moral/work-respect and separately owned
+expression remain outside a blanket CC grant.
 
-Every one of the 32 DAF8-marked sources has an individual
-`author_selected_original_text_assessment` in sources/context/rights, naming its
-actual selected lines. Each assessment distinguishes lexical or phonetic facts,
-conventional short formulations and newly written adaptations from original
-expression. For example, `faucher` selects two ordinary synonyms; `extrêmement`
-selects degree-adverb equivalents; `faiblesse` retains the six-word conventional
-phrase « Manque de force ou de vigueur »; `combinaison` uses a short factual
-one-piece-garment formulation. `même` contributes only uncited phonetic notation
-and its frame, with no historical pronoun sentence. More extended lexical
-descriptions such as `nuire`, `préserver` and `laboratoire` are separately
-assessed as scoped adaptations of meaning; their article markers do not prove
-the selected sentence’s original authorship.
+## Attribution, exclusions and delivery
 
-These are author assessments, not independent protectability or jurisdiction
-decisions. Original expression, the exact retained short phrases/excerpts,
-originality and applicable territorial rights remain for independent review.
-An unresolved original-text boundary keeps the affected fields unadmitted.
+[NOTICES.md](NOTICES.md) supplies fixed article and full-history links,
+Lexique/Lexique 3.83 and DAF8 attribution, modifications, licence and disclaimer.
+[Source context](source-context.json) retains complete named registries and
+anonymous counts/history credit. Current article registries can extend beyond
+fixed revisions; they do not prove selected-sentence authorship.
 
-## Selected source boundaries
+`écart` line 43's CFC locality is excluded. `même`'s Reverso/Alexandria-linked
+bodies are excluded; clean `le même` supplies `mêmes`' pronoun meaning. The
+`la` article and `plupart` phonetic components support the composed IPA only.
+Examples, literature/news quotations, etymology, media, other languages and
+unselected meanings remain external raw research, outside selected materials.
 
-- `écart` selects the economic gap/difference sense at line 28. Its entire
-  CFC cartographic-locality sense at 43 is excluded; its inline licence marker
-  supplies no permission for the selected sense.
-- `mêmes/PRO:ind` uses clean `le même`, revision 35210050, definition 17 and
-  the agreement table explicitly naming `les mêmes` for both plural genders.
-  The exact `mêmes` page is adjective-only and supports spelling/inflection,
-  not a pronoun meaning. IPA comes from the uncited French pronoun line 239
-  of `même`. The Reverso-linked note/meanings at 240/241/244/247 and the
-  Alexandria noun body at 211/212/218/220 are excluded, following the
-  [earlier independently reviewed boundary](../issue-83/quality-review.md).
-  No historical review is reused as acceptance of the new plural explanations.
-- `la plupart/PRO:ind` retains the coordinator’s exact redirect revision 49400.
-  Supporting `plupart` labels its lemma NOM but records the absolute plural
-  meaning and agreement. The selected complete expression has indefinite
-  pronominal value without a complement; the noun alone and determiner
-  `la plupart de` are excluded. The
-  [Académie ninth-edition entry A9P2969](https://www.dictionnaire-academie.fr/article/A9P2969)
-  corroborates that grammatical function as read-only research. Its prose is
-  not redistributed. `/la ply.paʁ/` is explicitly composed from the fixed
-  `la` article and `plupart` IPA components, with both source spans retained.
-- `ceux-là/PRO:dem` retains its exact masculine plural form and IPA. Meaning
-  comes from the French `celui-là` demonstrative frame and its explicit
-  `mp=ceux-là` agreement; no singular form replaces the frozen group.
-- `divers/ADJ` and `divers/ADJ:ind` select separate qualifying and indefinite
-  adjective frames, definitions and agreement. The latter precedes a plural
-  noun and expresses an indefinite number of distinct entities.
-
-Other bibliographic markers retain their identities without licensing external
-dictionary prose. Literary/news examples, images/captions, audio, etymologies,
-other-language sections and unselected meanings remain raw research context
-outside the content package. No such example prose supplies a learner field.
-
-## Redistribution and remaining gates
-
-Distribution retains CC BY-SA 4.0 legal text, attribution, fixed source/version
-and span records, full history credits, applicable original-work credits,
-modification notices and selected source material. The adaptation layer uses
-the same licence without additional restrictions; external works retain their
-separate rights. [NOTICES.md](NOTICES.md) supplies the batch attribution.
-
-All 200 proposed fields await independent language/construction and selected-span
-rights review, including source-specific original-expression and territorial
-assessment. The coordinator verifies actual combined conversion, materials,
-notices and native lookup/save/reopen. This package has zero newly admitted
-groups/fields and establishes no learner or release acceptance.
+This shard is ready for integration. Actual combined conversion, materials,
+notices/packaging and native behaviour remain coordinator-owned and unrun.
