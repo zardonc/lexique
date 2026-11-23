@@ -1,0 +1,15 @@
+{
+  "frozen_row": 3885,
+  "headword": "cm",
+  "lexique_cgram": "NOM",
+  "status": "unresolved_exact_NOM_binding",
+  "accepted_fields": 0,
+  "missing_fields": 4,
+  "finding": "Fixed cm classifies the French measurement form as a symbol. Fixed centimètre supplies the noun meaning; cm supplies the centimètre pronunciation. OQLF independently labels centimètre n. m. and describes cm symbol orthography. This does not establish an everyday lexical noun sense of exact cm.",
+  "proposed_owner_decision": "Annotate frozen row 3885 cm/NOM with zero admitted fields and four missing fields, retaining its exact identity, frequencies and global denominator. Record the everyday measurement symbol and its nominal centimètre reading as the reason; no substitute centimètre/NOM group is introduced.",
+  "proposal_kind": "zero_field_annotation",
+  "owner_approval_observed": false,
+  "implemented_annotation": false,
+  "alternative_completion": "Supply independently verifiable evidence establishing an exact French cm noun sense, spelling relation and current everyday use; specialist approval alone does not resolve the source symbol-versus-noun binding.",
+  "evidence": ["source-excerpts.json", "modern-corroboration.json", "field-review.json"]
+}
