@@ -1,59 +1,35 @@
-# #159 author content proposals
+# Issue #159 reviewed content shard
 
-Rows 3901–3950 preserve all **50 exact frozen word/POS groups** and both frequency
-strings. [Groups](groups.json) retain 200 sourced FR/IPA/EN/ZH research fields:
-48 groups have ordinary everyday candidates; two groups have explicit blockers.
-All separate quality, construction, spelling, original-expression and rights
-reviews remain pending. No new field is independently accepted or admitted.
+**48 admitted-content groups / 192 fields and two owner-approved zero-field
+annotations** retain all 50 frozen identities in rows 3901–3950. Both frequency
+strings, row order and the 4,087-group denominator are preserved. The annotations
+for row 3922 `haver/VER` and row 3944 `da/ONO` each retain four missing fields.
 
-## Review inputs
+On 2026-11-23, America/Vancouver, the user selected exactly **Annotate both
+groups with zero fields**. [Owner approval](owner-approval.json) applies only to
+these two rows. Their linguistic eligibility remains unresolved, and no mining
+specialist sense is approved.
 
-Scope: [issue #159](https://github.com/zardonc/lexique/issues/159) and
-[parent #78](https://github.com/zardonc/lexique/issues/78).
-Author checkout: `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/author-159`,
-branch `codex/d2-content-159`. [Author verification](author-verification.json)
-records the tested base, merged integration, commands and archived logs.
-The external archive is
-`C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-159`;
-it retains reusable author helpers, raw/API captures, complete contributor
-pagination, legal captures, reproduction evidence and scoped patches.
+[Groups](groups.json), [field/use decisions](field-review.json) and
+[admission counts](admission.json) contain 192 admissible fields / 48 ordinary
+uses plus two annotation exceptions and eight explicit unresolved missing fields.
+[Full rejected proposals](rejected-proposals.json) preserve the two independently
+reviewed groups, eight fields, two uses and original rejection decisions separately.
+[Authored snapshots](authored) remain byte-for-byte unchanged.
 
-[Readable proposals](review-candidates.md), [field/use records](field-review.json),
-[source excerpts](source-excerpts.json), [source context](source-context.json),
-[capture paths](source-captures.json), [sources](sources.json),
-[rights proposals](rights.json), [selected rights](selected-rights.md),
-[notices](NOTICES.md) and [COPYING](COPYING) accompany the shard.
+[Independent review](README-independent-review.md) and
+[exact replacements](accepted-replacements.json) retain the accepted source
+decisions. All 200 selected-text rights audits remain in [rights](rights.json),
+with 192 admissible fields distinguished from eight unadmitted research fields.
+[Selected rights](selected-rights.md) and [notices](NOTICES.md) retain their
+applicable attribution and licence obligations.
 
-## Content blockers
+[Owner-scope verification](owner-scope-verification.json) records the focused
+annotation regression, eight batch tests, preservation and documentation checks.
+Original author and independent-review verification files record their historical
+boundaries. Final proof is retained at
+`C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-159-owner-scope`.
 
-- `haver/VER`, row 3922: the retained French definition is a mining use; no modern
-  everyday use or owner-approved specialist exception is established. CNRTL’s
-  TLFi section corroborates the mining restriction.
-- `da/ONO`, row 3944: the retained French source describes an old-fashioned
-  emphatic particle. A modern everyday ONO use is unestablished. Its nouns,
-  foreign homographs and symbols are not substituted.
-
-[Blocker records](content-blockers.json) bind these findings to fixed revisions
-and exact source spans. [Corroboration metadata](modern-corroboration.json)
-identifies the externally retained research pages. The ticket’s everyday
-requirement remains incomplete; no frozen group is dropped or exempted.
-
-## Verification and admission boundary
-
-The approved resource/admission tests verify frozen membership, source bytes,
-four-field binding, grammar frames, contributor pagination, attribution and
-honest pending review. Membership and missing rights-material checks were each
-observed failing before their corresponding records were supplied. Offline
-reproduction and documentation/diff checks are recorded in author verification.
-These tests verify the author handoff, not independent language quality.
-
-[Admission](admission.json) retains the 4,087-group denominator, zero newly
-admitted groups/fields, 200 missing admitted fields and 200 pending quality/rights
-fields. [Reuse](reuse.json) records the unchanged core-149-v1 baseline: 3,431
-admitted groups and no previously admitted #159 group. Canonical resources and
-learner data are unchanged by these author proposals.
-
-Canonical assembly, conversion, combined redistribution materials and all-group
-native lookup/trusted save/reopen remain coordinator-owned and unrun. Frontend
-and Rust checks are unrun because this shard changes neither runtime. Learner
-acceptance and whole-core/platform/release gates remain pending.
+Canonical conversion, combined packaging, native lookup/save/reopen and learner
+acceptance remain coordinator-owned and pending. The scoped shard is ready for
+coordinator assembly; #159's integration gates and parent #78 remain incomplete.

@@ -1,0 +1,19 @@
+{
+  "ticket": 159,
+  "platform": "Windows x64",
+  "review_base": "e7bbe0afe7ab156024f8c2bee61fd57a0e2057bc",
+  "author_commit": "024e688f6d16f4916fd125f4f8643e9bfd4774af",
+  "author_head": "bc456ce2fdbf9a09571ca1d07626e4b8f58b3db8",
+  "reviewer_branch": "codex/d2-review-159",
+  "proof_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-159",
+  "checks": [
+    {"command": "uv run --no-project python -B -X utf8 target/issue-159-review/audit.py", "result": "passed", "log": "audit.log"},
+    {"command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_159.py Batch159Tests.test_selected_live_prey_and_uncooked_steak_restrictions", "result": "failed_on_authored_texts_4_fields_then_passed_on_accepted_texts", "logs": ["red-restrictions.log", "green-restrictions.log"]},
+    {"command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_159.py", "result": "passed", "tests": 7, "log": "final-batch.log"},
+    {"command": "pnpm test:docs", "result": "passed", "documents": 546, "log": "docs-check.log"},
+    {"command": "git diff --check", "result": "passed", "log": "diff-check.log"}
+  ],
+  "scope": {"groups_reviewed": 50, "fields_reviewed": 200, "uses_reviewed": 50, "eligible_groups": 48, "eligible_fields": 192, "changed_fields": 4, "unresolved_fields": 8, "rights_passed_fields": 200, "new_exceptions": 0},
+  "not_run": ["canonical_conversion", "native_lookup_save_reopen", "packaging", "learner_acceptance", "release_validation"],
+  "official_legal_refresh": "L123-3 direct retrieval HTTP 403; established original-work basis retained from repository evidence"
+}

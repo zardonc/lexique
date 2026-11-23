@@ -1,0 +1,57 @@
+{
+  "ticket": 159,
+  "platform": "Windows x64",
+  "implementation": "owner-approved annotations; existing independent source decisions preserved",
+  "review_head": "1a59fc44892a8b9181125c6f8b32ccd40d151889",
+  "integration_tip_merged_before_implementation": "900ab79c4c8c2f2d436b1e72b49ccfb987c63005",
+  "integration_merge_head": "63d7a6f870f33945ba6cfe1bc0eb5ba0cc937ad7",
+  "branch": "codex/d2-review-159",
+  "proof_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-159-owner-scope",
+  "original_review_proof_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-159",
+  "approval": "owner-approval.json",
+  "scope": {
+    "frozen_groups": 50,
+    "scope_denominator_groups": 4087,
+    "admitted_content_groups": 48,
+    "admissible_fields": 192,
+    "ordinary_uses": 48,
+    "approved_annotation_rows": [3922, 3944],
+    "annotation_exceptions": 2,
+    "specialist_exceptions": 0,
+    "annotation_missing_fields": 8,
+    "ordinary_missing_fields": 0,
+    "selected_text_rights_audits_retained": 200,
+    "canonical_newly_admitted_fields": 0
+  },
+  "checks": [
+    {
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_159.py Batch159Tests.test_only_approved_rows_are_zero_field_annotations",
+      "result": "failed_before_implementation_then_passed",
+      "logs": ["red-annotations.log", "green-annotations.log"]
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_159.py",
+      "result": "passed",
+      "tests": 8,
+      "log": "batch-tests.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-159-owner-scope/verify_preservation.py",
+      "result": "passed",
+      "authored_files_byte_preserved": 18,
+      "original_review_archive_files_byte_preserved": 36,
+      "logs": ["preservation.log", "preservation.json"]
+    },
+    {"command": "pnpm test:docs", "result": "passed", "log": "docs-check.log"},
+    {"command": "git diff --check", "result": "passed", "log": "diff-check.log"}
+  ],
+  "final_head_and_execution_evidence": "final-verification.json at proof_root",
+  "not_run": [
+    "canonical_conversion",
+    "native_lookup_save_reopen",
+    "packaging",
+    "learner_acceptance",
+    "release_validation",
+    "frontend_and_rust_checks_no_frontend_or_rust_changes"
+  ]
+}

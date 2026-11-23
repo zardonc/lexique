@@ -1,0 +1,104 @@
+{
+  "ticket": 159,
+  "role": "content_author",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\author-159",
+  "branch": "codex/d2-content-159",
+  "initial_base": "bcfe33621e445204c6c828340432bf693567b721",
+  "tested_base": "bcfe33621e445204c6c828340432bf693567b721",
+  "changes_under_test": "Scoped author proposals at the listed source paths; retained staged patch includes the content and tests.",
+  "diff_command": "git diff --cached -- docs/evidence/issue-159 scripts/test_core_batch_159.py",
+  "staged_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\scoped-author.patch",
+  "test_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\scoped-tests.patch",
+  "observed_integration_tip": "3729d677a9d4549a2f8e9a24690aa05becaa6792",
+  "verified_at_utc": "2026-11-23T18:00:01.381037+00:00",
+  "platform": "Windows x64 / PowerShell 7 / Python 3.14.10 via uv",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_159.py",
+      "status": "passed",
+      "exit_code": 0,
+      "tests": 3,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\final-resource.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\reproduce.py",
+      "status": "passed",
+      "exit_code": 0,
+      "reproduced_files": 16,
+      "network_requests": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\reproduction.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\docs-check.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\diff-check.log"
+    }
+  ],
+  "tdd_evidence": [
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\red-membership.log",
+      "result": "expected_failure_without_frozen_resource_records"
+    },
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\green-membership.log",
+      "result": "passed_with_frozen_resource_records"
+    },
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\red-rights.log",
+      "result": "expected_failure_without_required_rights_records"
+    },
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\green-rights.log",
+      "result": "passed_with_source_and_rights_proposals"
+    }
+  ],
+  "frozen_groups": 50,
+  "research_uses": 50,
+  "proposed_fields": 200,
+  "ordinary_everyday_candidate_groups": 48,
+  "blocked_research_groups": 2,
+  "unresolved_author_content_rows": [
+    3922,
+    3944
+  ],
+  "fixed_french_sources": 50,
+  "selected_field_spans": 200,
+  "contributor_parts": 8,
+  "contributor_chains": 5,
+  "article_credits_prove_selected_sentence_authorship": false,
+  "independent_acceptance": false,
+  "independent_reviewer": null,
+  "independently_accepted_fields": 0,
+  "newly_admitted_fields": 0,
+  "missing_admitted_batch_fields": 200,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "original_expression_audit": "pending_separate_exact_origin_audit",
+  "scope_denominator_groups": 4087,
+  "baseline_content_version": "core-149-v1",
+  "baseline_admitted_groups": 3431,
+  "reused_groups": 0,
+  "helper_origins": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159\\helper-origins.json",
+  "remaining_gates": [
+    "Resolve exact everyday/POS eligibility at rows 3922 and 3944",
+    "Separate independent quality, construction, spelling and original-expression/rights reviews",
+    "Coordinator-owned canonical conversion, combined notices and all-group native lookup/save/reopen",
+    "Learner acceptance and whole-core/platform/release gates"
+  ],
+  "unrun_checks": [
+    "Frontend lint/typecheck/build: no frontend change",
+    "Rust formatting/compilation/tests: no Rust change",
+    "Canonical conversion/packaging and browser/native checks: coordinator-owned, pending admission"
+  ],
+  "no_canonical_writes": true,
+  "no_push": true,
+  "no_tracker_actions": true
+}
