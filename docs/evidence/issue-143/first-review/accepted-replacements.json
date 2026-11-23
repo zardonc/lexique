@@ -1,0 +1,474 @@
+[
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "french_definition",
+    "authored_original_text": null,
+    "proposed_text": "Pluriel de « par » : nombres conventionnels de coups prévus pour terminer des trous de golf.",
+    "accepted_text": "Pluriel de « par » : nombres conventionnels de coups prévus pour terminer des trous de golf.",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 295,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "Pluriel de par and the noun golf rule together support conventional counts assigned to holes; the plural wording preserves the approved specialist domain and excludes observed scores.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  },
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "ipa",
+    "authored_original_text": null,
+    "proposed_text": "/paʁ/",
+    "accepted_text": "/paʁ/",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 294,
+      "column_1_based": 1,
+      "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "The exact pars noun-flexion frame has empty IPA, but fr-rég|s=par explicitly supplies regular noun inflection. The golf par noun head at line 294 and fr-rég|paʁ at line 292 ground the same isolated regular-plural /paʁ/. The neighbouring partir verb at pars line 6 is not used.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  },
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "english",
+    "authored_original_text": null,
+    "proposed_text": "Pars: the standard numbers of strokes assigned to golf holes; plural masculine noun.",
+    "accepted_text": "Pars: the standard numbers of strokes assigned to golf holes; plural masculine noun.",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 295,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "Standard numbers assigned to golf holes accurately explains the conventional rule; plural masculine noun is explicit, without substituting singular par.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  },
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "chinese",
+    "authored_original_text": null,
+    "proposed_text": "高尔夫各洞的标准杆数；par 的阳性复数形式。",
+    "accepted_text": "高尔夫各洞的标准杆数；par 的阳性复数形式。",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 295,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "高尔夫各洞的标准杆数 denotes assigned per-hole standard counts; par 的阳性复数形式 explicitly preserves the masculine plural relation.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  }
+]

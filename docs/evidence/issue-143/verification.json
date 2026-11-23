@@ -1,99 +1,79 @@
 {
   "ticket": 143,
-  "role": "separate_independent_reviewer",
-  "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-  "recorded_at_utc": "2026-11-22T23:39:12.665821+00:00",
-  "author_commit": "e2e1cf27e8957dff8b00d80f65152af86f9bb752",
-  "review_base_commit": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
-  "tested_integration_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
-  "reviewed_changes": "Author committed #143 snapshot plus owned independent review records and four approved pars additions.",
-  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-143",
-  "platform": "Windows; PowerShell 7; uv Python 3.14.10",
-  "patch_command": "git diff b69fbf62 -- docs/evidence/issue-143 scripts/test_core_batch_143.py",
-  "retained_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-143\\scoped-review.patch",
-  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-143",
-  "scope": {
-    "frozen_groups": 50,
-    "quality_fields_passed": 200,
-    "quality_uses_passed": 50,
-    "unchanged_authored_fields": 196,
-    "owner_approved_added_fields": 4,
-    "rights_fields_passed": 182,
-    "rights_fields_unresolved": 18,
-    "joint_four_field_groups": 44,
-    "everyday_groups": 49,
-    "approved_specialist_groups": 1,
-    "new_canonical_fields": 0,
-    "missing_canonical_batch_fields": 200
-  },
+  "role": "selected_expression_source_sufficiency_and_scoped_annotation_fix",
+  "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\rights-142143",
+  "branch": "codex/d2-rights-142143",
+  "platform": "Windows; PowerShell 7; uv Python 3.14.10; Node via nvm; pnpm 11.25.0",
+  "review_base": "fa142521e974fcf895afccab8d5f1dbae31195c3",
+  "first_review_commit": "4047cf5a66eddf4c3bd7e011382e391a061252ea",
+  "tested_head": "e339936a84e4bcdf3e8b925123383f6498859e1f",
+  "tested_changes": "HEAD plus exact owned evidence/test patch; final commit and patch are bound in external closeout.json",
+  "merged_integration_tip": "9bcc0d6f30e5e3c9aeea7076795e497510f38a26",
+  "integration_merge_commit": "e339936a84e4bcdf3e8b925123383f6498859e1f",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142143-rights-fix",
+  "first_review_snapshot": "first-review/snapshot.json",
+  "accepted_groups": 50,
+  "quality_accepted_fields": 200,
+  "rights_accepted_fields": 200,
+  "resolved_selected_textual_fields": 18,
+  "unresolved_selected_textual_rights_fields": 0,
+  "annotation_exceptions": 0,
+  "missing_annotation_fields": 0,
+  "unresolved_field_requirements": 0,
+  "additional_wording_replacements": 7,
+  "new_canonical_fields": 0,
   "source_audit": {
+    "issue": 143,
     "status": "passed",
-    "tested_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
-    "lexical_raw_api_byte_matches": 54,
-    "span_occurrences_checked": 3567,
-    "author_snapshot_files_verified": 16,
-    "contributor_chains": 4,
-    "contributor_responses": 9,
-    "named_article_memberships": 3203,
-    "anonymous_article_counts": 555,
-    "sentence_authorship_proved": false,
-    "legal_reuse": "US Copyright Office captures reused from reviewer-140 archive; its field verdicts are not reused. New CNRTL original comparisons retained separately."
+    "fixed_raw_api_pairs": 54,
+    "selected_fields": 200,
+    "exact_selected_support_spans": 428,
+    "preserved_authored_and_first_review_files": 27,
+    "developed_original_definitions_in_current_packets": 0,
+    "frozen_identity_frequency_and_unowned_group_changes": 0,
+    "contributor_registry_changes": 0
   },
-  "owner_approval": "owner-approval.json",
+  "focused_regressions": [
+    "red-143.log",
+    "green-143.log"
+  ],
   "checks": [
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_143.py",
-      "status": "passed",
-      "tests": 4,
-      "archive_log": "audit/GREEN-final.log"
+      "result": "passed: 5",
+      "log": "batch-143.log"
     },
     {
-      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-143-review/audit.py",
-      "status": "passed",
-      "archive_log": "audit/source-audit.log"
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/rights-142143/audit.py",
+      "result": "passed",
+      "log": "audit.log"
     },
     {
       "command": "pnpm test:docs",
-      "status": "passed",
-      "documents": 503,
-      "local_links": 3873,
-      "archive_log": "audit/docs-final.log"
+      "result": "passed",
+      "documents": 506,
+      "local_links": 3907,
+      "log": "docs.log"
     },
     {
-      "command": "git diff --cached --check",
-      "status": "passed",
-      "archive_log": "audit/diff-check-final.log"
-    },
-    {
-      "command": "git diff --cached --name-only; verify every path is owned",
-      "status": "passed",
-      "archive_log": "audit/changed-paths.txt"
+      "command": "git diff --check; scoped staged path check",
+      "result": "passed",
+      "logs": [
+        "diff-check.log",
+        "scope.json"
+      ]
     }
   ],
-  "focused_failing_checks": [
-    "audit/RED.log",
-    "audit/RED-owner-admission.log",
-    "audit/RED-admission-metadata.log"
-  ],
-  "unresolved_rights_rows": [
-    3102,
-    3110,
-    3115,
-    3123,
-    3129,
-    3141
-  ],
   "unrun": [
+    "canonical assembly/conversion",
+    "combined packaged notices/materials",
+    "native builds and execution",
+    "frontend/Rust runtime checks (no application code changed)",
     "learner acceptance",
-    "canonical conversion and combined redistribution package",
-    "global specialist registration",
-    "native lookup/save/reopen",
-    "whole-machine offline acceptance",
-    "release readiness"
+    "whole-machine offline and platform/release gates"
   ],
-  "final_commit_record": "External closeout.json binds final commit to this tested checkout and scoped patch.",
-  "integration_merge_logs": [
-    "audit/integration-merge.log",
-    "audit/integration-merge-final.log"
-  ]
+  "tracker_changes": false,
+  "pushed": false,
+  "whole_daf8_us_clearance": false
 }

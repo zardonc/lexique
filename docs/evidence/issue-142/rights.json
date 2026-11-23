@@ -1,6 +1,6 @@
 {
-  "status": "independent_selected_rights_partial_territorial_clearance",
-  "independent_review": "188_fields_passed_12_textual_dependencies_unresolved",
+  "status": "independent_selected_rights_passed_at_current_selection",
+  "independent_review": "passed_at_selected_text_boundary",
   "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
   "proposed_adaptation_license": "CC-BY-SA-4.0",
   "complete_legal_text": "resources/core-pilot-79/COPYING",
@@ -706,8 +706,8 @@
           "frozen_row": 3051,
           "field": "french_definition",
           "line_1_based": 10,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+          "column_1_based": 27,
+          "raw_source_excerpt": "[[soudain]]"
         },
         {
           "sense_id": "b142-3051-catastrophe-nom-selected",
@@ -722,16 +722,16 @@
           "frozen_row": 3051,
           "field": "english",
           "line_1_based": 10,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+          "column_1_based": 27,
+          "raw_source_excerpt": "[[soudain]]"
         },
         {
           "sense_id": "b142-3051-catastrophe-nom-selected",
           "frozen_row": 3051,
           "field": "chinese",
           "line_1_based": 10,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+          "column_1_based": 27,
+          "raw_source_excerpt": "[[soudain]]"
         }
       ],
       "import_notices": [
@@ -754,12 +754,14 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -777,9 +779,9 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "partial_ipa_passed_text_territorial_unresolved",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "selected_text_rights_reason": "The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing.",
+      "selected_text_rights_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
       "original_work_territorial_review": {
         "frozen_row": 3051,
@@ -794,8 +796,8 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
             "line_1_based": 10,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+            "column_1_based": 27,
+            "reviewed_excerpt": "[[soudain]]"
           }
         ],
         "supporting_spans": [
@@ -841,7 +843,10 @@
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
         "specific_gap": "The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing."
-      }
+      },
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "source_id": "b142_fr_149396",
@@ -3546,8 +3551,8 @@
           "frozen_row": 3074,
           "field": "french_definition",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+          "column_1_based": 12,
+          "raw_source_excerpt": "[[conscience]]"
         },
         {
           "sense_id": "b142-3074-conscient-adj-selected",
@@ -3562,16 +3567,16 @@
           "frozen_row": 3074,
           "field": "english",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+          "column_1_based": 12,
+          "raw_source_excerpt": "[[conscience]]"
         },
         {
           "sense_id": "b142-3074-conscient-adj-selected",
           "frozen_row": 3074,
           "field": "chinese",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+          "column_1_based": 12,
+          "raw_source_excerpt": "[[conscience]]"
         }
       ],
       "import_notices": [
@@ -3594,12 +3599,14 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -3617,9 +3624,9 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "partial_ipa_passed_text_territorial_unresolved",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "selected_text_rights_reason": "The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing.",
+      "selected_text_rights_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
       "original_work_territorial_review": {
         "frozen_row": 3074,
@@ -3634,8 +3641,8 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
             "line_1_based": 8,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+            "column_1_based": 12,
+            "reviewed_excerpt": "[[conscience]]"
           }
         ],
         "supporting_spans": [
@@ -3690,7 +3697,10 @@
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
         "specific_gap": "The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing."
-      }
+      },
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "source_id": "b142_fr_158003",
@@ -4151,8 +4161,8 @@
           "frozen_row": 3076,
           "field": "french_definition",
           "line_1_based": 23,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+          "column_1_based": 25,
+          "raw_source_excerpt": "[[copie]]s"
         },
         {
           "sense_id": "b142-3076-reproduire-ver-selected",
@@ -4167,16 +4177,16 @@
           "frozen_row": 3076,
           "field": "english",
           "line_1_based": 23,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+          "column_1_based": 25,
+          "raw_source_excerpt": "[[copie]]s"
         },
         {
           "sense_id": "b142-3076-reproduire-ver-selected",
           "frozen_row": 3076,
           "field": "chinese",
           "line_1_based": 23,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+          "column_1_based": 25,
+          "raw_source_excerpt": "[[copie]]s"
         }
       ],
       "import_notices": [
@@ -4199,12 +4209,14 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -4217,9 +4229,9 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "partial_ipa_passed_text_territorial_unresolved",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "selected_text_rights_reason": "The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing.",
+      "selected_text_rights_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
       "original_work_territorial_review": {
         "frozen_row": 3076,
@@ -4234,8 +4246,8 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
             "line_1_based": 23,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+            "column_1_based": 25,
+            "reviewed_excerpt": "[[copie]]s"
           }
         ],
         "supporting_spans": [
@@ -4272,7 +4284,10 @@
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
         "specific_gap": "The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing."
-      }
+      },
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "source_id": "b142_fr_178453",
@@ -6538,8 +6553,8 @@
           "frozen_row": 3093,
           "field": "french_definition",
           "line_1_based": 59,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+          "column_1_based": 111,
+          "raw_source_excerpt": "[[affliger]]"
         },
         {
           "sense_id": "b142-3093-affecter-ver-selected",
@@ -6554,16 +6569,16 @@
           "frozen_row": 3093,
           "field": "english",
           "line_1_based": 59,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+          "column_1_based": 111,
+          "raw_source_excerpt": "[[affliger]]"
         },
         {
           "sense_id": "b142-3093-affecter-ver-selected",
           "frozen_row": 3093,
           "field": "chinese",
           "line_1_based": 59,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+          "column_1_based": 111,
+          "raw_source_excerpt": "[[affliger]]"
         }
       ],
       "import_notices": [
@@ -6586,12 +6601,14 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -6604,9 +6621,9 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "partial_ipa_passed_text_territorial_unresolved",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "selected_text_rights_reason": "The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
+      "selected_text_rights_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
       "original_work_territorial_review": {
         "frozen_row": 3093,
@@ -6621,8 +6638,8 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
             "line_1_based": 59,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+            "column_1_based": 111,
+            "reviewed_excerpt": "[[affliger]]"
           }
         ],
         "supporting_spans": [
@@ -6668,7 +6685,10 @@
           "extraction_helper": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\inspect_embedded.py",
           "observation": "Exact lexical formulation matches DAF8 embedded second entry, not merely an article-wide import notice."
         }
-      }
+      },
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "source_id": "b142_fr_155000",
@@ -6824,40 +6844,7 @@
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "contribution_and_adaptation_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
-      "selected_locations": [
-        {
-          "sense_id": "b142-3098-damoiseau-nom-selected",
-          "frozen_row": 3098,
-          "field": "french_definition",
-          "line_1_based": 9,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-        },
-        {
-          "sense_id": "b142-3098-damoiseau-nom-selected",
-          "frozen_row": 3098,
-          "field": "ipa",
-          "line_1_based": 7,
-          "column_1_based": 1,
-          "raw_source_excerpt": "'''damoiseau''' {{pron|da.mwa.zo|fr}} {{m}} {{équiv-pour|lang=fr|une femme|damoiselle|}}"
-        },
-        {
-          "sense_id": "b142-3098-damoiseau-nom-selected",
-          "frozen_row": 3098,
-          "field": "english",
-          "line_1_based": 9,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-        },
-        {
-          "sense_id": "b142-3098-damoiseau-nom-selected",
-          "frozen_row": 3098,
-          "field": "chinese",
-          "line_1_based": 9,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-        }
-      ],
+      "selected_locations": [],
       "import_notices": [
         {
           "line_1_based": 38,
@@ -6900,7 +6887,7 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
+      "selected_text_boundary": "No dictionary field selected; research proposals are preserved separately.",
       "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "selected_text_rights_reason": "Faire le beau/le galant auprès des femmes consists of conventional idioms in a terse person-role gloss. The ironic/vieilli and gender labels are facts. Rights clearance of this narrow phrase does not establish everyday eligibility.",
@@ -6964,7 +6951,8 @@
         "selected_expression_reason": "Faire le beau/le galant auprès des femmes consists of conventional idioms in a terse person-role gloss. The ironic/vieilli and gender labels are facts. Rights clearance of this narrow phrase does not establish everyday eligibility.",
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field."
-      }
+      },
+      "selected_text_rights_status": "not_selected_owner_approved_annotation"
     },
     {
       "source_id": "b142_fr_164005",
@@ -7611,8 +7599,8 @@
       }
     }
   ],
-  "proposed_fields": 200,
-  "independent_rights_fields_accepted": 188,
+  "proposed_fields": 196,
+  "independent_rights_fields_accepted": 196,
   "final_combined_package_status": "pending_parent_conversion_notices_and_admission",
   "fields": [
     {
@@ -7624,8 +7612,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
       "exact_source_span": {
         "line_1_based": 10,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+        "column_1_based": 27,
+        "raw_source_excerpt": "[[soudain]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -7643,22 +7631,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "Événement soudain qui provoque de graves destructions, la ruine ou la mort.",
-      "selected_text_rights_reason": "French adaptation with retained exact upstream source packet. The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing.",
+      "selected_text_rights_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3051-catastrophe-nom-selected",
@@ -7714,8 +7706,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
       "exact_source_span": {
         "line_1_based": 10,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+        "column_1_based": 27,
+        "raw_source_excerpt": "[[soudain]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -7733,22 +7725,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "A disaster: a sudden event causing serious destruction, ruin or death (feminine noun).",
-      "selected_text_rights_reason": "New Lexique english explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing.",
+      "selected_text_rights_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3051-catastrophe-nom-selected",
@@ -7759,8 +7755,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
       "exact_source_span": {
         "line_1_based": 10,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+        "column_1_based": 27,
+        "raw_source_excerpt": "[[soudain]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -7778,22 +7774,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "灾难：突然发生、造成严重破坏、毁灭或死亡的事件（阴性名词）。",
-      "selected_text_rights_reason": "New Lexique chinese explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing.",
+      "selected_text_rights_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3052-extraterrestre-nom-selected",
@@ -11500,8 +11500,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
       "exact_source_span": {
         "line_1_based": 8,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+        "column_1_based": 12,
+        "raw_source_excerpt": "[[conscience]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -11519,22 +11519,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "Qui sait ce qu’il fait et en comprend la portée ; féminin : consciente.",
-      "selected_text_rights_reason": "French adaptation with retained exact upstream source packet. The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing.",
+      "selected_text_rights_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3074-conscient-adj-selected",
@@ -11590,8 +11594,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
       "exact_source_span": {
         "line_1_based": 8,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+        "column_1_based": 12,
+        "raw_source_excerpt": "[[conscience]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -11609,22 +11613,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "Aware of what one is doing and its implications (masculine adjective; feminine consciente).",
-      "selected_text_rights_reason": "New Lexique english explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing.",
+      "selected_text_rights_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3074-conscient-adj-selected",
@@ -11635,8 +11643,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
       "exact_source_span": {
         "line_1_based": 8,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+        "column_1_based": 12,
+        "raw_source_excerpt": "[[conscience]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -11654,22 +11662,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "清楚自己在做什么并了解其意义的；有意识的（阳性形容词；阴性为 consciente）。",
-      "selected_text_rights_reason": "New Lexique chinese explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing.",
+      "selected_text_rights_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3075-médaille-nom-selected",
@@ -11860,8 +11872,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
       "exact_source_span": {
         "line_1_based": 23,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+        "column_1_based": 25,
+        "raw_source_excerpt": "[[copie]]s"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -11879,22 +11891,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "Faire des copies d’un tableau, d’une statue ou d’une œuvre semblable.",
-      "selected_text_rights_reason": "French adaptation with retained exact upstream source packet. The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing.",
+      "selected_text_rights_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3076-reproduire-ver-selected",
@@ -11950,8 +11966,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
       "exact_source_span": {
         "line_1_based": 23,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+        "column_1_based": 25,
+        "raw_source_excerpt": "[[copie]]s"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -11969,22 +11985,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "To reproduce or make copies of a painting, statue or similar work (transitive verb).",
-      "selected_text_rights_reason": "New Lexique english explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing.",
+      "selected_text_rights_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3076-reproduire-ver-selected",
@@ -11995,8 +12015,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
       "exact_source_span": {
         "line_1_based": 23,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+        "column_1_based": 25,
+        "raw_source_excerpt": "[[copie]]s"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -12014,22 +12034,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "复制；制作绘画、雕塑或类似作品的副本（及物动词）。",
-      "selected_text_rights_reason": "New Lexique chinese explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing.",
+      "selected_text_rights_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3077-toast-nom-selected",
@@ -14748,8 +14772,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
       "exact_source_span": {
         "line_1_based": 59,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+        "column_1_based": 111,
+        "raw_source_excerpt": "[[affliger]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -14767,22 +14791,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "Causer de la peine ou du chagrin à quelqu’un, le toucher douloureusement.",
-      "selected_text_rights_reason": "French adaptation with retained exact upstream source packet. The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
+      "selected_text_rights_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3093-affecter-ver-selected",
@@ -14838,8 +14866,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
       "exact_source_span": {
         "line_1_based": 59,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+        "column_1_based": 111,
+        "raw_source_excerpt": "[[affliger]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -14857,22 +14885,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "To distress or upset someone emotionally, causing sorrow (transitive verb).",
-      "selected_text_rights_reason": "New Lexique english explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
+      "selected_text_rights_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3093-affecter-ver-selected",
@@ -14883,8 +14915,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
       "exact_source_span": {
         "line_1_based": 59,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+        "column_1_based": 111,
+        "raw_source_excerpt": "[[affliger]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
@@ -14902,22 +14934,26 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
           "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
           "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
           "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "unresolved_selected_expression"
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "independent_review_scope": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "accepted_text": "使难过；使某人在情感上受到伤害或感到悲伤（及物动词）。",
-      "selected_text_rights_reason": "New Lexique chinese explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
+      "selected_text_rights_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "unresolved_selected_expression"
+      "original_work_territorial_review": "passed_minimal_lexical_facts",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "sense_id": "b142-3094-par-dessus-pre-selected",
@@ -15561,194 +15597,6 @@
       "accepted_text": "奇幻或神话中的矮人；外形像人但身材很小的生物（阳性名词）。",
       "selected_text_rights_reason": "New Lexique chinese explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. Human-like mythological creature of very small stature is a conventional category/appearance definition, with no invented story or distinctive character description.",
       "bibliographic_original_credits": [],
-      "original_work_territorial_review": "passed_noncopyrightable_selected_expression"
-    },
-    {
-      "sense_id": "b142-3098-damoiseau-nom-selected",
-      "frozen_row": 3098,
-      "field": "french_definition",
-      "source_id": "b142_fr_156374",
-      "source_revision": 39460790,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-      "exact_source_span": {
-        "line_1_based": 9,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
-      "contributors_record": "source-context.json#b142_fr_156374",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
-          "conservative_expiry": "2006-01-01, using final publication in 1935",
-          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
-          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-          "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
-          "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "passed_noncopyrightable_selected_expression"
-        }
-      ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "ordinary_content_eligibility": "unresolved_modern_everyday_selected_sense",
-      "accepted_text": null,
-      "selected_text_rights_reason": "French adaptation with retained exact upstream source packet. Faire le beau/le galant auprès des femmes consists of conventional idioms in a terse person-role gloss. The ironic/vieilli and gender labels are facts. Rights clearance of this narrow phrase does not establish everyday eligibility.",
-      "bibliographic_original_credits": [],
-      "content_admission": "unresolved_modern_everyday_use",
-      "original_work_territorial_review": "passed_noncopyrightable_selected_expression"
-    },
-    {
-      "sense_id": "b142-3098-damoiseau-nom-selected",
-      "frozen_row": 3098,
-      "field": "ipa",
-      "source_id": "b142_fr_156374",
-      "source_revision": 39460790,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-      "exact_source_span": {
-        "line_1_based": 7,
-        "column_1_based": 1,
-        "raw_source_excerpt": "'''damoiseau''' {{pron|da.mwa.zo|fr}} {{m}} {{équiv-pour|lang=fr|une femme|damoiselle|}}"
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
-      "contributors_record": "source-context.json#b142_fr_156374",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
-          "conservative_expiry": "2006-01-01, using final publication in 1935",
-          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
-          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-          "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
-          "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "passed_noncopyrightable_selected_expression"
-        }
-      ],
-      "selected_boundary": "Isolated IPA notation only, not audio or linked media.",
-      "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "ordinary_content_eligibility": "unresolved_modern_everyday_selected_sense",
-      "accepted_text": null,
-      "selected_text_rights_reason": "This isolated phonemic transcription and its headword/POS frame record pronunciation and grammatical facts; no audio or developed definition is copied by the IPA field. The whole-definition territorial decision is separate in territorial-rights-review.json.",
-      "bibliographic_original_credits": [],
-      "content_admission": "unresolved_modern_everyday_use",
-      "original_work_territorial_review": "passed_noncopyrightable_selected_expression"
-    },
-    {
-      "sense_id": "b142-3098-damoiseau-nom-selected",
-      "frozen_row": 3098,
-      "field": "english",
-      "source_id": "b142_fr_156374",
-      "source_revision": 39460790,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-      "exact_source_span": {
-        "line_1_based": 9,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
-      "contributors_record": "source-context.json#b142_fr_156374",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
-          "conservative_expiry": "2006-01-01, using final publication in 1935",
-          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
-          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-          "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
-          "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "passed_noncopyrightable_selected_expression"
-        }
-      ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "ordinary_content_eligibility": "unresolved_modern_everyday_selected_sense",
-      "accepted_text": null,
-      "selected_text_rights_reason": "New Lexique english explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. Faire le beau/le galant auprès des femmes consists of conventional idioms in a terse person-role gloss. The ironic/vieilli and gender labels are facts. Rights clearance of this narrow phrase does not establish everyday eligibility.",
-      "bibliographic_original_credits": [],
-      "content_admission": "unresolved_modern_everyday_use",
-      "original_work_territorial_review": "passed_noncopyrightable_selected_expression"
-    },
-    {
-      "sense_id": "b142-3098-damoiseau-nom-selected",
-      "frozen_row": 3098,
-      "field": "chinese",
-      "source_id": "b142_fr_156374",
-      "source_revision": 39460790,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-      "exact_source_span": {
-        "line_1_based": 9,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors, credited through the complete linked article history and retained returned contributor registry; Lexique contributors for scoped French adaptations and new English/Chinese explanations. Original-work and bibliographic credits: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
-      "contributors_record": "source-context.json#b142_fr_156374",
-      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
-          "conservative_expiry": "2006-01-01, using final publication in 1935",
-          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "France_original_economic_term_reviewed_selected_US_expression_assessed_separately",
-          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-          "original_work_rights_status": "France_economic_expiry_only_US_original_work_status_unestablished",
-          "independent_rights_reason": "The original institutional collective eighth edition ended in 1935; L123-3 gives 1936-01-01 plus 70 years, expired 2006-01-01. Original author/work respect and separate Wiki/Lexique adaptations remain. The article import notice identifies an original-work boundary, not selected-sentence authorship.",
-          "territorial_scope": "France expiry 2006-01-01; no blanket US or worldwide public-domain conclusion",
-          "selected_text_territorial_decision": "passed_noncopyrightable_selected_expression"
-        }
-      ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "passed_at_selected_text_boundary",
-      "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "ordinary_content_eligibility": "unresolved_modern_everyday_selected_sense",
-      "accepted_text": null,
-      "selected_text_rights_reason": "New Lexique chinese explanation of meaning; the exact retained upstream source packet is a separate redistribution dependency. Faire le beau/le galant auprès des femmes consists of conventional idioms in a terse person-role gloss. The ironic/vieilli and gender labels are facts. Rights clearance of this narrow phrase does not establish everyday eligibility.",
-      "bibliographic_original_credits": [],
-      "content_admission": "unresolved_modern_everyday_use",
       "original_work_territorial_review": "passed_noncopyrightable_selected_expression"
     },
     {
@@ -24047,8 +23895,8 @@
       "span_kind": "language_pos_spelling_or_construction_fact"
     }
   ],
-  "eligible_content_fields": 184,
-  "unadmitted_rights_cleared_fields": 4,
+  "eligible_content_fields": 196,
+  "unadmitted_rights_cleared_fields": 0,
   "bibliographic_credit_changes": [
     {
       "source_id": "b142_fr_32514",
@@ -24363,13 +24211,8 @@
   "accepted_adaptation_license": "CC-BY-SA-4.0",
   "combined_redistribution": "pending_coordinator_assembly",
   "original_work_territorial_review": {
-    "status": "source_specific_partial_clearance",
-    "unresolved_rows": [
-      3051,
-      3074,
-      3076,
-      3093
-    ],
+    "status": "passed_at_current_selected_expression_boundary",
+    "unresolved_rows": [],
     "selected_source_decisions": [
       {
         "frozen_row": 3051,
@@ -24384,53 +24227,165 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
             "line_1_based": 10,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+            "column_1_based": 27,
+            "reviewed_excerpt": "[[soudain]]"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 3,
+            "reviewed_excerpt": "[[évènement|Événement]]"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 123,
+            "reviewed_excerpt": "[[destruction]]"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 143,
+            "reviewed_excerpt": "[[ruine]]"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 157,
+            "reviewed_excerpt": "[[mort]]"
           }
         ],
         "supporting_spans": [
           {
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_118947",
             "revid": 39826923,
             "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
             "line_1_based": 3,
             "column_1_based": 1,
-            "reviewed_excerpt": "== {{langue|fr}} =="
+            "reviewed_excerpt": "== {{langue|fr}} ==",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_118947",
             "revid": 39826923,
             "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
             "line_1_based": 7,
             "column_1_based": 1,
-            "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+            "reviewed_excerpt": "=== {{S|nom|fr}} ===",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_118947",
             "revid": 39826923,
             "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
             "line_1_based": 8,
             "column_1_based": 1,
-            "reviewed_excerpt": "{{fr-rég|ka.ta.stʁɔf}}"
+            "reviewed_excerpt": "{{fr-rég|ka.ta.stʁɔf}}",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_118947",
             "revid": 39826923,
             "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
             "line_1_based": 9,
             "column_1_based": 1,
-            "reviewed_excerpt": "'''catastrophe''' {{pron|ka.ta.stʁɔf|fr}} {{f}}"
+            "reviewed_excerpt": "'''catastrophe''' {{pron|ka.ta.stʁɔf|fr}} {{f}}",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 3,
+            "reviewed_excerpt": "[[évènement|Événement]]",
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 123,
+            "reviewed_excerpt": "[[destruction]]",
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 143,
+            "reviewed_excerpt": "[[ruine]]",
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 157,
+            "reviewed_excerpt": "[[mort]]",
+            "sense_id": "b142-3051-catastrophe-nom-selected",
+            "frozen_row": 3051,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
           }
         ],
-        "status": "unresolved_selected_expression",
-        "selected_expression_reason": "The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing.",
+        "status": "passed_minimal_lexical_facts",
+        "selected_expression_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-        "specific_gap": "The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing."
+        "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
       },
       {
         "frozen_row": 3052,
@@ -25738,62 +25693,179 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
             "line_1_based": 8,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+            "column_1_based": 12,
+            "reviewed_excerpt": "[[conscience]]"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 31,
+            "reviewed_excerpt": "[[connaissance]]"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 48,
+            "reviewed_excerpt": "[[intime]]"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 86,
+            "reviewed_excerpt": "[[responsabilité]]"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 108,
+            "reviewed_excerpt": "ce qu’il [[faire|fait]]"
           }
         ],
         "supporting_spans": [
           {
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_155184",
             "revid": 39702182,
             "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
             "line_1_based": 1,
             "column_1_based": 1,
-            "reviewed_excerpt": "== {{langue|fr}} =="
+            "reviewed_excerpt": "== {{langue|fr}} ==",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_155184",
             "revid": 39702182,
             "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
             "line_1_based": 5,
             "column_1_based": 1,
-            "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
+            "reviewed_excerpt": "=== {{S|adjectif|fr}} ===",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_155184",
             "revid": 39702182,
             "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
             "line_1_based": 6,
             "column_1_based": 1,
-            "reviewed_excerpt": "{{fr-accord-cons|kɔ̃.sjɑ̃|t}}"
+            "reviewed_excerpt": "{{fr-accord-cons|kɔ̃.sjɑ̃|t}}",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_155184",
             "revid": 39702182,
             "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
             "line_1_based": 7,
             "column_1_based": 1,
-            "reviewed_excerpt": "'''conscient''' {{pron|kɔ̃.sjɑ̃|fr}}"
+            "reviewed_excerpt": "'''conscient''' {{pron|kɔ̃.sjɑ̃|fr}}",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_155184",
             "revid": 39702182,
             "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
             "line_1_based": 12,
             "column_1_based": 80,
-            "reviewed_excerpt": "'''conscients'''"
+            "reviewed_excerpt": "'''conscients'''",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 31,
+            "reviewed_excerpt": "[[connaissance]]",
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 48,
+            "reviewed_excerpt": "[[intime]]",
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 86,
+            "reviewed_excerpt": "[[responsabilité]]",
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 108,
+            "reviewed_excerpt": "ce qu’il [[faire|fait]]",
+            "sense_id": "b142-3074-conscient-adj-selected",
+            "frozen_row": 3074,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
           }
         ],
-        "status": "unresolved_selected_expression",
-        "selected_expression_reason": "The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing.",
+        "status": "passed_minimal_lexical_facts",
+        "selected_expression_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-        "specific_gap": "The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing."
+        "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
       },
       {
         "frozen_row": 3075,
@@ -25868,44 +25940,105 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
             "line_1_based": 23,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+            "column_1_based": 25,
+            "reviewed_excerpt": "[[copie]]s"
+          },
+          {
+            "source_id": "b142_fr_174916",
+            "revid": 39829187,
+            "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+            "line_1_based": 23,
+            "column_1_based": 41,
+            "reviewed_excerpt": "[[tableau]]"
+          },
+          {
+            "source_id": "b142_fr_174916",
+            "revid": 39829187,
+            "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+            "line_1_based": 23,
+            "column_1_based": 60,
+            "reviewed_excerpt": "[[statue]]"
           }
         ],
         "supporting_spans": [
           {
+            "sense_id": "b142-3076-reproduire-ver-selected",
+            "frozen_row": 3076,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_174916",
             "revid": 39829187,
             "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
             "line_1_based": 1,
             "column_1_based": 1,
-            "reviewed_excerpt": "== {{langue|fr}} =="
+            "reviewed_excerpt": "== {{langue|fr}} ==",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3076-reproduire-ver-selected",
+            "frozen_row": 3076,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_174916",
             "revid": 39829187,
             "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
             "line_1_based": 5,
             "column_1_based": 1,
-            "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
+            "reviewed_excerpt": "=== {{S|verbe|fr}} ===",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3076-reproduire-ver-selected",
+            "frozen_row": 3076,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_174916",
             "revid": 39829187,
             "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
             "line_1_based": 6,
             "column_1_based": 1,
-            "reviewed_excerpt": "'''reproduire''' {{pron|ʁə.pʁɔ.dɥiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}"
+            "reviewed_excerpt": "'''reproduire''' {{pron|ʁə.pʁɔ.dɥiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          },
+          {
+            "source_id": "b142_fr_174916",
+            "revid": 39829187,
+            "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+            "line_1_based": 23,
+            "column_1_based": 41,
+            "reviewed_excerpt": "[[tableau]]",
+            "sense_id": "b142-3076-reproduire-ver-selected",
+            "frozen_row": 3076,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_174916",
+            "revid": 39829187,
+            "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+            "line_1_based": 23,
+            "column_1_based": 60,
+            "reviewed_excerpt": "[[statue]]",
+            "sense_id": "b142-3076-reproduire-ver-selected",
+            "frozen_row": 3076,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
           }
         ],
-        "status": "unresolved_selected_expression",
-        "selected_expression_reason": "The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing.",
+        "status": "passed_minimal_lexical_facts",
+        "selected_expression_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-        "specific_gap": "The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing."
+        "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
       },
       {
         "frozen_row": 3077,
@@ -26844,44 +26977,150 @@
             "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
             "line_1_based": 59,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+            "column_1_based": 111,
+            "reviewed_excerpt": "[[affliger]]"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 68,
+            "reviewed_excerpt": "[[douleur]]"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 84,
+            "reviewed_excerpt": "[[chagrin]]"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 97,
+            "reviewed_excerpt": "[[émouvoir]]"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 3,
+            "reviewed_excerpt": "{{figuré|fr}}"
           }
         ],
         "supporting_spans": [
           {
+            "sense_id": "b142-3093-affecter-ver-selected",
+            "frozen_row": 3093,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_137679",
             "revid": 39716112,
             "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
             "line_1_based": 1,
             "column_1_based": 1,
-            "reviewed_excerpt": "== {{langue|fr}} =="
+            "reviewed_excerpt": "== {{langue|fr}} ==",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3093-affecter-ver-selected",
+            "frozen_row": 3093,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_137679",
             "revid": 39716112,
             "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
             "line_1_based": 5,
             "column_1_based": 1,
-            "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
+            "reviewed_excerpt": "=== {{S|verbe|fr}} ===",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
           },
           {
+            "sense_id": "b142-3093-affecter-ver-selected",
+            "frozen_row": 3093,
+            "role": "language_pos_spelling_or_construction_frame",
             "source_id": "b142_fr_137679",
             "revid": 39716112,
             "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
             "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
             "line_1_based": 6,
             "column_1_based": 1,
-            "reviewed_excerpt": "'''affecter''' {{pron|a.fɛk.te|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+            "reviewed_excerpt": "'''affecter''' {{pron|a.fɛk.te|fr}} {{t|fr}} {{conj|grp=1|fr}}",
+            "independent_review": "passed_fixed_source_span",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 68,
+            "reviewed_excerpt": "[[douleur]]",
+            "sense_id": "b142-3093-affecter-ver-selected",
+            "frozen_row": 3093,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 84,
+            "reviewed_excerpt": "[[chagrin]]",
+            "sense_id": "b142-3093-affecter-ver-selected",
+            "frozen_row": 3093,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 97,
+            "reviewed_excerpt": "[[émouvoir]]",
+            "sense_id": "b142-3093-affecter-ver-selected",
+            "frozen_row": 3093,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+          },
+          {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 3,
+            "reviewed_excerpt": "{{figuré|fr}}",
+            "sense_id": "b142-3093-affecter-ver-selected",
+            "frozen_row": 3093,
+            "role": "selected_lexical_fact",
+            "independent_review": "passed_at_selected_text_boundary",
+            "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
           }
         ],
-        "status": "unresolved_selected_expression",
-        "selected_expression_reason": "The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
+        "status": "passed_minimal_lexical_facts",
+        "selected_expression_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
         "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-        "specific_gap": "The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
         "independent_daf8_match_evidence": {
           "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter.html",
           "extracted_json": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter-embedded.json",
@@ -26890,7 +27129,8 @@
           "original_entry_id": "ACA8_535",
           "extraction_helper": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\inspect_embedded.py",
           "observation": "Exact lexical formulation matches DAF8 embedded second entry, not merely an article-wide import notice."
-        }
+        },
+        "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
       },
       {
         "frozen_row": 3094,
@@ -27133,66 +27373,6 @@
         "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field."
       },
       {
-        "frozen_row": 3098,
-        "headword": "damoiseau",
-        "source_id": "b142_fr_156374",
-        "revid": 39460790,
-        "declared_daf8_import": true,
-        "selected_spans": [
-          {
-            "source_id": "b142_fr_156374",
-            "revid": 39460790,
-            "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-            "line_1_based": 9,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-          }
-        ],
-        "supporting_spans": [
-          {
-            "source_id": "b142_fr_156374",
-            "revid": 39460790,
-            "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-            "line_1_based": 1,
-            "column_1_based": 1,
-            "reviewed_excerpt": "== {{langue|fr}} =="
-          },
-          {
-            "source_id": "b142_fr_156374",
-            "revid": 39460790,
-            "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-            "line_1_based": 5,
-            "column_1_based": 1,
-            "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-          },
-          {
-            "source_id": "b142_fr_156374",
-            "revid": 39460790,
-            "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-            "line_1_based": 6,
-            "column_1_based": 1,
-            "reviewed_excerpt": "{{fr-rég-x|da.mwa.zo}}"
-          },
-          {
-            "source_id": "b142_fr_156374",
-            "revid": 39460790,
-            "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-            "line_1_based": 7,
-            "column_1_based": 1,
-            "reviewed_excerpt": "'''damoiseau''' {{pron|da.mwa.zo|fr}} {{m}} {{équiv-pour|lang=fr|une femme|damoiselle|}}"
-          }
-        ],
-        "status": "passed_noncopyrightable_selected_expression",
-        "selected_expression_reason": "Faire le beau/le galant auprès des femmes consists of conventional idioms in a terse person-role gloss. The ironic/vieilli and gender labels are facts. Rights clearance of this narrow phrase does not establish everyday eligibility.",
-        "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-        "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field."
-      },
-      {
         "frozen_row": 3099,
         "headword": "carton",
         "source_id": "b142_fr_8062",
@@ -27337,8 +27517,48 @@
       }
     ],
     "legal_reading": "17 USC 102 distinguishes facts/ideas from their expression. Copyright Office FAQ excludes short phrases but cautions that factual expression can be protected. Wikimedia Terms section 7 requires US public-domain verification. 104A can restore qualifying foreign works for the remaining US term; 304(b) can provide 95 years. France expiry alone does not determine US rights. No protection or infringement conclusion is inferred merely from an article-wide import notice.",
-    "counting": "25 DAF8-marked selected boundaries cleared on their actual conventional noncopyrightable expression; four selected textual boundaries unresolved. All 50 IPA fields pass separately.",
-    "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+    "counting": "49 selected-use source decisions; four developed expressions replaced by limited lexical facts. Damoiseau has no selected use or field and four missing annotation fields.",
+    "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
+    "annotation_exceptions": [
+      {
+        "frozen_row": 3098,
+        "headword": "damoiseau",
+        "pos": "NOM",
+        "admitted_fields": 0,
+        "missing_fields": 4,
+        "decision": {
+          "issue": "https://github.com/zardonc/lexique/issues/142",
+          "approved_by": "project_owner",
+          "approved_on": "2026-11-22",
+          "timezone": "America/Vancouver",
+          "decision": "The project owner approved frozen row 3098 damoiseau/NOM as a zero-field annotation on 2026-11-22, America/Vancouver. Preserve its exact identity, source order, frequencies and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This decision applies only to row 3098.",
+          "exact_reply": "Approve zero-field annotation (Recommended)",
+          "evidence": "docs/evidence/issue-142/owner-approval.json"
+        },
+        "independent_evidence_decision": "Fixed revision 39460790 marks the gallant-man proposal ironic and dated; the independent everyday-use review remains unestablished. The owner resolved the scope requirement only by approving this exact zero-field annotation. No proposal is accepted as dictionary content."
+      }
+    ]
   },
-  "unresolved_rights_fields": 12
+  "unresolved_rights_fields": 0,
+  "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+  "additional_rights_evidence": "rights-fix-review.json",
+  "annotation_exceptions": [
+    {
+      "frozen_row": 3098,
+      "headword": "damoiseau",
+      "pos": "NOM",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/142",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-22",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3098 damoiseau/NOM as a zero-field annotation on 2026-11-22, America/Vancouver. Preserve its exact identity, source order, frequencies and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This decision applies only to row 3098.",
+        "exact_reply": "Approve zero-field annotation (Recommended)",
+        "evidence": "docs/evidence/issue-142/owner-approval.json"
+      },
+      "independent_evidence_decision": "Fixed revision 39460790 marks the gallant-man proposal ironic and dated; the independent everyday-use review remains unestablished. The owner resolved the scope requirement only by approving this exact zero-field annotation. No proposal is accepted as dictionary content."
+    }
+  ]
 }

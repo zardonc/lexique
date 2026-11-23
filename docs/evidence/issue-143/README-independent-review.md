@@ -1,110 +1,69 @@
-# Issue #143 independent field and selected-rights review
+# Independently reviewed batch #143
 
-**All 200 fields and 50 selected uses pass quality review.** Rights pass for
-182 fields and remain pending for 18 textual fields across six groups.
-Forty-four groups have joint four-field quality and rights acceptance. The
-batch has 49 everyday uses and one owner-approved specialist golf plural.
-The original 196 texts remain unchanged; four fields were added for `pars/NOM`.
-Canonical admission remains a coordinator gate.
+**50 groups / 200 fields pass quality and selected-expression rights review.** The 50 groups comprise 49 everyday uses and the exact approved `pars/NOM` golf plural. Canonical assembly remains pending.
 
-Reviewer: **Independent semantic and selected-rights reviewer #143; separate
-from author and coordinator**. This is separate agent review; learner acceptance
-is a separate gate. The #143/#78 context, reviewer guide, pipeline notes,
-project/local guidance, glossary, resource ADRs, coding standards and the
-independently reviewed #129 evidence shape were read.
+Original content author commit: `e2e1cf27e8957dff8b00d80f65152af86f9bb752`. First independent
+review commit: `4047cf5a66eddf4c3bd7e011382e391a061252ea`; reviewer: Independent semantic and selected-rights reviewer #143; separate from author and coordinator.
+The first review and authored proposals are preserved under [first-review](first-review/snapshot.json)
+and [authored](authored/snapshot.json). Selected-expression/source-sufficiency
+reviewer: **Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer**, distinct from those earlier roles. This is
+documented agent review; learner acceptance remains a separate gate.
 
-- Author head: `e2e1cf27e8957dff8b00d80f65152af86f9bb752`.
-- Fresh review base: `b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88`.
-- Checkout: `C:/Users/inthe/IdeaProjects/lexique-d2-140-149/review-143`.
-- Branch: `codex/d2-review-143`.
-- Author archive: `C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-143`.
-- Review helpers/logs: `target/issue-143-review/` in this checkout.
-- Review archive: `C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/reviewer-evidence/issue-143`.
-- Tested integration SHA, commands and retained patch are in
-  [verification](verification.json); final commit is in external `closeout.json`.
+Checkout: `C:/Users/inthe/IdeaProjects/lexique-d2-140-149/rights-142143`, branch
+`codex/d2-rights-142143`, base `fa142521e974fcf895afccab8d5f1dbae31195c3`.
+The latest integration is merged into this branch before closeout.
 
-[Author snapshot](authored/snapshot.json) preserves all 16 original root files
-and the existing four authored ledgers. [Field review](field-review.json) records
-every proposed/accepted text, fixed source/span, support, actual field reason,
-reviewer and separate rights decision. [Added fields](accepted-replacements.json)
-preserves the four `pars` additions with absent original text, exact coordinator
-proposal, accepted text and owner decision. All 50 frozen identities,
-frequencies, POS subclasses and order remain unchanged.
+## Exact selected-source and language decisions
 
-## Quality and exact use
+[Field review](field-review.json), [rights](rights.json),
+[exact source excerpts](source-excerpts.json) and [source-sufficiency decisions](rights-fix-review.json)
+bind each accepted field to the fixed source and its selected use. The developed
+DAF8 formulations are outside the current selected source packets. The packets
+retain exact individual lexical facts or conventional short expressions and
+factual French/POS/grammar/IPA metadata. This decision clears those limited
+expressions, not the whole DAF8 work.
 
-Every French definition, applicable IPA, English/Chinese explanation, selected
-and excluded use and grammatical source relation was read. `chevalier` selects
-the explicitly contemporary order-member title. Lowercase `mexicain/NOM` names
-Spanish spoken in Mexico and retains its invariable language noun. `are` is the
-100 m² unit used in land/property descriptions.
+| Frozen row / word | Fixed revision | Primary line:column | Selected-use sufficiency |
+| --- | ---: | --- | --- |
+| 3102 distraire | 40045909 | 14:131 | The selected transitive amusement use gives someone relief from tiring or troubling thoughts. The proposed wording preserves entertainment and the concern-removal meaning rather than teaching distraction from an assigned task; reflexive and administrative senses stay excluded. |
+| 3110 impressionnant | 39715515 | 8:7 | Strong effects on mind or feelings ground impressive/striking, including an effect that need not be favourable. Masculine adjective and feminine impressionnante remain explicit; the selected IPA, adjective frame and excluded present participle stay unchanged. |
+| 3115 grève | 40003287 | 63:154 | Employees, coordination, cessation of work and pay/benefit goals support the existing concise strike explanations. The existing FR/EN/ZH have no factory/profession enumeration or until-success condition. Sandy shore, armour, political stoppage outside the labour sense and grever remain excluded. |
+| 3123 lecture | 39878425 | 18:38 | Reading alone with the eyes establishes silent personal reading; instruction and pleasure ground learning/enjoyment. All three explanations retain the feminine noun and that purpose. Aloud reading, reading material, literacy teaching, interpretation, playback and measurement remain excluded. |
+| 3129 congrès | 39756249 | 20:3 | A gathering for communicating studies and exchanging ideas is a conference/congress on a field. The new French definition and existing EN/ZH preserve both research and ideas. Diplomatic peace meetings, legislatures and historical sexual/legal uses remain excluded. |
+| 3141 galerie | 39820854 | 21:20 | The selected palace or museum exhibition room is longer than wide and displays paintings/artworks. The new French definition explicitly retains that dimensional relation; the existing EN/ZH long-room explanations remain scoped by the unchanged use restriction. Commercial gallery, corridor, spectators, tunnel and roof rack stay excluded. |
 
-`uns/PRO:ind` retains its exact masculine plural identity within
-`les uns … les autres`. Explicit `mp=les uns` and `pmp=le.z‿œ̃` attest `/œ̃/`
-as the pronoun segment after article and liaison. The partitive `l’un de` sense
-requires plural `quelques-uns` and is excluded. `jusque/PRE` retains its limit
-construction and prohibition on isolated use; its IPA does not describe the
-complete `jusqu’à` expression. `dominer` uses the explicitly transitive sense
-at line 39, despite the head-line intransitive summary. Source bindings add no
-runtime alias.
+The source-sufficiency review inspects every affected FR/EN/ZH explanation,
+the actual fixed words, construction, excluded senses and register.
+Seven learner texts use new wording: distraire FR/EN/ZH and impressionnant, lecture, congrès, galerie FR. The other 11 affected texts remain. The gallery definition expressly preserves length greater than width. The four pars fields and exact owner decision are unchanged.
+Exact before/after text, span and reasons are in [replacements](accepted-replacements.json)
+and [rights decisions](rights-fix-review.json).
 
-## Approved pars specialist exception
+## Rights and source materials
 
-[Owner approval](owner-approval.json) records issue #143, `project_owner`,
-approval date **2026-11-22** and the exact decision extending the golf exception
-only to frozen row 3128 `pars/NOM`. [Coordinator proposal](authored/pars-coordinator-proposal.json)
-and [accepted recommendation](scope-recommendation.json) retain all four exact
-fields. Usage has `everyday_sense_status=approved_specialist_exception` and the
-matching `specialist_exception_decision`.
+The retained Copyright Office Compendium [313.3(C) and 313.4(C)](https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf),
+[37 CFR 202.1(a)](https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml)
+and [17 USC 102(b)](https://www.copyright.gov/title17/92chap1.html) distinguish
+facts and limited words/phrases from original factual expression. The authority
+captures, precise reuse provenance and per-expression reasons are retained in
+the rights decisions. Their scope is the current selected expressions; French
+economic expiry 2006-01-01 establishes no blanket US/worldwide original-work status.
 
-Fixed French `pars` revision 39518389, lines 20–23, explicitly records noun
-flexion, `fr-rég|s=par`, an empty noun IPA and plural-of-`par`. Fixed `par`
-revision 39972270, lines 291–295, records the masculine golf noun, regular
-`fr-rég|paʁ`, `/paʁ/` and conventional per-hole stroke counts. Together these
-ground the regular noun plural's `/paʁ/`; the neighbouring `partir` verb is not
-used. The fields describe assigned standards, excluding achieved scores,
-Georgian letters and other-language words. Singular `par` and aliases are not
-changed.
+Wiktionnaire contribution/history attribution, separately identified Académie
+original-work credit, Lexique explanatory-text/modification credit,
+[CC BY-SA 4.0 legal text](COPYING) and [notices](NOTICES.md) remain. Full article
+contributors and anonymous counts are article attribution, not sentence authorship.
+Full lexical/API captures, original comparisons, earlier reviews, approvals,
+helpers and complete check logs are archived at
+`C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/reviewer-evidence/issue-142143-rights-fix`. Research snapshots and before-source expressions are
+outside the current redistribution packets.
 
-## Source and rights decisions
+## Scope and verification
 
-All 54 raw articles match the retained revision API UTF-8 bytes literally.
-All 3,567 recorded span occurrences match the fixed text/revisions. Four complete
-contributor chains contain nine responses, 3,203 named article memberships and
-555 anonymous article counts. These are article attribution, not individual
-sentence authorship. No lexical revision was recaptured.
+The exact [pars owner decision](owner-approval.json), source plural relation, /paʁ/ and four proposed fields remain unchanged. No other specialist, annotation or alias is introduced.
 
-[Original boundaries](original-boundaries.json), [selected rights](selected-rights.md)
-and [rights ledger](rights.json) retain source-specific decisions. An article-wide
-DAF8 marker does not establish protectable selected wording. Accepted uses
-retain facts, grammatical information, short conventional phrases or new
-explanations. Isolated IPA is factual notation. Literary/news quotations,
-media/audio, external reference prose and other-language content supply no
-selected field.
-
-Actual CNRTL renderings of the Académie eighth edition identify close retained
-expression for `distraire`, `impressionnant`, `grève`, `lecture`, `congrès` and
-`galerie`. Their 18 textual fields remain pending original-work territorial
-clearance. The inspected 1762 fourth-edition entries do not establish those
-exact later formulations' earlier origin. Other entries have specific factual
-or short-expression reasons, rather than blanket DAF8 clearance or blockers.
-
-The established collective-work basis supports French economic expiry
-2006-01-01. Wikimedia Terms section 7, 17 USC 104A and 304 require a separate
-US original-work analysis where protected expression is retained. The review
-does not establish protection or infringement of every phrase. Contribution
-and adaptation credits, CC BY-SA 4.0, modification notices and [legal text](COPYING)
-remain in [notices](NOTICES.md).
-
-## Checks and limits
-
-The focused four-test admission check, independent byte/span/contributor and
-author-snapshot audit, documentation link check and diff check pass. Exact
-commands/logs are in [verification](verification.json). The retained failing
-checks exercise author-stage review and the subsequently approved four-field
-admission boundary. Latest integration was merged before final verification.
-
-Six original-expression rights decisions remain pending. Learner acceptance,
-canonical conversion, the combined redistribution package, global specialist
-registration and native lookup/save/reopen are unrun here and remain coordinator
-gates. This shard does not establish whole-machine offline or release readiness.
+[Verification](verification.json) records focused failing/passing checks,
+fixed-source/packet and original-byte checks, documentation links, diff and scope.
+The current tracked source audit is [source-audit-current.json](source-audit-current.json).
+No new canonical field is admitted in this shard. Combined packaging,
+native lookup/save/reopen, frontend/Rust execution, learner acceptance,
+whole-machine offline and release/platform gates are unrun here.

@@ -23,7 +23,7 @@ MEMBERSHIP = [
     ('habituel', 'ADJ'), ('allumette', 'NOM'),
 ]
 LANGUAGES = {'french_definition': 'fr', 'ipa': 'und', 'english': 'en', 'chinese': 'zh'}
-RIGHTS_PENDING_ROWS = {3102, 3110, 3115, 3123, 3129, 3141}
+RIGHTS_PENDING_ROWS = set()
 
 
 def read(name):
@@ -31,6 +31,40 @@ def read(name):
 
 
 class Batch143(unittest.TestCase):
+    def test_six_selected_packets_retain_facts_and_reassessed_wording(self):
+        expected = {3102: '[[divertir]]', 3110: '[[impressionner|impressionne]]',
+                    3115: '[[cesser]] leur [[travail]]', 3123: 'lire seul et des [[yeux]]',
+                    3129: 'Assemblée', 3141: '[[salle|Salle]]'}
+        groups = {g['frozen_row']: g for g in read('groups.json')}
+        first = {g['frozen_row']: g for g in read('first-review/groups.json')}
+        for row in expected:
+            developed = first[row]['senses'][0]['fields']['french_definition']['source_span']['raw_source_excerpt']
+            for name in ('groups.json', 'source-excerpts.json', 'source-context.json',
+                         'sources.json', 'rights.json', 'field-review.json'):
+                self.assertNotIn(json.dumps(developed, ensure_ascii=False),
+                                 json.dumps(read(name), ensure_ascii=False), name)
+        for row, excerpt in expected.items():
+            for name in ('french_definition', 'english', 'chinese'):
+                field = groups[row]['senses'][0]['fields'][name]
+                self.assertEqual(field['source_span']['raw_source_excerpt'], excerpt)
+                self.assertEqual(field['rights_eligibility_status'], 'passed')
+        self.assertEqual(groups[3141]['senses'][0]['fields']['french_definition']['text'],
+                         'Salle d’exposition artistique dans un palais ou un musée, dont la longueur dépasse la largeur ; nom féminin.')
+        self.assertEqual(groups[3123]['senses'][0]['fields']['french_definition']['text'],
+                         'Le fait de lire silencieusement, pour apprendre ou par plaisir ; nom féminin.')
+        decision = read('rights-fix-review.json')
+        self.assertEqual(decision['resolved_textual_fields'], 18)
+        self.assertEqual(decision['unresolved_selected_textual_fields'], 0)
+        self.assertEqual(decision['wording_replacements'], 7)
+        self.assertEqual({r['frozen_row'] for r in decision['selected_uses']}, set(expected))
+        for use in decision['selected_uses']:
+            self.assertFalse(use['whole_daf8_us_clearance'])
+            self.assertTrue(use['meaning_reason'])
+            for field in use['fields']:
+                self.assertTrue(field['quality_reason'])
+                self.assertEqual(field['quality_status'], 'passed')
+                self.assertEqual(field['accepted_text'], groups[use['frozen_row']]['senses'][0]['fields'][field['field']]['text'])
+
     def test_exact_pos_constructions_and_unresolved_fields_are_preserved(self):
         admission = read('admission.json')
         self.assertEqual((admission['frozen_groups'], admission['scope_denominator_groups']), (50, 4087))
@@ -38,11 +72,12 @@ class Batch143(unittest.TestCase):
         self.assertEqual(admission['proposed_senses'], 50)
         self.assertEqual(admission['unresolved_field_blockers'], [])
         self.assertEqual(admission['pending_independent_review_rows'], [])
-        self.assertEqual(admission['independent_quality'], 'passed')
-        self.assertEqual(admission['construction_and_spelling_review'], 'passed')
-        self.assertEqual((admission['independently_accepted_new_groups'], admission['independently_accepted_new_fields']), (44, 182))
-        self.assertEqual((admission['missing_authored_fields'], admission['missing_admitted_fields']), (0, 200))
-        self.assertEqual((admission['pending_independent_review_fields'], admission['pending_independent_rights_fields']), (0, 18))
+        self.assertEqual(admission['independent_quality'], 'passed_for_selected_content')
+        self.assertEqual(admission['construction_and_spelling_review'], 'passed_for_selected_uses_and_source_binding_only')
+        self.assertEqual((admission['independently_accepted_new_groups'], admission['independently_accepted_new_fields']), (50, 200))
+        self.assertEqual((admission['missing_authored_fields'], admission['missing_admitted_fields']), (0, 0))
+        self.assertEqual(admission['canonical_missing_fields'], 200)
+        self.assertEqual((admission['pending_independent_review_fields'], admission['pending_independent_rights_fields']), (0, 0))
         self.assertEqual((admission['annotation_exception_groups'], admission['specialist_exception_groups']), (0, 1))
         review = read('field-review.json')
         self.assertTrue(review['independent_acceptance'])
@@ -90,17 +125,21 @@ class Batch143(unittest.TestCase):
         self.assertEqual((EVIDENCE / 'COPYING').read_bytes().rstrip(),
                          (ROOT / 'resources/core-pilot-79/COPYING').read_bytes().rstrip())
         authored_groups = read('authored/groups.json')
+        reviewed = {(r['frozen_row'], r['field']): r for r in review['fields']}
         for authored, accepted in zip(authored_groups, read('groups.json')):
             self.assertEqual(authored['frozen_row'], accepted['frozen_row'])
             for old, new in zip(authored['senses'], accepted['senses']):
                 self.assertEqual(old['use'], new['use'])
                 self.assertEqual(old['excluded_uses'], new['excluded_uses'])
                 for field in LANGUAGES:
-                    self.assertEqual(old['fields'][field]['text'], new['fields'][field]['text'])
+                    record = reviewed[accepted['frozen_row'], field]
+                    self.assertEqual(old['fields'][field]['text'], record['proposed_text'])
+                    self.assertEqual(new['fields'][field]['text'], record['accepted_text'])
         admitted = read('accepted-replacements.json')
-        self.assertEqual(len(admitted), 4)
-        self.assertEqual({r['frozen_row'] for r in admitted}, {3128})
-        for record in admitted:
+        self.assertEqual(len(admitted), 11)
+        pars_additions = [r for r in admitted if r['frozen_row'] == 3128]
+        self.assertEqual(len(pars_additions), 4)
+        for record in pars_additions:
             self.assertIsNone(record['authored_original_text'])
             self.assertEqual(record['proposed_text'], record['accepted_text'])
 
@@ -216,7 +255,7 @@ class Batch143(unittest.TestCase):
         for decision in boundaries['selected_uses']:
             self.assertTrue(decision['selected_expression_reason'])
             self.assertTrue(decision['support_expression_reason'])
-            if decision['frozen_row'] in RIGHTS_PENDING_ROWS:
+            if decision['frozen_row'] in {3102, 3110, 3115, 3123, 3129, 3141}:
                 self.assertIn('cnrtl.fr/definition/academie8/', decision['original_comparison']['url'])
                 self.assertTrue(decision['original_comparison']['matched_expression'])
         scope = read('scope-recommendation.json')

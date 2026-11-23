@@ -2,7 +2,7 @@
   "ticket": 143,
   "parent": 78,
   "schema": "lexique-d2-content-candidate-handoff-1",
-  "status": "independent_quality_complete_selected_rights_partially_unresolved",
+  "status": "independently_reviewed_content_and_scoped_exceptions_parent_admission_pending",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     3101,
@@ -61,18 +61,18 @@
   "proposed_senses": 50,
   "proposed_fields": 200,
   "source_count": 54,
-  "independently_accepted_new_groups": 44,
-  "independently_accepted_new_fields": 182,
+  "independently_accepted_new_groups": 50,
+  "independently_accepted_new_fields": 200,
   "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-  "resource_admission": "pending_original_expression_clearance_and_coordinator_conversion",
+  "resource_admission": "reviewed_shard_ready_for_coordinator_conversion",
   "unresolved_field_blockers": [],
   "reused_groups": 0,
   "reused_fields": 0,
   "pending_independent_review_rows": [],
   "missing_authored_fields": 0,
-  "independent_quality": "passed",
-  "selected_span_rights": "partially_unresolved_original_expression",
-  "construction_and_spelling_review": "passed",
+  "independent_quality": "passed_for_selected_content",
+  "selected_span_rights": "passed_at_current_selected_text_boundary",
+  "construction_and_spelling_review": "passed_for_selected_uses_and_source_binding_only",
   "final_output_validation": "independent_shard_source_and_admission_checks_passed",
   "native_checks": "integration_owned_not_run",
   "conversion_and_packaging": "integration_owned_not_run",
@@ -122,9 +122,9 @@
   "newly_admitted_fields": 0,
   "author_unresolved_content_rows": [],
   "pending_independent_review_fields": 0,
-  "pending_independent_rights_fields": 18,
+  "pending_independent_rights_fields": 0,
   "author_semantic_scope_check": "All 49 actual proposed uses and 196 authored fields read against their captured definition, POS, IPA and restrictions; this is the author check.",
-  "missing_admitted_fields": 200,
+  "missing_admitted_fields": 0,
   "learner_acceptance": "not_run",
   "quality_fields_passed": 200,
   "quality_unresolved_fields": 0,
@@ -149,132 +149,31 @@
     "approved_on": "2026-11-22",
     "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
   },
-  "unresolved_rights_field_blockers": [
-    {
-      "frozen_row": 3102,
-      "sense_id": "b143-3102-distraire-ver-selected",
-      "field": "french_definition",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished."
-    },
-    {
-      "frozen_row": 3102,
-      "sense_id": "b143-3102-distraire-ver-selected",
-      "field": "english",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3102,
-      "sense_id": "b143-3102-distraire-ver-selected",
-      "field": "chinese",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3110,
-      "sense_id": "b143-3110-impressionnant-adj-selected",
-      "field": "french_definition",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved."
-    },
-    {
-      "frozen_row": 3110,
-      "sense_id": "b143-3110-impressionnant-adj-selected",
-      "field": "english",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3110,
-      "sense_id": "b143-3110-impressionnant-adj-selected",
-      "field": "chinese",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3115,
-      "sense_id": "b143-3115-grève-nom-selected",
-      "field": "french_definition",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established."
-    },
-    {
-      "frozen_row": 3115,
-      "sense_id": "b143-3115-grève-nom-selected",
-      "field": "english",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3115,
-      "sense_id": "b143-3115-grève-nom-selected",
-      "field": "chinese",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3123,
-      "sense_id": "b143-3123-lecture-nom-selected",
-      "field": "french_definition",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved."
-    },
-    {
-      "frozen_row": 3123,
-      "sense_id": "b143-3123-lecture-nom-selected",
-      "field": "english",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3123,
-      "sense_id": "b143-3123-lecture-nom-selected",
-      "field": "chinese",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3129,
-      "sense_id": "b143-3129-congrès-nom-selected",
-      "field": "french_definition",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved."
-    },
-    {
-      "frozen_row": 3129,
-      "sense_id": "b143-3129-congrès-nom-selected",
-      "field": "english",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3129,
-      "sense_id": "b143-3129-congrès-nom-selected",
-      "field": "chinese",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3141,
-      "sense_id": "b143-3141-galerie-nom-selected",
-      "field": "french_definition",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved."
-    },
-    {
-      "frozen_row": 3141,
-      "sense_id": "b143-3141-galerie-nom-selected",
-      "field": "english",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    },
-    {
-      "frozen_row": 3141,
-      "sense_id": "b143-3141-galerie-nom-selected",
-      "field": "chinese",
-      "status": "pending_original_work_territorial_review",
-      "reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff."
-    }
-  ]
+  "unresolved_rights_field_blockers": [],
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "quality_accepted_groups": 50,
+  "quality_accepted_fields": 200,
+  "rights_accepted_fields": 200,
+  "independently_rights_reviewed_fields": 200,
+  "complete_four_field_groups": 50,
+  "complete_group_fields": 200,
+  "accepted_fields_in_complete_groups": 200,
+  "accepted_fields_in_rights_incomplete_groups": 0,
+  "unresolved_rights_fields": 0,
+  "unresolved_quality_fields": 0,
+  "ordinary_content_unresolved_groups": 0,
+  "unresolved_ordinary_groups": 0,
+  "rights_incomplete_groups": 0,
+  "incomplete_four_field_groups": 0,
+  "canonical_pending_fields": 200,
+  "canonical_missing_fields": 200,
+  "missing_fields": 0,
+  "required_content_fields": 200,
+  "missing_eligible_authored_fields": 0,
+  "unchanged_accepted_fields": 193,
+  "replacement_fields": 7,
+  "changed_accepted_fields": 7,
+  "additional_rights_evidence": "rights-fix-review.json",
+  "count_boundary": "50 jointly reviewed groups / 200 fields ready for coordinator assembly; 49 everyday groups and the exact owner-approved pars specialist group. Canonical conversion, combined packaged materials, native execution and learner acceptance remain separate gates."
 }

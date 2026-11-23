@@ -1,0 +1,99 @@
+{
+  "ticket": 143,
+  "role": "separate_independent_reviewer",
+  "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+  "recorded_at_utc": "2026-11-22T23:39:12.665821+00:00",
+  "author_commit": "e2e1cf27e8957dff8b00d80f65152af86f9bb752",
+  "review_base_commit": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
+  "tested_integration_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "reviewed_changes": "Author committed #143 snapshot plus owned independent review records and four approved pars additions.",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-143",
+  "platform": "Windows; PowerShell 7; uv Python 3.14.10",
+  "patch_command": "git diff b69fbf62 -- docs/evidence/issue-143 scripts/test_core_batch_143.py",
+  "retained_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-143\\scoped-review.patch",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-143",
+  "scope": {
+    "frozen_groups": 50,
+    "quality_fields_passed": 200,
+    "quality_uses_passed": 50,
+    "unchanged_authored_fields": 196,
+    "owner_approved_added_fields": 4,
+    "rights_fields_passed": 182,
+    "rights_fields_unresolved": 18,
+    "joint_four_field_groups": 44,
+    "everyday_groups": 49,
+    "approved_specialist_groups": 1,
+    "new_canonical_fields": 0,
+    "missing_canonical_batch_fields": 200
+  },
+  "source_audit": {
+    "status": "passed",
+    "tested_sha": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+    "lexical_raw_api_byte_matches": 54,
+    "span_occurrences_checked": 3567,
+    "author_snapshot_files_verified": 16,
+    "contributor_chains": 4,
+    "contributor_responses": 9,
+    "named_article_memberships": 3203,
+    "anonymous_article_counts": 555,
+    "sentence_authorship_proved": false,
+    "legal_reuse": "US Copyright Office captures reused from reviewer-140 archive; its field verdicts are not reused. New CNRTL original comparisons retained separately."
+  },
+  "owner_approval": "owner-approval.json",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_143.py",
+      "status": "passed",
+      "tests": 4,
+      "archive_log": "audit/GREEN-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-143-review/audit.py",
+      "status": "passed",
+      "archive_log": "audit/source-audit.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "documents": 503,
+      "local_links": 3873,
+      "archive_log": "audit/docs-final.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "archive_log": "audit/diff-check-final.log"
+    },
+    {
+      "command": "git diff --cached --name-only; verify every path is owned",
+      "status": "passed",
+      "archive_log": "audit/changed-paths.txt"
+    }
+  ],
+  "focused_failing_checks": [
+    "audit/RED.log",
+    "audit/RED-owner-admission.log",
+    "audit/RED-admission-metadata.log"
+  ],
+  "unresolved_rights_rows": [
+    3102,
+    3110,
+    3115,
+    3123,
+    3129,
+    3141
+  ],
+  "unrun": [
+    "learner acceptance",
+    "canonical conversion and combined redistribution package",
+    "global specialist registration",
+    "native lookup/save/reopen",
+    "whole-machine offline acceptance",
+    "release readiness"
+  ],
+  "final_commit_record": "External closeout.json binds final commit to this tested checkout and scoped patch.",
+  "integration_merge_logs": [
+    "audit/integration-merge.log",
+    "audit/integration-merge-final.log"
+  ]
+}
