@@ -12,7 +12,7 @@
       "frozen_row": 3922,
       "headword": "haver",
       "lexique_cgram": "VER",
-      "reason": "The retained French source has only a mining sense. No modern everyday sense or owner-approved specialist exception is established.",
+      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
       "source_title": "haver",
       "lines_1_based": [
         5,
@@ -45,13 +45,15 @@
       ],
       "owner_approval": null,
       "admission": "blocked",
-      "independent_review": "pending"
+      "independent_review": "completed_requirement_unresolved",
+      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
+      "owner_decision_proposal": "Explicitly approve the recorded transitive mining sense as a new specialist exception for row 3922, retaining h aspiré, or explicitly approve a zero-field annotation while keeping its denominator row. No exception exists yet."
     },
     {
       "frozen_row": 3944,
       "headword": "da",
       "lexique_cgram": "ONO",
-      "reason": "The retained French source labels the selected use particule, familier and vieilli. A modern everyday ONO use is unestablished.",
+      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
       "source_title": "da",
       "lines_1_based": [
         27,
@@ -84,7 +86,9 @@
       ],
       "owner_approval": null,
       "admission": "blocked",
-      "independent_review": "pending"
+      "independent_review": "completed_requirement_unresolved",
+      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
+      "owner_decision_proposal": "Explicitly approve a zero-field annotation exception for frozen da/ONO, retaining all four missing fields. Alternatively provide evidence for an exact contemporary French ONO use; the recorded old particle cannot be substituted."
     }
   ]
 }

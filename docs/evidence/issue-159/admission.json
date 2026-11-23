@@ -2,7 +2,7 @@
   "ticket": 159,
   "parent": 78,
   "schema": "lexique-d2-content-candidate-handoff-1",
-  "status": "authored_candidates_pending_separate_independent_review",
+  "status": "independently_reviewed_partial_shard_scope_unresolved",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     3901,
@@ -61,16 +61,16 @@
   "proposed_senses": 50,
   "proposed_fields": 200,
   "source_count": 50,
-  "independently_accepted_new_groups": 0,
-  "independently_accepted_new_fields": 0,
+  "independently_accepted_new_groups": 48,
+  "independently_accepted_new_fields": 192,
   "independent_reviewer": null,
-  "resource_admission": "pending_separate_independent_review",
+  "resource_admission": "192_fields_eligible_8_blocked; canonical_resource_not_modified",
   "unresolved_field_blockers": [
     {
       "frozen_row": 3922,
       "headword": "haver",
       "lexique_cgram": "VER",
-      "reason": "The retained French source has only a mining sense. No modern everyday sense or owner-approved specialist exception is established.",
+      "reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved.",
       "source_title": "haver",
       "lines_1_based": [
         5,
@@ -103,13 +103,15 @@
       ],
       "owner_approval": null,
       "admission": "blocked",
-      "independent_review": "pending"
+      "independent_review": "completed_requirement_unresolved",
+      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
+      "owner_decision_proposal": "Explicitly approve the recorded transitive mining sense as a new specialist exception for row 3922, retaining h aspiré, or explicitly approve a zero-field annotation while keeping its denominator row. No exception exists yet."
     },
     {
       "frozen_row": 3944,
       "headword": "da",
       "lexique_cgram": "ONO",
-      "reason": "The retained French source labels the selected use particule, familier and vieilli. A modern everyday ONO use is unestablished.",
+      "reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved.",
       "source_title": "da",
       "lines_1_based": [
         27,
@@ -142,7 +144,9 @@
       ],
       "owner_approval": null,
       "admission": "blocked",
-      "independent_review": "pending"
+      "independent_review": "completed_requirement_unresolved",
+      "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
+      "owner_decision_proposal": "Explicitly approve a zero-field annotation exception for frozen da/ONO, retaining all four missing fields. Alternatively provide evidence for an exact contemporary French ONO use; the recorded old particle cannot be substituted."
     }
   ],
   "reused_groups": 0,
@@ -199,10 +203,10 @@
     3949,
     3950
   ],
-  "independent_quality": "pending",
-  "selected_span_rights": "pending",
-  "construction_and_spelling_review": "pending",
-  "final_output_validation": "author_resource_boundary_check_only",
+  "independent_quality": "192_passed_8_unresolved_scope",
+  "selected_span_rights": "200_passed_at_selected_boundary",
+  "construction_and_spelling_review": "50_inspected_2_scope_unresolved",
+  "final_output_validation": "coordinator_conversion_pending",
   "native_checks": "integration_owned_not_run",
   "conversion_and_packaging": "integration_owned_not_run",
   "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-159",
@@ -259,12 +263,28 @@
   ],
   "ordinary_everyday_candidate_groups": 48,
   "blocked_research_candidate_groups": 2,
-  "pending_independent_review_fields": 200,
-  "pending_independent_rights_fields": 200,
+  "pending_independent_review_fields": 0,
+  "pending_independent_rights_fields": 0,
   "author_semantic_scope_check": "All 50 research uses and 200 fields are bound to captured French definition, POS and IPA. Forty-eight groups have ordinary everyday candidates. Haver remains mining-only and da remains an old-fashioned particle; their everyday/POS eligibility is unresolved.",
-  "missing_admitted_fields": 200,
+  "missing_admitted_fields": 8,
   "learner_acceptance": "not_run",
   "blocked_research_candidate_fields": 8,
   "author_complete_against_everyday_requirement": false,
-  "author_original_expression_status": "pending_separate_exact_origin_audit"
+  "author_original_expression_status": "pending_separate_exact_origin_audit",
+  "independently_eligible_fields": 192,
+  "unresolved_review_fields": 8,
+  "reviewer": "Independent field/use and selected-rights reviewer #159 on codex/d2-review-159; separate from author and integration owner",
+  "review_complete": true,
+  "ticket_complete": false,
+  "original_expression_status": "resolved_at_selected_boundary",
+  "changed_fields": 4,
+  "unchanged_fields": 196,
+  "accepted_unchanged_fields": 188,
+  "accepted_changed_fields": 4,
+  "reviewed_uses": 50,
+  "accepted_uses": 48,
+  "unresolved_uses": 2,
+  "changed_uses": 1,
+  "scope_missing_fields": 8,
+  "canonical_newly_admitted_fields": 0
 }
