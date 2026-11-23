@@ -10,12 +10,38 @@
       "timestamp": "2026-07-31T23:58:05Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=demeurer&oldid=39718634",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=demeurer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "source_specific_selected_expression_review_pending_no_worldwide_public_domain_claim",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "demeurer, fixed French revision 39718634, selected field lines [6, 39]. The selected expression corresponds to the retained original DAF8 wording: Se trouver, rester, être dans un certain état. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "demeurer",
+            "url": "https://www.cnrtl.fr/definition/academie8/demeurer",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-demeurer.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-demeurer.txt",
+            "original_expression": "Se trouver, rester, être dans un certain état.",
+            "plain_text_column_1_based": 3663,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -50,7 +76,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "demeurer, fixed French revision 39718634, selected field lines [6, 39]. The selected expression corresponds to the retained original DAF8 wording: Se trouver, rester, être dans un certain état. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_5154"
     },
     {
       "id": "b151_fr_9784",
@@ -66,7 +95,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -79,8 +108,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "morale, fixed French revision 39704298, selected field lines [7, 49]. The selected expression corresponds to the retained original DAF8 wording: La leçon morale qui s'en dégage The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "morale",
+            "url": "https://www.cnrtl.fr/definition/academie8/morale",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-morale.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-morale.txt",
+            "original_expression": "La leçon morale qui s'en dégage",
+            "plain_text_column_1_based": 1158,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -139,7 +179,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "morale, fixed French revision 39704298, selected field lines [7, 49]. The selected expression corresponds to the retained original DAF8 wording: La leçon morale qui s'en dégage The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_9784"
     },
     {
       "id": "b151_fr_64953",
@@ -155,7 +198,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -168,8 +211,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "droguer, fixed French revision 39753162, selected field lines [7, 15]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -222,7 +266,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "droguer, fixed French revision 39753162, selected field lines [7, 15]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_64953"
     },
     {
       "id": "b151_fr_102767",
@@ -238,7 +285,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -296,7 +343,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "marine, fixed French revision 39720418, selected field lines [212, 213]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_102767"
     },
     {
       "id": "b151_fr_121558",
@@ -312,7 +362,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -325,8 +375,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "construction, fixed French revision 39872742, selected field lines [8, 29]. The selected expression corresponds to the retained original DAF8 wording: des Édifices mêmes que l'on construit. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "construction",
+            "url": "https://www.cnrtl.fr/definition/academie8/construction",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-construction.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-construction.txt",
+            "original_expression": "des Édifices mêmes que l'on construit.",
+            "plain_text_column_1_based": 715,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -386,7 +447,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "construction, fixed French revision 39872742, selected field lines [8, 29]. The selected expression corresponds to the retained original DAF8 wording: des Édifices mêmes que l'on construit. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_121558"
     },
     {
       "id": "b151_fr_135446",
@@ -402,7 +466,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -436,7 +500,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "démocratie, fixed French revision 39431886, selected field lines [9, 10]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_135446"
     },
     {
       "id": "b151_fr_136924",
@@ -452,7 +519,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -487,7 +554,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "beau-frère, fixed French revision 39043396, selected field lines [7, 8]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_136924"
     },
     {
       "id": "b151_fr_155725",
@@ -503,7 +573,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -516,8 +586,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "coucou, fixed French revision 40043481, selected field lines [14, 36]. The selected expression corresponds to the retained original DAF8 wording: Pendule, ordinairement de bois, où il y a une figure d'oiseau qui, lorsque les heures sonnent, se montre à une petite porte et imite le chant du coucou. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "coucou",
+            "url": "https://www.cnrtl.fr/definition/academie8/coucou",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-coucou.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-coucou.txt",
+            "original_expression": "Pendule, ordinairement de bois, où il y a une figure d'oiseau qui, lorsque les heures sonnent, se montre à une petite porte et imite le chant du coucou.",
+            "plain_text_column_1_based": 728,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -573,7 +654,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "coucou, fixed French revision 40043481, selected field lines [14, 36]. The selected expression corresponds to the retained original DAF8 wording: Pendule, ordinairement de bois, où il y a une figure d'oiseau qui, lorsque les heures sonnent, se montre à une petite porte et imite le chant du coucou. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_155725"
     },
     {
       "id": "b151_fr_171484",
@@ -589,7 +673,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -602,8 +686,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "piloter, fixed French revision 37128528, selected field lines [7, 11]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -657,7 +742,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "piloter, fixed French revision 37128528, selected field lines [7, 11]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_171484"
     },
     {
       "id": "b151_fr_173182",
@@ -673,7 +761,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -686,8 +774,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "punition, fixed French revision 39613102, selected field lines [9, 15]. The selected expression corresponds to the retained original DAF8 wording: Châtiment, peine qu'on fait subir pour quelque faute, pour quelque crime. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "punition",
+            "url": "https://www.cnrtl.fr/definition/academie8/punition",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-punition.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-punition.txt",
+            "original_expression": "Châtiment, peine qu'on fait subir pour quelque faute, pour quelque crime.",
+            "plain_text_column_1_based": 623,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -743,7 +842,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "punition, fixed French revision 39613102, selected field lines [9, 15]. The selected expression corresponds to the retained original DAF8 wording: Châtiment, peine qu'on fait subir pour quelque faute, pour quelque crime. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_173182"
     },
     {
       "id": "b151_fr_4823",
@@ -759,7 +861,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -772,8 +874,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "division, fixed French revision 39899141, selected field lines [9, 10]. The selected expression corresponds to the retained original DAF8 wording: Action de diviser ou Résultat de cette action. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "division",
+            "url": "https://www.cnrtl.fr/definition/academie8/division",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-division.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-division.txt",
+            "original_expression": "Action de diviser ou Résultat de cette action.",
+            "plain_text_column_1_based": 519,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -853,7 +966,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "division, fixed French revision 39899141, selected field lines [9, 10]. The selected expression corresponds to the retained original DAF8 wording: Action de diviser ou Résultat de cette action. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_4823"
     },
     {
       "id": "b151_fr_11686",
@@ -869,7 +985,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -882,8 +998,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "embaucher, fixed French revision 39790378, selected field lines [6, 7]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -940,7 +1057,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "embaucher, fixed French revision 39790378, selected field lines [6, 7]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_11686"
     },
     {
       "id": "b151_fr_118097",
@@ -956,7 +1076,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -969,8 +1089,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "gentleman, fixed French revision 39565232, selected field lines [9, 10]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike. The linked figurative gentilhomme expression is separately matched to DAF8; its source is attributed and reviewed."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1027,7 +1148,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "gentleman, fixed French revision 39565232, selected field lines [9, 10]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike. The linked figurative gentilhomme expression is separately matched to DAF8; its source is attributed and reviewed.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_118097"
     },
     {
       "id": "b151_fr_120106",
@@ -1043,7 +1167,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1056,8 +1180,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "affection, fixed French revision 39479996, selected field lines [8, 9]. The selected expression corresponds to the retained original DAF8 wording: Sentiment qui fait qu'on aime quelque personne avec attachement The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "affection",
+            "url": "https://www.cnrtl.fr/definition/academie8/affection",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-affection.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-affection.txt",
+            "original_expression": "Sentiment qui fait qu'on aime quelque personne avec attachement",
+            "plain_text_column_1_based": 522,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1109,7 +1244,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "affection, fixed French revision 39479996, selected field lines [8, 9]. The selected expression corresponds to the retained original DAF8 wording: Sentiment qui fait qu'on aime quelque personne avec attachement The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_120106"
     },
     {
       "id": "b151_fr_148410",
@@ -1125,7 +1263,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1138,8 +1276,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "assommer, fixed French revision 39797856, selected field lines [6, 7]. The selected expression corresponds to the retained original DAF8 wording: Tuer au moyen d'une arme pesante ou par un coup violemment assené. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "assommer",
+            "url": "https://www.cnrtl.fr/definition/academie8/assommer",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-assommer.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-assommer.txt",
+            "original_expression": "Tuer au moyen d'une arme pesante ou par un coup violemment assené.",
+            "plain_text_column_1_based": 514,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1192,7 +1341,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "assommer, fixed French revision 39797856, selected field lines [6, 7]. The selected expression corresponds to the retained original DAF8 wording: Tuer au moyen d'une arme pesante ou par un coup violemment assené. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_148410"
     },
     {
       "id": "b151_fr_154895",
@@ -1208,7 +1360,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1221,8 +1373,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "concernant, fixed French revision 39773380, selected field lines [18, 19]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1274,7 +1427,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "concernant, fixed French revision 39773380, selected field lines [18, 19]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_154895"
     },
     {
       "id": "b151_fr_178430",
@@ -1290,7 +1446,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1303,8 +1459,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "tolérer, fixed French revision 34901534, selected field lines [6, 36]. The selected expression corresponds to the retained original DAF8 wording: supporter chez autrui ce que l'on n'approuve pas. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "tolérer",
+            "url": "https://www.cnrtl.fr/definition/academie8/tol%C3%A9rer",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-tolérer.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-tolérer.txt",
+            "original_expression": "supporter chez autrui ce que l'on n'approuve pas.",
+            "plain_text_column_1_based": 601,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1357,7 +1524,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "tolérer, fixed French revision 34901534, selected field lines [6, 36]. The selected expression corresponds to the retained original DAF8 wording: supporter chez autrui ce que l'on n'approuve pas. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_178430"
     },
     {
       "id": "b151_fr_179502",
@@ -1373,7 +1543,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1386,8 +1556,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "vainqueur, fixed French revision 39839707, selected field lines [8, 24]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1455,7 +1626,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "vainqueur, fixed French revision 39839707, selected field lines [8, 24]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_179502"
     },
     {
       "id": "b151_fr_243344",
@@ -1471,7 +1645,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
@@ -1499,7 +1673,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "fringue, fixed French revision 39404224, selected field lines [10, 11]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_243344"
     },
     {
       "id": "b151_fr_367450",
@@ -1515,7 +1692,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1549,7 +1726,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "rajouter, fixed French revision 37388527, selected field lines [6, 18]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_367450"
     },
     {
       "id": "b151_fr_11413",
@@ -1565,7 +1745,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1578,8 +1758,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "romain, fixed French revision 39722100, selected field lines [11, 38]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1644,7 +1825,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "romain, fixed French revision 39722100, selected field lines [11, 38]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_11413"
     },
     {
       "id": "b151_fr_18517",
@@ -1660,7 +1844,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1697,7 +1881,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "raté, fixed French revision 39797753, selected field lines [29, 30]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_18517"
     },
     {
       "id": "b151_fr_28321",
@@ -1713,7 +1900,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1726,8 +1913,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "soûl, fixed French revision 39709104, selected field lines [9, 14]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1779,7 +1967,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "soûl, fixed French revision 39709104, selected field lines [9, 14]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_28321"
     },
     {
       "id": "b151_fr_33163",
@@ -1795,7 +1986,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1808,8 +1999,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "dalle, fixed French revision 39740491, selected field lines [33, 40]. The selected expression corresponds to the retained original DAF8 wording: Tablette de pierre ou de marbre, de peu d'épaisseur, et destinée à couvrir des terrasses ou à paver des salles, des vestibules, des trottoirs, etc. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "dalle",
+            "url": "https://www.cnrtl.fr/definition/academie8/dalle",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-dalle.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-dalle.txt",
+            "original_expression": "Tablette de pierre ou de marbre, de peu d'épaisseur, et destinée à couvrir des terrasses ou à paver des salles, des vestibules, des trottoirs, etc.",
+            "plain_text_column_1_based": 515,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1881,7 +2083,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "dalle, fixed French revision 39740491, selected field lines [33, 40]. The selected expression corresponds to the retained original DAF8 wording: Tablette de pierre ou de marbre, de peu d'épaisseur, et destinée à couvrir des terrasses ou à paver des salles, des vestibules, des trottoirs, etc. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_33163"
     },
     {
       "id": "b151_fr_152995",
@@ -1897,7 +2102,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1910,8 +2115,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "chapitre, fixed French revision 40056080, selected field lines [9, 11]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1971,7 +2177,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "chapitre, fixed French revision 40056080, selected field lines [9, 11]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_152995"
     },
     {
       "id": "b151_fr_153017",
@@ -1987,7 +2196,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2000,8 +2209,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "chantier, fixed French revision 39771445, selected field lines [10, 32]. The selected expression corresponds to the retained original DAF8 wording: Toute installation dans les industries de construction ou autres. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "chantier",
+            "url": "https://www.cnrtl.fr/definition/academie8/chantier",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-chantier.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-chantier.txt",
+            "original_expression": "Toute installation dans les industries de construction ou autres.",
+            "plain_text_column_1_based": 946,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2072,7 +2292,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "chantier, fixed French revision 39771445, selected field lines [10, 32]. The selected expression corresponds to the retained original DAF8 wording: Toute installation dans les industries de construction ou autres. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_153017"
     },
     {
       "id": "b151_fr_153532",
@@ -2088,7 +2311,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2101,8 +2324,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "cicatrice, fixed French revision 39992482, selected field lines [8, 9]. The selected expression corresponds to the retained original DAF8 wording: Marque des blessures, des plaies, qui reste après la guérison. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "cicatrice",
+            "url": "https://www.cnrtl.fr/definition/academie8/cicatrice",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-cicatrice.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-cicatrice.txt",
+            "original_expression": "Marque des blessures, des plaies, qui reste après la guérison.",
+            "plain_text_column_1_based": 522,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2158,7 +2392,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "cicatrice, fixed French revision 39992482, selected field lines [8, 9]. The selected expression corresponds to the retained original DAF8 wording: Marque des blessures, des plaies, qui reste après la guérison. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_153532"
     },
     {
       "id": "b151_fr_161837",
@@ -2174,7 +2411,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2187,8 +2424,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "foudre, fixed French revision 39851966, selected field lines [11, 12]. The selected expression corresponds to the retained original DAF8 wording: produit une vive lumière et une violente détonation. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "foudre",
+            "url": "https://www.cnrtl.fr/definition/academie8/foudre",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-foudre.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-foudre.txt",
+            "original_expression": "produit une vive lumière et une violente détonation.",
+            "plain_text_column_1_based": 627,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2258,7 +2506,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "foudre, fixed French revision 39851966, selected field lines [11, 12]. The selected expression corresponds to the retained original DAF8 wording: produit une vive lumière et une violente détonation. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_161837"
     },
     {
       "id": "b151_fr_176522",
@@ -2274,7 +2525,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2287,8 +2538,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "siffler, fixed French revision 39838446, selected field lines [9, 10]. The selected expression corresponds to the retained original DAF8 wording: Émettre un son aigu, soit avec les lèvres, soit en soufflant dans un sifflet, dans une clef forée, etc. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "siffler",
+            "url": "https://www.cnrtl.fr/definition/academie8/siffler",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-siffler.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-siffler.txt",
+            "original_expression": "Émettre un son aigu, soit avec les lèvres, soit en soufflant dans un sifflet, dans une clef forée, etc.",
+            "plain_text_column_1_based": 512,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2349,7 +2611,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "siffler, fixed French revision 39838446, selected field lines [9, 10]. The selected expression corresponds to the retained original DAF8 wording: Émettre un son aigu, soit avec les lèvres, soit en soufflant dans un sifflet, dans une clef forée, etc. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_176522"
     },
     {
       "id": "b151_fr_178053",
@@ -2365,7 +2630,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2378,8 +2643,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "tendance, fixed French revision 39773450, selected field lines [7, 13]. The selected expression corresponds to the retained original DAF8 wording: Inclination, penchant. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "tendance",
+            "url": "https://www.cnrtl.fr/definition/academie8/tendance",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-tendance.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-tendance.txt",
+            "original_expression": "Inclination, penchant.",
+            "plain_text_column_1_based": 662,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2432,7 +2708,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "tendance, fixed French revision 39773450, selected field lines [7, 13]. The selected expression corresponds to the retained original DAF8 wording: Inclination, penchant. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_178053"
     },
     {
       "id": "b151_fr_11341",
@@ -2448,7 +2727,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2482,7 +2761,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "petit-fils, fixed French revision 39977399, selected field lines [8, 9]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_11341"
     },
     {
       "id": "b151_fr_121878",
@@ -2498,7 +2780,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2511,8 +2793,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "torture, fixed French revision 39760012, selected field lines [10, 11]. The selected expression corresponds to the retained original DAF8 wording: Souffrance cruelle, tourment qu'on fait souffrir. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "torture",
+            "url": "https://www.cnrtl.fr/definition/academie8/torture",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-torture.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-torture.txt",
+            "original_expression": "Souffrance cruelle, tourment qu'on fait souffrir.",
+            "plain_text_column_1_based": 501,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2565,7 +2858,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "torture, fixed French revision 39760012, selected field lines [10, 11]. The selected expression corresponds to the retained original DAF8 wording: Souffrance cruelle, tourment qu'on fait souffrir. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_121878"
     },
     {
       "id": "b151_fr_137897",
@@ -2581,7 +2877,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2594,8 +2890,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "agression, fixed French revision 39999691, selected field lines [8, 9]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike. The linked fixed French agresser definition is independently reviewed for the selected integrity and attack restrictions."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2647,7 +2944,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "agression, fixed French revision 39999691, selected field lines [8, 9]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike. The linked fixed French agresser definition is independently reviewed for the selected integrity and attack restrictions.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_137897"
     },
     {
       "id": "b151_fr_138248",
@@ -2663,7 +2963,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2676,8 +2976,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "altesse, fixed French revision 38998026, selected field lines [7, 8]. The selected expression corresponds to the retained original DAF8 wording: Titre d'honneur qui se donne à différents princes, en parlant et en écrivant. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "altesse",
+            "url": "https://www.cnrtl.fr/definition/academie8/altesse",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-altesse.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-altesse.txt",
+            "original_expression": "Titre d'honneur qui se donne à différents princes, en parlant et en écrivant.",
+            "plain_text_column_1_based": 508,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2728,7 +3039,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "altesse, fixed French revision 38998026, selected field lines [7, 8]. The selected expression corresponds to the retained original DAF8 wording: Titre d'honneur qui se donne à différents princes, en parlant et en écrivant. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_138248"
     },
     {
       "id": "b151_fr_150229",
@@ -2744,7 +3058,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2757,8 +3071,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "bousiller, fixed French revision 39919156, selected field lines [24, 28]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2812,7 +3127,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "bousiller, fixed French revision 39919156, selected field lines [24, 28]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_150229"
     },
     {
       "id": "b151_fr_159155",
@@ -2828,7 +3146,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2841,8 +3159,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "empirer, fixed French revision 39934755, selected field lines [7, 15]. The selected expression corresponds to the retained original DAF8 wording: Devenir pire, tomber en pire état. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "empirer",
+            "url": "https://www.cnrtl.fr/definition/academie8/empirer",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-empirer.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-empirer.txt",
+            "original_expression": "Devenir pire, tomber en pire état.",
+            "plain_text_column_1_based": 775,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2898,7 +3227,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "empirer, fixed French revision 39934755, selected field lines [7, 15]. The selected expression corresponds to the retained original DAF8 wording: Devenir pire, tomber en pire état. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_159155"
     },
     {
       "id": "b151_fr_163215",
@@ -2914,7 +3246,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2927,8 +3259,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "grossier, fixed French revision 39900244, selected field lines [8, 29]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2992,7 +3325,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "grossier, fixed French revision 39900244, selected field lines [8, 29]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_163215"
     },
     {
       "id": "b151_fr_165766",
@@ -3008,7 +3344,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -3049,7 +3385,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "ivrogne, fixed French revision 39886982, selected field lines [17, 18]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_165766"
     },
     {
       "id": "b151_fr_172804",
@@ -3065,7 +3404,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -3078,8 +3417,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "procéder, fixed French revision 39771851, selected field lines [7, 47]. The selected expression corresponds to the retained original DAF8 wording: Venir à, se mettre à. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "procéder",
+            "url": "https://www.cnrtl.fr/definition/academie8/proc%C3%A9der",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-procéder.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-procéder.txt",
+            "original_expression": "Venir à, se mettre à.",
+            "plain_text_column_1_based": 824,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -3133,7 +3483,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "procéder, fixed French revision 39771851, selected field lines [7, 47]. The selected expression corresponds to the retained original DAF8 wording: Venir à, se mettre à. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_172804"
     },
     {
       "id": "b151_fr_195844",
@@ -3149,7 +3502,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
@@ -3182,7 +3535,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "mouillé, fixed French revision 40003298, selected field lines [9, 10]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_195844"
     },
     {
       "id": "b151_fr_3202",
@@ -3194,12 +3550,38 @@
       "timestamp": "2026-11-22T13:18:29Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=querelle&oldid=40054021",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=querelle&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "source_specific_selected_expression_review_pending_no_worldwide_public_domain_claim",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "querelle, fixed French revision 40054021, selected field lines [9, 10]. The selected expression corresponds to the retained original DAF8 wording: Contestation, démêlé, dispute mêlée d'aigreur et d'animosité. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "querelle",
+            "url": "https://www.cnrtl.fr/definition/academie8/querelle",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-querelle.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-querelle.txt",
+            "original_expression": "Contestation, démêlé, dispute mêlée d'aigreur et d'animosité.",
+            "plain_text_column_1_based": 515,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
       "author_selected_expression_assessments": [
@@ -3226,7 +3608,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "querelle, fixed French revision 40054021, selected field lines [9, 10]. The selected expression corresponds to the retained original DAF8 wording: Contestation, démêlé, dispute mêlée d'aigreur et d'animosité. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_3202"
     },
     {
       "id": "b151_fr_4317",
@@ -3242,7 +3627,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -3294,7 +3679,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "basque, fixed French revision 39462811, selected field lines [11, 12]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_4317"
     },
     {
       "id": "b151_fr_122918",
@@ -3306,12 +3694,38 @@
       "timestamp": "2026-11-02T14:08:42Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=confession&oldid=39978017",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=confession&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Corresponding original expression: Académie française, DAF8 (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "source_specific_selected_expression_review_pending_no_worldwide_public_domain_claim",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "confession, fixed French revision 39978017, selected field lines [9, 24]. The selected expression corresponds to the retained original DAF8 wording: l'Action d'avouer ses péchés à un prêtre pour obtenir le pardon de Dieu. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "confession",
+            "url": "https://www.cnrtl.fr/definition/academie8/confession",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-confession.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-confession.txt",
+            "original_expression": "l'Action d'avouer ses péchés à un prêtre pour obtenir le pardon de Dieu.",
+            "plain_text_column_1_based": 1251,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -3373,7 +3787,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "confession, fixed French revision 39978017, selected field lines [9, 24]. The selected expression corresponds to the retained original DAF8 wording: l'Action d'avouer ses péchés à un prêtre pour obtenir le pardon de Dieu. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_122918"
     },
     {
       "id": "b151_fr_152950",
@@ -3389,7 +3806,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -3402,8 +3819,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "chanceux, fixed French revision 39918336, selected field lines [7, 8]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -3455,7 +3873,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "chanceux, fixed French revision 39918336, selected field lines [7, 8]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_152950"
     },
     {
       "id": "b151_fr_158336",
@@ -3471,7 +3892,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -3484,8 +3905,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "douzaine, fixed French revision 39716091, selected field lines [8, 9]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -3537,7 +3959,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "douzaine, fixed French revision 39716091, selected field lines [8, 9]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_158336"
     },
     {
       "id": "b151_fr_165149",
@@ -3553,7 +3978,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -3588,7 +4013,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "insensé, fixed French revision 39848861, selected field lines [8, 12]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_165149"
     },
     {
       "id": "b151_fr_166714",
@@ -3604,7 +4032,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -3617,8 +4045,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "localiser, fixed French revision 39481745, selected field lines [6, 7]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -3672,7 +4101,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "localiser, fixed French revision 39481745, selected field lines [6, 7]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_166714"
     },
     {
       "id": "b151_fr_173618",
@@ -3688,7 +4120,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -3701,8 +4133,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "quoique, fixed French revision 37123963, selected field lines [9, 10]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -3755,7 +4188,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "quoique, fixed French revision 37123963, selected field lines [9, 10]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_173618"
     },
     {
       "id": "b151_fr_175122",
@@ -3771,7 +4207,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -3784,8 +4220,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "révérend, fixed French revision 39238684, selected field lines [38, 39]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -3836,7 +4273,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "révérend, fixed French revision 39238684, selected field lines [38, 39]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_175122"
     },
     {
       "id": "b151_fr_564617",
@@ -3852,7 +4292,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
@@ -3883,7 +4323,10 @@
           "independent_review": "pending",
           "reviewer": null
         }
-      ]
+      ],
+      "selected_text_rights_reason": "chiotte, fixed French revision 39434004, selected field lines [7, 8]. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_564617"
     },
     {
       "id": "b151_fr_8100",
@@ -3899,7 +4342,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -3914,7 +4357,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_selected_expression_assessments": []
+      "author_selected_expression_assessments": [],
+      "selected_text_rights_reason": "agresser, fixed French revision 38463949, selected field lines []. The selected span expresses independently inspected lexical facts and grammatical restrictions. The retained DAF8 comparator supplies no corresponding distinctive selected expression; an absent entry or a different sense is not treated as an original-text match. Short synonym, relational, action or quantity formulations are ordinary lexical facts; newly scoped Lexique explanations do not borrow neighbouring quotations, bibliography, media or etymology. Article import/reference markers describe context and are not evidence of selected-sentence authorship or permission for an external modern work. Fixed wiki and Lexique adaptation layers retain CC BY-SA 4.0, contributor histories, modification notices and ShareAlike.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_8100"
     },
     {
       "id": "b151_fr_162596",
@@ -3930,7 +4376,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -3943,8 +4389,19 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending",
-          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred."
+          "independent_review": "passed_at_original_work_boundary",
+          "territorial_boundary": "Established original French collective-work expiry only; no worldwide or modern electronic editorial-work licence inferred.",
+          "review_reason": "gentilhomme, fixed French revision 39926088, selected field lines []. The selected expression corresponds to the retained original DAF8 wording: de Celui qui, sans être noble de race, a des sentiments, des manières nobles. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+          "original_expression_evidence": {
+            "dictionary": "DAF8",
+            "original_title": "gentilhomme",
+            "url": "https://www.cnrtl.fr/definition/academie8/gentilhomme",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-gentilhomme.html",
+            "plain_text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-151\\originals\\daf8-gentilhomme.txt",
+            "original_expression": "de Celui qui, sans être noble de race, a des sentiments, des manières nobles.",
+            "plain_text_column_1_based": 884,
+            "capture_format": "cnrtl_daf8_original_edition_html"
+          }
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -3956,7 +4413,10 @@
           "selected_boundary": "Article-level eighth-edition import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_selected_expression_assessments": []
+      "author_selected_expression_assessments": [],
+      "selected_text_rights_reason": "gentilhomme, fixed French revision 39926088, selected field lines []. The selected expression corresponds to the retained original DAF8 wording: de Celui qui, sans être noble de race, a des sentiments, des manières nobles. The institutional collective eighth edition was published 1932–1935; the established CPI L123-3 original-work basis gives conservative French expiry 2006-01-01. The identified historical expression, fixed wiki transcription/adaptation and Lexique adaptation are distinct layers; the latter layers retain CC BY-SA 4.0. The electronic page supplies original-expression evidence, not permission to copy its modern layout or editorial material.",
+      "reviewer": "Main agent reviewing issue 151 independently of its author",
+      "original_expression_evidence": "original-expression-review.json#b151_fr_162596"
     }
   ]
 }

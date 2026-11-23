@@ -1,19 +1,19 @@
-# Independent review handoff for #151
+# Independent content review for #151
 
-Independent review is pending. No reviewer identity or approval is asserted.
-The [authored proposals](authored/groups.json), [field ledger](field-review.json),
-[rights ledger](rights.json), [original-expression assessments](original-expression-proposals.json)
-and [modern-use capture](modern-usage-corroboration.json) are the review inputs.
+All 50 frozen groups, 200 selected fields and 50 everyday uses passed separate
+review of actual retained French definitions, IPA, English/Chinese explanations,
+POS/spelling frames, construction and register restrictions, and selected rights.
+The reviewer is the main agent, independently of the issue's author.
 
-Inspect all 200 exact fields and 50 uses against their fixed French/POS frames,
-IPA variants, constructions, register, gender/number and excluded senses.
-Particular review points are marine’s invariable colour use, gentleman’s linked
-modern manners explanation, fringue’s uncertain source gender, raté’s insulting
-person sense, chiotte’s singular identity and usual plural use, and quoique’s
-subjunctive concession. No aliases or annotation exceptions are proposed.
+[Authored records](authored/groups.json) preserve the author's proposed text.
+[Field decisions](field-review.json) and [accepted replacements](accepted-replacements.json)
+retain exact proposed/accepted wording and reasons. The construction noun
+denotes the building itself, including a completed building. The rights ledger
+and [original-expression review](original-expression-review.json) distinguish
+historical originals, fixed wiki contributions and Lexique adaptations.
 
-Assess original-expression rights separately from contributor licensing and
-author proposals; no article import marker establishes sentence authorship.
-Record actual reviewer decisions and any exact accepted replacements separately
-from the preserved author proposals. Then hand accepted inputs to the coordinator
-for canonical conversion, actual notices and native batch/save/reopen checks.
+The source audit verified all 52 fixed pages, 250 field/use spans, 1,000 supporting
+occurrences and nine complete contributor parts. The focused construction
+regression passed; the full batch and document checks are recorded in the review
+archive. Canonical conversion, native lookup/save/reopen and combined notices
+remain coordinator gates. The fixed denominator is 4,087 groups; CEFR is unknown.
