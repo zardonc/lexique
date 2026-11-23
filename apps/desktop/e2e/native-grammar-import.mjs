@@ -132,10 +132,10 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     await region.getByRole('button', { name: '确认导入', exact: true }).click();
     await expect(region.getByRole('alert')).toContainText('Committed response lost');
     const commit = await page.evaluate(() => window.grammarImportCalls.find((call) => call.command === 'note_import_commit'));
-    const before = readState(destination);
     const [saved] = await records();
     assert.ok(saved.card); assert.equal((await records()).length, 1);
     assert.equal(sqlPause()[0].paused, saved.id); assert.deepEqual(await queue(), []);
+    const before = readState(destination);
     await confirm();
     const retried = await page.evaluate(() => window.grammarImportCalls.filter((call) => call.command === 'note_import_commit').at(-1));
     assert.deepEqual(retried, commit);
