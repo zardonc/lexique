@@ -77,7 +77,10 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
     await writeFile(renamed, '# Lexique grammar note v1\n\n' + section('exchange_id', 'native-markdown-216') + section('title', 'Renamed') + section('body', '') + section('question', ' ') + section('answer', '\t'));
     await picker('导入语法 Markdown', renamed); await region.getByLabel('导入决定：Renamed').selectOption('update'); await confirm();
     [saved] = await records(); assert.equal(saved.body, ''); assert.equal(saved.card.question, question); assert.equal(saved.card.answer, answer);
-    const invalid = join(destination, 'invalid.md');
+    evidence.sqlite = sqlPause(); evidence.checks.push('T28/T29/T31/T37: real Markdown file picker, saved export, raw text, identity rename, omitted and empty body, blank pair and failed update rollback');
+  } else if (scenario === 'grammar-markdown-validation') {
+    const before = readState(destination), invalid = join(destination, 'invalid.md');
+    const section = (name, value) => `## ${name}\n\n\`\`\`text\n${value}\n\`\`\`\n\n`;
     for (const [content, reason] of [
       ['# Lexique note v1\n', 'template identifier'],
       ['# Lexique grammar note v1\n', '## title'],
@@ -89,7 +92,8 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
       await region.getByRole('button', { name: '取消导入', exact: true }).click();
     }
     await picker('导入语法 Markdown', ''); await expect(region.getByRole('status')).toContainText('已取消');
-    evidence.sqlite = sqlPause(); evidence.checks.push('T28-T31/T37: real Markdown file picker, saved export, raw text, identity rename, omitted and empty body, blank pair, invalid marker, cancellation and failed update rollback');
+    compareLearning(readState(destination), before);
+    evidence.checks.push('T30/T37: wrong marker, missing title, incomplete pair and real picker cancellation leave learning unchanged');
   } else if (scenario === 'grammar-markdown-restart') {
     const [saved] = await records(); assert.equal(saved.title, 'Renamed'); assert.equal(saved.body, '');
     assert.equal(saved.card.question, question); assert.equal(saved.card.answer, answer);
