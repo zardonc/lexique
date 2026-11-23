@@ -6,6 +6,7 @@ import { characterCount, errorMessage } from './platform/vocabulary';
 import type { NotebookText } from './notebook-content';
 import { CategoryPicker } from './learning-categories';
 import type { LearningCategories } from './learning-categories';
+import { NoteExport } from './note-export';
 
 function useGrammarPause(runtime: RuntimeAdapter, id: number) {
   const [paused, setPaused] = useState<boolean>(), [busy, setBusy] = useState(false), [error, setError] = useState('');
@@ -108,6 +109,8 @@ export function GrammarEditor({ notebook, categories, runtime, text, onChanged }
         <span role="status">{grammarSaveStatus(notebook, text)}</span></div>
     </fieldset>
     <GrammarCardEditor notebook={notebook} runtime={runtime} text={text} onChanged={onChanged} />
+    {editor.record && <NoteExport key={editor.record.id} runtime={runtime} text={text.grammarExportText}
+      scope={{ kind: 'single', id: editor.record.id }} recordKind="grammar" disabled={notebook.busy} />}
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     <GrammarConflict notebook={notebook} text={text} /><GrammarDelete notebook={notebook} text={text} onChanged={onChanged} />
   </section>;

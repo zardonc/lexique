@@ -472,7 +472,7 @@ fn external_manual_double_cards_keep_progress_and_pause_and_mixed_real_backup_re
     let staging = fixture.0.join("preview");
     std::fs::create_dir(&staging).unwrap();
     let admitted = crate::backup::validate_backup(&archive, &staging, &cancelled).unwrap();
-    assert_eq!(admitted.manifest.snapshot_version, 4);
+    assert_eq!(admitted.manifest.snapshot_version, 5);
     let restore_path = fixture.0.join("restored.sqlite3");
     let mut restored = Connection::open(&restore_path).unwrap();
     initialize(&restored).unwrap();

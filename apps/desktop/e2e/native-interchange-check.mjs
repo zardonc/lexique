@@ -5,12 +5,18 @@ import { cp, readFile, writeFile, rename } from 'node:fs/promises';
 import { isAbsolute, join, relative, resolve } from 'node:path';
 import { expect } from '@playwright/test';
 import { native24Fixture } from './native-24-harness.mjs';
-import { inspectPackage, readState, seedAudio, compareLearning } from './native-backup-state.mjs';
+import { inspectPackage, readState, seedAudio, compareLearning, fixtureSql } from './native-backup-state.mjs';
 
 const [resources, binary, destinationPath, scenario, source] = process.argv.slice(2);
-assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names'].includes(scenario));
+assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary'].includes(scenario));
 const fixture = await native24Fixture(resources, binary, destinationPath);
 const { destination } = fixture;
+const revision = spawnSync('git', ['rev-parse', 'HEAD', 'HEAD^{tree}'], { encoding: 'utf8', windowsHide: true, timeout: 5000 });
+const status = spawnSync('git', ['status', '--porcelain'], { encoding: 'utf8', windowsHide: true, timeout: 5000 });
+assert.equal(revision.status, 0, revision.stderr); assert.equal(status.status, 0, status.stderr);
+const [sourceSha, sourceTree] = revision.stdout.trim().split(/\r?\n/);
+await writeFile(join(destination, 'run-metadata.json'), JSON.stringify({ ...JSON.parse(await readFile(join(destination, 'run-metadata.json'), 'utf8')),
+  sourceSha, sourceTree, dirty: Boolean(status.stdout.trim()), platform: process.platform, architecture: process.arch }, null, 2));
 const evidence = { scenario, checks: [], pickers: [] };
 let page;
 const invoke = (command, args = {}) => page.evaluate(({ command, args }) => window.__TAURI_INTERNALS__.invoke(command, args), { command, args });
@@ -255,7 +261,7 @@ async function backup() {
   const filename = join(destination, 'interchange.lexique-backup'); await picker('Create backup', filename, true);
   await expect.poll(async () => (await latest('lexique-backup-progress'))?.state).toBe('completed');
   const exported = await latest('lexique-backup-progress'), archive = inspectPackage(destination, filename);
-  assert.equal(archive.snapshot.snapshot_version, 4); assert.ok(archive.snapshot.records.some((record) => record.import_source?.format === 'csv'));
+  assert.equal(archive.snapshot.snapshot_version, 5); assert.ok(archive.snapshot.records.some((record) => record.import_source?.format === 'csv'));
   assert.ok(archive.snapshot.records.some((record) => record.import_source?.format === 'zip'));
   assert.ok(archive.snapshot.grammar_records.length); assert.ok(archive.entries.some((name) => name.startsWith('audio/')));
   const extra = (await invoke('grammar_save', { request: { operation: 'native-after-backup', id: null, revision: null, title: 'After backup', body: '', category_ids: [] } })).record;
@@ -269,15 +275,140 @@ async function backup() {
   assert.deepEqual((await invoke('speech_cached', { vocabularyId: rich.id })).bytes, audio.bytes);
   evidence.counts = exported.result.counts; evidence.checks.push('complete real backup, external provenance, ordinary/rich and grammar notes, categories, progress, selected audio and controlled restore/restart');
 }
+
+const grammars = () => invoke('grammar_list', { query: '', sort: 'created-asc' });
+async function grammarSeed() {
+  const category = await invoke('category_create', { name: 'Private grammar category' });
+  const records = [];
+  for (let index = 0; index < 3; index++) {
+    records.push((await invoke('grammar_save', { request: { operation: `grammar-seed-${index}`, id: null, revision: null,
+      title: 'Une règle', body: '  été, "中文"\r\nencore\n  ', category_ids: index === 0 ? [category.id] : [] } })).record);
+  }
+  const identities = readState(destination).grammar_exchange_identities;
+  const renamed = records[2];
+  records[2] = (await invoke('grammar_save', { request: { operation: 'grammar-renamed', id: renamed.id, revision: renamed.revision,
+    title: 'Autre règle', body: renamed.body, category_ids: renamed.category_ids } })).record;
+  assert.deepEqual(readState(destination).grammar_exchange_identities, identities);
+  for (const [index, record] of records.slice(0, 2).entries()) {
+    records[index] = (await invoke('grammar_card_save', { request: { operation: `grammar-card-${index}`, id: record.id, revision: record.revision,
+      question: '  Pourquoi, "中文" ?\n  ', answer: '  Réponse indépendante\r\n  ' } })).record;
+  }
+  await invoke('review_queue', { timezone: 'UTC', skipped: [] });
+  await invoke('review_rate', { request: { operation: 'grammar-rating', card_id: records[0].card.id, expected_revision: 0, rating: 'easy', timezone: 'UTC' } });
+  await invoke('review_pause', { vocabularyId: records[0].id, paused: true });
+  await invoke('vocabulary_save', { request: request('grammar-vocabulary', 'or', 'Preserved vocabulary') });
+  evidence.checks.push('independent duplicate-title/content grammar records, edited paired cards, category, learned progress/history, paused and active cards, vocabulary');
+}
+
+function grammarRows(filename) {
+  return python("import csv,json,pathlib,sys\np=pathlib.Path(sys.argv[1]); b=p.read_bytes(); assert b[:3]==b'\\xef\\xbb\\xbf'\nwith p.open(encoding='utf-8-sig',newline='') as f:\n r=csv.DictReader(f); assert r.fieldnames==['exchange_id','title','body','question','answer']; print(json.dumps(list(r),ensure_ascii=False))", [filename]);
+}
+
+async function grammarCsv() {
+  const records = await grammars(), before = readState(destination);
+  assert.equal(before.grammar_exchange_identities.length, 3);
+  assert.equal(new Set(before.grammar_exchange_identities.map((item) => item.exchange_id)).size, 3);
+  if (evidence.beforeMigration) {
+    const { grammar_exchange_identities: ignoredIdentities, ...previous } = evidence.beforeMigration;
+    const { grammar_exchange_identities: newIdentities, ...migrated } = before;
+    assert.equal(ignoredIdentities.length, 3); assert.equal(newIdentities.length, 3);
+    assert.deepEqual(migrated, previous);
+  }
+  await notebook(); await page.getByRole('tab', { name: '语法', exact: true }).click();
+  await page.getByLabel('排序方式').selectOption('headword-desc');
+  await page.getByRole('searchbox', { name: '搜索语法标题或正文', exact: true }).fill('une regle');
+  await expect(page.locator('.vocabulary-list li')).toHaveCount(2);
+  await page.getByRole('button', { name: '导出 CSV', exact: true }).click();
+  const dialog = page.getByRole('dialog', { name: '导出语法笔记' });
+  await expect(dialog).toContainText('2 条语法记录');
+  await picker('保存 CSV', '', true); await expect(dialog).toContainText('已取消');
+  const filename = join(destination, 'grammar-search.csv');
+  await picker('保存 CSV', filename, true); await expect(dialog.getByRole('status').last()).toHaveText('已导出');
+  const rows = grammarRows(filename);
+  assert.deepEqual(rows.map((row) => row.exchange_id), before.grammar_exchange_identities.slice(0, 2).reverse().map((item) => item.exchange_id));
+  assert.equal(rows[0].body, records[0].body); assert.equal(rows[0].question, records[1].card.question); assert.equal(rows[0].answer, records[1].card.answer);
+  await dialog.getByLabel('导出范围').selectOption('all'); await expect(dialog).toContainText('3 条语法记录');
+  const allFile = join(destination, 'grammar-all.csv'); await picker('保存 CSV', allFile, true);
+  const all = grammarRows(allFile); assert.equal(all.length, 3); assert.equal(all.filter((row) => !row.question && !row.answer).length, 1);
+  await dialog.getByRole('button', { name: '关闭', exact: true }).click();
+  await page.locator('.vocabulary-list button').first().click();
+  const selected = records[1];
+  await page.getByLabel('语法标题', { exact: true }).fill('Unsaved title');
+  await page.getByLabel('语法正文', { exact: true }).fill('Unsaved body');
+  await page.locator('.grammar-editor').getByRole('button', { name: '导出 CSV', exact: true }).click();
+  const singleFile = join(destination, 'grammar-single.csv'); await picker('保存 CSV', singleFile, true);
+  const single = grammarRows(singleFile); assert.equal(single.length, 1); assert.equal(single[0].title, selected.title); assert.equal(single[0].body, selected.body);
+  assert.equal(single[0].exchange_id, rows[0].exchange_id);
+  await dialog.getByRole('button', { name: '关闭', exact: true }).click();
+  compareLearning(readState(destination), { ...before, preferences: readState(destination).preferences });
+  evidence.csv = { rows, all, single }; evidence.checks.push('T01–T05/T08/T37: real schema-20 migration, all/search/single saved CSV, counts/order, raw paired text, absent cards, unsaved drafts excluded, cancellation then save');
+}
+
+async function grammarBackup() {
+  await invoke('interface_preferences', { preferences: { locale: 'en', theme: 'white' } });
+  await page.reload(); await expect(page.getByRole('banner')).toBeVisible();
+  await page.getByRole('button', { name: 'Settings', exact: true }).click();
+  await invoke('review_auto_enroll', { enabled: false });
+  for (const [command, argument] of [['review_settings', 'settings'], ['speech_preferences', 'preferences'], ['conjugation_preferences', 'preferences'], ['conjugation_block_order', 'order'], ['vocabulary_sort', 'sort'], ['grammar_sort', 'sort']]) {
+    const value = await invoke(command, { [argument]: null }); await invoke(command, { [argument]: value });
+  }
+  const catalog = await invoke('dictionary_settings', { order: null });
+  await invoke('dictionary_settings', { order: catalog.map((entry) => entry.id) });
+  await page.evaluate(async () => {
+    window.grammarBackupEvents = [];
+    for (const event of ['lexique-backup-progress', 'lexique-backup-preview-progress']) await window.__TAURI_INTERNALS__.invoke('plugin:event|listen', { event, target: { kind: 'Any' },
+      handler: window.__TAURI_INTERNALS__.transformCallback((value) => window.grammarBackupEvents.push({ event, payload: value.payload }), false) });
+  });
+  const latest = (event) => page.evaluate((event) => window.grammarBackupEvents.filter((value) => value.event === event).at(-1)?.payload, event);
+  const before = readState(destination), original = await grammars();
+  const filename = join(destination, 'grammar.lexique-backup');
+  await picker('Create backup', filename, true);
+  await expect.poll(async () => (await latest('lexique-backup-progress'))?.state).toBe('completed');
+  const archive = inspectPackage(destination, filename); assert.equal(archive.snapshot.snapshot_version, 5);
+  assert.deepEqual(archive.snapshot.grammar_exchange_identities, before.grammar_exchange_identities);
+  let restoreFile = filename;
+  if (scenario === 'grammar-legacy') {
+    restoreFile = join(destination, 'legacy-v4.lexique-backup');
+    python("import zipfile,json,sys\nwith zipfile.ZipFile(sys.argv[1]) as src, zipfile.ZipFile(sys.argv[2],'w',compression=zipfile.ZIP_STORED) as out:\n for name in src.namelist():\n  data=src.read(name)\n  if name in ['manifest.json','snapshot.json']:\n   value=json.loads(data); value['snapshot_version']=4; value.pop('grammar_exchange_identities',None); data=json.dumps(value,ensure_ascii=False).encode()\n  out.writestr(name,data)", [filename, restoreFile]);
+  }
+  await invoke('grammar_save', { request: { operation: 'after-grammar-backup', id: null, revision: null, title: 'After backup', body: '', category_ids: [] } });
+  await picker('Choose backup', restoreFile);
+  await expect.poll(async () => (await latest('lexique-backup-preview-progress'))?.state).toBe('preview_ready');
+  await page.getByRole('button', { name: 'Restore the whole backup', exact: true }).click();
+  const dialog = page.getByRole('dialog', { name: 'Confirm whole-backup restore' }); await dialog.getByRole('checkbox').check();
+  page = await fixture.followRestart(() => dialog.getByRole('button', { name: 'Confirm and restore', exact: true }).click()); page.setDefaultTimeout(8000); await page.context().setOffline(true);
+  await expect.poll(async () => (await invoke('startup_status')).state).toBe('ready');
+  assert.deepEqual(await grammars(), original);
+  const after = readState(destination);
+  compareLearning(after, scenario === 'grammar-legacy' ? { ...before, grammar_exchange_identities: after.grammar_exchange_identities } : before);
+  assert.equal(after.grammar_exchange_identities.length, 3);
+  const snapshot = await invoke('note_export_snapshot', { scope: { kind: 'all', sort: 'created-asc' }, recordKind: 'grammar' }); assert.equal(snapshot.records, 3);
+  evidence.checks.push(scenario === 'grammar-legacy' ? 'T07: real v4 backup preview, complete restore/restart, assigned identities with unchanged learning state' : 'T06/T38: real v5 backup/restore/restart preserves grammar/exchange identities, vocabulary, classification, cards, progress, history and pause');
+}
+async function grammarVocabulary() {
+  await page.getByRole('banner').getByRole('combobox').first().selectOption('zh');
+  const before = readState(destination), filename = join(destination, 'vocabulary.csv');
+  await notebook(); await exportCsv(filename);
+  const rows = python("import csv,json,sys\nwith open(sys.argv[1],encoding='utf-8-sig',newline='') as f: print(json.dumps(list(csv.DictReader(f)),ensure_ascii=False))", [filename]);
+  assert.deepEqual(rows, [{ headword: 'or', notes: 'Preserved vocabulary', example_fr: '', example_zh: '' }]);
+  compareLearning(readState(destination), before);
+  evidence.checks.push('T38: existing vocabulary CSV export retains its four fields and leaves grammar and all learning data intact');
+}
 try {
   for (const name of ['conjugation', 'frequency']) await cp(join(resolve(resources), name), join(destination, name), { recursive: true });
   if (source) {
-    const owned = relative(resolve('../../target/issue-189'), resolve(source)); assert.ok(owned && !owned.startsWith('..') && !isAbsolute(owned));
+    const owned = relative(resolve(scenario.startsWith('grammar-') ? '../../target/ticket-213' : '../../target/issue-189'), resolve(source)); assert.ok(owned && !owned.startsWith('..') && !isAbsolute(owned));
     await cp(join(resolve(source), 'Lexique-data'), join(destination, 'Lexique-data'), { recursive: true, filter: (path) => !path.includes('webview') });
-    evidence.initialCsv = JSON.parse(await readFile(join(resolve(source), 'results.json'), 'utf8')).initialCsv;
+    if (scenario.startsWith('grammar-')) evidence.sourceIdentities = readState(resolve(source)).grammar_exchange_identities;
+    if (!scenario.startsWith('grammar-')) evidence.initialCsv = JSON.parse(await readFile(join(resolve(source), 'results.json'), 'utf8')).initialCsv;
+    if (scenario === 'grammar-csv') {
+      evidence.beforeMigration = readState(destination);
+      fixtureSql(destination, "c.executescript('DROP TRIGGER grammar_exchange_identity_insert; DROP TABLE grammar_exchange_identities; PRAGMA user_version=20;'); c.commit()", {});
+    }
   }
   page = await fixture.start(); page.setDefaultTimeout(8000); await page.context().setOffline(true); await expect(page.getByRole('banner')).toBeVisible();
-  await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames })[scenario]();
+  if (evidence.sourceIdentities && scenario !== 'grammar-csv') assert.deepEqual(readState(destination).grammar_exchange_identities, evidence.sourceIdentities);
+  await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary })[scenario]();
   if (scenario !== 'seed') { evidence.records = await words(); await page.screenshot({ path: join(destination, 'native-interchange.png') }); await fixture.stop(true); }
   evidence.state = readState(destination);
   await writeFile(join(destination, 'results.json'), JSON.stringify(evidence, null, 2)); console.log(JSON.stringify({ scenario, passed: true, checks: evidence.checks.length }));

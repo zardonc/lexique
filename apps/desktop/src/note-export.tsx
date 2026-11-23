@@ -19,14 +19,17 @@ function ExportCounts({ snapshot, text }: { readonly snapshot: NoteExportSnapsho
   return <p role="status">{snapshot.records} {text.records} · {snapshot.rows} {text.rows}{snapshot.records === 0 && <> — {text.empty}</>}</p>;
 }
 
-function MarkdownSave({ single, disabled, text, save }: {
+function MarkdownSave({ single, disabled, text, save, available }: {
   readonly single: boolean; readonly disabled: boolean; readonly text: NoteExportText; readonly save: (format: 'markdown' | 'zip') => void;
+  readonly available: boolean;
 }) {
+  if (!available) return null;
   return <button disabled={disabled} onClick={() => save(single ? 'markdown' : 'zip')}>{single ? text.saveMarkdown : text.saveZip}</button>;
 }
 
-function ExportDialog({ runtime, scope, text, close }: {
+function ExportDialog({ runtime, scope, text, close, recordKind }: {
   readonly runtime: RuntimeAdapter; readonly scope: NoteExportScope; readonly text: NoteExportText; readonly close: () => void;
+  readonly recordKind?: 'grammar';
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [selection, setSelection] = useState<NoteExportScope>(scope);
@@ -36,10 +39,10 @@ function ExportDialog({ runtime, scope, text, close }: {
   useEffect(() => {
     let cancelled = false;
     setSnapshot(undefined); setError(''); setResult('');
-    void runtime.noteExportSnapshot(selection).then((value) => { if (!cancelled) setSnapshot(value); })
+    void runtime.noteExportSnapshot(selection, recordKind).then((value) => { if (!cancelled) setSnapshot(value); })
       .catch((cause: unknown) => { if (!cancelled) setError(errorMessage(cause)); });
     return () => { cancelled = true; };
-  }, [runtime, selection, retry]);
+  }, [runtime, selection, retry, recordKind]);
   async function save(format: 'csv' | 'markdown' | 'zip' = 'csv') {
     if (!snapshot || busy) return;
     setBusy(true); setError(''); setResult('');
@@ -58,25 +61,27 @@ function ExportDialog({ runtime, scope, text, close }: {
     {error && <p role="alert">{error} <button disabled={busy} onClick={() => setRetry((value) => value + 1)}>{text.retry}</button></p>}
     {result && <p role="status">{result}</p>}
     <div className="actions"><button disabled={busy || !snapshot?.records} onClick={() => { void save(); }}>{busy ? text.busy : text.save}</button>
-      <MarkdownSave single={scope.kind === 'single'} disabled={busy || !snapshot?.records} text={text} save={(format) => { void save(format); }} />
+      <MarkdownSave available={!recordKind} single={scope.kind === 'single'} disabled={busy || !snapshot?.records} text={text} save={(format) => { void save(format); }} />
       <button disabled={busy} onClick={close}>{text.close}</button></div>
   </dialog>;
 }
 
-export function NoteExport({ runtime, scope, text, disabled = false }: {
+export function NoteExport({ runtime, scope, text, disabled = false, recordKind }: {
   readonly runtime: RuntimeAdapter; readonly scope: NoteExportScope; readonly text: NoteExportText; readonly disabled?: boolean;
+  readonly recordKind?: 'grammar';
 }) {
   const [open, setOpen] = useState(false);
   return <><button disabled={disabled} onClick={() => setOpen(true)}>{text.open}</button>
-    {scope.kind === 'single' && <button disabled={disabled} onClick={() => setOpen(true)}>{text.openMarkdown}</button>}
-    {open && <ExportDialog runtime={runtime} scope={scope} text={text} close={() => setOpen(false)} />}</>;
+    {!recordKind && scope.kind === 'single' && <button disabled={disabled} onClick={() => setOpen(true)}>{text.openMarkdown}</button>}
+    {open && <ExportDialog runtime={runtime} scope={scope} text={text} recordKind={recordKind} close={() => setOpen(false)} />}</>;
 }
 
-export function NotebookExport({ runtime, kind, sort, query, category, disabled, loaded, text }: {
+export function NotebookExport({ runtime, kind, sort, query, category, disabled, loaded, text, grammarText }: {
   readonly runtime: RuntimeAdapter; readonly kind: string; readonly sort?: VocabularySort; readonly query: string;
   readonly category: CategoryFilter; readonly disabled: boolean; readonly loaded: boolean; readonly text: NoteExportText;
+  readonly grammarText: NoteExportText;
 }) {
-  return kind === 'vocabulary' && sort && <NoteExport runtime={runtime} text={text}
+  return sort && <NoteExport key={kind} runtime={runtime} text={kind === 'grammar' ? grammarText : text} recordKind={kind === 'grammar' ? 'grammar' : undefined}
     scope={{ kind: 'search', query, sort, category }} disabled={disabled || !loaded} />;
 }
 

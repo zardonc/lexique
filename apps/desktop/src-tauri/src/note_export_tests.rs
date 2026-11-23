@@ -10,6 +10,88 @@ use super::write_note_csv;
 
 static NEXT_DIRECTORY: AtomicU64 = AtomicU64::new(1);
 static NEXT_OPERATION: AtomicU64 = AtomicU64::new(1);
+
+#[test]
+fn grammar_csv_preserves_saved_pairs_and_reports_real_write_failure() {
+    let fixture = Fixture::new();
+    let mut connection = Connection::open(fixture.0.join("grammar.sqlite3")).unwrap();
+    initialize(&connection).unwrap();
+    let record = lexique_storage::save_grammar(
+        &connection,
+        &lexique_storage::GrammarSaveRequest {
+            operation: "csv-grammar".into(),
+            id: None,
+            revision: None,
+            title: "Été, 中文".into(),
+            body: "  \"texte\"\r\nencore\n  ".into(),
+            category_ids: vec![],
+        },
+        1000,
+    )
+    .unwrap()
+    .record;
+    lexique_storage::save_grammar_card(
+        &connection,
+        &lexique_storage::GrammarCardRequest {
+            operation: "csv-card".into(),
+            id: record.id,
+            revision: record.revision,
+            question: "  Pourquoi ?\n\"中文\"  ".into(),
+            answer: "  Réponse, indépendante\r\n  ".into(),
+        },
+        1001,
+    )
+    .unwrap();
+    let snapshot = lexique_storage::capture_grammar_export(
+        &mut connection,
+        &NoteExportScope::Single { id: record.id },
+    )
+    .unwrap();
+    let before = serde_json::to_value(
+        lexique_storage::export_learning_snapshot(&mut connection, 2000).unwrap(),
+    )
+    .unwrap();
+    let file = fixture.0.join("grammar.csv");
+    super::write_grammar_csv(&snapshot, &file).unwrap();
+    let bytes = std::fs::read(&file).unwrap();
+    assert_eq!(&bytes[..3], &[0xef, 0xbb, 0xbf]);
+    let mut reader = csv::Reader::from_reader(&bytes[3..]);
+    assert_eq!(
+        reader.headers().unwrap().iter().collect::<Vec<_>>(),
+        ["exchange_id", "title", "body", "question", "answer"]
+    );
+    let rows = reader.records().map(|row| row.unwrap()).collect::<Vec<_>>();
+    assert_eq!(rows.len(), 1);
+    assert_eq!(
+        rows[0].iter().skip(1).collect::<Vec<_>>(),
+        [
+            "Été, 中文",
+            "  \"texte\"\r\nencore\n  ",
+            "  Pourquoi ?\n\"中文\"  ",
+            "  Réponse, indépendante\r\n  "
+        ]
+    );
+    assert_eq!(rows[0].get(0).unwrap(), snapshot.records[0].exchange_id);
+    let retained = super::ExportSnapshot::Grammar(snapshot);
+    let cancelled = retained.save_csv(None).unwrap();
+    assert_eq!(cancelled.state, "cancelled");
+    assert_eq!((cancelled.records, cancelled.rows), (1, 1));
+    assert!(
+        retained
+            .save_csv(Some(&fixture.0))
+            .err()
+            .unwrap()
+            .contains("Could not write CSV")
+    );
+    assert_eq!(retained.save_csv(Some(&file)).unwrap().state, "saved");
+    assert_eq!(
+        before,
+        serde_json::to_value(
+            lexique_storage::export_learning_snapshot(&mut connection, 2000).unwrap()
+        )
+        .unwrap()
+    );
+}
 struct Fixture(PathBuf);
 impl Fixture {
     fn new() -> Self {
