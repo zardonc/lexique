@@ -1,0 +1,88 @@
+{
+  "platform": "Windows, PowerShell 7, uv Python 3.14.10",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\review-154",
+  "branch": "codex/d2-review-154",
+  "original_author_commit": "b5520107f0f06a9732e93a332435bd3cce90a471",
+  "assigned_review_base": "069d3caa54b97afbcb6ac5f93c1367cfa996c019",
+  "latest_merged_integration": "e7db3a58473191f762b1ebd3ff72fb29a45687e3",
+  "tested_changes": "Committed integration base above plus owned working/staged batch evidence and scripts/test_core_batch_154.py; exact final staged patch archived.",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-154",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py (author baseline)",
+      "status": "passed",
+      "tests": 5,
+      "log": "author-baseline.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py Batch154Tests.test_muslim_adherence_does_not_require_practising (before correction)",
+      "status": "failed_as_expected",
+      "tests": 1,
+      "log": "red-adherence.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py",
+      "status": "passed",
+      "tests": 7,
+      "log": "batch-tests.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-154-review/audit.py",
+      "status": "passed",
+      "log": "final-source-audit.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-154-review/verify_preservation.py",
+      "status": "passed",
+      "log": "proposal-preservation.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "docs-check.log",
+      "documents": 558,
+      "local_links": 4268,
+      "repository_fallback_links": 0,
+      "skipped_local_links": 422,
+      "problems": []
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "source_audit": {
+    "source_pages": 54,
+    "field_and_usage_spans": 250,
+    "support_occurrences": 1004,
+    "contributor_parts": 11,
+    "status": "passed"
+  },
+  "proposal_preservation": {
+    "preserved_authored_files": 16,
+    "authored_group_bytes_equal_original_commit": true,
+    "changed_fields": [
+      [
+        3685,
+        "french_definition"
+      ]
+    ],
+    "unchanged_field_count": 199,
+    "unchanged_use_count": 50,
+    "membership_frequency_and_field_source_spans_preserved": true,
+    "proposal_snapshot_base": "871431f18d295db56d2bcb210fcaa84e80b90b00",
+    "status": "passed"
+  },
+  "accepted_unchanged_fields": 199,
+  "accepted_changed_fields": 1,
+  "unresolved_fields": 0,
+  "accepted_selected_uses": 50,
+  "source_rights_gaps": [],
+  "scope_gaps": [],
+  "native_canonical_and_combined_package_gates": "coordinator_owned_not_run",
+  "frontend_rust_and_global_checks": "not_run_no_runtime_changes",
+  "learner_acceptance": "not_run",
+  "final_integration_merge": "integration-checkpoint-merge.log; already up to date",
+  "authored_snapshot_policy": "Original files are byte-preserved; authored/.gitattributes marks this raw snapshot as original text for the existing document checker."
+}
