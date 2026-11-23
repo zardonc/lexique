@@ -1,0 +1,23 @@
+{
+  "ticket": 147,
+  "author_commit": "d75ae7e95ef266629d636a86feb555f463a2ed7d",
+  "author_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\author-147",
+  "review_base": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "review_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-147",
+  "review_branch": "codex/d2-review-147",
+  "reviewer": "Independent field and selected-expression reviewer #147; separate from author and integration coordinator",
+  "role": "Separate agent review; not authenticated human or learner signoff",
+  "audit_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-147",
+  "owned_paths": [
+    "docs/evidence/issue-147/**",
+    "scripts/test_core_batch_147.py"
+  ],
+  "counts": {
+    "fields": 200,
+    "unchanged_fields": 195,
+    "changed_fields": 5,
+    "uses": 50,
+    "changed_uses": 1,
+    "unresolved": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "author_commit": "d75ae7e95ef266629d636a86feb555f463a2ed7d",
+  "review_base": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "files": [
+    "admission.json",
+    "COPYING",
+    "field-review.json",
+    "groups.json",
+    "NOTICES.md",
+    "README.md",
+    "reuse.json",
+    "review-candidates.md",
+    "rights.json",
+    "selected-rights.md",
+    "source-captures.json",
+    "source-context.json",
+    "source-excerpts.json",
+    "sources.json"
+  ],
+  "snapshot": "review-base",
+  "byte_preservation": "exact working-copy bytes; author commit comparison permits Git CRLF/LF conversion only",
+  "stored_paths": {
+    "admission.json": "admission.json",
+    "COPYING": "COPYING",
+    "field-review.json": "field-review.json",
+    "groups.json": "groups.json",
+    "NOTICES.md": "NOTICES.md.snapshot",
+    "README.md": "README.md.snapshot",
+    "reuse.json": "reuse.json",
+    "review-candidates.md": "review-candidates.md.snapshot",
+    "rights.json": "rights.json",
+    "selected-rights.md": "selected-rights.md.snapshot",
+    "source-captures.json": "source-captures.json",
+    "source-context.json": "source-context.json",
+    "source-excerpts.json": "source-excerpts.json",
+    "sources.json": "sources.json"
+  }
+}

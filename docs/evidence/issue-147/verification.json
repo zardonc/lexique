@@ -1,0 +1,62 @@
+{
+  "ticket": 147,
+  "platform": "Windows x64 / PowerShell 7 / Python 3.14.10 / pnpm 11.25.0",
+  "author_commit": "d75ae7e95ef266629d636a86feb555f463a2ed7d",
+  "initial_review_base": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "merged_integration_tip": "75284a046902f9b0c6f4dcf1ec97302c90f0d294",
+  "tested_changes": "Owned staged field/source/review/test content after integration merge; exact patch retained in reviewer archive.",
+  "checks": {
+    "resource_tests": {
+      "status": "passed",
+      "tests": 9,
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_147.py"
+    },
+    "source_audit": {
+      "status": "passed",
+      "articles": 50,
+      "field_spans": 200,
+      "supporting_spans": 256,
+      "span_occurrences": 2100,
+      "contributor_parts": 7,
+      "named_article_memberships": 3063,
+      "anonymous_article_counts": 486
+    },
+    "docs": {
+      "status": "passed",
+      "documents": 510,
+      "local_links": 3931,
+      "repository_fallback_links": 0,
+      "skipped_local_links": 404,
+      "problems": []
+    },
+    "diff": {
+      "status": "passed"
+    },
+    "owned_scope": {
+      "status": "passed"
+    }
+  },
+  "independently_accepted_fields": 200,
+  "unchanged_fields": 195,
+  "changed_fields": 5,
+  "accepted_uses": 50,
+  "changed_uses": 1,
+  "unresolved_fields": 0,
+  "pending_owner_choices": [],
+  "canonical_new_fields_admitted": 0,
+  "unrun": [
+    "canonical conversion",
+    "combined packaged obligations",
+    "native lookup/save/reopen",
+    "learner-data preservation",
+    "learner acceptance",
+    "frontend/browser/Rust (no runtime source changed)",
+    "whole-core/platform/release gates"
+  ],
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-147",
+  "full_patch": "scoped-review.patch",
+  "test_patch": "resource-tests.patch",
+  "tracker_changes": false,
+  "pushed": false,
+  "integration_git_mutation": false
+}
