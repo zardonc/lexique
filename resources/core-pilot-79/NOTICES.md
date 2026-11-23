@@ -2840,7 +2840,7 @@ Frozen rows 2451–2950 add 497 selected uses and 1,988 independently reviewed f
 These reviewed contribution/adaptation records retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The fixed Wiktionnaire contribution layer, French adaptations and new Lexique
 English/Chinese explanations have that licence. Project code remains MIT.
-The [complete legal text](COPYING), source/version identities, attribution,
+The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-140/COPYING), source/version identities, attribution,
 modification notices and selected source material accompany the reviewed shard.
 All 200 fields have independent quality and selected-source rights decisions.
 The separate expression review resolves the 102 former blockers without
@@ -2849,7 +2849,7 @@ bindings; twenty uses retain specifically assessed short expressions.
 
 Exact membership, POS subclasses and both frequency strings derive from Boris
 New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 2951–3000 retain their identity and order. The denominator is 4,087 groups.
 CEFR remains unknown.
 
@@ -2863,7 +2863,7 @@ upstream bilingual quotations. IPA notation does not include sound recordings.
 
 Wiktionnaire contributors are credited through each complete linked article
 history and the full named registry/returned anonymous counts in
-[source-context.json](source-context.json). Registries can extend beyond a fixed
+[source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-140/source-context.json). Registries can extend beyond a fixed
 revision and do not prove selected-sentence authorship. Lexique contributors
 retain credit for selection, adaptations and explanatory translations.
 
@@ -2927,11 +2927,11 @@ retain credit for selection, adaptations and explanatory translations.
 
 Thirty-four articles declare Académie française eighth-edition imports
 (1932–1935), including supporting `mien`. Original credit remains distinct from
-the wiki and Lexique contribution layers. [Selected rights](selected-rights.md)
+the wiki and Lexique contribution layers. [Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-140/selected-rights.md)
 retains the established French collective-work basis and French economic
 expiry 2006-01-01. Whole-edition US clearance remains unproved. Current selected
 material has separate short-expression/facts determinations in
-[rights-fix-review.json](rights-fix-review.json), without a worldwide grant.
+[rights-fix-review.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-140/rights-fix-review.json), without a worldwide grant.
 
 ## Selected boundaries and redistribution
 
@@ -2941,7 +2941,7 @@ the first sentence of definition 12; the adjacent calendar/date claims are
 excluded. The three supporting possessive articles establish the construction
 of `miens` in `les miens`, while the exact `miens` page supplies its isolated IPA.
 No runtime lookup alias is proposed. Longer original source prose is excluded
-from current admission spans; [exact excerpts](source-excerpts.json) retain the
+from current admission spans; [exact excerpts](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-140/source-excerpts.json) retain the
 assessed units. Historical author/first-review snapshots and research captures
 remain distinct from the current source selection.
 
@@ -2958,13 +2958,13 @@ conversion and packaged notices before admission.
 
 This independently reviewed content retains [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en)
 for fixed Wiktionnaire contributions and Lexique’s French adaptations and new English/Chinese
-explanations. Project source code remains MIT. The [complete legal text](COPYING),
-[field rights](rights.json), [selected spans](source-excerpts.json) and
-[full contributor records](source-context.json) accompany the selected content.
+explanations. Project source code remains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-141/COPYING),
+[field rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-141/rights.json), [selected spans](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-141/source-excerpts.json) and
+[full contributor records](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-141/source-context.json) accompany the selected content.
 
 Exact word/POS membership and unchanged frequency strings derive from Boris New and
 Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 3001–3050 preserve spelling, order and subclasses. CEFR remains unknown.
 
 ## Modifications and credits
@@ -2976,7 +2976,7 @@ gender, number, register and region follow the selected use. One applicable isol
 IPA variant is retained, with slashes added. Source spellings create no lookup aliases.
 Literary/news quotations, media, etymologies and other-language entries are outside the
 selected fields. The certain-trades restriction is explicit in all three brigade meaning fields.
-The original field proposals remain in [authored/](authored/groups.json).
+The original field proposals remain in [authored/](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-141/authored/groups.json).
 
 Wiktionnaire contributors receive credit through the complete linked histories below
 and the fully paginated named registries and returned anonymous counts in source-context.json.
@@ -3039,7 +3039,7 @@ selection, adaptations and new explanations.
 
 29 articles declare DAF8 imports. Retain Académie française original-work
 credit separately from Wiktionnaire transcription/adaptation and Lexique’s new work.
-[Selected rights](selected-rights.md) explains the original collective-work basis.
+[Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-141/selected-rights.md) explains the original collective-work basis.
 
 ## Redistribution obligations
 
@@ -3058,12 +3058,12 @@ Canonical conversion, actual packaged obligations and native checks remain pendi
 Fixed Wiktionnaire contribution/transcription and Lexique’s scoped French
 adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-The [complete legal text](COPYING), fixed articles, complete linked histories,
+The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-142/COPYING), fixed articles, complete linked histories,
 contributor records and modifications accompany the independently reviewed proposals.
 
 Exact word/POS membership and unchanged frequency strings derive from Boris New
 and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, via the [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, via the [frozen manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 3051–3100 retain their order and subclasses; CEFR remains unknown.
 
 ## Modifications
@@ -3077,7 +3077,7 @@ sentences supply no learner field. Supporting source selections record exact lex
 ## Article and original-work credits
 
 Wiktionnaire contributors receive full article/history credit and the complete
-named registry plus anonymous count in [source-context.json](source-context.json).
+named registry plus anonymous count in [source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-142/source-context.json).
 The current registry can include later editors; it does not prove selected
 sentence authorship. Lexique contributors receive credit for selection,
 adaptation and new explanatory text.
@@ -3165,13 +3165,13 @@ selected dictionary text. Learner/native/release gates remain separate.
 The fixed Wiktionnaire contribution layer and Lexique’s scoped French
 adaptations and new English/Chinese explanations use
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-Project source code retains MIT. The [complete legal text](COPYING), fixed
+Project source code retains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-143/COPYING), fixed
 article links, full histories, contributor records and modification notices
 accompany the reviewed shard.
 
 Exact membership and both unchanged frequency strings derive from Boris New
 and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 All rows 3101–3150, including `pars/NOM` and `uns/PRO:ind`, retain their identity
 and order. CEFR remains unknown.
 
@@ -3185,17 +3185,17 @@ number, register and selected restrictions remain explicit. Applicable IPA
 notation is retained; `chevalier` keeps its recorded optional-schwa notation.
 The `uns` field isolates the recorded /œ̃/ segment of `les uns`, with the article
 and liaison excluded, and retains the obligatory construction.
-No source relation adds a runtime alias. [Exact proposals](review-candidates.md)
+No source relation adds a runtime alias. [Exact proposals](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-143/review-candidates.md)
 retain the 196 original fields and selected/excluded uses. The four approved
 `pars/NOM` additions retain the exact proposal and accepted text in
-[added fields](accepted-replacements.json). Original proposals remain in
-[authored snapshot](authored/snapshot.json).
+[added fields](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-143/accepted-replacements.json). Original proposals remain in
+[authored snapshot](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-143/authored/snapshot.json).
 
 ## Article credits
 
 Wiktionnaire contributors receive credit through each complete linked history
 and the full paginated named registry plus returned anonymous count in
-[source-context.json](source-context.json). The registry may extend past the
+[source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-143/source-context.json). The registry may extend past the
 fixed revision and is article attribution, not proof of selected-sentence
 authorship. Lexique contributors receive credit for selection, French adaptation
 and new EN/ZH explanations. Original edition credits remain separate.
@@ -3260,7 +3260,7 @@ and new EN/ZH explanations. Original edition credits remain separate.
 ## Original works and redistribution
 
 Article-level Académie française eighth-edition import declarations are retained
-with their exact lines. [Selected rights](selected-rights.md) identifies the
+with their exact lines. [Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-143/selected-rights.md) identifies the
 original collective edition (1932–1935), its established L123-3 basis and
 conservative 2006-01-01 expiry. These declarations do not identify the author of
 a selected sentence or authorize neighbouring external works.
@@ -3296,13 +3296,13 @@ selected dictionary text. Learner/native/release gates remain separate.
 The fixed Wiktionnaire contribution layer and Lexique’s scoped French
 adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-Project source code remains MIT. The [complete legal text](COPYING),
+Project source code remains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-144/COPYING),
 source/history links, contributor records, original-work credits and
 modification notices accompany these independently reviewed selected records.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen scope manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen scope manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 3151–3200 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
@@ -3313,14 +3313,14 @@ Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
+aliases. [Readable proposals](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-144/review-candidates.md) retain every exact field and
 the selected and excluded uses.
 
 ## Article credits
 
 Wiktionnaire contributors are credited through each complete linked article
 history and the paginated named registry/returned anonymous counts in
-[source-context.json](source-context.json). Anonymous identities retain history
+[source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-144/source-context.json). Anonymous identities retain history
 attribution. A current contributor registry can extend beyond a fixed revision
 and does not identify who authored a selected sentence. Lexique contributors
 are credited for selection, French adaptation and the new English/Chinese text.
@@ -3382,7 +3382,7 @@ are credited for selection, French adaptation and the new English/Chinese text.
 
 Twenty-seven selected articles declare Académie française eighth-edition imports
 (1932–1935). Original credit is retained separately from the wiki and Lexique
-contribution/adaptation layers. [Selected rights](selected-rights.md) identifies
+contribution/adaptation layers. [Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-144/selected-rights.md) identifies
 the French collective-work basis and its 2006-01-01 economic expiry.
 That date supplies no blanket worldwide clearance for original expression;
 each selected fact or short phrase has its own independent rights decision.
@@ -3414,13 +3414,13 @@ conversion and native verification remain pending.
 The fixed Wiktionnaire contribution layer and Lexique’s scoped French
 adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-Project source code remains MIT. The [complete legal text](COPYING),
+Project source code remains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/COPYING),
 source/history links, contributor records, original-work credits and
 modification notices accompany these independently reviewed selected fields.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen scope manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen scope manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 3201–3250 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
@@ -3431,9 +3431,9 @@ Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
-the proposed selected and excluded uses. [Accepted fields](groups.json) and
-[exact replacements](accepted-replacements.json) retain the independent result.
+aliases. [Readable proposals](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/review-candidates.md) retain every exact field and
+the proposed selected and excluded uses. [Accepted fields](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/groups.json) and
+[exact replacements](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/accepted-replacements.json) retain the independent result.
 Eleven field texts and one culinary-use description are corrected. Six source
 spans are narrowed to the conventional extreme-fear and anatomical cores.
 Original proposed text and source spans remain in authored evidence.
@@ -3442,7 +3442,7 @@ Original proposed text and source spans remain in authored evidence.
 
 Wiktionnaire contributors are credited through each complete linked article
 history and the paginated named registry/returned anonymous counts in
-[source-context.json](source-context.json). Anonymous identities retain history
+[source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/source-context.json). Anonymous identities retain history
 attribution. A current contributor registry can extend beyond a fixed revision
 and does not identify who authored a selected sentence. Lexique contributors
 are credited for selection, French adaptation and the new English/Chinese text.
@@ -3503,7 +3503,7 @@ are credited for selection, French adaptation and the new English/Chinese text.
 
 Twenty-nine articles declare Académie française eighth-edition imports
 (1932–1935). Original credit is retained separately from the wiki and Lexique
-contribution/adaptation layers. [Selected rights](selected-rights.md) records
+contribution/adaptation layers. [Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/selected-rights.md) records
 the established original collective-work basis and its 2006-01-01 expiry.
 Historical original-work review does not review any new #145 field.
 `symbole`'s CFC cartographic definition at line 21 is excluded; its general
@@ -3523,8 +3523,8 @@ All 200 fields have separate independent quality and selected-span rights
 decisions. DAF8's France-only 2006-01-01 duration calculation does not establish
 worldwide clearance of original expression. The accepted spans are assessed
 individually as factual/conventional lexical material, and the full expressive
-`terreur` proposal is not admitted. [Selected rights](selected-rights.md) and
-[field-specific decisions](rights.json) identify this boundary separately from
+`terreur` proposal is not admitted. [Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/selected-rights.md) and
+[field-specific decisions](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-145/rights.json) identify this boundary separately from
 CC BY-SA 4.0 contribution/adaptation obligations. Combined artifact delivery
 and native validation remain pending with the coordinator.
 
@@ -3533,12 +3533,12 @@ and native validation remain pending with the coordinator.
 
 The fixed Wiktionnaire contributions, scoped French adaptations and new
 Lexique English/Chinese explanations retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-[COPYING](COPYING) supplies the legal text and warranty/liability disclaimer.
+[COPYING](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-146/COPYING) supplies the legal text and warranty/liability disclaimer.
 Project-owned code remains MIT. No endorsement by a source is implied.
 
 Exact word/POS values, order and unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 All 50 rows 3251–3300 remain, including both `divers` subclasses. CEFR is unknown.
 
 ## Modifications and attribution
@@ -3550,15 +3550,15 @@ variants; `la plupart` is composed from fixed `la`/`plupart` components.
 Lexique contributors receive credit for selection, explanations/adaptations
 and source-boundary corrections. The `la plupart` primary binding uses a
 short general-majority fragment; `patrouille` support omits historical purpose
-prose. [Exact replacements](accepted-replacements.json) retain both boundaries.
+prose. [Exact replacements](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-146/accepted-replacements.json) retain both boundaries.
 
 Fixed article/full-history links and the complete contributor registries and
-anonymous counts in [source-context.json](source-context.json) credit Wiktionnaire
+anonymous counts in [source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-146/source-context.json) credit Wiktionnaire
 contributors. Registries can extend beyond the fixed revision and do not prove
 sentence authorship. Declared DAF8 original-work credits remain separate; the
 historical France-specific expiry is not worldwide permission. Actual selected
 facts/conventional formulations and contribution rights are assessed in
-[selected-rights.md](selected-rights.md). No article marker supplies blanket
+[selected-rights.md](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-146/selected-rights.md). No article marker supplies blanket
 clearance or blanket exclusion.
 
 Selected source material, legal text, attributions, modifications and notices
@@ -3630,13 +3630,13 @@ retain ShareAlike and these applicable notices without additional restrictions.
 The fixed Wiktionnaire contribution layer and Lexique’s scoped French
 adaptations and new English/Chinese explanations use
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-Project source code remains MIT. The [complete legal text](COPYING),
+Project source code remains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-147/COPYING),
 source/history links, contributor records, original-work credits and
 modification notices accompany this independently reviewed shard.
 
 Exact word/POS membership and unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 3301–3350 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
@@ -3645,17 +3645,17 @@ One sense is selected per exact group. French definitions explain the selected
 lexical facts; English and Chinese are Lexique explanations,
 not upstream bilingual quotations. Gender, number, register and construction
 restrictions are retained. IPA selects one recorded isolated variant. Source
-spelling bindings add no query aliases. [Accepted fields](accepted-fields.md)
+spelling bindings add no query aliases. [Accepted fields](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-147/accepted-fields.md)
 retain all four fields, selected uses and excluded alternatives. Thirty uses
 retain separate minimal factual source fragments; twenty retain individually
 reviewed short expressions. Five field texts have exact proposal/acceptance
-records in [accepted replacements](accepted-replacements.json).
+records in [accepted replacements](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-147/accepted-replacements.json).
 
 ## Article credits
 
 Wiktionnaire contributors are credited through each complete linked article
 history and the completed named registry/anonymous counts in
-[source-context.json](source-context.json). The registry may extend beyond the
+[source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-147/source-context.json). The registry may extend beyond the
 fixed revision and does not prove sentence-level authorship. Lexique contributors
 are credited for selection, French adaptation and new English/Chinese wording.
 
@@ -3716,7 +3716,7 @@ Thirty-four articles declare Académie française eighth-edition imports
 (1932–1935). The retained French collective-work term calculation reaches
 2006-01-01; this does not establish worldwide original-work clearance.
 Each selected expression or factual unit has its own recorded decision,
-without relying on whole DAF8 clearance. [Selected rights](selected-rights.md)
+without relying on whole DAF8 clearance. [Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-147/selected-rights.md)
 describes the contribution/adaptation and original-work boundaries.
 
 `marge` line 40 and `grain` lines 89–90 are unselected CFC cartographic
@@ -3745,13 +3745,13 @@ remain coordinator-owned and pending.
 The fixed Wiktionnaire contribution layer and Lexique’s scoped French
 adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-Project source code remains MIT. The [complete legal text](COPYING),
+Project source code remains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-148/COPYING),
 source/history links, contributor records, original-work credits and
 modification notices accompany these independently reviewed selected fields.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen scope manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen scope manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 3351–3400 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
@@ -3762,14 +3762,14 @@ Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
+aliases. [Readable proposals](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-148/review-candidates.md) retain every exact field and
 the selected and excluded uses.
 
 ## Article credits
 
 Wiktionnaire contributors are credited through each complete linked article
 history and the paginated named registry/returned anonymous counts in
-[source-context.json](source-context.json). Anonymous identities retain history
+[source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-148/source-context.json). Anonymous identities retain history
 attribution. A current contributor registry can extend beyond a fixed revision
 and does not identify who authored a selected sentence. Lexique contributors
 are credited for selection, French adaptation and the new English/Chinese text.
@@ -3832,7 +3832,7 @@ are credited for selection, French adaptation and the new English/Chinese text.
 
 Thirty-one articles declare Académie française eighth-edition imports
 (1932–1935). Original credit is retained separately from the wiki and Lexique
-contribution/adaptation layers. [Selected rights](selected-rights.md) records
+contribution/adaptation layers. [Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-148/selected-rights.md) records
 the established original collective-work basis and its 2006-01-01 expiry.
 Historical original-work review does not review any new #148 field.
 `oxygène` selects the fresh-air extension at line 47. Its GDT-cited dioxygen
@@ -3860,13 +3860,13 @@ review. Canonical assembly and the actual combined package remain coordinator-ow
 The fixed Wiktionnaire contribution layer and Lexique’s scoped French
 adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-Project source code remains MIT. The [complete legal text](COPYING),
+Project source code remains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/COPYING),
 source/history links, contributor records, original-work credits and
 modification notices accompany this independently reviewed shard.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
-CC BY-SA 4.0, through the [frozen scope manifest](../../../resources/core-pilot-79/scope-manifest.csv).
+CC BY-SA 4.0, through the [frozen scope manifest](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/resources/core-pilot-79/scope-manifest.csv).
 Rows 3401–3450 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
@@ -3877,20 +3877,20 @@ Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable author proposals](review-candidates.md) are preserved;
-[groups.json](groups.json) and [field-review.json](field-review.json) retain
+aliases. [Readable author proposals](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/review-candidates.md) are preserved;
+[groups.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/groups.json) and [field-review.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/field-review.json) retain
 accepted fields and actual selected/excluded-use decisions.
 
 Independent corrections remove an unsupported internal-location restriction
 from Chinese `organe` (row 3407), restrict EN/ZH `choquer` to offence (row 3429),
 and restrict FR/EN/ZH `lady` daughters' courtesy rank to dukes, marquesses or
 earls (row 3444). These six modified texts and their exact source bases are in
-[accepted-replacements.json](accepted-replacements.json). The remaining 194
+[accepted-replacements.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/accepted-replacements.json). The remaining 194
 texts are unchanged. Every field passes quality and selected rights review.
 
 Specific historical expression is credited to Académie française, Dictionnaire
 de l’Académie française, eighth edition, 1932–1935, where identified in the
-34 actual comparisons in [original-expression-review.json](original-expression-review.json).
+34 actual comparisons in [original-expression-review.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/original-expression-review.json).
 This includes unmarked/reference-only articles. Original public-domain expiry
 is 2006-01-01 under the established collective-work basis; subsequent wiki
 transcription/adaptation and Lexique modifications retain CC BY-SA 4.0.
@@ -3901,7 +3901,7 @@ historical expression is not a selected IPA input.
 
 Wiktionnaire contributors are credited through each complete linked article
 history and the paginated named registry/returned anonymous counts in
-[source-context.json](source-context.json). Anonymous identities retain history
+[source-context.json](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/source-context.json). Anonymous identities retain history
 attribution. A current contributor registry can extend beyond a fixed revision
 and does not identify who authored a selected sentence. Lexique contributors
 are credited for selection, French adaptation and the new English/Chinese text.
@@ -3964,7 +3964,7 @@ are credited for selection, French adaptation and the new English/Chinese text.
 
 Articles declaring Académie française eighth-edition imports (1932–1935)
 retain original credit separately from the wiki and Lexique adaptation layers.
-[Selected rights](selected-rights.md) records the established collective-work
+[Selected rights](https://github.com/zardonc/lexique/blob/906acc0a477e5d035bc2227e54245b7ae4255416/docs/evidence/issue-149/selected-rights.md) records the established collective-work
 basis and its 2006-01-01 expiry. New fields require their own independent review.
 The CFC cartographic definition in `cadre` at line 103 is excluded; the picture
 frame definition at line 14 is selected. No CFC prose supplies a field or support.

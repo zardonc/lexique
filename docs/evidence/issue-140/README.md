@@ -1,11 +1,19 @@
 # Issue #140 independently reviewed content
 
+`core-149-v1` canonically admits **50 groups / 200 fields** from this batch. Exact native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-140-149/README.md) record the matching package, preservation checks and remaining acceptance gates.
+
+## Independent source-review record
+
+`core-149-v1` canonically admits **50 groups / 200 fields** from this batch. Exact native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-140-149/README.md) record the matching package, preservation checks and remaining acceptance gates.
+
+## Independent source-review record
+
 **All 50 exact groups, 50 selected uses and 200 fields pass independent quality
 and selected-source rights review.** The first quality review accepted 196
 unchanged fields and four corrections. The separate selected-expression rights
 review resolves the 102 former blockers without changing any learner wording.
 Twenty uses retain specifically assessed short expressions; fourteen use
-smaller exact factual source spans. Canonical admission remains pending.
+smaller exact factual source spans. Canonical admission was outside this independent review stage.
 
 Frozen rows 2951–3000 retain headword/POS, order and both frequency strings.
 One everyday sense is selected per group; no exception or alias is added.
@@ -50,7 +58,5 @@ merge, commands and evidence.
 
 The whole DAF8 edition has no established US clearance or worldwide permission
 here. Current source eligibility instead rests on the individually assessed
-short expressions and factual spans. Canonical conversion, combined packaged
-materials/notices, native lookup/save/reopen, learner acceptance and overall
-release completion remain coordinator-owned gates. Frontend and Rust checks
+short expressions and factual spans. Final canonical conversion, packaged materials and native execution are recorded above. Learner acceptance and overall release completion remain open. Frontend and Rust checks
 are unrun because this shard changes no application code.

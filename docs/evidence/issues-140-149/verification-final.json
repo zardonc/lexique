@@ -1,0 +1,368 @@
+{
+  "status": "passed",
+  "platform": "Windows x64",
+  "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+  "upgrade_fixture_source_sha": "25489e6c59ffd8b1bcbe4d6ec2dc9105eee59e6e",
+  "runtime_and_resources_unchanged_since_build": true,
+  "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+  "core": {
+    "version": "core-149-v1",
+    "bytes": 15966208,
+    "sha256": "b292e46abba5494970a95fed65714eddc9333473d5aae7875c1bb0e082a5066f"
+  },
+  "coverage": {
+    "admitted_groups": 3431,
+    "fields": 13724,
+    "everyday_groups": 3428,
+    "specialist_groups": 3,
+    "annotations": 19,
+    "missing_annotation_fields": 76,
+    "unaccepted_groups": 656,
+    "incomplete_everyday_groups": 659,
+    "denominator_groups": 4087,
+    "denominator_headwords": 3773
+  },
+  "preservation": {
+    "prior_groups": 2932,
+    "prior_fields": 11728,
+    "spelling_relationships": 15,
+    "runtime_aliases": 11
+  },
+  "package": {
+    "archive": "target\\spec-140-149\\final-package-notices\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 47298748,
+    "sha256": "9019fe2e77cd25e6cd005c7082478d77773ec4ee268b12a8dbe8801a2261b4aa",
+    "verified_files": 186
+  },
+  "native_test_package": {
+    "archive": "target\\spec-140-149\\final-package\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 47298469,
+    "sha256": "a72525b571921437c809aec184ecf8faf0adf6007884e4a542e03e79f0f9a539",
+    "verified_files": 186
+  },
+  "package_material_changes": [
+    "dictionary/core-pilot-79/input-checksums.json",
+    "dictionary/core-pilot-79/NOTICES.md",
+    "dictionary/core-pilot-79/report.json"
+  ],
+  "batch_runs": [
+    {
+      "issue": 140,
+      "frozen_rows": [
+        2951,
+        3000
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-140/core149-final",
+      "checks": [
+        {
+          "check": "Batch #140: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 141,
+      "frozen_rows": [
+        3001,
+        3050
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-141/core149-final",
+      "checks": [
+        {
+          "check": "Batch #141: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 142,
+      "frozen_rows": [
+        3051,
+        3100
+      ],
+      "admitted_groups": 49,
+      "admitted_fields": 196,
+      "annotation_groups": 1,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-142/core149-final",
+      "checks": [
+        {
+          "check": "Batch #142: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 49 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 143,
+      "frozen_rows": [
+        3101,
+        3150
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 1,
+      "native_result": "passed",
+      "native_evidence": "target/issue-143/core149-final",
+      "checks": [
+        {
+          "check": "Batch #143: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 144,
+      "frozen_rows": [
+        3151,
+        3200
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-144/core149-final",
+      "checks": [
+        {
+          "check": "Batch #144: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 145,
+      "frozen_rows": [
+        3201,
+        3250
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-145/core149-final",
+      "checks": [
+        {
+          "check": "Batch #145: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 146,
+      "frozen_rows": [
+        3251,
+        3300
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-146/core149-final",
+      "checks": [
+        {
+          "check": "Batch #146: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 49 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 147,
+      "frozen_rows": [
+        3301,
+        3350
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-147/core149-final",
+      "checks": [
+        {
+          "check": "Batch #147: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 148,
+      "frozen_rows": [
+        3351,
+        3400
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-148/core149-final",
+      "checks": [
+        {
+          "check": "Batch #148: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 149,
+      "frozen_rows": [
+        3401,
+        3450
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-149/core149-final",
+      "checks": [
+        {
+          "check": "Batch #149: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+      "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    }
+  ],
+  "upgrade": {
+    "result": "passed",
+    "evidence": "target/issue-149/upgrade-from-core139-final",
+    "baseline": "target/issue-139/baseline-core139-v1",
+    "checks": [
+      {
+        "check": "The existing lâche adjective and noun digests remain frozen after the resource update",
+        "status": "passed"
+      },
+      {
+        "check": "New resource version is visible while previous digest, progress and audio remain frozen",
+        "status": "passed"
+      }
+    ],
+    "fixture_interface_preferences": {
+      "key": "interface-preferences",
+      "value": {
+        "locale": "en",
+        "theme": "white"
+      }
+    }
+  },
+  "checks": {
+    "core": 18,
+    "batch_suite_passed": 88,
+    "batch_suite_skipped": 2,
+    "explicit_142_admitted": 11,
+    "explicit_146_admitted": 10,
+    "portable": 16,
+    "rust_tests": 242
+  },
+  "limitations": [
+    "Learner acceptance",
+    "Whole-machine offline denial",
+    "Other-platform native execution",
+    "Full D2 / CEFR",
+    "Formal release acceptance"
+  ]
+}

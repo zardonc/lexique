@@ -1,5 +1,13 @@
 # Issue #147 independently reviewed content
 
+`core-149-v1` canonically admits **50 groups / 200 fields** from this batch. Exact native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-140-149/README.md) record the matching package, preservation checks and remaining acceptance gates.
+
+## Independent source-review record
+
+`core-149-v1` canonically admits **50 groups / 200 fields** from this batch. Exact native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-140-149/README.md) record the matching package, preservation checks and remaining acceptance gates.
+
+## Independent source-review record
+
 **50 frozen groups / 50 everyday selected uses / 200 fields pass independent
 quality and specific expression-rights review.** There are **195 unchanged field
 texts, five changed field texts and one changed use description**, with no
