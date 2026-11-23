@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany these independently reviewed selected records.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,7 +14,7 @@ Rows 3151–3200 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected sense is independently reviewed per exact group. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
@@ -90,8 +90,9 @@ are credited for selection, French adaptation and the new English/Chinese text.
 Twenty-seven selected articles declare Académie française eighth-edition imports
 (1932–1935). Original credit is retained separately from the wiki and Lexique
 contribution/adaptation layers. [Selected rights](selected-rights.md) identifies
-the established original collective-work basis and its 2006-01-01 expiry.
-Historical original-work review does not review any new #144 field.
+the French collective-work basis and its 2006-01-01 economic expiry.
+That date supplies no blanket worldwide clearance for original expression;
+each selected fact or short phrase has its own independent rights decision.
 `filet`’s CFC cartographic definition at line 93 is excluded; its mesh-net
 definition at line 15 is selected. No CFC content is redistributed.
 The frozen possessive form `sienne` binds to the explicit `la sienne` pronoun
@@ -107,5 +108,9 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 200 fields and 50 selected uses have separate independent quality and
+selected-boundary rights decisions. Six source spans for luxe/fée retain short
+lexical facts in place of extended exposition; all learner texts are unchanged.
+IPA modification notices describe bare notation. Original proposals are retained
+as archival evidence, outside the selected-material grant. Combined canonical
+conversion and native verification remain pending.

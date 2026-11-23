@@ -1,0 +1,1290 @@
+[
+  {
+    "frozen_row": 3151,
+    "headword": "afin de",
+    "pos": "PRE",
+    "sense_id": "b144-3151-afin de-pre-selected",
+    "field": "ipa",
+    "proposed_text": "a.fɛ̃ də",
+    "accepted_text": "a.fɛ̃ də",
+    "proposed_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''afin de''' {{pron|a.fɛ̃ də|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''afin de''' {{pron|a.fɛ̃ də|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3152,
+    "headword": "pouls",
+    "pos": "NOM",
+    "sense_id": "b144-3152-pouls-nom-selected",
+    "field": "ipa",
+    "proposed_text": "pu",
+    "accepted_text": "pu",
+    "proposed_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''pouls''' {{pron|pu|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''pouls''' {{pron|pu|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3153,
+    "headword": "business",
+    "pos": "NOM",
+    "sense_id": "b144-3153-business-nom-selected",
+    "field": "ipa",
+    "proposed_text": "biz.nɛs",
+    "accepted_text": "biz.nɛs",
+    "proposed_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''business''' {{pron|biz.nɛs|fr}} ''(masculin en France, féminin au Québec)'' {{sp}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''business''' {{pron|biz.nɛs|fr}} ''(masculin en France, féminin au Québec)'' {{sp}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3154,
+    "headword": "luxe",
+    "pos": "NOM",
+    "sense_id": "b144-3154-luxe-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Pratique consistant à faire des dépenses somptueuses et superflues pour s’entourer de raffinement ou afficher sa richesse.",
+    "accepted_text": "Pratique consistant à faire des dépenses somptueuses et superflues pour s’entourer de raffinement ou afficher sa richesse.",
+    "proposed_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[pratique|Pratique]] [[social]]e [[consister|consistant]] à [[pratiquer]] des [[dépense]]s [[somptuaire]]s et [[superflu]]es, dans le [[but]] de s’[[entourer]] d’un [[raffinement]] [[fastueux]] ou par pur [[goût]] de l’[[ostentation]], par opposition aux facteurs ne relevant que de la [[strict]]e [[nécessité]]."
+    },
+    "accepted_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 82,
+      "raw_source_excerpt": "[[dépense]]s [[somptuaire]]s et [[superflu]]es"
+    },
+    "proposed_modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+    "accepted_modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+    "change": "selected_source_span",
+    "reason": "Only the short expenditure, refinement, ostentation and necessity fragments are accepted. The former extended definition closely parallels the TLFi exposition returned in the CNRTL capture; its underlying expressive wording is not cleared. Actual DAF8 luxe instead begins Somptuosité dans le vêtement..., so the article-wide DAF8 marker does not establish the selected paragraph as DAF8. Fresh explanations convey the selected facts; no long exposition is selected."
+  },
+  {
+    "frozen_row": 3154,
+    "headword": "luxe",
+    "pos": "NOM",
+    "sense_id": "b144-3154-luxe-nom-selected",
+    "field": "ipa",
+    "proposed_text": "lyks",
+    "accepted_text": "lyks",
+    "proposed_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''luxe''' {{pron|lyks|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''luxe''' {{pron|lyks|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3154,
+    "headword": "luxe",
+    "pos": "NOM",
+    "sense_id": "b144-3154-luxe-nom-selected",
+    "field": "english",
+    "proposed_text": "Luxury: lavish spending beyond necessity, for refinement or display of wealth.",
+    "accepted_text": "Luxury: lavish spending beyond necessity, for refinement or display of wealth.",
+    "proposed_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[pratique|Pratique]] [[social]]e [[consister|consistant]] à [[pratiquer]] des [[dépense]]s [[somptuaire]]s et [[superflu]]es, dans le [[but]] de s’[[entourer]] d’un [[raffinement]] [[fastueux]] ou par pur [[goût]] de l’[[ostentation]], par opposition aux facteurs ne relevant que de la [[strict]]e [[nécessité]]."
+    },
+    "accepted_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 82,
+      "raw_source_excerpt": "[[dépense]]s [[somptuaire]]s et [[superflu]]es"
+    },
+    "proposed_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "accepted_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "change": "selected_source_span",
+    "reason": "Only the short expenditure, refinement, ostentation and necessity fragments are accepted. The former extended definition closely parallels the TLFi exposition returned in the CNRTL capture; its underlying expressive wording is not cleared. Actual DAF8 luxe instead begins Somptuosité dans le vêtement..., so the article-wide DAF8 marker does not establish the selected paragraph as DAF8. Fresh explanations convey the selected facts; no long exposition is selected."
+  },
+  {
+    "frozen_row": 3154,
+    "headword": "luxe",
+    "pos": "NOM",
+    "sense_id": "b144-3154-luxe-nom-selected",
+    "field": "chinese",
+    "proposed_text": "奢华：为追求精致或炫耀财富而进行超出必要程度的豪华消费。",
+    "accepted_text": "奢华：为追求精致或炫耀财富而进行超出必要程度的豪华消费。",
+    "proposed_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[pratique|Pratique]] [[social]]e [[consister|consistant]] à [[pratiquer]] des [[dépense]]s [[somptuaire]]s et [[superflu]]es, dans le [[but]] de s’[[entourer]] d’un [[raffinement]] [[fastueux]] ou par pur [[goût]] de l’[[ostentation]], par opposition aux facteurs ne relevant que de la [[strict]]e [[nécessité]]."
+    },
+    "accepted_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 82,
+      "raw_source_excerpt": "[[dépense]]s [[somptuaire]]s et [[superflu]]es"
+    },
+    "proposed_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "accepted_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "change": "selected_source_span",
+    "reason": "Only the short expenditure, refinement, ostentation and necessity fragments are accepted. The former extended definition closely parallels the TLFi exposition returned in the CNRTL capture; its underlying expressive wording is not cleared. Actual DAF8 luxe instead begins Somptuosité dans le vêtement..., so the article-wide DAF8 marker does not establish the selected paragraph as DAF8. Fresh explanations convey the selected facts; no long exposition is selected."
+  },
+  {
+    "frozen_row": 3155,
+    "headword": "affirmer",
+    "pos": "VER",
+    "sense_id": "b144-3155-affirmer-ver-selected",
+    "field": "ipa",
+    "proposed_text": "a.fiʁ.me",
+    "accepted_text": "a.fiʁ.me",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''affirmer''' {{pron|a.fiʁ.me|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''affirmer''' {{pron|a.fiʁ.me|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3156,
+    "headword": "baser",
+    "pos": "VER",
+    "sense_id": "b144-3156-baser-ver-selected",
+    "field": "ipa",
+    "proposed_text": "ba.ze",
+    "accepted_text": "ba.ze",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''baser''' {{pron|bɑ.ze|fr}} <small>ou</small> {{pron|ba.ze|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''baser''' {{pron|bɑ.ze|fr}} <small>ou</small> {{pron|ba.ze|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3157,
+    "headword": "discret",
+    "pos": "ADJ",
+    "sense_id": "b144-3157-discret-adj-selected",
+    "field": "ipa",
+    "proposed_text": "dis.kʁɛ",
+    "accepted_text": "dis.kʁɛ",
+    "proposed_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''discret''' {{pron|dis.kʁɛ|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''discret''' {{pron|dis.kʁɛ|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3158,
+    "headword": "mentionner",
+    "pos": "VER",
+    "sense_id": "b144-3158-mentionner-ver-selected",
+    "field": "ipa",
+    "proposed_text": "mɑ̃.sjɔ.ne",
+    "accepted_text": "mɑ̃.sjɔ.ne",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''mentionner''' {{pron|mɑ̃.sjɔ.ne|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''mentionner''' {{pron|mɑ̃.sjɔ.ne|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3159,
+    "headword": "muscle",
+    "pos": "NOM",
+    "sense_id": "b144-3159-muscle-nom-selected",
+    "field": "ipa",
+    "proposed_text": "myskl",
+    "accepted_text": "myskl",
+    "proposed_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''muscle''' {{pron|myskl|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''muscle''' {{pron|myskl|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3160,
+    "headword": "sienne",
+    "pos": "PRO:pos",
+    "sense_id": "b144-3160-sienne-pro-pos-selected",
+    "field": "ipa",
+    "proposed_text": "sjɛn",
+    "accepted_text": "sjɛn",
+    "proposed_source_span": {
+      "line_1_based": 21,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''sienne''' {{pron|sjɛn|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 21,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''sienne''' {{pron|sjɛn|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3161,
+    "headword": "sous-marin",
+    "pos": "NOM",
+    "sense_id": "b144-3161-sous-marin-nom-selected",
+    "field": "ipa",
+    "proposed_text": "su.ma.ʁɛ̃",
+    "accepted_text": "su.ma.ʁɛ̃",
+    "proposed_source_span": {
+      "line_1_based": 63,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''sous-marin''' {{pron|su.ma.ʁɛ̃|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 63,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''sous-marin''' {{pron|su.ma.ʁɛ̃|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3162,
+    "headword": "tragédie",
+    "pos": "NOM",
+    "sense_id": "b144-3162-tragédie-nom-selected",
+    "field": "ipa",
+    "proposed_text": "tʁa.ʒe.di",
+    "accepted_text": "tʁa.ʒe.di",
+    "proposed_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''tragédie''' {{pron|tʁa.ʒe.di|fr}} {{f}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''tragédie''' {{pron|tʁa.ʒe.di|fr}} {{f}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3163,
+    "headword": "luire",
+    "pos": "VER",
+    "sense_id": "b144-3163-luire-ver-selected",
+    "field": "ipa",
+    "proposed_text": "lɥiʁ",
+    "accepted_text": "lɥiʁ",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''luire''' {{pron|lɥiʁ|fr}} {{i|fr}} {{conjugaison|fr|groupe=3}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''luire''' {{pron|lɥiʁ|fr}} {{i|fr}} {{conjugaison|fr|groupe=3}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3164,
+    "headword": "chirurgien",
+    "pos": "NOM",
+    "sense_id": "b144-3164-chirurgien-nom-selected",
+    "field": "ipa",
+    "proposed_text": "ʃi.ʁyʁ.ʒjɛ̃",
+    "accepted_text": "ʃi.ʁyʁ.ʒjɛ̃",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''chirurgien''' {{pron|ʃi.ʁyʁ.ʒjɛ̃|fr}} {{m}} {{équiv-pour|une femme|chirurgienne|lang=fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''chirurgien''' {{pron|ʃi.ʁyʁ.ʒjɛ̃|fr}} {{m}} {{équiv-pour|une femme|chirurgienne|lang=fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3165,
+    "headword": "enchanter",
+    "pos": "VER",
+    "sense_id": "b144-3165-enchanter-ver-selected",
+    "field": "ipa",
+    "proposed_text": "ɑ̃.ʃɑ̃.te",
+    "accepted_text": "ɑ̃.ʃɑ̃.te",
+    "proposed_source_span": {
+      "line_1_based": 59,
+      "column_1_based": 1,
+      "raw_source_excerpt": "* {{pron|ɑ̃.ʃɑ̃.te|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 59,
+      "column_1_based": 1,
+      "raw_source_excerpt": "* {{pron|ɑ̃.ʃɑ̃.te|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3166,
+    "headword": "maîtriser",
+    "pos": "VER",
+    "sense_id": "b144-3166-maîtriser-ver-selected",
+    "field": "ipa",
+    "proposed_text": "me.tʁi.ze",
+    "accepted_text": "me.tʁi.ze",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''maîtriser''' {{pron|me.tʁi.ze|fr}} ou {{pron|mɛ.tʁi.ze|fr}} {{t|fr}} {{conj|grp=1|fr}}, {{tradit}} {{lien pronominal}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''maîtriser''' {{pron|me.tʁi.ze|fr}} ou {{pron|mɛ.tʁi.ze|fr}} {{t|fr}} {{conj|grp=1|fr}}, {{tradit}} {{lien pronominal}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3167,
+    "headword": "vexer",
+    "pos": "VER",
+    "sense_id": "b144-3167-vexer-ver-selected",
+    "field": "ipa",
+    "proposed_text": "vɛk.se",
+    "accepted_text": "vɛk.se",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''vexer''' {{pron|vɛk.se|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''vexer''' {{pron|vɛk.se|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3168,
+    "headword": "justifier",
+    "pos": "VER",
+    "sense_id": "b144-3168-justifier-ver-selected",
+    "field": "ipa",
+    "proposed_text": "ʒys.ti.fje",
+    "accepted_text": "ʒys.ti.fje",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''justifier''' {{pron|ʒys.ti.fje|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''justifier''' {{pron|ʒys.ti.fje|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3169,
+    "headword": "botter",
+    "pos": "VER",
+    "sense_id": "b144-3169-botter-ver-selected",
+    "field": "ipa",
+    "proposed_text": "bɔ.te",
+    "accepted_text": "bɔ.te",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''botter''' {{pron|bɔ.te|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''botter''' {{pron|bɔ.te|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3170,
+    "headword": "brun",
+    "pos": "ADJ",
+    "sense_id": "b144-3170-brun-adj-selected",
+    "field": "ipa",
+    "proposed_text": "bʁœ̃",
+    "accepted_text": "bʁœ̃",
+    "proposed_source_span": {
+      "line_1_based": 13,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''brun''' {{pron|bʁœ̃|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 13,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''brun''' {{pron|bʁœ̃|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3171,
+    "headword": "département",
+    "pos": "NOM",
+    "sense_id": "b144-3171-département-nom-selected",
+    "field": "ipa",
+    "proposed_text": "de.paʁ.tə.mɑ̃",
+    "accepted_text": "de.paʁ.tə.mɑ̃",
+    "proposed_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''département''' {{pron|de.paʁ.tə.mɑ̃|fr}} ou {{pron|de.paʁt.mɑ̃|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''département''' {{pron|de.paʁ.tə.mɑ̃|fr}} ou {{pron|de.paʁt.mɑ̃|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3172,
+    "headword": "soupçon",
+    "pos": "NOM",
+    "sense_id": "b144-3172-soupçon-nom-selected",
+    "field": "ipa",
+    "proposed_text": "sup.sɔ̃",
+    "accepted_text": "sup.sɔ̃",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''soupçon''' {{pron|sup.sɔ̃|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''soupçon''' {{pron|sup.sɔ̃|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3173,
+    "headword": "doubler",
+    "pos": "VER",
+    "sense_id": "b144-3173-doubler-ver-selected",
+    "field": "ipa",
+    "proposed_text": "du.ble",
+    "accepted_text": "du.ble",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''doubler''' {{pron|du.ble|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''doubler''' {{pron|du.ble|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3174,
+    "headword": "parcourir",
+    "pos": "VER",
+    "sense_id": "b144-3174-parcourir-ver-selected",
+    "field": "ipa",
+    "proposed_text": "paʁ.ku.ʁiʁ",
+    "accepted_text": "paʁ.ku.ʁiʁ",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''parcourir''' {{pron|paʁ.ku.ʁiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''parcourir''' {{pron|paʁ.ku.ʁiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3175,
+    "headword": "filet",
+    "pos": "NOM",
+    "sense_id": "b144-3175-filet-nom-selected",
+    "field": "ipa",
+    "proposed_text": "fi.lɛ",
+    "accepted_text": "fi.lɛ",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''filet''' {{pron|fi.lɛ|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''filet''' {{pron|fi.lɛ|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3176,
+    "headword": "four",
+    "pos": "NOM",
+    "sense_id": "b144-3176-four-nom-selected",
+    "field": "ipa",
+    "proposed_text": "fuʁ",
+    "accepted_text": "fuʁ",
+    "proposed_source_span": {
+      "line_1_based": 34,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''four''' {{pron|fuʁ|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 34,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''four''' {{pron|fuʁ|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3177,
+    "headword": "boiter",
+    "pos": "VER",
+    "sense_id": "b144-3177-boiter-ver-selected",
+    "field": "ipa",
+    "proposed_text": "bwa.te",
+    "accepted_text": "bwa.te",
+    "proposed_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''boiter''' {{pron|bwa.te|fr}} {{i|fr}} {{conj|grp=1|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''boiter''' {{pron|bwa.te|fr}} {{i|fr}} {{conj|grp=1|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3178,
+    "headword": "enculer",
+    "pos": "VER",
+    "sense_id": "b144-3178-enculer-ver-selected",
+    "field": "ipa",
+    "proposed_text": "ɑ̃.ky.le",
+    "accepted_text": "ɑ̃.ky.le",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''enculer''' {{pron|ɑ̃.ky.le|fr}} {{conj|grp=1|fr}} {{t|fr}} ou {{prnl|fr}} ''à sens réciproque'' {{lien pronominal|'}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''enculer''' {{pron|ɑ̃.ky.le|fr}} {{conj|grp=1|fr}} {{t|fr}} ou {{prnl|fr}} ''à sens réciproque'' {{lien pronominal|'}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3179,
+    "headword": "bonhomme",
+    "pos": "NOM",
+    "sense_id": "b144-3179-bonhomme-nom-selected",
+    "field": "ipa",
+    "proposed_text": "bɔ.nɔm",
+    "accepted_text": "bɔ.nɔm",
+    "proposed_source_span": {
+      "line_1_based": 32,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''bonhomme''' {{pron|bɔ.nɔm|fr}} {{m}} {{équiv-pour|une femme|bonne femme|lang=fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 32,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''bonhomme''' {{pron|bɔ.nɔm|fr}} {{m}} {{équiv-pour|une femme|bonne femme|lang=fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3180,
+    "headword": "casque",
+    "pos": "NOM",
+    "sense_id": "b144-3180-casque-nom-selected",
+    "field": "ipa",
+    "proposed_text": "kask",
+    "accepted_text": "kask",
+    "proposed_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''casque''' {{pron|kask|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''casque''' {{pron|kask|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3181,
+    "headword": "traduire",
+    "pos": "VER",
+    "sense_id": "b144-3181-traduire-ver-selected",
+    "field": "ipa",
+    "proposed_text": "tʁa.dɥiʁ",
+    "accepted_text": "tʁa.dɥiʁ",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''traduire''' {{pron|tʁa.dɥiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''traduire''' {{pron|tʁa.dɥiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3182,
+    "headword": "analyser",
+    "pos": "VER",
+    "sense_id": "b144-3182-analyser-ver-selected",
+    "field": "ipa",
+    "proposed_text": "a.na.li.ze",
+    "accepted_text": "a.na.li.ze",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''analyser''' {{pron|a.na.li.ze|fr}} {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''analyser''' {{pron|a.na.li.ze|fr}} {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3183,
+    "headword": "dentiste",
+    "pos": "NOM",
+    "sense_id": "b144-3183-dentiste-nom-selected",
+    "field": "ipa",
+    "proposed_text": "dɑ̃.tist",
+    "accepted_text": "dɑ̃.tist",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''dentiste''' {{pron|dɑ̃.tist|fr}} {{mf}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''dentiste''' {{pron|dɑ̃.tist|fr}} {{mf}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3184,
+    "headword": "approuver",
+    "pos": "VER",
+    "sense_id": "b144-3184-approuver-ver-selected",
+    "field": "ipa",
+    "proposed_text": "a.pʁu.ve",
+    "accepted_text": "a.pʁu.ve",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''approuver''' {{pron|a.pʁu.ve|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''approuver''' {{pron|a.pʁu.ve|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3185,
+    "headword": "individu",
+    "pos": "NOM",
+    "sense_id": "b144-3185-individu-nom-selected",
+    "field": "ipa",
+    "proposed_text": "ɛ̃.di.vi.dy",
+    "accepted_text": "ɛ̃.di.vi.dy",
+    "proposed_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''individu''' {{pron|ɛ̃.di.vi.dy|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''individu''' {{pron|ɛ̃.di.vi.dy|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3186,
+    "headword": "cabane",
+    "pos": "NOM",
+    "sense_id": "b144-3186-cabane-nom-selected",
+    "field": "ipa",
+    "proposed_text": "ka.ban",
+    "accepted_text": "ka.ban",
+    "proposed_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''cabane''' {{pron|ka.ban|fr}} {{f}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''cabane''' {{pron|ka.ban|fr}} {{f}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3187,
+    "headword": "pipi",
+    "pos": "NOM",
+    "sense_id": "b144-3187-pipi-nom-selected",
+    "field": "ipa",
+    "proposed_text": "pi.pi",
+    "accepted_text": "pi.pi",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''pipi''' {{pron|pi.pi|fr}} {{m}} (le plus souvent au singulier)"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''pipi''' {{pron|pi.pi|fr}} {{m}} (le plus souvent au singulier)"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3188,
+    "headword": "éléphant",
+    "pos": "NOM",
+    "sense_id": "b144-3188-éléphant-nom-selected",
+    "field": "ipa",
+    "proposed_text": "e.le.fɑ̃",
+    "accepted_text": "e.le.fɑ̃",
+    "proposed_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''éléphant''' {{pron|e.le.fɑ̃|fr}} {{m}} {{équiv-pour|lang=fr|la femelle|éléphante}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''éléphant''' {{pron|e.le.fɑ̃|fr}} {{m}} {{équiv-pour|lang=fr|la femelle|éléphante}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3189,
+    "headword": "fabuleux",
+    "pos": "ADJ",
+    "sense_id": "b144-3189-fabuleux-adj-selected",
+    "field": "ipa",
+    "proposed_text": "fa.by.lø",
+    "accepted_text": "fa.by.lø",
+    "proposed_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''fabuleux''' {{pron|fa.by.lø|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''fabuleux''' {{pron|fa.by.lø|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3190,
+    "headword": "promenade",
+    "pos": "NOM",
+    "sense_id": "b144-3190-promenade-nom-selected",
+    "field": "ipa",
+    "proposed_text": "pʁɔm.nad",
+    "accepted_text": "pʁɔm.nad",
+    "proposed_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''promenade''' {{pron|pʁɔm.nad|fr}} {{f}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''promenade''' {{pron|pʁɔm.nad|fr}} {{f}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3191,
+    "headword": "viol",
+    "pos": "NOM",
+    "sense_id": "b144-3191-viol-nom-selected",
+    "field": "ipa",
+    "proposed_text": "vjɔl",
+    "accepted_text": "vjɔl",
+    "proposed_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''viol''' {{pron|vjɔl|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''viol''' {{pron|vjɔl|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3192,
+    "headword": "ciao",
+    "pos": "ONO",
+    "sense_id": "b144-3192-ciao-ono-selected",
+    "field": "ipa",
+    "proposed_text": "tʃa.o",
+    "accepted_text": "tʃa.o",
+    "proposed_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''ciao''' {{pron|tʃa.o|fr}} ou {{pron|tʃaw|fr}} {{tradit}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 6,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''ciao''' {{pron|tʃa.o|fr}} ou {{pron|tʃaw|fr}} {{tradit}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3193,
+    "headword": "fée",
+    "pos": "NOM",
+    "sense_id": "b144-3193-fée-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Être imaginaire auquel les traditions populaires ou les contes attribuent des pouvoirs surnaturels.",
+    "accepted_text": "Être imaginaire auquel les traditions populaires ou les contes attribuent des pouvoirs surnaturels.",
+    "proposed_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{créatures|fr}} Être [[imaginaire]] à qui la [[tradition]] [[populaire]] ou l’[[imagination]] des [[conteur]]s [[attribuer|attribue]] une [[puissance]] [[surnaturel]]le."
+    },
+    "accepted_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 20,
+      "raw_source_excerpt": "Être [[imaginaire]]"
+    },
+    "proposed_modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+    "accepted_modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+    "change": "selected_source_span",
+    "reason": "CNRTL’s DAF8 capture confirms the complete source sentence as historical wording. Its worldwide expressive rights are not inferred from French expiry. The selected replacement consists only of Être imaginaire and separate short supernatural-power and tradition/story facts; the complete old sentence and its examples remain outside selected materials."
+  },
+  {
+    "frozen_row": 3193,
+    "headword": "fée",
+    "pos": "NOM",
+    "sense_id": "b144-3193-fée-nom-selected",
+    "field": "ipa",
+    "proposed_text": "fe",
+    "accepted_text": "fe",
+    "proposed_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''fée''' {{pron|fe|fr}} {{f}} {{équiv-pour|un être masculin|féetaud|fé|lang=fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''fée''' {{pron|fe|fr}} {{f}} {{équiv-pour|un être masculin|féetaud|fé|lang=fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3193,
+    "headword": "fée",
+    "pos": "NOM",
+    "sense_id": "b144-3193-fée-nom-selected",
+    "field": "english",
+    "proposed_text": "A fairy: an imaginary being given supernatural powers in folklore or stories.",
+    "accepted_text": "A fairy: an imaginary being given supernatural powers in folklore or stories.",
+    "proposed_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{créatures|fr}} Être [[imaginaire]] à qui la [[tradition]] [[populaire]] ou l’[[imagination]] des [[conteur]]s [[attribuer|attribue]] une [[puissance]] [[surnaturel]]le."
+    },
+    "accepted_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 20,
+      "raw_source_excerpt": "Être [[imaginaire]]"
+    },
+    "proposed_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "accepted_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "change": "selected_source_span",
+    "reason": "CNRTL’s DAF8 capture confirms the complete source sentence as historical wording. Its worldwide expressive rights are not inferred from French expiry. The selected replacement consists only of Être imaginaire and separate short supernatural-power and tradition/story facts; the complete old sentence and its examples remain outside selected materials."
+  },
+  {
+    "frozen_row": 3193,
+    "headword": "fée",
+    "pos": "NOM",
+    "sense_id": "b144-3193-fée-nom-selected",
+    "field": "chinese",
+    "proposed_text": "仙子：民间传说或故事中被赋予超自然力量的虚构人物。",
+    "accepted_text": "仙子：民间传说或故事中被赋予超自然力量的虚构人物。",
+    "proposed_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{créatures|fr}} Être [[imaginaire]] à qui la [[tradition]] [[populaire]] ou l’[[imagination]] des [[conteur]]s [[attribuer|attribue]] une [[puissance]] [[surnaturel]]le."
+    },
+    "accepted_source_span": {
+      "line_1_based": 12,
+      "column_1_based": 20,
+      "raw_source_excerpt": "Être [[imaginaire]]"
+    },
+    "proposed_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "accepted_modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+    "change": "selected_source_span",
+    "reason": "CNRTL’s DAF8 capture confirms the complete source sentence as historical wording. Its worldwide expressive rights are not inferred from French expiry. The selected replacement consists only of Être imaginaire and separate short supernatural-power and tradition/story facts; the complete old sentence and its examples remain outside selected materials."
+  },
+  {
+    "frozen_row": 3194,
+    "headword": "go",
+    "pos": "NOM",
+    "sense_id": "b144-3194-go-nom-selected",
+    "field": "ipa",
+    "proposed_text": "ɡo",
+    "accepted_text": "ɡo",
+    "proposed_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''go''' {{pron|ɡo|fr}} {{m}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''go''' {{pron|ɡo|fr}} {{m}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3195,
+    "headword": "gage",
+    "pos": "NOM",
+    "sense_id": "b144-3195-gage-nom-selected",
+    "field": "ipa",
+    "proposed_text": "ɡaʒ",
+    "accepted_text": "ɡaʒ",
+    "proposed_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''gage''' {{pron|ɡaʒ|fr}} {{m|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''gage''' {{pron|ɡaʒ|fr}} {{m|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3196,
+    "headword": "plume",
+    "pos": "NOM",
+    "sense_id": "b144-3196-plume-nom-selected",
+    "field": "ipa",
+    "proposed_text": "plym",
+    "accepted_text": "plym",
+    "proposed_source_span": {
+      "line_1_based": 15,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''plume''' {{pron|plym|fr}} {{f}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 15,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''plume''' {{pron|plym|fr}} {{f}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3197,
+    "headword": "souper",
+    "pos": "VER",
+    "sense_id": "b144-3197-souper-ver-selected",
+    "field": "ipa",
+    "proposed_text": "su.pe",
+    "accepted_text": "su.pe",
+    "proposed_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''souper''' {{pron|su.pe|fr}} {{i|fr}} {{conj|grp=1|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''souper''' {{pron|su.pe|fr}} {{i|fr}} {{conj|grp=1|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3198,
+    "headword": "reconnaissance",
+    "pos": "NOM",
+    "sense_id": "b144-3198-reconnaissance-nom-selected",
+    "field": "ipa",
+    "proposed_text": "ʁə.kɔ.nɛ.sɑ̃s",
+    "accepted_text": "ʁə.kɔ.nɛ.sɑ̃s",
+    "proposed_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''reconnaissance''' {{pron|ʁə.kɔ.nɛ.sɑ̃s|fr}} {{f}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''reconnaissance''' {{pron|ʁə.kɔ.nɛ.sɑ̃s|fr}} {{f}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3199,
+    "headword": "suprême",
+    "pos": "ADJ",
+    "sense_id": "b144-3199-suprême-adj-selected",
+    "field": "ipa",
+    "proposed_text": "sy.pʁɛm",
+    "accepted_text": "sy.pʁɛm",
+    "proposed_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''suprême''' {{pron|sy.pʁɛm|fr}} {{mf}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''suprême''' {{pron|sy.pʁɛm|fr}} {{mf}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  },
+  {
+    "frozen_row": 3200,
+    "headword": "encourager",
+    "pos": "VER",
+    "sense_id": "b144-3200-encourager-ver-selected",
+    "field": "ipa",
+    "proposed_text": "ɑ̃.ku.ʁa.ʒe",
+    "accepted_text": "ɑ̃.ku.ʁa.ʒe",
+    "proposed_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''encourager''' {{pron|ɑ̃.ku.ʁa.ʒe|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "accepted_source_span": {
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''encourager''' {{pron|ɑ̃.ku.ʁa.ʒe|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+    },
+    "proposed_modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+    "accepted_modification": "One recorded isolated-headword IPA variant selected; bare IPA notation retained; no liaison, audio or media copied.",
+    "change": "modification_notice",
+    "reason": "The stored IPA is bare notation; the modification notice must describe actual notation rather than claim added slashes."
+  }
+]

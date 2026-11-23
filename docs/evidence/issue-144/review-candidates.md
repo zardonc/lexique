@@ -1,9 +1,10 @@
-# Exact #144 author proposals
+# Exact #144 independently reviewed content
 
-These 50 exact groups and 200 fields are pending separate independent review.
-[groups.json](groups.json) preserves all text; [field-review.json](field-review.json)
-binds each field and use to exact fixed-source spans. The author’s source and
-scope checks are separate from independent language/rights decisions.
+All 50 exact uses and 200 fields pass independent quality and selected-boundary
+rights review. Every learner text is unchanged from the author proposal.
+[Groups](groups.json), [field review](field-review.json) and
+[replacements](accepted-replacements.json) record exact accepted content and
+the six source-span/50 modification-notice corrections.
 
 | Row | Exact group | French definition | IPA | English | Chinese |
 | --- | --- | --- | --- | --- | --- |
