@@ -1,0 +1,694 @@
+{
+  "reviewer": "Independent field/use/selected-rights reviewer #153; codex/d2-review-153; separate from author and integration owner",
+  "rivarol": {
+    "original_authors": "Antoine de Rivarol manuscript material; quatre professeurs de l’Université, anonymous compilers named collectively on the title page",
+    "edition": "Dictionnaire classique de la langue française, Paris: Brunot-Labbé and Baudouin frères, 1827",
+    "legal_basis": "CPI L123-3: the anonymous compilation’s original 1827 publication plus seventy years from 1 January 1828; Rivarol’s name does not identify the four compilers or the selected sentence author.",
+    "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
+    "conservative_expiry": "1898-01-01",
+    "original_evidence": "original-expression-review.json; original title and printed page 146 scans, externally archived under context/reviewer-evidence/issue-153/captures/",
+    "scope": "Original 1827 expression/compilation only. by is compared to its original printed entry; cheville retains conservative source-reference credit without asserting sentence authorship. Modern publisher editorial wording is not licensed by this finding.",
+    "wiki_layer": "Fixed Wiktionnaire transcription/adaptation and credits, CC-BY-SA-4.0.",
+    "lexique_layer": "Scoped French adaptation and new English/Chinese explanations, CC-BY-SA-4.0.",
+    "status": "passed_at_original_work_boundary",
+    "reviewer": "Independent field/use/selected-rights reviewer #153; codex/d2-review-153; separate from author and integration owner",
+    "selected_by_expression": "Fossé qui traverse un étang et aboutit à sa bonde.",
+    "original_printed_page": 146,
+    "scan_page": 193,
+    "original_scan": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-153\\captures\\rivarol-by-scan-193.jpg",
+    "title_scan": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-153\\captures\\rivarol-title-scan.jpg",
+    "original_ocr": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-153\\captures\\rivarol-original-ocr.txt",
+    "template_revid": 36999843,
+    "wiki_selected_revid": 39744914,
+    "wiki_definition_line": 10,
+    "comparison": "Visual inspection of original printed page 146 gives the same ditch/pond/outlet relation. Wiktionnaire removes et and uses aboutissant instead of aboutit; no modern publisher definition enters the fields.",
+    "legal_retrieval": "Direct Légifrance returned HTTP 403; externally retained official cached search excerpts confirm L123-3. Existing independently reviewed original-work bases are reused for DAF8/Littré, not inferred as sentence authorship.",
+    "legal_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-153\\captures\\legal-search-response.json",
+    "scan_metadata_note": "Commons image metadata contains an inconsistent Landais object-name field. The visually inspected title page and entry scan identify the actual 1827 Rivarol compilation; the metadata title is not used as edition authority.",
+    "cheville_original_comparison": {
+      "source_id": "b153_fr_153312",
+      "wiki_revid": 39952932,
+      "selected_definition_line": 31,
+      "retained_original_ocr_lines": [
+        62165,
+        62187
+      ],
+      "independent_reason": "The original entry begins with the peg sense and separately has Cheville du pied, a bony projection at the sides of the foot. The accepted fixed Wiktionnaire anatomy line identifies the ankle joint and prominence. Original reference credit covers the 1827 compilation without importing the peg definition or claiming individual sentence authorship.",
+      "role": "Original reference/semantic comparison only; no OCR wording supplies a bundled field."
+    }
+  },
+  "source_boundaries": [
+    {
+      "source_id": "b153_fr_8551",
+      "title": "cinquante",
+      "reference_spans": [],
+      "independent_reason": "cinquante, fixed revision 39583370: selected field lines [11, 12]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_11270",
+      "title": "racine",
+      "reference_spans": [
+        [
+          373,
+          "* {{Import:DAF8}}"
+        ],
+        [
+          374,
+          "* {{R:TLFi}}"
+        ]
+      ],
+      "independent_reason": "racine, fixed revision 40039536: selected field lines [12, 13]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_69267",
+      "title": "industrie",
+      "reference_spans": [
+        [
+          171,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "industrie, fixed revision 39936361: selected field lines [9, 40]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_137358",
+      "title": "aborder",
+      "reference_spans": [
+        [
+          214,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "aborder, fixed revision 39804770: selected field lines [6, 38]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_153428",
+      "title": "chômage",
+      "reference_spans": [
+        [
+          155,
+          "* {{Import:DAF8}}"
+        ],
+        [
+          158,
+          "* {{R:DAF8}}"
+        ]
+      ],
+      "independent_reason": "chômage, fixed revision 39972038: selected field lines [9, 18]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_157587",
+      "title": "destiner",
+      "reference_spans": [
+        [
+          87,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "destiner, fixed revision 39395949: selected field lines [6, 7]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_161799",
+      "title": "formule",
+      "reference_spans": [
+        [
+          169,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "formule, fixed revision 39790121: selected field lines [10, 47]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_162167",
+      "title": "frotter",
+      "reference_spans": [
+        [
+          187,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "frotter, fixed revision 39830289: selected field lines [6, 7]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_177061",
+      "title": "spirituel",
+      "reference_spans": [
+        [
+          140,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "spirituel, fixed revision 40005702: selected field lines [7, 30]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_638012",
+      "title": "fâché",
+      "reference_spans": [],
+      "independent_reason": "fâché, fixed revision 39841005: selected field lines [9, 10]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_20506",
+      "title": "vôtres",
+      "reference_spans": [
+        [
+          41,
+          "*{{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "vôtres, fixed revision 38517675: selected field lines []; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_25079",
+      "title": "humble",
+      "reference_spans": [
+        [
+          122,
+          "* {{R:TLFi}}"
+        ],
+        [
+          123,
+          "* {{R:DAF8}}"
+        ],
+        [
+          148,
+          "* {{R:TLFi|étym=1}}"
+        ]
+      ],
+      "independent_reason": "humble, fixed revision 39812208: selected field lines [7, 8]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_116491",
+      "title": "by",
+      "reference_spans": [
+        [
+          24,
+          "* {{R:Rivarol}}"
+        ]
+      ],
+      "independent_reason": "by, fixed revision 39744914: selected field lines [9, 10]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Its definition line 10 is the same pond-ditch expression as original printed page 146 of the 1827 anonymous compilation; that original expression is expired under the separately recorded 1898-01-01 basis. The /bi/ header is the fixed French pronunciation. Separate expired original boundaries retained: Antoine de Rivarol manuscript material; quatre professeurs de l’Université, anonymous compilers named collectively on the title page (1898-01-01). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_153798",
+      "title": "civilisation",
+      "reference_spans": [
+        [
+          136,
+          "* {{R:DAF8}}"
+        ]
+      ],
+      "independent_reason": "civilisation, fixed revision 39930869: selected field lines [8, 57]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_155533",
+      "title": "coq",
+      "reference_spans": [
+        [
+          14,
+          ": {{lien-ancre-étym|fr|nom|2}} {{date|1354}} pour ''cuqe''{{R|DMF|coq2}}, {{date|1491-1492}} pour ''coke''{{R|DMF|coq2}}, {{date|1671}} pour ''coq''{{R|TLFi}}. Pour le TLFi, le mot serait emprunté en 1671, « au moment où dominait la navigation hollandaise », au {{étyl|nl|fr|mot=kok|sens=cuisinier}}, dérivé du latin {{lien|''coquus''|la}} (même chose pour le ''Dictionnaire historique de la langue française''<ref>{{R:RobertDHLF}}.</ref>). Mais le ''Dictionnaire du moyen français'' en fait une variante de ''[[queux]]'', directement dérivé du latin {{lien|''coquus''|la}}{{R|DMF|coq2}}. Voir aussi les formes féminines en ancien français {{lien|''coquesse''|fro}}, {{lien|''coque''|fro}} ou le catalan {{lien|''coc''|ca}}, {{lien|''coquessa''|ca}}."
+        ],
+        [
+          389,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "coq, fixed revision 39955192: selected field lines [18, 27]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_158642",
+      "title": "économiser",
+      "reference_spans": [
+        [
+          80,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "économiser, fixed revision 39003257: selected field lines [6, 7]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_168545",
+      "title": "mourant",
+      "reference_spans": [
+        [
+          88,
+          "*{{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "mourant, fixed revision 39815564: selected field lines [7, 8]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_171684",
+      "title": "plaquer",
+      "reference_spans": [
+        [
+          116,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "plaquer, fixed revision 39730092: selected field lines [7, 20]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_174137",
+      "title": "récent",
+      "reference_spans": [
+        [
+          91,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "récent, fixed revision 39773528: selected field lines [8, 9]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_240413",
+      "title": "fasciste",
+      "reference_spans": [
+        [
+          163,
+          "* {{R:TLFi}}"
+        ]
+      ],
+      "independent_reason": "fasciste, fixed revision 39004756: selected field lines [7, 8]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_18274",
+      "title": "pris",
+      "reference_spans": [
+        [
+          63,
+          "* {{R:DAF8|prendre}}"
+        ]
+      ],
+      "independent_reason": "pris, fixed revision 39998409: selected field lines [8, 9]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_122605",
+      "title": "ambiance",
+      "reference_spans": [
+        [
+          77,
+          "*{{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "ambiance, fixed revision 39715724: selected field lines [9, 10]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_145021",
+      "title": "bourgeois",
+      "reference_spans": [
+        [
+          216,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "bourgeois, fixed revision 39985858: selected field lines [143, 144]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_148993",
+      "title": "baignoire",
+      "reference_spans": [
+        [
+          197,
+          "* {{R:DAF8}}"
+        ],
+        [
+          198,
+          "* {{R:TLFi}}"
+        ]
+      ],
+      "independent_reason": "baignoire, fixed revision 39900392: selected field lines [9, 10]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_149014",
+      "title": "baisse",
+      "reference_spans": [
+        [
+          81,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "baisse, fixed revision 39772660: selected field lines [8, 12]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_157477",
+      "title": "désespéré",
+      "reference_spans": [
+        [
+          85,
+          "*{{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "désespéré, fixed revision 39449937: selected field lines [9, 11]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_158375",
+      "title": "duc",
+      "reference_spans": [
+        [
+          253,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "duc, fixed revision 39997620: selected field lines [18, 19]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_160773",
+      "title": "exposition",
+      "reference_spans": [
+        [
+          157,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "exposition, fixed revision 40036784: selected field lines [7, 8]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_163698",
+      "title": "héritage",
+      "reference_spans": [
+        [
+          175,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "héritage, fixed revision 39870574: selected field lines [8, 9]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_174999",
+      "title": "rétablir",
+      "reference_spans": [
+        [
+          81,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "rétablir, fixed revision 38476297: selected field lines [6, 7]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_5141",
+      "title": "certificat",
+      "reference_spans": [
+        [
+          134,
+          "* {{R:DAF8}}"
+        ]
+      ],
+      "independent_reason": "certificat, fixed revision 39954386: selected field lines [7, 8]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_22214",
+      "title": "manuel",
+      "reference_spans": [
+        [
+          184,
+          "*{{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "manuel, fixed revision 39718062: selected field lines [72, 73]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_104168",
+      "title": "mannequin",
+      "reference_spans": [
+        [
+          119,
+          "* {{Import:DAF8}}"
+        ],
+        [
+          122,
+          "* {{R:Littré}}"
+        ],
+        [
+          123,
+          "* {{R:TLFi}}"
+        ]
+      ],
+      "independent_reason": "mannequin, fixed revision 39887041: selected field lines [10, 25]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935); Émile Littré (1801–1881) (1952-01-01). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_117993",
+      "title": "vice",
+      "reference_spans": [
+        [
+          181,
+          "* {{R:TLFi}}"
+        ],
+        [
+          183,
+          "* {{R:Littré}}"
+        ],
+        [
+          282,
+          "* {{R:TLFi}}"
+        ]
+      ],
+      "independent_reason": "vice, fixed revision 39964219: selected field lines [9, 10]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Émile Littré (1801–1881) (1952-01-01). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_119082",
+      "title": "flatter",
+      "reference_spans": [
+        [
+          118,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "flatter, fixed revision 39916417: selected field lines [6, 7]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_120420",
+      "title": "option",
+      "reference_spans": [
+        [
+          105,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "option, fixed revision 39771811: selected field lines [7, 15]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_156798",
+      "title": "défaire",
+      "reference_spans": [
+        [
+          149,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "défaire, fixed revision 39715638: selected field lines [6, 23]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_167304",
+      "title": "manipuler",
+      "reference_spans": [
+        [
+          95,
+          "* {{R:TLFi}}"
+        ],
+        [
+          96,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "manipuler, fixed revision 39820759: selected field lines [6, 18]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_172891",
+      "title": "prophète",
+      "reference_spans": [
+        [
+          127,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "prophète, fixed revision 39956525: selected field lines [8, 9]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_174359",
+      "title": "régiment",
+      "reference_spans": [
+        [
+          102,
+          "* {{Import:DAF8}}"
+        ],
+        [
+          103,
+          "* {{R:TLFi}}"
+        ]
+      ],
+      "independent_reason": "régiment, fixed revision 39440298: selected field lines [10, 11]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_7329",
+      "title": "nid",
+      "reference_spans": [
+        [
+          236,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "nid, fixed revision 39931623: selected field lines [20, 21]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_20479",
+      "title": "volé",
+      "reference_spans": [],
+      "independent_reason": "volé, fixed revision 39044464: selected field lines [6]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_32790",
+      "title": "papillon",
+      "reference_spans": [
+        [
+          379,
+          "* {{R:TLFi}}"
+        ],
+        [
+          380,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "papillon, fixed revision 39914085: selected field lines [16, 17]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_37262",
+      "title": "énormément",
+      "reference_spans": [
+        [
+          73,
+          "* {{R:Littré}}"
+        ],
+        [
+          74,
+          "*{{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "énormément, fixed revision 39772491: selected field lines [6, 7]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935); Émile Littré (1801–1881) (1952-01-01). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_41319",
+      "title": "corriger",
+      "reference_spans": [
+        [
+          106,
+          "*{{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "corriger, fixed revision 39954451: selected field lines [6, 7]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_149179",
+      "title": "baraque",
+      "reference_spans": [
+        [
+          129,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "baraque, fixed revision 39739399: selected field lines [10, 11]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_153312",
+      "title": "cheville",
+      "reference_spans": [
+        [
+          294,
+          "* {{R:DAF8}}"
+        ],
+        [
+          295,
+          "* {{R:Rivarol}}"
+        ]
+      ],
+      "independent_reason": "cheville, fixed revision 39952932: selected field lines [13, 31]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. R:Rivarol at line 295 is credited at its expired original-edition boundary; the selected anatomy line 31 is not the peg definition. The /ʃə.vij/ variant is selected, not the following TLFi-cited /ʃvij/. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935); Antoine de Rivarol manuscript material; quatre professeurs de l’Université, anonymous compilers named collectively on the title page (1898-01-01). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_156813",
+      "title": "défi",
+      "reference_spans": [
+        [
+          82,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "défi, fixed revision 39955989: selected field lines [9, 24]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_157709",
+      "title": "deuil",
+      "reference_spans": [
+        [
+          144,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "deuil, fixed revision 40038788: selected field lines [11, 12]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_160969",
+      "title": "facteur",
+      "reference_spans": [
+        [
+          255,
+          "* {{Import:DAF8}}"
+        ],
+        [
+          256,
+          "* {{R:TLFi}}"
+        ]
+      ],
+      "independent_reason": "facteur, fixed revision 39795372: selected field lines [10, 48]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_83",
+      "title": "voler",
+      "reference_spans": [
+        [
+          406,
+          "* {{R:TLFi}}"
+        ],
+        [
+          407,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "voler, fixed revision 40004162: selected field lines [170]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_160",
+      "title": "prendre",
+      "reference_spans": [
+        [
+          983,
+          "* {{R:TLFi}}"
+        ],
+        [
+          984,
+          "* {{R:DAF8}}"
+        ]
+      ],
+      "independent_reason": "prendre, fixed revision 39920890: selected field lines []; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_159347",
+      "title": "le vôtre",
+      "reference_spans": [],
+      "independent_reason": "le vôtre, fixed revision 38903927: selected field lines []; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_159348",
+      "title": "les vôtres",
+      "reference_spans": [],
+      "independent_reason": "les vôtres, fixed revision 35962808: selected field lines [16, 17]; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    },
+    {
+      "source_id": "b153_fr_180221",
+      "title": "vôtre",
+      "reference_spans": [
+        [
+          50,
+          "* {{Import:DAF8}}"
+        ]
+      ],
+      "independent_reason": "vôtre, fixed revision 39719086: selected field lines []; French language/POS/header and selected/support spans were inspected in the retained raw article. The selected lexical/phonetic text contains no separately attributed protected quotation; neighbouring literary/news examples, etymologies, images, audio and other languages are not bundled. Separate expired original boundaries retained: Académie française (2006-01-01, using final publication in 1935). Bibliographic/import markers do not prove sentence authorship or license modern TLFi/Robert editorial transcriptions. Fixed Wiktionnaire contributions and Lexique adaptations retain CC-BY-SA-4.0 with article/history credits, modification notice and ShareAlike. "
+    }
+  ]
+}
