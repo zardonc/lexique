@@ -1,0 +1,40 @@
+[
+  {
+    "frozen_row": 3060,
+    "headword": "bavarder",
+    "pos": "VER",
+    "sense_id": "b142-3060-bavarder-ver-selected",
+    "field": "chinese",
+    "proposed_text": "闲聊；毫无拘束或不加注意地说很多话（不及物动词）。",
+    "accepted_text": "喋喋不休地聊天；说话不加节制或不顾分寸（不及物动词）。",
+    "exact_source": {
+      "source_id": "b142_fr_149396",
+      "revid": 40047743,
+      "url": "https://fr.wiktionary.org/w/index.php?title=bavarder&oldid=40047743",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=bavarder&action=history",
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# [[parler|Parler]] sans mesure et sans [[discrétion]]."
+    },
+    "review_reason": "不加节制 or 不顾分寸 conveys sans mesure/sans discrétion. 不加注意 meant inattention and did not preserve that interpersonal restriction."
+  },
+  {
+    "frozen_row": 3091,
+    "headword": "témoignage",
+    "pos": "NOM",
+    "sense_id": "b142-3091-témoignage-nom-selected",
+    "field": "chinese",
+    "proposed_text": "证言；一名或多名目击者对事实所作的口头或书面陈述（阳性名词）。",
+    "accepted_text": "证言；一名或多名证人就某一事实所作的口头或书面陈述（阳性名词）。",
+    "exact_source": {
+      "source_id": "b142_fr_178124",
+      "revid": 40040376,
+      "url": "https://fr.wiktionary.org/w/index.php?title=t%C3%A9moignage&oldid=40040376",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=t%C3%A9moignage&action=history",
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# [[action|Action]] de [[témoigner]] ; [[rapport]] d’[[un]] ou de [[plusieurs]] [[témoin]]s sur un [[fait]], [[soit]] [[de vive voix]], soit par [[écrit]]."
+    },
+    "review_reason": "证人 preserves témoins without requiring sight. 目击者 incorrectly narrowed witnesses to eyewitnesses; oral/written and fact remain."
+  }
+]

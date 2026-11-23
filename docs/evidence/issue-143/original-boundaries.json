@@ -1,0 +1,1195 @@
+{
+  "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+  "selected_uses": [
+    {
+      "frozen_row": 3101,
+      "headword": "septembre",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_3037",
+      "exact_selected_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[neuvième|Neuvième]] [[mois]] de l’[[année]] du [[calendrier]] [[grégorien]], qui [[compter|compte]] [[trente]] [[jour]]s."
+      },
+      "selected_expression_reason": "Calendar ordinal and duration are facts; the short sentence has no expressive narrative to import from DAF8.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3102,
+      "headword": "distraire",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_158119",
+      "exact_selected_span": {
+        "line_1_based": 14,
+        "column_1_based": 131,
+        "raw_source_excerpt": "[[divertir]]"
+      },
+      "selected_expression_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "distraire",
+        "url": "https://www.cnrtl.fr/definition/academie8/distraire",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:37.326214+00:00",
+        "bytes": 116241,
+        "html": "distraire.html",
+        "text": "distraire.txt",
+        "archive_relative_path": "audit/originals/distraire.txt",
+        "matched_expression": "Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir",
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      },
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "selected_spans": [
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 131,
+          "reviewed_excerpt": "[[divertir]]"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 119,
+          "reviewed_excerpt": "[[amuser]]"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 48,
+          "reviewed_excerpt": "[[esprit]]"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 72,
+          "reviewed_excerpt": "[[fatiguer|fatigue]]"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 98,
+          "reviewed_excerpt": "[[obséder|obsède]]"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 24,
+          "reviewed_excerpt": "[[éloigner|Éloigner]]"
+        }
+      ]
+    },
+    {
+      "frozen_row": 3103,
+      "headword": "tabac",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_9975",
+      "exact_selected_span": {
+        "line_1_based": 19,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[préparation|Préparation]] [[obtenue]] par [[séchage]] et [[léger|légère]] [[fermentation]] des [[feuille]]s de cette plante."
+      },
+      "selected_expression_reason": "Preparation steps are factual process information; no literary quotation or expressive example is retained.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3104,
+      "headword": "exception",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_160577",
+      "exact_selected_span": {
+        "line_1_based": 17,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{par extension}} Ce qui est [[excepté]]."
+      },
+      "selected_expression_reason": "Ce qui est excepté is a short elementary formulation, even if inherited; the explanatory rule relation is an idea.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3105,
+      "headword": "fonder",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_161684",
+      "exact_selected_span": {
+        "line_1_based": 17,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{par analogie|fr}} [[établir|Établir]]."
+      },
+      "selected_expression_reason": "Établir is a single lexical synonym; the new organization wording supplies no copied original expression.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3106,
+      "headword": "rage",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_118475",
+      "exact_selected_span": {
+        "line_1_based": 31,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{figuré|fr}} {{plus courant}} [[violent|Violent]] [[transport]] de [[dépit]], de [[colère]], de [[haine]], de [[cruauté]], etc."
+      },
+      "selected_expression_reason": "The retained anger synonyms and their simple intensity relation are short lexical phrases, not the neighbouring literary examples.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3107,
+      "headword": "gras",
+      "pos": "ADJ",
+      "selected_source_id": "b143_fr_25847",
+      "exact_selected_span": {
+        "line_1_based": 12,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{info lex|cuisine}} Qualifie des [[mets]] où il y a [[plus ou moins]] de graisse."
+      },
+      "selected_expression_reason": "Containing fat is an objective food property; the selected short formulation does not borrow illustrative prose.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3108,
+      "headword": "accusé",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_14414",
+      "exact_selected_span": {
+        "line_1_based": 43,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|droit|fr}} [[personne|Personne]] qui [[mettre en cause|est mise en cause]] par la [[justice]]."
+      },
+      "selected_expression_reason": "Person accused by justice is a brief legal classification, with no developed original exposition or quoted case.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3109,
+      "headword": "chevalier",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_153257",
+      "exact_selected_span": {
+        "line_1_based": 67,
+        "column_1_based": 1,
+        "raw_source_excerpt": "## {{term|à notre époque}} Membre d’un [[ordre]] [[religieux]], [[militaire]] ou [[civil]]."
+      },
+      "selected_expression_reason": "Modern member-of-an-order classification and the short historical received-knighthood support are factual title relations; no original historical narrative is reproduced.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field. The short received-knighthood support identifies the title hierarchy; modern sense is selected separately.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3110,
+      "headword": "impressionnant",
+      "pos": "ADJ",
+      "selected_source_id": "b143_fr_164512",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 7,
+        "raw_source_excerpt": "[[impressionner|impressionne]]"
+      },
+      "selected_expression_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "impressionnant",
+        "url": "https://www.cnrtl.fr/definition/academie8/impressionnant",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:38.239180+00:00",
+        "bytes": 50218,
+        "html": "impressionnant.html",
+        "text": "impressionnant.txt",
+        "archive_relative_path": "audit/originals/impressionnant.txt",
+        "matched_expression": "Qui impressionne, qui produit sur la sensibilité physique ou morale ou sur l'esprit des impressions, une impression vive et forte",
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      },
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "selected_spans": [
+        {
+          "source_id": "b143_fr_164512",
+          "revid": 39715515,
+          "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+          "line_1_based": 8,
+          "column_1_based": 7,
+          "reviewed_excerpt": "[[impressionner|impressionne]]"
+        },
+        {
+          "source_id": "b143_fr_164512",
+          "revid": 39715515,
+          "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+          "line_1_based": 8,
+          "column_1_based": 190,
+          "reviewed_excerpt": "[[fort]]e"
+        },
+        {
+          "source_id": "b143_fr_164512",
+          "revid": 39715515,
+          "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+          "line_1_based": 8,
+          "column_1_based": 123,
+          "reviewed_excerpt": "[[esprit]]"
+        },
+        {
+          "source_id": "b143_fr_164512",
+          "revid": 39715515,
+          "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+          "line_1_based": 8,
+          "column_1_based": 71,
+          "reviewed_excerpt": "[[sensibilité]]"
+        }
+      ]
+    },
+    {
+      "frozen_row": 3111,
+      "headword": "cuisinier",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_156190",
+      "exact_selected_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|cuisine|fr}} Celui qui [[préparer|prépare]], qui [[cuire|cuit]] la [[nourriture]]."
+      },
+      "selected_expression_reason": "Preparing/cooking food is the factual occupational activity, expressed in a short basic clause.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3112,
+      "headword": "fragile",
+      "pos": "ADJ",
+      "selected_source_id": "b143_fr_121338",
+      "exact_selected_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Qui se [[rompre|rompt]] ou se [[briser|brise]] facilement."
+      },
+      "selected_expression_reason": "Qui se rompt ou se brise facilement is a short conventional property description, not creative illustration.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3113,
+      "headword": "saucisse",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_51802",
+      "exact_selected_span": {
+        "line_1_based": 12,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{charcuteries|fr}} [[viande|Viande]] [[haché]]e et [[assaisonné]]e, [[embosser|embossée]] dans une section de [[boyau]] naturel ou artificiel, soit [[mince]] et de longueur suffisante pour une [[portion]] [[individuel]]le, soit plus large et destinée à être coupée en [[rondelle]]s."
+      },
+      "selected_expression_reason": "Actual DAF8 says Boyau de porc ou d'autre animal, rempli de viande crue, hachée et assaisonnée. The selected wiki sentence adds artificial casing and portions; retained overlap is ingredient/casing facts, not that original sentence's expression.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "saucisse",
+        "url": "https://www.cnrtl.fr/definition/academie8/saucisse",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:39.179069+00:00",
+        "bytes": 57306,
+        "html": "saucisse.html",
+        "text": "saucisse.txt",
+        "archive_relative_path": "audit/originals/saucisse.txt",
+        "matched_expression": null,
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      }
+    },
+    {
+      "frozen_row": 3114,
+      "headword": "tremper",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_178866",
+      "exact_selected_span": {
+        "line_1_based": 7,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[mouiller|Mouiller]] une [[chose]] en la [[mettre|mettant]] dans quelque [[liquide]]."
+      },
+      "selected_expression_reason": "Wetting something by immersion is a simple process idea in a short clause, not an expressive example.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3115,
+      "headword": "grève",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_36764",
+      "exact_selected_span": {
+        "line_1_based": 63,
+        "column_1_based": 154,
+        "raw_source_excerpt": "[[cesser]] leur [[travail]]"
+      },
+      "selected_expression_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "grève",
+        "url": "https://www.cnrtl.fr/definition/academie8/gr%C3%A8ve",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:40.359853+00:00",
+        "bytes": 138215,
+        "html": "grève.html",
+        "text": "grève.txt",
+        "archive_relative_path": "audit/originals/grève.txt",
+        "matched_expression": "jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages",
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      },
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "selected_spans": [
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 154,
+          "reviewed_excerpt": "[[cesser]] leur [[travail]]"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 75,
+          "reviewed_excerpt": "[[salarié]]s"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 39,
+          "reviewed_excerpt": "[[entente|Entente]]"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 221,
+          "reviewed_excerpt": "[[augmentation]] de [[salaire]]"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 280,
+          "reviewed_excerpt": "[[avantage]]s"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 3,
+          "reviewed_excerpt": "{{lexique|travail|syndicalisme|fr}}"
+        }
+      ]
+    },
+    {
+      "frozen_row": 3116,
+      "headword": "tendresse",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_178098",
+      "exact_selected_span": {
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{sentiments|fr}} [[amour|Amour]], affection particulière portée à quelqu’un ou quelque chose."
+      },
+      "selected_expression_reason": "Amour, affection particulière portée à quelqu'un ou quelque chose is a short conventional emotional relation, not neighbouring literary prose.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3117,
+      "headword": "ravissant",
+      "pos": "ADJ",
+      "selected_source_id": "b143_fr_173971",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{figuré|fr}} Qui [[transporter|transporte]] d’[[admiration]]."
+      },
+      "selected_expression_reason": "Qui transporte d'admiration is a brief conventional phrase; factual adjective agreement adds no expressive original work.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3118,
+      "headword": "abîmer",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_35432",
+      "exact_selected_span": {
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Faire [[perdre]] en [[qualité]]."
+      },
+      "selected_expression_reason": "Faire perdre en qualité is a short elementary phrase; the elaboration is original explanatory wording.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3119,
+      "headword": "applaudir",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_138827",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{intransitif|fr}} [[battre|Battre]] des [[main]]s en [[signe]] d’[[approbation]]."
+      },
+      "selected_expression_reason": "Battre des mains en signe d'approbation is a brief factual action/purpose description.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3120,
+      "headword": "photographe",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_171245",
+      "exact_selected_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Personne qui prend des photographies."
+      },
+      "selected_expression_reason": "Personne qui prend des photographies is a basic factual occupational description without distinctive expression.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3121,
+      "headword": "are",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_7821",
+      "exact_selected_span": {
+        "line_1_based": 18,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{unités|fr|de superficie}} [[unité|Unité]] de [[mesure]] de [[surface]] de [[terrain]]s, égale à 100 [[mètre carré|mètres carrés]]."
+      },
+      "selected_expression_reason": "A metric unit, its domain and its numerical conversion are facts; the definition has no imported expressive example.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3122,
+      "headword": "bidon",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_12782",
+      "exact_selected_span": {
+        "line_1_based": 27,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[récipient|Récipient]] en [[fer-blanc]], en [[plastique]], etc., [[clos]] [[hermétiquement]], [[renfermer|renfermant]] de l’[[huile]], du [[pétrole]], de l’[[essence]], du [[lait]], etc."
+      },
+      "selected_expression_reason": "Actual DAF8 vessel/material/liquid examples survive only as factual construction and contents information; accepted wording recasts them without its enumerated original sentence.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "bidon",
+        "url": "https://www.cnrtl.fr/definition/academie8/bidon",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:41.287209+00:00",
+        "bytes": 68178,
+        "html": "bidon.html",
+        "text": "bidon.txt",
+        "archive_relative_path": "audit/originals/bidon.txt",
+        "matched_expression": null,
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      }
+    },
+    {
+      "frozen_row": 3123,
+      "headword": "lecture",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_120684",
+      "exact_selected_span": {
+        "line_1_based": 18,
+        "column_1_based": 38,
+        "raw_source_excerpt": "lire seul et des [[yeux]]"
+      },
+      "selected_expression_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "lecture",
+        "url": "https://www.cnrtl.fr/definition/academie8/lecture",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:42.435112+00:00",
+        "bytes": 120945,
+        "html": "lecture.html",
+        "text": "lecture.txt",
+        "archive_relative_path": "audit/originals/lecture.txt",
+        "matched_expression": "l'Action, l'habitude de lire seul et des yeux, pour son instruction ou pour son plaisir",
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      },
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "selected_spans": [
+        {
+          "source_id": "b143_fr_120684",
+          "revid": 39878425,
+          "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+          "line_1_based": 18,
+          "column_1_based": 38,
+          "reviewed_excerpt": "lire seul et des [[yeux]]"
+        },
+        {
+          "source_id": "b143_fr_120684",
+          "revid": 39878425,
+          "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+          "line_1_based": 18,
+          "column_1_based": 74,
+          "reviewed_excerpt": "[[instruction]]"
+        },
+        {
+          "source_id": "b143_fr_120684",
+          "revid": 39878425,
+          "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+          "line_1_based": 18,
+          "column_1_based": 102,
+          "reviewed_excerpt": "[[plaisir]]"
+        }
+      ]
+    },
+    {
+      "frozen_row": 3124,
+      "headword": "mexicain",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_265477",
+      "exact_selected_span": {
+        "line_1_based": 85,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Nom de la [[langue]] [[espagnol]]e [[parler|parlée]] au Mexique."
+      },
+      "selected_expression_reason": "Language naming and geographical speech variety are facts, stated briefly; no quoted original description is copied.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3125,
+      "headword": "offenser",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_169492",
+      "exact_selected_span": {
+        "line_1_based": 7,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[outrager|Outrager]] quelqu’un par une [[offense]]."
+      },
+      "selected_expression_reason": "Outrager quelqu'un par une offense is a short synonym relation; no expressive illustrative prose is retained.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3126,
+      "headword": "quatrième",
+      "pos": "ADJ",
+      "selected_source_id": "b143_fr_1767",
+      "exact_selected_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Adjectif ordinal correspondant au nombre [[quatre]]."
+      },
+      "selected_expression_reason": "Ordinal correspondence to four is numerical/grammatical fact, not protectable exposition.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3127,
+      "headword": "accélérer",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_137400",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{transitif|fr}} [[rendre|Rendre]] [[plus]] [[rapide]]."
+      },
+      "selected_expression_reason": "Rendre plus rapide is an elementary three-word synonym phrase; the object classes are new explanations.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3128,
+      "headword": "pars",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_2252",
+      "exact_selected_span": {
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      },
+      "selected_expression_reason": "The selected golf definition is short factual conventional stroke-count information, not expressive dictionary exposition. The plural relation and noun pronunciation are grammatical/phonetic facts. No image, audio, news quotation, Georgian-letter exposition or other-language text is retained. Wiki/Lexique CC BY-SA 4.0 source/history/contributor and modification obligations remain.",
+      "support_expression_reason": "Exact French noun-flexion pars lines 20–23, regular fr-rég|s=par, golf par noun lines 291–295 and /paʁ/ noun head; grammatical facts. No verb line or Georgian-letter text supports the use.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "specialist_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/143",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-22",
+        "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+      }
+    },
+    {
+      "frozen_row": 3129,
+      "headword": "congrès",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_155143",
+      "exact_selected_span": {
+        "line_1_based": 20,
+        "column_1_based": 3,
+        "raw_source_excerpt": "Assemblée"
+      },
+      "selected_expression_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "congrès",
+        "url": "https://www.cnrtl.fr/definition/academie8/congr%C3%A8s",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:43.356158+00:00",
+        "bytes": 68215,
+        "html": "congrès.html",
+        "text": "congrès.txt",
+        "archive_relative_path": "audit/originals/congrès.txt",
+        "matched_expression": "se communiquer les résultats de leurs études et échanger leurs idées sur des points de religion, de science, de littérature, de politique",
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      },
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "selected_spans": [
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 3,
+          "reviewed_excerpt": "Assemblée"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 120,
+          "reviewed_excerpt": "[[étude]]s"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 157,
+          "reviewed_excerpt": "[[idée]]s"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 134,
+          "reviewed_excerpt": "[[échanger]]"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 73,
+          "reviewed_excerpt": "[[communiquer]]"
+        }
+      ]
+    },
+    {
+      "frozen_row": 3130,
+      "headword": "percer",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_170949",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[traverser|Traverser]] [[faire|en faisant]] un [[trou]] ou une [[ouverture]] ; [[perforer]]."
+      },
+      "selected_expression_reason": "Traverser en faisant un trou ou une ouverture; perforer is a short action/synonym phrase, without an expressive example.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3131,
+      "headword": "étape",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_36597",
+      "exact_selected_span": {
+        "line_1_based": 46,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{figuré|fr}} Partie de la [[période]] d'une [[évolution]], d'une [[transformation]], d'une [[mutation]], etc."
+      },
+      "selected_expression_reason": "The selected process-stage classification is factual conceptual information in a short clause; no historical narrative is retained.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3132,
+      "headword": "électricité",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_460",
+      "exact_selected_span": {
+        "line_1_based": 18,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|électricité|fr}} Forme d’[[énergie]] très utilisée depuis le {{siècle2|XIX}} siècle."
+      },
+      "selected_expression_reason": "Energy classification and historical adoption date are facts, not creative exposition.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3133,
+      "headword": "déborder",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_33199",
+      "exact_selected_span": {
+        "line_1_based": 7,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{intransitif|fr}} [[dépasser|Dépasser]] le bord, en parlant notamment des [[fleuve]]s, des [[rivière]]s, des [[étang]]s, de l’eau en général."
+      },
+      "selected_expression_reason": "Crossing an edge and the list of rivers/ponds/water are factual physical classifications; accepted wording independently explains them.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3134,
+      "headword": "difficulté",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_157781",
+      "exact_selected_span": {
+        "line_1_based": 13,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[manque|Manque]] de [[facilité]] pour [[quelque]] [[action]] que ce [[être|soit]]."
+      },
+      "selected_expression_reason": "Manque de facilité pour quelque action que ce soit is a short conventional synonym formulation.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3135,
+      "headword": "uns",
+      "pos": "PRO:ind",
+      "selected_source_id": "b143_fr_180372",
+      "exact_selected_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Sert à décrire une partie d’un [[groupe]], par opposition à [[l’autre]]."
+      },
+      "selected_expression_reason": "Group contrast is a semantic fact. Plural tables and article/liaison requirements are grammar facts; retained prose on articles/English comparison explains those facts without literary illustration. Supporting un is grammatical contrast, not a licence for all its DAF8 text.",
+      "support_expression_reason": "Group contrast is a semantic fact. Plural tables and article/liaison requirements are grammar facts; retained prose on articles/English comparison explains those facts without literary illustration. Supporting un is grammatical contrast, not a licence for all its DAF8 text.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3136,
+      "headword": "vachement",
+      "pos": "ADV",
+      "selected_source_id": "b143_fr_204192",
+      "exact_selected_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{popu|fr}} [[extrêmement|Extrêmement]] ; [[drôlement]] ; [[très]]."
+      },
+      "selected_expression_reason": "The selected short intensifier synonyms and register label contain no expressive original sentence.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3137,
+      "headword": "curé",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_156312",
+      "exact_selected_span": {
+        "line_1_based": 13,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|religion|fr}} [[prêtre|Prêtre]] de l’[[Église catholique romaine]] ou de l’Église [[vieux-catholique|vieille-catholique]] [[pourvoir|pourvu]] d’une [[cure]]."
+      },
+      "selected_expression_reason": "Priest/denomination/parish classification is factual institutional information; no sermon or other original prose is selected.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3138,
+      "headword": "féliciter",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_161135",
+      "exact_selected_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[complimenter|Complimenter]] quelqu’un sur un [[succès]], sur un [[événement]] [[agréable]]."
+      },
+      "selected_expression_reason": "Complimenter quelqu'un sur un succès, sur un événement agréable is a short conventional social-act description.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3139,
+      "headword": "panier",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_5262",
+      "exact_selected_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[objet|Objet]] [[portatif]] [[creux]] [[servir|servant]] à [[contenir]] et [[transporter]] des [[provision]]s, des [[marchandise]]s ou des [[animaux]] ([[à l’origine]], en [[vannerie]])."
+      },
+      "selected_expression_reason": "Actual DAF8 describes an osier/jonc portable object containing goods/food. The current selected span adds hollowness/animals and recasts materials; its retained overlap is functional/material facts, not the original enumerated wording.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "panier",
+        "url": "https://www.cnrtl.fr/definition/academie8/panier",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:44.506129+00:00",
+        "bytes": 167724,
+        "html": "panier.html",
+        "text": "panier.txt",
+        "archive_relative_path": "audit/originals/panier.txt",
+        "matched_expression": null,
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      }
+    },
+    {
+      "frozen_row": 3140,
+      "headword": "caresser",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_151175",
+      "exact_selected_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Faire des [[caresse]]s de la [[main]] ou des [[lèvres]]."
+      },
+      "selected_expression_reason": "Faire des caresses de la main ou des lèvres is a short conventional action/body-part phrase.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3141,
+      "headword": "galerie",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_64249",
+      "exact_selected_span": {
+        "line_1_based": 21,
+        "column_1_based": 20,
+        "raw_source_excerpt": "[[salle|Salle]]"
+      },
+      "selected_expression_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "galerie",
+        "url": "https://www.cnrtl.fr/definition/academie8/galerie",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:45.626327+00:00",
+        "bytes": 142332,
+        "html": "galerie.html",
+        "text": "galerie.txt",
+        "archive_relative_path": "audit/originals/galerie.txt",
+        "matched_expression": "Salles de palais, de musées, plus longues que larges où se trouvent exposées des collections de tableaux et d'œuvres d'art",
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      },
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "selected_spans": [
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 20,
+          "reviewed_excerpt": "[[salle|Salle]]"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 54,
+          "reviewed_excerpt": "[[musée]]"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 39,
+          "reviewed_excerpt": "[[palais]]"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 65,
+          "reviewed_excerpt": "plus longue que large"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 102,
+          "reviewed_excerpt": "[[exposer|exposées]]"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 146,
+          "reviewed_excerpt": "[[tableau]]x"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 164,
+          "reviewed_excerpt": "[[œuvres d’art]]"
+        }
+      ]
+    },
+    {
+      "frozen_row": 3142,
+      "headword": "temple",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_10358",
+      "exact_selected_span": {
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[édifice|Édifice]] [[public]] [[consacrer|consacré]] au [[culte]] de la [[divinité]]."
+      },
+      "selected_expression_reason": "Édifice public consacré au culte de la divinité is a brief institutional function classification, without creative illustration.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3143,
+      "headword": "braquer",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_150321",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[tourner|Tourner]] de façon à [[placer]] (une [[arme à feu]], un instrument d'optique) dans une [[direction]] [[déterminé]]e, [[pointer]]."
+      },
+      "selected_expression_reason": "The actual DAF8 turning/direction phrase and canon/lunette examples convey elementary manipulation facts. The selected explanatory wording has no distinctive expressive elaboration beyond those facts.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "braquer",
+        "url": "https://www.cnrtl.fr/definition/academie8/braquer",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:46.722649+00:00",
+        "bytes": 69880,
+        "html": "braquer.html",
+        "text": "braquer.txt",
+        "archive_relative_path": "audit/originals/braquer.txt",
+        "matched_expression": null,
+        "basis": "Actual CNRTL rendering of the named Académie edition, separately from Wiktionnaire article markers."
+      }
+    },
+    {
+      "frozen_row": 3144,
+      "headword": "population",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_13681",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[ensemble|Ensemble]] d’[[habitant]]s [[vivre|vivant]] dans un [[pays]] ou un [[lieu]]."
+      },
+      "selected_expression_reason": "Ensemble d'habitants vivant dans un pays ou un lieu is a short factual class definition.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3145,
+      "headword": "température",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_7409",
+      "exact_selected_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[degré|Degré]] de [[chaleur]] ou de [[froideur]] d’un corps ou d’un environnement."
+      },
+      "selected_expression_reason": "A physical measurement and its referents are facts; the sentence is a short conventional formulation.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3146,
+      "headword": "jusque",
+      "pos": "PRE",
+      "selected_source_id": "b143_fr_165988",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[marquer|Marque]] un certain terme [[au-delà]] duquel on ne passe pas. — {{note}} Elle est le plus souvent combinée avec la [[préposition]] ''[[à#fr-prép|à]]''."
+      },
+      "selected_expression_reason": "The endpoint relation, common à combination and no-isolated-use requirement are grammatical facts. The tracked short note and jusqu'à ce que support are not an expressive literary work; the CNRTL request did not supply an Académie jusque entry and is not claimed as one.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field. The short jusqu’à ce que construction is grammatical support only.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed",
+      "original_comparison": {
+        "title": "jusque",
+        "url": "https://www.cnrtl.fr/definition/academie8/jusque",
+        "status": 200,
+        "captured_at_utc": "2026-11-22T23:21:47.646551+00:00",
+        "bytes": 51983,
+        "html": "jusque.html",
+        "text": "jusque.txt",
+        "archive_relative_path": "audit/originals/jusque.txt",
+        "matched_expression": null,
+        "basis": "Response supplied no Académie entry; no original-work inference made."
+      }
+    },
+    {
+      "frozen_row": 3147,
+      "headword": "dominer",
+      "pos": "VER",
+      "selected_source_id": "b143_fr_158249",
+      "exact_selected_span": {
+        "line_1_based": 39,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{transitif|fr}} [[maîtriser|Maîtriser]], [[gouverner]], tant au propre qu’au figuré."
+      },
+      "selected_expression_reason": "Maîtriser, gouverner tant au propre qu'au figuré is a short synonym/usage phrase, not a developed political description.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3148,
+      "headword": "familial",
+      "pos": "ADJ",
+      "selected_source_id": "b143_fr_160981",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Qui est [[relatif]] à la [[famille]]."
+      },
+      "selected_expression_reason": "Qui est relatif à la famille is a brief conventional relational phrase; agreement facts add no original expression.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3149,
+      "headword": "habituel",
+      "pos": "ADJ",
+      "selected_source_id": "b143_fr_24838",
+      "exact_selected_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Qui est [[devenu]] une [[habitude]], qui est passé en habitude."
+      },
+      "selected_expression_reason": "Qui est devenu une habitude is a short elementary formulation; the duplicated upstream paraphrase adds no selected expressive content.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    },
+    {
+      "frozen_row": 3150,
+      "headword": "allumette",
+      "pos": "NOM",
+      "selected_source_id": "b143_fr_9222",
+      "exact_selected_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[bâtonnet|Bâtonnet]] de [[bois]] ou de [[carton]] [[recouvert]], à une [[extrémité]], d’un [[produit]] [[inflammable]]."
+      },
+      "selected_expression_reason": "Material, shape and inflammable coating are construction facts; the short definitional wording supplies no creative illustrative expression.",
+      "support_expression_reason": "The retained language, POS, gender/number and inflection headers are grammatical facts. No example quotation or external reference prose supplies a field.",
+      "textual_rights_status": "passed",
+      "ipa_rights_status": "passed"
+    }
+  ],
+  "legal_basis": {
+    "ideas_and_facts": "17 USC 102(b); facts and semantic/grammatical relations are distinct from original expression",
+    "original_territorial_review": "17 USC 104A and 304; Wikimedia Terms section 7 public-domain import conditions",
+    "original_captures": "Retained CNRTL actual Académie 8 (1935) and 4 (1762) renderings; no website HTML/TLFi payload is selected as dictionary content."
+  }
+}

@@ -1,0 +1,1219 @@
+{
+  "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+  "review_base": "fa142521e974fcf895afccab8d5f1dbae31195c3",
+  "first_review_commit": "d9c3175f5e7d7c8affd316940dba51b665f52a53",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142143-rights-fix",
+  "selected_uses": [
+    {
+      "frozen_row": 3051,
+      "headword": "catastrophe",
+      "sense_id": "b142-3051-catastrophe-nom-selected",
+      "source_id": "b142_fr_118947",
+      "source_revision": 39826923,
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+      },
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 27,
+        "raw_source_excerpt": "[[soudain]]"
+      },
+      "selected_spans": [
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 27,
+          "reviewed_excerpt": "[[soudain]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 3,
+          "reviewed_excerpt": "[[évènement|Événement]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 123,
+          "reviewed_excerpt": "[[destruction]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 143,
+          "reviewed_excerpt": "[[ruine]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 157,
+          "reviewed_excerpt": "[[mort]]"
+        }
+      ],
+      "determination": "minimal_lexical_facts_original_expression_excluded",
+      "expression_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence.",
+      "meaning_reason": "The same feminine disaster use entails a sudden event with severe destructive consequences; the three existing explanations express those ordinary facts without the source's rhetorical upheaval clause. Ruin and possible death remain explicit. The tragic-play ending and other figurative uses stay excluded.",
+      "authority_evidence": {
+        "authority": "17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C)",
+        "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142143-rights-fix\\authorities",
+        "captures": [
+          {
+            "file": "compendium-ch300.pdf",
+            "url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "final_url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.251281+00:00",
+            "bytes": 641671
+          },
+          {
+            "file": "title17-ch1.html",
+            "url": "https://www.copyright.gov/title17/92chap1.html",
+            "final_url": "https://www.copyright.gov/title17/92chap1.html",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.346561+00:00",
+            "bytes": 675161
+          },
+          {
+            "file": "37cfr202.xml",
+            "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "final_url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:52.624497+00:00",
+            "bytes": 2294
+          }
+        ],
+        "reused_capture_origin": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix\\authorities"
+      },
+      "whole_daf8_us_clearance": false,
+      "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+      "fields": [
+        {
+          "frozen_row": 3051,
+          "headword": "catastrophe",
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "field": "french_definition",
+          "proposed_text": "Événement soudain qui provoque de graves destructions, la ruine ou la mort.",
+          "previous_accepted_text": "Événement soudain qui provoque de graves destructions, la ruine ou la mort.",
+          "accepted_text": "Événement soudain qui provoque de graves destructions, la ruine ou la mort.",
+          "before_source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 27,
+            "reviewed_excerpt": "[[soudain]]"
+          },
+          "after_source_span": {
+            "line_1_based": 10,
+            "column_1_based": 27,
+            "raw_source_excerpt": "[[soudain]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 3,
+              "reviewed_excerpt": "[[évènement|Événement]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 123,
+              "reviewed_excerpt": "[[destruction]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 143,
+              "reviewed_excerpt": "[[ruine]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 157,
+              "reviewed_excerpt": "[[mort]]"
+            }
+          ],
+          "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. The same feminine disaster use entails a sudden event with severe destructive consequences; the three existing explanations express those ordinary facts without the source's rhetorical upheaval clause. Ruin and possible death remain explicit. The tragic-play ending and other figurative uses stay excluded.",
+          "rights_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3051,
+          "headword": "catastrophe",
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "field": "english",
+          "proposed_text": "A disaster: a sudden event causing serious destruction, ruin or death (feminine noun).",
+          "previous_accepted_text": "A disaster: a sudden event causing serious destruction, ruin or death (feminine noun).",
+          "accepted_text": "A disaster: a sudden event causing serious destruction, ruin or death (feminine noun).",
+          "before_source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 27,
+            "reviewed_excerpt": "[[soudain]]"
+          },
+          "after_source_span": {
+            "line_1_based": 10,
+            "column_1_based": 27,
+            "raw_source_excerpt": "[[soudain]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 3,
+              "reviewed_excerpt": "[[évènement|Événement]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 123,
+              "reviewed_excerpt": "[[destruction]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 143,
+              "reviewed_excerpt": "[[ruine]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 157,
+              "reviewed_excerpt": "[[mort]]"
+            }
+          ],
+          "quality_reason": "English describes the same selected use with its POS and object relation, without importing a neighbouring sense. The same feminine disaster use entails a sudden event with severe destructive consequences; the three existing explanations express those ordinary facts without the source's rhetorical upheaval clause. Ruin and possible death remain explicit. The tragic-play ending and other figurative uses stay excluded.",
+          "rights_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3051,
+          "headword": "catastrophe",
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "field": "chinese",
+          "proposed_text": "灾难：突然发生、造成严重破坏、毁灭或死亡的事件（阴性名词）。",
+          "previous_accepted_text": "灾难：突然发生、造成严重破坏、毁灭或死亡的事件（阴性名词）。",
+          "accepted_text": "灾难：突然发生、造成严重破坏、毁灭或死亡的事件（阴性名词）。",
+          "before_source_span": {
+            "line_1_based": 10,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_118947",
+            "revid": 39826923,
+            "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+            "line_1_based": 10,
+            "column_1_based": 27,
+            "reviewed_excerpt": "[[soudain]]"
+          },
+          "after_source_span": {
+            "line_1_based": 10,
+            "column_1_based": 27,
+            "raw_source_excerpt": "[[soudain]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 3,
+              "reviewed_excerpt": "[[évènement|Événement]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 123,
+              "reviewed_excerpt": "[[destruction]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 143,
+              "reviewed_excerpt": "[[ruine]]"
+            },
+            {
+              "source_id": "b142_fr_118947",
+              "revid": 39826923,
+              "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+              "line_1_based": 10,
+              "column_1_based": 157,
+              "reviewed_excerpt": "[[mort]]"
+            }
+          ],
+          "quality_reason": "Chinese accurately describes the selected meaning and grammatical restriction; it uses an explanation where a single equivalent would lose the use. The same feminine disaster use entails a sudden event with severe destructive consequences; the three existing explanations express those ordinary facts without the source's rhetorical upheaval clause. Ruin and possible death remain explicit. The tragic-play ending and other figurative uses stay excluded.",
+          "rights_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        }
+      ],
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 3074,
+      "headword": "conscient",
+      "sense_id": "b142-3074-conscient-adj-selected",
+      "source_id": "b142_fr_155184",
+      "source_revision": 39702182,
+      "before_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+      },
+      "after_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 12,
+        "raw_source_excerpt": "[[conscience]]"
+      },
+      "selected_spans": [
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 12,
+          "reviewed_excerpt": "[[conscience]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 31,
+          "reviewed_excerpt": "[[connaissance]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 48,
+          "reviewed_excerpt": "[[intime]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 86,
+          "reviewed_excerpt": "[[responsabilité]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 108,
+          "reviewed_excerpt": "ce qu’il [[faire|fait]]"
+        }
+      ],
+      "determination": "minimal_lexical_facts_original_expression_excluded",
+      "expression_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation.",
+      "meaning_reason": "The retained actions referent plus awareness, intimate knowledge and responsibility ground knowing what one does and understanding its implications. The existing FR/EN/ZH do not reproduce the source's inference to responsibility. Masculine conscient and feminine consciente remain adjectives; this selection excludes merely being awake.",
+      "authority_evidence": {
+        "authority": "17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C)",
+        "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142143-rights-fix\\authorities",
+        "captures": [
+          {
+            "file": "compendium-ch300.pdf",
+            "url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "final_url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.251281+00:00",
+            "bytes": 641671
+          },
+          {
+            "file": "title17-ch1.html",
+            "url": "https://www.copyright.gov/title17/92chap1.html",
+            "final_url": "https://www.copyright.gov/title17/92chap1.html",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.346561+00:00",
+            "bytes": 675161
+          },
+          {
+            "file": "37cfr202.xml",
+            "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "final_url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:52.624497+00:00",
+            "bytes": 2294
+          }
+        ],
+        "reused_capture_origin": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix\\authorities"
+      },
+      "whole_daf8_us_clearance": false,
+      "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+      "fields": [
+        {
+          "frozen_row": 3074,
+          "headword": "conscient",
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "field": "french_definition",
+          "proposed_text": "Qui sait ce qu’il fait et en comprend la portée ; féminin : consciente.",
+          "previous_accepted_text": "Qui sait ce qu’il fait et en comprend la portée ; féminin : consciente.",
+          "accepted_text": "Qui sait ce qu’il fait et en comprend la portée ; féminin : consciente.",
+          "before_source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 12,
+            "reviewed_excerpt": "[[conscience]]"
+          },
+          "after_source_span": {
+            "line_1_based": 8,
+            "column_1_based": 12,
+            "raw_source_excerpt": "[[conscience]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 31,
+              "reviewed_excerpt": "[[connaissance]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 48,
+              "reviewed_excerpt": "[[intime]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 86,
+              "reviewed_excerpt": "[[responsabilité]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 108,
+              "reviewed_excerpt": "ce qu’il [[faire|fait]]"
+            }
+          ],
+          "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. The retained actions referent plus awareness, intimate knowledge and responsibility ground knowing what one does and understanding its implications. The existing FR/EN/ZH do not reproduce the source's inference to responsibility. Masculine conscient and feminine consciente remain adjectives; this selection excludes merely being awake.",
+          "rights_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3074,
+          "headword": "conscient",
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "field": "english",
+          "proposed_text": "Aware of what one is doing and its implications (masculine adjective; feminine consciente).",
+          "previous_accepted_text": "Aware of what one is doing and its implications (masculine adjective; feminine consciente).",
+          "accepted_text": "Aware of what one is doing and its implications (masculine adjective; feminine consciente).",
+          "before_source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 12,
+            "reviewed_excerpt": "[[conscience]]"
+          },
+          "after_source_span": {
+            "line_1_based": 8,
+            "column_1_based": 12,
+            "raw_source_excerpt": "[[conscience]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 31,
+              "reviewed_excerpt": "[[connaissance]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 48,
+              "reviewed_excerpt": "[[intime]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 86,
+              "reviewed_excerpt": "[[responsabilité]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 108,
+              "reviewed_excerpt": "ce qu’il [[faire|fait]]"
+            }
+          ],
+          "quality_reason": "English describes the same selected use with its POS and object relation, without importing a neighbouring sense. The retained actions referent plus awareness, intimate knowledge and responsibility ground knowing what one does and understanding its implications. The existing FR/EN/ZH do not reproduce the source's inference to responsibility. Masculine conscient and feminine consciente remain adjectives; this selection excludes merely being awake.",
+          "rights_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3074,
+          "headword": "conscient",
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "field": "chinese",
+          "proposed_text": "清楚自己在做什么并了解其意义的；有意识的（阳性形容词；阴性为 consciente）。",
+          "previous_accepted_text": "清楚自己在做什么并了解其意义的；有意识的（阳性形容词；阴性为 consciente）。",
+          "accepted_text": "清楚自己在做什么并了解其意义的；有意识的（阳性形容词；阴性为 consciente）。",
+          "before_source_span": {
+            "line_1_based": 8,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_155184",
+            "revid": 39702182,
+            "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+            "line_1_based": 8,
+            "column_1_based": 12,
+            "reviewed_excerpt": "[[conscience]]"
+          },
+          "after_source_span": {
+            "line_1_based": 8,
+            "column_1_based": 12,
+            "raw_source_excerpt": "[[conscience]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 31,
+              "reviewed_excerpt": "[[connaissance]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 48,
+              "reviewed_excerpt": "[[intime]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 86,
+              "reviewed_excerpt": "[[responsabilité]]"
+            },
+            {
+              "source_id": "b142_fr_155184",
+              "revid": 39702182,
+              "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+              "line_1_based": 8,
+              "column_1_based": 108,
+              "reviewed_excerpt": "ce qu’il [[faire|fait]]"
+            }
+          ],
+          "quality_reason": "Chinese accurately describes the selected meaning and grammatical restriction; it uses an explanation where a single equivalent would lose the use. The retained actions referent plus awareness, intimate knowledge and responsibility ground knowing what one does and understanding its implications. The existing FR/EN/ZH do not reproduce the source's inference to responsibility. Masculine conscient and feminine consciente remain adjectives; this selection excludes merely being awake.",
+          "rights_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        }
+      ],
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 3076,
+      "headword": "reproduire",
+      "sense_id": "b142-3076-reproduire-ver-selected",
+      "source_id": "b142_fr_174916",
+      "source_revision": 39829187,
+      "before_source_span": {
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+      },
+      "after_source_span": {
+        "line_1_based": 23,
+        "column_1_based": 25,
+        "raw_source_excerpt": "[[copie]]s"
+      },
+      "selected_spans": [
+        {
+          "source_id": "b142_fr_174916",
+          "revid": 39829187,
+          "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+          "line_1_based": 23,
+          "column_1_based": 25,
+          "reviewed_excerpt": "[[copie]]s"
+        },
+        {
+          "source_id": "b142_fr_174916",
+          "revid": 39829187,
+          "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+          "line_1_based": 23,
+          "column_1_based": 41,
+          "reviewed_excerpt": "[[tableau]]"
+        },
+        {
+          "source_id": "b142_fr_174916",
+          "revid": 39829187,
+          "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+          "line_1_based": 23,
+          "column_1_based": 60,
+          "reviewed_excerpt": "[[statue]]"
+        }
+      ],
+      "determination": "minimal_lexical_facts_original_expression_excluded",
+      "expression_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared.",
+      "meaning_reason": "The transitive header and the painting/statue copy facts support making copies of artworks. The existing explanations select copying, not the separately excluded biological reflexive, recurrence or newspaper republication senses.",
+      "authority_evidence": {
+        "authority": "17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C)",
+        "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142143-rights-fix\\authorities",
+        "captures": [
+          {
+            "file": "compendium-ch300.pdf",
+            "url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "final_url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.251281+00:00",
+            "bytes": 641671
+          },
+          {
+            "file": "title17-ch1.html",
+            "url": "https://www.copyright.gov/title17/92chap1.html",
+            "final_url": "https://www.copyright.gov/title17/92chap1.html",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.346561+00:00",
+            "bytes": 675161
+          },
+          {
+            "file": "37cfr202.xml",
+            "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "final_url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:52.624497+00:00",
+            "bytes": 2294
+          }
+        ],
+        "reused_capture_origin": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix\\authorities"
+      },
+      "whole_daf8_us_clearance": false,
+      "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+      "fields": [
+        {
+          "frozen_row": 3076,
+          "headword": "reproduire",
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "field": "french_definition",
+          "proposed_text": "Faire des copies d’un tableau, d’une statue ou d’une œuvre semblable.",
+          "previous_accepted_text": "Faire des copies d’un tableau, d’une statue ou d’une œuvre semblable.",
+          "accepted_text": "Faire des copies d’un tableau, d’une statue ou d’une œuvre semblable.",
+          "before_source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_174916",
+            "revid": 39829187,
+            "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+            "line_1_based": 23,
+            "column_1_based": 25,
+            "reviewed_excerpt": "[[copie]]s"
+          },
+          "after_source_span": {
+            "line_1_based": 23,
+            "column_1_based": 25,
+            "raw_source_excerpt": "[[copie]]s"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_174916",
+              "revid": 39829187,
+              "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+              "line_1_based": 23,
+              "column_1_based": 41,
+              "reviewed_excerpt": "[[tableau]]"
+            },
+            {
+              "source_id": "b142_fr_174916",
+              "revid": 39829187,
+              "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+              "line_1_based": 23,
+              "column_1_based": 60,
+              "reviewed_excerpt": "[[statue]]"
+            }
+          ],
+          "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. The transitive header and the painting/statue copy facts support making copies of artworks. The existing explanations select copying, not the separately excluded biological reflexive, recurrence or newspaper republication senses.",
+          "rights_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3076,
+          "headword": "reproduire",
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "field": "english",
+          "proposed_text": "To reproduce or make copies of a painting, statue or similar work (transitive verb).",
+          "previous_accepted_text": "To reproduce or make copies of a painting, statue or similar work (transitive verb).",
+          "accepted_text": "To reproduce or make copies of a painting, statue or similar work (transitive verb).",
+          "before_source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_174916",
+            "revid": 39829187,
+            "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+            "line_1_based": 23,
+            "column_1_based": 25,
+            "reviewed_excerpt": "[[copie]]s"
+          },
+          "after_source_span": {
+            "line_1_based": 23,
+            "column_1_based": 25,
+            "raw_source_excerpt": "[[copie]]s"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_174916",
+              "revid": 39829187,
+              "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+              "line_1_based": 23,
+              "column_1_based": 41,
+              "reviewed_excerpt": "[[tableau]]"
+            },
+            {
+              "source_id": "b142_fr_174916",
+              "revid": 39829187,
+              "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+              "line_1_based": 23,
+              "column_1_based": 60,
+              "reviewed_excerpt": "[[statue]]"
+            }
+          ],
+          "quality_reason": "English describes the same selected use with its POS and object relation, without importing a neighbouring sense. The transitive header and the painting/statue copy facts support making copies of artworks. The existing explanations select copying, not the separately excluded biological reflexive, recurrence or newspaper republication senses.",
+          "rights_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3076,
+          "headword": "reproduire",
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "field": "chinese",
+          "proposed_text": "复制；制作绘画、雕塑或类似作品的副本（及物动词）。",
+          "previous_accepted_text": "复制；制作绘画、雕塑或类似作品的副本（及物动词）。",
+          "accepted_text": "复制；制作绘画、雕塑或类似作品的副本（及物动词）。",
+          "before_source_span": {
+            "line_1_based": 23,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_174916",
+            "revid": 39829187,
+            "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+            "line_1_based": 23,
+            "column_1_based": 25,
+            "reviewed_excerpt": "[[copie]]s"
+          },
+          "after_source_span": {
+            "line_1_based": 23,
+            "column_1_based": 25,
+            "raw_source_excerpt": "[[copie]]s"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_174916",
+              "revid": 39829187,
+              "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+              "line_1_based": 23,
+              "column_1_based": 41,
+              "reviewed_excerpt": "[[tableau]]"
+            },
+            {
+              "source_id": "b142_fr_174916",
+              "revid": 39829187,
+              "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+              "line_1_based": 23,
+              "column_1_based": 60,
+              "reviewed_excerpt": "[[statue]]"
+            }
+          ],
+          "quality_reason": "Chinese accurately describes the selected meaning and grammatical restriction; it uses an explanation where a single equivalent would lose the use. The transitive header and the painting/statue copy facts support making copies of artworks. The existing explanations select copying, not the separately excluded biological reflexive, recurrence or newspaper republication senses.",
+          "rights_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        }
+      ],
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 3093,
+      "headword": "affecter",
+      "sense_id": "b142-3093-affecter-ver-selected",
+      "source_id": "b142_fr_137679",
+      "source_revision": 39716112,
+      "before_source_span": {
+        "line_1_based": 59,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+      },
+      "after_source_span": {
+        "line_1_based": 59,
+        "column_1_based": 111,
+        "raw_source_excerpt": "[[affliger]]"
+      },
+      "selected_spans": [
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 111,
+          "reviewed_excerpt": "[[affliger]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 68,
+          "reviewed_excerpt": "[[douleur]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 84,
+          "reviewed_excerpt": "[[chagrin]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 97,
+          "reviewed_excerpt": "[[émouvoir]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 3,
+          "reviewed_excerpt": "{{figuré|fr}}"
+        }
+      ],
+      "determination": "minimal_lexical_facts_original_expression_excluded",
+      "expression_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation.",
+      "meaning_reason": "Affliger, douleur, chagrin and émouvoir identify distress rather than unrestricted English affect. The existing FR/EN/ZH correctly teach emotional upset and sorrow; the transitive header supplies the object relation. Assignment, pretending, organ disease and general alteration remain excluded.",
+      "authority_evidence": {
+        "authority": "17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C)",
+        "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142143-rights-fix\\authorities",
+        "captures": [
+          {
+            "file": "compendium-ch300.pdf",
+            "url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "final_url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.251281+00:00",
+            "bytes": 641671
+          },
+          {
+            "file": "title17-ch1.html",
+            "url": "https://www.copyright.gov/title17/92chap1.html",
+            "final_url": "https://www.copyright.gov/title17/92chap1.html",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:51.346561+00:00",
+            "bytes": 675161
+          },
+          {
+            "file": "37cfr202.xml",
+            "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "final_url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+            "status": 200,
+            "captured_at": "2026-11-22T23:29:52.624497+00:00",
+            "bytes": 2294
+          }
+        ],
+        "reused_capture_origin": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix\\authorities"
+      },
+      "whole_daf8_us_clearance": false,
+      "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+      "fields": [
+        {
+          "frozen_row": 3093,
+          "headword": "affecter",
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "field": "french_definition",
+          "proposed_text": "Causer de la peine ou du chagrin à quelqu’un, le toucher douloureusement.",
+          "previous_accepted_text": "Causer de la peine ou du chagrin à quelqu’un, le toucher douloureusement.",
+          "accepted_text": "Causer de la peine ou du chagrin à quelqu’un, le toucher douloureusement.",
+          "before_source_span": {
+            "line_1_based": 59,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 111,
+            "reviewed_excerpt": "[[affliger]]"
+          },
+          "after_source_span": {
+            "line_1_based": 59,
+            "column_1_based": 111,
+            "raw_source_excerpt": "[[affliger]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 68,
+              "reviewed_excerpt": "[[douleur]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 84,
+              "reviewed_excerpt": "[[chagrin]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 97,
+              "reviewed_excerpt": "[[émouvoir]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 3,
+              "reviewed_excerpt": "{{figuré|fr}}"
+            }
+          ],
+          "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. Affliger, douleur, chagrin and émouvoir identify distress rather than unrestricted English affect. The existing FR/EN/ZH correctly teach emotional upset and sorrow; the transitive header supplies the object relation. Assignment, pretending, organ disease and general alteration remain excluded.",
+          "rights_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3093,
+          "headword": "affecter",
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "field": "english",
+          "proposed_text": "To distress or upset someone emotionally, causing sorrow (transitive verb).",
+          "previous_accepted_text": "To distress or upset someone emotionally, causing sorrow (transitive verb).",
+          "accepted_text": "To distress or upset someone emotionally, causing sorrow (transitive verb).",
+          "before_source_span": {
+            "line_1_based": 59,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 111,
+            "reviewed_excerpt": "[[affliger]]"
+          },
+          "after_source_span": {
+            "line_1_based": 59,
+            "column_1_based": 111,
+            "raw_source_excerpt": "[[affliger]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 68,
+              "reviewed_excerpt": "[[douleur]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 84,
+              "reviewed_excerpt": "[[chagrin]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 97,
+              "reviewed_excerpt": "[[émouvoir]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 3,
+              "reviewed_excerpt": "{{figuré|fr}}"
+            }
+          ],
+          "quality_reason": "English describes the same selected use with its POS and object relation, without importing a neighbouring sense. Affliger, douleur, chagrin and émouvoir identify distress rather than unrestricted English affect. The existing FR/EN/ZH correctly teach emotional upset and sorrow; the transitive header supplies the object relation. Assignment, pretending, organ disease and general alteration remain excluded.",
+          "rights_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        },
+        {
+          "frozen_row": 3093,
+          "headword": "affecter",
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "field": "chinese",
+          "proposed_text": "使难过；使某人在情感上受到伤害或感到悲伤（及物动词）。",
+          "previous_accepted_text": "使难过；使某人在情感上受到伤害或感到悲伤（及物动词）。",
+          "accepted_text": "使难过；使某人在情感上受到伤害或感到悲伤（及物动词）。",
+          "before_source_span": {
+            "line_1_based": 59,
+            "column_1_based": 1,
+            "raw_source_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+          },
+          "exact_source": {
+            "source_id": "b142_fr_137679",
+            "revid": 39716112,
+            "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+            "line_1_based": 59,
+            "column_1_based": 111,
+            "reviewed_excerpt": "[[affliger]]"
+          },
+          "after_source_span": {
+            "line_1_based": 59,
+            "column_1_based": 111,
+            "raw_source_excerpt": "[[affliger]]"
+          },
+          "supporting_sources": [
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 68,
+              "reviewed_excerpt": "[[douleur]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 84,
+              "reviewed_excerpt": "[[chagrin]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 97,
+              "reviewed_excerpt": "[[émouvoir]]"
+            },
+            {
+              "source_id": "b142_fr_137679",
+              "revid": 39716112,
+              "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+              "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+              "line_1_based": 59,
+              "column_1_based": 3,
+              "reviewed_excerpt": "{{figuré|fr}}"
+            }
+          ],
+          "quality_reason": "Chinese accurately describes the selected meaning and grammatical restriction; it uses an explanation where a single equivalent would lose the use. Affliger, douleur, chagrin and émouvoir identify distress rather than unrestricted English affect. The existing FR/EN/ZH correctly teach emotional upset and sorrow; the transitive header supplies the object relation. Assignment, pretending, organ disease and general alteration remain excluded.",
+          "rights_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "quality_status": "passed",
+          "rights_eligibility_status": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer",
+          "wording_changed": false
+        }
+      ],
+      "status": "passed_at_selected_text_boundary"
+    }
+  ],
+  "resolved_textual_fields": 12,
+  "unresolved_selected_textual_fields": 0,
+  "wording_replacements": 0,
+  "whole_daf8_us_clearance": false,
+  "learner_acceptance": "not_run",
+  "combined_redistribution": "pending_coordinator_package",
+  "new_canonical_fields": 0
+}

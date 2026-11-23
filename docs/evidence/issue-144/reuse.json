@@ -1,0 +1,13 @@
+{
+  "base_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
+  "comparison_input": "resources/core-pilot-79/curated-inputs.json",
+  "canonical_content_version": "core-139-v1",
+  "existing_admitted_groups": 2932,
+  "reused_groups": 0,
+  "reused_fields": 0,
+  "groups": [],
+  "review_base": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+  "reviewed_baseline_reuse_groups": 0,
+  "review_reason": "Exact frozen rows 3151–3200 are disjoint from the current canonical core-139-v1; all 50 remain new proposed admissions, with no reuse or canonical installation in this review.",
+  "merged_integration_commit": "fa142521e974fcf895afccab8d5f1dbae31195c3"
+}

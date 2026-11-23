@@ -1,0 +1,131 @@
+{
+  "ticket": 148,
+  "role": "content_author",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\author-148",
+  "branch": "codex/d2-content-148",
+  "initial_base": "4a4ce485a7a386e73060a23c362e5ece429ceaba",
+  "tested_base": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+  "merged_integration": "521ce08421c0b90b458f550eb427eeabb1df4d39",
+  "verified_at_utc": "2026-11-22T23:28:55.322772+00:00",
+  "changed_paths": [
+    "docs/evidence/issue-148/COPYING",
+    "docs/evidence/issue-148/NOTICES.md",
+    "docs/evidence/issue-148/README.md",
+    "docs/evidence/issue-148/admission.json",
+    "docs/evidence/issue-148/author-verification.json",
+    "docs/evidence/issue-148/authored/admission.json",
+    "docs/evidence/issue-148/authored/field-review.json",
+    "docs/evidence/issue-148/authored/groups.json",
+    "docs/evidence/issue-148/authored/reuse.json",
+    "docs/evidence/issue-148/authored/rights.json",
+    "docs/evidence/issue-148/authored/source-captures.json",
+    "docs/evidence/issue-148/authored/source-context.json",
+    "docs/evidence/issue-148/authored/source-excerpts.json",
+    "docs/evidence/issue-148/authored/sources.json",
+    "docs/evidence/issue-148/field-review.json",
+    "docs/evidence/issue-148/groups.json",
+    "docs/evidence/issue-148/reuse.json",
+    "docs/evidence/issue-148/review-candidates.md",
+    "docs/evidence/issue-148/rights.json",
+    "docs/evidence/issue-148/selected-rights.md",
+    "docs/evidence/issue-148/source-captures.json",
+    "docs/evidence/issue-148/source-context.json",
+    "docs/evidence/issue-148/source-excerpts.json",
+    "docs/evidence/issue-148/sources.json",
+    "scripts/test_core_batch_148.py"
+  ],
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_148.py",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\GREEN.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\reproduce.py",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\reproduction.log"
+    },
+    {
+      "command": "pwsh -NoProfile -Command \"pnpm test:docs\"",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\diff-check.log"
+    }
+  ],
+  "red_checks": [
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\RED.log",
+      "result": "expected_failure_before_author_content_or_required_evidence"
+    },
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\RED-rights.log",
+      "result": "expected_failure_before_author_content_or_required_evidence"
+    },
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\RED-originals.log",
+      "result": "expected_failure_before_author_content_or_required_evidence"
+    }
+  ],
+  "frozen_groups": 50,
+  "selected_uses": 50,
+  "authored_fields": 200,
+  "field_languages": [
+    "fr",
+    "und-IPA",
+    "en",
+    "zh"
+  ],
+  "fixed_french_sources": 53,
+  "selected_field_spans": 200,
+  "supporting_span_occurrences": 206,
+  "contributor_parts": 12,
+  "contributor_chains": 12,
+  "article_credit_named_contributors": 3193,
+  "article_credit_anonymous_contributors": 646,
+  "attribution_scope": "Complete returned article registries plus linked histories, not selected-sentence authorship.",
+  "http_rate_limit": {
+    "responses_429": 1,
+    "retained_failures": [
+      {
+        "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-148\\http-failure-contributors-new-1-1.api-0.json",
+        "status": 429,
+        "retry_after": "22"
+      }
+    ],
+    "result": "retained_successes_and_completed_after_backoff"
+  },
+  "author_unresolved_fields": [],
+  "independently_accepted_fields": 0,
+  "newly_admitted_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "canonical_content_version": "core-139-v1",
+  "canonical_admitted_groups": 2932,
+  "canonical_batch_admitted_groups": 0,
+  "global_scope_denominator": 4087,
+  "unresolved_gates": [
+    "Independent quality of every field and use",
+    "Independent selected-span rights/import and construction/spelling review",
+    "Canonical conversion and actual combined packaged obligations",
+    "All-group native lookup/save/reopen",
+    "Learner acceptance and whole-core/release gates"
+  ],
+  "unrun_checks": [
+    "Frontend lint/typecheck/build (no frontend change)",
+    "Rust compilation/tests (no Rust change)",
+    "Native/browser flows (coordinator-owned)",
+    "Canonical batch conversion/packaging (pending independent acceptance)"
+  ],
+  "no_push": true,
+  "no_tracker_changes": true,
+  "independent_acceptance": false
+}

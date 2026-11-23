@@ -1,0 +1,174 @@
+{
+  "frozen_row": 3098,
+  "authored_proposal": {
+    "frozen_row": 3098,
+    "headword": "damoiseau",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "16.03",
+    "subtitle_pos_per_million": "16.03",
+    "senses": [
+      {
+        "sense_id": "b142-3098-damoiseau-nom-selected",
+        "source_headword": "damoiseau",
+        "use": "Dated ironic noun proposal only; the source explicitly marks vieilli. No modern everyday selected sense is established; four required ordinary-content fields remain unresolved.",
+        "use_language": "en",
+        "excluded_uses": "Historical aspirant knight; surname/rum brand; animal; silent relabelling as a modern everyday young man; annotation exemption.",
+        "independent_review": "pending",
+        "resource_admission": "blocked_modern_everyday_sense_unresolved_and_independent_review_pending",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Homme qui fait le beau ou le galant auprès des femmes ; emploi ironique et vieilli.",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/da.mwa.zo/",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''damoiseau''' {{pron|da.mwa.zo|fr}} {{m}} {{équiv-pour|lang=fr|une femme|damoiselle|}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "A man who plays the handsome gallant with women; an ironic, dated masculine noun.",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "在女性面前摆出风流倜傥姿态的男子（阳性名词；讽刺且陈旧的用法）。",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  "first_review_proposal": {
+    "frozen_row": 3098,
+    "headword": "damoiseau",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "16.03",
+    "subtitle_pos_per_million": "16.03",
+    "senses": [
+      {
+        "sense_id": "b142-3098-damoiseau-nom-selected",
+        "source_headword": "damoiseau",
+        "use": "Dated ironic noun proposal only; the source explicitly marks vieilli. No modern everyday selected sense is established; four required ordinary-content fields remain unresolved.",
+        "use_language": "en",
+        "excluded_uses": "Historical aspirant knight; surname/rum brand; animal; silent relabelling as a modern everyday young man; annotation exemption.",
+        "independent_review": "unresolved",
+        "resource_admission": "unresolved_modern_everyday_use",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Homme qui fait le beau ou le galant auprès des femmes ; emploi ironique et vieilli.",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "unresolved",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/da.mwa.zo/",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''damoiseau''' {{pron|da.mwa.zo|fr}} {{m}} {{équiv-pour|lang=fr|une femme|damoiselle|}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "unresolved",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          },
+          "english": {
+            "language": "en",
+            "text": "A man who plays the handsome gallant with women; an ironic, dated masculine noun.",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "unresolved",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "在女性面前摆出风流倜傥姿态的男子（阳性名词；讽刺且陈旧的用法）。",
+            "source_id": "b142_fr_156374",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "fixed_span_matched_modern_everyday_eligibility_unresolved",
+            "independent_review": "unresolved",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+          }
+        },
+        "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
+        "everyday_sense_status": "unresolved"
+      }
+    ]
+  },
+  "status": "unadmitted_owner_approved_annotation",
+  "reason": "Fixed revision 39460790 marks the gallant-man proposal ironic and dated; the independent everyday-use review remains unestablished. The owner resolved the scope requirement only by approving this exact zero-field annotation. No proposal is accepted as dictionary content.",
+  "distribution": "research_evidence_only_not_part_of_selected_resource_packets"
+}

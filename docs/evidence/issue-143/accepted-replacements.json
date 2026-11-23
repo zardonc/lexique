@@ -1,0 +1,996 @@
+[
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "french_definition",
+    "authored_original_text": null,
+    "proposed_text": "Pluriel de « par » : nombres conventionnels de coups prévus pour terminer des trous de golf.",
+    "accepted_text": "Pluriel de « par » : nombres conventionnels de coups prévus pour terminer des trous de golf.",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 295,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "Pluriel de par and the noun golf rule together support conventional counts assigned to holes; the plural wording preserves the approved specialist domain and excludes observed scores.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  },
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "ipa",
+    "authored_original_text": null,
+    "proposed_text": "/paʁ/",
+    "accepted_text": "/paʁ/",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 294,
+      "column_1_based": 1,
+      "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "The exact pars noun-flexion frame has empty IPA, but fr-rég|s=par explicitly supplies regular noun inflection. The golf par noun head at line 294 and fr-rég|paʁ at line 292 ground the same isolated regular-plural /paʁ/. The neighbouring partir verb at pars line 6 is not used.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  },
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "english",
+    "authored_original_text": null,
+    "proposed_text": "Pars: the standard numbers of strokes assigned to golf holes; plural masculine noun.",
+    "accepted_text": "Pars: the standard numbers of strokes assigned to golf holes; plural masculine noun.",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 295,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "Standard numbers assigned to golf holes accurately explains the conventional rule; plural masculine noun is explicit, without substituting singular par.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  },
+  {
+    "sense_id": "b143-3128-pars-nom-golf-standard-counts",
+    "frozen_row": 3128,
+    "headword": "pars",
+    "pos": "NOM",
+    "field": "chinese",
+    "authored_original_text": null,
+    "proposed_text": "高尔夫各洞的标准杆数；par 的阳性复数形式。",
+    "accepted_text": "高尔夫各洞的标准杆数；par 的阳性复数形式。",
+    "exact_source": {
+      "source_id": "b143_fr_2252",
+      "revid": 39972270,
+      "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+      "line_1_based": 295,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 3,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|flexion}} ==="
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 21,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|s=par}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''pars''' {{pron||fr}}"
+      },
+      {
+        "source_id": "b143_fr_67055",
+        "revid": 39518389,
+        "url": "https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pars&action=history",
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# ''Pluriel de'' [[par]]."
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "reviewed_excerpt": "== {{langue|fr}} =="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 291,
+        "column_1_based": 1,
+        "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 292,
+        "column_1_based": 1,
+        "reviewed_excerpt": "{{fr-rég|paʁ}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 294,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''par''' {{pron|paʁ|fr}} {{m}}"
+      },
+      {
+        "source_id": "b143_fr_2252",
+        "revid": 39972270,
+        "url": "https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=par&action=history",
+        "line_1_based": 295,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{lexique|golf|fr}} Nombre [[conventionnel]] de [[coup]]s qui sont nécessaires pour faire le [[parcours]] d’un [[trou]]."
+      }
+    ],
+    "reason": "高尔夫各洞的标准杆数 denotes assigned per-hole standard counts; par 的阳性复数形式 explicitly preserves the masculine plural relation.",
+    "specialist_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/143",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-22",
+      "decision": "Approve the specialist golf plural for exact frozen row 3128 pars/NOM: standard numbers of strokes assigned to golf holes, masculine plural, IPA /paʁ/. Extend the existing singular par/NOM golf exception only to this exact plural group. Preserve its frozen identity and admit the four independently reviewed fields."
+    }
+  },
+  {
+    "frozen_row": 3102,
+    "headword": "distraire",
+    "sense_id": "b143-3102-distraire-ver-selected",
+    "field": "french_definition",
+    "proposed_text": "Amuser ou divertir quelqu’un en éloignant son esprit de ce qui le fatigue ou l’obsède ; emploi transitif.",
+    "previous_accepted_text": "Amuser ou divertir quelqu’un en éloignant son esprit de ce qui le fatigue ou l’obsède ; emploi transitif.",
+    "accepted_text": "Offrir à quelqu’un un moment de divertissement qui lui fait oublier ses soucis ou sa fatigue ; verbe transitif.",
+    "before_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+    },
+    "exact_source": {
+      "source_id": "b143_fr_158119",
+      "revid": 40045909,
+      "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+      "line_1_based": 14,
+      "column_1_based": 131,
+      "reviewed_excerpt": "[[divertir]]"
+    },
+    "after_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 131,
+      "raw_source_excerpt": "[[divertir]]"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 119,
+        "reviewed_excerpt": "[[amuser]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 48,
+        "reviewed_excerpt": "[[esprit]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 72,
+        "reviewed_excerpt": "[[fatiguer|fatigue]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 98,
+        "reviewed_excerpt": "[[obséder|obsède]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 24,
+        "reviewed_excerpt": "[[éloigner|Éloigner]]"
+      }
+    ],
+    "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. The selected transitive amusement use gives someone relief from tiring or troubling thoughts. The proposed wording preserves entertainment and the concern-removal meaning rather than teaching distraction from an assigned task; reflexive and administrative senses stay excluded.",
+    "rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+    "quality_status": "passed",
+    "rights_eligibility_status": "passed",
+    "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+    "wording_changed": true
+  },
+  {
+    "frozen_row": 3102,
+    "headword": "distraire",
+    "sense_id": "b143-3102-distraire-ver-selected",
+    "field": "english",
+    "proposed_text": "To entertain or amuse someone, taking their mind off what tires or preoccupies them; transitive distraire quelqu’un.",
+    "previous_accepted_text": "To entertain or amuse someone, taking their mind off what tires or preoccupies them; transitive distraire quelqu’un.",
+    "accepted_text": "To amuse someone and give them a break from tiring or troubling thoughts (transitive: distraire quelqu’un).",
+    "before_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+    },
+    "exact_source": {
+      "source_id": "b143_fr_158119",
+      "revid": 40045909,
+      "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+      "line_1_based": 14,
+      "column_1_based": 131,
+      "reviewed_excerpt": "[[divertir]]"
+    },
+    "after_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 131,
+      "raw_source_excerpt": "[[divertir]]"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 119,
+        "reviewed_excerpt": "[[amuser]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 48,
+        "reviewed_excerpt": "[[esprit]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 72,
+        "reviewed_excerpt": "[[fatiguer|fatigue]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 98,
+        "reviewed_excerpt": "[[obséder|obsède]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 24,
+        "reviewed_excerpt": "[[éloigner|Éloigner]]"
+      }
+    ],
+    "quality_reason": "English describes the same selected use with its POS and object relation, without importing a neighbouring sense. The selected transitive amusement use gives someone relief from tiring or troubling thoughts. The proposed wording preserves entertainment and the concern-removal meaning rather than teaching distraction from an assigned task; reflexive and administrative senses stay excluded.",
+    "rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+    "quality_status": "passed",
+    "rights_eligibility_status": "passed",
+    "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+    "wording_changed": true
+  },
+  {
+    "frozen_row": 3102,
+    "headword": "distraire",
+    "sense_id": "b143-3102-distraire-ver-selected",
+    "field": "chinese",
+    "proposed_text": "使某人开心或得到消遣，把其注意力从令人疲惫或困扰的事情上移开；及物用法 distraire quelqu’un。",
+    "previous_accepted_text": "使某人开心或得到消遣，把其注意力从令人疲惫或困扰的事情上移开；及物用法 distraire quelqu’un。",
+    "accepted_text": "使某人得到消遣，暂时摆脱令人疲惫或烦心的思绪（及物用法：distraire quelqu’un）。",
+    "before_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+    },
+    "exact_source": {
+      "source_id": "b143_fr_158119",
+      "revid": 40045909,
+      "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+      "line_1_based": 14,
+      "column_1_based": 131,
+      "reviewed_excerpt": "[[divertir]]"
+    },
+    "after_source_span": {
+      "line_1_based": 14,
+      "column_1_based": 131,
+      "raw_source_excerpt": "[[divertir]]"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 119,
+        "reviewed_excerpt": "[[amuser]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 48,
+        "reviewed_excerpt": "[[esprit]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 72,
+        "reviewed_excerpt": "[[fatiguer|fatigue]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 98,
+        "reviewed_excerpt": "[[obséder|obsède]]"
+      },
+      {
+        "source_id": "b143_fr_158119",
+        "revid": 40045909,
+        "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+        "line_1_based": 14,
+        "column_1_based": 24,
+        "reviewed_excerpt": "[[éloigner|Éloigner]]"
+      }
+    ],
+    "quality_reason": "Chinese accurately describes the selected meaning and grammatical restriction; it uses an explanation where a single equivalent would lose the use. The selected transitive amusement use gives someone relief from tiring or troubling thoughts. The proposed wording preserves entertainment and the concern-removal meaning rather than teaching distraction from an assigned task; reflexive and administrative senses stay excluded.",
+    "rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+    "quality_status": "passed",
+    "rights_eligibility_status": "passed",
+    "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+    "wording_changed": true
+  },
+  {
+    "frozen_row": 3110,
+    "headword": "impressionnant",
+    "sense_id": "b143-3110-impressionnant-adj-selected",
+    "field": "french_definition",
+    "proposed_text": "Qui produit une impression vive et forte sur l’esprit ou la sensibilité ; adjectif, féminin impressionnante.",
+    "previous_accepted_text": "Qui produit une impression vive et forte sur l’esprit ou la sensibilité ; adjectif, féminin impressionnante.",
+    "accepted_text": "Qui marque fortement les esprits ou les émotions ; féminin : impressionnante.",
+    "before_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+    },
+    "exact_source": {
+      "source_id": "b143_fr_164512",
+      "revid": 39715515,
+      "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+      "line_1_based": 8,
+      "column_1_based": 7,
+      "reviewed_excerpt": "[[impressionner|impressionne]]"
+    },
+    "after_source_span": {
+      "line_1_based": 8,
+      "column_1_based": 7,
+      "raw_source_excerpt": "[[impressionner|impressionne]]"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_164512",
+        "revid": 39715515,
+        "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+        "line_1_based": 8,
+        "column_1_based": 190,
+        "reviewed_excerpt": "[[fort]]e"
+      },
+      {
+        "source_id": "b143_fr_164512",
+        "revid": 39715515,
+        "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+        "line_1_based": 8,
+        "column_1_based": 123,
+        "reviewed_excerpt": "[[esprit]]"
+      },
+      {
+        "source_id": "b143_fr_164512",
+        "revid": 39715515,
+        "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+        "line_1_based": 8,
+        "column_1_based": 71,
+        "reviewed_excerpt": "[[sensibilité]]"
+      }
+    ],
+    "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. Strong effects on mind or feelings ground impressive/striking, including an effect that need not be favourable. Masculine adjective and feminine impressionnante remain explicit; the selected IPA, adjective frame and excluded present participle stay unchanged.",
+    "rights_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+    "quality_status": "passed",
+    "rights_eligibility_status": "passed",
+    "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+    "wording_changed": true
+  },
+  {
+    "frozen_row": 3123,
+    "headword": "lecture",
+    "sense_id": "b143-3123-lecture-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Action ou habitude de lire pour soi, des yeux, pour s’instruire ou se distraire ; nom féminin.",
+    "previous_accepted_text": "Action ou habitude de lire pour soi, des yeux, pour s’instruire ou se distraire ; nom féminin.",
+    "accepted_text": "Le fait de lire silencieusement, pour apprendre ou par plaisir ; nom féminin.",
+    "before_source_span": {
+      "line_1_based": 18,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+    },
+    "exact_source": {
+      "source_id": "b143_fr_120684",
+      "revid": 39878425,
+      "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+      "line_1_based": 18,
+      "column_1_based": 38,
+      "reviewed_excerpt": "lire seul et des [[yeux]]"
+    },
+    "after_source_span": {
+      "line_1_based": 18,
+      "column_1_based": 38,
+      "raw_source_excerpt": "lire seul et des [[yeux]]"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_120684",
+        "revid": 39878425,
+        "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+        "line_1_based": 18,
+        "column_1_based": 74,
+        "reviewed_excerpt": "[[instruction]]"
+      },
+      {
+        "source_id": "b143_fr_120684",
+        "revid": 39878425,
+        "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+        "line_1_based": 18,
+        "column_1_based": 102,
+        "reviewed_excerpt": "[[plaisir]]"
+      }
+    ],
+    "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. Reading alone with the eyes establishes silent personal reading; instruction and pleasure ground learning/enjoyment. All three explanations retain the feminine noun and that purpose. Aloud reading, reading material, literacy teaching, interpretation, playback and measurement remain excluded.",
+    "rights_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+    "quality_status": "passed",
+    "rights_eligibility_status": "passed",
+    "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+    "wording_changed": true
+  },
+  {
+    "frozen_row": 3129,
+    "headword": "congrès",
+    "sense_id": "b143-3129-congrès-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Réunion de personnes qui échangent leurs idées et les résultats de leurs études sur un sujet ; nom masculin.",
+    "previous_accepted_text": "Réunion de personnes qui échangent leurs idées et les résultats de leurs études sur un sujet ; nom masculin.",
+    "accepted_text": "Rencontre consacrée au partage de travaux et d’idées dans un domaine ; nom masculin.",
+    "before_source_span": {
+      "line_1_based": 20,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+    },
+    "exact_source": {
+      "source_id": "b143_fr_155143",
+      "revid": 39756249,
+      "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+      "line_1_based": 20,
+      "column_1_based": 3,
+      "reviewed_excerpt": "Assemblée"
+    },
+    "after_source_span": {
+      "line_1_based": 20,
+      "column_1_based": 3,
+      "raw_source_excerpt": "Assemblée"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_155143",
+        "revid": 39756249,
+        "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+        "line_1_based": 20,
+        "column_1_based": 120,
+        "reviewed_excerpt": "[[étude]]s"
+      },
+      {
+        "source_id": "b143_fr_155143",
+        "revid": 39756249,
+        "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+        "line_1_based": 20,
+        "column_1_based": 157,
+        "reviewed_excerpt": "[[idée]]s"
+      },
+      {
+        "source_id": "b143_fr_155143",
+        "revid": 39756249,
+        "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+        "line_1_based": 20,
+        "column_1_based": 134,
+        "reviewed_excerpt": "[[échanger]]"
+      },
+      {
+        "source_id": "b143_fr_155143",
+        "revid": 39756249,
+        "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+        "line_1_based": 20,
+        "column_1_based": 73,
+        "reviewed_excerpt": "[[communiquer]]"
+      }
+    ],
+    "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. A gathering for communicating studies and exchanging ideas is a conference/congress on a field. The new French definition and existing EN/ZH preserve both research and ideas. Diplomatic peace meetings, legislatures and historical sexual/legal uses remain excluded.",
+    "rights_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+    "quality_status": "passed",
+    "rights_eligibility_status": "passed",
+    "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+    "wording_changed": true
+  },
+  {
+    "frozen_row": 3141,
+    "headword": "galerie",
+    "sense_id": "b143-3141-galerie-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Salle d’un palais ou d’un musée, plus longue que large, où sont exposées des collections de tableaux et d’œuvres d’art ; nom féminin.",
+    "previous_accepted_text": "Salle d’un palais ou d’un musée, plus longue que large, où sont exposées des collections de tableaux et d’œuvres d’art ; nom féminin.",
+    "accepted_text": "Salle d’exposition artistique dans un palais ou un musée, dont la longueur dépasse la largeur ; nom féminin.",
+    "before_source_span": {
+      "line_1_based": 21,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+    },
+    "exact_source": {
+      "source_id": "b143_fr_64249",
+      "revid": 39820854,
+      "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+      "line_1_based": 21,
+      "column_1_based": 20,
+      "reviewed_excerpt": "[[salle|Salle]]"
+    },
+    "after_source_span": {
+      "line_1_based": 21,
+      "column_1_based": 20,
+      "raw_source_excerpt": "[[salle|Salle]]"
+    },
+    "supporting_sources": [
+      {
+        "source_id": "b143_fr_64249",
+        "revid": 39820854,
+        "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+        "line_1_based": 21,
+        "column_1_based": 54,
+        "reviewed_excerpt": "[[musée]]"
+      },
+      {
+        "source_id": "b143_fr_64249",
+        "revid": 39820854,
+        "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+        "line_1_based": 21,
+        "column_1_based": 39,
+        "reviewed_excerpt": "[[palais]]"
+      },
+      {
+        "source_id": "b143_fr_64249",
+        "revid": 39820854,
+        "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+        "line_1_based": 21,
+        "column_1_based": 65,
+        "reviewed_excerpt": "plus longue que large"
+      },
+      {
+        "source_id": "b143_fr_64249",
+        "revid": 39820854,
+        "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+        "line_1_based": 21,
+        "column_1_based": 102,
+        "reviewed_excerpt": "[[exposer|exposées]]"
+      },
+      {
+        "source_id": "b143_fr_64249",
+        "revid": 39820854,
+        "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+        "line_1_based": 21,
+        "column_1_based": 146,
+        "reviewed_excerpt": "[[tableau]]x"
+      },
+      {
+        "source_id": "b143_fr_64249",
+        "revid": 39820854,
+        "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+        "line_1_based": 21,
+        "column_1_based": 164,
+        "reviewed_excerpt": "[[œuvres d’art]]"
+      }
+    ],
+    "quality_reason": "French noun/adjective/verb construction and register match the exact selected use; the factual wording is idiomatic and retains its required restriction. The selected palace or museum exhibition room is longer than wide and displays paintings/artworks. The new French definition explicitly retains that dimensional relation; the existing EN/ZH long-room explanations remain scoped by the unchanged use restriction. Commercial gallery, corridor, spectators, tunnel and roof rack stay excluded.",
+    "rights_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+    "quality_status": "passed",
+    "rights_eligibility_status": "passed",
+    "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+    "wording_changed": true
+  }
+]

@@ -1,0 +1,2017 @@
+{
+  "ticket": 140,
+  "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+  "role": "independent_rights_fix_review",
+  "author_commit": "d4bb5e678cefbfa9e3dd7ef60eff118e48f922e7",
+  "first_review_commit": "6402ee10a6d4e9d6a3f6e510bbf1586e636ff61e",
+  "base_commit": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\rights-140",
+  "branch": "codex/d2-rights-140",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix",
+  "authority_captures": [
+    {
+      "file": "compendium-ch300.pdf",
+      "url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+      "final_url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+      "status": 200,
+      "captured_at": "2026-11-22T23:29:51.251281+00:00",
+      "bytes": 641671
+    },
+    {
+      "file": "title17-ch1.html",
+      "url": "https://www.copyright.gov/title17/92chap1.html",
+      "final_url": "https://www.copyright.gov/title17/92chap1.html",
+      "status": 200,
+      "captured_at": "2026-11-22T23:29:51.346561+00:00",
+      "bytes": 675161
+    },
+    {
+      "file": "37cfr202.xml",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+      "final_url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+      "status": 200,
+      "captured_at": "2026-11-22T23:29:52.624497+00:00",
+      "bytes": 2294
+    }
+  ],
+  "worldwide_public_domain_claim": false,
+  "whole_daf8_us_clearance": "unproved",
+  "learner_wording_changes": 0,
+  "quality_decisions_preserved": 200,
+  "newly_resolved_fields": 102,
+  "selected_uses": [
+    {
+      "frozen_row": 2951,
+      "headword": "racheter",
+      "sense_id": "b140-2951-racheter-ver-selected",
+      "source_id": "b140_fr_173576",
+      "source_revision": 39965629,
+      "before_excerpt": "# [[acheter|Acheter]] ce qu’on a [[vendre|vendu]] ou ce qui a été vendu.",
+      "before_source_span": {
+        "line_1_based": 7,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[acheter|Acheter]] ce qu’on a [[vendre|vendu]] ou ce qui a été vendu."
+      },
+      "after_excerpt": "# [[acheter|Acheter]] ce qu’on a [[vendre|vendu]] ou ce qui a été vendu.",
+      "after_source_span": {
+        "line_1_based": 7,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[acheter|Acheter]] ce qu’on a [[vendre|vendu]] ou ce qui a été vendu."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Acheter ce qu’on a vendu ou ce qui a été vendu is a short literal verb/object gloss. The repeated passive/active alternatives only state the prior-sale condition; they add no story, metaphor or developed descriptive prose. The conventional buy/sell terms and wiki navigation are de minimis expression under 313.4(C), rather than clearance of the marked article.",
+      "meaning_reason": "The same item is bought after a previous sale. The already reviewed buy-back explanations and transitive construction convey that lexical relation, not an expressive passage.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Acheter de nouveau un bien qui a été vendu.",
+          "after_text": "Acheter de nouveau un bien qui a été vendu.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "To buy back something that was sold; transitive racheter quelque chose.",
+          "after_text": "To buy back something that was sold; transitive racheter quelque chose.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "买回已经售出的东西；及物用法 racheter quelque chose。",
+          "after_text": "买回已经售出的东西；及物用法 racheter quelque chose。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2953,
+      "headword": "thème",
+      "sense_id": "b140-2953-thème-nom-selected",
+      "source_id": "b140_fr_178229",
+      "source_revision": 39820225,
+      "before_excerpt": "# [[sujet|Sujet]], [[matière]] ou [[proposition]] que l’on [[entreprendre|entreprend]] de [[prouver]] ou d’[[éclaircir]].",
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[sujet|Sujet]], [[matière]] ou [[proposition]] que l’on [[entreprendre|entreprend]] de [[prouver]] ou d’[[éclaircir]]."
+      },
+      "after_excerpt": "[[sujet|Sujet]], [[matière]] ou [[proposition]]",
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 3,
+        "raw_source_excerpt": "[[sujet|Sujet]], [[matière]] ou [[proposition]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_178229",
+          "revid": 39820225,
+          "url": "https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&oldid=39820225",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=th%C3%A8me&action=history",
+          "line_1_based": 10,
+          "column_1_based": 91,
+          "reviewed_excerpt": "[[prouver]] ou d’[[éclaircir]]"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The current evidence keeps a three-item category list and the two task verbs, all bare lexical terms. It excludes the relative clause describing an undertaking and its original sequence of argument. Each retained unit is a short expression or factual contents list under 313.4(C),(F); no CFC cartographic wording is selected.",
+      "meaning_reason": "Sujet/matière/proposition establishes the topic noun; prouver/éclaircir establishes a topic being explained or developed. The fixed French noun frame and existing reviewed topic explanations remain sufficient for the ordinary selected use.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Sujet ou matière que l’on cherche à expliquer ou à développer.",
+          "after_text": "Sujet ou matière que l’on cherche à expliquer ou à développer.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A theme or topic that is discussed, explained or developed; masculine noun.",
+          "after_text": "A theme or topic that is discussed, explained or developed; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "所讨论、解释或展开的主题、题目；阳性名词。",
+          "after_text": "所讨论、解释或展开的主题、题目；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2954,
+      "headword": "épisode",
+      "sense_id": "b140-2954-épisode-nom-selected",
+      "source_id": "b140_fr_159942",
+      "source_revision": 38491124,
+      "before_excerpt": "# {{généralement|fr}} [[période#fr|Période]] complète inscrite dans le [[déroulement]] du temps, ayant un caractère spécifique.",
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{généralement|fr}} [[période#fr|Période]] complète inscrite dans le [[déroulement]] du temps, ayant un caractère spécifique."
+      },
+      "after_excerpt": "[[période#fr|Période]]",
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 23,
+        "raw_source_excerpt": "[[période#fr|Période]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_159942",
+          "revid": 38491124,
+          "url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&action=history",
+          "line_1_based": 10,
+          "column_1_based": 98,
+          "reviewed_excerpt": "ayant un caractère spécifique"
+        },
+        {
+          "source_id": "b140_fr_159942",
+          "revid": 38491124,
+          "url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&oldid=38491124",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9pisode&action=history",
+          "line_1_based": 10,
+          "column_1_based": 72,
+          "reviewed_excerpt": "[[déroulement]] du temps"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "Période, caractère spécifique and déroulement du temps identify an interval, distinguishing character and temporal setting. The four-word qualification is stock descriptive language. The complete sentence's inscrite formulation and ordering are excluded. The retained units are assessed as literal short expressions, not as a licence for any DAF8 or later sentence.",
+      "meaning_reason": "The three fixed same-sense units jointly support a distinct period having a particular character in the course of events. The existing concise FR/EN/ZH explanations communicate those facts without the original complete-sentence formulation.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Période distincte, ayant un caractère particulier, dans le déroulement du temps.",
+          "after_text": "Période distincte, ayant un caractère particulier, dans le déroulement du temps.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "An episode: a distinct period with a particular character in the course of events; masculine noun.",
+          "after_text": "An episode: a distinct period with a particular character in the course of events; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "事件发展过程中具有某种特点的一个阶段；阳性名词。",
+          "after_text": "事件发展过程中具有某种特点的一个阶段；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2957,
+      "headword": "bloc",
+      "sense_id": "b140-2957-bloc-nom-selected",
+      "source_id": "b140_fr_32149",
+      "source_revision": 39967757,
+      "before_excerpt": "# [[masse|Masse]], [[gros]] [[morceau]] d’une [[matière]] [[pesant]]e et [[dur]]e, [[tel]]le que la [[pierre]], le [[marbre]], le fer non encore [[travailler|travaillés]].",
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[masse|Masse]], [[gros]] [[morceau]] d’une [[matière]] [[pesant]]e et [[dur]]e, [[tel]]le que la [[pierre]], le [[marbre]], le fer non encore [[travailler|travaillés]]."
+      },
+      "after_excerpt": "[[masse|Masse]], [[gros]] [[morceau]]",
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 3,
+        "raw_source_excerpt": "[[masse|Masse]], [[gros]] [[morceau]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_32149",
+          "revid": 39967757,
+          "url": "https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=bloc&action=history",
+          "line_1_based": 10,
+          "column_1_based": 47,
+          "reviewed_excerpt": "[[matière]] [[pesant]]e et [[dur]]e"
+        },
+        {
+          "source_id": "b140_fr_32149",
+          "revid": 39967757,
+          "url": "https://fr.wiktionary.org/w/index.php?title=bloc&oldid=39967757",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=bloc&action=history",
+          "line_1_based": 10,
+          "column_1_based": 101,
+          "reviewed_excerpt": "[[pierre]], le [[marbre]], le fer"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The selection consists of object-category terms, material properties and a literal materials list. It excludes the developed telle que explanation and the unworked-material qualification. Each fragment is a short factual description or contents list under 313.4(C),(F); assembling the full original prose is outside this selection.",
+      "meaning_reason": "Mass/large piece, heavy hard material and stone/marble/iron jointly support the already reviewed large compact block of stone or metal. No architectural, urban or climbing sense is substituted.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Gros morceau compact d’une matière lourde et dure, comme la pierre ou le métal.",
+          "after_text": "Gros morceau compact d’une matière lourde et dure, comme la pierre ou le métal.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A large solid block of heavy, hard material, such as stone or metal; masculine noun.",
+          "after_text": "A large solid block of heavy, hard material, such as stone or metal; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "石头、金属等沉重坚硬材料的一大块；阳性名词。",
+          "after_text": "石头、金属等沉重坚硬材料的一大块；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2958,
+      "headword": "éveiller",
+      "sense_id": "b140-2958-éveiller-ver-selected",
+      "source_id": "b140_fr_160544",
+      "source_revision": 38927643,
+      "before_excerpt": "# {{figuré|fr}} [[déclencher|Déclencher]] (un [[sentiment]] chez quelqu’un).",
+      "before_source_span": {
+        "line_1_based": 24,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{figuré|fr}} [[déclencher|Déclencher]] (un [[sentiment]] chez quelqu’un)."
+      },
+      "after_excerpt": "# {{figuré|fr}} [[déclencher|Déclencher]] (un [[sentiment]] chez quelqu’un).",
+      "after_source_span": {
+        "line_1_based": 24,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{figuré|fr}} [[déclencher|Déclencher]] (un [[sentiment]] chez quelqu’un)."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Déclencher (un sentiment chez quelqu’un) is a brief literal verb-plus-argument gloss. The figurative tag is a factual usage label; the parenthetical specifies object and experiencer, not creative prose. This exact short combination falls within 313.4(C).",
+      "meaning_reason": "Arousing a feeling in someone is exactly the selected figurative transitive use. Existing construction and all three lexical explanations remain unchanged.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Faire naître un sentiment chez quelqu’un.",
+          "after_text": "Faire naître un sentiment chez quelqu’un.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "To arouse or awaken a feeling in someone; transitive éveiller un sentiment chez quelqu’un.",
+          "after_text": "To arouse or awaken a feeling in someone; transitive éveiller un sentiment chez quelqu’un.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "在某人心中唤起一种感情；及物用法 éveiller un sentiment chez quelqu’un。",
+          "after_text": "在某人心中唤起一种感情；及物用法 éveiller un sentiment chez quelqu’un。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2959,
+      "headword": "diplôme",
+      "sense_id": "b140-2959-diplôme-nom-selected",
+      "source_id": "b140_fr_157939",
+      "source_revision": 39982256,
+      "before_excerpt": "# Acte qu’un [[corps]], une [[faculté]], une [[société]], etc., [[délivre]] à [[chacun]] de ses [[membre]]s, à chacun de ceux qu’elle s’[[agrège]], pour qu’il [[pouvoir|puisse]] [[au besoin]] [[justifier]] de son titre, de la [[qualité]] qui lui [[conférer|a été conférée]].",
+      "before_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Acte qu’un [[corps]], une [[faculté]], une [[société]], etc., [[délivre]] à [[chacun]] de ses [[membre]]s, à chacun de ceux qu’elle s’[[agrège]], pour qu’il [[pouvoir|puisse]] [[au besoin]] [[justifier]] de son titre, de la [[qualité]] qui lui [[conférer|a été conférée]]."
+      },
+      "after_excerpt": "Acte",
+      "after_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 3,
+        "raw_source_excerpt": "Acte"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_157939",
+          "revid": 39982256,
+          "url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&action=history",
+          "line_1_based": 11,
+          "column_1_based": 11,
+          "reviewed_excerpt": "un [[corps]], une [[faculté]], une [[société]]"
+        },
+        {
+          "source_id": "b140_fr_157939",
+          "revid": 39982256,
+          "url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&action=history",
+          "line_1_based": 11,
+          "column_1_based": 65,
+          "reviewed_excerpt": "[[délivre]]"
+        },
+        {
+          "source_id": "b140_fr_157939",
+          "revid": 39982256,
+          "url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&action=history",
+          "line_1_based": 11,
+          "column_1_based": 193,
+          "reviewed_excerpt": "[[justifier]] de son titre"
+        },
+        {
+          "source_id": "b140_fr_157939",
+          "revid": 39982256,
+          "url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&oldid=39982256",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=dipl%C3%B4me&action=history",
+          "line_1_based": 11,
+          "column_1_based": 224,
+          "reviewed_excerpt": "la [[qualité]]"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The retained sentence contains a developed account of corporate admission and proof of status. Its US rights are not assumed. The current selection keeps only the document category Acte, an ordinary list of institution categories, the verb délivre, the conventional proof-of-title phrase and the status noun qualité. These isolated lexical facts/short expressions do not reproduce the sentence's addressee clauses, archaic syntax, membership narrative or literary arrangement. They are assessed individually under 313.4(C); institution names/categories are also a mere factual list under 313.4(F).",
+      "meaning_reason": "Read together within the same fixed noun sense, Acte establishes a document, corps/faculté/société establishes an institutional issuer, délivre establishes issuance, and justifier de son titre/qualité establishes attestation of title or qualification. The already reviewed learner sentence conveys those facts in concise contemporary language; it preserves none of the extended membership/proof sentence. No learner wording is redrafted.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Document délivré par une institution pour attester un titre ou une qualification.",
+          "after_text": "Document délivré par une institution pour attester un titre ou une qualification.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A diploma or certificate issued by an institution to attest a title or qualification; masculine noun.",
+          "after_text": "A diploma or certificate issued by an institution to attest a title or qualification; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "由机构颁发、证明所获称号或资格的文凭、证书；阳性名词。",
+          "after_text": "由机构颁发、证明所获称号或资格的文凭、证书；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2960,
+      "headword": "invisible",
+      "sense_id": "b140-2960-invisible-adj-selected",
+      "source_id": "b140_fr_117277",
+      "source_revision": 39571799,
+      "before_excerpt": "# Qu’on ne peut [[voir]], qui [[échapper|échappe]] à la [[vue]] par sa [[nature]], par sa [[petitesse]], par sa [[position]], ou [[seulement]] [[à cause de]] la [[distance]].",
+      "before_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Qu’on ne peut [[voir]], qui [[échapper|échappe]] à la [[vue]] par sa [[nature]], par sa [[petitesse]], par sa [[position]], ou [[seulement]] [[à cause de]] la [[distance]]."
+      },
+      "after_excerpt": "Qu’on ne peut [[voir]]",
+      "after_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 3,
+        "raw_source_excerpt": "Qu’on ne peut [[voir]]"
+      },
+      "supporting_atoms": [],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The five-word impossibility-of-seeing phrase is conventional literal language under 313.4(C). The longer sentence's catalogue of nature, size, position and distance is excluded; its originality and US term are not passed.",
+      "meaning_reason": "Unable to be seen is sufficient for the selected invisible adjective. Gender-invariable form and pronunciation stay in the fixed head evidence. No particular reason for invisibility is required by the learner fields.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Que l’on ne peut pas voir.",
+          "after_text": "Que l’on ne peut pas voir.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Invisible: unable to be seen; adjective with the same masculine and feminine spelling.",
+          "after_text": "Invisible: unable to be seen; adjective with the same masculine and feminine spelling.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "看不见的、不可见的；形容词，阴阳性拼写相同。",
+          "after_text": "看不见的、不可见的；形容词，阴阳性拼写相同。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2963,
+      "headword": "humour",
+      "sense_id": "b140-2963-humour-nom-selected",
+      "source_id": "b140_fr_117292",
+      "source_revision": 39911963,
+      "before_excerpt": "# Forme d’[[ironie]] [[à la fois]] [[plaisant]]e et [[sérieux|sérieuse]], [[sentimental]]e et [[satirique]].",
+      "before_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Forme d’[[ironie]] [[à la fois]] [[plaisant]]e et [[sérieux|sérieuse]], [[sentimental]]e et [[satirique]]."
+      },
+      "after_excerpt": "[[ironie]]",
+      "after_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 11,
+        "raw_source_excerpt": "[[ironie]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_117292",
+          "revid": 39911963,
+          "url": "https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=humour&action=history",
+          "line_1_based": 9,
+          "column_1_based": 36,
+          "reviewed_excerpt": "[[plaisant]]e"
+        },
+        {
+          "source_id": "b140_fr_117292",
+          "revid": 39911963,
+          "url": "https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=humour&action=history",
+          "line_1_based": 9,
+          "column_1_based": 53,
+          "reviewed_excerpt": "[[sérieux|sérieuse]]"
+        },
+        {
+          "source_id": "b140_fr_117292",
+          "revid": 39911963,
+          "url": "https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=humour&action=history",
+          "line_1_based": 9,
+          "column_1_based": 75,
+          "reviewed_excerpt": "[[sentimental]]e"
+        },
+        {
+          "source_id": "b140_fr_117292",
+          "revid": 39911963,
+          "url": "https://fr.wiktionary.org/w/index.php?title=humour&oldid=39911963",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=humour&action=history",
+          "line_1_based": 9,
+          "column_1_based": 95,
+          "reviewed_excerpt": "[[satirique]]"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The complete definition balances plaisante/sérieuse and sentimentale/satirique in a potentially expressive antithesis. That sentence is excluded. Only five isolated semantic labels remain; individual words are excluded under 313.4(C). They do not reproduce the à la fois construction or its literary arrangement.",
+      "meaning_reason": "The labels identify amusing irony with possible serious, emotional or satirical force. The already separately reviewed explanations express those semantic facts, including the first review's Chinese irony correction; no new wording or quality decision is substituted.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Manière plaisante de recourir à l’ironie, en mêlant le sérieux, la sensibilité ou la satire.",
+          "after_text": "Manière plaisante de recourir à l’ironie, en mêlant le sérieux, la sensibilité ou la satire.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Humour: an amusing form of irony that can also convey seriousness, feeling or satire; masculine noun.",
+          "after_text": "Humour: an amusing form of irony that can also convey seriousness, feeling or satire; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "幽默：诙谐而带有反讽意味的表达，也可传达严肃意味、感情或讽刺；阳性名词。",
+          "after_text": "幽默：诙谐而带有反讽意味的表达，也可传达严肃意味、感情或讽刺；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2965,
+      "headword": "cendre",
+      "sense_id": "b140-2965-cendre-nom-selected",
+      "source_id": "b140_fr_152629",
+      "source_revision": 40006002,
+      "before_excerpt": "# [[résidu|Résidu]] [[pulvérulent]] de la [[combustion]] du [[bois]] et d'autres matières [[organique]]s.",
+      "before_source_span": {
+        "line_1_based": 12,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[résidu|Résidu]] [[pulvérulent]] de la [[combustion]] du [[bois]] et d'autres matières [[organique]]s."
+      },
+      "after_excerpt": "[[résidu|Résidu]] [[pulvérulent]]",
+      "after_source_span": {
+        "line_1_based": 12,
+        "column_1_based": 3,
+        "raw_source_excerpt": "[[résidu|Résidu]] [[pulvérulent]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_152629",
+          "revid": 40006002,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cendre&action=history",
+          "line_1_based": 12,
+          "column_1_based": 43,
+          "reviewed_excerpt": "[[combustion]] du [[bois]]"
+        },
+        {
+          "source_id": "b140_fr_152629",
+          "revid": 40006002,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cendre&oldid=40006002",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cendre&action=history",
+          "line_1_based": 12,
+          "column_1_based": 73,
+          "reviewed_excerpt": "d'autres matières [[organique]]s"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "Powdery residue, burning wood and other organic materials are physical categories and properties. The two-to-four-word nominal units are factual short expressions under 313.4(C), not the entire sentence's syntax.",
+      "meaning_reason": "Together the exact units establish ash as powdery residue of burning wood or organic matter. The already reviewed FR/EN/ZH fields preserve that substance/process relation.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Résidu en poudre qui reste après la combustion du bois ou d’autres matières organiques.",
+          "after_text": "Résidu en poudre qui reste après la combustion du bois ou d’autres matières organiques.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Ash: the powdery residue left after wood or other organic material burns; feminine noun.",
+          "after_text": "Ash: the powdery residue left after wood or other organic material burns; feminine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "木材或其他有机物燃烧后留下的粉末状灰烬；阴性名词。",
+          "after_text": "木材或其他有机物燃烧后留下的粉末状灰烬；阴性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2966,
+      "headword": "compliment",
+      "sense_id": "b140-2966-compliment-nom-selected",
+      "source_id": "b140_fr_113511",
+      "source_revision": 40050628,
+      "before_excerpt": "# [[parole|Paroles]] louant la [[qualité]] d’une chose ou d’une personne.",
+      "before_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[parole|Paroles]] louant la [[qualité]] d’une chose ou d’une personne."
+      },
+      "after_excerpt": "# [[parole|Paroles]] louant la [[qualité]] d’une chose ou d’une personne.",
+      "after_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[parole|Paroles]] louant la [[qualité]] d’une chose ou d’une personne."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Paroles louant la qualité d’une chose ou d’une personne is a brief ordinary category/action/object gloss. It contains no particular compliment, invented example, aesthetic judgement or developed prose. The exact stock phrase is assessed under 313.4(C).",
+      "meaning_reason": "Words praising someone or something support the selected compliment noun and the existing appreciative-statement explanations.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Parole qui exprime une appréciation favorable sur une personne ou une chose.",
+          "after_text": "Parole qui exprime une appréciation favorable sur une personne ou une chose.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A compliment: words praising a person or a thing; masculine noun.",
+          "after_text": "A compliment: words praising a person or a thing; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "赞美某人或某物的话，称赞；阳性名词。",
+          "after_text": "赞美某人或某物的话，称赞；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2967,
+      "headword": "loyer",
+      "sense_id": "b140-2967-loyer-nom-selected",
+      "source_id": "b140_fr_166931",
+      "source_revision": 39774301,
+      "before_excerpt": "# {{lexique|droit de propriété|fr}} [[prix|Prix]] de la [[location]] d’une [[maison]] ou d’un [[appartement]].",
+      "before_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|droit de propriété|fr}} [[prix|Prix]] de la [[location]] d’une [[maison]] ou d’un [[appartement]]."
+      },
+      "after_excerpt": "# {{lexique|droit de propriété|fr}} [[prix|Prix]] de la [[location]] d’une [[maison]] ou d’un [[appartement]].",
+      "after_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|droit de propriété|fr}} [[prix|Prix]] de la [[location]] d’une [[maison]] ou d’un [[appartement]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Prix de la location d’une maison ou d’un appartement is a short price/object description using standard rental terms. The property-law label is factual metadata. The phrase contains de minimis expression under 313.4(C), not a protected account of a rental transaction.",
+      "meaning_reason": "The selected noun is housing rent, exactly the cost of renting a house or flat. Existing feminine/masculine information remains at the fixed head: loyer is masculine.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Somme payée pour louer une maison ou un appartement.",
+          "after_text": "Somme payée pour louer une maison ou un appartement.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Rent paid for a house or flat; masculine noun.",
+          "after_text": "Rent paid for a house or flat; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "租住房屋或公寓所支付的租金；阳性名词。",
+          "after_text": "租住房屋或公寓所支付的租金；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2969,
+      "headword": "plateau",
+      "sense_id": "b140-2969-plateau-nom-selected",
+      "source_id": "b140_fr_123509",
+      "source_revision": 39812986,
+      "before_excerpt": "# {{lexique|société|fr}} Grand [[plat]] destiné à [[servir]] de la nourriture ou transporter de la [[vaisselle]]. {{cf|lang=fr|plateau de courtoisie|plateau d’argent|sur un plateau}}",
+      "before_source_span": {
+        "line_1_based": 85,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|société|fr}} Grand [[plat]] destiné à [[servir]] de la nourriture ou transporter de la [[vaisselle]]. {{cf|lang=fr|plateau de courtoisie|plateau d’argent|sur un plateau}}"
+      },
+      "after_excerpt": "Grand [[plat]]",
+      "after_source_span": {
+        "line_1_based": 85,
+        "column_1_based": 26,
+        "raw_source_excerpt": "Grand [[plat]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_123509",
+          "revid": 39812986,
+          "url": "https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=plateau&action=history",
+          "line_1_based": 85,
+          "column_1_based": 51,
+          "reviewed_excerpt": "[[servir]] de la nourriture"
+        },
+        {
+          "source_id": "b140_fr_123509",
+          "revid": 39812986,
+          "url": "https://fr.wiktionary.org/w/index.php?title=plateau&oldid=39812986",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=plateau&action=history",
+          "line_1_based": 85,
+          "column_1_based": 82,
+          "reviewed_excerpt": "transporter de la [[vaisselle]]"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The current selection retains the object category and two conventional purpose phrases, respectively two/four/four words. It excludes the complete destined-for sentence and cross-reference template. These literal product/function units are short expressions under 313.4(C), with product-description facts distinguished from sentence wording.",
+      "meaning_reason": "A large dish for serving food or transporting dishes supports the everyday tray use and both functions already reviewed. The masculine head and plateaux inflection remain fixed.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Grand plat utilisé pour servir de la nourriture ou transporter de la vaisselle.",
+          "after_text": "Grand plat utilisé pour servir de la nourriture ou transporter de la vaisselle.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A tray used to serve food or carry dishes; masculine noun, plural plateaux.",
+          "after_text": "A tray used to serve food or carry dishes; masculine noun, plural plateaux.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "用来上菜或端送餐具的托盘；阳性名词，复数为 plateaux。",
+          "after_text": "用来上菜或端送餐具的托盘；阳性名词，复数为 plateaux。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2971,
+      "headword": "élection",
+      "sense_id": "b140-2971-élection-nom-selected",
+      "source_id": "b140_fr_158862",
+      "source_revision": 39773858,
+      "before_excerpt": "# [[action|Action]] d’[[élire]], choix [[faire|fait]] par la [[voie]] des [[suffrage]]s.",
+      "before_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[action|Action]] d’[[élire]], choix [[faire|fait]] par la [[voie]] des [[suffrage]]s."
+      },
+      "after_excerpt": "# [[action|Action]] d’[[élire]], choix [[faire|fait]] par la [[voie]] des [[suffrage]]s.",
+      "after_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[action|Action]] d’[[élire]], choix [[faire|fait]] par la [[voie]] des [[suffrage]]s."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Action d’élire, choix fait par la voie des suffrages is a compact synonym gloss using conventional election terminology. It states only choosing by votes, with no creative example or elaboration. Its exact brief wording is assessed under 313.4(C).",
+      "meaning_reason": "Choosing a person by voting is the accepted election use, not a theological or other metaphorical use. All fields retain the voting condition.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Choix d’une personne par un vote.",
+          "after_text": "Choix d’une personne par un vote.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "An election: choosing someone by voting; feminine noun.",
+          "after_text": "An election: choosing someone by voting; feminine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "通过投票选出某人的选举；阴性名词。",
+          "after_text": "通过投票选出某人的选举；阴性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2972,
+      "headword": "douloureux",
+      "sense_id": "b140-2972-douloureux-adj-selected",
+      "source_id": "b140_fr_158301",
+      "source_revision": 39884914,
+      "before_excerpt": "# {{par extension}} Qualifie les [[parties]] du [[corps]], [[lorsqu’]]elles [[deviennent]] [[tellement]] [[sensible]]s qu’on n’y [[saurait]] [[toucher]] [[sans]] [[causer]] de la douleur.",
+      "before_source_span": {
+        "line_1_based": 18,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{par extension}} Qualifie les [[parties]] du [[corps]], [[lorsqu’]]elles [[deviennent]] [[tellement]] [[sensible]]s qu’on n’y [[saurait]] [[toucher]] [[sans]] [[causer]] de la douleur."
+      },
+      "after_excerpt": "[[parties]] du [[corps]]",
+      "after_source_span": {
+        "line_1_based": 18,
+        "column_1_based": 34,
+        "raw_source_excerpt": "[[parties]] du [[corps]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_158301",
+          "revid": 39884914,
+          "url": "https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=douloureux&action=history",
+          "line_1_based": 18,
+          "column_1_based": 106,
+          "reviewed_excerpt": "[[sensible]]s"
+        },
+        {
+          "source_id": "b140_fr_158301",
+          "revid": 39884914,
+          "url": "https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=douloureux&action=history",
+          "line_1_based": 18,
+          "column_1_based": 142,
+          "reviewed_excerpt": "[[toucher]]"
+        },
+        {
+          "source_id": "b140_fr_158301",
+          "revid": 39884914,
+          "url": "https://fr.wiktionary.org/w/index.php?title=douloureux&oldid=39884914",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=douloureux&action=history",
+          "line_1_based": 18,
+          "column_1_based": 163,
+          "reviewed_excerpt": "[[causer]] de la douleur"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The complete archaic sentence tellement sensibles qu’on n’y saurait toucher is not passed. The current selection keeps only the body-part category, sensitivity, touch and the conventional cause-pain phrase. These isolated medical/ordinary lexical facts are short expressions under 313.4(C), without the expressive degree/conditional syntax.",
+      "meaning_reason": "The same fixed adjective subsense relates sensitive body parts, touch and resulting pain. The already reviewed tender/sore explanations preserve this relation and exclude emotional grief; shortening the source evidence does not broaden the field meaning.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "En parlant d’une partie du corps, sensible au point que le contact provoque une douleur.",
+          "after_text": "En parlant d’une partie du corps, sensible au point que le contact provoque une douleur.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Sore or tender: of a body part that hurts when touched; masculine adjective, feminine douloureuse.",
+          "after_text": "Sore or tender: of a body part that hurts when touched; masculine adjective, feminine douloureuse.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "指身体部位疼痛、触碰时会痛的；阳性形容词，阴性为 douloureuse。",
+          "after_text": "指身体部位疼痛、触碰时会痛的；阳性形容词，阴性为 douloureuse。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2973,
+      "headword": "cigare",
+      "sense_id": "b140-2973-cigare-nom-selected",
+      "source_id": "b140_fr_55315",
+      "source_revision": 39628831,
+      "before_excerpt": "# Petit [[rouleau]] de [[feuilles]] de [[tabac]] [[préparé]] pour [[fumer|être fumé]].",
+      "before_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Petit [[rouleau]] de [[feuilles]] de [[tabac]] [[préparé]] pour [[fumer|être fumé]]."
+      },
+      "after_excerpt": "# Petit [[rouleau]] de [[feuilles]] de [[tabac]] [[préparé]] pour [[fumer|être fumé]].",
+      "after_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Petit [[rouleau]] de [[feuilles]] de [[tabac]] [[préparé]] pour [[fumer|être fumé]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Petit rouleau de feuilles de tabac préparé pour être fumé is a brief literal product description: shape, material and intended use. It has no imaginative language or creative example. It is assessed as de minimis short expression under 313.4(C), also consistent with 313.4(F)'s mere product-description guidance; this does not pass any longer tobacco prose.",
+      "meaning_reason": "A tobacco-leaf roll for smoking exactly supports the selected cigar noun; the physical properties and purpose are lexical facts in the existing fields.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Petit rouleau de feuilles de tabac préparé pour être fumé.",
+          "after_text": "Petit rouleau de feuilles de tabac préparé pour être fumé.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A cigar: a roll of tobacco leaves prepared for smoking; masculine noun.",
+          "after_text": "A cigar: a roll of tobacco leaves prepared for smoking; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "雪茄：卷成条状、供吸食的烟草叶；阳性名词。",
+          "after_text": "雪茄：卷成条状、供吸食的烟草叶；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2976,
+      "headword": "canal",
+      "sense_id": "b140-2976-canal-nom-selected",
+      "source_id": "b140_fr_64007",
+      "source_revision": 39975344,
+      "before_excerpt": "# {{lexique|transport|fr}} [[tranchée|Tranchée]] [[creuser|creusée]] de [[main]] d’[[homme]] pour [[établir]] des [[communication]]s par eau d’un [[lieu]] à un autre et [[faciliter]] le [[transport]] des [[denrée]]s et des [[marchandise]]s.",
+      "before_source_span": {
+        "line_1_based": 33,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|transport|fr}} [[tranchée|Tranchée]] [[creuser|creusée]] de [[main]] d’[[homme]] pour [[établir]] des [[communication]]s par eau d’un [[lieu]] à un autre et [[faciliter]] le [[transport]] des [[denrée]]s et des [[marchandise]]s."
+      },
+      "after_excerpt": "[[tranchée|Tranchée]] [[creuser|creusée]]",
+      "after_source_span": {
+        "line_1_based": 33,
+        "column_1_based": 28,
+        "raw_source_excerpt": "[[tranchée|Tranchée]] [[creuser|creusée]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_64007",
+          "revid": 39975344,
+          "url": "https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=canal&action=history",
+          "line_1_based": 33,
+          "column_1_based": 70,
+          "reviewed_excerpt": "de [[main]] d’[[homme]]"
+        },
+        {
+          "source_id": "b140_fr_64007",
+          "revid": 39975344,
+          "url": "https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=canal&action=history",
+          "line_1_based": 33,
+          "column_1_based": 111,
+          "reviewed_excerpt": "des [[communication]]s par eau"
+        },
+        {
+          "source_id": "b140_fr_64007",
+          "revid": 39975344,
+          "url": "https://fr.wiktionary.org/w/index.php?title=canal&oldid=39975344",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=canal&action=history",
+          "line_1_based": 33,
+          "column_1_based": 170,
+          "reviewed_excerpt": "[[faciliter]] le [[transport]]"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The long account of communications between places and transport of goods is excluded. The selection retains a dug trench, human construction, water communication and facilitating transport in two-to-four-word literal units. These short technical facts fall within 313.4(C) and 102(b); they do not retain the developed original sentence or its goods list.",
+      "meaning_reason": "The four units in the transport-labelled fixed sense support an artificial waterway linking places for transport, distinguishing it from natural channels, anatomical vessels and pipes. The source's masculine head and canaux paradigm remain sufficient for the unchanged fields.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Voie d’eau creusée par l’homme pour relier des lieux et faciliter le transport.",
+          "after_text": "Voie d’eau creusée par l’homme pour relier des lieux et faciliter le transport.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A canal: a man-made waterway linking places and facilitating transport; masculine noun, plural canaux.",
+          "after_text": "A canal: a man-made waterway linking places and facilitating transport; masculine noun, plural canaux.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "人工开凿、连接各地并便于运输的运河；阳性名词，复数为 canaux。",
+          "after_text": "人工开凿、连接各地并便于运输的运河；阳性名词，复数为 canaux。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2977,
+      "headword": "pêcher",
+      "sense_id": "b140-2977-pêcher-ver-selected",
+      "source_id": "b140_fr_170747",
+      "source_revision": 39889318,
+      "before_excerpt": "# [[prendre|Prendre]] du [[poisson]].",
+      "before_source_span": {
+        "line_1_based": 62,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[prendre|Prendre]] du [[poisson]]."
+      },
+      "after_excerpt": "# [[prendre|Prendre]] du [[poisson]].",
+      "after_source_span": {
+        "line_1_based": 62,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[prendre|Prendre]] du [[poisson]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Prendre du poisson is the ordinary three-word activity description: verb, article and literal object. It contains no elaborated explanation, metaphor, distinctive sequence or creative selection. Wiki links and the list marker add navigation/syntax, not literary authorship. The exact bound wording, not the whole pêcher article or DAF8 edition, is assessed under the short-expression exclusion.",
+      "meaning_reason": "Taking fish is exactly the selected fishing use; the already reviewed EN/ZH activity explanations preserve optional-object usage. The verb head and French frame remain fixed.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Prendre du poisson.",
+          "after_text": "Prendre du poisson.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "To catch fish or go fishing; pêcher du poisson, also used without an object for the activity.",
+          "after_text": "To catch fish or go fishing; pêcher du poisson, also used without an object for the activity.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "捕鱼、钓鱼；可用 pêcher du poisson，也可不带宾语表示捕鱼这一活动。",
+          "after_text": "捕鱼、钓鱼；可用 pêcher du poisson，也可不带宾语表示捕鱼这一活动。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2978,
+      "headword": "miens",
+      "sense_id": "b140-2978-miens-pro-pos-selected",
+      "source_id": "b140_fr_142550",
+      "source_revision": 40036508,
+      "before_excerpt": "# Possessif de la [[première personne du singulier]] au masculin pluriel. Ceux qui sont à moi.",
+      "before_source_span": {
+        "line_1_based": 17,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Possessif de la [[première personne du singulier]] au masculin pluriel. Ceux qui sont à moi."
+      },
+      "after_excerpt": "# Possessif de la [[première personne du singulier]] au masculin pluriel. Ceux qui sont à moi.",
+      "after_source_span": {
+        "line_1_based": 17,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Possessif de la [[première personne du singulier]] au masculin pluriel. Ceux qui sont à moi."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "The selected les miens text states first-person singular possessor, masculine plural agreement and the brief Ceux qui sont à moi gloss. It consists of grammatical facts and a short deictic expression under 313.4(C), 102(b). The separately supporting old mien phrase is assessed in supporting_source_decisions, not assumed to be protected because its article has a DAF8 marker.",
+      "meaning_reason": "The modern possessive-pronoun source and les miens inflection table support masculine plural referents belonging to the first-person singular speaker. Old adjective mien is only contrast; it supplies no admitted old adjective use or runtime alias.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Dans « les miens », pronom possessif masculin pluriel : ceux ou les objets qui m’appartiennent.",
+          "after_text": "Dans « les miens », pronom possessif masculin pluriel : ceux ou les objets qui m’appartiennent.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Mine, referring to masculine plural people or things belonging to me; used as les miens. The possessor is first-person singular.",
+          "after_text": "Mine, referring to masculine plural people or things belonging to me; used as les miens. The possessor is first-person singular.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "我的人或东西；用于阳性复数所有格代词短语 les miens，所有者是第一人称单数“我”。",
+          "after_text": "我的人或东西；用于阳性复数所有格代词短语 les miens，所有者是第一人称单数“我”。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2979,
+      "headword": "trouble",
+      "sense_id": "b140-2979-trouble-nom-selected",
+      "source_id": "b140_fr_120437",
+      "source_revision": 40045997,
+      "before_excerpt": "# [[agitation|Agitation]] de l’[[âme]] ou de l’[[esprit]].",
+      "before_source_span": {
+        "line_1_based": 74,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[agitation|Agitation]] de l’[[âme]] ou de l’[[esprit]]."
+      },
+      "after_excerpt": "# [[agitation|Agitation]] de l’[[âme]] ou de l’[[esprit]].",
+      "after_source_span": {
+        "line_1_based": 74,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[agitation|Agitation]] de l’[[âme]] ou de l’[[esprit]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Agitation de l’âme ou de l’esprit is a seven-word conventional nominal gloss, with two ordinary alternative terms for inner mental state. It contains no description of a particular person's feelings or creative prose. The exact short phrase falls under 313.4(C).",
+      "meaning_reason": "Mental/emotional agitation supports the accepted turmoil/unease noun use; chemical cloudiness and public disorder remain excluded.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Agitation de l’esprit ou des sentiments.",
+          "after_text": "Agitation de l’esprit ou des sentiments.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Emotional or mental agitation, unease or turmoil; masculine noun.",
+          "after_text": "Emotional or mental agitation, unease or turmoil; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "心神不安、情绪波动；阳性名词。",
+          "after_text": "心神不安、情绪波动；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2980,
+      "headword": "réalisateur",
+      "sense_id": "b140-2980-réalisateur-nom-selected",
+      "source_id": "b140_fr_173970",
+      "source_revision": 39807929,
+      "before_excerpt": "# {{lexique|cinéma|télévision|fr}} Personne responsable de la [[réalisation]] d’un [[film]].",
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|cinéma|télévision|fr}} Personne responsable de la [[réalisation]] d’un [[film]]."
+      },
+      "after_excerpt": "# {{lexique|cinéma|télévision|fr}} Personne responsable de la [[réalisation]] d’un [[film]].",
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|cinéma|télévision|fr}} Personne responsable de la [[réalisation]] d’un [[film]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Personne responsable de la réalisation d’un film is a short role description using the occupation's own action noun and literal object. Cinema/television tags are factual labels. There is no distinctive creative account of directing; this exact phrase is de minimis under 313.4(C).",
+      "meaning_reason": "The person responsible for making a film supports the film-director sense, with réalisatrice still fixed in the head evidence.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Personne responsable de la réalisation d’un film.",
+          "after_text": "Personne responsable de la réalisation d’un film.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A film director, responsible for making the film; masculine noun, feminine réalisatrice.",
+          "after_text": "A film director, responsible for making the film; masculine noun, feminine réalisatrice.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "负责影片制作的导演；阳性名词，阴性为 réalisatrice。",
+          "after_text": "负责影片制作的导演；阳性名词，阴性为 réalisatrice。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2983,
+      "headword": "noce",
+      "sense_id": "b140-2983-noce-nom-selected",
+      "source_id": "b140_fr_77542",
+      "source_revision": 39849307,
+      "before_excerpt": "# {{au singulier}} ou {{au pluriel}} [[célébration|Célébration]] d’un mariage, [[festivités]], [[danse]] et [[autres]] [[réjouissance]]s qui l’[[accompagnent]].",
+      "before_source_span": {
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{au singulier}} ou {{au pluriel}} [[célébration|Célébration]] d’un mariage, [[festivités]], [[danse]] et [[autres]] [[réjouissance]]s qui l’[[accompagnent]]."
+      },
+      "after_excerpt": "[[célébration|Célébration]] d’un mariage",
+      "after_source_span": {
+        "line_1_based": 22,
+        "column_1_based": 38,
+        "raw_source_excerpt": "[[célébration|Célébration]] d’un mariage"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_77542",
+          "revid": 39849307,
+          "url": "https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=noce&action=history",
+          "line_1_based": 22,
+          "column_1_based": 80,
+          "reviewed_excerpt": "[[festivités]]"
+        },
+        {
+          "source_id": "b140_fr_77542",
+          "revid": 39849307,
+          "url": "https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=noce&action=history",
+          "line_1_based": 22,
+          "column_1_based": 120,
+          "reviewed_excerpt": "[[réjouissance]]s"
+        },
+        {
+          "source_id": "b140_fr_77542",
+          "revid": 39849307,
+          "url": "https://fr.wiktionary.org/w/index.php?title=noce&oldid=39849307",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=noce&action=history",
+          "line_1_based": 22,
+          "column_1_based": 3,
+          "reviewed_excerpt": "{{au singulier}} ou {{au pluriel}}"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The full list-and-relative-clause sentence is excluded. A wedding celebration, festivities, rejoicing and singular/plural usage are isolated conventional lexical/grammar units. They are short expressions and facts under 313.4(C), 102(b), not the original phrasing of how dance and other festivities accompany a wedding.",
+      "meaning_reason": "The current atoms retain wedding festivities and the explicit singular-or-plural restriction; the unchanged fields do not claim that dancing is required.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Fête et réjouissances qui accompagnent la célébration d’un mariage ; au singulier ou au pluriel.",
+          "after_text": "Fête et réjouissances qui accompagnent la célébration d’un mariage ; au singulier ou au pluriel.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Wedding celebrations or festivities; feminine noun used in the singular or plural.",
+          "after_text": "Wedding celebrations or festivities; feminine noun used in the singular or plural.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "婚礼庆典、喜宴等婚庆活动；阴性名词，可用单数或复数。",
+          "after_text": "婚礼庆典、喜宴等婚庆活动；阴性名词，可用单数或复数。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2985,
+      "headword": "câble",
+      "sense_id": "b140-2985-câble-nom-selected",
+      "source_id": "b140_fr_2644",
+      "source_revision": 39800575,
+      "before_excerpt": "# {{par analogie|fr}} Groupe de [[conducteur]]s [[électrique]]s réunis sous une même enveloppe.",
+      "before_source_span": {
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{par analogie|fr}} Groupe de [[conducteur]]s [[électrique]]s réunis sous une même enveloppe."
+      },
+      "after_excerpt": "# {{par analogie|fr}} Groupe de [[conducteur]]s [[électrique]]s réunis sous une même enveloppe.",
+      "after_source_span": {
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{par analogie|fr}} Groupe de [[conducteur]]s [[électrique]]s réunis sous une même enveloppe."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Groupe de conducteurs électriques réunis sous une même enveloppe is a compact literal technical definition: electrical conductors and a common sheath. The analogical label is usage metadata. These standard component/property terms in a short nominal gloss contain no elaborated creative prose under 313.4(C); 102(b) separately excludes the technical facts, not arbitrary wording of a longer explanation.",
+      "meaning_reason": "Conductors in a common sheath exactly supports electrical cable, retaining the enclosing condition across the three fields and excluding the rope use.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Ensemble de conducteurs électriques réunis dans une même enveloppe.",
+          "after_text": "Ensemble de conducteurs électriques réunis dans une même enveloppe.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "An electrical cable: conductors enclosed in a common sheath; masculine noun.",
+          "after_text": "An electrical cable: conductors enclosed in a common sheath; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "电缆：包在同一护套中的一组导电线；阳性名词。",
+          "after_text": "电缆：包在同一护套中的一组导电线；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2986,
+      "headword": "linge",
+      "sense_id": "b140-2986-linge-nom-selected",
+      "source_id": "b140_fr_166640",
+      "source_revision": 39865439,
+      "before_excerpt": "# {{tissus|fr}} [[tissu|Tissu]] de [[fil]] ou de [[coton]] [[servir|servant]] à l’[[usage]] du [[corps]] ou à des [[emploi]]s [[domestique]]s.",
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{tissus|fr}} [[tissu|Tissu]] de [[fil]] ou de [[coton]] [[servir|servant]] à l’[[usage]] du [[corps]] ou à des [[emploi]]s [[domestique]]s."
+      },
+      "after_excerpt": "[[tissu|Tissu]] de [[fil]] ou de [[coton]]",
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 17,
+        "raw_source_excerpt": "[[tissu|Tissu]] de [[fil]] ou de [[coton]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_166640",
+          "revid": 39865439,
+          "url": "https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=linge&action=history",
+          "line_1_based": 10,
+          "column_1_based": 81,
+          "reviewed_excerpt": "l’[[usage]] du [[corps]]"
+        },
+        {
+          "source_id": "b140_fr_166640",
+          "revid": 39865439,
+          "url": "https://fr.wiktionary.org/w/index.php?title=linge&oldid=39865439",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=linge&action=history",
+          "line_1_based": 10,
+          "column_1_based": 111,
+          "reviewed_excerpt": "des [[emploi]]s [[domestique]]s"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The fabric/material category and personal/domestic use fragments are brief literal units. They exclude the entire serving-for sentence. Material alternatives and purposes are factual contents/use descriptions; each exact fragment is assessed under 313.4(C),(F).",
+      "meaning_reason": "Fabric of thread/cotton for bodily or domestic use supports the selected cloth sense. The existing linen/cotton and personal/household explanations preserve those facts without reproducing the full sentence's syntax.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Tissu de fil ou de coton destiné à l’usage du corps ou à des usages domestiques.",
+          "after_text": "Tissu de fil ou de coton destiné à l’usage du corps ou à des usages domestiques.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Linen or cotton fabric used for personal or household purposes; masculine noun.",
+          "after_text": "Linen or cotton fabric used for personal or household purposes; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "供个人或家庭使用的麻纱或棉织物；阳性名词。",
+          "after_text": "供个人或家庭使用的麻纱或棉织物；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2987,
+      "headword": "cité",
+      "sense_id": "b140-2987-cité-nom-selected",
+      "source_id": "b140_fr_153787",
+      "source_revision": 39804147,
+      "before_excerpt": "# Ensemble [[architectural]] d’[[habitat collectif|habitats collectifs]].",
+      "before_source_span": {
+        "line_1_based": 60,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Ensemble [[architectural]] d’[[habitat collectif|habitats collectifs]]."
+      },
+      "after_excerpt": "# Ensemble [[architectural]] d’[[habitat collectif|habitats collectifs]].",
+      "after_source_span": {
+        "line_1_based": 60,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Ensemble [[architectural]] d’[[habitat collectif|habitats collectifs]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Ensemble architectural d’habitats collectifs is a four-word technical category gloss using stock housing terminology. It does not describe a particular estate or architectural composition. The exact brief expression is excluded under 313.4(C), irrespective of whether a historical dictionary contains it.",
+      "meaning_reason": "Collective housing buildings support the first review's corrected apartment-estate English meaning. The source does not mean generic collective accommodation; no new text is introduced.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Ensemble architectural de logements collectifs.",
+          "after_text": "Ensemble architectural de logements collectifs.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A housing estate or complex of apartment buildings; feminine noun.",
+          "after_text": "A housing estate or complex of apartment buildings; feminine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "由多户住宅楼组成的住宅区、住宅小区；阴性名词。",
+          "after_text": "由多户住宅楼组成的住宅区、住宅小区；阴性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2988,
+      "headword": "guère",
+      "sense_id": "b140-2988-guère-adv-selected",
+      "source_id": "b140_fr_528578",
+      "source_revision": 39006060,
+      "before_excerpt": "# [[presque|Presque]] [[pas#fr-adv|pas]] ; presque [[rien]]. — {{note}}'' Il ne s’emploie qu’avec la [[particule]] ''[[ne#fr-part|ne]].",
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[presque|Presque]] [[pas#fr-adv|pas]] ; presque [[rien]]. — {{note}}'' Il ne s’emploie qu’avec la [[particule]] ''[[ne#fr-part|ne]]."
+      },
+      "after_excerpt": "[[presque|Presque]] [[pas#fr-adv|pas]] ; presque [[rien]]",
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 3,
+        "raw_source_excerpt": "[[presque|Presque]] [[pas#fr-adv|pas]] ; presque [[rien]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_528578",
+          "revid": 39006060,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&oldid=39006060",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gu%C3%A8re&action=history",
+          "line_1_based": 10,
+          "column_1_based": 99,
+          "reviewed_excerpt": "la [[particule]] ''[[ne#fr-part|ne]]"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The retained gloss consists of two two-word equivalents plus the name of the negative particle. The full Il ne s’emploie qu’avec sentence is excluded. Short equivalents and grammatical symbols/facts have no developed expressive wording under 313.4(C), 102(b).",
+      "meaning_reason": "Hardly/not much plus the ne particle support the unchanged ne… guère restriction and meanings; no pas is added. The source's written negative construction is preserved as already quality reviewed.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Presque pas, presque rien ; dans la construction négative « ne… guère ».",
+          "after_text": "Presque pas, presque rien ; dans la construction négative « ne… guère ».",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Hardly, scarcely or not much; in the negative construction ne… guère, without adding pas.",
+          "after_text": "Hardly, scarcely or not much; in the negative construction ne… guère, without adding pas.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "几乎不、不太多；用于否定结构 ne… guère，不另加 pas。",
+          "after_text": "几乎不、不太多；用于否定结构 ne… guère，不另加 pas。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2990,
+      "headword": "matière",
+      "sense_id": "b140-2990-matière-nom-selected",
+      "source_id": "b140_fr_7414",
+      "source_revision": 39871340,
+      "before_excerpt": "# Ce dont une chose est faite.",
+      "before_source_span": {
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Ce dont une chose est faite."
+      },
+      "after_excerpt": "# Ce dont une chose est faite.",
+      "after_source_span": {
+        "line_1_based": 20,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Ce dont une chose est faite."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Ce dont une chose est faite is a seven-word conventional composition question/gloss. It contains only the ordinary deictic object and made-of relation, with no distinctive description, metaphor or creative arrangement. The exact phrase is assessed under 313.4(C); no general claim about dictionary definitions follows.",
+      "meaning_reason": "What something is made of exactly supports material/substance; the source and accepted fields exclude school subject, topic and legal matter senses.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Substance dont une chose est faite.",
+          "after_text": "Substance dont une chose est faite.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "The material or substance something is made of; feminine noun.",
+          "after_text": "The material or substance something is made of; feminine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "构成某物的材料、物质；阴性名词。",
+          "after_text": "构成某物的材料、物质；阴性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2993,
+      "headword": "économie",
+      "sense_id": "b140-2993-économie-nom-selected",
+      "source_id": "b140_fr_158629",
+      "source_revision": 39960440,
+      "before_excerpt": "# [[épargne|Épargne]] dans la [[dépense]].",
+      "before_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[épargne|Épargne]] dans la [[dépense]]."
+      },
+      "after_excerpt": "# [[épargne|Épargne]] dans la [[dépense]].",
+      "after_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[épargne|Épargne]] dans la [[dépense]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Épargne dans la dépense is a four-word stock nominal gloss with ordinary saving/expenditure terms. It contains de minimis expression under 313.4(C), not a creative explanation of economic conduct.",
+      "meaning_reason": "Economising on spending supports the singular saving/reduction meaning, distinct from plural économies as saved money and economy as a system. The existing restriction remains.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Réduction ou modération des dépenses.",
+          "after_text": "Réduction ou modération des dépenses.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Saving or economising on expenditure; feminine noun, distinct from plural économies meaning saved money.",
+          "after_text": "Saving or economising on expenditure; feminine noun, distinct from plural économies meaning saved money.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "节省开支、节约；阴性名词，区别于表示积蓄的复数 économies。",
+          "after_text": "节省开支、节约；阴性名词，区别于表示积蓄的复数 économies。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2994,
+      "headword": "atelier",
+      "sense_id": "b140-2994-atelier-nom-selected",
+      "source_id": "b140_fr_26567",
+      "source_revision": 39773605,
+      "before_excerpt": "# [[lieu|Lieu]] où se fait un [[travail]] [[manuel]].",
+      "before_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[lieu|Lieu]] où se fait un [[travail]] [[manuel]]."
+      },
+      "after_excerpt": "# [[lieu|Lieu]] où se fait un [[travail]] [[manuel]].",
+      "after_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[lieu|Lieu]] où se fait un [[travail]] [[manuel]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Lieu où se fait un travail manuel is an eight-word literal place/function gloss using the standard category and work label. It has no developed account of a workshop or creative example; the exact brief expression is assessed under 313.4(C).",
+      "meaning_reason": "A place for manual work directly supports workshop in all existing fields; no artistic group or class-event sense is substituted.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Lieu où l’on effectue un travail manuel.",
+          "after_text": "Lieu où l’on effectue un travail manuel.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A workshop: a place where manual work is done; masculine noun.",
+          "after_text": "A workshop: a place where manual work is done; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "进行手工劳动的工作间、作坊；阳性名词。",
+          "after_text": "进行手工劳动的工作间、作坊；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2995,
+      "headword": "instinct",
+      "sense_id": "b140-2995-instinct-nom-selected",
+      "source_id": "b140_fr_118765",
+      "source_revision": 39872155,
+      "before_excerpt": "# Mouvement [[intérieur]] et [[involontaire]] [[auquel]] on [[attribuer|attribue]] les [[acte]]s non [[réfléchir|réfléchis]], les [[sentiment]]s [[indélibéré]]s ou, par [[extension]], une grande [[aptitude]], une [[fort]]e [[propension]] à quelque chose, en parlant de l’[[homme]].",
+      "before_source_span": {
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Mouvement [[intérieur]] et [[involontaire]] [[auquel]] on [[attribuer|attribue]] les [[acte]]s non [[réfléchir|réfléchis]], les [[sentiment]]s [[indélibéré]]s ou, par [[extension]], une grande [[aptitude]], une [[fort]]e [[propension]] à quelque chose, en parlant de l’[[homme]]."
+      },
+      "after_excerpt": "Mouvement [[intérieur]] et [[involontaire]]",
+      "after_source_span": {
+        "line_1_based": 14,
+        "column_1_based": 3,
+        "raw_source_excerpt": "Mouvement [[intérieur]] et [[involontaire]]"
+      },
+      "supporting_atoms": [
+        {
+          "source_id": "b140_fr_118765",
+          "revid": 39872155,
+          "url": "https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=instinct&action=history",
+          "line_1_based": 14,
+          "column_1_based": 84,
+          "reviewed_excerpt": "les [[acte]]s non [[réfléchir|réfléchis]]"
+        },
+        {
+          "source_id": "b140_fr_118765",
+          "revid": 39872155,
+          "url": "https://fr.wiktionary.org/w/index.php?title=instinct&oldid=39872155",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=instinct&action=history",
+          "line_1_based": 14,
+          "column_1_based": 256,
+          "reviewed_excerpt": "en parlant de l’[[homme]]"
+        }
+      ],
+      "determination": "minimal_factual_spans",
+      "expression_reason": "The long definition includes attribution, indeliberate feelings and extended aptitude/propensity uses. It is excluded. Only an inner involuntary movement, unreflective acts and human scope remain as short literal units under 313.4(C). The developed relation and extended-use prose are not reconstructed for redistribution.",
+      "meaning_reason": "The fixed same-sense atoms jointly support a human involuntary inner impulse producing action without deliberation. The already reviewed learner fields use that selected human sense only, excluding animal instinct and extended aptitude.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Impulsion intérieure et involontaire qui pousse une personne à agir sans réfléchir.",
+          "after_text": "Impulsion intérieure et involontaire qui pousse une personne à agir sans réfléchir.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Instinct: an involuntary inner impulse leading a person to act without deliberation; masculine noun.",
+          "after_text": "Instinct: an involuntary inner impulse leading a person to act without deliberation; masculine noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "本能：促使人未经思考便行动的内在、不由自主的冲动；阳性名词。",
+          "after_text": "本能：促使人未经思考便行动的内在、不由自主的冲动；阳性名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2996,
+      "headword": "major",
+      "sense_id": "b140-2996-major-nom-selected",
+      "source_id": "b140_fr_85662",
+      "source_revision": 39970603,
+      "before_excerpt": "# {{lexique|éducation|fr}} [[premier|Premier]] d’une [[promotion]].",
+      "before_source_span": {
+        "line_1_based": 19,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|éducation|fr}} [[premier|Premier]] d’une [[promotion]]."
+      },
+      "after_excerpt": "# {{lexique|éducation|fr}} [[premier|Premier]] d’une [[promotion]].",
+      "after_source_span": {
+        "line_1_based": 19,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|éducation|fr}} [[premier|Premier]] d’une [[promotion]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Premier d’une promotion is a three-word rank/cohort gloss. The education tag only identifies domain. This exact conventional short expression has no sufficient creative authorship under 313.4(C); neither a synonym count nor the DAF8 article marker controls the result.",
+      "meaning_reason": "First in a student cohort supports top-ranked student, major de promotion and the same Chinese meaning. The gender-usable head remains fixed, and the military rank is excluded.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Personne classée première d’une promotion d’élèves ou d’étudiants.",
+          "after_text": "Personne classée première d’une promotion d’élèves ou d’étudiants.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "The top-ranked student in a graduating class or cohort, as in major de promotion; noun usable for either gender.",
+          "after_text": "The top-ranked student in a graduating class or cohort, as in major de promotion; noun usable for either gender.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "一届学生中排名第一的人，常用 major de promotion；名词，可指男性或女性。",
+          "after_text": "一届学生中排名第一的人，常用 major de promotion；名词，可指男性或女性。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2997,
+      "headword": "collection",
+      "sense_id": "b140-2997-collection-nom-selected",
+      "source_id": "b140_fr_121356",
+      "source_revision": 39772601,
+      "before_excerpt": "# {{nom collectif|fr}} [[réunion|Réunion]] de [[plusieurs]] [[objet]]s qui ont [[ensemble]] quelque [[rapport]].",
+      "before_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{nom collectif|fr}} [[réunion|Réunion]] de [[plusieurs]] [[objet]]s qui ont [[ensemble]] quelque [[rapport]]."
+      },
+      "after_excerpt": "# {{nom collectif|fr}} [[réunion|Réunion]] de [[plusieurs]] [[objet]]s qui ont [[ensemble]] quelque [[rapport]].",
+      "after_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{nom collectif|fr}} [[réunion|Réunion]] de [[plusieurs]] [[objet]]s qui ont [[ensemble]] quelque [[rapport]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Réunion de plusieurs objets qui ont ensemble quelque rapport is a brief literal grouping/relation gloss. It does not select a particular collection, imaginative example or distinctive description. Its conventional short wording and collective-noun label are assessed under 313.4(C), while the grouping fact is separately excluded by 102(b).",
+      "meaning_reason": "Related objects brought together support collection and the feminine collective-noun use in all existing fields.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Ensemble de plusieurs objets qui ont un rapport entre eux.",
+          "after_text": "Ensemble de plusieurs objets qui ont un rapport entre eux.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A collection: a set of related objects brought together; feminine collective noun.",
+          "after_text": "A collection: a set of related objects brought together; feminine collective noun.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "汇集在一起、彼此有某种联系的一组物品，收藏；阴性集合名词。",
+          "after_text": "汇集在一起、彼此有某种联系的一组物品，收藏；阴性集合名词。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2998,
+      "headword": "automne",
+      "sense_id": "b140-2998-automne-nom-selected",
+      "source_id": "b140_fr_7830",
+      "source_revision": 39914390,
+      "before_excerpt": "# {{saisons|fr}} Une des quatre [[saison|saisons]] de l’[[année]].",
+      "before_source_span": {
+        "line_1_based": 12,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{saisons|fr}} Une des quatre [[saison|saisons]] de l’[[année]]."
+      },
+      "after_excerpt": "# {{saisons|fr}} Une des quatre [[saison|saisons]] de l’[[année]].",
+      "after_source_span": {
+        "line_1_based": 12,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{saisons|fr}} Une des quatre [[saison|saisons]] de l’[[année]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Une des quatre saisons de l’année is a seven-word factual category statement. The current selected span ends there: date assertions, quotations and media are excluded. The phrase and season/calendar fact contain de minimis expression under 313.4(C),(D); the head's uncommon literary feminine label is factual usage information.",
+      "meaning_reason": "The fixed automne head and season category identify autumn, conventionally the season between summer and winter. This lexical/calendar fact supports the existing explanations; no disputed astronomical date is carried into them. Ordinary masculine and uncommon literary feminine usage remain unchanged.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Saison de l’année entre l’été et l’hiver.",
+          "after_text": "Saison de l’année entre l’été et l’hiver.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "Autumn or fall, the season between summer and winter; usually masculine in ordinary French. Feminine use is uncommon and literary.",
+          "after_text": "Autumn or fall, the season between summer and winter; usually masculine in ordinary French. Feminine use is uncommon and literary.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "秋季、秋天，夏季与冬季之间的季节；现代日常法语通常用阳性，阴性用法少见且偏文学。",
+          "after_text": "秋季、秋天，夏季与冬季之间的季节；现代日常法语通常用阳性，阴性用法少见且偏文学。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 2999,
+      "headword": "pencher",
+      "sense_id": "b140-2999-pencher-ver-selected",
+      "source_id": "b140_fr_170863",
+      "source_revision": 39827518,
+      "before_excerpt": "# {{pronl|fr}} S’incliner vers le bas ou de côté, se [[baisser]].",
+      "before_source_span": {
+        "line_1_based": 29,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{pronl|fr}} S’incliner vers le bas ou de côté, se [[baisser]]."
+      },
+      "after_excerpt": "# {{pronl|fr}} S’incliner vers le bas ou de côté, se [[baisser]].",
+      "after_source_span": {
+        "line_1_based": 29,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{pronl|fr}} S’incliner vers le bas ou de côté, se [[baisser]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "S’incliner vers le bas ou de côté, se baisser is a short literal directional/action gloss using conventional verbs. The pronominal tag states grammar. It contains no invented bodily description or developed prose and is assessed under 313.4(C).",
+      "meaning_reason": "Leaning downward or sideways supports the bodily se pencher use. The unchanged fields retain pronominal construction and exclude making an object lean or figurative inclination.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Dans « se pencher », incliner le corps vers le bas ou sur le côté.",
+          "after_text": "Dans « se pencher », incliner le corps vers le bas ou sur le côté.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "To bend or lean down or to one side; pronominal se pencher.",
+          "after_text": "To bend or lean down or to one side; pronominal se pencher.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "俯身、弯腰或向一侧倾身；代词式用法 se pencher。",
+          "after_text": "俯身、弯腰或向一侧倾身；代词式用法 se pencher。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    },
+    {
+      "frozen_row": 3000,
+      "headword": "personnalité",
+      "sense_id": "b140-3000-personnalité-nom-selected",
+      "source_id": "b140_fr_171099",
+      "source_revision": 39917971,
+      "before_excerpt": "# Personne [[connaître|connue]].",
+      "before_source_span": {
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Personne [[connaître|connue]]."
+      },
+      "after_excerpt": "# Personne [[connaître|connue]].",
+      "after_source_span": {
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# Personne [[connaître|connue]]."
+      },
+      "supporting_atoms": [],
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Personne connue is a two-word ordinary category/property gloss. There is no narrative or creative expression under 313.4(C). The decision concerns these two selected words only, not the marked personnalité article's other definitions.",
+      "meaning_reason": "A known person supports the accepted public-figure meaning; the feminine noun remains independent of the person's gender. Personality/character traits are not selected.",
+      "authority": "US Copyright Office Compendium 313.4(C),(D),(F), 313.3(A); 37 CFR 202.1(a),(b),(d); 17 USC 102(b)",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "learner_wording_changed": false,
+      "quality_basis": "first-review/field-review.json: unchanged accepted text; separate source-sufficiency inspection in this decision",
+      "learner_fields": {
+        "french_definition": {
+          "before_text": "Personne connue du public.",
+          "after_text": "Personne connue du public.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Scoped French semantic explanation; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "english": {
+          "before_text": "A well-known person or public figure; feminine noun regardless of the person’s gender.",
+          "after_text": "A well-known person or public figure; feminine noun regardless of the person’s gender.",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        },
+        "chinese": {
+          "before_text": "知名人士、公众人物；阴性名词，不随所指人物的性别变化。",
+          "after_text": "知名人士、公众人物；阴性名词，不随所指人物的性别变化。",
+          "quality_review": "first-review/field-review.json",
+          "rights_reason": "Original Lexique explanatory wording, conveying the lexical facts rather than translating the long source sentence; exact retained source expression/atoms assessed in this selected-use decision."
+        }
+      },
+      "status": "passed_at_selected_text_boundary"
+    }
+  ],
+  "supporting_source_decisions": [
+    {
+      "source_id": "b140_fr_74391",
+      "title": "mien",
+      "source_revision": 38517604,
+      "frozen_row": 2978,
+      "exact_excerpt": "# {{vieilli|fr}} Ce qui est à moi ou ceux qui sont à moi.",
+      "line_1_based": 10,
+      "determination": "noncopyrightable_short_expression",
+      "expression_reason": "Ce qui est à moi ou ceux qui sont à moi is a brief conventional deictic ownership gloss, not a creative explanation. Its repeated singular/plural alternatives state grammatical referent facts. The vieilli label, adjective frame and pronunciation are factual metadata. Compendium 313.4(C), 17 USC 102(b) exclude this exact short expression/facts; no whole-article or worldwide DAF8 permission is inferred. The source remains only contrast with modern les miens, not an admitted old adjective use.",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+      "status": "passed_at_selected_text_boundary"
+    }
+  ],
+  "excluded_reference_adjustments": [
+    {
+      "record": "sources.json",
+      "source_id": "b140_fr_178229",
+      "line_1_based": 41,
+      "before_reference": "# {{lexique|cartographie|fr}} Matière générale à laquelle se rapporte le sujet d’une carte thématique<ref>{{Import:CFC}}</ref>.",
+      "after_reference": "{{Import:CFC}}",
+      "column_1_based": 107,
+      "reason": "Excluded CFC cartographic definition is unnecessary for current source identity; retain only its exact import token, without assuming its body is licensed.",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer"
+    },
+    {
+      "record": "source-context.json",
+      "source_id": "b140_fr_178229",
+      "line_1_based": 41,
+      "before_reference": "# {{lexique|cartographie|fr}} Matière générale à laquelle se rapporte le sujet d’une carte thématique<ref>{{Import:CFC}}</ref>.",
+      "after_reference": "{{Import:CFC}}",
+      "column_1_based": 107,
+      "reason": "Excluded CFC cartographic definition is unnecessary for current source identity; retain only its exact import token, without assuming its body is licensed.",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer"
+    },
+    {
+      "record": "rights.json",
+      "source_id": "b140_fr_178229",
+      "line_1_based": 41,
+      "before_reference": "# {{lexique|cartographie|fr}} Matière générale à laquelle se rapporte le sujet d’une carte thématique<ref>{{Import:CFC}}</ref>.",
+      "after_reference": "{{Import:CFC}}",
+      "column_1_based": 107,
+      "reason": "Excluded CFC cartographic definition is unnecessary for current source identity; retain only its exact import token, without assuming its body is licensed.",
+      "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer"
+    }
+  ],
+  "integration_merge_commit": "9bc622eaa2e8ae4223506e13a7258a82964b650e",
+  "merged_integration_tip": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "fixed_lexical_capture_mirror": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix\\fixed-lexical-captures"
+}

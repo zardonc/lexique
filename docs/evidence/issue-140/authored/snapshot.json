@@ -1,0 +1,27 @@
+{
+  "role": "independent_reviewer_preserving_content_author",
+  "ticket": 140,
+  "author_commit": "d4bb5e678cefbfa9e3dd7ef60eff118e48f922e7",
+  "author_merge": "a72f0411da8f1bb698ab4f0bdb995f6a6595c05e",
+  "review_base": "a72f0411da8f1bb698ab4f0bdb995f6a6595c05e",
+  "review_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-140",
+  "review_branch": "codex/d2-review-140",
+  "preserved_files": [
+    "authored/COPYING",
+    "authored/NOTICES.md.txt",
+    "authored/README.md.txt",
+    "authored/admission.json",
+    "authored/field-review.json",
+    "authored/groups.json",
+    "authored/reuse.json",
+    "authored/review-candidates.md.txt",
+    "authored/rights.json",
+    "authored/selected-rights.md.txt",
+    "authored/source-captures.json",
+    "authored/source-context.json",
+    "authored/source-excerpts.json",
+    "authored/sources.json",
+    "authored/verification.json"
+  ],
+  "preservation": "All 15 original committed author files retained byte for byte before corrections; original snapshot retained separately."
+}

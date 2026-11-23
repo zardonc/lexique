@@ -346,6 +346,12 @@ fn missing_corrupt_future_and_oversized_core_resources_have_explicit_errors() {
     )
     .unwrap();
     let transaction = connection.transaction().unwrap();
+    transaction
+        .execute(
+            "DELETE FROM senses WHERE frozen_row != 1 OR sense_index != 1",
+            [],
+        )
+        .unwrap();
     for index in 2..=201 {
         payload["sense_id"] = json!(format!("limit-sense-{index}"));
         transaction

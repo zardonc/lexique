@@ -24,10 +24,10 @@ ANNOTATIONS = (
     (1219, "qu", "PRO:int", 105), (1220, "qu", "PRO:rel", 105),
     (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
     (2560, "oublie", "NOM", 132), (2626, "r", "ADV", 133),
-    (2792, "man", "NOM", 136),
+    (2792, "man", "NOM", 136), (3098, "damoiseau", "NOM", 142),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = tuple(row for row in range(1, 2951) if row not in ANNOTATION_ROWS)
+ROWS = tuple(row for row in range(1, 3451) if row not in ANNOTATION_ROWS)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -102,7 +102,7 @@ def load_inputs(source_dir):
         raise ValueError("Annotation exceptions must retain their exact approved frozen identities")
     for entry, (_, _, _, issue) in zip(annotations, ANNOTATIONS, strict=True):
         decision = entry.get("decision", {})
-        approved_on = "2026-11-21" if issue >= 130 else "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
+        approved_on = "2026-11-22" if issue == 142 else "2026-11-21" if issue >= 130 else "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
         if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != approved_on:
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
         text(decision.get("decision"), "annotation exception decision")
@@ -169,6 +169,7 @@ def load_inputs(source_dir):
                 approved_issue = {
                     (34, "ça", "NOM", "ca-noun-psychoanalytic-id"): 81,
                     (128, "par", "NOM", "par-noun-golf-standard-strokes"): 83,
+                    (3128, "pars", "NOM", "b143-3128-pars-nom-golf-standard-counts"): 143,
                 }.get((group["frozen_row"], group["headword"], group["lexique_cgram"], identity))
                 if approved_issue is None or (
                     usage.get("frozen_row"), usage.get("headword"), usage.get("pos")

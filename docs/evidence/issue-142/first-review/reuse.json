@@ -1,0 +1,12 @@
+{
+  "base_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
+  "comparison_input": "resources/core-pilot-79/curated-inputs.json",
+  "canonical_content_version": "core-139-v1",
+  "existing_admitted_groups": 2932,
+  "reused_groups": 0,
+  "reused_fields": 0,
+  "groups": [],
+  "independent_review": "passed",
+  "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
+  "review_reason": "Exact frozen rows and canonical core-139-v1 inspected: zero reused admitted groups/fields; all 50 rows are new content requirements."
+}

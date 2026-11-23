@@ -1,0 +1,158 @@
+{
+  "ticket": 140,
+  "role": "independent_selected_expression_rights_fix",
+  "reviewer": "Independent selected-expression rights reviewer #140; separate from author and first reviewer",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\rights-140",
+  "branch": "codex/d2-rights-140",
+  "author_commit": "d4bb5e678cefbfa9e3dd7ef60eff118e48f922e7",
+  "first_review_commit": "6402ee10a6d4e9d6a3f6e510bbf1586e636ff61e",
+  "review_base": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
+  "tested_base_sha": "9bc622eaa2e8ae4223506e13a7258a82964b650e",
+  "integration_merge_commit": "9bc622eaa2e8ae4223506e13a7258a82964b650e",
+  "merged_integration_tip": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "tested_changes": "Owned staged and unstaged evidence/test changes on the merged base; final scoped patch archived before commit.",
+  "scope": [
+    "docs/evidence/issue-140/**",
+    "scripts/test_core_batch_140.py"
+  ],
+  "diff_command": "git diff --cached --binary -- docs/evidence/issue-140 scripts/test_core_batch_140.py",
+  "scoped_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix\\scoped-rights-fix.patch",
+  "resource_test_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix\\resource-tests.patch",
+  "platform": "Windows x64; PowerShell 7; uv Python 3.14.10",
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-140",
+  "review_audit_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\rights-140\\target\\issue-140-rights-fix",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140-rights-fix",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_pecher_short_expression_has_its_own_rights_decision -v",
+      "red": "failed on inherited pending rights",
+      "green": "passed",
+      "logs": [
+        "red-pecher.log",
+        "green-pecher.log"
+      ]
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_diplome_uses_sufficient_factual_spans_without_the_long_sentence -v",
+      "red": "failed on inherited long source sentence",
+      "green": "passed",
+      "logs": [
+        "red-diplome.log",
+        "green-diplome.log"
+      ]
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_all_selected_material_is_eligible_without_rewriting_quality_history -v",
+      "red": "failed with unresolved selected-source fields",
+      "green": "passed",
+      "logs": [
+        "red-complete.log",
+        "green-complete.log"
+      ]
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_excluded_cfc_metadata_keeps_the_marker_without_definition_prose -v",
+      "red": "failed on excluded prose in reference metadata",
+      "green": "passed",
+      "logs": [
+        "red-cfc.log",
+        "green-cfc.log"
+      ]
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py -v",
+      "result": "passed: 15 tests",
+      "log": "batch-tests-final.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed after staging the new linked evidence files; initial run reported untracked link targets",
+      "logs": [
+        "docs.log",
+        "docs-final.log"
+      ]
+    },
+    {
+      "command": "git diff --check; git diff --cached --check",
+      "result": "passed",
+      "logs": [
+        "diff-check.log",
+        "staged-diff-check.log"
+      ]
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-140-rights-fix/archive.py",
+      "result": "passed: 68 distinct fixed lexical capture files copied with literal byte equality, request files and helpers/logs retained"
+    }
+  ],
+  "exact_groups": 50,
+  "selected_uses": 50,
+  "quality_accepted_fields": 200,
+  "unchanged_quality_fields": 196,
+  "changed_quality_fields": 4,
+  "additional_learner_wording_changes": 0,
+  "jointly_accepted_fields": 200,
+  "jointly_accepted_groups": 50,
+  "newly_resolved_rights_fields": 102,
+  "unresolved_quality_fields": 0,
+  "unresolved_rights_fields": 0,
+  "unresolved_rights_groups": 0,
+  "specifically_assessed_short_expression_uses": 20,
+  "minimized_source_expression_uses": 14,
+  "changed_primary_source_bindings": 42,
+  "supporting_old_mien_decisions": 1,
+  "excluded_cfc_reference_body_removed_from_current_metadata": true,
+  "pending_canonical_admission_fields": 200,
+  "newly_admitted_canonical_fields": 0,
+  "original_author_files_preserved_byte_for_byte": 15,
+  "first_review_files_preserved_byte_for_byte": 18,
+  "source_audit_summary": {
+    "source_count": 53,
+    "field_spans_checked": 200,
+    "current_supporting_records_checked": 241,
+    "all_raw_api_bytes_equal": true,
+    "all_chains_complete": true,
+    "named_article_credits": 2943,
+    "anonymous_article_credits": 434
+  },
+  "lexical_article_recaptures": 0,
+  "own_first_party_legal_captures": [
+    {
+      "file": "compendium-ch300.pdf",
+      "url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+      "final_url": "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf",
+      "status": 200,
+      "captured_at": "2026-11-22T23:29:51.251281+00:00",
+      "bytes": 641671
+    },
+    {
+      "file": "title17-ch1.html",
+      "url": "https://www.copyright.gov/title17/92chap1.html",
+      "final_url": "https://www.copyright.gov/title17/92chap1.html",
+      "status": 200,
+      "captured_at": "2026-11-22T23:29:51.346561+00:00",
+      "bytes": 675161
+    },
+    {
+      "file": "37cfr202.xml",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+      "final_url": "https://www.govinfo.gov/content/pkg/CFR-2025-title37-vol1/xml/CFR-2025-title37-vol1-sec202-1.xml",
+      "status": 200,
+      "captured_at": "2026-11-22T23:29:52.624497+00:00",
+      "bytes": 2294
+    }
+  ],
+  "selected_sentence_authorship_proved": false,
+  "worldwide_public_domain_claim": false,
+  "whole_daf8_us_clearance": "unproved; current selected material has distinct expression/facts eligibility determinations",
+  "unrun": [
+    "canonical conversion",
+    "combined packaged notices and materials",
+    "native lookup/save/reopen",
+    "frontend and Rust checks (no application code changed)",
+    "learner acceptance",
+    "whole-core release/platform gates"
+  ],
+  "pushed": false,
+  "tracker_changes": false
+}
