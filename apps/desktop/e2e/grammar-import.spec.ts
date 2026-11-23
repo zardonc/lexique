@@ -6,6 +6,16 @@ const group = { rows: [2], status: 'create', error: null, existing: null, conten
 const preview = { operation: 'grammar-preview', source: { format: 'csv', filename: 'grammar.csv' }, error: null,
   columns: ['exchange_id', 'title', 'body', 'question', 'answer'], mapping: { exchange_id: 0, title: 1, body: 2, question: 3, answer: 4 }, groups: [group] };
 
+test('grammar Markdown import shows located errors and uses the desktop file session', async ({ page }) => {
+  await nativeFixture(page, { note_import_preview: [{ value: { ...preview, source: { format: 'markdown', filename: 'bad.md' }, columns: [], groups: [], error: 'bad.md: Missing required ## title section' } }] });
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
+  await page.getByRole('tab', { name: '语法', exact: true }).click();
+  await page.getByRole('button', { name: '导入语法 Markdown', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('bad.md: Missing required ## title');
+  expect(await page.evaluate(() => window.testNative.calls.find((call) => call.command === 'note_import_preview')?.args?.options))
+    .toEqual({ record_kind: 'grammar', delimiter: 'comma', mapping: null, grammar_mapping: null, format: 'markdown' });
+});
+
 test('grammar CSV shows content and identity, saves first and reports start-review failure without losing the note', async ({ page }) => {
   await nativeFixture(page, {
     grammar_list: [{ value: [] }], note_import_preview: [{ value: preview }],

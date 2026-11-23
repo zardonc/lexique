@@ -96,12 +96,25 @@ pub fn note_markdown_filename(record: &lexique_storage::NoteExportRecord) -> Str
     }
 }
 
-pub fn format_note_markdown(record: &lexique_storage::NoteExportRecord) -> String {
-    fn field(output: &mut String, heading: &str, text: &str) {
-        let length = text.split(|ch| ch != '`').map(str::len).max().unwrap_or(0);
-        let fence = "`".repeat((length + 1).max(3));
-        output.push_str(&format!("{heading}\n\n{fence}text\n{text}\n{fence}\n\n"));
+fn field(output: &mut String, heading: &str, text: &str) {
+    let length = text.split(|ch| ch != '`').map(str::len).max().unwrap_or(0);
+    let fence = "`".repeat((length + 1).max(3));
+    output.push_str(&format!("{heading}\n\n{fence}text\n{text}\n{fence}\n\n"));
+}
+
+pub fn format_grammar_markdown(record: &lexique_storage::GrammarExportRecord) -> String {
+    let mut output = "# Lexique grammar note v1\n\n".to_string();
+    field(&mut output, "## exchange_id", &record.exchange_id);
+    field(&mut output, "## title", &record.title);
+    field(&mut output, "## body", &record.body);
+    if !record.question.is_empty() || !record.answer.is_empty() {
+        field(&mut output, "## question", &record.question);
+        field(&mut output, "## answer", &record.answer);
     }
+    output
+}
+
+pub fn format_note_markdown(record: &lexique_storage::NoteExportRecord) -> String {
     let mut output = "# Lexique note v1\n\n".to_string();
     field(&mut output, "## headword", &record.headword);
     field(&mut output, "## notes", &record.notes);
@@ -112,6 +125,46 @@ pub fn format_note_markdown(record: &lexique_storage::NoteExportRecord) -> Strin
         field(&mut output, "#### zh", &example.zh);
     }
     output
+}
+
+pub fn parse_grammar_markdown(text: &str) -> Result<lexique_storage::GrammarImportContent, String> {
+    let mut template = Template {
+        rest: text.strip_prefix('\u{feff}').unwrap_or(text),
+    };
+    if template.heading() != Some("# Lexique grammar note v1") {
+        return Err("Expected # Lexique grammar note v1 template identifier".into());
+    }
+    let (mut identity, mut title, mut body, mut question, mut answer) =
+        (None, None, None, None, None);
+    while let Some(heading) = template.heading() {
+        let slot = match heading {
+            "## exchange_id" => &mut identity,
+            "## title" => &mut title,
+            "## body" => &mut body,
+            "## question" => &mut question,
+            "## answer" => &mut answer,
+            _ => return Err(format!("Unknown template structure: {heading}")),
+        };
+        if slot.is_some() {
+            return Err(format!("Duplicate section: {heading}"));
+        }
+        *slot = Some(
+            template
+                .text()
+                .map_err(|error| format!("{heading}: {error}"))?,
+        );
+    }
+    let content = lexique_storage::GrammarImportContent {
+        exchange_id: identity,
+        title: title.ok_or("Missing required ## title section")?,
+        body,
+        question,
+        answer,
+    };
+    content
+        .validate()
+        .map_err(|error| format!("Grammar sections: {error}"))?;
+    Ok(content)
 }
 
 struct Template<'a> {
