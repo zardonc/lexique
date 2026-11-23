@@ -4,9 +4,9 @@
   "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\author-150",
   "branch": "codex/d2-content-150",
   "initial_base": "03a27e42c261afda7ffd4a927a4d2810f8221e8a",
-  "tested_base": "a770658149ebebe8b258785a45708604e8d8217e",
-  "merged_integration": "a770658149ebebe8b258785a45708604e8d8217e",
-  "verified_at_utc": "2026-11-23T17:14:51.158751+00:00",
+  "tested_base": "97129df7fc799675055a24cea322e475362f64db",
+  "merged_integration": "cc72c0d7772fc742879cea77ff4ffd2621d5db61",
+  "verified_at_utc": "2026-11-23T17:17:53.051156+00:00",
   "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150",
   "checks": [
     {
@@ -22,6 +22,18 @@
       "exit_code": 0,
       "reproduced_files": 12,
       "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\reproduction.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\docs-check.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\author-evidence\\issue-150\\logs\\diff-check.log"
     }
   ],
   "red_checks": [
