@@ -33,6 +33,84 @@ def read(name):
 
 
 class Batch149Tests(unittest.TestCase):
+    def test_menu_and_silencieux_have_actual_daf8_original_expression_evidence(self):
+        originals = read("original-expression-review.json")
+        by_title = {r["title"]: r for r in originals["sources"]}
+        for title, article, expression in (
+            ("silencieux", "A8S0941", "Il se dit aussi des Choses qui font peu de bruit."),
+            ("menu", "A8M0869", "Il se dit aussi de la Liste détaillée des mets qui seront servis au cours du repas."),
+        ):
+            with self.subTest(title=title):
+                record = by_title[title]
+                self.assertEqual(record["selected_original_expression_decision"], "passed")
+                original = record["original_comparison"]
+                self.assertEqual(original["url"], "https://www.dictionnaire-academie.fr/article/" + article)
+                self.assertEqual(original["original_expression"], expression)
+                self.assertEqual(original["dictionary"], "academie8")
+                self.assertTrue(Path(original["raw_path"]).is_file())
+        self.assertEqual(originals["unresolved_sources"], [])
+
+    def test_actual_independent_decisions_align_with_accepted_content_and_rights(self):
+        review, rights, admission = read("field-review.json"), read("rights.json"), read("admission.json")
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertTrue(review["independence"])
+        self.assertEqual(admission["independently_accepted_new_fields"], 200)
+        self.assertEqual(admission["independently_accepted_new_groups"], 50)
+        self.assertEqual(admission["pending_independent_rights_fields"], 0)
+        self.assertEqual(admission["pending_owner_choices"], [])
+        current = {(g["frozen_row"], k): f for g in read("groups.json")
+                   for k, f in g["senses"][0]["fields"].items()}
+        authored = {(g["frozen_row"], k): f for g in read("authored/groups.json")
+                    for k, f in g["senses"][0]["fields"].items()}
+        right_fields = {(f["frozen_row"], f["field"]): f for f in rights["fields"]}
+        expected_pending = set()
+        self.assertEqual({(f["frozen_row"], f["field"]) for f in review["unresolved_fields"]}, expected_pending)
+        self.assertEqual(len(review["fields"]), 200)
+        replacements = read("accepted-replacements.json")
+        self.assertEqual({(r["frozen_row"], r["field"]) for r in replacements},
+                         {(3407, "chinese"), (3429, "english"), (3429, "chinese"),
+                          (3444, "french_definition"), (3444, "english"), (3444, "chinese")})
+        for record in review["fields"]:
+            key = record["frozen_row"], record["field"]
+            with self.subTest(key=key):
+                self.assertEqual(record["proposed_text"], authored[key]["text"])
+                self.assertEqual(record["accepted_text"], current[key]["text"])
+                self.assertEqual(record["accepted_text_quality_status"], "passed")
+                self.assertEqual(right_fields[key]["accepted_text"], current[key]["text"])
+                self.assertEqual(right_fields[key]["exact_source_span"], current[key]["source_span"])
+                self.assertTrue(record["review_reason"].strip())
+                self.assertTrue(record["rights_review_reason"].strip())
+                self.assertEqual(record["reviewer"], review["reviewer"])
+                self.assertEqual(record["rights_eligibility_status"], "passed_at_selected_text_boundary")
+        uses = {u["sense_id"]: u for u in review["usage"]}
+        self.assertEqual(len(uses), 50)
+        for g in read("groups.json"):
+            s = g["senses"][0]
+            self.assertEqual(uses[s["sense_id"]]["accepted_usage"], s["use"])
+            self.assertEqual(uses[s["sense_id"]]["accepted_usage_quality_status"], "passed")
+            self.assertEqual(uses[s["sense_id"]]["everyday_sense_status"], "passed")
+        self.assertEqual(len(review["spelling_relations"]), 50)
+        self.assertTrue(all(r["independent_review"] == "passed" and r["alias_admission"] == "not_admitted"
+                            for r in review["spelling_relations"]))
+
+    def test_choquer_selected_offence_does_not_include_generic_surprise(self):
+        g = next(g for g in read("groups.json") if g["frozen_row"] == 3429)
+        fields = g["senses"][0]["fields"]
+        self.assertEqual(fields["english"]["text"], "To offend someone (figurative transitive use).")
+        self.assertEqual(fields["chinese"]["text"], "冒犯某人，使其感到不快（比喻义；及物动词）。")
+
+    def test_lady_courtesy_title_has_the_correct_daughter_ranks(self):
+        g = next(g for g in read("groups.json") if g["frozen_row"] == 3444)
+        fields = g["senses"][0]["fields"]
+        self.assertIn("ducs, marquis ou comtes", fields["french_definition"]["text"])
+        self.assertIn("dukes, marquesses or earls", fields["english"]["text"])
+        self.assertIn("公爵、侯爵或伯爵", fields["chinese"]["text"])
+
+    def test_organ_meaning_does_not_require_an_internal_location(self):
+        group = next(g for g in read("groups.json") if g["frozen_row"] == 3407)
+        self.assertEqual(group["senses"][0]["fields"]["chinese"]["text"],
+                         "器官；生物体的一个组成部分，构成一个整体并承担必要或有益的生命功能（阳性名词）。")
+
     def test_rights_and_independent_review_gates_are_explicit(self):
         rights = read("authored/rights.json")
         admission = read("authored/admission.json")

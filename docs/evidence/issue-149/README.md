@@ -1,40 +1,32 @@
-# #149 author content package
+# #149 independently reviewed content shard
 
-Rows 3401–3450 contain 50 exact frozen word/POS groups, 50 selected modern uses
-and 200 proposed French-definition, IPA, English and Chinese fields. The
-membership, row order and both frequency strings match the unchanged
-4,087-group manifest. All 53 fixed French sources, including `le sien`,
-`massacrer` and `lesbianisme` support, have complete contributor captures.
+Rows 3401–3450 contain 50 exact frozen word/POS groups, 50 selected uses and
+200 independently accepted fields. All 200 fields pass quality and selected
+rights review: 194 texts remain unchanged and six were corrected. There are no
+unresolved fields, annotation/specialist exceptions, new aliases or pending
+owner choices. Exact row order and both frequency strings remain unchanged.
 
-[Readable proposals](review-candidates.md) and [groups.json](groups.json) retain
-the precise meanings, constructions, registers, pronunciations and excluded
-uses. [Selected source spans](source-excerpts.json),
-[source context](source-context.json), [capture paths](source-captures.json),
-[rights proposals](rights.json), [selected rights](selected-rights.md) and
-[notices](NOTICES.md) provide the source and modification evidence. Original
-author proposals are preserved in [authored/groups.json](authored/groups.json)
-and the adjoining original ledgers for separate review.
+The [independent review report](README-independent-review.md) records the
+decisions, corrections, source/legal boundaries and verification limits.
+[groups.json](groups.json) contains accepted content;
+[field-review.json](field-review.json) retains each proposed/accepted text and
+actual field/use reason. [Exact replacements](accepted-replacements.json)
+identify the six corrected fields. [Readable author proposals](review-candidates.md)
+and [authored snapshots](authored/snapshot.json) preserve the author's evidence;
+the proposals are historical where an accepted text differs.
 
-The scoped resource test is [test_core_batch_149.py](../../../scripts/test_core_batch_149.py).
-The initial check failed because canonical content lacked all 50 groups;
-subsequent focused checks cover complete membership, actual source bytes and
-POS spans, complete contributor continuations, proposed rights and preserved
-original proposals. Commands, results and archive locations are recorded in
-[author-verification.json](author-verification.json).
+[Selected spans](source-excerpts.json), [source context](source-context.json),
+[capture paths](source-captures.json), [rights decisions](rights.json),
+[original-expression comparisons](original-expression-review.json),
+[selected rights](selected-rights.md), [notices](NOTICES.md) and [legal text](COPYING)
+accompany the reviewed shard. All 53 fixed source pages have complete
+contributor captures. Authored snapshots remain byte-identical to author commit
+`ba24dc74199cffe2c39f5096455eee2900e9a643`.
 
-## Admission and remaining gates
-
-[admission.json](admission.json) records zero independently accepted new groups
-and fields, 200 fields pending independent quality review, 200 pending
-selected-span rights review and 200 missing admitted fields. There are no
-author-unresolved content rows; the proposed meanings and restrictions still
-require the separate review. The inherited canonical baseline is `core-139-v1`,
-2,932 groups and 11,728 fields. No #149 canonical content or learner data is
-changed by this package.
-
-Independent language, modern-use, spelling/construction and selected-rights
-review; combined conversion and redistribution materials; actual native lookup,
-save and reopen; learner acceptance and wider release gates remain pending.
-Frontend/Rust/browser checks are unrun because this package changes only the
-owned evidence and Python resource test. The global denominator remains 4,087;
-candidate completeness is separate from admitted coverage.
+[admission.json](admission.json) separates the 200 independently eligible fields
+from canonical admission. This review does not change canonical/global data or
+learner records. The scope denominator remains 4,087 groups. Combined assembly,
+redistribution materials, native lookup/save/reopen and wider release gates
+remain coordinator-owned. [Author verification](author-verification.json) is
+preserved as author evidence; final reviewer checks and archived proof are
+identified in the independent report and [verification.json](verification.json).

@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany this independently reviewed shard.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,14 +14,31 @@ Rows 3401–3450 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected sense is accepted per exact group. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
-the selected and excluded uses.
+aliases. [Readable author proposals](review-candidates.md) are preserved;
+[groups.json](groups.json) and [field-review.json](field-review.json) retain
+accepted fields and actual selected/excluded-use decisions.
+
+Independent corrections remove an unsupported internal-location restriction
+from Chinese `organe` (row 3407), restrict EN/ZH `choquer` to offence (row 3429),
+and restrict FR/EN/ZH `lady` daughters' courtesy rank to dukes, marquesses or
+earls (row 3444). These six modified texts and their exact source bases are in
+[accepted-replacements.json](accepted-replacements.json). The remaining 194
+texts are unchanged. Every field passes quality and selected rights review.
+
+Specific historical expression is credited to Académie française, Dictionnaire
+de l’Académie française, eighth edition, 1932–1935, where identified in the
+34 actual comparisons in [original-expression-review.json](original-expression-review.json).
+This includes unmarked/reference-only articles. Original public-domain expiry
+is 2006-01-01 under the established collective-work basis; subsequent wiki
+transcription/adaptation and Lexique modifications retain CC BY-SA 4.0.
+Modern external dictionary/interface prose is excluded. Article-level
+historical expression is not a selected IPA input.
 
 ## Article credits
 
@@ -32,7 +49,7 @@ attribution. A current contributor registry can extend beyond a fixed revision
 and does not identify who authored a selected sentence. Lexique contributors
 are credited for selection, French adaptation and the new English/Chinese text.
 
-| Source article | Fixed revision | Complete history | Declared original work |
+| Source article | Fixed revision | Complete history | Article import declaration; selected comparisons linked above |
 | --- | --- | --- | --- |
 | onze | [39996791](https://fr.wiktionary.org/w/index.php?title=onze&oldid=39996791) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=onze&action=history) | No original-work import marker identified |
 | organe | [39827445](https://fr.wiktionary.org/w/index.php?title=organe&oldid=39827445) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=organe&action=history) | No original-work import marker identified |
