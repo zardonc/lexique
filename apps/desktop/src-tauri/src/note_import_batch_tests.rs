@@ -255,6 +255,7 @@ fn semicolon_bom_multiline_external_mapping_and_illegal_mappings_use_real_files(
             mapping: None,
             format: None,
             record_kind: Default::default(),
+            grammar_mapping: None,
         };
         let unmapped = preview_csv_file(&connection, &path, "map-required", &options).unwrap();
         assert!(unmapped.error.as_ref().unwrap().contains("headword"));
@@ -288,6 +289,7 @@ fn semicolon_bom_multiline_external_mapping_and_illegal_mappings_use_real_files(
                     mapping: Some(invalid),
                     format: None,
                     record_kind: Default::default(),
+                    grammar_mapping: None,
                 },
             )
             .unwrap();
@@ -303,6 +305,7 @@ fn semicolon_bom_multiline_external_mapping_and_illegal_mappings_use_real_files(
                 mapping: Some(mapping),
                 format: None,
                 record_kind: Default::default(),
+                grammar_mapping: None,
             },
         )
         .unwrap();

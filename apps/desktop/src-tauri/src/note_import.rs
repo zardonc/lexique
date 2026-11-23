@@ -29,6 +29,8 @@ pub struct NoteImportOptions {
     pub delimiter: NoteDelimiter,
     pub mapping: Option<NoteImportMapping>,
     #[serde(default)]
+    pub grammar_mapping: Option<crate::grammar_import::GrammarImportMapping>,
+    #[serde(default)]
     pub format: Option<NoteFormat>,
     #[serde(default)]
     pub record_kind: crate::note_export::ExportRecordKind,
@@ -121,14 +123,13 @@ fn preview_note_bytes(
         options.record_kind,
         crate::note_export::ExportRecordKind::Grammar
     ) {
-        if !matches!(source.format, NoteFormat::Csv)
-            || !matches!(options.delimiter, NoteDelimiter::Comma)
-            || options.mapping.is_some()
-        {
-            return Err("Grammar import requires canonical comma-separated CSV".into());
+        if !matches!(source.format, NoteFormat::Csv) || options.mapping.is_some() {
+            return Err("Grammar import requires grammar CSV mapping".into());
         }
-        return crate::grammar_import::preview_csv_bytes(connection, source, bytes, operation)
-            .map(ExchangePreview::Grammar);
+        return crate::grammar_import::preview_csv_with_options(
+            connection, source, bytes, operation, options,
+        )
+        .map(ExchangePreview::Grammar);
     }
     match source.format {
         NoteFormat::Csv => {
