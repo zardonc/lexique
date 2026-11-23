@@ -37,6 +37,12 @@ def read(name):
 
 
 class Batch151Tests(unittest.TestCase):
+    def test_construction_noun_includes_completed_buildings(self):
+        group = next(g for g in read("groups.json") if g["frozen_row"] == 3510)
+        fields = group["senses"][0]["fields"]
+        self.assertEqual(fields["english"]["text"], "A building or structure; the edifice resulting from construction (feminine noun).")
+        self.assertEqual(fields["chinese"]["text"], "建筑物；建造而成的房屋或构筑物（阴性名词）。")
+
     def test_fixed_sources_bind_every_field_to_french_pos_and_exact_ipa(self):
         captures = read("source-captures.json")
         sources = {s["id"]: s for s in read("sources.json")["sources"]}
@@ -122,23 +128,24 @@ class Batch151Tests(unittest.TestCase):
             (stage / "curated-inputs.json").write_text(json.dumps({
                 "schema": "lexique-core-pilot-curation-1", "content_license": "CC-BY-SA-4.0",
                 "scope_denominator_groups": 4087, "scope_denominator_headwords": 3773,
-                "groups": read("groups.json"), "sources": read("sources.json")["sources"],
+                "groups": read("authored/groups.json"), "sources": read("authored/sources.json")["sources"],
             }, ensure_ascii=False), encoding="utf-8")
-            (stage / "field-review.json").write_bytes((EVIDENCE / "field-review.json").read_bytes())
+            (stage / "field-review.json").write_bytes((EVIDENCE / "authored/field-review.json").read_bytes())
             with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
                 core_pilot.load_inputs(stage)
 
-    def test_author_proposals_and_rights_do_not_claim_independent_admission(self):
+    def test_independent_review_binds_accepted_fields_uses_and_rights(self):
         review, rights, admission = read("field-review.json"), read("rights.json"), read("admission.json")
-        self.assertEqual(review["kind"], "author_prepared_for_separate_reviewer")
-        self.assertFalse(review["independent_acceptance"])
-        self.assertIsNone(review["reviewer"])
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertTrue(review["independent_acceptance"])
+        self.assertTrue(review["reviewer"])
+        self.assertEqual(review["unresolved_fields"], [])
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
-        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (0, 0))
-        self.assertEqual(admission["pending_independent_review_fields"], 200)
-        self.assertEqual(admission["pending_independent_rights_fields"], 200)
+        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (50, 200))
+        self.assertEqual(admission["pending_independent_review_fields"], 0)
+        self.assertEqual(admission["pending_independent_rights_fields"], 0)
         self.assertEqual(admission["missing_admitted_fields"], 200)
-        self.assertEqual(rights["independent_rights_fields_accepted"], 0)
+        self.assertEqual(rights["independent_rights_fields_accepted"], 200)
         expected = {(g["frozen_row"], name): field for g in read("groups.json")
                     for sense in g["senses"] for name, field in sense["fields"].items()}
         self.assertEqual({(r["frozen_row"], r["field"]) for r in rights["fields"]}, set(expected))
@@ -148,14 +155,32 @@ class Batch151Tests(unittest.TestCase):
             self.assertEqual(record["license"], "CC-BY-SA-4.0")
             self.assertTrue(record["attribution"].strip())
             self.assertTrue(record["modification"].strip())
-            self.assertEqual(record["independent_review"], "pending")
-            self.assertIsNone(record["reviewer"])
+            self.assertEqual(record["independent_review"], "passed")
+            self.assertEqual(record["rights_eligibility_status"], "passed_at_selected_text_boundary")
+            self.assertEqual(record["accepted_text"], field["text"])
+            self.assertTrue(record["reviewer"])
         for record in review["fields"]:
-            self.assertEqual(record["accepted_text_quality_status"], "pending")
-            self.assertIsNone(record["reviewer"])
-        for name in ("groups.json", "field-review.json", "rights.json", "sources.json", "source-context.json",
-                     "source-excerpts.json", "admission.json", "reuse.json", "source-captures.json"):
-            self.assertEqual((EVIDENCE / "authored" / name).read_bytes(), (EVIDENCE / name).read_bytes())
+            field = expected[record["frozen_row"], record["field"]]
+            self.assertEqual(record["accepted_text_quality_status"], "passed")
+            self.assertEqual(record["accepted_text"], field["text"])
+            self.assertEqual(record["rights_eligibility_status"], field["rights_eligibility_status"])
+            self.assertTrue(record["review_reason"])
+            self.assertTrue(record["rights_review_reason"])
+            self.assertTrue(record["reviewer"])
+        uses = {g["senses"][0]["sense_id"]: g["senses"][0]["use"] for g in read("groups.json")}
+        self.assertEqual(len(review["usage"]), 50)
+        for record in review["usage"]:
+            self.assertEqual(record["accepted_usage"], uses[record["sense_id"]])
+            self.assertEqual(record["accepted_usage_quality_status"], "passed")
+            self.assertEqual(record["everyday_sense_status"], "passed")
+        author = read("authored/field-review.json")
+        self.assertFalse(author["independent_acceptance"])
+        proposed = {(g["frozen_row"], name): field for g in read("authored/groups.json")
+                    for sense in g["senses"] for name, field in sense["fields"].items()}
+        for record in review["fields"]:
+            self.assertEqual(record["proposed_text"], proposed[record["frozen_row"], record["field"]]["text"])
+        changes = read("accepted-replacements.json")
+        self.assertEqual({(r["frozen_row"], r["field"]) for r in changes}, {(3510, "english"), (3510, "chinese")})
         self.assertEqual((EVIDENCE / "COPYING").read_bytes().rstrip(),
                          (ROOT / "resources/core-pilot-79/COPYING").read_bytes().rstrip())
         notices = (EVIDENCE / "NOTICES.md").read_text(encoding="utf-8")
@@ -164,7 +189,7 @@ class Batch151Tests(unittest.TestCase):
             self.assertIn(source["history_url"], notices)
         rights_text = (EVIDENCE / "selected-rights.md").read_text(encoding="utf-8")
         self.assertIn("2006-01-01", rights_text)
-        self.assertIn("pending", rights_text)
+        self.assertIn("200 selected fields", rights_text)
         self.assertIn("CC BY-SA 4.0", rights_text)
 
     def test_exact_frozen_groups_have_complete_resource_records(self):

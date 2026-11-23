@@ -1,561 +1,1105 @@
-# Exact #150 author proposals
+# #150 independently reviewed selected fields
 
-These 50 exact groups and 200 fields are pending separate independent review.
-[groups.json](groups.json) preserves all text; [field-review.json](field-review.json)
-binds each field and use to exact fixed-source spans. The author’s source and
-scope checks are separate from independent language/rights decisions.
+50 exact groups, 50 selected uses and 200 accepted fields. Exact authored
+proposals remain under [authored](authored/snapshot.json); per-field/use
+reasons and rights decisions are in [field-review.json](field-review.json).
 
-| Row | Exact group | French definition | IPA | English | Chinese |
-| --- | --- | --- | --- | --- | --- |
-| 3451 | `pull/NOM` | Pull-over : vêtement chaud couvrant le buste et les bras. | /pyl/ | Sweater or jumper covering the torso and arms; short for pull-over. | 套头衫；覆盖躯干和手臂的保暖上衣，是 pull-over 的简称。 |
-| 3452 | `cavalier/NOM` | Personne de sexe masculin qui monte à cheval ; le féminin est cavalière. | /ka.va.lje/ | Male horse rider; the feminine noun is cavalière. | 男性骑马者；对应的女性名词是 cavalière。 |
-| 3453 | `satellite/NOM` | Objet naturel ou artificiel qui tourne en orbite autour d’une planète. | /sa.te.lit/ | Natural or artificial object orbiting a planet; a satellite. | 围绕行星运行的天然或人造物体；卫星。 |
-| 3454 | `administration/NOM` | Action de diriger et de gérer des affaires publiques ou privées. | /ad.mi.nis.tʁa.sjɔ̃/ | Administration: directing and managing public or private affairs. | 行政管理或经营管理；组织、处理公共或私人事务的行为。 |
-| 3455 | `barrage/NOM` | Barrière qui ferme un chemin et empêche le passage. | /ba.ʁaʒ/ | Barrier or roadblock closing a route and preventing passage. | 封闭道路、阻止通行的障碍或路障。 |
-| 3456 | `dessert/NOM` | Mets généralement sucré servi habituellement à la fin d’un repas. | /de.sɛʁ/ | Dessert: a usually sweet dish normally served at the end of a meal. | 餐末通常供应的甜食；甜点。 |
-| 3457 | `juin/NOM` | Sixième mois de l’année du calendrier grégorien, qui compte trente jours. | /ʒɥɛ̃/ | June, the sixth month of the Gregorian calendar, with thirty days. | 六月；公历一年中的第六个月，有三十天。 |
-| 3458 | `agresser/VER` | Porter atteinte à l’intégrité physique, psychologique ou sexuelle d’une personne par la force, la contrainte, la surprise ou la ruse. | /a.ɡʁe.se/ | To assault a person, violating their physical, psychological or sexual integrity through force, coercion, surprise or deception. | 以暴力、胁迫、突然袭击或欺骗的方式侵犯他人的身体、心理或性方面的完整与安全。 |
-| 3459 | `reporter/VER` | Remettre une chose à plus tard, en différer la réalisation. | /ʁə.pɔʁ.te/ | To postpone or defer something until a later time. | 将某事推迟到以后；延期。 |
-| 3460 | `tristesse/NOM` | État de peine et d’affliction causé par un événement malheureux. | /tʁis.tɛs/ | Sadness or sorrow caused by an unhappy event. | 因不幸的事情而产生的悲伤、难过。 |
-| 3461 | `planche/NOM` | Pièce de bois refendu de faible épaisseur ; une planche de bois. | /plɑ̃ʃ/ | Board or plank: a thin piece of sawn wood. | 由木材锯切而成、厚度较小的木板。 |
-| 3462 | `capitale/NOM` | Ville où siègent le gouvernement et le pouvoir législatif d’un État. | /ka.pi.tal/ | Capital city, where a state’s government and legislature are based. | 首都；国家政府和立法机关所在地的城市。 |
-| 3463 | `capital/ADJ` | D’une très grande importance ; primordial. | /ka.pi.tal/ | Of great importance; crucial or essential. | 极其重要的；至关重要的。 |
-| 3464 | `demeure/NOM` | Dans un registre soutenu, habitation ou domicile. | /də.mœʁ/ | Dwelling or residence, in a formal register. | （书面语）住所、住宅。 |
-| 3465 | `record/NOM` | Niveau qui dépasse tout ce qui avait été atteint auparavant. | /ʁə.kɔʁ/ | Record: a level exceeding everything previously achieved. | 超过此前所有水平的纪录。 |
-| 3466 | `intervention/NOM` | Familièrement, intervention chirurgicale ; opération. | /ɛ̃.tɛʁ.vɑ̃.sjɔ̃/ | In everyday informal usage, a surgical intervention or operation. | （口语）外科手术；intervention chirurgicale 的省略说法。 |
-| 3467 | `conviction/NOM` | Certitude que l’on a de la vérité d’un fait ou d’un principe. | /kɔ̃.vik.sjɔ̃/ | Firm belief or certainty that a fact or principle is true. | 确信某一事实或原则为真；坚定的信念。 |
-| 3468 | `inconscient/ADJ` | Dans l’usage courant, irréfléchi ; qui agit sans réfléchir. | /ɛ̃.kɔ̃.sjɑ̃/ | In ordinary usage, thoughtless or reckless; acting without thinking. | （常用义）欠考虑的、鲁莽的；做事不经过思考的。 |
-| 3469 | `pointe/NOM` | Extrémité aiguë et piquante de quelque chose. | /pwɛ̃t/ | Sharp, pointed tip of something. | 某物尖锐、能刺人的末端；尖端。 |
-| 3470 | `frite/NOM` | Bâtonnet de pomme de terre frit dans l’huile. | /fʁit/ | A chip or French fry: one stick of potato fried in oil. | 一根用油炸成的土豆条；薯条。 |
-| 3471 | `historique/ADJ` | Relatif à l’histoire. | /is.tɔ.ʁik/ | Historical: relating to history. | 与历史有关的；历史的。 |
-| 3472 | `conte/NOM` | Récit d’aventures imaginaires, vraisemblables ou mêlées de merveilleux. | /kɔ̃t/ | Tale of imaginary adventures, whether plausible or involving the marvellous. | 讲述虚构冒险的故事，可以看似真实，也可以带有奇幻色彩。 |
-| 3473 | `fiancer/VER` | Dans se fiancer, s’engager par une promesse de mariage. | /fi.ɑ̃.se/ | In se fiancer, to become engaged by making a promise of marriage. | 用于 se fiancer，指作出结婚的承诺；订婚。 |
-| 3474 | `profondeur/NOM` | Étendue mesurée depuis la surface ou l’entrée jusqu’au fond. | /pʁɔ.fɔ̃.dœʁ/ | Depth: extent from the surface or entrance to the bottom or back. | 深度；从表面或入口到最深处、底部的距离。 |
-| 3475 | `publicité/NOM` | Action et ensemble des moyens employés pour promouvoir la vente d’un produit auprès du public. | /py.bli.si.te/ | Advertising: activity and means used to promote sales of a product to the public. | 为向公众推销产品而采取的宣传活动及手段；广告宣传。 |
-| 3476 | `quotidien/ADJ` | De chaque jour ; qui se rapporte à chaque jour. | /ko.ti.djɛ̃/ | Daily; of each day. | 每天的；日常的。 |
-| 3477 | `angle/NOM` | Coin ou extrémité d’une chose où des lignes se croisent. | /ɑ̃ɡl/ | Corner or end of something where lines meet. | 物体上边线相交形成的角、拐角。 |
-| 3478 | `lot/NOM` | Ce que gagne le détenteur d’un billet gagnant dans une loterie. | /lo/ | Prize won by the holder of a winning lottery ticket. | 中奖的彩票持有人获得的奖品或奖金。 |
-| 3479 | `tailler/VER` | Couper ou enlever le superflu d’une matière pour lui donner une forme ou la rendre propre à un usage. | /ta.je/ | To cut or trim away excess material to give it a shape or make it fit for a use. | 切削、修剪或去除材料的多余部分，使其成形或适合某种用途。 |
-| 3480 | `entretenir/VER` | Tenir une chose en bon état. | /ɑ̃.tʁə.tə.niʁ/ | To maintain something in good condition. | 维护、保养某物，使其保持良好状态。 |
-| 3481 | `lance/NOM` | Arme constituée d’un long manche de bois terminé par un fer pointu. | /lɑ̃s/ | Lance or spear: a weapon with a long wooden shaft ending in a pointed metal head. | 长柄末端装有尖锐金属头的武器；长矛。 |
-| 3482 | `fillette/NOM` | Petite fille qui n’est plus un bébé et n’a pas encore atteint la puberté. | /fi.jɛt/ | Little girl, no longer a baby and not yet pubescent. | 已不是婴儿、但尚未进入青春期的小女孩。 |
-| 3483 | `tranquillement/ADV` | D’une manière paisible et calme, sans agitation. | /tʁɑ̃.kil.mɑ̃/ | Quietly or calmly, without agitation. | 平静地、安静地；不慌乱地。 |
-| 3484 | `effondrer/VER` | Dans s’effondrer, se rompre et crouler ; s’écrouler. | /e.fɔ̃.dʁe/ | In s’effondrer, to collapse or fall down after giving way. | 用于 s’effondrer，指因支撑破坏而倒塌、坍塌。 |
-| 3485 | `mark/NOM` | Deutschemark, ancienne monnaie de la République fédérale d’Allemagne, remplacée par l’euro. | /maʁk/ | Deutsche mark, the former currency of the Federal Republic of Germany, replaced by the euro. | 德国马克；德意志联邦共和国曾使用、后被欧元取代的货币。 |
-| 3486 | `carnet/NOM` | Petit livre de notes ou de comptes que l’on porte avec soi. | /kaʁ.nɛ/ | Small notebook or account book carried with oneself. | 随身携带的小笔记本或账本。 |
-| 3487 | `enveloppe/NOM` | Poche de papier servant à expédier une lettre. | /ɑ̃.və.lɔp/ | Paper envelope used to send a letter. | 用于寄送信件的纸质封套；信封。 |
-| 3488 | `impatient/ADJ` | Qui manque de patience dans l’attente ou devant une souffrance. | /ɛ̃.pa.sjɑ̃/ | Impatient: lacking patience while waiting or enduring discomfort. | 在等待或忍受痛苦时缺乏耐心的；不耐烦的。 |
-| 3489 | `résistance/NOM` | Qualité d’un corps qui résiste à l’action d’un autre corps. | /ʁe.zis.tɑ̃s/ | Resistance: the capacity of a physical body or material to withstand another body’s action. | 物体或材料抵抗另一物体作用的能力；抵抗力、耐受性。 |
-| 3490 | `ère/NOM` | Époque remarquable où commence un nouvel ordre de choses. | /ɛʁ/ | Era: a notable period beginning with a new order of things. | 以新的事物秩序开始为特点的重要时期；时代。 |
-| 3491 | `phase/NOM` | État ou étape dans une succession par laquelle passe un phénomène. | /faz/ | Phase or stage in a succession of states through which a phenomenon passes. | 某种现象在连续变化中经历的状态或阶段。 |
-| 3492 | `remarquable/ADJ` | Qui mérite d’être remarqué et attire l’attention. | /ʁə.maʁ.kabl/ | Remarkable or noteworthy; deserving notice and attracting attention. | 值得注意的、引人注目的；显著的。 |
-| 3493 | `revenu/NOM` | Ce que l’on retire annuellement d’un emploi, d’un domaine, d’une pension ou d’une rente. | /ʁ(ə.)v(ə.)ny/ | Annual income obtained from employment, property, a pension or an annuity. | 从工作、地产、养老金或年金等获得的年度收入。 |
-| 3494 | `richesse/NOM` | Abondance de biens ; opulence. | /ʁi.ʃɛs/ | Wealth or affluence; an abundance of possessions. | 财物充裕；富有、富裕。 |
-| 3495 | `baby/NOM` | Familièrement, baby-foot : jeu de football de table avec des joueurs miniatures fixés sur des barres mobiles. | /ba.bi/ | Informal French short form of baby-foot: table football played with miniature players on movable rods. | （法语口语）baby-foot 的简称；用活动横杆上的小人踢球的桌上足球游戏。 |
-| 3496 | `délire/NOM` | Idée ou proposition stupide, insensée. | /de.liʁ/ | An absurd or nonsensical idea or proposal. | 愚蠢、荒唐或毫无道理的想法、提议。 |
-| 3497 | `dépôt/NOM` | Lieu où l’on entrepose des objets ou des marchandises. | /de.po/ | Depot or storage place where objects or goods are kept. | 存放物品或货物的场所；仓库、堆放处。 |
-| 3498 | `disponible/ADJ` | Que l’on a à sa disposition et dont on peut disposer. | /dis.pɔ.nibl/ | Available; at one’s disposal and able to be used. | 可以支配或使用的；可用的。 |
-| 3499 | `paysage/NOM` | Étendue de territoire que l’on peut voir d’un regard. | /pe.i.zaʒ/ | Landscape: an expanse of land visible to the eye. | 视野中可见的一片地域；景观、风景。 |
-| 3500 | `anéantir/VER` | Réduire à rien, détruire complètement. | /a.ne.ɑ̃.tiʁ/ | To annihilate or destroy completely. | 彻底毁灭；使之化为乌有。 |
+## 3451 — pull / NOM
 
-## Selected and excluded uses
-
-### 3451 — pull/NOM
-
-Selected: Masculine clothing noun; the French abbreviation of pull-over.
+Use: Masculine clothing noun; the French abbreviation of pull-over.
 
 Excluded: English pulling; other-language homographs.
 
-Definition: [pull, revision 39959940](https://fr.wiktionary.org/w/index.php?title=pull&oldid=39959940), line 9.
+FR: Pull-over : vêtement chaud couvrant le buste et les bras.
 
-IPA: [pull, revision 39959940](https://fr.wiktionary.org/w/index.php?title=pull&oldid=39959940), line 8.
+Source: `b150_fr_116636`, line 9; CC BY-SA 4.0.
 
-### 3452 — cavalier/NOM
+IPA: /pyl/
 
-Selected: Masculine noun for a horse rider, with the separately attested feminine cavalière.
+Source: `b150_fr_116636`, line 8; CC BY-SA 4.0.
+
+EN: Sweater or jumper covering the torso and arms; short for pull-over.
+
+Source: `b150_fr_116636`, line 9; CC BY-SA 4.0.
+
+ZH: 套头衫；覆盖躯干和手臂的保暖上衣，是 pull-over 的简称。
+
+Source: `b150_fr_116636`, line 9; CC BY-SA 4.0.
+
+## 3452 — cavalier / NOM
+
+Use: Masculine noun for a horse rider, with the separately attested feminine cavalière.
 
 Excluded: Cavalry ranks, chess or card pieces, technical objects and the adjective.
 
-Definition: [cavalier, revision 39956304](https://fr.wiktionary.org/w/index.php?title=cavalier&oldid=39956304), line 19.
+FR: Personne de sexe masculin qui monte à cheval ; le féminin est cavalière.
 
-IPA: [cavalier, revision 39956304](https://fr.wiktionary.org/w/index.php?title=cavalier&oldid=39956304), line 18.
+Source: `b150_fr_2506`, line 19; CC BY-SA 4.0.
 
-### 3453 — satellite/NOM
+IPA: /ka.va.lje/
 
-Selected: Masculine noun for an orbiting natural or artificial object.
+Source: `b150_fr_2506`, line 18; CC BY-SA 4.0.
+
+EN: Male horse rider; the feminine noun is cavalière.
+
+Source: `b150_fr_2506`, line 19; CC BY-SA 4.0.
+
+ZH: 男性骑马者；对应的女性名词是 cavalière。
+
+Source: `b150_fr_2506`, line 19; CC BY-SA 4.0.
+
+## 3453 — satellite / NOM
+
+Use: Masculine noun for an orbiting natural or artificial object.
 
 Excluded: Mechanical gears, armed followers and the adjective.
 
-Definition: [satellite, revision 39644922](https://fr.wiktionary.org/w/index.php?title=satellite&oldid=39644922), line 14.
+FR: Objet naturel ou artificiel qui tourne en orbite autour d’une planète.
 
-IPA: [satellite, revision 39644922](https://fr.wiktionary.org/w/index.php?title=satellite&oldid=39644922), line 13.
+Source: `b150_fr_9939`, line 14; CC BY-SA 4.0.
 
-### 3454 — administration/NOM
+IPA: /sa.te.lit/
 
-Selected: Feminine action noun for management of affairs.
+Source: `b150_fr_9939`, line 13; CC BY-SA 4.0.
+
+EN: Natural or artificial object orbiting a planet; a satellite.
+
+Source: `b150_fr_9939`, line 14; CC BY-SA 4.0.
+
+ZH: 围绕行星运行的天然或人造物体；卫星。
+
+Source: `b150_fr_9939`, line 14; CC BY-SA 4.0.
+
+## 3454 — administration / NOM
+
+Use: Feminine action noun for management of affairs.
 
 Excluded: The period of an administration; a body of officials; administering a medicine.
 
-Definition: [administration, revision 39827447](https://fr.wiktionary.org/w/index.php?title=administration&oldid=39827447), line 10.
+FR: Action de diriger et de gérer des affaires publiques ou privées.
 
-IPA: [administration, revision 39827447](https://fr.wiktionary.org/w/index.php?title=administration&oldid=39827447), line 9.
+Source: `b150_fr_28524`, line 10; CC BY-SA 4.0.
 
-### 3455 — barrage/NOM
+IPA: /ad.mi.nis.tʁa.sjɔ̃/
 
-Selected: Masculine noun for a barrier across a route; the DAF8-referenced definition is selected.
+Source: `b150_fr_28524`, line 9; CC BY-SA 4.0.
+
+EN: Administration: directing and managing public or private affairs.
+
+Source: `b150_fr_28524`, line 10; CC BY-SA 4.0.
+
+ZH: 行政管理或经营管理；组织、处理公共或私人事务的行为。
+
+Source: `b150_fr_28524`, line 10; CC BY-SA 4.0.
+
+## 3455 — barrage / NOM
+
+Use: Masculine noun for a barrier across a route; the DAF8-referenced definition is selected.
 
 Excluded: The Rivarol-referenced hydraulic definition, rock formations, sport play-offs and figurative opposition.
 
-Definition: [barrage, revision 39535588](https://fr.wiktionary.org/w/index.php?title=barrage&oldid=39535588), line 9.
+FR: Barrière qui ferme un chemin et empêche le passage.
 
-IPA: [barrage, revision 39535588](https://fr.wiktionary.org/w/index.php?title=barrage&oldid=39535588), line 8.
+Source: `b150_fr_149217`, line 9; CC BY-SA 4.0.
 
-### 3456 — dessert/NOM
+IPA: /ba.ʁaʒ/
 
-Selected: Masculine food noun.
+Source: `b150_fr_149217`, line 8; CC BY-SA 4.0.
+
+EN: Barrier or roadblock closing a route and preventing passage.
+
+Source: `b150_fr_149217`, line 9; CC BY-SA 4.0.
+
+ZH: 封闭道路、阻止通行的障碍或路障。
+
+Source: `b150_fr_149217`, line 9; CC BY-SA 4.0.
+
+## 3456 — dessert / NOM
+
+Use: Masculine food noun.
 
 Excluded: The time during which dessert is served; the desservir verb form.
 
-Definition: [dessert, revision 39773546](https://fr.wiktionary.org/w/index.php?title=dessert&oldid=39773546), line 11.
+FR: Mets généralement sucré servi habituellement à la fin d’un repas.
 
-IPA: [dessert, revision 39773546](https://fr.wiktionary.org/w/index.php?title=dessert&oldid=39773546), line 10.
+Source: `b150_fr_9245`, line 11; CC BY-SA 4.0.
 
-### 3457 — juin/NOM
+IPA: /de.sɛʁ/
 
-Selected: Masculine month noun; one recorded French pronunciation selected.
+Source: `b150_fr_9245`, line 10; CC BY-SA 4.0.
+
+EN: Dessert: a usually sweet dish normally served at the end of a meal.
+
+Source: `b150_fr_9245`, line 11; CC BY-SA 4.0.
+
+ZH: 餐末通常供应的甜食；甜点。
+
+Source: `b150_fr_9245`, line 11; CC BY-SA 4.0.
+
+## 3457 — juin / NOM
+
+Use: Masculine month noun; one recorded French pronunciation selected.
 
 Excluded: Old French entries and other pronunciation variants.
 
-Definition: [juin, revision 39943237](https://fr.wiktionary.org/w/index.php?title=juin&oldid=39943237), line 11.
+FR: Sixième mois de l’année du calendrier grégorien, qui compte trente jours.
 
-IPA: [juin, revision 39943237](https://fr.wiktionary.org/w/index.php?title=juin&oldid=39943237), line 10.
+Source: `b150_fr_123`, line 11; CC BY-SA 4.0.
 
-### 3458 — agresser/VER
+IPA: /ʒɥɛ̃/
 
-Selected: Transitive verb with a person as object; assault is not limited to physical blows.
+Source: `b150_fr_123`, line 10; CC BY-SA 4.0.
+
+EN: June, the sixth month of the Gregorian calendar, with thirty days.
+
+Source: `b150_fr_123`, line 11; CC BY-SA 4.0.
+
+ZH: 六月；公历一年中的第六个月，有三十天。
+
+Source: `b150_fr_123`, line 11; CC BY-SA 4.0.
+
+## 3458 — agresser / VER
+
+Use: Transitive verb with a person as object; assault is not limited to physical blows.
 
 Excluded: Old French and harmless competitive meanings of attack.
 
-Definition: [agresser, revision 38463949](https://fr.wiktionary.org/w/index.php?title=agresser&oldid=38463949), line 8.
+FR: Porter atteinte à l’intégrité physique, psychologique ou sexuelle d’une personne par la force, la contrainte, la surprise ou la ruse.
 
-IPA: [agresser, revision 38463949](https://fr.wiktionary.org/w/index.php?title=agresser&oldid=38463949), line 7.
+Source: `b150_fr_8100`, line 8; CC BY-SA 4.0.
 
-### 3459 — reporter/VER
+IPA: /a.ɡʁe.se/
 
-Selected: Transitive scheduling verb; reporter quelque chose.
+Source: `b150_fr_8100`, line 7; CC BY-SA 4.0.
+
+EN: To assault a person, violating their physical, psychological or sexual integrity through force, coercion, surprise or deception.
+
+Source: `b150_fr_8100`, line 8; CC BY-SA 4.0.
+
+ZH: 以暴力、胁迫、突然袭击或欺骗的方式侵犯他人的身体、心理或性方面的完整与安全。
+
+Source: `b150_fr_8100`, line 8; CC BY-SA 4.0.
+
+## 3459 — reporter / VER
+
+Use: Transitive scheduling verb; reporter quelque chose.
 
 Excluded: Journalist noun, carrying again, accounting transfers and se reporter.
 
-Definition: [reporter, revision 39997455](https://fr.wiktionary.org/w/index.php?title=reporter&oldid=39997455), line 32.
+FR: Remettre une chose à plus tard, en différer la réalisation.
 
-IPA: [reporter, revision 39997455](https://fr.wiktionary.org/w/index.php?title=reporter&oldid=39997455), line 9.
+Source: `b150_fr_174771`, line 32; CC BY-SA 4.0.
 
-### 3460 — tristesse/NOM
+IPA: /ʁə.pɔʁ.te/
 
-Selected: Feminine noun for a feeling of sadness.
+Source: `b150_fr_174771`, line 9; CC BY-SA 4.0.
+
+EN: To postpone or defer something until a later time.
+
+Source: `b150_fr_174771`, line 32; CC BY-SA 4.0.
+
+ZH: 将某事推迟到以后；延期。
+
+Source: `b150_fr_174771`, line 32; CC BY-SA 4.0.
+
+## 3460 — tristesse / NOM
+
+Use: Feminine noun for a feeling of sadness.
 
 Excluded: A temperament or atmosphere; this is not a diagnosis of clinical depression.
 
-Definition: [tristesse, revision 39748797](https://fr.wiktionary.org/w/index.php?title=tristesse&oldid=39748797), line 11.
+FR: État de peine et d’affliction causé par un événement malheureux.
 
-IPA: [tristesse, revision 39748797](https://fr.wiktionary.org/w/index.php?title=tristesse&oldid=39748797), line 10.
+Source: `b150_fr_62935`, line 11; CC BY-SA 4.0.
 
-### 3461 — planche/NOM
+IPA: /tʁis.tɛs/
 
-Selected: Feminine noun for a wooden board.
+Source: `b150_fr_62935`, line 10; CC BY-SA 4.0.
+
+EN: Sadness or sorrow caused by an unhappy event.
+
+Source: `b150_fr_62935`, line 11; CC BY-SA 4.0.
+
+ZH: 因不幸的事情而产生的悲伤、难过。
+
+Source: `b150_fr_62935`, line 11; CC BY-SA 4.0.
+
+## 3461 — planche / NOM
+
+Use: Feminine noun for a wooden board.
 
 Excluded: Book plates, printing blocks, floating on the back and the verb form.
 
-Definition: [planche, revision 39868421](https://fr.wiktionary.org/w/index.php?title=planche&oldid=39868421), line 11.
+FR: Pièce de bois refendu de faible épaisseur ; une planche de bois.
 
-IPA: [planche, revision 39868421](https://fr.wiktionary.org/w/index.php?title=planche&oldid=39868421), line 9.
+Source: `b150_fr_145263`, line 11; CC BY-SA 4.0.
 
-### 3462 — capitale/NOM
+IPA: /plɑ̃ʃ/
 
-Selected: Feminine city noun.
+Source: `b150_fr_145263`, line 9; CC BY-SA 4.0.
+
+EN: Board or plank: a thin piece of sawn wood.
+
+Source: `b150_fr_145263`, line 11; CC BY-SA 4.0.
+
+ZH: 由木材锯切而成、厚度较小的木板。
+
+Source: `b150_fr_145263`, line 11; CC BY-SA 4.0.
+
+## 3462 — capitale / NOM
+
+Use: Feminine city noun.
 
 Excluded: Capital letters including the CFC-imported cartographic sense; regional capitals; adjective inflection.
 
-Definition: [capitale, revision 39974707](https://fr.wiktionary.org/w/index.php?title=capitale&oldid=39974707), line 8.
+FR: Ville où siègent le gouvernement et le pouvoir législatif d’un État.
 
-IPA: [capitale, revision 39974707](https://fr.wiktionary.org/w/index.php?title=capitale&oldid=39974707), line 7.
+Source: `b150_fr_9663`, line 8; CC BY-SA 4.0.
 
-### 3463 — capital/ADJ
+IPA: /ka.pi.tal/
 
-Selected: Adjective, masculine singular headword; importance sense.
+Source: `b150_fr_9663`, line 7; CC BY-SA 4.0.
+
+EN: Capital city, where a state’s government and legislature are based.
+
+Source: `b150_fr_9663`, line 8; CC BY-SA 4.0.
+
+ZH: 首都；国家政府和立法机关所在地的城市。
+
+Source: `b150_fr_9663`, line 8; CC BY-SA 4.0.
+
+## 3463 — capital / ADJ
+
+Use: Adjective, masculine singular headword; importance sense.
 
 Excluded: Money or assets as a noun, obsolete head-related meanings and capital punishment.
 
-Definition: [capital, revision 39925451](https://fr.wiktionary.org/w/index.php?title=capital&oldid=39925451), line 21.
+FR: D’une très grande importance ; primordial.
 
-IPA: [capital, revision 39925451](https://fr.wiktionary.org/w/index.php?title=capital&oldid=39925451), line 8.
+Source: `b150_fr_107569`, line 21; CC BY-SA 4.0.
 
-### 3464 — demeure/NOM
+IPA: /ka.pi.tal/
 
-Selected: Feminine dwelling noun; formal register retained.
+Source: `b150_fr_107569`, line 8; CC BY-SA 4.0.
+
+EN: Of great importance; crucial or essential.
+
+Source: `b150_fr_107569`, line 21; CC BY-SA 4.0.
+
+ZH: 极其重要的；至关重要的。
+
+Source: `b150_fr_107569`, line 21; CC BY-SA 4.0.
+
+## 3464 — demeure / NOM
+
+Use: Feminine dwelling noun; formal register retained.
 
 Excluded: Legal delay and mise en demeure; the demeurer verb form.
 
-Definition: [demeure, revision 39773857](https://fr.wiktionary.org/w/index.php?title=demeure&oldid=39773857), line 10.
+FR: Dans un registre soutenu, habitation ou domicile.
 
-IPA: [demeure, revision 39773857](https://fr.wiktionary.org/w/index.php?title=demeure&oldid=39773857), line 9.
+Source: `b150_fr_157141`, line 10; CC BY-SA 4.0.
 
-### 3465 — record/NOM
+IPA: /də.mœʁ/
 
-Selected: Masculine noun for a record level, not restricted to sport.
+Source: `b150_fr_157141`, line 9; CC BY-SA 4.0.
+
+EN: Dwelling or residence, in a formal register.
+
+Source: `b150_fr_157141`, line 10; CC BY-SA 4.0.
+
+ZH: （书面语）住所、住宅。
+
+Source: `b150_fr_157141`, line 10; CC BY-SA 4.0.
+
+## 3465 — record / NOM
+
+Use: Masculine noun for a record level, not restricted to sport.
 
 Excluded: Quebec vinyl records, historical court decisions and adjective uses.
 
-Definition: [record, revision 39955333](https://fr.wiktionary.org/w/index.php?title=record&oldid=39955333), line 16.
+FR: Niveau qui dépasse tout ce qui avait été atteint auparavant.
 
-IPA: [record, revision 39955333](https://fr.wiktionary.org/w/index.php?title=record&oldid=39955333), line 11.
+Source: `b150_fr_115128`, line 16; CC BY-SA 4.0.
 
-### 3466 — intervention/NOM
+IPA: /ʁə.kɔʁ/
 
-Selected: Feminine noun, informal ellipsis of intervention chirurgicale.
+Source: `b150_fr_115128`, line 11; CC BY-SA 4.0.
+
+EN: Record: a level exceeding everything previously achieved.
+
+Source: `b150_fr_115128`, line 16; CC BY-SA 4.0.
+
+ZH: 超过此前所有水平的纪录。
+
+Source: `b150_fr_115128`, line 16; CC BY-SA 4.0.
+
+## 3466 — intervention / NOM
+
+Use: Feminine noun, informal ellipsis of intervention chirurgicale.
 
 Excluded: General intervening, speeches and military intervention.
 
-Definition: [intervention, revision 39816287](https://fr.wiktionary.org/w/index.php?title=intervention&oldid=39816287), line 22.
+FR: Familièrement, intervention chirurgicale ; opération.
 
-IPA: [intervention, revision 39816287](https://fr.wiktionary.org/w/index.php?title=intervention&oldid=39816287), line 8.
+Source: `b150_fr_165437`, line 22; CC BY-SA 4.0.
 
-### 3467 — conviction/NOM
+IPA: /ɛ̃.tɛʁ.vɑ̃.sjɔ̃/
 
-Selected: Feminine noun for firm belief or certainty.
+Source: `b150_fr_165437`, line 8; CC BY-SA 4.0.
+
+EN: In everyday informal usage, a surgical intervention or operation.
+
+Source: `b150_fr_165437`, line 22; CC BY-SA 4.0.
+
+ZH: （口语）外科手术；intervention chirurgicale 的省略说法。
+
+Source: `b150_fr_165437`, line 22; CC BY-SA 4.0.
+
+## 3467 — conviction / NOM
+
+Use: Feminine noun for firm belief or certainty.
 
 Excluded: Legal evidence and the English sense of a criminal conviction.
 
-Definition: [conviction, revision 39997314](https://fr.wiktionary.org/w/index.php?title=conviction&oldid=39997314), line 8.
+FR: Certitude que l’on a de la vérité d’un fait ou d’un principe.
 
-IPA: [conviction, revision 39997314](https://fr.wiktionary.org/w/index.php?title=conviction&oldid=39997314), line 7.
+Source: `b150_fr_120577`, line 8; CC BY-SA 4.0.
 
-### 3468 — inconscient/ADJ
+IPA: /kɔ̃.vik.sjɔ̃/
 
-Selected: Adjective for thoughtlessness, explicitly labelled courant in the source.
+Source: `b150_fr_120577`, line 7; CC BY-SA 4.0.
+
+EN: Firm belief or certainty that a fact or principle is true.
+
+Source: `b150_fr_120577`, line 8; CC BY-SA 4.0.
+
+ZH: 确信某一事实或原则为真；坚定的信念。
+
+Source: `b150_fr_120577`, line 8; CC BY-SA 4.0.
+
+## 3468 — inconscient / ADJ
+
+Use: Adjective for thoughtlessness, explicitly labelled courant in the source.
 
 Excluded: Unconscious mental states, loss of consciousness and the noun.
 
-Definition: [inconscient, revision 39819444](https://fr.wiktionary.org/w/index.php?title=inconscient&oldid=39819444), line 15.
+FR: Dans l’usage courant, irréfléchi ; qui agit sans réfléchir.
 
-IPA: [inconscient, revision 39819444](https://fr.wiktionary.org/w/index.php?title=inconscient&oldid=39819444), line 7.
+Source: `b150_fr_164660`, line 15; CC BY-SA 4.0.
 
-### 3469 — pointe/NOM
+IPA: /ɛ̃.kɔ̃.sjɑ̃/
 
-Selected: Feminine noun for a sharp tip.
+Source: `b150_fr_164660`, line 7; CC BY-SA 4.0.
+
+EN: In ordinary usage, thoughtless or reckless; acting without thinking.
+
+Source: `b150_fr_164660`, line 15; CC BY-SA 4.0.
+
+ZH: （常用义）欠考虑的、鲁莽的；做事不经过思考的。
+
+Source: `b150_fr_164660`, line 15; CC BY-SA 4.0.
+
+## 3469 — pointe / NOM
+
+Use: Feminine noun for a sharp tip.
 
 Excluded: Nails, engraving tools, peak hours and other figurative senses.
 
-Definition: [pointe, revision 39916461](https://fr.wiktionary.org/w/index.php?title=pointe&oldid=39916461), line 10.
+FR: Extrémité aiguë et piquante de quelque chose.
 
-IPA: [pointe, revision 39916461](https://fr.wiktionary.org/w/index.php?title=pointe&oldid=39916461), line 9.
+Source: `b150_fr_7979`, line 10; CC BY-SA 4.0.
 
-### 3470 — frite/NOM
+IPA: /pwɛ̃t/
 
-Selected: Feminine count noun, one fried potato stick.
+Source: `b150_fr_7979`, line 9; CC BY-SA 4.0.
+
+EN: Sharp, pointed tip of something.
+
+Source: `b150_fr_7979`, line 10; CC BY-SA 4.0.
+
+ZH: 某物尖锐、能刺人的末端；尖端。
+
+Source: `b150_fr_7979`, line 10; CC BY-SA 4.0.
+
+## 3470 — frite / NOM
+
+Use: Feminine count noun, one fried potato stick.
 
 Excluded: Swimming noodles, slang face or blows and feminine participle of frire.
 
-Definition: [frite, revision 39916750](https://fr.wiktionary.org/w/index.php?title=frite&oldid=39916750), line 12.
+FR: Bâtonnet de pomme de terre frit dans l’huile.
 
-IPA: [frite, revision 39916750](https://fr.wiktionary.org/w/index.php?title=frite&oldid=39916750), line 11.
+Source: `b150_fr_50532`, line 12; CC BY-SA 4.0.
 
-### 3471 — historique/ADJ
+IPA: /fʁit/
 
-Selected: Adjective with identical masculine and feminine singular forms.
+Source: `b150_fr_50532`, line 11; CC BY-SA 4.0.
+
+EN: A chip or French fry: one stick of potato fried in oil.
+
+Source: `b150_fr_50532`, line 12; CC BY-SA 4.0.
+
+ZH: 一根用油炸成的土豆条；薯条。
+
+Source: `b150_fr_50532`, line 12; CC BY-SA 4.0.
+
+## 3471 — historique / ADJ
+
+Use: Adjective with identical masculine and feminine singular forms.
 
 Excluded: The noun, obsolete celebrity sense and the distinct momentous or non-fictional uses.
 
-Definition: [historique, revision 39913566](https://fr.wiktionary.org/w/index.php?title=historique&oldid=39913566), line 8.
+FR: Relatif à l’histoire.
 
-IPA: [historique, revision 39913566](https://fr.wiktionary.org/w/index.php?title=historique&oldid=39913566), line 7.
+Source: `b150_fr_11006`, line 8; CC BY-SA 4.0.
 
-### 3472 — conte/NOM
+IPA: /is.tɔ.ʁik/
 
-Selected: Masculine narrative noun.
+Source: `b150_fr_11006`, line 7; CC BY-SA 4.0.
+
+EN: Historical: relating to history.
+
+Source: `b150_fr_11006`, line 8; CC BY-SA 4.0.
+
+ZH: 与历史有关的；历史的。
+
+Source: `b150_fr_11006`, line 8; CC BY-SA 4.0.
+
+## 3472 — conte / NOM
+
+Use: Masculine narrative noun.
 
 Excluded: Gossip or deceptive informal stories; compter and its spelling.
 
-Definition: [conte, revision 39957356](https://fr.wiktionary.org/w/index.php?title=conte&oldid=39957356), line 11.
+FR: Récit d’aventures imaginaires, vraisemblables ou mêlées de merveilleux.
 
-IPA: [conte, revision 39957356](https://fr.wiktionary.org/w/index.php?title=conte&oldid=39957356), line 10.
+Source: `b150_fr_8025`, line 11; CC BY-SA 4.0.
 
-### 3473 — fiancer/VER
+IPA: /kɔ̃t/
 
-Selected: Pronominal engagement construction se fiancer; IPA is the captured bare infinitive.
+Source: `b150_fr_8025`, line 10; CC BY-SA 4.0.
+
+EN: Tale of imaginary adventures, whether plausible or involving the marvellous.
+
+Source: `b150_fr_8025`, line 11; CC BY-SA 4.0.
+
+ZH: 讲述虚构冒险的故事，可以看似真实，也可以带有奇幻色彩。
+
+Source: `b150_fr_8025`, line 11; CC BY-SA 4.0.
+
+## 3473 — fiancer / VER
+
+Use: Pronominal engagement construction se fiancer; IPA is the captured bare infinitive.
 
 Excluded: Officiating an engagement ceremony, arranging another person’s engagement and literary figurative uses.
 
-Definition: [fiancer, revision 39632677](https://fr.wiktionary.org/w/index.php?title=fiancer&oldid=39632677), line 7.
+FR: Dans se fiancer, s’engager par une promesse de mariage.
 
-IPA: [fiancer, revision 39632677](https://fr.wiktionary.org/w/index.php?title=fiancer&oldid=39632677), line 54.
+Source: `b150_fr_161355`, line 7; CC BY-SA 4.0.
 
-### 3474 — profondeur/NOM
+IPA: /fi.ɑ̃.se/
 
-Selected: Feminine dimension noun, surface or entrance to the bottom.
+Source: `b150_fr_161355`, line 54; CC BY-SA 4.0.
+
+EN: In se fiancer, to become engaged by making a promise of marriage.
+
+Source: `b150_fr_161355`, line 7; CC BY-SA 4.0.
+
+ZH: 用于 se fiancer，指作出结婚的承诺；订婚。
+
+Source: `b150_fr_161355`, line 7; CC BY-SA 4.0.
+
+## 3474 — profondeur / NOM
+
+Use: Feminine dimension noun, surface or entrance to the bottom.
 
 Excluded: Military thickness and figurative profundity.
 
-Definition: [profondeur, revision 39948706](https://fr.wiktionary.org/w/index.php?title=profondeur&oldid=39948706), line 9.
+FR: Étendue mesurée depuis la surface ou l’entrée jusqu’au fond.
 
-IPA: [profondeur, revision 39948706](https://fr.wiktionary.org/w/index.php?title=profondeur&oldid=39948706), line 7.
+Source: `b150_fr_172768`, line 9; CC BY-SA 4.0.
 
-### 3475 — publicité/NOM
+IPA: /pʁɔ.fɔ̃.dœʁ/
 
-Selected: Feminine advertising noun.
+Source: `b150_fr_172768`, line 7; CC BY-SA 4.0.
 
-Excluded: Public notoriety, making legal information public and open court hearings.
+EN: Depth: extent from the surface or entrance to the bottom or back.
 
-Definition: [publicité, revision 39905691](https://fr.wiktionary.org/w/index.php?title=publicit%C3%A9&oldid=39905691), line 22.
+Source: `b150_fr_172768`, line 9; CC BY-SA 4.0.
 
-IPA: [publicité, revision 39905691](https://fr.wiktionary.org/w/index.php?title=publicit%C3%A9&oldid=39905691), line 8.
+ZH: 深度；从表面或入口到最深处、底部的距离。
 
-### 3476 — quotidien/ADJ
+Source: `b150_fr_172768`, line 9; CC BY-SA 4.0.
 
-Selected: Adjective, masculine singular headword.
+## 3475 — publicité / NOM
+
+Use: Feminine count noun for a commercial advertisement, in any medium.
+
+Excluded: Public notoriety, legal publicity, open hearings and the advertising-activity definition at line 22.
+
+FR: Annonce commerciale diffusée dans un journal, sur une affiche ou par un autre moyen de réclame.
+
+Source: `b150_fr_173104`, line 26; CC BY-SA 4.0.
+
+IPA: /py.bli.si.te/
+
+Source: `b150_fr_173104`, line 8; CC BY-SA 4.0.
+
+EN: A commercial advertisement carried in a newspaper, on a poster or through another advertising medium.
+
+Source: `b150_fr_173104`, line 26; CC BY-SA 4.0.
+
+ZH: 通过报纸、海报或其他宣传媒介发布的商业广告。
+
+Source: `b150_fr_173104`, line 26; CC BY-SA 4.0.
+
+## 3476 — quotidien / ADJ
+
+Use: Adjective, masculine singular headword.
 
 Excluded: The daily newspaper noun and the separately restricted newspaper publication sense.
 
-Definition: [quotidien, revision 39849340](https://fr.wiktionary.org/w/index.php?title=quotidien&oldid=39849340), line 8.
+FR: De chaque jour ; qui se rapporte à chaque jour.
 
-IPA: [quotidien, revision 39849340](https://fr.wiktionary.org/w/index.php?title=quotidien&oldid=39849340), line 7.
+Source: `b150_fr_173636`, line 8; CC BY-SA 4.0.
 
-### 3477 — angle/NOM
+IPA: /ko.ti.djɛ̃/
 
-Selected: Masculine noun for a physical corner.
+Source: `b150_fr_173636`, line 7; CC BY-SA 4.0.
+
+EN: Daily; of each day.
+
+Source: `b150_fr_173636`, line 8; CC BY-SA 4.0.
+
+ZH: 每天的；日常的。
+
+Source: `b150_fr_173636`, line 8; CC BY-SA 4.0.
+
+## 3477 — angle / NOM
+
+Use: Masculine noun for a physical corner.
 
 Excluded: Angular measurements, viewpoints, figurative harshness and other languages.
 
-Definition: [angle, revision 39985494](https://fr.wiktionary.org/w/index.php?title=angle&oldid=39985494), line 24.
+FR: Coin ou extrémité d’une chose où des lignes se croisent.
 
-IPA: [angle, revision 39985494](https://fr.wiktionary.org/w/index.php?title=angle&oldid=39985494), line 10.
+Source: `b150_fr_7416`, line 24; CC BY-SA 4.0.
 
-### 3478 — lot/NOM
+IPA: /ɑ̃ɡl/
 
-Selected: Masculine lottery-prize noun.
+Source: `b150_fr_7416`, line 10; CC BY-SA 4.0.
+
+EN: Corner or end of something where lines meet.
+
+Source: `b150_fr_7416`, line 24; CC BY-SA 4.0.
+
+ZH: 物体上边线相交形成的角、拐角。
+
+Source: `b150_fr_7416`, line 24; CC BY-SA 4.0.
+
+## 3478 — lot / NOM
+
+Use: Masculine lottery-prize noun.
 
 Excluded: Inheritance shares, batches of goods, destiny and dated slang for a woman.
 
-Definition: [lot, revision 39834273](https://fr.wiktionary.org/w/index.php?title=lot&oldid=39834273), line 24.
+FR: Ce que gagne le détenteur d’un billet gagnant dans une loterie.
 
-IPA: [lot, revision 39834273](https://fr.wiktionary.org/w/index.php?title=lot&oldid=39834273), line 17.
+Source: `b150_fr_32100`, line 24; CC BY-SA 4.0.
 
-### 3479 — tailler/VER
+IPA: /lo/
 
-Selected: Transitive shaping or trimming verb.
+Source: `b150_fr_32100`, line 17; CC BY-SA 4.0.
+
+EN: Prize won by the holder of a winning lottery ticket.
+
+Source: `b150_fr_32100`, line 24; CC BY-SA 4.0.
+
+ZH: 中奖的彩票持有人获得的奖品或奖金。
+
+Source: `b150_fr_32100`, line 24; CC BY-SA 4.0.
+
+## 3479 — tailler / VER
+
+Use: Transitive shaping or trimming verb.
 
 Excluded: Obsolete surgery and card-dealing senses; slang se tailler.
 
-Definition: [tailler, revision 39949561](https://fr.wiktionary.org/w/index.php?title=tailler&oldid=39949561), line 7.
+FR: Couper ou enlever le superflu d’une matière pour lui donner une forme ou la rendre propre à un usage.
 
-IPA: [tailler, revision 39949561](https://fr.wiktionary.org/w/index.php?title=tailler&oldid=39949561), line 6.
+Source: `b150_fr_27024`, line 7; CC BY-SA 4.0.
 
-### 3480 — entretenir/VER
+IPA: /ta.je/
 
-Selected: Transitive maintenance verb, with the maintained thing as object.
+Source: `b150_fr_27024`, line 6; CC BY-SA 4.0.
+
+EN: To cut or trim away excess material to give it a shape or make it fit for a use.
+
+Source: `b150_fr_27024`, line 7; CC BY-SA 4.0.
+
+ZH: 切削、修剪或去除材料的多余部分，使其成形或适合某种用途。
+
+Source: `b150_fr_27024`, line 7; CC BY-SA 4.0.
+
+## 3480 — entretenir / VER
+
+Use: Transitive maintenance verb, with the maintained thing as object.
 
 Excluded: Financially supporting someone, conversation and pronominal constructions.
 
-Definition: [entretenir, revision 40043506](https://fr.wiktionary.org/w/index.php?title=entretenir&oldid=40043506), line 7.
+FR: Tenir une chose en bon état.
 
-IPA: [entretenir, revision 40043506](https://fr.wiktionary.org/w/index.php?title=entretenir&oldid=40043506), line 6.
+Source: `b150_fr_159760`, line 7; CC BY-SA 4.0.
 
-### 3481 — lance/NOM
+IPA: /ɑ̃.tʁə.tə.niʁ/
 
-Selected: Feminine noun for the weapon, an ordinary object sense without an obsolete label.
+Source: `b150_fr_159760`, line 6; CC BY-SA 4.0.
+
+EN: To maintain something in good condition.
+
+Source: `b150_fr_159760`, line 7; CC BY-SA 4.0.
+
+ZH: 维护、保养某物，使其保持良好状态。
+
+Source: `b150_fr_159760`, line 7; CC BY-SA 4.0.
+
+## 3481 — lance / NOM
+
+Use: Feminine noun for the weapon, an ordinary object sense without an obsolete label.
 
 Excluded: Historical soldier designation, hoses and other lance-shaped objects, slang water and lancer verb forms.
 
-Definition: [lance, revision 39932065](https://fr.wiktionary.org/w/index.php?title=lance&oldid=39932065), line 16.
+FR: Arme constituée d’un long manche de bois terminé par un fer pointu.
 
-IPA: [lance, revision 39932065](https://fr.wiktionary.org/w/index.php?title=lance&oldid=39932065), line 15.
+Source: `b150_fr_166215`, line 16; CC BY-SA 4.0.
 
-### 3482 — fillette/NOM
+IPA: /lɑ̃s/
 
-Selected: Feminine child noun.
+Source: `b150_fr_166215`, line 15; CC BY-SA 4.0.
+
+EN: Lance or spear: a weapon with a long wooden shaft ending in a pointed metal head.
+
+Source: `b150_fr_166215`, line 16; CC BY-SA 4.0.
+
+ZH: 长柄末端装有尖锐金属头的武器；长矛。
+
+Source: `b150_fr_166215`, line 16; CC BY-SA 4.0.
+
+## 3482 — fillette / NOM
+
+Use: Feminine child noun.
 
 Excluded: Insults directed at men, regional wine bottles and slang shoe sizes.
 
-Definition: [fillette, revision 39964837](https://fr.wiktionary.org/w/index.php?title=fillette&oldid=39964837), line 10.
+FR: Petite fille qui n’est plus un bébé et n’a pas encore atteint la puberté.
 
-IPA: [fillette, revision 39964837](https://fr.wiktionary.org/w/index.php?title=fillette&oldid=39964837), line 9.
+Source: `b150_fr_161435`, line 10; CC BY-SA 4.0.
 
-### 3483 — tranquillement/ADV
+IPA: /fi.jɛt/
 
-Selected: Adverb derived from the calm, unagitated adjective use.
+Source: `b150_fr_161435`, line 9; CC BY-SA 4.0.
+
+EN: Little girl, no longer a baby and not yet pubescent.
+
+Source: `b150_fr_161435`, line 10; CC BY-SA 4.0.
+
+ZH: 已不是婴儿、但尚未进入青春期的小女孩。
+
+Source: `b150_fr_161435`, line 10; CC BY-SA 4.0.
+
+## 3483 — tranquillement / ADV
+
+Use: Adverb derived from the calm, unagitated adjective use.
 
 Excluded: Other-language homographs and unsupported meanings of slowly.
 
-Definition: [tranquillement, revision 39696202](https://fr.wiktionary.org/w/index.php?title=tranquillement&oldid=39696202), line 7.
+FR: D’une manière paisible et calme, sans agitation.
 
-IPA: [tranquillement, revision 39696202](https://fr.wiktionary.org/w/index.php?title=tranquillement&oldid=39696202), line 6.
+Source: `b150_fr_37464`, line 7; CC BY-SA 4.0.
 
-### 3484 — effondrer/VER
+IPA: /tʁɑ̃.kil.mɑ̃/
 
-Selected: Pronominal physical-collapse construction s’effondrer; source grammar and crouler semantics are combined.
+Source: `b150_fr_37464`, line 6; CC BY-SA 4.0.
+
+EN: Quietly or calmly, without agitation.
+
+Source: `b150_fr_37464`, line 7; CC BY-SA 4.0.
+
+ZH: 平静地、安静地；不慌乱地。
+
+Source: `b150_fr_37464`, line 7; CC BY-SA 4.0.
+
+## 3484 — effondrer / VER
+
+Use: Pronominal physical-collapse construction s’effondrer; source grammar and crouler semantics are combined.
 
 Excluded: Obsolete soil-working and gutting, financial drops, emotional collapse and the transitive causative use.
 
-Definition: [effondrer, revision 39818493](https://fr.wiktionary.org/w/index.php?title=effondrer&oldid=39818493), line 9.
+FR: Dans s’effondrer, se rompre et crouler ; s’écrouler.
 
-IPA: [effondrer, revision 39818493](https://fr.wiktionary.org/w/index.php?title=effondrer&oldid=39818493), line 6.
+Source: `b150_fr_158771`, line 9; CC BY-SA 4.0.
 
-### 3485 — mark/NOM
+IPA: /e.fɔ̃.dʁe/
 
-Selected: Masculine currency noun; contemporary references to the former Deutsche mark, not current legal tender.
+Source: `b150_fr_158771`, line 6; CC BY-SA 4.0.
+
+EN: In s’effondrer, to collapse or fall down after giving way.
+
+Source: `b150_fr_158771`, line 9; CC BY-SA 4.0.
+
+ZH: 用于 s’effondrer，指因支撑破坏而倒塌、坍塌。
+
+Source: `b150_fr_158771`, line 9; CC BY-SA 4.0.
+
+## 3485 — mark / NOM
+
+Use: Masculine currency noun; contemporary references to the former Deutsche mark, not current legal tender.
 
 Excluded: Reichsmark, Finnish mark, skeet projectiles and specialist wrestling-fan slang.
 
-Definition: [mark, revision 39631847](https://fr.wiktionary.org/w/index.php?title=mark&oldid=39631847), line 17.
+FR: Deutschemark, ancienne monnaie de la République fédérale d’Allemagne, remplacée par l’euro.
 
-IPA: [mark, revision 39631847](https://fr.wiktionary.org/w/index.php?title=mark&oldid=39631847), line 9.
+Source: `b150_fr_69507`, line 17; CC BY-SA 4.0.
 
-### 3486 — carnet/NOM
+IPA: /maʁk/
 
-Selected: Masculine notebook noun.
+Source: `b150_fr_69507`, line 9; CC BY-SA 4.0.
+
+EN: Deutsche mark, the former currency of the Federal Republic of Germany, replaced by the euro.
+
+Source: `b150_fr_69507`, line 17; CC BY-SA 4.0.
+
+ZH: 德国马克；德意志联邦共和国曾使用、后被欧元取代的货币。
+
+Source: `b150_fr_69507`, line 17; CC BY-SA 4.0.
+
+## 3486 — carnet / NOM
+
+Use: Masculine notebook noun.
 
 Excluded: Swiss or Belgian savings passbooks and ticket booklets.
 
-Definition: [carnet, revision 39834880](https://fr.wiktionary.org/w/index.php?title=carnet&oldid=39834880), line 10.
+FR: Petit livre de notes ou de comptes que l’on porte avec soi.
 
-IPA: [carnet, revision 39834880](https://fr.wiktionary.org/w/index.php?title=carnet&oldid=39834880), line 9.
+Source: `b150_fr_7996`, line 10; CC BY-SA 4.0.
 
-### 3487 — enveloppe/NOM
+IPA: /kaʁ.nɛ/
 
-Selected: Feminine postal noun.
+Source: `b150_fr_7996`, line 9; CC BY-SA 4.0.
+
+EN: Small notebook or account book carried with oneself.
+
+Source: `b150_fr_7996`, line 10; CC BY-SA 4.0.
+
+ZH: 随身携带的小笔记本或账本。
+
+Source: `b150_fr_7996`, line 10; CC BY-SA 4.0.
+
+## 3487 — enveloppe / NOM
+
+Use: Feminine postal noun.
 
 Excluded: General coverings, membranes, airship shells, budget allocations and the verb form.
 
-Definition: [enveloppe, revision 40008913](https://fr.wiktionary.org/w/index.php?title=enveloppe&oldid=40008913), line 38.
+FR: Poche de papier servant à expédier une lettre.
 
-IPA: [enveloppe, revision 40008913](https://fr.wiktionary.org/w/index.php?title=enveloppe&oldid=40008913), line 23.
+Source: `b150_fr_8026`, line 38; CC BY-SA 4.0.
 
-### 3488 — impatient/ADJ
+IPA: /ɑ̃.və.lɔp/
 
-Selected: Adjective, masculine singular headword; lack-of-patience sense.
+Source: `b150_fr_8026`, line 23; CC BY-SA 4.0.
+
+EN: Paper envelope used to send a letter.
+
+Source: `b150_fr_8026`, line 38; CC BY-SA 4.0.
+
+ZH: 用于寄送信件的纸质封套；信封。
+
+Source: `b150_fr_8026`, line 38; CC BY-SA 4.0.
+
+## 3488 — impatient / ADJ
+
+Use: Adjective, masculine singular headword; lack-of-patience sense.
 
 Excluded: Poetic inability to tolerate something and the noun.
 
-Definition: [impatient, revision 39621898](https://fr.wiktionary.org/w/index.php?title=impatient&oldid=39621898), line 8.
+FR: Qui manque de patience dans l’attente ou devant une souffrance.
 
-IPA: [impatient, revision 39621898](https://fr.wiktionary.org/w/index.php?title=impatient&oldid=39621898), line 6.
+Source: `b150_fr_117892`, line 8; CC BY-SA 4.0.
 
-### 3489 — résistance/NOM
+IPA: /ɛ̃.pa.sjɑ̃/
 
-Selected: Feminine physical-resistance noun; ordinary material property.
+Source: `b150_fr_117892`, line 6; CC BY-SA 4.0.
+
+EN: Impatient: lacking patience while waiting or enduring discomfort.
+
+Source: `b150_fr_117892`, line 8; CC BY-SA 4.0.
+
+ZH: 在等待或忍受痛苦时缺乏耐心的；不耐烦的。
+
+Source: `b150_fr_117892`, line 8; CC BY-SA 4.0.
+
+## 3489 — résistance / NOM
+
+Use: Feminine physical-resistance noun; ordinary material property.
 
 Excluded: Electrical quantities, resistance movements and opposition by a person.
 
-Definition: [résistance, revision 39906540](https://fr.wiktionary.org/w/index.php?title=r%C3%A9sistance&oldid=39906540), line 10.
+FR: Qualité d’un corps qui résiste à l’action d’un autre corps.
 
-IPA: [résistance, revision 39906540](https://fr.wiktionary.org/w/index.php?title=r%C3%A9sistance&oldid=39906540), line 9.
+Source: `b150_fr_7659`, line 10; CC BY-SA 4.0.
 
-### 3490 — ère/NOM
+IPA: /ʁe.zis.tɑ̃s/
 
-Selected: Feminine era noun in its extended period sense.
+Source: `b150_fr_7659`, line 9; CC BY-SA 4.0.
+
+EN: Resistance: the capacity of a physical body or material to withstand another body’s action.
+
+Source: `b150_fr_7659`, line 10; CC BY-SA 4.0.
+
+ZH: 物体或材料抵抗另一物体作用的能力；抵抗力、耐受性。
+
+Source: `b150_fr_7659`, line 10; CC BY-SA 4.0.
+
+## 3490 — ère / NOM
+
+Use: Feminine era noun in its extended period sense.
 
 Excluded: A dating system’s fixed starting point and formal geological subdivisions.
 
-Definition: [ère, revision 39863499](https://fr.wiktionary.org/w/index.php?title=%C3%A8re&oldid=39863499), line 20.
+FR: Époque remarquable où commence un nouvel ordre de choses.
 
-IPA: [ère, revision 39863499](https://fr.wiktionary.org/w/index.php?title=%C3%A8re&oldid=39863499), line 9.
+Source: `b150_fr_160016`, line 20; CC BY-SA 4.0.
 
-### 3491 — phase/NOM
+IPA: /ɛʁ/
 
-Selected: Feminine stage noun.
+Source: `b150_fr_160016`, line 9; CC BY-SA 4.0.
+
+EN: Era: a notable period beginning with a new order of things.
+
+Source: `b150_fr_160016`, line 20; CC BY-SA 4.0.
+
+ZH: 以新的事物秩序开始为特点的重要时期；时代。
+
+Source: `b150_fr_160016`, line 20; CC BY-SA 4.0.
+
+## 3491 — phase / NOM
+
+Use: Feminine stage noun.
 
 Excluded: Astronomical appearances, electrical signals or wires and matter states.
 
-Definition: [phase, revision 39771555](https://fr.wiktionary.org/w/index.php?title=phase&oldid=39771555), line 13.
+FR: État ou étape dans une succession par laquelle passe un phénomène.
 
-IPA: [phase, revision 39771555](https://fr.wiktionary.org/w/index.php?title=phase&oldid=39771555), line 12.
+Source: `b150_fr_120460`, line 13; CC BY-SA 4.0.
 
-### 3492 — remarquable/ADJ
+IPA: /faz/
 
-Selected: Adjective with identical masculine and feminine singular forms.
+Source: `b150_fr_120460`, line 12; CC BY-SA 4.0.
+
+EN: Phase or stage in a succession of states through which a phenomenon passes.
+
+Source: `b150_fr_120460`, line 13; CC BY-SA 4.0.
+
+ZH: 某种现象在连续变化中经历的状态或阶段。
+
+Source: `b150_fr_120460`, line 13; CC BY-SA 4.0.
+
+## 3492 — remarquable / ADJ
+
+Use: Adjective with identical masculine and feminine singular forms.
 
 Excluded: No automatic claim that the thing is morally good or favourable.
 
-Definition: [remarquable, revision 39850892](https://fr.wiktionary.org/w/index.php?title=remarquable&oldid=39850892), line 8.
+FR: Qui mérite d’être remarqué et attire l’attention.
 
-IPA: [remarquable, revision 39850892](https://fr.wiktionary.org/w/index.php?title=remarquable&oldid=39850892), line 7.
+Source: `b150_fr_174547`, line 8; CC BY-SA 4.0.
 
-### 3493 — revenu/NOM
+IPA: /ʁə.maʁ.kabl/
 
-Selected: Masculine financial noun; annual-income scope and the source’s optional-schwa IPA notation retained.
+Source: `b150_fr_174547`, line 7; CC BY-SA 4.0.
+
+EN: Remarkable or noteworthy; deserving notice and attracting attention.
+
+Source: `b150_fr_174547`, line 8; CC BY-SA 4.0.
+
+ZH: 值得注意的、引人注目的；显著的。
+
+Source: `b150_fr_174547`, line 8; CC BY-SA 4.0.
+
+## 3493 — revenu / NOM
+
+Use: Masculine financial noun; annual-income scope and the source’s optional-schwa IPA notation retained.
 
 Excluded: Metallurgical tempering and the past participle of revenir.
 
-Definition: [revenu, revision 39827359](https://fr.wiktionary.org/w/index.php?title=revenu&oldid=39827359), line 8.
+FR: Ce que l’on retire annuellement d’un emploi, d’un domaine, d’une pension ou d’une rente.
 
-IPA: [revenu, revision 39827359](https://fr.wiktionary.org/w/index.php?title=revenu&oldid=39827359), line 7.
+Source: `b150_fr_175069`, line 8; CC BY-SA 4.0.
 
-### 3494 — richesse/NOM
+IPA: /ʁ(ə.)v(ə.)ny/
 
-Selected: Feminine wealth noun.
+Source: `b150_fr_175069`, line 7; CC BY-SA 4.0.
+
+EN: Annual income obtained from employment, property, a pension or an annuity.
+
+Source: `b150_fr_175069`, line 8; CC BY-SA 4.0.
+
+ZH: 从工作、地产、养老金或年金等获得的年度收入。
+
+Source: `b150_fr_175069`, line 8; CC BY-SA 4.0.
+
+## 3494 — richesse / NOM
+
+Use: Feminine wealth noun.
 
 Excluded: Natural abundance, valuable objects and figurative richness of ideas.
 
-Definition: [richesse, revision 39843428](https://fr.wiktionary.org/w/index.php?title=richesse&oldid=39843428), line 8.
+FR: Abondance de biens ; opulence.
 
-IPA: [richesse, revision 39843428](https://fr.wiktionary.org/w/index.php?title=richesse&oldid=39843428), line 7.
+Source: `b150_fr_175185`, line 8; CC BY-SA 4.0.
 
-### 3495 — baby/NOM
+IPA: /ʁi.ʃɛs/
 
-Selected: Masculine informal game noun, pronounced ba.bi; false anglicism, abbreviation of baby-foot.
+Source: `b150_fr_175185`, line 7; CC BY-SA 4.0.
+
+EN: Wealth or affluence; an abundance of possessions.
+
+Source: `b150_fr_175185`, line 8; CC BY-SA 4.0.
+
+ZH: 财物充裕；富有、富裕。
+
+Source: `b150_fr_175185`, line 8; CC BY-SA 4.0.
+
+## 3495 — baby / NOM
+
+Use: Masculine informal game noun, pronounced ba.bi; false anglicism, abbreviation of baby-foot.
 
 Excluded: Obsolete baby or infant, affectionate address, whisky serving, cattle, religion and feminine shoes.
 
-Definition: [baby, revision 39667105](https://fr.wiktionary.org/w/index.php?title=baby&oldid=39667105), line 13.
+FR: Familièrement, baby-foot : jeu de football de table avec des joueurs miniatures fixés sur des barres mobiles.
 
-IPA: [baby, revision 39667105](https://fr.wiktionary.org/w/index.php?title=baby&oldid=39667105), line 12.
+Source: `b150_fr_83052`, line 13; CC BY-SA 4.0.
 
-### 3496 — délire/NOM
+IPA: /ba.bi/
 
-Selected: Masculine noun in the nonmedical idea/proposal sense.
+Source: `b150_fr_83052`, line 12; CC BY-SA 4.0.
+
+EN: Informal French short form of baby-foot: table football played with miniature players on movable rods.
+
+Source: `b150_fr_83052`, line 13; CC BY-SA 4.0.
+
+ZH: （法语口语）baby-foot 的简称；用活动横杆上的小人踢球的桌上足球游戏。
+
+Source: `b150_fr_83052`, line 13; CC BY-SA 4.0.
+
+## 3496 — délire / NOM
+
+Use: Masculine noun in the nonmedical idea/proposal sense.
 
 Excluded: Clinical delusions, delirium, emotional frenzy and positive excitement.
 
-Definition: [délire, revision 39953721](https://fr.wiktionary.org/w/index.php?title=d%C3%A9lire&oldid=39953721), line 28.
+FR: Idée ou proposition stupide, insensée.
 
-IPA: [délire, revision 39953721](https://fr.wiktionary.org/w/index.php?title=d%C3%A9lire&oldid=39953721), line 10.
+Source: `b150_fr_157062`, line 28; CC BY-SA 4.0.
 
-### 3497 — dépôt/NOM
+IPA: /de.liʁ/
 
-Selected: Masculine place noun.
+Source: `b150_fr_157062`, line 10; CC BY-SA 4.0.
+
+EN: An absurd or nonsensical idea or proposal.
+
+Source: `b150_fr_157062`, line 28; CC BY-SA 4.0.
+
+ZH: 愚蠢、荒唐或毫无道理的想法、提议。
+
+Source: `b150_fr_157062`, line 28; CC BY-SA 4.0.
+
+## 3497 — dépôt / NOM
+
+Use: Masculine place noun.
 
 Excluded: The act of depositing, financial deposits, security agreements and sediment.
 
-Definition: [dépôt, revision 40001507](https://fr.wiktionary.org/w/index.php?title=d%C3%A9p%C3%B4t&oldid=40001507), line 23.
+FR: Lieu où l’on entrepose des objets ou des marchandises.
 
-IPA: [dépôt, revision 40001507](https://fr.wiktionary.org/w/index.php?title=d%C3%A9p%C3%B4t&oldid=40001507), line 10.
+Source: `b150_fr_13989`, line 23; CC BY-SA 4.0.
 
-### 3498 — disponible/ADJ
+IPA: /de.po/
 
-Selected: Adjective with identical masculine and feminine singular forms; usable-availability sense.
+Source: `b150_fr_13989`, line 10; CC BY-SA 4.0.
+
+EN: Depot or storage place where objects or goods are kept.
+
+Source: `b150_fr_13989`, line 23; CC BY-SA 4.0.
+
+ZH: 存放物品或货物的场所；仓库、堆放处。
+
+Source: `b150_fr_13989`, line 23; CC BY-SA 4.0.
+
+## 3498 — disponible / ADJ
+
+Use: Adjective with identical masculine and feminine singular forms; usable-availability sense.
 
 Excluded: Legal disposable shares, administration status and sexual uses.
 
-Definition: [disponible, revision 39771644](https://fr.wiktionary.org/w/index.php?title=disponible&oldid=39771644), line 7.
+FR: Que l’on a à sa disposition et dont on peut disposer.
 
-IPA: [disponible, revision 39771644](https://fr.wiktionary.org/w/index.php?title=disponible&oldid=39771644), line 6.
+Source: `b150_fr_158039`, line 7; CC BY-SA 4.0.
 
-### 3499 — paysage/NOM
+IPA: /dis.pɔ.nibl/
 
-Selected: Masculine landscape noun.
+Source: `b150_fr_158039`, line 6; CC BY-SA 4.0.
+
+EN: Available; at one’s disposal and able to be used.
+
+Source: `b150_fr_158039`, line 7; CC BY-SA 4.0.
+
+ZH: 可以支配或使用的；可用的。
+
+Source: `b150_fr_158039`, line 7; CC BY-SA 4.0.
+
+## 3499 — paysage / NOM
+
+Use: Masculine landscape noun.
 
 Excluded: Ecological systems, figurative domains and paintings of landscapes.
 
-Definition: [paysage, revision 39796666](https://fr.wiktionary.org/w/index.php?title=paysage&oldid=39796666), line 12.
+FR: Étendue de territoire que l’on peut voir d’un regard.
 
-IPA: [paysage, revision 39796666](https://fr.wiktionary.org/w/index.php?title=paysage&oldid=39796666), line 9.
+Source: `b150_fr_141464`, line 12; CC BY-SA 4.0.
 
-### 3500 — anéantir/VER
+IPA: /pe.i.zaʒ/
 
-Selected: Transitive complete-destruction verb.
+Source: `b150_fr_141464`, line 9; CC BY-SA 4.0.
+
+EN: Landscape: an expanse of land visible to the eye.
+
+Source: `b150_fr_141464`, line 12; CC BY-SA 4.0.
+
+ZH: 视野中可见的一片地域；景观、风景。
+
+Source: `b150_fr_141464`, line 12; CC BY-SA 4.0.
+
+## 3500 — anéantir / VER
+
+Use: Transitive complete-destruction verb.
 
 Excluded: Hyperbolic exhaustion, passive bewilderment and pronominal uses.
 
-Definition: [anéantir, revision 39864805](https://fr.wiktionary.org/w/index.php?title=an%C3%A9antir&oldid=39864805), line 13.
+FR: Réduire à rien, détruire complètement.
 
-IPA: [anéantir, revision 39864805](https://fr.wiktionary.org/w/index.php?title=an%C3%A9antir&oldid=39864805), line 6.
+Source: `b150_fr_138459`, line 13; CC BY-SA 4.0.
+
+IPA: /a.ne.ɑ̃.tiʁ/
+
+Source: `b150_fr_138459`, line 6; CC BY-SA 4.0.
+
+EN: To annihilate or destroy completely.
+
+Source: `b150_fr_138459`, line 13; CC BY-SA 4.0.
+
+ZH: 彻底毁灭；使之化为乌有。
+
+Source: `b150_fr_138459`, line 13; CC BY-SA 4.0.

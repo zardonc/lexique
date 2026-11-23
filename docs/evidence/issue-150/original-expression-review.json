@@ -1,0 +1,3419 @@
+{
+  "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+  "scope": "Selected and supporting text only; comparator site transcription is proof, not admitted resource content.",
+  "sources": [
+    {
+      "source_id": "b150_fr_123",
+      "title": "juin",
+      "revid": 39943237,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=juin&oldid=39943237",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3457-juin-nom-selected",
+          "frozen_row": 3457,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[sixième|Sixième]] [[mois]] de l’[[année]] du [[calendrier grégorien]], qui compte 30 jours."
+        },
+        {
+          "sense_id": "b150-3457-juin-nom-selected",
+          "frozen_row": 3457,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''juin''' {{pron|ʒɥɛ̃|fr}} <small>ou</small> {{pron|ʒy.ɛ̃|fr}} <small>ou</small> {{pron|ʒy.œ̃|fr}} {{CA|nocat=1}} <small>ou</small> {{pron|ʒwɛ̃|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3457-juin-nom-selected",
+          "frozen_row": 3457,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[sixième|Sixième]] [[mois]] de l’[[année]] du [[calendrier grégorien]], qui compte 30 jours."
+        },
+        {
+          "sense_id": "b150-3457-juin-nom-selected",
+          "frozen_row": 3457,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[sixième|Sixième]] [[mois]] de l’[[année]] du [[calendrier grégorien]], qui compte 30 jours."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 names the sixth month; the wiki adds Gregorian scope and thirty days as factual clarification.",
+      "comparators": [
+        {
+          "title": "juin",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/juin",
+          "captured_at_utc": "2026-11-23T18:31:21.712919+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/juin",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-juin.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-juin.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_2506",
+      "title": "cavalier",
+      "revid": 39956304,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cavalier&oldid=39956304",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3452-cavalier-nom-selected",
+          "frozen_row": 3452,
+          "field": "french_definition",
+          "line_1_based": 19,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|équitation|fr}} Celui qui [[monter|monte]] à [[cheval]] {{équiv-pour|une femme|cavalière|lang=fr}}."
+        },
+        {
+          "sense_id": "b150-3452-cavalier-nom-selected",
+          "frozen_row": 3452,
+          "field": "ipa",
+          "line_1_based": 18,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''cavalier''' {{pron|ka.va.lje|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3452-cavalier-nom-selected",
+          "frozen_row": 3452,
+          "field": "english",
+          "line_1_based": 19,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|équitation|fr}} Celui qui [[monter|monte]] à [[cheval]] {{équiv-pour|une femme|cavalière|lang=fr}}."
+        },
+        {
+          "sense_id": "b150-3452-cavalier-nom-selected",
+          "frozen_row": 3452,
+          "field": "chinese",
+          "line_1_based": 19,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|équitation|fr}} Celui qui [[monter|monte]] à [[cheval]] {{équiv-pour|une femme|cavalière|lang=fr}}."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 names celui/celle qui est à cheval; the wiki explicitly separates masculine cavalier and feminine cavalière.",
+      "comparators": [
+        {
+          "title": "cavalier",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/cavalier",
+          "captured_at_utc": "2026-11-23T18:31:22.944376+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/cavalier",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-cavalier.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-cavalier.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_8100",
+      "title": "agresser",
+      "revid": 38463949,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=agresser&oldid=38463949",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3458-agresser-ver-selected",
+          "frozen_row": 3458,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|illégalité|fr}} [[entamer|Entamer]] par la [[force]], par la [[contrainte]], par la [[surprise]] ou par la [[ruse]] l’[[intégrité]] [[physique]], [[psychologique]] ou [[sexuelle]] d’une personne."
+        },
+        {
+          "sense_id": "b150-3458-agresser-ver-selected",
+          "frozen_row": 3458,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''agresser''' {{pron|a.ɡʁe.se|fr}} ou {{pron|a.ɡʁɛ.se|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+        },
+        {
+          "sense_id": "b150-3458-agresser-ver-selected",
+          "frozen_row": 3458,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|illégalité|fr}} [[entamer|Entamer]] par la [[force]], par la [[contrainte]], par la [[surprise]] ou par la [[ruse]] l’[[intégrité]] [[physique]], [[psychologique]] ou [[sexuelle]] d’une personne."
+        },
+        {
+          "sense_id": "b150-3458-agresser-ver-selected",
+          "frozen_row": 3458,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|illégalité|fr}} [[entamer|Entamer]] par la [[force]], par la [[contrainte]], par la [[surprise]] ou par la [[ruse]] l’[[intégrité]] [[physique]], [[psychologique]] ou [[sexuelle]] d’une personne."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected integrity/force/coercion/surprise/deception sentence is a French wiki lexical contribution; no third-party text-import marker attaches to it.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_9245",
+      "title": "dessert",
+      "revid": 39773546,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=dessert&oldid=39773546",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3456-dessert-nom-selected",
+          "frozen_row": 3456,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{préparations|fr}} [[mets#fr|Mets]] généralement [[sucré]] habituellement servi à la fin d’un [[repas]]."
+        },
+        {
+          "sense_id": "b150-3456-dessert-nom-selected",
+          "frozen_row": 3456,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''dessert''' {{pron|de.sɛʁ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3456-dessert-nom-selected",
+          "frozen_row": 3456,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{préparations|fr}} [[mets#fr|Mets]] généralement [[sucré]] habituellement servi à la fin d’un [[repas]]."
+        },
+        {
+          "sense_id": "b150-3456-dessert-nom-selected",
+          "frozen_row": 3456,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{préparations|fr}} [[mets#fr|Mets]] généralement [[sucré]] habituellement servi à la fin d’un [[repas]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected usually-sweet end-of-meal lexical definition is a wiki contribution; the neighbouring attributed novel examples are excluded.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_9939",
+      "title": "satellite",
+      "revid": 39644922,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=satellite&oldid=39644922",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3453-satellite-nom-selected",
+          "frozen_row": 3453,
+          "field": "french_definition",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|astronomie|fr}} [[objet|Objet]] [[naturel]] ou [[artificiel]] qui [[orbiter|orbite]] autour d’une [[planète]]."
+        },
+        {
+          "sense_id": "b150-3453-satellite-nom-selected",
+          "frozen_row": 3453,
+          "field": "ipa",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''satellite''' {{pron|sa.te.lit|fr}} ou {{pron|sa.tɛ.lit|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3453-satellite-nom-selected",
+          "frozen_row": 3453,
+          "field": "english",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|astronomie|fr}} [[objet|Objet]] [[naturel]] ou [[artificiel]] qui [[orbiter|orbite]] autour d’une [[planète]]."
+        },
+        {
+          "sense_id": "b150-3453-satellite-nom-selected",
+          "frozen_row": 3453,
+          "field": "chinese",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|astronomie|fr}} [[objet|Objet]] [[naturel]] ou [[artificiel]] qui [[orbiter|orbite]] autour d’une [[planète]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The natural/artificial orbit definition is selected. The neighbouring attributed 1843 astronomical quotation and other modern books are not source prose for the field.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_28524",
+      "title": "administration",
+      "revid": 39827447,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=administration&oldid=39827447",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3454-administration-nom-selected",
+          "frozen_row": 3454,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[action|Action]] d’[[administrer]] ; [[direction]] ou [[conduite]] des [[affaire]]s publiques ou particulières."
+        },
+        {
+          "sense_id": "b150-3454-administration-nom-selected",
+          "frozen_row": 3454,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''administration''' {{pron|ad.mi.nis.tʁa.sjɔ̃|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3454-administration-nom-selected",
+          "frozen_row": 3454,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[action|Action]] d’[[administrer]] ; [[direction]] ou [[conduite]] des [[affaire]]s publiques ou particulières."
+        },
+        {
+          "sense_id": "b150-3454-administration-nom-selected",
+          "frozen_row": 3454,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[action|Action]] d’[[administrer]] ; [[direction]] ou [[conduite]] des [[affaire]]s publiques ou particulières."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 action d’administrer and affairs examples provide the inherited management basis; the direction/conduite wording is a wiki expansion.",
+      "comparators": [
+        {
+          "title": "administration",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/administration",
+          "captured_at_utc": "2026-11-23T18:31:24.326554+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/administration",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-administration.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-administration.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_62935",
+      "title": "tristesse",
+      "revid": 39748797,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tristesse&oldid=39748797",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3460-tristesse-nom-selected",
+          "frozen_row": 3460,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[affliction|Affliction]], [[état]] de [[dépression]] [[moral]]e causé par quelque [[événement]] [[fâcheux]]."
+        },
+        {
+          "sense_id": "b150-3460-tristesse-nom-selected",
+          "frozen_row": 3460,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''tristesse''' {{pron|tʁis.tɛs|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3460-tristesse-nom-selected",
+          "frozen_row": 3460,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[affliction|Affliction]], [[état]] de [[dépression]] [[moral]]e causé par quelque [[événement]] [[fâcheux]]."
+        },
+        {
+          "sense_id": "b150-3460-tristesse-nom-selected",
+          "frozen_row": 3460,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[affliction|Affliction]], [[état]] de [[dépression]] [[moral]]e causé par quelque [[événement]] [[fâcheux]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected affliction/dépression morale/event sentence matches DAF8; the adaptation uses ordinary sadness rather than clinical depression.",
+      "comparators": [
+        {
+          "title": "tristesse",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/tristesse",
+          "captured_at_utc": "2026-11-23T18:31:25.719308+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/tristesse",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tristesse.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tristesse.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_116636",
+      "title": "pull",
+      "revid": 39959940,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pull&oldid=39959940",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3451-pull-nom-selected",
+          "frozen_row": 3451,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vêtements|fr}} {{ellipse|fr}} [[pull-over|Pull-over]]."
+        },
+        {
+          "sense_id": "b150-3451-pull-nom-selected",
+          "frozen_row": 3451,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''pull''' {{pron|pyl|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3451-pull-nom-selected",
+          "frozen_row": 3451,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vêtements|fr}} {{ellipse|fr}} [[pull-over|Pull-over]]."
+        },
+        {
+          "sense_id": "b150-3451-pull-nom-selected",
+          "frozen_row": 3451,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{vêtements|fr}} {{ellipse|fr}} [[pull-over|Pull-over]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected French ellipsis only links pull-over; the expansion uses the independently captured garment definition rather than other-language pulling meanings.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_149217",
+      "title": "barrage",
+      "revid": 39535588,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=barrage&oldid=39535588",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3455-barrage-nom-selected",
+          "frozen_row": 3455,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[barrière|Barrière]] qui [[fermer|ferme]] un [[chemin]]{{R|DAF8}}."
+        },
+        {
+          "sense_id": "b150-3455-barrage-nom-selected",
+          "frozen_row": 3455,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''barrage''' {{pron|bɑ.ʁaʒ|fr}} <small>ou</small> {{pron|ba.ʁaʒ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3455-barrage-nom-selected",
+          "frozen_row": 3455,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[barrière|Barrière]] qui [[fermer|ferme]] un [[chemin]]{{R|DAF8}}."
+        },
+        {
+          "sense_id": "b150-3455-barrage-nom-selected",
+          "frozen_row": 3455,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[barrière|Barrière]] qui [[fermer|ferme]] un [[chemin]]{{R|DAF8}}."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected road-barrier sentence and its inline DAF8 reference match the original; the adjacent Rivarol hydraulic definition is unselected.",
+      "comparators": [
+        {
+          "title": "barrage",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/barrage",
+          "captured_at_utc": "2026-11-23T18:31:26.894629+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/barrage",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-barrage.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-barrage.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_174771",
+      "title": "reporter",
+      "revid": 39997455,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=reporter&oldid=39997455",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3459-reporter-ver-selected",
+          "frozen_row": 3459,
+          "field": "french_definition",
+          "line_1_based": 32,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[remettre|Remettre]] à plus tard, [[différer]]."
+        },
+        {
+          "sense_id": "b150-3459-reporter-ver-selected",
+          "frozen_row": 3459,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''reporter''' {{pron|ʁə.pɔʁ.te|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+        },
+        {
+          "sense_id": "b150-3459-reporter-ver-selected",
+          "frozen_row": 3459,
+          "field": "english",
+          "line_1_based": 32,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[remettre|Remettre]] à plus tard, [[différer]]."
+        },
+        {
+          "sense_id": "b150-3459-reporter-ver-selected",
+          "frozen_row": 3459,
+          "field": "chinese",
+          "line_1_based": 32,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[remettre|Remettre]] à plus tard, [[différer]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 Remettre à une autre époque corresponds to the selected postponement; the wiki contracts this to remettre à plus tard/différer.",
+      "comparators": [
+        {
+          "title": "reporter",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/reporter",
+          "captured_at_utc": "2026-11-23T18:31:28.116063+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/reporter",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-reporter.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-reporter.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_7979",
+      "title": "pointe",
+      "revid": 39916461,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pointe&oldid=39916461",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3469-pointe-nom-selected",
+          "frozen_row": 3469,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[extrémité|Extrémité]] [[piquant]]e et [[aigu#fr|aigüe]] de [[quelque chose]] que ce [[être|soit]]."
+        },
+        {
+          "sense_id": "b150-3469-pointe-nom-selected",
+          "frozen_row": 3469,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''pointe''' {{pron|pwɛ̃t|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3469-pointe-nom-selected",
+          "frozen_row": 3469,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[extrémité|Extrémité]] [[piquant]]e et [[aigu#fr|aigüe]] de [[quelque chose]] que ce [[être|soit]]."
+        },
+        {
+          "sense_id": "b150-3469-pointe-nom-selected",
+          "frozen_row": 3469,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[extrémité|Extrémité]] [[piquant]]e et [[aigu#fr|aigüe]] de [[quelque chose]] que ce [[être|soit]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected extrémité piquante et aiguë definition matches DAF8, with spelling/markup changes.",
+      "comparators": [
+        {
+          "title": "pointe",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/pointe",
+          "captured_at_utc": "2026-11-23T18:31:29.735606+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/pointe",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-pointe.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-pointe.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_9663",
+      "title": "capitale",
+      "revid": 39974707,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=capitale&oldid=39974707",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3462-capitale-nom-selected",
+          "frozen_row": 3462,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} [[ville|Ville]] où siègent le [[gouvernement]] et le [[pouvoir]] [[législatif]] de l’[[État]]."
+        },
+        {
+          "sense_id": "b150-3462-capitale-nom-selected",
+          "frozen_row": 3462,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''capitale''' {{pron|ka.pi.tal|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3462-capitale-nom-selected",
+          "frozen_row": 3462,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} [[ville|Ville]] où siègent le [[gouvernement]] et le [[pouvoir]] [[législatif]] de l’[[État]]."
+        },
+        {
+          "sense_id": "b150-3462-capitale-nom-selected",
+          "frozen_row": 3462,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} [[ville|Ville]] où siègent le [[gouvernement]] et le [[pouvoir]] [[législatif]] de l’[[État]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The city definition and noun head at lines 8/7 are selected. CFC at line 42 belongs to the cartographic-letter sense and is wholly outside selected/supporting text.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_50532",
+      "title": "frite",
+      "revid": 39916750,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=frite&oldid=39916750",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3470-frite-nom-selected",
+          "frozen_row": 3470,
+          "field": "french_definition",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|cuisine|fr}} [[bâtonnet|Bâtonnet]] de [[pomme de terre|pomme de terre]] frit dans l’[[huile]]."
+        },
+        {
+          "sense_id": "b150-3470-frite-nom-selected",
+          "frozen_row": 3470,
+          "field": "ipa",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''frite''' {{pron|fʁit|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3470-frite-nom-selected",
+          "frozen_row": 3470,
+          "field": "english",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|cuisine|fr}} [[bâtonnet|Bâtonnet]] de [[pomme de terre|pomme de terre]] frit dans l’[[huile]]."
+        },
+        {
+          "sense_id": "b150-3470-frite-nom-selected",
+          "frozen_row": 3470,
+          "field": "chinese",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|cuisine|fr}} [[bâtonnet|Bâtonnet]] de [[pomme de terre|pomme de terre]] frit dans l’[[huile]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected singular potato-stick definition is a wiki lexical contribution, separate from quotations, pool objects and participles.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_107569",
+      "title": "capital",
+      "revid": 39925451,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=capital&oldid=39925451",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3463-capital-adj-selected",
+          "frozen_row": 3463,
+          "field": "french_definition",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui est d'une très grande [[importance]] ; qui est [[primordial]]."
+        },
+        {
+          "sense_id": "b150-3463-capital-adj-selected",
+          "frozen_row": 3463,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''capital''' {{pron|ka.pi.tal|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3463-capital-adj-selected",
+          "frozen_row": 3463,
+          "field": "english",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui est d'une très grande [[importance]] ; qui est [[primordial]]."
+        },
+        {
+          "sense_id": "b150-3463-capital-adj-selected",
+          "frozen_row": 3463,
+          "field": "chinese",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui est d'une très grande [[importance]] ; qui est [[primordial]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The correctly selected DAF8 adjective entry says qui est principal; the wiki importance/primordial sentence is a semantic modernization, separate from the noun.",
+      "comparators": [
+        {
+          "title": "capital",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/capital",
+          "captured_at_utc": "2026-11-23T18:31:31.382528+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/capital",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-capital.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-capital.txt"
+        },
+        {
+          "title": "capital",
+          "edition": "daf8-adjectif",
+          "url": "https://www.cnrtl.fr/definition/academie8/capital/adjectif",
+          "captured_at_utc": "2026-11-23T18:38:32.630081+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/capital/adjectif",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-capital.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-capital.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_115128",
+      "title": "record",
+      "revid": 39955333,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=record&oldid=39955333",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3465-record-nom-selected",
+          "frozen_row": 3465,
+          "field": "french_definition",
+          "line_1_based": 16,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[niveau|Niveau]] qui dépasse ce qui a été précédemment atteint ; [[summum]]."
+        },
+        {
+          "sense_id": "b150-3465-record-nom-selected",
+          "frozen_row": 3465,
+          "field": "ipa",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''record''' {{pron|ʁə.kɔʁ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3465-record-nom-selected",
+          "frozen_row": 3465,
+          "field": "english",
+          "line_1_based": 16,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[niveau|Niveau]] qui dépasse ce qui a été précédemment atteint ; [[summum]]."
+        },
+        {
+          "sense_id": "b150-3465-record-nom-selected",
+          "frozen_row": 3465,
+          "field": "chinese",
+          "line_1_based": 16,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[niveau|Niveau]] qui dépasse ce qui a été précédemment atteint ; [[summum]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 defines an officially observed sporting exploit exceeding prior performances. The selected wiki level/summum sentence generalizes this to non-sport levels; it is not a quote of the sporting sentence.",
+      "comparators": [
+        {
+          "title": "record",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/record",
+          "captured_at_utc": "2026-11-23T18:31:33.085976+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/record",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-record.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-record.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_120577",
+      "title": "conviction",
+      "revid": 39997314,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=conviction&oldid=39997314",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3467-conviction-nom-selected",
+          "frozen_row": 3467,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[effet|Effet]] qu’une [[preuve]] [[évident]]e [[produire|produit]] dans l’esprit, [[certitude]] que l’on a de la [[vérité]] d’un [[fait]], d’un [[principe]]."
+        },
+        {
+          "sense_id": "b150-3467-conviction-nom-selected",
+          "frozen_row": 3467,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''conviction''' {{pron|kɔ̃.vik.sjɔ̃|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3467-conviction-nom-selected",
+          "frozen_row": 3467,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[effet|Effet]] qu’une [[preuve]] [[évident]]e [[produire|produit]] dans l’esprit, [[certitude]] que l’on a de la [[vérité]] d’un [[fait]], d’un [[principe]]."
+        },
+        {
+          "sense_id": "b150-3467-conviction-nom-selected",
+          "frozen_row": 3467,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[effet|Effet]] qu’une [[preuve]] [[évident]]e [[produire|produit]] dans l’esprit, [[certitude]] que l’on a de la [[vérité]] d’un [[fait]], d’un [[principe]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected proof/certainty/fact/principle sentence matches DAF8. Only the certainty clause is adapted.",
+      "comparators": [
+        {
+          "title": "conviction",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/conviction",
+          "captured_at_utc": "2026-11-23T18:31:34.246264+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/conviction",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-conviction.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-conviction.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_145263",
+      "title": "planche",
+      "revid": 39868421,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=planche&oldid=39868421",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3461-planche-nom-selected",
+          "frozen_row": 3461,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[ais|Ais]], [[pièce]] de [[bois]] [[refendre|refendu]], ayant peu d’[[épaisseur]]."
+        },
+        {
+          "sense_id": "b150-3461-planche-nom-selected",
+          "frozen_row": 3461,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''planche''' {{pron|plɑ̃ʃ|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3461-planche-nom-selected",
+          "frozen_row": 3461,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[ais|Ais]], [[pièce]] de [[bois]] [[refendre|refendu]], ayant peu d’[[épaisseur]]."
+        },
+        {
+          "sense_id": "b150-3461-planche-nom-selected",
+          "frozen_row": 3461,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[ais|Ais]], [[pièce]] de [[bois]] [[refendre|refendu]], ayant peu d’[[épaisseur]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "Ais, pièce de bois refendu, ayant peu d’épaisseur matches the selected DAF8 original definition.",
+      "comparators": [
+        {
+          "title": "planche",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/planche",
+          "captured_at_utc": "2026-11-23T18:31:35.464864+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/planche",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-planche.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-planche.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_157141",
+      "title": "demeure",
+      "revid": 39773857,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=demeure&oldid=39773857",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3464-demeure-nom-selected",
+          "frozen_row": 3464,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{soutenu|fr}} [[habitation|Habitation]], [[domicile]]."
+        },
+        {
+          "sense_id": "b150-3464-demeure-nom-selected",
+          "frozen_row": 3464,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''demeure''' {{pron|də.mœʁ|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3464-demeure-nom-selected",
+          "frozen_row": 3464,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{soutenu|fr}} [[habitation|Habitation]], [[domicile]]."
+        },
+        {
+          "sense_id": "b150-3464-demeure-nom-selected",
+          "frozen_row": 3464,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{soutenu|fr}} [[habitation|Habitation]], [[domicile]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected habitation/domicile wording matches DAF8; the wiki additionally labels the current formal register.",
+      "comparators": [
+        {
+          "title": "demeure",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/demeure",
+          "captured_at_utc": "2026-11-23T18:31:36.860928+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/demeure",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-demeure.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-demeure.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_164660",
+      "title": "inconscient",
+      "revid": 39819444,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=inconscient&oldid=39819444",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3468-inconscient-adj-selected",
+          "frozen_row": 3468,
+          "field": "french_definition",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{courant|fr}} Qui est [[irréfléchi]]."
+        },
+        {
+          "sense_id": "b150-3468-inconscient-adj-selected",
+          "frozen_row": 3468,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''inconscient''' {{pron|ɛ̃.kɔ̃.sjɑ̃|fr}}"
+        },
+        {
+          "sense_id": "b150-3468-inconscient-adj-selected",
+          "frozen_row": 3468,
+          "field": "english",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{courant|fr}} Qui est [[irréfléchi]]."
+        },
+        {
+          "sense_id": "b150-3468-inconscient-adj-selected",
+          "frozen_row": 3468,
+          "field": "chinese",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{courant|fr}} Qui est [[irréfléchi]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The correctly selected DAF8 adjective entry expressly says dans le langage courant, qui est irréfléchi; this matches the selected courant wiki sense.",
+      "comparators": [
+        {
+          "title": "inconscient",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/inconscient",
+          "captured_at_utc": "2026-11-23T18:31:38.249301+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/inconscient",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-inconscient.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-inconscient.txt"
+        },
+        {
+          "title": "inconscient",
+          "edition": "daf8-adjectif",
+          "url": "https://www.cnrtl.fr/definition/academie8/inconscient/adjectif",
+          "captured_at_utc": "2026-11-23T18:38:34.145193+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/inconscient/adjectif",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-inconscient.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-inconscient.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_165437",
+      "title": "intervention",
+      "revid": 39816287,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=intervention&oldid=39816287",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3466-intervention-nom-selected",
+          "frozen_row": 3466,
+          "field": "french_definition",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} {{familier|fr}} Intervention [[chirurgical]]e."
+        },
+        {
+          "sense_id": "b150-3466-intervention-nom-selected",
+          "frozen_row": 3466,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''intervention''' {{pron|ɛ̃.tɛʁ.vɑ̃.sjɔ̃|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3466-intervention-nom-selected",
+          "frozen_row": 3466,
+          "field": "english",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} {{familier|fr}} Intervention [[chirurgical]]e."
+        },
+        {
+          "sense_id": "b150-3466-intervention-nom-selected",
+          "frozen_row": 3466,
+          "field": "chinese",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{ellipse|fr}} {{familier|fr}} Intervention [[chirurgical]]e."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 includes intervention chirurgicale; the wiki supplies a short explicit informal ellipsis rather than copying surrounding medical prose.",
+      "comparators": [
+        {
+          "title": "intervention",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/intervention",
+          "captured_at_utc": "2026-11-23T18:31:39.421569+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/intervention",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-intervention.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-intervention.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_7416",
+      "title": "angle",
+      "revid": 39985494,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=angle&oldid=39985494",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3477-angle-nom-selected",
+          "frozen_row": 3477,
+          "field": "french_definition",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[coin|Coin]], [[extrémité]] d’une [[chose]] [[terminer|terminé]]e par un [[croisement]]."
+        },
+        {
+          "sense_id": "b150-3477-angle-nom-selected",
+          "frozen_row": 3477,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''angle''' {{pron|ɑ̃ɡl|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3477-angle-nom-selected",
+          "frozen_row": 3477,
+          "field": "english",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[coin|Coin]], [[extrémité]] d’une [[chose]] [[terminer|terminé]]e par un [[croisement]]."
+        },
+        {
+          "sense_id": "b150-3477-angle-nom-selected",
+          "frozen_row": 3477,
+          "field": "chinese",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[coin|Coin]], [[extrémité]] d’une [[chose]] [[terminer|terminé]]e par un [[croisement]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 corner/extremity sense corresponds to the selected physical corner; the wiki replaces terminé en angle with a crossing formulation.",
+      "comparators": [
+        {
+          "title": "angle",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/angle",
+          "captured_at_utc": "2026-11-23T18:31:40.552170+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/angle",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-angle.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-angle.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_8025",
+      "title": "conte",
+      "revid": 39957356,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=conte&oldid=39957356",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3472-conte-nom-selected",
+          "frozen_row": 3472,
+          "field": "french_definition",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[récit|Récit]] d’[[aventure]]s [[imaginaire]]s, soit qu’elles aient de la [[vraisemblance]] ou que s’y mêle du [[merveilleux]], du [[féerique]]."
+        },
+        {
+          "sense_id": "b150-3472-conte-nom-selected",
+          "frozen_row": 3472,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''conte''' {{pron|kɔ̃t|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3472-conte-nom-selected",
+          "frozen_row": 3472,
+          "field": "english",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[récit|Récit]] d’[[aventure]]s [[imaginaire]]s, soit qu’elles aient de la [[vraisemblance]] ou que s’y mêle du [[merveilleux]], du [[féerique]]."
+        },
+        {
+          "sense_id": "b150-3472-conte-nom-selected",
+          "frozen_row": 3472,
+          "field": "chinese",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[récit|Récit]] d’[[aventure]]s [[imaginaire]]s, soit qu’elles aient de la [[vraisemblance]] ou que s’y mêle du [[merveilleux]], du [[féerique]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 court récit d’aventures imaginaires with plausible/marvellous branches matches the selected narrative basis; no adjacent quoted tale is reused.",
+      "comparators": [
+        {
+          "title": "conte",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/conte",
+          "captured_at_utc": "2026-11-23T18:31:41.918567+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/conte",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-conte.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-conte.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_11006",
+      "title": "historique",
+      "revid": 39913566,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=historique&oldid=39913566",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3471-historique-adj-selected",
+          "frozen_row": 3471,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Relatif à l’[[histoire]]."
+        },
+        {
+          "sense_id": "b150-3471-historique-adj-selected",
+          "frozen_row": 3471,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''historique''' {{pron|is.tɔ.ʁik|fr}} {{mf}}"
+        },
+        {
+          "sense_id": "b150-3471-historique-adj-selected",
+          "frozen_row": 3471,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Relatif à l’[[histoire]]."
+        },
+        {
+          "sense_id": "b150-3471-historique-adj-selected",
+          "frozen_row": 3471,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Relatif à l’[[histoire]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The correctly selected DAF8 adjective says qui a rapport à l’histoire, corresponding to the short wiki relation definition.",
+      "comparators": [
+        {
+          "title": "historique",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/historique",
+          "captured_at_utc": "2026-11-23T18:31:43.093750+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/historique",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-historique.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-historique.txt"
+        },
+        {
+          "title": "historique",
+          "edition": "daf8-adjectif",
+          "url": "https://www.cnrtl.fr/definition/academie8/historique/adjectif",
+          "captured_at_utc": "2026-11-23T18:38:35.381422+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/historique/adjectif",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-historique.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-historique.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_27024",
+      "title": "tailler",
+      "revid": 39949561,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tailler&oldid=39949561",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3479-tailler-ver-selected",
+          "frozen_row": 3479,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[couper|Couper]], [[retrancher]] d’une [[matière]], en [[ôter]] [[avec]] le [[marteau]], le [[ciseau]], ou tout autre [[instrument]], ce qu’il y a de [[superflu]], pour lui [[donner]] une [[certain]]e [[forme]], pour la [[rendre]] [[propre]] à [[tel ou tel]] [[usage]]."
+        },
+        {
+          "sense_id": "b150-3479-tailler-ver-selected",
+          "frozen_row": 3479,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''tailler''' {{pron|tɑ.je|fr}} ou {{pron|ta.je|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+        },
+        {
+          "sense_id": "b150-3479-tailler-ver-selected",
+          "frozen_row": 3479,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[couper|Couper]], [[retrancher]] d’une [[matière]], en [[ôter]] [[avec]] le [[marteau]], le [[ciseau]], ou tout autre [[instrument]], ce qu’il y a de [[superflu]], pour lui [[donner]] une [[certain]]e [[forme]], pour la [[rendre]] [[propre]] à [[tel ou tel]] [[usage]]."
+        },
+        {
+          "sense_id": "b150-3479-tailler-ver-selected",
+          "frozen_row": 3479,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[couper|Couper]], [[retrancher]] d’une [[matière]], en [[ôter]] [[avec]] le [[marteau]], le [[ciseau]], ou tout autre [[instrument]], ce qu’il y a de [[superflu]], pour lui [[donner]] une [[certain]]e [[forme]], pour la [[rendre]] [[propre]] à [[tel ou tel]] [[usage]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected long couper/retrancher/marteau/ciseau/superflu/forme/usage sentence matches DAF8 despite no import marker in this wiki article. The original Académie credit is therefore explicitly retained.",
+      "comparators": [
+        {
+          "title": "tailler",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/tailler",
+          "captured_at_utc": "2026-11-23T18:32:13.992936+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/tailler",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tailler.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tailler.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_32100",
+      "title": "lot",
+      "revid": 39834273,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=lot&oldid=39834273",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3478-lot-nom-selected",
+          "frozen_row": 3478,
+          "field": "french_definition",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Ce qui [[échoir|échoit]] dans une [[loterie]] à [[chacun]] des [[billet]]s [[gagnant]]s."
+        },
+        {
+          "sense_id": "b150-3478-lot-nom-selected",
+          "frozen_row": 3478,
+          "field": "ipa",
+          "line_1_based": 17,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''lot''' {{pron|lo|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3478-lot-nom-selected",
+          "frozen_row": 3478,
+          "field": "english",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Ce qui [[échoir|échoit]] dans une [[loterie]] à [[chacun]] des [[billet]]s [[gagnant]]s."
+        },
+        {
+          "sense_id": "b150-3478-lot-nom-selected",
+          "frozen_row": 3478,
+          "field": "chinese",
+          "line_1_based": 24,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Ce qui [[échoir|échoit]] dans une [[loterie]] à [[chacun]] des [[billet]]s [[gagnant]]s."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected lottery-ticket award sentence matches DAF8 exactly apart from wiki markup.",
+      "comparators": [
+        {
+          "title": "lot",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/lot",
+          "captured_at_utc": "2026-11-23T18:31:44.288243+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/lot",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-lot.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-lot.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_159760",
+      "title": "entretenir",
+      "revid": 40043506,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=entretenir&oldid=40043506",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3480-entretenir-ver-selected",
+          "frozen_row": 3480,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[tenir|Tenir]] en [[bon]] [[état]]."
+        },
+        {
+          "sense_id": "b150-3480-entretenir-ver-selected",
+          "frozen_row": 3480,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''entretenir''' {{pron|ɑ̃.tʁət.niʁ|fr}} ou {{pron|ɑ̃.tʁə.tə.niʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'}}"
+        },
+        {
+          "sense_id": "b150-3480-entretenir-ver-selected",
+          "frozen_row": 3480,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[tenir|Tenir]] en [[bon]] [[état]]."
+        },
+        {
+          "sense_id": "b150-3480-entretenir-ver-selected",
+          "frozen_row": 3480,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[tenir|Tenir]] en [[bon]] [[état]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected tenir en bon état matches DAF8; the financial support and conversation passages are unselected.",
+      "comparators": [
+        {
+          "title": "entretenir",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/entretenir",
+          "captured_at_utc": "2026-11-23T18:31:45.444060+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/entretenir",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-entretenir.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-entretenir.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_161355",
+      "title": "fiancer",
+      "revid": 39632677,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fiancer&oldid=39632677",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3473-fiancer-ver-selected",
+          "frozen_row": 3473,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[engager|Engager]] par une [[promesse]] de [[mariage]]."
+        },
+        {
+          "sense_id": "b150-3473-fiancer-ver-selected",
+          "frozen_row": 3473,
+          "field": "ipa",
+          "line_1_based": 54,
+          "column_1_based": 1,
+          "raw_source_excerpt": "*{{pron|fi.ɑ̃.se|fr}}, ou souvent {{pron|fi.jɑ̃.se|fr}}, l’enchainement {{pron|i.ɑ̃|fr}} n’étant pas très naturel en français."
+        },
+        {
+          "sense_id": "b150-3473-fiancer-ver-selected",
+          "frozen_row": 3473,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[engager|Engager]] par une [[promesse]] de [[mariage]]."
+        },
+        {
+          "sense_id": "b150-3473-fiancer-ver-selected",
+          "frozen_row": 3473,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[engager|Engager]] par une [[promesse]] de [[mariage]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The marriage-promise definition matches DAF8. Pronominal grammar is separately captured; the Supervielle literary quotation is excluded.",
+      "comparators": [
+        {
+          "title": "fiancer",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/fiancer",
+          "captured_at_utc": "2026-11-23T18:31:46.880118+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/fiancer",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-fiancer.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-fiancer.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_172768",
+      "title": "profondeur",
+      "revid": 39948706,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=profondeur&oldid=39948706",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3474-profondeur-nom-selected",
+          "frozen_row": 3474,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[étendue|Étendue]] d’une [[chose]] [[considérer|considérée]] [[depuis]] la [[surface]] ou l’[[entrée]] [[jusqu’]]au [[fond]]."
+        },
+        {
+          "sense_id": "b150-3474-profondeur-nom-selected",
+          "frozen_row": 3474,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''profondeur''' {{pron|pʁɔ.fɔ̃.dœʁ|fr}} {{f}} "
+        },
+        {
+          "sense_id": "b150-3474-profondeur-nom-selected",
+          "frozen_row": 3474,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[étendue|Étendue]] d’une [[chose]] [[considérer|considérée]] [[depuis]] la [[surface]] ou l’[[entrée]] [[jusqu’]]au [[fond]]."
+        },
+        {
+          "sense_id": "b150-3474-profondeur-nom-selected",
+          "frozen_row": 3474,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[étendue|Étendue]] d’une [[chose]] [[considérer|considérée]] [[depuis]] la [[surface]] ou l’[[entrée]] [[jusqu’]]au [[fond]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected surface/entrance-to-bottom definition matches DAF8.",
+      "comparators": [
+        {
+          "title": "profondeur",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/profondeur",
+          "captured_at_utc": "2026-11-23T18:31:48.089768+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/profondeur",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-profondeur.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-profondeur.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_173104",
+      "title": "publicité",
+      "revid": 39905691,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=publicit%C3%A9&oldid=39905691",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3475-publicité-nom-selected",
+          "frozen_row": 3475,
+          "field": "french_definition",
+          "line_1_based": 26,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[annonce|Annonce]] de caractère [[commercial]] par les [[journal|journaux]], les [[affiche]]s, les [[prospectus]] et tous autres moyens de [[réclame]]."
+        },
+        {
+          "sense_id": "b150-3475-publicité-nom-selected",
+          "frozen_row": 3475,
+          "field": "ipa",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''publicité''' {{pron|py.bli.si.te|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3475-publicité-nom-selected",
+          "frozen_row": 3475,
+          "field": "english",
+          "line_1_based": 26,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[annonce|Annonce]] de caractère [[commercial]] par les [[journal|journaux]], les [[affiche]]s, les [[prospectus]] et tous autres moyens de [[réclame]]."
+        },
+        {
+          "sense_id": "b150-3475-publicité-nom-selected",
+          "frozen_row": 3475,
+          "field": "chinese",
+          "line_1_based": 26,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[annonce|Annonce]] de caractère [[commercial]] par les [[journal|journaux]], les [[affiche]]s, les [[prospectus]] et tous autres moyens de [[réclame]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "Accepted line 26 matches DAF8’s annonce de caractère commercial/media sentence. Authored line 22 matches TLFi C verbatim and supplies no accepted field or supporting span.",
+      "comparators": [
+        {
+          "title": "publicité",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/publicit%C3%A9",
+          "captured_at_utc": "2026-11-23T18:31:49.521497+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/publicit%C3%A9",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-publicité.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-publicité.txt"
+        },
+        {
+          "title": "publicité",
+          "edition": "tlfi",
+          "url": "https://www.cnrtl.fr/definition/publicit%C3%A9",
+          "captured_at_utc": "2026-11-23T18:32:16.669893+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/publicit%C3%A9",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\tlfi-publicité.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\tlfi-publicité.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_173636",
+      "title": "quotidien",
+      "revid": 39849340,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=quotidien&oldid=39849340",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3476-quotidien-adj-selected",
+          "frozen_row": 3476,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# De [[chaque]] [[jour]]."
+        },
+        {
+          "sense_id": "b150-3476-quotidien-adj-selected",
+          "frozen_row": 3476,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''quotidien''' {{pron|ko.ti.djɛ̃|fr}}"
+        },
+        {
+          "sense_id": "b150-3476-quotidien-adj-selected",
+          "frozen_row": 3476,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# De [[chaque]] [[jour]]."
+        },
+        {
+          "sense_id": "b150-3476-quotidien-adj-selected",
+          "frozen_row": 3476,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# De [[chaque]] [[jour]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The correctly selected DAF8 adjective entry says de chaque jour, matching the selected definition.",
+      "comparators": [
+        {
+          "title": "quotidien",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/quotidien",
+          "captured_at_utc": "2026-11-23T18:31:50.711988+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/quotidien",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-quotidien.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-quotidien.txt"
+        },
+        {
+          "title": "quotidien",
+          "edition": "daf8-adjectif",
+          "url": "https://www.cnrtl.fr/definition/academie8/quotidien/adjectif",
+          "captured_at_utc": "2026-11-23T18:38:36.579781+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/quotidien/adjectif",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-quotidien.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-quotidien.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_7659",
+      "title": "résistance",
+      "revid": 39906540,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9sistance&oldid=39906540",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3489-résistance-nom-selected",
+          "frozen_row": 3489,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[qualité|Qualité]] par [[laquelle]] un [[corps]] [[résister|résiste]] à l’[[action]] d’un autre corps."
+        },
+        {
+          "sense_id": "b150-3489-résistance-nom-selected",
+          "frozen_row": 3489,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''résistance''' {{pron|ʁe.zis.tɑ̃s|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3489-résistance-nom-selected",
+          "frozen_row": 3489,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[qualité|Qualité]] par [[laquelle]] un [[corps]] [[résister|résiste]] à l’[[action]] d’un autre corps."
+        },
+        {
+          "sense_id": "b150-3489-résistance-nom-selected",
+          "frozen_row": 3489,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[qualité|Qualité]] par [[laquelle]] un [[corps]] [[résister|résiste]] à l’[[action]] d’un autre corps."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected physical-body resistance sentence matches DAF8; electrical and political meanings are excluded.",
+      "comparators": [
+        {
+          "title": "résistance",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/r%C3%A9sistance",
+          "captured_at_utc": "2026-11-23T18:31:51.867326+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/r%C3%A9sistance",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-résistance.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-résistance.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_7996",
+      "title": "carnet",
+      "revid": 39834880,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=carnet&oldid=39834880",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3486-carnet-nom-selected",
+          "frozen_row": 3486,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|papeterie|fr}} Petit [[livre]] de [[compte]]s ou de [[note]]s que l’on [[porter|porte]] [[avec]] soi."
+        },
+        {
+          "sense_id": "b150-3486-carnet-nom-selected",
+          "frozen_row": 3486,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''carnet''' {{pron|kaʁ.nɛ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3486-carnet-nom-selected",
+          "frozen_row": 3486,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|papeterie|fr}} Petit [[livre]] de [[compte]]s ou de [[note]]s que l’on [[porter|porte]] [[avec]] soi."
+        },
+        {
+          "sense_id": "b150-3486-carnet-nom-selected",
+          "frozen_row": 3486,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|papeterie|fr}} Petit [[livre]] de [[compte]]s ou de [[note]]s que l’on [[porter|porte]] [[avec]] soi."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The portable comptes/notes notebook definition matches DAF8, with et changed to ou in the wiki.",
+      "comparators": [
+        {
+          "title": "carnet",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/carnet",
+          "captured_at_utc": "2026-11-23T18:31:53.256925+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/carnet",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-carnet.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-carnet.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_8026",
+      "title": "enveloppe",
+      "revid": 40008913,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=enveloppe&oldid=40008913",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3487-enveloppe-nom-selected",
+          "frozen_row": 3487,
+          "field": "french_definition",
+          "line_1_based": 38,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|poste|fr}} [[poche|Poche]] de [[papier]] servant à [[expédier]] une [[lettre]]."
+        },
+        {
+          "sense_id": "b150-3487-enveloppe-nom-selected",
+          "frozen_row": 3487,
+          "field": "ipa",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''enveloppe''' {{pron|ɑ̃v.lɔp|ɑ̃.və.lɔp|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3487-enveloppe-nom-selected",
+          "frozen_row": 3487,
+          "field": "english",
+          "line_1_based": 38,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|poste|fr}} [[poche|Poche]] de [[papier]] servant à [[expédier]] une [[lettre]]."
+        },
+        {
+          "sense_id": "b150-3487-enveloppe-nom-selected",
+          "frozen_row": 3487,
+          "field": "chinese",
+          "line_1_based": 38,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|poste|fr}} [[poche|Poche]] de [[papier]] servant à [[expédier]] une [[lettre]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 independently gives the letter-envelope use; the selected paper-pocket sentence is a concise wiki reformulation, not a quote of another modern reference.",
+      "comparators": [
+        {
+          "title": "enveloppe",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/enveloppe",
+          "captured_at_utc": "2026-11-23T18:31:54.432937+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/enveloppe",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-enveloppe.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-enveloppe.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_37464",
+      "title": "tranquillement",
+      "revid": 39696202,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tranquillement&oldid=39696202",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3483-tranquillement-adv-selected",
+          "frozen_row": 3483,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# D’une manière [[tranquille]] ; avec [[tranquillité]]."
+        },
+        {
+          "sense_id": "b150-3483-tranquillement-adv-selected",
+          "frozen_row": 3483,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''tranquillement''' {{pron|tʁɑ̃.kil.mɑ̃|fr}}"
+        },
+        {
+          "sense_id": "b150-3483-tranquillement-adv-selected",
+          "frozen_row": 3483,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# D’une manière [[tranquille]] ; avec [[tranquillité]]."
+        },
+        {
+          "sense_id": "b150-3483-tranquillement-adv-selected",
+          "frozen_row": 3483,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# D’une manière [[tranquille]] ; avec [[tranquillité]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "D’une manière tranquille occurs in both DAF8 and Littré. The wiki adds avec tranquillité. Both historical original credits are retained; the linked calme meaning comes from separately captured tranquille, not a quoted literary example.",
+      "comparators": [
+        {
+          "title": "tranquillement",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/tranquillement",
+          "captured_at_utc": "2026-11-23T18:32:15.712480+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/tranquillement",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tranquillement.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tranquillement.txt"
+        },
+        {
+          "title": "tranquillement",
+          "edition": "littre",
+          "url": "https://www.littre.org/definition/tranquillement",
+          "captured_at_utc": "2026-11-23T18:32:17.841870+00:00",
+          "status": 200,
+          "final_url": "https://www.littre.org/definition/tranquillement",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\littre-tranquillement.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\littre-tranquillement.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        },
+        {
+          "original_authors": "Émile Littré",
+          "edition": "Dictionnaire de la langue française, original nineteenth-century edition",
+          "legal_basis": "CPI L123-1: life of the author plus seventy years; Littré died in 1881.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278939",
+          "conservative_expiry": "1952-01-01",
+          "independent_review": "passed_at_original_work_boundary",
+          "independent_original_rights": "public_domain_original_author_work",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "scope": "D’une manière tranquille is present in the retained Littré original-definition comparator; contemporary site transcription and literary quotations are not admitted."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_69507",
+      "title": "mark",
+      "revid": 39631847,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mark&oldid=39631847",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3485-mark-nom-selected",
+          "frozen_row": 3485,
+          "field": "french_definition",
+          "line_1_based": 17,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[deutschemark|Deutschemark]]."
+        },
+        {
+          "sense_id": "b150-3485-mark-nom-selected",
+          "frozen_row": 3485,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''mark''' {{pron|maʁk|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3485-mark-nom-selected",
+          "frozen_row": 3485,
+          "field": "english",
+          "line_1_based": 17,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[deutschemark|Deutschemark]]."
+        },
+        {
+          "sense_id": "b150-3485-mark-nom-selected",
+          "frozen_row": 3485,
+          "field": "chinese",
+          "line_1_based": 17,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[deutschemark|Deutschemark]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected definition is a lexical link to deutschemark; it introduces no historical or modern external quotation.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_117892",
+      "title": "impatient",
+      "revid": 39621898,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=impatient&oldid=39621898",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3488-impatient-adj-selected",
+          "frozen_row": 3488,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui [[manquer|manque]] de [[patience]], [[soit]] dans la [[souffrance]] de [[quelque]] [[mal]], soit dans l’[[attente]] de quelque [[bien]]."
+        },
+        {
+          "sense_id": "b150-3488-impatient-adj-selected",
+          "frozen_row": 3488,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "{{fr-accord-cons|ɛ̃.pa.sjɑ̃|t}}"
+        },
+        {
+          "sense_id": "b150-3488-impatient-adj-selected",
+          "frozen_row": 3488,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui [[manquer|manque]] de [[patience]], [[soit]] dans la [[souffrance]] de [[quelque]] [[mal]], soit dans l’[[attente]] de quelque [[bien]]."
+        },
+        {
+          "sense_id": "b150-3488-impatient-adj-selected",
+          "frozen_row": 3488,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui [[manquer|manque]] de [[patience]], [[soit]] dans la [[souffrance]] de [[quelque]] [[mal]], soit dans l’[[attente]] de quelque [[bien]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected lack-of-patience/waiting/suffering sentence matches DAF8.",
+      "comparators": [
+        {
+          "title": "impatient",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/impatient",
+          "captured_at_utc": "2026-11-23T18:31:55.584064+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/impatient",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-impatient.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-impatient.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_158771",
+      "title": "effondrer",
+      "revid": 39818493,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=effondrer&oldid=39818493",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3484-effondrer-ver-selected",
+          "frozen_row": 3484,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[défoncer|Défoncer]], [[rompre]], faire [[crouler]]."
+        },
+        {
+          "sense_id": "b150-3484-effondrer-ver-selected",
+          "frozen_row": 3484,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''effondrer''' {{pron|e.fɔ̃.dʁe|fr}} {{prnl}} ou {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal|’}}"
+        },
+        {
+          "sense_id": "b150-3484-effondrer-ver-selected",
+          "frozen_row": 3484,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[défoncer|Défoncer]], [[rompre]], faire [[crouler]]."
+        },
+        {
+          "sense_id": "b150-3484-effondrer-ver-selected",
+          "frozen_row": 3484,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[défoncer|Défoncer]], [[rompre]], faire [[crouler]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "Défoncer, rompre, faire crouler matches DAF8. Pronominal physical collapse is separately bound to the captured grammar; obsolete senses remain unselected.",
+      "comparators": [
+        {
+          "title": "effondrer",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/effondrer",
+          "captured_at_utc": "2026-11-23T18:31:56.785227+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/effondrer",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-effondrer.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-effondrer.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_160016",
+      "title": "ère",
+      "revid": 39863499,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A8re&oldid=39863499",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3490-ère-nom-selected",
+          "frozen_row": 3490,
+          "field": "french_definition",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par extension}} [[époque|Époque]] très [[remarquable]] où un [[nouvel]] [[ordre]] de choses s’[[établir|établit]], commence."
+        },
+        {
+          "sense_id": "b150-3490-ère-nom-selected",
+          "frozen_row": 3490,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''ère''' {{pron|ɛʁ|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3490-ère-nom-selected",
+          "frozen_row": 3490,
+          "field": "english",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par extension}} [[époque|Époque]] très [[remarquable]] où un [[nouvel]] [[ordre]] de choses s’[[établir|établit]], commence."
+        },
+        {
+          "sense_id": "b150-3490-ère-nom-selected",
+          "frozen_row": 3490,
+          "field": "chinese",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par extension}} [[époque|Époque]] très [[remarquable]] où un [[nouvel]] [[ordre]] de choses s’[[établir|établit]], commence."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected remarkable epoch/new order sentence matches DAF8’s extension.",
+      "comparators": [
+        {
+          "title": "ère",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/%C3%A8re",
+          "captured_at_utc": "2026-11-23T18:31:58.198099+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/%C3%A8re",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-ère.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-ère.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_161435",
+      "title": "fillette",
+      "revid": 39964837,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fillette&oldid=39964837",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3482-fillette-nom-selected",
+          "frozen_row": 3482,
+          "field": "french_definition",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[petite fille|Petite fille]], [[enfant]] du [[sexe]] ou [[genre]] [[féminin]] qui n’est [[plus]] un [[bébé]] sans être [[pubère]]."
+        },
+        {
+          "sense_id": "b150-3482-fillette-nom-selected",
+          "frozen_row": 3482,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''fillette''' {{pron|fi.jɛt|fr}} {{f}} {{équiv-pour|lang=fr|un homme|garçonnet}}"
+        },
+        {
+          "sense_id": "b150-3482-fillette-nom-selected",
+          "frozen_row": 3482,
+          "field": "english",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[petite fille|Petite fille]], [[enfant]] du [[sexe]] ou [[genre]] [[féminin]] qui n’est [[plus]] un [[bébé]] sans être [[pubère]]."
+        },
+        {
+          "sense_id": "b150-3482-fillette-nom-selected",
+          "frozen_row": 3482,
+          "field": "chinese",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[petite fille|Petite fille]], [[enfant]] du [[sexe]] ou [[genre]] [[féminin]] qui n’est [[plus]] un [[bébé]] sans être [[pubère]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 petite fille supplies the historical base. The wiki sex/gender and prepubescent age limits are later lexical clarification, not DAF8 quotations.",
+      "comparators": [
+        {
+          "title": "fillette",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/fillette",
+          "captured_at_utc": "2026-11-23T18:31:59.268177+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/fillette",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-fillette.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-fillette.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_166215",
+      "title": "lance",
+      "revid": 39932065,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=lance&oldid=39932065",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3481-lance-nom-selected",
+          "frozen_row": 3481,
+          "field": "french_definition",
+          "line_1_based": 16,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[arme|Arme]] à [[long]] [[bois]], [[terminer|terminée]] par un fer [[pointu]] et qui, au [[Moyen Âge]], était [[fort]] [[gros]]se vers la [[poignée]]."
+        },
+        {
+          "sense_id": "b150-3481-lance-nom-selected",
+          "frozen_row": 3481,
+          "field": "ipa",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''lance''' {{pron|lɑ̃s|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3481-lance-nom-selected",
+          "frozen_row": 3481,
+          "field": "english",
+          "line_1_based": 16,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[arme|Arme]] à [[long]] [[bois]], [[terminer|terminée]] par un fer [[pointu]] et qui, au [[Moyen Âge]], était [[fort]] [[gros]]se vers la [[poignée]]."
+        },
+        {
+          "sense_id": "b150-3481-lance-nom-selected",
+          "frozen_row": 3481,
+          "field": "chinese",
+          "line_1_based": 16,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[arme|Arme]] à [[long]] [[bois]], [[terminer|terminée]] par un fer [[pointu]] et qui, au [[Moyen Âge]], était [[fort]] [[gros]]se vers la [[poignée]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected long wooden weapon, pointed iron and medieval handle detail match DAF8. Only the general weapon description enters the adaptation.",
+      "comparators": [
+        {
+          "title": "lance",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/lance",
+          "captured_at_utc": "2026-11-23T18:32:00.342461+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/lance",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-lance.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-lance.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_13989",
+      "title": "dépôt",
+      "revid": 40001507,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9p%C3%B4t&oldid=40001507",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3497-dépôt-nom-selected",
+          "frozen_row": 3497,
+          "field": "french_definition",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Lieu où l’on [[entreposer|entrepose]] des objets ou des marchandises."
+        },
+        {
+          "sense_id": "b150-3497-dépôt-nom-selected",
+          "frozen_row": 3497,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''dépôt''' {{pron|de.po|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3497-dépôt-nom-selected",
+          "frozen_row": 3497,
+          "field": "english",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Lieu où l’on [[entreposer|entrepose]] des objets ou des marchandises."
+        },
+        {
+          "sense_id": "b150-3497-dépôt-nom-selected",
+          "frozen_row": 3497,
+          "field": "chinese",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Lieu où l’on [[entreposer|entrepose]] des objets ou des marchandises."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 separately defines a place where things are kept for use and a goods-distribution place; the selected entrepose objects/goods sentence is a wiki reformulation of the storage-place use.",
+      "comparators": [
+        {
+          "title": "dépôt",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9p%C3%B4t",
+          "captured_at_utc": "2026-11-23T18:32:01.776750+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9p%C3%B4t",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-dépôt.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-dépôt.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_83052",
+      "title": "baby",
+      "revid": 39667105,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=baby&oldid=39667105",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3495-baby-nom-selected",
+          "frozen_row": 3495,
+          "field": "french_definition",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|baby-foot|fr}} {{faux anglicismes|fr}} {{familier|fr}} ''Abréviation de'' [[baby-foot]]."
+        },
+        {
+          "sense_id": "b150-3495-baby-nom-selected",
+          "frozen_row": 3495,
+          "field": "ipa",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''baby''' {{pron|ba.bi|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3495-baby-nom-selected",
+          "frozen_row": 3495,
+          "field": "english",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|baby-foot|fr}} {{faux anglicismes|fr}} {{familier|fr}} ''Abréviation de'' [[baby-foot]]."
+        },
+        {
+          "sense_id": "b150-3495-baby-nom-selected",
+          "frozen_row": 3495,
+          "field": "chinese",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|baby-foot|fr}} {{faux anglicismes|fr}} {{familier|fr}} ''Abréviation de'' [[baby-foot]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected familiar French game abbreviation links baby-foot. Other noun blocks, infant examples and other languages are excluded.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_120460",
+      "title": "phase",
+      "revid": 39771555,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=phase&oldid=39771555",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3491-phase-nom-selected",
+          "frozen_row": 3491,
+          "field": "french_definition",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[état|États]] [[successif]]s par lesquels [[passer|passent]] [[certain]]s [[phénomène]]s de la [[vie]], de l’[[histoire]]."
+        },
+        {
+          "sense_id": "b150-3491-phase-nom-selected",
+          "frozen_row": 3491,
+          "field": "ipa",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''phase''' {{pron|fɑz|fr}} <small>ou</small> {{pron|faz|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3491-phase-nom-selected",
+          "frozen_row": 3491,
+          "field": "english",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[état|États]] [[successif]]s par lesquels [[passer|passent]] [[certain]]s [[phénomène]]s de la [[vie]], de l’[[histoire]]."
+        },
+        {
+          "sense_id": "b150-3491-phase-nom-selected",
+          "frozen_row": 3491,
+          "field": "chinese",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[état|États]] [[successif]]s par lesquels [[passer|passent]] [[certain]]s [[phénomène]]s de la [[vie]], de l’[[histoire]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected successive states of life/history phenomena sentence matches DAF8’s figurative extension.",
+      "comparators": [
+        {
+          "title": "phase",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/phase",
+          "captured_at_utc": "2026-11-23T18:32:03.201443+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/phase",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-phase.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-phase.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_138459",
+      "title": "anéantir",
+      "revid": 39864805,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=an%C3%A9antir&oldid=39864805",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3500-anéantir-ver-selected",
+          "frozen_row": 3500,
+          "field": "french_definition",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par extension}} [[réduire|Réduire]] à [[rien]], [[détruire]] [[absolument]]."
+        },
+        {
+          "sense_id": "b150-3500-anéantir-ver-selected",
+          "frozen_row": 3500,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''anéantir''' {{pron|a.ne.ɑ̃.tiʁ|fr}} {{t|fr}} {{conjugaison|fr|grp=2}} {{lien pronominal|'}}"
+        },
+        {
+          "sense_id": "b150-3500-anéantir-ver-selected",
+          "frozen_row": 3500,
+          "field": "english",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par extension}} [[réduire|Réduire]] à [[rien]], [[détruire]] [[absolument]]."
+        },
+        {
+          "sense_id": "b150-3500-anéantir-ver-selected",
+          "frozen_row": 3500,
+          "field": "chinese",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{par extension}} [[réduire|Réduire]] à [[rien]], [[détruire]] [[absolument]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected réduire à rien/détruire absolument sentence matches DAF8’s extension.",
+      "comparators": [
+        {
+          "title": "anéantir",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/an%C3%A9antir",
+          "captured_at_utc": "2026-11-23T18:32:04.399904+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/an%C3%A9antir",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-anéantir.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-anéantir.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_141464",
+      "title": "paysage",
+      "revid": 39796666,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=paysage&oldid=39796666",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3499-paysage-nom-selected",
+          "frozen_row": 3499,
+          "field": "french_definition",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|agriculture|géographie|jardinage|fr}} [[étendue|Étendue]] de [[territoire]] couverte par le [[regard]]."
+        },
+        {
+          "sense_id": "b150-3499-paysage-nom-selected",
+          "frozen_row": 3499,
+          "field": "ipa",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''paysage''' {{pron|pe.i.zaʒ|fr}} <small>ou</small> {{pron|pɛ.i.zaʒ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3499-paysage-nom-selected",
+          "frozen_row": 3499,
+          "field": "english",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|agriculture|géographie|jardinage|fr}} [[étendue|Étendue]] de [[territoire]] couverte par le [[regard]]."
+        },
+        {
+          "sense_id": "b150-3499-paysage-nom-selected",
+          "frozen_row": 3499,
+          "field": "chinese",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|agriculture|géographie|jardinage|fr}} [[étendue|Étendue]] de [[territoire]] couverte par le [[regard]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "DAF8 étendue de pays que l’on voit d’un seul aspect supplies the visual-landscape basis; the selected territory/regard sentence is a wiki reformulation.",
+      "comparators": [
+        {
+          "title": "paysage",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/paysage",
+          "captured_at_utc": "2026-11-23T18:32:05.812433+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/paysage",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-paysage.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-paysage.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_157062",
+      "title": "délire",
+      "revid": 39953721,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9lire&oldid=39953721",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3496-délire-nom-selected",
+          "frozen_row": 3496,
+          "field": "french_definition",
+          "line_1_based": 28,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Idée, proposition [[stupide]], [[insensé]]e."
+        },
+        {
+          "sense_id": "b150-3496-délire-nom-selected",
+          "frozen_row": 3496,
+          "field": "ipa",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''délire''' {{pron|de.liʁ|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3496-délire-nom-selected",
+          "frozen_row": 3496,
+          "field": "english",
+          "line_1_based": 28,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Idée, proposition [[stupide]], [[insensé]]e."
+        },
+        {
+          "sense_id": "b150-3496-délire-nom-selected",
+          "frozen_row": 3496,
+          "field": "chinese",
+          "line_1_based": 28,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Idée, proposition [[stupide]], [[insensé]]e."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The article’s DAF8 reference is not attached to the selected short stupid/nonsensical idea definition. The nonmedical wiki contribution is selected; no DAF8 medical definition is quoted. The comparator default selected the verb homograph and its substantif route returned 404, so no original-edition match is claimed.",
+      "comparators": [
+        {
+          "title": "délire",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9lire",
+          "captured_at_utc": "2026-11-23T18:32:06.966469+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/d%C3%A9lire",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-délire.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-délire.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_158039",
+      "title": "disponible",
+      "revid": 39771644,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=disponible&oldid=39771644",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3498-disponible-adj-selected",
+          "frozen_row": 3498,
+          "field": "french_definition",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Que l’on a à sa [[disposition]], dont on peut [[disposer]]."
+        },
+        {
+          "sense_id": "b150-3498-disponible-adj-selected",
+          "frozen_row": 3498,
+          "field": "ipa",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''disponible''' {{pron|dis.pɔ.nibl|fr}} {{mf}}"
+        },
+        {
+          "sense_id": "b150-3498-disponible-adj-selected",
+          "frozen_row": 3498,
+          "field": "english",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Que l’on a à sa [[disposition]], dont on peut [[disposer]]."
+        },
+        {
+          "sense_id": "b150-3498-disponible-adj-selected",
+          "frozen_row": 3498,
+          "field": "chinese",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Que l’on a à sa [[disposition]], dont on peut [[disposer]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected disposition/disposer sentence matches DAF8.",
+      "comparators": [
+        {
+          "title": "disponible",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/disponible",
+          "captured_at_utc": "2026-11-23T18:32:07.893692+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/disponible",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-disponible.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-disponible.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_174547",
+      "title": "remarquable",
+      "revid": 39850892,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=remarquable&oldid=39850892",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3492-remarquable-adj-selected",
+          "frozen_row": 3492,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui [[mériter|mérite]] d’être remarqué ; qui [[attirer|attire]] l’[[attention]]."
+        },
+        {
+          "sense_id": "b150-3492-remarquable-adj-selected",
+          "frozen_row": 3492,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''remarquable''' {{pron|ʁə.maʁ.kabl|fr}} {{mf}}"
+        },
+        {
+          "sense_id": "b150-3492-remarquable-adj-selected",
+          "frozen_row": 3492,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui [[mériter|mérite]] d’être remarqué ; qui [[attirer|attire]] l’[[attention]]."
+        },
+        {
+          "sense_id": "b150-3492-remarquable-adj-selected",
+          "frozen_row": 3492,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Qui [[mériter|mérite]] d’être remarqué ; qui [[attirer|attire]] l’[[attention]]."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The correctly selected DAF8 adjective entry’s mérite d’être remarqué/attire l’attention sentence matches the selected definition.",
+      "comparators": [
+        {
+          "title": "remarquable",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/remarquable",
+          "captured_at_utc": "2026-11-23T18:32:09.093936+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/remarquable",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-remarquable.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-remarquable.txt"
+        },
+        {
+          "title": "remarquable",
+          "edition": "daf8-adjectif",
+          "url": "https://www.cnrtl.fr/definition/academie8/remarquable/adjectif",
+          "captured_at_utc": "2026-11-23T18:38:37.999772+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/remarquable/adjectif",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-remarquable.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-adjectif-remarquable.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_175069",
+      "title": "revenu",
+      "revid": 39827359,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=revenu&oldid=39827359",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3493-revenu-nom-selected",
+          "frozen_row": 3493,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Ce qu’on [[retirer|retire]] [[annuellement]] d’un [[domaine]], d’un [[emploi]], d’une [[pension]], d’une [[constitution]] de [[rente]], etc."
+        },
+        {
+          "sense_id": "b150-3493-revenu-nom-selected",
+          "frozen_row": 3493,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''revenu''' {{pron|ʁ(ə.)v(ə.)ny|fr}} {{m}}"
+        },
+        {
+          "sense_id": "b150-3493-revenu-nom-selected",
+          "frozen_row": 3493,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Ce qu’on [[retirer|retire]] [[annuellement]] d’un [[domaine]], d’un [[emploi]], d’une [[pension]], d’une [[constitution]] de [[rente]], etc."
+        },
+        {
+          "sense_id": "b150-3493-revenu-nom-selected",
+          "frozen_row": 3493,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Ce qu’on [[retirer|retire]] [[annuellement]] d’un [[domaine]], d’un [[emploi]], d’une [[pension]], d’une [[constitution]] de [[rente]], etc."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The annual employment/property/pension/annuity receipt sentence matches DAF8.",
+      "comparators": [
+        {
+          "title": "revenu",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/revenu",
+          "captured_at_utc": "2026-11-23T18:32:10.192924+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/revenu",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-revenu.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-revenu.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_175185",
+      "title": "richesse",
+      "revid": 39843428,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=richesse&oldid=39843428",
+      "selected_locations": [
+        {
+          "sense_id": "b150-3494-richesse-nom-selected",
+          "frozen_row": 3494,
+          "field": "french_definition",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[opulence|Opulence]] ; [[abondance]] de [[bien]]s."
+        },
+        {
+          "sense_id": "b150-3494-richesse-nom-selected",
+          "frozen_row": 3494,
+          "field": "ipa",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''richesse''' {{pron|ʁi.ʃɛs|fr}} {{f}}"
+        },
+        {
+          "sense_id": "b150-3494-richesse-nom-selected",
+          "frozen_row": 3494,
+          "field": "english",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[opulence|Opulence]] ; [[abondance]] de [[bien]]s."
+        },
+        {
+          "sense_id": "b150-3494-richesse-nom-selected",
+          "frozen_row": 3494,
+          "field": "chinese",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[opulence|Opulence]] ; [[abondance]] de [[bien]]s."
+        }
+      ],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected opulence/abondance de biens definition matches DAF8.",
+      "comparators": [
+        {
+          "title": "richesse",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/richesse",
+          "captured_at_utc": "2026-11-23T18:32:11.390805+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/richesse",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-richesse.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-richesse.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_8487",
+      "title": "tranquille",
+      "revid": 40003740,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tranquille&oldid=40003740",
+      "selected_locations": [],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The supporting paisible/calme/sans agitation definition matches DAF8; the quiet adjective support has its own fixed revision and contributors.",
+      "comparators": [
+        {
+          "title": "tranquille",
+          "edition": "daf8",
+          "url": "https://www.cnrtl.fr/definition/academie8/tranquille",
+          "captured_at_utc": "2026-11-23T18:32:12.821057+00:00",
+          "status": 200,
+          "final_url": "https://www.cnrtl.fr/definition/academie8/tranquille",
+          "html_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tranquille.html",
+          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-150\\issue-150-review\\originals\\daf8-tranquille.txt"
+        }
+      ],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner",
+          "independent_original_rights": "public_domain_original_collective_work",
+          "independent_original_reason": "DAF8 final publication 1935; L123-3 seventy years from the following 1 January gives 2006-01-01. Original credit remains separate from CC BY-SA wiki/translation layers."
+        }
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_183877",
+      "title": "pull-over",
+      "revid": 39958057,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pull-over&oldid=39958057",
+      "selected_locations": [],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected supporting warm-garment sentence is a French wiki lexical contribution; no external import marker attaches to it.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_203984",
+      "title": "baby-foot",
+      "revid": 39378178,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=baby-foot&oldid=39378178",
+      "selected_locations": [],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected supporting table-game definition is a wiki lexical contribution. No neighbouring attributed example is reused.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    },
+    {
+      "source_id": "b150_fr_1506568",
+      "title": "deutschemark",
+      "revid": 39030114,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=deutschemark&oldid=39030114",
+      "selected_locations": [],
+      "decision": "passed_at_selected_text_boundary",
+      "reason": "The selected supporting currency/timeframe definition gives monetary facts and euro replacement, without copied external literary prose.",
+      "comparators": [],
+      "original_historical_dictionary_layers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #150; separate from author and integration owner"
+    }
+  ]
+}
