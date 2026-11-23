@@ -1,6 +1,6 @@
 {
-  "status": "independent_selected_rights_partially_unresolved",
-  "independent_review": "completed_with_original_expression_blockers",
+  "status": "independent_selected_rights_passed_at_current_selection",
+  "independent_review": "passed_at_selected_text_boundary",
   "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
   "proposed_adaptation_license": "CC-BY-SA-4.0",
   "complete_legal_text": "resources/core-pilot-79/COPYING",
@@ -697,8 +697,8 @@
           "frozen_row": 3102,
           "field": "french_definition",
           "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+          "column_1_based": 131,
+          "raw_source_excerpt": "[[divertir]]"
         },
         {
           "sense_id": "b143-3102-distraire-ver-selected",
@@ -713,16 +713,16 @@
           "frozen_row": 3102,
           "field": "english",
           "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+          "column_1_based": 131,
+          "raw_source_excerpt": "[[divertir]]"
         },
         {
           "sense_id": "b143-3102-distraire-ver-selected",
           "frozen_row": 3102,
           "field": "chinese",
           "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+          "column_1_based": 131,
+          "raw_source_excerpt": "[[divertir]]"
         }
       ],
       "import_notices": [
@@ -745,9 +745,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished.",
-          "territorial_scope": "French collective economic expiry only; selected factual/short-expression decisions are separate"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -760,9 +762,13 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending_original_work_territorial_review",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "review_reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished."
+      "review_reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished.",
+      "selected_text_review": "passed",
+      "selected_text_rights_status": "passed",
+      "selected_text_rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "source_id": "b143_fr_160577",
@@ -955,8 +961,8 @@
           "frozen_row": 3110,
           "field": "french_definition",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+          "column_1_based": 7,
+          "raw_source_excerpt": "[[impressionner|impressionne]]"
         },
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
@@ -971,16 +977,16 @@
           "frozen_row": 3110,
           "field": "english",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+          "column_1_based": 7,
+          "raw_source_excerpt": "[[impressionner|impressionne]]"
         },
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
           "frozen_row": 3110,
           "field": "chinese",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+          "column_1_based": 7,
+          "raw_source_excerpt": "[[impressionner|impressionne]]"
         }
       ],
       "import_notices": [
@@ -1003,9 +1009,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved.",
-          "territorial_scope": "French collective economic expiry only; selected factual/short-expression decisions are separate"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -1018,9 +1026,13 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending_original_work_territorial_review",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "review_reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved."
+      "review_reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved.",
+      "selected_text_review": "passed",
+      "selected_text_rights_status": "passed",
+      "selected_text_rights_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "source_id": "b143_fr_35432",
@@ -1147,8 +1159,8 @@
           "frozen_row": 3115,
           "field": "french_definition",
           "line_1_based": 63,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+          "column_1_based": 154,
+          "raw_source_excerpt": "[[cesser]] leur [[travail]]"
         },
         {
           "sense_id": "b143-3115-grève-nom-selected",
@@ -1163,16 +1175,16 @@
           "frozen_row": 3115,
           "field": "english",
           "line_1_based": 63,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+          "column_1_based": 154,
+          "raw_source_excerpt": "[[cesser]] leur [[travail]]"
         },
         {
           "sense_id": "b143-3115-grève-nom-selected",
           "frozen_row": 3115,
           "field": "chinese",
           "line_1_based": 63,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+          "column_1_based": 154,
+          "raw_source_excerpt": "[[cesser]] leur [[travail]]"
         }
       ],
       "import_notices": [],
@@ -1191,9 +1203,13 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending_original_work_territorial_review",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "review_reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established."
+      "review_reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established.",
+      "selected_text_review": "passed",
+      "selected_text_rights_status": "passed",
+      "selected_text_rights_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "source_id": "b143_fr_51802",
@@ -2176,8 +2192,8 @@
           "frozen_row": 3123,
           "field": "french_definition",
           "line_1_based": 18,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+          "column_1_based": 38,
+          "raw_source_excerpt": "lire seul et des [[yeux]]"
         },
         {
           "sense_id": "b143-3123-lecture-nom-selected",
@@ -2192,16 +2208,16 @@
           "frozen_row": 3123,
           "field": "english",
           "line_1_based": 18,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+          "column_1_based": 38,
+          "raw_source_excerpt": "lire seul et des [[yeux]]"
         },
         {
           "sense_id": "b143-3123-lecture-nom-selected",
           "frozen_row": 3123,
           "field": "chinese",
           "line_1_based": 18,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+          "column_1_based": 38,
+          "raw_source_excerpt": "lire seul et des [[yeux]]"
         }
       ],
       "import_notices": [
@@ -2224,9 +2240,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved.",
-          "territorial_scope": "French collective economic expiry only; selected factual/short-expression decisions are separate"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -2239,9 +2257,13 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending_original_work_territorial_review",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "review_reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved."
+      "review_reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved.",
+      "selected_text_review": "passed",
+      "selected_text_rights_status": "passed",
+      "selected_text_rights_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "source_id": "b143_fr_137400",
@@ -2353,8 +2375,8 @@
           "frozen_row": 3129,
           "field": "french_definition",
           "line_1_based": 20,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+          "column_1_based": 3,
+          "raw_source_excerpt": "Assemblée"
         },
         {
           "sense_id": "b143-3129-congrès-nom-selected",
@@ -2369,16 +2391,16 @@
           "frozen_row": 3129,
           "field": "english",
           "line_1_based": 20,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+          "column_1_based": 3,
+          "raw_source_excerpt": "Assemblée"
         },
         {
           "sense_id": "b143-3129-congrès-nom-selected",
           "frozen_row": 3129,
           "field": "chinese",
           "line_1_based": 20,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+          "column_1_based": 3,
+          "raw_source_excerpt": "Assemblée"
         }
       ],
       "import_notices": [
@@ -2401,9 +2423,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved.",
-          "territorial_scope": "French collective economic expiry only; selected factual/short-expression decisions are separate"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -2416,9 +2440,13 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending_original_work_territorial_review",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "review_reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved."
+      "review_reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved.",
+      "selected_text_review": "passed",
+      "selected_text_rights_status": "passed",
+      "selected_text_rights_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "source_id": "b143_fr_169492",
@@ -3778,8 +3806,8 @@
           "frozen_row": 3141,
           "field": "french_definition",
           "line_1_based": 21,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+          "column_1_based": 20,
+          "raw_source_excerpt": "[[salle|Salle]]"
         },
         {
           "sense_id": "b143-3141-galerie-nom-selected",
@@ -3794,16 +3822,16 @@
           "frozen_row": 3141,
           "field": "english",
           "line_1_based": 21,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+          "column_1_based": 20,
+          "raw_source_excerpt": "[[salle|Salle]]"
         },
         {
           "sense_id": "b143-3141-galerie-nom-selected",
           "frozen_row": 3141,
           "field": "chinese",
           "line_1_based": 21,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+          "column_1_based": 20,
+          "raw_source_excerpt": "[[salle|Salle]]"
         }
       ],
       "import_notices": [
@@ -3826,9 +3854,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved.",
-          "territorial_scope": "French collective economic expiry only; selected factual/short-expression decisions are separate"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "reference_markers": [
@@ -3846,9 +3876,13 @@
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
       "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending_original_work_territorial_review",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "review_reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved."
+      "review_reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved.",
+      "selected_text_review": "passed",
+      "selected_text_rights_status": "passed",
+      "selected_text_rights_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "source_id": "b143_fr_150321",
@@ -4585,7 +4619,7 @@
     }
   ],
   "proposed_fields": 200,
-  "independent_rights_fields_accepted": 182,
+  "independent_rights_fields_accepted": 200,
   "final_combined_package_status": "pending_coordinator_assembly_and_native_checks",
   "fields": [
     {
@@ -4761,8 +4795,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
       "exact_source_span": {
         "line_1_based": 14,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+        "column_1_based": 131,
+        "raw_source_excerpt": "[[divertir]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -4780,18 +4814,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "accepted_text": "Amuser ou divertir quelqu’un en éloignant son esprit de ce qui le fatigue ou l’obsède ; emploi transitif.",
-      "review_reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "accepted_text": "Offrir à quelqu’un un moment de divertissement qui lui fait oublier ses soucis ou sa fatigue ; verbe transitif.",
+      "review_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3102-distraire-ver-selected",
@@ -4843,8 +4882,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
       "exact_source_span": {
         "line_1_based": 14,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+        "column_1_based": 131,
+        "raw_source_excerpt": "[[divertir]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -4862,18 +4901,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "accepted_text": "To entertain or amuse someone, taking their mind off what tires or preoccupies them; transitive distraire quelqu’un.",
-      "review_reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "accepted_text": "To amuse someone and give them a break from tiring or troubling thoughts (transitive: distraire quelqu’un).",
+      "review_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3102-distraire-ver-selected",
@@ -4884,8 +4928,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
       "exact_source_span": {
         "line_1_based": 14,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+        "column_1_based": 131,
+        "raw_source_excerpt": "[[divertir]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -4903,18 +4947,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "accepted_text": "使某人开心或得到消遣，把其注意力从令人疲惫或困扰的事情上移开；及物用法 distraire quelqu’un。",
-      "review_reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "accepted_text": "使某人得到消遣，暂时摆脱令人疲惫或烦心的思绪（及物用法：distraire quelqu’un）。",
+      "review_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3103-tabac-nom-selected",
@@ -6009,8 +6058,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
       "exact_source_span": {
         "line_1_based": 8,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+        "column_1_based": 7,
+        "raw_source_excerpt": "[[impressionner|impressionne]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -6028,18 +6077,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "accepted_text": "Qui produit une impression vive et forte sur l’esprit ou la sensibilité ; adjectif, féminin impressionnante.",
-      "review_reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "accepted_text": "Qui marque fortement les esprits ou les émotions ; féminin : impressionnante.",
+      "review_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3110-impressionnant-adj-selected",
@@ -6091,8 +6145,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
       "exact_source_span": {
         "line_1_based": 8,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+        "column_1_based": 7,
+        "raw_source_excerpt": "[[impressionner|impressionne]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -6110,18 +6164,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "Impressive or striking: producing a strong impression on the mind or feelings; adjective, feminine impressionnante.",
-      "review_reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3110-impressionnant-adj-selected",
@@ -6132,8 +6191,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
       "exact_source_span": {
         "line_1_based": 8,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+        "column_1_based": 7,
+        "raw_source_excerpt": "[[impressionner|impressionne]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -6151,18 +6210,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "令人印象深刻的、震撼的：给人的心智或感受留下强烈印象；形容词，阴性形式 impressionnante。",
-      "review_reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3111-cuisinier-nom-selected",
@@ -6701,21 +6765,24 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
       "exact_source_span": {
         "line_1_based": 63,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+        "column_1_based": 154,
+        "raw_source_excerpt": "[[cesser]] leur [[travail]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
       "contributors_record": "source-context.json#b143_fr_36764",
       "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
       "original_historical_dictionary_layers": [],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "Arrêt concerté du travail par des salariés pour obtenir une augmentation de salaire ou d’autres avantages ; nom féminin.",
-      "review_reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3115-grève-nom-selected",
@@ -6751,21 +6818,24 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
       "exact_source_span": {
         "line_1_based": 63,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+        "column_1_based": 154,
+        "raw_source_excerpt": "[[cesser]] leur [[travail]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
       "contributors_record": "source-context.json#b143_fr_36764",
       "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
       "original_historical_dictionary_layers": [],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "A strike: workers jointly stopping work to obtain higher pay or other benefits; feminine noun.",
-      "review_reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3115-grève-nom-selected",
@@ -6776,21 +6846,24 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
       "exact_source_span": {
         "line_1_based": 63,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+        "column_1_based": 154,
+        "raw_source_excerpt": "[[cesser]] leur [[travail]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
       "contributors_record": "source-context.json#b143_fr_36764",
       "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
       "original_historical_dictionary_layers": [],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "罢工：劳动者共同停止工作，以争取加薪或其他待遇；阴性名词。",
-      "review_reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3116-tendresse-nom-selected",
@@ -7949,8 +8022,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
       "exact_source_span": {
         "line_1_based": 18,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+        "column_1_based": 38,
+        "raw_source_excerpt": "lire seul et des [[yeux]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -7968,18 +8041,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "accepted_text": "Action ou habitude de lire pour soi, des yeux, pour s’instruire ou se distraire ; nom féminin.",
-      "review_reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "accepted_text": "Le fait de lire silencieusement, pour apprendre ou par plaisir ; nom féminin.",
+      "review_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3123-lecture-nom-selected",
@@ -8031,8 +8109,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
       "exact_source_span": {
         "line_1_based": 18,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+        "column_1_based": 38,
+        "raw_source_excerpt": "lire seul et des [[yeux]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -8050,18 +8128,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "Reading to oneself for information or pleasure; feminine noun.",
-      "review_reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3123-lecture-nom-selected",
@@ -8072,8 +8155,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
       "exact_source_span": {
         "line_1_based": 18,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+        "column_1_based": 38,
+        "raw_source_excerpt": "lire seul et des [[yeux]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -8091,18 +8174,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "阅读：自己看文字，以获取知识或得到乐趣；阴性名词。",
-      "review_reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3124-mexicain-nom-selected",
@@ -8737,8 +8825,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
       "exact_source_span": {
         "line_1_based": 20,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+        "column_1_based": 3,
+        "raw_source_excerpt": "Assemblée"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -8756,18 +8844,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "accepted_text": "Réunion de personnes qui échangent leurs idées et les résultats de leurs études sur un sujet ; nom masculin.",
-      "review_reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "accepted_text": "Rencontre consacrée au partage de travaux et d’idées dans un domaine ; nom masculin.",
+      "review_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3129-congrès-nom-selected",
@@ -8819,8 +8912,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
       "exact_source_span": {
         "line_1_based": 20,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+        "column_1_based": 3,
+        "raw_source_excerpt": "Assemblée"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -8838,18 +8931,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "A congress or conference where people exchange ideas and the results of their studies on a subject; masculine noun.",
-      "review_reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3129-congrès-nom-selected",
@@ -8860,8 +8958,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
       "exact_source_span": {
         "line_1_based": 20,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+        "column_1_based": 3,
+        "raw_source_excerpt": "Assemblée"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -8879,18 +8977,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "大会、研讨会：人们就某一领域交流观点和研究结果的会议；阳性名词。",
-      "review_reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3130-percer-ver-selected",
@@ -10385,8 +10488,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
       "exact_source_span": {
         "line_1_based": 21,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+        "column_1_based": 20,
+        "raw_source_excerpt": "[[salle|Salle]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -10404,18 +10507,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. French wording under CC BY-SA 4.0.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "accepted_text": "Salle d’un palais ou d’un musée, plus longue que large, où sont exposées des collections de tableaux et d’œuvres d’art ; nom féminin.",
-      "review_reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "accepted_text": "Salle d’exposition artistique dans un palais ou un musée, dont la longueur dépasse la largeur ; nom féminin.",
+      "review_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3141-galerie-nom-selected",
@@ -10467,8 +10575,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
       "exact_source_span": {
         "line_1_based": 21,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+        "column_1_based": 20,
+        "raw_source_excerpt": "[[salle|Salle]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -10486,18 +10594,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "A gallery: a long room in a palace or museum displaying collections of paintings and other artworks; feminine noun.",
-      "review_reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3141-galerie-nom-selected",
@@ -10508,8 +10621,8 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
       "exact_source_span": {
         "line_1_based": 21,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+        "column_1_based": 20,
+        "raw_source_excerpt": "[[salle|Salle]]"
       },
       "license": "CC-BY-SA-4.0",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
@@ -10527,18 +10640,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-          "territorial_scope": "French collective economic expiry only; not automatic worldwide original-expression clearance"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
-      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending_original_work_territorial_review",
+      "selected_boundary": "Exact limited lexical expressions plus factual grammar/IPA; developed upstream source sentence excluded.",
+      "modification": "Lexique explanation of the selected lexical facts, with exact limited source expressions; the developed upstream definition is excluded from the current source packet. New Lexique explanatory wording under CC BY-SA 4.0, not an upstream bilingual quotation.",
+      "independent_review": "passed",
       "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
       "accepted_text": "艺术展廊：宫殿或博物馆中用于陈列绘画等艺术品的长厅；阴性名词。",
-      "review_reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved. The accepted explanation is new Lexique wording under CC BY-SA 4.0; the retained French selected/support expression is assessed separately and remains part of the handoff.",
-      "rights_eligibility_status": "pending_original_work_territorial_review"
+      "review_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "rights_eligibility_status": "passed",
+      "selected_text_rights_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+      "original_work_territorial_review": "passed_minimal_lexical_facts"
     },
     {
       "sense_id": "b143-3142-temple-nom-selected",
@@ -17496,7 +17614,7 @@
       "review_reason": "The selected golf definition is short factual conventional stroke-count information, not expressive dictionary exposition. The plural relation and noun pronunciation are grammatical/phonetic facts. No image, audio, news quotation, Georgian-letter exposition or other-language text is retained. Wiki/Lexique CC BY-SA 4.0 source/history/contributor and modification obligations remain."
     }
   ],
-  "independent_rights_fields_unresolved": 18,
+  "independent_rights_fields_unresolved": 0,
   "independent_authority_reading": {
     "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
     "read": [
@@ -17507,5 +17625,9 @@
     ],
     "scope": "Specific factual/short-expression judgements and six actual original wording comparisons; no blanket DAF8 decision.",
     "archive": "audit/legal/ and audit/originals/ in the independent review archive"
-  }
+  },
+  "unresolved_rights_fields": 0,
+  "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+  "additional_rights_evidence": "rights-fix-review.json",
+  "unresolved_rights_rows": []
 }

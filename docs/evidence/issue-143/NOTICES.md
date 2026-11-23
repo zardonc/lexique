@@ -63,14 +63,14 @@ and new EN/ZH explanations. Original edition credits remain separate.
 | quatrième | [39956944](https://fr.wiktionary.org/w/index.php?title=quatri%C3%A8me&oldid=39956944) | [History](https://fr.wiktionary.org/w/index.php?title=quatri%C3%A8me&action=history) | Selected fields or construction evidence | No original-work import marker identified |
 | are | [39944434](https://fr.wiktionary.org/w/index.php?title=are&oldid=39944434) | [History](https://fr.wiktionary.org/w/index.php?title=are&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | bidon | [39905669](https://fr.wiktionary.org/w/index.php?title=bidon&oldid=39905669) | [History](https://fr.wiktionary.org/w/index.php?title=bidon&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
-| pars | [39518389](https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389) | [History](https://fr.wiktionary.org/w/index.php?title=pars&action=history) | Investigation only | No original-work import marker identified |
+| pars | [39518389](https://fr.wiktionary.org/w/index.php?title=pars&oldid=39518389) | [History](https://fr.wiktionary.org/w/index.php?title=pars&action=history) | Selected plural pronunciation/grammar support | No original-work import marker identified |
 | lecture | [39878425](https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425) | [History](https://fr.wiktionary.org/w/index.php?title=lecture&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | accélérer | [39719954](https://fr.wiktionary.org/w/index.php?title=acc%C3%A9l%C3%A9rer&oldid=39719954) | [History](https://fr.wiktionary.org/w/index.php?title=acc%C3%A9l%C3%A9rer&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | congrès | [39756249](https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249) | [History](https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | offenser | [39481230](https://fr.wiktionary.org/w/index.php?title=offenser&oldid=39481230) | [History](https://fr.wiktionary.org/w/index.php?title=offenser&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | percer | [40048692](https://fr.wiktionary.org/w/index.php?title=percer&oldid=40048692) | [History](https://fr.wiktionary.org/w/index.php?title=percer&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | mexicain | [39363245](https://fr.wiktionary.org/w/index.php?title=mexicain&oldid=39363245) | [History](https://fr.wiktionary.org/w/index.php?title=mexicain&action=history) | Selected fields or construction evidence | No original-work import marker identified |
-| uns | [39790771](https://fr.wiktionary.org/w/index.php?title=uns&oldid=39790771) | [History](https://fr.wiktionary.org/w/index.php?title=uns&action=history) | Investigation only | No original-work import marker identified |
+| uns | [39790771](https://fr.wiktionary.org/w/index.php?title=uns&oldid=39790771) | [History](https://fr.wiktionary.org/w/index.php?title=uns&action=history) | Selected plural pronunciation/grammar support | No original-work import marker identified |
 | électricité | [39851230](https://fr.wiktionary.org/w/index.php?title=%C3%A9lectricit%C3%A9&oldid=39851230) | [History](https://fr.wiktionary.org/w/index.php?title=%C3%A9lectricit%C3%A9&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | panier | [40049434](https://fr.wiktionary.org/w/index.php?title=panier&oldid=40049434) | [History](https://fr.wiktionary.org/w/index.php?title=panier&action=history) | Selected fields or construction evidence | No original-work import marker identified |
 | déborder | [39788804](https://fr.wiktionary.org/w/index.php?title=d%C3%A9border&oldid=39788804) | [History](https://fr.wiktionary.org/w/index.php?title=d%C3%A9border&action=history) | Selected fields or construction evidence | No original-work import marker identified |
@@ -91,7 +91,7 @@ and new EN/ZH explanations. Original edition credits remain separate.
 | familial | [39918006](https://fr.wiktionary.org/w/index.php?title=familial&oldid=39918006) | [History](https://fr.wiktionary.org/w/index.php?title=familial&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | jusque | [39007825](https://fr.wiktionary.org/w/index.php?title=jusque&oldid=39007825) | [History](https://fr.wiktionary.org/w/index.php?title=jusque&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | un | [40003437](https://fr.wiktionary.org/w/index.php?title=un&oldid=40003437) | [History](https://fr.wiktionary.org/w/index.php?title=un&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
-| par | [39972270](https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270) | [History](https://fr.wiktionary.org/w/index.php?title=par&action=history) | Investigation only | No original-work import marker identified |
+| par | [39972270](https://fr.wiktionary.org/w/index.php?title=par&oldid=39972270) | [History](https://fr.wiktionary.org/w/index.php?title=par&action=history) | Selected plural pronunciation/grammar support | No original-work import marker identified |
 | les uns | [21073002](https://fr.wiktionary.org/w/index.php?title=les%20uns&oldid=21073002) | [History](https://fr.wiktionary.org/w/index.php?title=les%20uns&action=history) | Selected fields or construction evidence | No original-work import marker identified |
 | l’un | [39877493](https://fr.wiktionary.org/w/index.php?title=l%E2%80%99un&oldid=39877493) | [History](https://fr.wiktionary.org/w/index.php?title=l%E2%80%99un&action=history) | Selected fields or construction evidence | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 
@@ -111,22 +111,19 @@ quotations, other-language content, media, audio, etymologies and unselected
 external dictionary prose supply no learner field. Complete raw captures remain
 in the external research archive, separately from redistribution inputs.
 
-All 200 fields pass independent quality review; 182 pass selected-span rights.
-Canonical admission remains a coordinator gate.
-The coordinator owns assembly, notices verification, native lookup/save/reopen
-and release gates.
+## Current selected scope and delivery
 
-## Independent selected-span decisions
+200 fields / 50 groups pass quality and selected-expression rights.
+Pars/NOM remains the exact approved masculine golf plural, /paʁ/, with all four reviewed fields.
+The developed source sentences for distraire, impressionnant, grève, lecture, congrès, galerie
+are outside the selected redistribution packets. Exact limited lexical facts
+and conventional short expressions are identified in source-excerpts.json,
+with per-expression reasons in rights-fix-review.json. France expiry alone
+does not clear whole original works in the US or worldwide.
 
-All 200 fields pass quality review; 182 pass rights review. Eighteen textual
-fields across distraire, impressionnant, grève, lecture, congrès and galerie
-remain pending original-expression territorial clearance. [Selected rights](selected-rights.md)
-and [original boundaries](original-boundaries.json) retain the actual reasons.
-An article-wide DAF8 marker does not establish selected-sentence authorship or
-protectable expression. French collective economic expiry is not automatic
-worldwide clearance.
-
-[Owner approval](owner-approval.json) dated 2026-11-22 applies only to exact
-row 3128 pars/NOM: the masculine plural golf standard counts. The noun par
-IPA and exact pars regular-plural relation ground /paʁ/. No alias is added.
-The four selected fields retain CC BY-SA 4.0 for contribution/adaptation layers.
+Distraire FR/EN/ZH and impressionnant, lecture, congrès, galerie FR use new Lexique wording. Meaning, construction and restrictions were reassessed; exact original/accepted texts remain in the preserved proposals and review ledgers.
+Retain complete CC BY-SA 4.0 text, attribution, version/history/contributor and
+original-work credits, modification notices and the selected source materials.
+The coordinator verifies the actual combined package before canonical admission.
+The research archive and first-review snapshots supply evidence, not additional
+selected dictionary text. Learner/native/release gates remain separate.

@@ -1734,8 +1734,8 @@
           "frozen_row": 3102,
           "field": "french_definition",
           "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+          "column_1_based": 131,
+          "raw_source_excerpt": "[[divertir]]"
         },
         {
           "sense_id": "b143-3102-distraire-ver-selected",
@@ -1750,48 +1750,133 @@
           "frozen_row": 3102,
           "field": "english",
           "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+          "column_1_based": 131,
+          "raw_source_excerpt": "[[divertir]]"
         },
         {
           "sense_id": "b143-3102-distraire-ver-selected",
           "frozen_row": 3102,
           "field": "chinese",
           "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{par extension|fr}} [[éloigner|Éloigner]] l’[[esprit]] de ce qui le [[fatiguer|fatigue]] ou l’[[obséder|obsède]] ; [[amuser]], [[divertir]]."
+          "column_1_based": 131,
+          "raw_source_excerpt": "[[divertir]]"
         }
       ],
       "selected_grammar_and_construction_evidence": [
         {
           "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_158119",
           "revid": 40045909,
           "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
           "line_1_based": 1,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_158119",
           "revid": 40045909,
           "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
           "line_1_based": 5,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
+          "reviewed_excerpt": "=== {{S|verbe|fr}} ===",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_158119",
           "revid": 40045909,
           "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
           "line_1_based": 6,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''distraire''' {{pron|dis.tʁɛʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}}"
+          "reviewed_excerpt": "'''distraire''' {{pron|dis.tʁɛʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 119,
+          "reviewed_excerpt": "[[amuser]]",
+          "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 48,
+          "reviewed_excerpt": "[[esprit]]",
+          "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 72,
+          "reviewed_excerpt": "[[fatiguer|fatigue]]",
+          "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 98,
+          "reviewed_excerpt": "[[obséder|obsède]]",
+          "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_158119",
+          "revid": 40045909,
+          "url": "https://fr.wiktionary.org/w/index.php?title=distraire&oldid=40045909",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=distraire&action=history",
+          "line_1_based": 14,
+          "column_1_based": 24,
+          "reviewed_excerpt": "[[éloigner|Éloigner]]",
+          "sense_id": "b143-3102-distraire-ver-selected",
+          "frozen_row": 3102,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "import_notices": [
@@ -1814,9 +1899,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished.",
-          "territorial_scope": "French collective economic expiry only"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "bibliographic_identities": [
@@ -1913,7 +2000,7 @@
       "anonymous_contributors_count": 5,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_original_work_territorial_review",
+      "selected_text_rights_status": "passed",
       "external_reference_markers": [
         {
           "line_1_based": 89,
@@ -1924,7 +2011,9 @@
       ],
       "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
       "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "selected_text_rights_reason": "The selected multi-clause wording Éloigner l'esprit de ce qui le fatigue ou l'obsède; amuser, divertir matches the actual DAF8 text, not only its article marker. US original-expression clearance remains unestablished."
+      "selected_text_rights_reason": "Separate entertainment synonyms and lexical facts about mental tiredness/preoccupation are retained. The connected Éloigner l’esprit de ce qui le fatigue ou l’obsède formulation is excluded; the new learner wording conveys amusement and respite without reproducing it. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_text_review": "passed",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "id": "b143_fr_160577",
@@ -2387,8 +2476,8 @@
           "frozen_row": 3110,
           "field": "french_definition",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+          "column_1_based": 7,
+          "raw_source_excerpt": "[[impressionner|impressionne]]"
         },
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
@@ -2403,58 +2492,120 @@
           "frozen_row": 3110,
           "field": "english",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+          "column_1_based": 7,
+          "raw_source_excerpt": "[[impressionner|impressionne]]"
         },
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
           "frozen_row": 3110,
           "field": "chinese",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Qui [[impressionner|impressionne]], qui [[produire|produit]] sur la [[sensibilité]] [[physique]] ou [[moral]]e ou sur l’[[esprit]] des [[impression]]s, une [[impression]] [[vif|vive]] et [[fort]]e."
+          "column_1_based": 7,
+          "raw_source_excerpt": "[[impressionner|impressionne]]"
         }
       ],
       "selected_grammar_and_construction_evidence": [
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
+          "frozen_row": 3110,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_164512",
           "revid": 39715515,
           "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
           "line_1_based": 1,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
+          "frozen_row": 3110,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_164512",
           "revid": 39715515,
           "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
           "line_1_based": 5,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
+          "reviewed_excerpt": "=== {{S|adjectif|fr}} ===",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
+          "frozen_row": 3110,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_164512",
           "revid": 39715515,
           "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
           "line_1_based": 6,
           "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-accord-cons|ɛ̃.pʁɛ.sjɔ.nɑ̃|t|pron2=ɛ̃.pʁe.sjɔ.nɑ̃}}"
+          "reviewed_excerpt": "{{fr-accord-cons|ɛ̃.pʁɛ.sjɔ.nɑ̃|t|pron2=ɛ̃.pʁe.sjɔ.nɑ̃}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3110-impressionnant-adj-selected",
+          "frozen_row": 3110,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_164512",
           "revid": 39715515,
           "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
           "line_1_based": 7,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''impressionnant''' {{pron|ɛ̃.pʁɛ.sjɔ.nɑ̃|fr}} <small>ou</small> {{pron|ɛ̃.pʁe.sjɔ.nɑ̃|fr}} {{m}}"
+          "reviewed_excerpt": "'''impressionnant''' {{pron|ɛ̃.pʁɛ.sjɔ.nɑ̃|fr}} <small>ou</small> {{pron|ɛ̃.pʁe.sjɔ.nɑ̃|fr}} {{m}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
+        },
+        {
+          "source_id": "b143_fr_164512",
+          "revid": 39715515,
+          "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+          "line_1_based": 8,
+          "column_1_based": 190,
+          "reviewed_excerpt": "[[fort]]e",
+          "sense_id": "b143-3110-impressionnant-adj-selected",
+          "frozen_row": 3110,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_164512",
+          "revid": 39715515,
+          "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+          "line_1_based": 8,
+          "column_1_based": 123,
+          "reviewed_excerpt": "[[esprit]]",
+          "sense_id": "b143-3110-impressionnant-adj-selected",
+          "frozen_row": 3110,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_164512",
+          "revid": 39715515,
+          "url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&oldid=39715515",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=impressionnant&action=history",
+          "line_1_based": 8,
+          "column_1_based": 71,
+          "reviewed_excerpt": "[[sensibilité]]",
+          "sense_id": "b143-3110-impressionnant-adj-selected",
+          "frozen_row": 3110,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "import_notices": [
@@ -2477,9 +2628,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved.",
-          "territorial_scope": "French collective economic expiry only"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "bibliographic_identities": [
@@ -2559,7 +2712,7 @@
       "anonymous_contributors_count": 12,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_original_work_territorial_review",
+      "selected_text_rights_status": "passed",
       "external_reference_markers": [
         {
           "line_1_based": 62,
@@ -2570,7 +2723,9 @@
       ],
       "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
       "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "selected_text_rights_reason": "The full selected formulation about physical/moral sensitivity and vivid strong impressions is verbatim DAF8 expression. The shorter accepted definition still uses that retained full source sentence; its original rights remain unresolved."
+      "selected_text_rights_reason": "The conventional verb impressionne and separate strong/mind/sensitivity facts are retained; the physical/moral enumeration and developed impressions sentence are excluded. The learner definition is independently phrased around the ordinary strong-effect concept. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_text_review": "passed",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "id": "b143_fr_35432",
@@ -2854,8 +3009,8 @@
           "frozen_row": 3115,
           "field": "french_definition",
           "line_1_based": 63,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+          "column_1_based": 154,
+          "raw_source_excerpt": "[[cesser]] leur [[travail]]"
         },
         {
           "sense_id": "b143-3115-grève-nom-selected",
@@ -2870,58 +3025,148 @@
           "frozen_row": 3115,
           "field": "english",
           "line_1_based": 63,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+          "column_1_based": 154,
+          "raw_source_excerpt": "[[cesser]] leur [[travail]]"
         },
         {
           "sense_id": "b143-3115-grève-nom-selected",
           "frozen_row": 3115,
           "field": "chinese",
           "line_1_based": 63,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|travail|syndicalisme|fr}} [[entente|Entente]], [[accord]] des [[salarié]]s d’une [[usine]], d'une [[entreprise]], d’une [[profession]], pour [[cesser]] leur [[travail]] jusqu’à ce qu’ils aient [[obtenu]] une [[augmentation]] de [[salaire]] ou [[certain]]s [[autre]]s [[avantage]]s."
+          "column_1_based": 154,
+          "raw_source_excerpt": "[[cesser]] leur [[travail]]"
         }
       ],
       "selected_grammar_and_construction_evidence": [
         {
           "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_36764",
           "revid": 40003287,
           "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
           "line_1_based": 3,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_36764",
           "revid": 40003287,
           "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
           "line_1_based": 59,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr|num=2}} ==="
+          "reviewed_excerpt": "=== {{S|nom|fr|num=2}} ===",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_36764",
           "revid": 40003287,
           "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
           "line_1_based": 60,
           "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|ɡʁɛv}}"
+          "reviewed_excerpt": "{{fr-rég|ɡʁɛv}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_36764",
           "revid": 40003287,
           "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
           "line_1_based": 62,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''grève''' {{pron|ɡʁɛv|fr}} {{f}}"
+          "reviewed_excerpt": "'''grève''' {{pron|ɡʁɛv|fr}} {{f}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 75,
+          "reviewed_excerpt": "[[salarié]]s",
+          "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 39,
+          "reviewed_excerpt": "[[entente|Entente]]",
+          "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 221,
+          "reviewed_excerpt": "[[augmentation]] de [[salaire]]",
+          "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 280,
+          "reviewed_excerpt": "[[avantage]]s",
+          "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_36764",
+          "revid": 40003287,
+          "url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&oldid=40003287",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=gr%C3%A8ve&action=history",
+          "line_1_based": 63,
+          "column_1_based": 3,
+          "reviewed_excerpt": "{{lexique|travail|syndicalisme|fr}}",
+          "sense_id": "b143-3115-grève-nom-selected",
+          "frozen_row": 3115,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "import_notices": [],
@@ -3089,7 +3334,7 @@
       "anonymous_contributors_count": 18,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_original_work_territorial_review",
+      "selected_text_rights_status": "passed",
       "external_reference_markers": [
         {
           "line_1_based": 253,
@@ -3104,7 +3349,9 @@
       ],
       "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
       "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "selected_text_rights_reason": "The retained extended agreement/cessation/until-benefits sentence closely matches actual DAF8, including jusqu'à ce qu'ils aient obtenu une augmentation de salaire ou certains autres avantages. No original US clearance is established."
+      "selected_text_rights_reason": "The limited conventional work-stoppage and wage-increase phrases plus worker/agreement/benefit facts and labour label are retained. The lengthy factory/company/profession arrangement and until-benefits clause are excluded. These ordinary labour concepts do not reproduce a distinctive explanatory presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_text_review": "passed",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "id": "b143_fr_51802",
@@ -5904,8 +6151,8 @@
           "frozen_row": 3123,
           "field": "french_definition",
           "line_1_based": 18,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+          "column_1_based": 38,
+          "raw_source_excerpt": "lire seul et des [[yeux]]"
         },
         {
           "sense_id": "b143-3123-lecture-nom-selected",
@@ -5920,58 +6167,106 @@
           "frozen_row": 3123,
           "field": "english",
           "line_1_based": 18,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+          "column_1_based": 38,
+          "raw_source_excerpt": "lire seul et des [[yeux]]"
         },
         {
           "sense_id": "b143-3123-lecture-nom-selected",
           "frozen_row": 3123,
           "field": "chinese",
           "line_1_based": 18,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[action|Action]], [[habitude]] de lire seul et des [[yeux]], pour son [[instruction]] ou pour son [[plaisir]]."
+          "column_1_based": 38,
+          "raw_source_excerpt": "lire seul et des [[yeux]]"
         }
       ],
       "selected_grammar_and_construction_evidence": [
         {
           "sense_id": "b143-3123-lecture-nom-selected",
+          "frozen_row": 3123,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_120684",
           "revid": 39878425,
           "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
           "line_1_based": 2,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3123-lecture-nom-selected",
+          "frozen_row": 3123,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_120684",
           "revid": 39878425,
           "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
           "line_1_based": 6,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+          "reviewed_excerpt": "=== {{S|nom|fr}} ===",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3123-lecture-nom-selected",
+          "frozen_row": 3123,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_120684",
           "revid": 39878425,
           "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
           "line_1_based": 7,
           "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|lɛk.tyʁ}}"
+          "reviewed_excerpt": "{{fr-rég|lɛk.tyʁ}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3123-lecture-nom-selected",
+          "frozen_row": 3123,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_120684",
           "revid": 39878425,
           "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
           "line_1_based": 10,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''lecture''' {{pron|lɛk.tyʁ|fr}} {{f}}"
+          "reviewed_excerpt": "'''lecture''' {{pron|lɛk.tyʁ|fr}} {{f}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
+        },
+        {
+          "source_id": "b143_fr_120684",
+          "revid": 39878425,
+          "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+          "line_1_based": 18,
+          "column_1_based": 74,
+          "reviewed_excerpt": "[[instruction]]",
+          "sense_id": "b143-3123-lecture-nom-selected",
+          "frozen_row": 3123,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_120684",
+          "revid": 39878425,
+          "url": "https://fr.wiktionary.org/w/index.php?title=lecture&oldid=39878425",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=lecture&action=history",
+          "line_1_based": 18,
+          "column_1_based": 102,
+          "reviewed_excerpt": "[[plaisir]]",
+          "sense_id": "b143-3123-lecture-nom-selected",
+          "frozen_row": 3123,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "import_notices": [
@@ -5994,9 +6289,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved.",
-          "territorial_scope": "French collective economic expiry only"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "bibliographic_identities": [
@@ -6155,7 +6452,7 @@
       "anonymous_contributors_count": 14,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_original_work_territorial_review",
+      "selected_text_rights_status": "passed",
       "external_reference_markers": [
         {
           "line_1_based": 187,
@@ -6166,7 +6463,9 @@
       ],
       "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
       "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "selected_text_rights_reason": "The selected complete formulation Action, habitude de lire seul et des yeux, pour son instruction ou pour son plaisir matches the DAF8 clause. The inspected 1762 entry does not establish this exact expression's prior public-domain origin; US clearance remains unresolved."
+      "selected_text_rights_reason": "The limited conventional silent-reading descriptor and separate learning/pleasure facts are retained. The complete action/habit/purpose sentence is excluded. The selected words describe the mode and purpose of reading, not a creative narrative or original definition arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_text_review": "passed",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "id": "b143_fr_137400",
@@ -6409,8 +6708,8 @@
           "frozen_row": 3129,
           "field": "french_definition",
           "line_1_based": 20,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+          "column_1_based": 3,
+          "raw_source_excerpt": "Assemblée"
         },
         {
           "sense_id": "b143-3129-congrès-nom-selected",
@@ -6425,58 +6724,134 @@
           "frozen_row": 3129,
           "field": "english",
           "line_1_based": 20,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+          "column_1_based": 3,
+          "raw_source_excerpt": "Assemblée"
         },
         {
           "sense_id": "b143-3129-congrès-nom-selected",
           "frozen_row": 3129,
           "field": "chinese",
           "line_1_based": 20,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Assemblée de plusieurs personnes qui se [[réunir|réunissent]] pour se [[communiquer]] les [[résultat]]s de [[leur]]s [[étude]]s et [[échanger]] [[leur]]s [[idée]]s sur des [[point]]s de [[religion]], de [[science]], de [[littérature]], de [[politique]], etc."
+          "column_1_based": 3,
+          "raw_source_excerpt": "Assemblée"
         }
       ],
       "selected_grammar_and_construction_evidence": [
         {
           "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_155143",
           "revid": 39756249,
           "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
           "line_1_based": 3,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_155143",
           "revid": 39756249,
           "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
           "line_1_based": 7,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+          "reviewed_excerpt": "=== {{S|nom|fr}} ===",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_155143",
           "revid": 39756249,
           "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
           "line_1_based": 8,
           "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|kɔ̃.gʁɛ|sp=oui}}"
+          "reviewed_excerpt": "{{fr-inv|kɔ̃.gʁɛ|sp=oui}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_155143",
           "revid": 39756249,
           "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
           "line_1_based": 9,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''congrès''' {{pron|kɔ̃.ɡʁɛ|fr}} {{m}}"
+          "reviewed_excerpt": "'''congrès''' {{pron|kɔ̃.ɡʁɛ|fr}} {{m}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 120,
+          "reviewed_excerpt": "[[étude]]s",
+          "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 157,
+          "reviewed_excerpt": "[[idée]]s",
+          "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 134,
+          "reviewed_excerpt": "[[échanger]]",
+          "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_155143",
+          "revid": 39756249,
+          "url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&oldid=39756249",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=congr%C3%A8s&action=history",
+          "line_1_based": 20,
+          "column_1_based": 73,
+          "reviewed_excerpt": "[[communiquer]]",
+          "sense_id": "b143-3129-congrès-nom-selected",
+          "frozen_row": 3129,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "import_notices": [
@@ -6499,9 +6874,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved.",
-          "territorial_scope": "French collective economic expiry only"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "bibliographic_identities": [
@@ -6624,7 +7001,7 @@
       "anonymous_contributors_count": 5,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_original_work_territorial_review",
+      "selected_text_rights_status": "passed",
       "external_reference_markers": [
         {
           "line_1_based": 102,
@@ -6635,7 +7012,9 @@
       ],
       "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
       "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "selected_text_rights_reason": "The full selected studies/ideas/topic-enumeration sentence matches actual DAF8's general meeting sense. The 1762 entry supplies only diplomatic congress, so it does not clear this later expression; US original rights remain unresolved."
+      "selected_text_rights_reason": "The separate meeting, studies, ideas, exchange and communication lexemes are retained. The complete sentence and religion/science/literature/politics enumeration are excluded. The new French wording describes the conventional conference concept without adopting that sentence arrangement. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_text_review": "passed",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "id": "b143_fr_169492",
@@ -10776,8 +11155,8 @@
           "frozen_row": 3141,
           "field": "french_definition",
           "line_1_based": 21,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+          "column_1_based": 20,
+          "raw_source_excerpt": "[[salle|Salle]]"
         },
         {
           "sense_id": "b143-3141-galerie-nom-selected",
@@ -10792,58 +11171,162 @@
           "frozen_row": 3141,
           "field": "english",
           "line_1_based": 21,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+          "column_1_based": 20,
+          "raw_source_excerpt": "[[salle|Salle]]"
         },
         {
           "sense_id": "b143-3141-galerie-nom-selected",
           "frozen_row": 3141,
           "field": "chinese",
           "line_1_based": 21,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{spécialement}} [[salle|Salle]] de [[palais]], de [[musée]], plus longue que large où se trouvent [[exposer|exposées]] des [[collection]]s de [[tableau]]x et d’[[œuvres d’art]]."
+          "column_1_based": 20,
+          "raw_source_excerpt": "[[salle|Salle]]"
         }
       ],
       "selected_grammar_and_construction_evidence": [
         {
           "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_64249",
           "revid": 39820854,
           "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
           "line_1_based": 3,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_64249",
           "revid": 39820854,
           "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
           "line_1_based": 7,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+          "reviewed_excerpt": "=== {{S|nom|fr}} ===",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_64249",
           "revid": 39820854,
           "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
           "line_1_based": 8,
           "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|ɡal.ʁi}}"
+          "reviewed_excerpt": "{{fr-rég|ɡal.ʁi}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
         },
         {
           "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b143_fr_64249",
           "revid": 39820854,
           "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
           "line_1_based": 10,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''galerie''' {{pron|ɡal.ʁi|fr}} {{f}}"
+          "reviewed_excerpt": "'''galerie''' {{pron|ɡal.ʁi|fr}} {{f}}",
+          "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
+          "independent_quality_status": "passed",
+          "independent_rights_status": "passed_selected_grammatical_facts"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 54,
+          "reviewed_excerpt": "[[musée]]",
+          "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 39,
+          "reviewed_excerpt": "[[palais]]",
+          "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 65,
+          "reviewed_excerpt": "plus longue que large",
+          "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 102,
+          "reviewed_excerpt": "[[exposer|exposées]]",
+          "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 146,
+          "reviewed_excerpt": "[[tableau]]x",
+          "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b143_fr_64249",
+          "revid": 39820854,
+          "url": "https://fr.wiktionary.org/w/index.php?title=galerie&oldid=39820854",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=galerie&action=history",
+          "line_1_based": 21,
+          "column_1_based": 164,
+          "reviewed_excerpt": "[[œuvres d’art]]",
+          "sense_id": "b143-3141-galerie-nom-selected",
+          "frozen_row": 3141,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "import_notices": [
@@ -10866,9 +11349,11 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending_original_work_territorial_review",
-          "independent_review_scope": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved.",
-          "territorial_scope": "French collective economic expiry only"
+          "independent_review": "selected_lexical_facts_only_whole_original_expression_excluded",
+          "independent_review_scope": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+          "territorial_scope": "France economic expiry only; whole-edition US/public-domain status unestablished",
+          "selected_text_territorial_decision": "passed_minimal_lexical_facts",
+          "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
         }
       ],
       "bibliographic_identities": [
@@ -11041,7 +11526,7 @@
       "anonymous_contributors_count": 10,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_original_work_territorial_review",
+      "selected_text_rights_status": "passed",
       "external_reference_markers": [
         {
           "line_1_based": 200,
@@ -11057,7 +11542,9 @@
       ],
       "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
       "independent_reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-      "selected_text_rights_reason": "The complete selected sentence about palace/museum rooms, length and exposed art collections closely matches actual DAF8. The 1762 entry has long covered rooms but not this art-collection sentence; original US expression clearance remains unresolved."
+      "selected_text_rights_reason": "Only individual room/place/art/display facts and the conventional geometric relation plus longue que large are retained. The full palace/museum/art-collection sentence and its arrangement are excluded. The limited dimensional phrase supplies a factual property rather than distinctive descriptive prose. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
+      "selected_text_review": "passed",
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer"
     },
     {
       "id": "b143_fr_150321",
@@ -13141,10 +13628,11 @@
   ],
   "rights_review": {
     "reviewer": "Independent semantic and selected-rights reviewer #143; separate from author and coordinator",
-    "status": "independent_selected_rights_partially_unresolved",
-    "fields_passed": 182,
-    "fields_pending": 18,
-    "original_boundaries": "original-boundaries.json"
+    "status": "passed_at_current_selected_expression_boundary",
+    "fields_passed": 200,
+    "fields_pending": 0,
+    "original_boundaries": "original-boundaries.json",
+    "additional_rights_evidence": "rights-fix-review.json"
   },
   "spelling_relations": [
     {

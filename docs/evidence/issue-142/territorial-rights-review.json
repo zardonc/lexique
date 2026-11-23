@@ -1,11 +1,6 @@
 {
-  "status": "source_specific_partial_clearance",
-  "unresolved_rows": [
-    3051,
-    3074,
-    3076,
-    3093
-  ],
+  "status": "passed_at_current_selected_expression_boundary",
+  "unresolved_rows": [],
   "selected_source_decisions": [
     {
       "frozen_row": 3051,
@@ -20,53 +15,165 @@
           "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
           "line_1_based": 10,
-          "column_1_based": 1,
-          "reviewed_excerpt": "# [[évènement|Événement]] [[soudain]], qui, [[bouleverser|bouleversant]] le [[cours]] des [[chose]]s, [[amener|amène]] la [[destruction]], la [[ruine]], la [[mort]]."
+          "column_1_based": 27,
+          "reviewed_excerpt": "[[soudain]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 3,
+          "reviewed_excerpt": "[[évènement|Événement]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 123,
+          "reviewed_excerpt": "[[destruction]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 143,
+          "reviewed_excerpt": "[[ruine]]"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 157,
+          "reviewed_excerpt": "[[mort]]"
         }
       ],
       "supporting_spans": [
         {
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_118947",
           "revid": 39826923,
           "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
           "line_1_based": 3,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_118947",
           "revid": 39826923,
           "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
           "line_1_based": 7,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+          "reviewed_excerpt": "=== {{S|nom|fr}} ===",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_118947",
           "revid": 39826923,
           "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
           "line_1_based": 8,
           "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|ka.ta.stʁɔf}}"
+          "reviewed_excerpt": "{{fr-rég|ka.ta.stʁɔf}}",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_118947",
           "revid": 39826923,
           "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
           "line_1_based": 9,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''catastrophe''' {{pron|ka.ta.stʁɔf|fr}} {{f}}"
+          "reviewed_excerpt": "'''catastrophe''' {{pron|ka.ta.stʁɔf|fr}} {{f}}",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 3,
+          "reviewed_excerpt": "[[évènement|Événement]]",
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 123,
+          "reviewed_excerpt": "[[destruction]]",
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 143,
+          "reviewed_excerpt": "[[ruine]]",
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_118947",
+          "revid": 39826923,
+          "url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&oldid=39826923",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=catastrophe&action=history",
+          "line_1_based": 10,
+          "column_1_based": 157,
+          "reviewed_excerpt": "[[mort]]",
+          "sense_id": "b142-3051-catastrophe-nom-selected",
+          "frozen_row": 3051,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "status": "unresolved_selected_expression",
-      "selected_expression_reason": "The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing.",
+      "status": "passed_minimal_lexical_facts",
+      "selected_expression_reason": "Only the isolated lexical facts sudden, event, destruction, ruin and death are retained. The relative clause bouleversant le cours des choses and the developed sentence/arrangement are excluded. Individual words and the facts of the disaster meaning are assessed, not the copyrightability of the DAF8 sentence. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-      "specific_gap": "The retained whole definition adds the rhetorical relative clause bouleversant le cours des choses and the arranged destruction/ruin/death sequence. The same developed sentence is independently present in the DAF8 entry captured from CNRTL. Its possible expression exceeds the simple disaster fact; a US term/restoration or permission basis, or a substantiated noncopyrightable-expression basis for this whole retained sentence, is missing."
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "frozen_row": 3052,
@@ -1374,62 +1481,179 @@
           "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
           "line_1_based": 8,
-          "column_1_based": 1,
-          "reviewed_excerpt": "# Qui a la [[conscience]], la [[connaissance]] [[intime]] et, par [[conséquent]], la [[responsabilité]] de ce qu’il [[faire|fait]]."
+          "column_1_based": 12,
+          "reviewed_excerpt": "[[conscience]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 31,
+          "reviewed_excerpt": "[[connaissance]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 48,
+          "reviewed_excerpt": "[[intime]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 86,
+          "reviewed_excerpt": "[[responsabilité]]"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 108,
+          "reviewed_excerpt": "ce qu’il [[faire|fait]]"
         }
       ],
       "supporting_spans": [
         {
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_155184",
           "revid": 39702182,
           "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
           "line_1_based": 1,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_155184",
           "revid": 39702182,
           "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
           "line_1_based": 5,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
+          "reviewed_excerpt": "=== {{S|adjectif|fr}} ===",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_155184",
           "revid": 39702182,
           "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
           "line_1_based": 6,
           "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-accord-cons|kɔ̃.sjɑ̃|t}}"
+          "reviewed_excerpt": "{{fr-accord-cons|kɔ̃.sjɑ̃|t}}",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_155184",
           "revid": 39702182,
           "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
           "line_1_based": 7,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''conscient''' {{pron|kɔ̃.sjɑ̃|fr}}"
+          "reviewed_excerpt": "'''conscient''' {{pron|kɔ̃.sjɑ̃|fr}}",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_155184",
           "revid": 39702182,
           "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
           "line_1_based": 12,
           "column_1_based": 80,
-          "reviewed_excerpt": "'''conscients'''"
+          "reviewed_excerpt": "'''conscients'''",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 31,
+          "reviewed_excerpt": "[[connaissance]]",
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 48,
+          "reviewed_excerpt": "[[intime]]",
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 86,
+          "reviewed_excerpt": "[[responsabilité]]",
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_155184",
+          "revid": 39702182,
+          "url": "https://fr.wiktionary.org/w/index.php?title=conscient&oldid=39702182",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=conscient&action=history",
+          "line_1_based": 8,
+          "column_1_based": 108,
+          "reviewed_excerpt": "ce qu’il [[faire|fait]]",
+          "sense_id": "b142-3074-conscient-adj-selected",
+          "frozen_row": 3074,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "status": "unresolved_selected_expression",
-      "selected_expression_reason": "The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing.",
+      "status": "passed_minimal_lexical_facts",
+      "selected_expression_reason": "The packet contains separate awareness/knowledge/responsibility lexemes and the conventional action referent ce qu’il fait. It excludes the connecting inference par conséquent and the source sentence. These limited words and grammatical referent carry lexical facts without a developed causal explanation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-      "specific_gap": "The retained whole definition links conscience, connaissance intime and consequent responsibility through an explanatory inference. The same sentence is independently present in the captured DAF8 adjective entry. This developed evaluative formulation cannot be cleared merely as a short synonym or grammatical fact; selected original publication/US term/restoration or permission, or a substantiated noncopyrightable-expression basis, remains missing."
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "frozen_row": 3075,
@@ -1504,44 +1728,105 @@
           "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
           "line_1_based": 23,
-          "column_1_based": 1,
-          "reviewed_excerpt": "# [[donner|Donner]] des [[copie]]s d'un [[tableau]], d'une [[statue]], etc., les vulgariser par un procédé quelconque."
+          "column_1_based": 25,
+          "reviewed_excerpt": "[[copie]]s"
+        },
+        {
+          "source_id": "b142_fr_174916",
+          "revid": 39829187,
+          "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+          "line_1_based": 23,
+          "column_1_based": 41,
+          "reviewed_excerpt": "[[tableau]]"
+        },
+        {
+          "source_id": "b142_fr_174916",
+          "revid": 39829187,
+          "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+          "line_1_based": 23,
+          "column_1_based": 60,
+          "reviewed_excerpt": "[[statue]]"
         }
       ],
       "supporting_spans": [
         {
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "frozen_row": 3076,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_174916",
           "revid": 39829187,
           "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
           "line_1_based": 1,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "frozen_row": 3076,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_174916",
           "revid": 39829187,
           "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
           "line_1_based": 5,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
+          "reviewed_excerpt": "=== {{S|verbe|fr}} ===",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "frozen_row": 3076,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_174916",
           "revid": 39829187,
           "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
           "line_1_based": 6,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''reproduire''' {{pron|ʁə.pʁɔ.dɥiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}"
+          "reviewed_excerpt": "'''reproduire''' {{pron|ʁə.pʁɔ.dɥiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+        },
+        {
+          "source_id": "b142_fr_174916",
+          "revid": 39829187,
+          "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+          "line_1_based": 23,
+          "column_1_based": 41,
+          "reviewed_excerpt": "[[tableau]]",
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "frozen_row": 3076,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_174916",
+          "revid": 39829187,
+          "url": "https://fr.wiktionary.org/w/index.php?title=reproduire&oldid=39829187",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=reproduire&action=history",
+          "line_1_based": 23,
+          "column_1_based": 60,
+          "reviewed_excerpt": "[[statue]]",
+          "sense_id": "b142-3076-reproduire-ver-selected",
+          "frozen_row": 3076,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "status": "unresolved_selected_expression",
-      "selected_expression_reason": "The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing.",
+      "status": "passed_minimal_lexical_facts",
+      "selected_expression_reason": "The isolated copy/painting/statue lexical facts are retained without their sentence, its sequence or the dissemination clause les vulgariser par un procédé quelconque. A list of three lexical concepts has no developed expressive account; neither that account nor the whole edition is cleared. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-      "specific_gap": "The retained whole definition combines copies of paintings/statues with les vulgariser par un procédé quelconque. The independently captured DAF8 entry contains that dissemination formulation. Its combined explanatory wording is potentially original expression rather than just the fact of copying; the applicable US original-expression clearance or a substantiated noncopyrightability basis is missing."
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "frozen_row": 3077,
@@ -2480,44 +2765,150 @@
           "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
           "line_1_based": 59,
-          "column_1_based": 1,
-          "reviewed_excerpt": "# {{figuré|fr}} Faire sur l’âme une impression qui [[cause]] de la [[douleur]], du [[chagrin]], [[émouvoir]], [[affliger]]."
+          "column_1_based": 111,
+          "reviewed_excerpt": "[[affliger]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 68,
+          "reviewed_excerpt": "[[douleur]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 84,
+          "reviewed_excerpt": "[[chagrin]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 97,
+          "reviewed_excerpt": "[[émouvoir]]"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 3,
+          "reviewed_excerpt": "{{figuré|fr}}"
         }
       ],
       "supporting_spans": [
         {
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "frozen_row": 3093,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_137679",
           "revid": 39716112,
           "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
           "line_1_based": 1,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "frozen_row": 3093,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_137679",
           "revid": 39716112,
           "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
           "line_1_based": 5,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
+          "reviewed_excerpt": "=== {{S|verbe|fr}} ===",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
         },
         {
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "frozen_row": 3093,
+          "role": "language_pos_spelling_or_construction_frame",
           "source_id": "b142_fr_137679",
           "revid": 39716112,
           "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
           "line_1_based": 6,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''affecter''' {{pron|a.fɛk.te|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+          "reviewed_excerpt": "'''affecter''' {{pron|a.fɛk.te|fr}} {{t|fr}} {{conj|grp=1|fr}}",
+          "independent_review": "passed_fixed_source_span",
+          "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 68,
+          "reviewed_excerpt": "[[douleur]]",
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "frozen_row": 3093,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 84,
+          "reviewed_excerpt": "[[chagrin]]",
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "frozen_row": 3093,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 97,
+          "reviewed_excerpt": "[[émouvoir]]",
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "frozen_row": 3093,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
+        },
+        {
+          "source_id": "b142_fr_137679",
+          "revid": 39716112,
+          "url": "https://fr.wiktionary.org/w/index.php?title=affecter&oldid=39716112",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=affecter&action=history",
+          "line_1_based": 59,
+          "column_1_based": 3,
+          "reviewed_excerpt": "{{figuré|fr}}",
+          "sense_id": "b142-3093-affecter-ver-selected",
+          "frozen_row": 3093,
+          "role": "selected_lexical_fact",
+          "independent_review": "passed_at_selected_text_boundary",
+          "reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
         }
       ],
-      "status": "unresolved_selected_expression",
-      "selected_expression_reason": "The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
+      "status": "passed_minimal_lexical_facts",
+      "selected_expression_reason": "Only the conventional synonyms and pain/sorrow lexemes plus figurative-use label are retained. The metaphor Faire sur l’âme une impression and its explanatory sentence are excluded. Synonyms and register metadata carry the emotional sense without copying its metaphorical presentation. 17 USC 102(b); 37 CFR 202.1(a); US Copyright Office Compendium 313.3(C) and 313.4(C). Exact selected words/short expressions and lexical facts only; no whole DAF8 US clearance, sentence authorship or permission claim. CC BY-SA 4.0 contribution/adaptation credits and modification notices remain.",
       "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
       "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field.",
-      "specific_gap": "The retained whole definition develops the metaphorical Faire sur l’âme une impression qui cause de la douleur, du chagrin before its synonyms. Independent inspection of the retained CNRTL HTML finds this exact formulation in its embedded DAF8 second entry ACA8_535; the original visible-text extraction showed only the first entry. This is evidence of the selected original-expression boundary, beyond the article notice alone; it does not prove a particular Wiki editor copied it. The whole metaphorical account cannot confidently be cleared as unprotected facts alone. Missing: applicable US original-expression clearance/permission or a substantiated noncopyrightability basis for this whole retained sentence.",
       "independent_daf8_match_evidence": {
         "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter.html",
         "extracted_json": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter-embedded.json",
@@ -2526,7 +2917,8 @@
         "original_entry_id": "ACA8_535",
         "extraction_helper": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\inspect_embedded.py",
         "observation": "Exact lexical formulation matches DAF8 embedded second entry, not merely an article-wide import notice."
-      }
+      },
+      "selected_rights_reviewer": "Selected-expression and source-sufficiency reviewer #142; separate from original author and first reviewer"
     },
     {
       "frozen_row": 3094,
@@ -2769,66 +3161,6 @@
       "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field."
     },
     {
-      "frozen_row": 3098,
-      "headword": "damoiseau",
-      "source_id": "b142_fr_156374",
-      "revid": 39460790,
-      "declared_daf8_import": true,
-      "selected_spans": [
-        {
-          "source_id": "b142_fr_156374",
-          "revid": 39460790,
-          "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-          "line_1_based": 9,
-          "column_1_based": 1,
-          "reviewed_excerpt": "# {{ironique|fr}} {{vieilli|fr}} [[homme|Homme]] qui fait le [[beau]], le [[galant]] auprès des [[femme]]s."
-        }
-      ],
-      "supporting_spans": [
-        {
-          "source_id": "b142_fr_156374",
-          "revid": 39460790,
-          "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b142_fr_156374",
-          "revid": 39460790,
-          "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b142_fr_156374",
-          "revid": 39460790,
-          "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-          "line_1_based": 6,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég-x|da.mwa.zo}}"
-        },
-        {
-          "source_id": "b142_fr_156374",
-          "revid": 39460790,
-          "url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&oldid=39460790",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=damoiseau&action=history",
-          "line_1_based": 7,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''damoiseau''' {{pron|da.mwa.zo|fr}} {{m}} {{équiv-pour|lang=fr|une femme|damoiselle|}}"
-        }
-      ],
-      "status": "passed_noncopyrightable_selected_expression",
-      "selected_expression_reason": "Faire le beau/le galant auprès des femmes consists of conventional idioms in a terse person-role gloss. The ironic/vieilli and gender labels are facts. Rights clearance of this narrow phrase does not establish everyday eligibility.",
-      "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
-      "ipa_and_frames_reason": "Isolated pronunciation, headword, POS, inflection and construction facts are assessed separately; no audio or creative original definition is reproduced by the IPA field."
-    },
-    {
       "frozen_row": 3099,
       "headword": "carton",
       "source_id": "b142_fr_8062",
@@ -2973,6 +3305,25 @@
     }
   ],
   "legal_reading": "17 USC 102 distinguishes facts/ideas from their expression. Copyright Office FAQ excludes short phrases but cautions that factual expression can be protected. Wikimedia Terms section 7 requires US public-domain verification. 104A can restore qualifying foreign works for the remaining US term; 304(b) can provide 95 years. France expiry alone does not determine US rights. No protection or infringement conclusion is inferred merely from an article-wide import notice.",
-  "counting": "25 DAF8-marked selected boundaries cleared on their actual conventional noncopyrightable expression; four selected textual boundaries unresolved. All 50 IPA fields pass separately.",
-  "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator"
+  "counting": "49 selected-use source decisions; four developed expressions replaced by limited lexical facts. Damoiseau has no selected use or field and four missing annotation fields.",
+  "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
+  "annotation_exceptions": [
+    {
+      "frozen_row": 3098,
+      "headword": "damoiseau",
+      "pos": "NOM",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/142",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-22",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3098 damoiseau/NOM as a zero-field annotation on 2026-11-22, America/Vancouver. Preserve its exact identity, source order, frequencies and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This decision applies only to row 3098.",
+        "exact_reply": "Approve zero-field annotation (Recommended)",
+        "evidence": "docs/evidence/issue-142/owner-approval.json"
+      },
+      "independent_evidence_decision": "Fixed revision 39460790 marks the gallant-man proposal ironic and dated; the independent everyday-use review remains unestablished. The owner resolved the scope requirement only by approving this exact zero-field annotation. No proposal is accepted as dictionary content."
+    }
+  ]
 }

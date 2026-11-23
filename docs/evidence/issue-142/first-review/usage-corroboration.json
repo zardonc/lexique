@@ -1,0 +1,360 @@
+{
+  "raw_capture_archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142",
+  "independent_review": "completed_one_everyday_use_unresolved",
+  "reviewer": "Independent source, semantic and selected-rights reviewer #142; separate from content author and coordinator",
+  "author_observations": [
+    {
+      "frozen_row": 3055,
+      "capture": "robert-bienvenu",
+      "text_lines_1_based": [
+        47,
+        49,
+        70
+      ],
+      "author_reading": "The current noun frame and a 2024 usage support le bienvenu as a welcome person; the frozen noun is distinct from the adjective and the greeting."
+    },
+    {
+      "frozen_row": 3061,
+      "capture": "robert-serviteur",
+      "text_lines_1_based": [
+        38,
+        39,
+        40,
+        59
+      ],
+      "author_reading": "Personal service is literary/formal; the domestic-servant use is separately dated. Select the devoted-person use and retain formal register."
+    },
+    {
+      "frozen_row": 3095,
+      "capture": "robert-o",
+      "text_lines_1_based": [
+        43,
+        44,
+        47,
+        48
+      ],
+      "author_reading": "Exact ô is classified as an interjection. Wiktionnaire particule is a source taxonomy difference, not the letter noun or a substitution of oh."
+    },
+    {
+      "frozen_row": 3095,
+      "capture": "fixed_Wiktionnaire_ô",
+      "raw_source": "target/issue-142/sources/ô.wiki",
+      "lines_1_based": [
+        54,
+        55,
+        60,
+        64
+      ],
+      "author_reading": "The 2018 first-person campus account provides the emphatic Ô joie construction. Only the short construction is selected as support; the attributed article sentence remains unselected in the raw archive.",
+      "original_work": "La ZEP / Le Monde, campus account published 2018-10-22; source URL and bibliographic identity are retained at raw line 55. External prose rights are separate and no full quotation is proposed."
+    },
+    {
+      "frozen_row": 3098,
+      "capture": "robert-damoiseau",
+      "text_lines_1_based": [
+        38,
+        39,
+        43,
+        49,
+        50,
+        53,
+        57,
+        58,
+        60
+      ],
+      "author_reading": "Historical definition and playful synonyms; newer partner examples include historical discussion, costume reenactment and theatrical address. The site says these examples are automatically selected and not reviewed by its editorial team. They do not establish the required everyday sense."
+    },
+    {
+      "frozen_row": 3098,
+      "capture": "larousse-damoiseau-current",
+      "text_lines_1_based": [
+        41,
+        42,
+        44,
+        45
+      ],
+      "author_reading": "Separate historical title and ironic gallant-man senses. The ironic sense lacks the fixed Wiktionnaire vieilli label, leaving conflicting register evidence; it does not itself settle modern everyday eligibility."
+    }
+  ],
+  "author_captures": [
+    {
+      "name": "robert-damoiseau",
+      "url": "https://dictionnaire.lerobert.com/definition/damoiseau",
+      "final_url": "https://dictionnaire.lerobert.com/definition/damoiseau",
+      "status": 200,
+      "capture_version": "2026-11-22T22:32:02.539307+00:00",
+      "raw_capture": "target/issue-142/corroboration/robert-damoiseau.html",
+      "text_locator": "target/issue-142/corroboration/robert-damoiseau.txt",
+      "redistribution": "External dictionary prose is reserved and is not proposed for redistribution or adapted into learner fields; these are factual author observations only."
+    },
+    {
+      "name": "robert-o",
+      "url": "https://dictionnaire.lerobert.com/definition/o",
+      "final_url": "https://dictionnaire.lerobert.com/definition/o",
+      "status": 200,
+      "capture_version": "2026-11-22T22:32:02.855694+00:00",
+      "raw_capture": "target/issue-142/corroboration/robert-o.html",
+      "text_locator": "target/issue-142/corroboration/robert-o.txt",
+      "redistribution": "External dictionary prose is reserved and is not proposed for redistribution or adapted into learner fields; these are factual author observations only."
+    },
+    {
+      "name": "robert-bienvenu",
+      "url": "https://dictionnaire.lerobert.com/definition/bienvenu",
+      "final_url": "https://dictionnaire.lerobert.com/definition/bienvenu",
+      "status": 200,
+      "capture_version": "2026-11-22T22:32:03.351475+00:00",
+      "raw_capture": "target/issue-142/corroboration/robert-bienvenu.html",
+      "text_locator": "target/issue-142/corroboration/robert-bienvenu.txt",
+      "redistribution": "External dictionary prose is reserved and is not proposed for redistribution or adapted into learner fields; these are factual author observations only."
+    },
+    {
+      "name": "larousse-damoiseau",
+      "url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21577",
+      "final_url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21577",
+      "status": 200,
+      "capture_version": "2026-11-22T22:32:04.461032+00:00",
+      "raw_capture": "target/issue-142/corroboration/larousse-damoiseau.html",
+      "text_locator": "target/issue-142/corroboration/larousse-damoiseau.txt",
+      "redistribution": "External dictionary prose is reserved and is not proposed for redistribution or adapted into learner fields; these are factual author observations only."
+    },
+    {
+      "name": "larousse-damoiseau-current",
+      "url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21586",
+      "final_url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21586",
+      "status": 200,
+      "capture_version": "2026-11-22T22:37:58.973834+00:00",
+      "raw_capture": "target/issue-142/corroboration/larousse-damoiseau-current.html",
+      "text_locator": "target/issue-142/corroboration/larousse-damoiseau-current.txt",
+      "redistribution": "External dictionary prose is reserved and is not proposed for redistribution or adapted into learner fields; these are factual author observations only."
+    },
+    {
+      "name": "robert-serviteur",
+      "url": "https://dictionnaire.lerobert.com/definition/serviteur",
+      "final_url": "https://dictionnaire.lerobert.com/definition/serviteur",
+      "status": 200,
+      "capture_version": "2026-11-22T22:37:59.434755+00:00",
+      "raw_capture": "target/issue-142/corroboration/robert-serviteur.html",
+      "text_locator": "target/issue-142/corroboration/robert-serviteur.txt",
+      "redistribution": "External dictionary prose is reserved and is not proposed for redistribution or adapted into learner fields; these are factual author observations only."
+    }
+  ],
+  "independent_capture_archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142",
+  "captures": [
+    {
+      "name": "daf8-affecter",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/affecter",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/affecter",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:24.819053+00:00",
+      "bytes": 179121,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-affecter.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-catastrophe",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/catastrophe",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/catastrophe",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:22.940073+00:00",
+      "bytes": 65571,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-catastrophe.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-catastrophe.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-conscient-adj",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/conscient/adjectif",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/conscient/adjectif",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:18:10.132278+00:00",
+      "bytes": 53662,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient-adj.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient-adj.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-conscient",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/conscient",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/conscient",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:23.703191+00:00",
+      "bytes": 19039,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-conscient.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-reproduire",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/reproduire",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/reproduire",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:25.963615+00:00",
+      "bytes": 104942,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-reproduire.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-reproduire.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "daf8-tonne",
+      "request_url": "https://www.cnrtl.fr/definition/academie8/tonne",
+      "final_url": "https://www.cnrtl.fr/definition/academie8/tonne",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:17:26.914369+00:00",
+      "bytes": 79647,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-tonne.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\daf8-tonne.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "larousse-damoiseau",
+      "request_url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21586",
+      "final_url": "https://www.larousse.fr/dictionnaires/francais/damoiseau/21586",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:00.090207+00:00",
+      "bytes": 50586,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\larousse-damoiseau.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\larousse-damoiseau.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "robert-damoiseau",
+      "request_url": "https://dictionnaire.lerobert.com/definition/damoiseau",
+      "final_url": "https://dictionnaire.lerobert.com/definition/damoiseau",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:00.773368+00:00",
+      "bytes": 119688,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-damoiseau.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-damoiseau.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "robert-o",
+      "request_url": "https://dictionnaire.lerobert.com/definition/o",
+      "final_url": "https://dictionnaire.lerobert.com/definition/o",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:56.810906+00:00",
+      "bytes": 114073,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-o.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-o.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "robert-serviteur",
+      "request_url": "https://dictionnaire.lerobert.com/definition/serviteur",
+      "final_url": "https://dictionnaire.lerobert.com/definition/serviteur",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:05:57.122496+00:00",
+      "bytes": 124003,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-serviteur.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\robert-serviteur.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "us-chapter1",
+      "request_url": "https://www.copyright.gov/title17/92chap1.html",
+      "final_url": "https://www.copyright.gov/title17/92chap1.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:15:58.850558+00:00",
+      "bytes": 675161,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter1.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter1.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "us-chapter3",
+      "request_url": "https://www.copyright.gov/title17/92chap3.html",
+      "final_url": "https://www.copyright.gov/title17/92chap3.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:15:58.930800+00:00",
+      "bytes": 72370,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter3.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-chapter3.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    },
+    {
+      "name": "us-faq-protect",
+      "request_url": "https://www.copyright.gov/help/faq/faq-protect.html",
+      "final_url": "https://www.copyright.gov/help/faq/faq-protect.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-22T23:15:58.979970+00:00",
+      "bytes": 34865,
+      "raw_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-faq-protect.html",
+      "text_locator": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142\\corroboration\\us-faq-protect.txt",
+      "redistribution": "Reserved external prose retained only as research evidence; no external quotation is a learner field."
+    }
+  ],
+  "observations": [
+    {
+      "frozen_row": 3055,
+      "capture": "retained_author_robert-bienvenu",
+      "text_lines_1_based": [
+        47,
+        49,
+        70
+      ],
+      "independent_reading": "Independently inspected retained Robert text: the nominal frame and a 2024 tout le monde est le bienvenu occurrence support the welcome-person noun. The feminine greeting and adjective are excluded. This is a retained author capture, not a new reviewer fetch.",
+      "status": "passed"
+    },
+    {
+      "frozen_row": 3061,
+      "capture": "robert-serviteur",
+      "text_lines_1_based": [
+        38,
+        39,
+        40,
+        59
+      ],
+      "independent_reading": "Fresh Robert capture separates the literary person/institution service use from dated domestic service; the Europarl use supports public-service devotion. Retain formal register for the selected devoted-person use.",
+      "status": "passed"
+    },
+    {
+      "frozen_row": 3095,
+      "capture": "robert-o",
+      "independent_reading": "Fresh Robert interjection classification supports the emphatic feeling use. Fixed Wiki particule taxonomy differs from frozen ONO; the selected use fits interjection, not letter-name o or substituted oh.",
+      "status": "passed"
+    },
+    {
+      "frozen_row": 3095,
+      "capture": "fixed_Wiktionnaire_ô",
+      "raw_source": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\sources\\ô.wiki",
+      "lines_1_based": [
+        54,
+        55,
+        60,
+        64
+      ],
+      "independent_reading": "Independently read the fixed 2018 La ZEP/Le Monde campus account and Ô joie construction. It supplies modern emphatic use in an everyday situation. Retain emphatic register; the full attributed sentence is excluded from selected/supporting content.",
+      "status": "passed"
+    },
+    {
+      "frozen_row": 3098,
+      "capture": "larousse-damoiseau",
+      "text_lines_1_based": [
+        41,
+        42,
+        44,
+        45
+      ],
+      "independent_reading": "Fresh correct Larousse entry /21586 separately labels the title historical and the gallant-young-man sense ironic, with no vieilli label. This permits the ironic interpretation, but a current dictionary listing alone does not establish actual modern everyday use.",
+      "status": "unresolved"
+    },
+    {
+      "frozen_row": 3098,
+      "capture": "robert-damoiseau",
+      "text_lines_1_based": [
+        38,
+        39,
+        43,
+        49,
+        50,
+        53,
+        57,
+        58,
+        60
+      ],
+      "independent_reading": "Fresh Robert definition is anciennement; playful synonyms do not constitute attestation. Modern-dated examples refer to history, costumes/reenactment or theatrical address; old literary examples do not establish current everyday gallantry. The site says its examples are automatic and not editorially reviewed. Together with fixed Wiki ironique/vieilli, this leaves eligibility unestablished.",
+      "status": "unresolved"
+    }
+  ]
+}

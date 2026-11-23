@@ -1,23 +1,17 @@
-# Issue #142 reviewed content
+# Reviewed D2 batch #142
 
-The independent review accepts **184 fields on quality and rights: 182 unchanged
-and two Chinese replacements**. **45 complete groups / 180 fields** are ready
-for coordinator assembly; four separately accepted IPA fields remain held with
-their rights-incomplete groups. **16 fields remain unresolved**: 12 textual
-source dependencies and four `damoiseau` everyday-use requirements. No new
-canonical field, annotation or specialist exception is admitted here.
+**49 groups / 196 fields pass quality and selected-expression rights review.** Frozen row 3098 `damoiseau/NOM` is the exact owner-approved zero-field annotation, with four missing fields. Canonical assembly remains pending.
 
-See [the independent report](README-independent-review.md) for review identity,
-actual checks and precise gaps. [Reviewed candidates](review-candidates.md)
-retain every actual FR/IPA/EN/ZH proposal and use. [Field review](field-review.json)
-contains exact proposed/accepted text and per-field reasons; quality acceptance
-alone does not imply rights clearance. [Admission](admission.json) separates the
-counts. The exact author package remains under [authored/](authored/snapshot.json).
+Frozen identities, order, POS subclasses and both frequency strings follow
+[the manifest](../../../resources/core-pilot-79/scope-manifest.csv), retaining
+the global denominator of 4,087 groups. The complete reviewed shard is in
+[groups](groups.json), [field review](field-review.json), [rights](rights.json),
+[source context](source-context.json), [exact excerpts](source-excerpts.json),
+[admission](admission.json), [reuse](reuse.json), [notices](NOTICES.md) and [COPYING](COPYING).
 
-[Sources](sources.json), [context](source-context.json),
-[excerpts](source-excerpts.json), [captures](source-captures.json),
-[source audit](source-audit.json), [rights](rights.json),
-[territorial decisions](territorial-rights-review.json),
-[selected rights](selected-rights.md), [notices](NOTICES.md) and [COPYING](COPYING)
-retain the selected source boundaries and attribution. Native and combined
-resource admission remain coordinator-owned.
+Read [independent review](README-independent-review.md) for exact source/use
+decisions, role separation, original proposals and scope approvals.
+[Selected rights](selected-rights.md) covers current source packets;
+[verification](verification.json) records the tested boundary and archive.
+Canonical conversion, packaged redistribution obligations, native execution
+and learner/release gates remain pending coordinator verification.

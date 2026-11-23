@@ -1,0 +1,18 @@
+{
+  "status": "approved_by_project_owner",
+  "approval_date": "2026-11-22",
+  "timezone": "America/Vancouver",
+  "exact_reply": "Approve zero-field annotation (Recommended)",
+  "issue": 142,
+  "parent_issue": 78,
+  "frozen_row": 3098,
+  "headword": "damoiseau",
+  "lexique_cgram": "NOM",
+  "subtitle_lemma_per_million": "16.03",
+  "subtitle_pos_per_million": "16.03",
+  "admitted_fields": 0,
+  "missing_fields": ["french_definition", "ipa", "english_meaning", "chinese_meaning"],
+  "annotation_exception_decision": "The project owner approved frozen row 3098 damoiseau/NOM as a zero-field annotation on 2026-11-22, America/Vancouver. Preserve its exact identity, source order, frequencies and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This decision applies only to row 3098.",
+  "proposal": "context/damoiseau-annotation-proposal.md",
+  "review": "review-142/docs/evidence/issue-142/README-independent-review.md"
+}

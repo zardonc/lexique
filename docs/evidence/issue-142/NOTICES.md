@@ -17,8 +17,7 @@ French is scoped lexical adaptation. EN/ZH are new explanations of that same
 use, not upstream bilingual quotations. IPA selects one applicable recorded
 isolated variant and adds slashes; no audio is copied. Grammatical construction,
 number, gender and register are retained. Media and attributed literary/news
-sentences supply no learner field. The two short supporting fragments record
-construction/word form only. Source bindings add no runtime spelling alias.
+sentences supply no learner field. Supporting source selections record exact lexical facts and construction/word forms. Source bindings add no runtime spelling alias.
 
 ## Article and original-work credits
 
@@ -88,33 +87,19 @@ CFC definition at line 53 is excluded from the packaging sense at line 26.
 Referenced modern dictionaries and media receive no blanket licence inference.
 External usage-check prose remains outside repository content.
 
-## Delivery obligations and status
+## Current selected scope and delivery
 
-Retain legal text, source/version identifiers, full contributor/history credit,
-original-work credit, modification notices and selected source materials.
-Distribute the adaptation layer under CC BY-SA 4.0 without additional restrictions.
-The coordinator verifies actual combined material and notices before admission.
-All 200 fields await independent quality/rights review; `damoiseau/NOM` also has
-four unresolved ordinary-content fields. Project-owned code remains MIT.
+196 fields / 49 groups pass quality and selected-expression rights.
+Damoiseau/NOM row 3098 has zero selected fields and four missing annotation fields under the exact owner decision in owner-approval.json.
+The developed source sentences for catastrophe, conscient, reproduire, affecter
+are outside the selected redistribution packets. Exact limited lexical facts
+and conventional short expressions are identified in source-excerpts.json,
+with per-expression reasons in rights-fix-review.json. France expiry alone
+does not clear whole original works in the US or worldwide.
 
-## Independent review and territorial limits
-
-The actual selected/supporting boundaries were independently reviewed. The
-Chinese `bavarder` explanation now preserves lack of discretion/restraint;
-`témoignage` now says witness rather than eyewitness. Exact author text,
-accepted text and modifications are retained in accepted-replacements.json.
-
-DAF8's conservative 2006-01-01 economic expiry is France-only; no US/worldwide
-public-domain status is inferred. Twenty-five DAF8-marked selected expressions
-clear individually as conventional wording/facts. Four developed textual
-boundaries remain unresolved: catastrophe, conscient, reproduire and affecter.
-See territorial-rights-review.json for literal spans and reasons; affecter's
-matching DAF8 second entry is extracted from the retained response JSON. Article notices
-and bibliographic references do not prove selected text was copied or creative.
-All 50 IPA fields clear separately. Only 45 groups have complete joint acceptance.
-
-Additional historical dictionary bibliography credits appear in sources.json
-and source-context.json (bibliographic_original_credits). They are distinct from
-the declared import column above. Full original-author/work identities are
-retained there without claiming each cited work supplied the selected sentence.
-Damoiseau retains four unresolved everyday-use fields; no exception is admitted.
+The first review’s bavarder/témoignage Chinese corrections remain; all 12 affected learner texts are unchanged.
+Retain complete CC BY-SA 4.0 text, attribution, version/history/contributor and
+original-work credits, modification notices and the selected source materials.
+The coordinator verifies the actual combined package before canonical admission.
+The research archive and first-review snapshots supply evidence, not additional
+selected dictionary text. Learner/native/release gates remain separate.
