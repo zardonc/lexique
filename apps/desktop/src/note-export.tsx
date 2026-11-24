@@ -19,11 +19,9 @@ function ExportCounts({ snapshot, text }: { readonly snapshot: NoteExportSnapsho
   return <p role="status">{snapshot.records} {text.records} · {snapshot.rows} {text.rows}{snapshot.records === 0 && <> — {text.empty}</>}</p>;
 }
 
-function MarkdownSave({ single, disabled, text, save, available }: {
+function MarkdownSave({ single, disabled, text, save }: {
   readonly single: boolean; readonly disabled: boolean; readonly text: NoteExportText; readonly save: (format: 'markdown' | 'zip') => void;
-  readonly available: boolean;
 }) {
-  if (!available) return null;
   return <button disabled={disabled} onClick={() => save(single ? 'markdown' : 'zip')}>{single ? text.saveMarkdown : text.saveZip}</button>;
 }
 
@@ -61,7 +59,7 @@ function ExportDialog({ runtime, scope, text, close, recordKind }: {
     {error && <p role="alert">{error} <button disabled={busy} onClick={() => setRetry((value) => value + 1)}>{text.retry}</button></p>}
     {result && <p role="status">{result}</p>}
     <div className="actions"><button disabled={busy || !snapshot?.records} onClick={() => { void save(); }}>{busy ? text.busy : text.save}</button>
-      <MarkdownSave available single={scope.kind === 'single'} disabled={busy || !snapshot?.records} text={text} save={(format) => { void save(format); }} />
+      <MarkdownSave single={scope.kind === 'single'} disabled={busy || !snapshot?.records} text={text} save={(format) => { void save(format); }} />
       <button disabled={busy} onClick={close}>{text.close}</button></div>
   </dialog>;
 }

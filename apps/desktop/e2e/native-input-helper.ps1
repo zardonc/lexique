@@ -272,10 +272,10 @@ public static class NativeInputFixture {
         ValidatePickerProcess(process, executable);
         var button = PickerControl(dialog, process, "Button", action == "picker-cancel" ? 2 : 1);
         result["button"] = new Dictionary<string, object> { {"handle", button.ToInt64()}, {"id", GetDlgCtrlID(button)}, {"caption", ReadControl(button)} };
+        if(filenameId != 0) result["defaultFilename"] = ReadControl(PickerControl(dialog, process, "Edit", filenameId));
         if(action == "picker-select") {
             if(filenameId == 0 || !System.IO.Path.IsPathFullyQualified(filename)) throw new Exception("Picker selection requires an observed filename control and absolute filename");
             var edit = PickerControl(dialog, process, "Edit", filenameId);
-            result["defaultFilename"] = ReadControl(edit);
             if(TimedText(edit, 0xC, UIntPtr.Zero, filename, 2, 500, out _) == IntPtr.Zero) throw new Exception("Owned filename write timed out");
             var readback = ReadControl(edit);
             if(readback != filename) throw new Exception("Owned filename readback differs");

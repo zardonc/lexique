@@ -83,6 +83,32 @@ pub struct GrammarImportPreview {
     pub error: Option<String>,
 }
 
+fn match_grammar_content(
+    connection: &Connection,
+    content: &GrammarImportContent,
+) -> Result<(Option<GrammarRecord>, &'static str), String> {
+    let existing = content
+        .exchange_id
+        .as_deref()
+        .filter(|id| !id.is_empty())
+        .map(|id| lexique_storage::find_grammar_exchange(connection, id))
+        .transpose()
+        .map_err(|error| error.to_string())?
+        .flatten();
+    let status = match &existing {
+        Some(record)
+            if content
+                .unchanged(record)
+                .map_err(|error| error.to_string())? =>
+        {
+            "identical"
+        }
+        Some(_) => "different",
+        None => "create",
+    };
+    Ok((existing, status))
+}
+
 pub fn preview_markdown_bytes(
     connection: &Connection,
     source: ImportSource,
@@ -103,25 +129,7 @@ pub fn preview_markdown_bytes(
         .and_then(crate::note_markdown::parse_grammar_markdown);
     match content {
         Ok(content) => {
-            let existing = content
-                .exchange_id
-                .as_deref()
-                .filter(|id| !id.is_empty())
-                .map(|id| lexique_storage::find_grammar_exchange(connection, id))
-                .transpose()
-                .map_err(|error| error.to_string())?
-                .flatten();
-            let status = match &existing {
-                Some(record)
-                    if content
-                        .unchanged(record)
-                        .map_err(|error| error.to_string())? =>
-                {
-                    "identical"
-                }
-                Some(_) => "different",
-                None => "create",
-            };
+            let (existing, status) = match_grammar_content(connection, &content)?;
             preview.groups.push(GrammarImportGroup {
                 files: None,
                 content,
@@ -254,27 +262,7 @@ pub fn preview_zip_bytes(
             ));
             continue;
         }
-        group.existing = group
-            .content
-            .exchange_id
-            .as_deref()
-            .filter(|id| !id.is_empty())
-            .map(|id| lexique_storage::find_grammar_exchange(connection, id))
-            .transpose()
-            .map_err(|error| error.to_string())?
-            .flatten();
-        group.status = match &group.existing {
-            Some(record)
-                if group
-                    .content
-                    .unchanged(record)
-                    .map_err(|error| error.to_string())? =>
-            {
-                "identical"
-            }
-            Some(_) => "different",
-            None => "create",
-        };
+        (group.existing, group.status) = match_grammar_content(connection, &group.content)?;
     }
     if preview.groups.is_empty() {
         preview.error = Some(format!(
@@ -411,22 +399,7 @@ pub fn preview_csv_with_options(
                 ));
                 continue;
             }
-            group.existing = group
-                .content
-                .exchange_id
-                .as_deref()
-                .filter(|id| !id.is_empty())
-                .map(|id| lexique_storage::find_grammar_exchange(connection, id))
-                .transpose()
-                .map_err(|e| e.to_string())?
-                .flatten();
-            group.status = match &group.existing {
-                Some(record) if group.content.unchanged(record).map_err(|e| e.to_string())? => {
-                    "identical"
-                }
-                Some(_) => "different",
-                None => "create",
-            };
+            (group.existing, group.status) = match_grammar_content(connection, &group.content)?;
         }
         Ok(())
     })();
