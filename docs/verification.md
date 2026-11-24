@@ -1,5 +1,9 @@
 # 骨架验证记录
 
+## 语法 Markdown ZIP 交换（#217）
+
+Windows x64 真实选择器、独立 SQLite 库往返、恢复重启及 ZIP 学习状态和失败回滚检查已执行；部分原生边界仍待验收。准确源码、二进制、失败和未覆盖场景见 [#217 验证记录](grammar-zip-verification.md)。
+
 ## 单条语法 Markdown 交换（#216）
 
 Windows x64 已用真实文件选择器和独立 SQLite 验证单条语法 Markdown 导入、导出、身份匹配、原始文本、省略和清空字段、取消、失败回滚、暂停卡及重新打开；既有词汇 Markdown 导入导出也通过原生检查。后端、桌面库和相关浏览器检查通过。源码、命令、证据和验证限制见 [#216 验证记录](grammar-markdown-verification.md)；格式与使用方式见[模板说明](grammar-markdown-exchange.md)。
