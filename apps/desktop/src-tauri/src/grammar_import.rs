@@ -65,6 +65,8 @@ impl GrammarImportMapping {
 }
 #[derive(Clone, Debug, Serialize)]
 pub struct GrammarImportGroup {
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub files: Option<Vec<String>>,
     pub content: GrammarImportContent,
     pub rows: Vec<u64>,
     pub existing: Option<GrammarRecord>,
@@ -121,6 +123,7 @@ pub fn preview_markdown_bytes(
                 None => "create",
             };
             preview.groups.push(GrammarImportGroup {
+                files: None,
                 content,
                 rows: vec![1],
                 existing,
@@ -129,6 +132,155 @@ pub fn preview_markdown_bytes(
             });
         }
         Err(error) => preview.error = Some(format!("{}: {error}", preview.source.filename)),
+    }
+    Ok(preview)
+}
+
+pub fn preview_zip_bytes(
+    connection: &Connection,
+    source: ImportSource,
+    bytes: &[u8],
+    operation: &str,
+) -> Result<GrammarImportPreview, String> {
+    use std::io::{Cursor, Read};
+    source.validate().map_err(|error| error.to_string())?;
+    let mut archive = zip::ZipArchive::new(Cursor::new(bytes))
+        .map_err(|error| format!("{}: unreadable ZIP: {error}", source.filename))?;
+    let mut preview = GrammarImportPreview {
+        operation: operation.into(),
+        source,
+        columns: vec![],
+        mapping: GrammarImportMapping::default(),
+        groups: vec![],
+        error: None,
+    };
+    let mut identities = std::collections::HashMap::<String, usize>::new();
+    for index in 0..archive.len() {
+        let mut entry = archive
+            .by_index_with_options(
+                index,
+                zip::ZipReadOptions::new().enforce_header_consistency(true),
+            )
+            .map_err(|error| {
+                format!(
+                    "{}: unreadable ZIP entry {}: {error}",
+                    preview.source.filename,
+                    index + 1
+                )
+            })?;
+        let name = entry
+            .name()
+            .map_err(|error| {
+                format!(
+                    "{}: invalid ZIP entry name: {error}",
+                    preview.source.filename
+                )
+            })?
+            .into_owned();
+        let mut bytes = Vec::new();
+        entry.read_to_end(&mut bytes).map_err(|error| {
+            format!(
+                "{}: unreadable ZIP entry {name}: {error}",
+                preview.source.filename
+            )
+        })?;
+        let parsed = std::str::from_utf8(&bytes)
+            .map_err(|error| format!("Markdown must be UTF-8: {error}"))
+            .and_then(|text| crate::note_markdown::parse_grammar_markdown_fields(text, true));
+        let content = match parsed {
+            Ok(content) => content,
+            Err(error) => {
+                preview.groups.push(GrammarImportGroup {
+                    files: Some(vec![name.clone()]),
+                    rows: vec![index as u64 + 1],
+                    content: GrammarImportContent {
+                        exchange_id: None,
+                        title: name.clone(),
+                        body: None,
+                        question: None,
+                        answer: None,
+                    },
+                    existing: None,
+                    status: "invalid",
+                    error: Some(format!("{}: {name}: {error}", preview.source.filename)),
+                });
+                continue;
+            }
+        };
+        if let Some(previous) = content
+            .exchange_id
+            .as_ref()
+            .filter(|id| !id.is_empty())
+            .and_then(|id| identities.get(id).copied())
+        {
+            let existing = &mut preview.groups[previous];
+            existing.rows.push(index as u64 + 1);
+            existing
+                .files
+                .as_mut()
+                .expect("ZIP group has files")
+                .push(name);
+            if existing.content != content {
+                existing.status = "invalid";
+                existing.error = Some("conflicting inputs for the same exchange identity".into());
+            }
+        } else {
+            if let Some(id) = content.exchange_id.as_ref().filter(|id| !id.is_empty()) {
+                identities.insert(id.clone(), preview.groups.len());
+            }
+            preview.groups.push(GrammarImportGroup {
+                files: Some(vec![name]),
+                rows: vec![index as u64 + 1],
+                content,
+                existing: None,
+                status: "invalid",
+                error: None,
+            });
+        }
+    }
+    for group in &mut preview.groups {
+        if group.error.is_none() {
+            group.error = group
+                .content
+                .validate()
+                .err()
+                .map(|error| error.to_string());
+        }
+        if let Some(error) = &group.error {
+            group.error = Some(format!(
+                "{}: {}: {error}",
+                preview.source.filename,
+                group.files.as_ref().unwrap().join(", ")
+            ));
+            continue;
+        }
+        group.existing = group
+            .content
+            .exchange_id
+            .as_deref()
+            .filter(|id| !id.is_empty())
+            .map(|id| lexique_storage::find_grammar_exchange(connection, id))
+            .transpose()
+            .map_err(|error| error.to_string())?
+            .flatten();
+        group.status = match &group.existing {
+            Some(record)
+                if group
+                    .content
+                    .unchanged(record)
+                    .map_err(|error| error.to_string())? =>
+            {
+                "identical"
+            }
+            Some(_) => "different",
+            None => "create",
+        };
+    }
+    if preview.groups.is_empty() {
+        preview.error = Some(format!(
+            "{}: ZIP contains no grammar records",
+            preview.source.filename
+        ));
     }
     Ok(preview)
 }
@@ -229,6 +381,7 @@ pub fn preview_csv_with_options(
                     identities.insert(id.clone(), index);
                 }
                 preview.groups.push(GrammarImportGroup {
+                    files: None,
                     content,
                     rows: vec![line],
                     existing: None,

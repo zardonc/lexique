@@ -55,10 +55,21 @@ pub fn preview_markdown_bytes(
 }
 
 pub fn note_markdown_filename(record: &lexique_storage::NoteExportRecord) -> String {
-    let readable: String = record
-        .headword
+    safe_markdown_filename(&record.headword, &record.id.to_string(), 80)
+}
+
+pub fn grammar_markdown_filename(record: &lexique_storage::GrammarExportRecord) -> String {
+    safe_markdown_filename(
+        &record.title,
+        &format!("{}-{}", record.exchange_id, record.id),
+        40,
+    )
+}
+
+fn safe_markdown_filename(title: &str, suffix: &str, max_chars: usize) -> String {
+    let readable: String = title
         .chars()
-        .take(80)
+        .take(max_chars)
         .map(|ch| {
             if ch.is_control() || "<>:\"/\\|?*".contains(ch) {
                 '_'
@@ -75,7 +86,7 @@ pub fn note_markdown_filename(record: &lexique_storage::NoteExportRecord) -> Str
         } else {
             readable
         },
-        record.id
+        suffix
     );
     // Windows reserves device basenames even when followed by an extension.
     let basename = filename
@@ -128,6 +139,17 @@ pub fn format_note_markdown(record: &lexique_storage::NoteExportRecord) -> Strin
 }
 
 pub fn parse_grammar_markdown(text: &str) -> Result<lexique_storage::GrammarImportContent, String> {
+    let content = parse_grammar_markdown_fields(text, false)?;
+    content
+        .validate()
+        .map_err(|error| format!("Grammar sections: {error}"))?;
+    Ok(content)
+}
+
+pub(crate) fn parse_grammar_markdown_fields(
+    text: &str,
+    allow_missing_title: bool,
+) -> Result<lexique_storage::GrammarImportContent, String> {
     let mut template = Template {
         rest: text.strip_prefix('\u{feff}').unwrap_or(text),
     };
@@ -156,14 +178,15 @@ pub fn parse_grammar_markdown(text: &str) -> Result<lexique_storage::GrammarImpo
     }
     let content = lexique_storage::GrammarImportContent {
         exchange_id: identity,
-        title: title.ok_or("Missing required ## title section")?,
+        title: match title {
+            Some(title) => title,
+            None if allow_missing_title => String::new(),
+            None => return Err("Missing required ## title section".into()),
+        },
         body,
         question,
         answer,
     };
-    content
-        .validate()
-        .map_err(|error| format!("Grammar sections: {error}"))?;
     Ok(content)
 }
 

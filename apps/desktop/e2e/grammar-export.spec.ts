@@ -13,7 +13,7 @@ test('grammar search export selects its own saved scope and releases cancellatio
   await page.getByRole('button', { name: '导出 CSV', exact: true }).click();
   const dialog = page.getByRole('dialog', { name: '导出语法笔记' });
   await expect(dialog).toContainText('2 条语法记录');
-  await expect(dialog.getByRole('button', { name: '保存 Markdown', exact: true })).toHaveCount(0);
+  await expect(dialog.getByRole('button', { name: '保存 Markdown ZIP', exact: true })).toBeEnabled();
   await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'note_export_snapshot').at(-1)?.args?.recordKind)).toBe('grammar');
   await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'note_export_snapshot').at(-1)?.args?.scope))
     .toEqual({ kind: 'search', query: '', sort: 'updated-desc', category: 'all' });
