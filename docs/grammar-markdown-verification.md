@@ -4,6 +4,12 @@ The single-record exchange uses the saved grammar snapshot and the existing
 preview and atomic import session. The [template and field semantics](grammar-markdown-exchange.md)
 describe the content format.
 
+The single-record save dialog uses the saved title and exchange identity for its
+Windows-compatible suggested filename. Two same-title records were exported to
+distinct files with a newly built packaged executable; the actual Win32 defaults,
+source/binary lineage and full-suite results are recorded in the
+[#212 review verification](grammar-exchange-review-verification.md).
+
 Windows x64 native acceptance used the executable built from commit
 `09769da0f9055942c81fd890ce6cb29072bdcb70` (SHA-256
 `ADBEA55D846DB06BD7E6DCA1A6168611094A4A41F3C413BF9F4914864AD2E780`).

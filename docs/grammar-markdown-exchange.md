@@ -4,6 +4,10 @@ A saved grammar record can be exported as one Markdown file and imported through
 the grammar notebook. The file contains content only; categories, review
 progress, history and pause state remain local. Imported new cards start paused.
 
+The save dialog suggests a Windows-compatible filename from the saved title and
+exchange identity, using the same naming rule as Markdown ZIP exports. Independent
+records with the same title receive distinct filenames.
+
 The template starts with `# Lexique grammar note v1` and uses named sections
 `exchange_id`, `title`, `body`, `question` and `answer`. Each present section
 contains a plain text fence, such as:
