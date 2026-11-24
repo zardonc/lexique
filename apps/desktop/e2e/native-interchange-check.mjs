@@ -10,7 +10,7 @@ import { grammarImportCheck } from './native-grammar-import.mjs';
 
 const [resources, binary, destinationPath, scenario, source] = process.argv.slice(2);
 const grammarImportScenarios = ['grammar-markdown', 'grammar-markdown-restart', 'grammar-markdown-validation', 'grammar-batch-mapping', 'grammar-batch-learning', 'grammar-batch-zip-learning', 'grammar-batch-stale', 'grammar-batch-occupied', 'grammar-batch-failure', 'grammar-batch-zip-failure', 'grammar-batch-replay', 'grammar-batch-restart', 'grammar-batch-selection', 'grammar-import', 'grammar-import-restart', 'grammar-import-identifiers', 'grammar-import-validation', 'grammar-import-failure', 'grammar-import-replay', 'grammar-import-known'];
-assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', 'grammar-vocabulary-markdown', 'grammar-zip-source', 'grammar-zip-destination', 'grammar-zip-backup', 'grammar-zip-invalid', ...grammarImportScenarios].includes(scenario));
+assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', 'grammar-vocabulary-markdown', 'grammar-zip-source', 'grammar-zip-destination', 'grammar-zip-backup', 'grammar-zip-invalid', 'grammar-zip-reopen', ...grammarImportScenarios].includes(scenario));
 const fixture = await native24Fixture(resources, binary, destinationPath);
 const { destination } = fixture;
 const revision = spawnSync('git', ['rev-parse', 'HEAD', 'HEAD^{tree}'], { encoding: 'utf8', windowsHide: true, timeout: 5000 });
@@ -426,6 +426,16 @@ async function grammarZipInvalid() {
   evidence.checks.push('conflicting identity group and vocabulary template located and excluded while valid records commit');
 }
 
+async function grammarZipReopen() {
+  const saved = await grammars();
+  assert.equal(saved.length, 3);
+  assert.deepEqual(readState(destination).grammar_exchange_identities.map((row) => row.exchange_id).sort(), ['zip-217-one', 'zip-217-three', 'zip-217-two']);
+  assert.deepEqual((await invoke('review_queue', { timezone: 'UTC', skipped: [] })).queue.cards, []);
+  const paused = fixtureSql(destination, "print(json.dumps([r[0] for r in c.execute('SELECT vocabulary_id FROM review_paused ORDER BY vocabulary_id')]))", {}, true);
+  assert.equal(paused.length, 2);
+  evidence.checks.push('packaged application reopened copied library; three identities and two paused cards persist, with empty review queue');
+}
+
 async function grammarBackup() {
   await invoke('interface_preferences', { preferences: { locale: 'en', theme: 'white' } });
   await page.reload(); await expect(page.getByRole('banner')).toBeVisible();
@@ -531,7 +541,7 @@ try {
   page = await fixture.start(); page.setDefaultTimeout(8000); await page.context().setOffline(true); await expect(page.getByRole('banner')).toBeVisible();
   if (evidence.sourceIdentities && scenario !== 'grammar-csv') assert.deepEqual(readState(destination).grammar_exchange_identities, evidence.sourceIdentities);
   if (grammarImportScenarios.includes(scenario)) await grammarImportCheck({ scenario, page, destination, invoke, picker, evidence, python });
-  else await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary, 'grammar-vocabulary-markdown': grammarVocabularyMarkdown, 'grammar-zip-source': grammarZipSource, 'grammar-zip-destination': grammarZipDestination, 'grammar-zip-backup': grammarBackup, 'grammar-zip-invalid': grammarZipInvalid })[scenario]();
+  else await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary, 'grammar-vocabulary-markdown': grammarVocabularyMarkdown, 'grammar-zip-source': grammarZipSource, 'grammar-zip-destination': grammarZipDestination, 'grammar-zip-backup': grammarBackup, 'grammar-zip-invalid': grammarZipInvalid, 'grammar-zip-reopen': grammarZipReopen })[scenario]();
   if (scenario !== 'seed') { evidence.records = await words(); await page.screenshot({ path: join(destination, 'native-interchange.png') }); await fixture.stop(true); }
   evidence.state = readState(destination);
   await writeFile(join(destination, 'results.json'), JSON.stringify(evidence, null, 2)); console.log(JSON.stringify({ scenario, passed: true, checks: evidence.checks.length }));
