@@ -9,6 +9,40 @@ use rusqlite::Connection;
 use super::write_note_csv;
 
 #[test]
+fn grammar_zip_exports_distinct_saved_records_with_content_identity() {
+    use std::io::Read;
+    let fixture = Fixture::new();
+    let record = |id, exchange_id: &str| lexique_storage::GrammarExportRecord {
+        id,
+        exchange_id: exchange_id.into(),
+        title: "CON.same/title".into(),
+        body: "中文".into(),
+        question: String::new(),
+        answer: String::new(),
+    };
+    let snapshot = lexique_storage::GrammarExportSnapshot {
+        records: vec![record(1, "identity-one"), record(2, "identity-two")],
+    };
+    let path = fixture.0.join("grammar.zip");
+    super::write_grammar_zip(&snapshot, &path).unwrap();
+    let mut zip = zip::ZipArchive::new(std::fs::File::open(path).unwrap()).unwrap();
+    assert_eq!(zip.len(), 2);
+    let mut names = vec![];
+    for (index, identity) in ["identity-one", "identity-two"].iter().enumerate() {
+        let mut entry = zip.by_index(index).unwrap();
+        let name = entry.name().unwrap().into_owned();
+        assert!(!name.contains('/'));
+        names.push(name.to_ascii_lowercase());
+        let mut content = String::new();
+        entry.read_to_string(&mut content).unwrap();
+        let parsed = crate::note_markdown::parse_grammar_markdown(&content).unwrap();
+        assert_eq!(parsed.exchange_id.as_deref(), Some(*identity));
+        assert_eq!(parsed.title, "CON.same/title");
+    }
+    assert_ne!(names[0], names[1]);
+}
+
+#[test]
 fn grammar_snapshot_exports_one_saved_markdown_file_and_reports_write_failure() {
     let snapshot = super::ExportSnapshot::Grammar(lexique_storage::GrammarExportSnapshot {
         records: vec![lexique_storage::GrammarExportRecord {

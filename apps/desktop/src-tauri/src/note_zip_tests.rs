@@ -27,6 +27,79 @@ fn preview_zip(
 }
 
 #[test]
+fn grammar_zip_coalesces_equal_identities_and_excludes_conflicting_groups() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let one = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n## title\n```text\nSame\n```\n";
+    let changed = one.replace("Same", "Changed");
+    let path = archive(
+        &fixture,
+        &[("a.md", one), ("b.md", one), ("c.md", &changed)],
+    );
+    let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        ..Default::default()
+    };
+    let ExchangePreview::Grammar(preview) =
+        preview_note_bytes(&connection, source, &bytes, "grammar-zip", &options).unwrap()
+    else {
+        panic!("grammar preview")
+    };
+    assert_eq!(preview.groups.len(), 1);
+    assert_eq!(preview.groups[0].status, "invalid");
+    assert_eq!(preview.groups[0].rows, vec![1, 2, 3]);
+}
+
+#[test]
+fn grammar_zip_invalid_pair_conflicts_with_same_identity_in_either_order() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let valid = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n## title\n```text\nSame\n```\n";
+    let invalid = format!("{valid}## question\n```text\nOnly question\n```\n");
+    for entries in [
+        vec![("good.md", valid), ("bad.md", invalid.as_str())],
+        vec![("bad.md", invalid.as_str()), ("good.md", valid)],
+    ] {
+        let path = archive(&fixture, &entries);
+        let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+        let options = NoteImportOptions {
+            record_kind: crate::note_export::ExportRecordKind::Grammar,
+            ..Default::default()
+        };
+        let ExchangePreview::Grammar(preview) =
+            preview_note_bytes(&connection, source, &bytes, "pair-conflict", &options).unwrap()
+        else {
+            panic!("grammar preview")
+        };
+        assert_eq!(preview.groups.len(), 1);
+        assert_eq!(preview.groups[0].status, "invalid");
+        assert_eq!(preview.groups[0].files.as_ref().unwrap().len(), 2);
+    }
+}
+
+#[test]
+fn grammar_zip_missing_title_invalidates_matching_identity() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let valid = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n## title\n```text\nValid\n```\n";
+    let missing = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n";
+    let path = archive(&fixture, &[("valid.md", valid), ("missing.md", missing)]);
+    let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        ..Default::default()
+    };
+    let ExchangePreview::Grammar(preview) =
+        preview_note_bytes(&connection, source, &bytes, "missing-title", &options).unwrap()
+    else {
+        panic!("grammar preview")
+    };
+    assert_eq!(preview.groups.len(), 1);
+    assert_eq!(preview.groups[0].status, "invalid");
+}
+
+#[test]
 fn ordinary_tool_deflated_zip_imports_through_real_file_and_sqlite() {
     let fixture = Fixture::new();
     let mut connection = fixture.open();

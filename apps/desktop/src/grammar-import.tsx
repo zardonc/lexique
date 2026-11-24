@@ -22,7 +22,7 @@ function useGrammarImport(runtime: RuntimeAdapter, onSaved: () => void, text: No
   const [preview, setPreview] = useState<GrammarImportPreview | null>(null), [result, setResult] = useState<GrammarImportResult | null>(null);
   const [busy, setBusy] = useState(false), [error, setError] = useState(''), [status, setStatus] = useState('');
   const [delimiter, setDelimiter] = useState<'comma' | 'semicolon'>('comma'), [dirty, setDirty] = useState(false);
-  const [format, setFormat] = useState<'csv' | 'markdown'>('csv');
+  const [format, setFormat] = useState<'csv' | 'markdown' | 'zip'>('csv');
   const [mapping, setMapping] = useState<GrammarImportMapping>({ exchange_id: null, title: null, body: null, question: null, answer: null });
   const [decisions, setDecisions] = useState<readonly Decision[]>([]), [submitted, setSubmitted] = useState(false);
   const cards = useGrammarCardStart(runtime, onSaved);
@@ -39,12 +39,12 @@ function useGrammarImport(runtime: RuntimeAdapter, onSaved: () => void, text: No
     if (selected) { setMapping(selected.mapping); setDecisions(selected.groups.map((group) => group.status === 'identical' ? 'skip' : group.status === 'create' ? 'create' : '')); }
     else setStatus(text.interchange.cancelled);
   }
-  function select(selectedFormat: 'csv' | 'markdown' = 'csv') { void work(async () => {
+  function select(selectedFormat: 'csv' | 'markdown' | 'zip' = 'csv') { void work(async () => {
     setFormat(selectedFormat);
     if (operation.current) await runtime.cancelNoteImport(operation.current);
     const id = crypto.randomUUID(); operation.current = id;
     setPreview(null); setResult(null); setStatus(''); cards.reset();
-    accept(await runtime.previewGrammarImport(id, { delimiter, mapping: null, ...(selectedFormat === 'markdown' ? { format: 'markdown' } : {}) }));
+    accept(await runtime.previewGrammarImport(id, { delimiter, mapping: null, ...(selectedFormat !== 'csv' ? { format: selectedFormat } : {}) }));
   }); }
   function remap() { void work(async () => {
     if (operation.current) accept(await runtime.remapGrammarImport(operation.current, { delimiter, mapping }));
@@ -71,7 +71,7 @@ type ImportState = ReturnType<typeof useGrammarImport>;
 
 function Mapping({ state, text }: { readonly state: ImportState; readonly text: NotebookText }) {
   const messages = text.interchange;
-  if (state.format === 'markdown') return null;
+  if (state.format !== 'csv') return null;
   return <fieldset disabled={state.busy || state.submitted}>
     <label>{messages.delimiter}<select aria-label={messages.delimiter} value={state.delimiter} onChange={(event) => state.separate(event.target.value as 'comma' | 'semicolon')}>
       <option value="comma">{messages.comma}</option><option value="semicolon">{messages.semicolon}</option>
@@ -84,7 +84,7 @@ function Mapping({ state, text }: { readonly state: ImportState; readonly text: 
 }
 function Incoming({ state, index, text }: { readonly state: ImportState; readonly index: number; readonly text: NotebookText }) {
   const group = state.preview!.groups[index], labels = text.grammarImport, messages = text.interchange;
-  return <section aria-label={group.content.title}><h3>{group.content.title}</h3><p>{messages.rows}: {group.rows.join(', ')}</p>
+  return <section aria-label={group.content.title}><h3>{group.content.title}</h3><p>{messages.rows}: {group.rows.join(', ')}</p>{group.files && <p>{group.files.join(', ')}</p>}
     <p>{labels.identity}: {group.content.exchange_id || labels.assigned}</p><p>{messages[group.status]}</p>
     <IncomingContent group={group} text={text} />
     {group.error && <p role="alert">{group.error}</p>}
@@ -135,7 +135,8 @@ export function GrammarImport({ runtime, text, onSaved, onOpen, onPrepare }: {
   const state = useGrammarImport(runtime, onSaved, text), labels = text.grammarImport;
   return <section aria-label={labels.open}>
     <button disabled={state.busy} onClick={() => onPrepare(() => state.select())}>{labels.open}</button>
-    <button disabled={state.busy} onClick={() => onPrepare(() => state.select('markdown'))}>{labels.markdown}</button><p>{labels.columns}</p>
+    <button disabled={state.busy} onClick={() => onPrepare(() => state.select('markdown'))}>{labels.markdown}</button>
+    <button disabled={state.busy} onClick={() => onPrepare(() => state.select('zip'))}>{labels.zip}</button><p>{labels.columns}</p>
     <Mapping state={state} text={text} />
     {state.busy && <p>{text.interchange.busy}</p>}
     {state.error && <p role="alert">{state.error}</p>}

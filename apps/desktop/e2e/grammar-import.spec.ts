@@ -6,6 +6,17 @@ const group = { rows: [2], status: 'create', error: null, existing: null, conten
 const preview = { operation: 'grammar-preview', source: { format: 'csv', filename: 'grammar.csv' }, error: null,
   columns: ['exchange_id', 'title', 'body', 'question', 'answer'], mapping: { exchange_id: 0, title: 1, body: 2, question: 3, answer: 4 }, groups: [group] };
 
+test('grammar ZIP preview locates invalid entries and allows excluding them', async ({ page }) => {
+  const invalid = { ...group, rows: [1], files: ['bad.md'], status: 'invalid', error: 'bad.md: wrong template' };
+  await nativeFixture(page, { note_import_preview: [{ value: { ...preview, source: { format: 'zip', filename: 'batch.zip' }, columns: [], groups: [invalid] } }] });
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
+  await page.getByRole('tab', { name: '语法', exact: true }).click();
+  await page.getByRole('button', { name: '导入语法 Markdown ZIP', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('bad.md');
+  await page.getByRole('checkbox', { name: '排除无效组：Une règle' }).check();
+  await expect(page.getByRole('button', { name: '确认导入', exact: true })).toBeEnabled();
+});
+
 test('grammar Markdown import shows located errors and uses the desktop file session', async ({ page }) => {
   await nativeFixture(page, { note_import_preview: [{ value: { ...preview, source: { format: 'markdown', filename: 'bad.md' }, columns: [], groups: [], error: 'bad.md: Missing required ## title section' } }] });
   await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();

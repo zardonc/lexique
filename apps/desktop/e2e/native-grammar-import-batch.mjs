@@ -6,7 +6,14 @@ import { expect } from '@playwright/test';
 import { fixtureSql, readState, compareLearning } from './native-backup-state.mjs';
 
 export async function grammarBatchCheck(ctx) {
-  const { scenario, page, destination, invoke, picker, evidence, region, file, headers, confirm, records, queue, sqlPause } = ctx;
+  const { scenario, page, destination, invoke, evidence, region, file, headers, confirm, records, queue, sqlPause, python } = ctx;
+  const zipInput = scenario.startsWith('grammar-batch-zip-');
+  const picker = async (button, filename, ...args) => {
+    if (!zipInput || button !== '导入语法 CSV' || !filename) return ctx.picker(button, filename, ...args);
+    const zip = `${filename}.zip`;
+    python("import csv,sys,zipfile\nwith open(sys.argv[1],encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))\nwith zipfile.ZipFile(sys.argv[2],'w') as z:\n for i,row in enumerate(rows):\n  content='# Lexique grammar note v1\\n\\n'\n  for key,value in row.items():\n   if key == 'exchange_id' and not value: continue\n   content += '## '+key+'\\n\\n``````text\\n'+value+'\\n``````\\n\\n'\n  z.writestr(str(i)+'.md',content)", [filename, zip]);
+    return ctx.picker('导入语法 Markdown ZIP', zip, ...args);
+  };
   const decision = (title) => region.getByRole('combobox', { name: `导入决定：${title}`, exact: true });
   const exclude = (title) => region.getByRole('checkbox', { name: `排除无效组：${title}`, exact: true });
   const sql = (code, parameters = {}, readOnly = false) => fixtureSql(destination, code, parameters, readOnly);
@@ -33,7 +40,7 @@ export async function grammarBatchCheck(ctx) {
     assert.equal(sqlPause().find((r) => r.id === paired.id).paused, paired.id); assert.deepEqual(await queue(), []);
     await picker('导入语法 CSV', ''); await expect(region.getByRole('status')).toContainText('已取消');
     evidence.checks.push('T17/T20/T22–T24/T37: real picker BOM/semicolon/external mapping, multiline locations, identical identity coalescing, conflicting group and one-sided pair exclusion, selected valid skip, independent id-free rows, cancellation');
-  } else if (scenario === 'grammar-batch-learning') {
+  } else if (scenario === 'grammar-batch-learning' || scenario === 'grammar-batch-zip-learning') {
     const category = await invoke('category_create', { name: 'Local category' });
     const active = await seed('Active'), paused = await seed('Paused'), noCard = await seed('NoCard', false);
     await invoke('grammar_save', { request: { operation: 'classify-active', id: active.id, revision: active.revision, title: active.title, body: active.body, category_ids: [category.id] } });
@@ -54,7 +61,7 @@ export async function grammarBatchCheck(ctx) {
     await picker('导入语法 CSV', await file('omitted-preserve', [['exchange_id', 'title'], [identity(await seed('BodyPreserved', false).then((r) => r.id)), 'Body preserved rename']]));
     await decision('Body preserved rename').selectOption('update'); await confirm(); assert.equal((await records()).find((r) => r.title === 'Body preserved rename').body, 'Saved body');
     evidence.checks.push('T18/T19/T21/T27: selected real updates preserve omitted body/pair, clear explicit empty body, replace complete pairs together, retain active/paused card identities, rating/progress/due and local categories; new card on existing note atomically paused');
-  } else if (scenario === 'grammar-batch-stale' || scenario === 'grammar-batch-occupied') {
+  } else if (scenario === 'grammar-batch-stale' || scenario === 'grammar-batch-zip-stale' || scenario === 'grammar-batch-occupied') {
     const saved = await seed('Original', false), id = identity(saved.id), occupied = scenario.endsWith('occupied');
     const rows = [headers, ['', 'Must roll back', '', 'Q', 'A'], [occupied ? 'newly-occupied' : id, 'Imported update', '', '', '']];
     await picker('导入语法 CSV', await file('stale', rows)); if (!occupied) await decision('Imported update').selectOption('update');
@@ -67,7 +74,7 @@ export async function grammarBatchCheck(ctx) {
     compareLearning(readState(destination), before); assert.ok(!(await records()).some((r) => r.title === 'Must roll back'));
     await region.getByRole('button', { name: '取消导入', exact: true }).click();
     evidence.checks.push(`T25: ${occupied ? 'newly occupied identity' : 'local revision change'} rejects whole real selected batch including earlier new note/card; SQLite unchanged`);
-  } else if (scenario === 'grammar-batch-failure') {
+  } else if (scenario === 'grammar-batch-failure' || scenario === 'grammar-batch-zip-failure') {
     await queue(); const before = readState(destination);
     await picker('导入语法 CSV', await file('second-write-failure', [headers, ['first', 'First', '', 'Q1', 'A1'], ['second', 'Second', '', 'Q2', 'A2']]));
     sql("c.executescript(\"CREATE TRIGGER fail_second BEFORE INSERT ON review_paused WHEN (SELECT count(*) FROM review_paused)=1 BEGIN SELECT RAISE(FAIL,'second pause write failed'); END;\"); c.commit()");
@@ -84,7 +91,7 @@ export async function grammarBatchCheck(ctx) {
     sql("c.execute('DROP TRIGGER fail_first_start'); c.commit()");
     await first.getByRole('button', { name: '开始复习', exact: true }).click(); await expect(first).toContainText('已开始复习');
     evidence.checks.push('T26/T39: real second pause write failure rolls back first and second notes, identities, cards, pause and receipt; same submission retries; first card resume fails visibly while second succeeds; imported content retained, first stays paused until explicit successful retry');
-  } else if (scenario === 'grammar-batch-replay') {
+  } else if (scenario === 'grammar-batch-replay' || scenario === 'grammar-batch-zip-replay') {
     await picker('导入语法 CSV', await file('lost-response', [['title', 'question', 'answer'], ['Independent', 'Q', 'A'], ['Independent', 'Q', 'A']]));
     await page.evaluate(() => { window.dropGrammarCommitResponse = true; });
     await region.getByRole('button', { name: '确认导入', exact: true }).click(); await expect(region.getByRole('alert')).toContainText('Committed response lost');

@@ -133,7 +133,9 @@ fn preview_note_bytes(
             NoteFormat::Markdown => {
                 crate::grammar_import::preview_markdown_bytes(connection, source, bytes, operation)
             }
-            NoteFormat::Zip => Err("Grammar ZIP import is not supported".into()),
+            NoteFormat::Zip => {
+                crate::grammar_import::preview_zip_bytes(connection, source, bytes, operation)
+            }
         }
         .map(ExchangePreview::Grammar);
     }

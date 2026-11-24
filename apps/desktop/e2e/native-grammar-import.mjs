@@ -43,7 +43,7 @@ export async function grammarImportCheck({ scenario, page, destination, invoke, 
   };
   const queue = async () => (await invoke('review_queue', { timezone: 'UTC', skipped: [] })).queue.cards;
   const sqlPause = () => fixtureSql(destination, "print(json.dumps([dict(r) for r in c.execute('SELECT v.id,e.exchange_id,g.question,g.answer,p.vocabulary_id AS paused FROM vocabulary v JOIN grammar_exchange_identities e ON e.record_id=v.id LEFT JOIN review_cards r ON r.vocabulary_id=v.id LEFT JOIN grammar_cards g ON g.card_id=r.id LEFT JOIN review_paused p ON p.vocabulary_id=v.id ORDER BY v.id')],ensure_ascii=False))", {}, true);
-  if (scenario.startsWith('grammar-batch')) return grammarBatchCheck({ scenario, page, destination, invoke, picker, evidence, region, file, headers, confirm, records, queue, sqlPause });
+  if (scenario.startsWith('grammar-batch')) return grammarBatchCheck({ scenario, page, destination, invoke, picker, evidence, region, file, headers, confirm, records, queue, sqlPause, python });
   if (scenario === 'grammar-markdown') {
     const filename = join(destination, 'incoming.md');
     const section = (name, value) => `## ${name}\n\n\`\`\`\`\`\`text\n${value}\n\`\`\`\`\`\`\n\n`;
