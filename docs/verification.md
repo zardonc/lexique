@@ -2,7 +2,7 @@
 
 ## 语法 Markdown ZIP 交换（#217）
 
-Windows x64 真实选择器、独立 SQLite 库往返、恢复重启及 ZIP 学习状态和失败回滚检查已执行；部分原生边界仍待验收。准确源码、二进制、失败和未覆盖场景见 [#217 验证记录](grammar-zip-verification.md)。
+Windows x64 真实选择器、独立 SQLite 库往返、恢复重启、ZIP 错误与冲突、学习状态和失败回滚检查已执行；完整浏览器及 Rust 套件重新通过。准确源码、二进制、重试及平台限制见 [#217 验证记录](grammar-zip-verification.md)。
 
 ## 单条语法 Markdown 交换（#216）
 
