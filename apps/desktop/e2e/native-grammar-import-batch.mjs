@@ -61,7 +61,7 @@ export async function grammarBatchCheck(ctx) {
     await picker('导入语法 CSV', await file('omitted-preserve', [['exchange_id', 'title'], [identity(await seed('BodyPreserved', false).then((r) => r.id)), 'Body preserved rename']]));
     await decision('Body preserved rename').selectOption('update'); await confirm(); assert.equal((await records()).find((r) => r.title === 'Body preserved rename').body, 'Saved body');
     evidence.checks.push('T18/T19/T21/T27: selected real updates preserve omitted body/pair, clear explicit empty body, replace complete pairs together, retain active/paused card identities, rating/progress/due and local categories; new card on existing note atomically paused');
-  } else if (scenario === 'grammar-batch-stale' || scenario === 'grammar-batch-occupied') {
+  } else if (scenario === 'grammar-batch-stale' || scenario === 'grammar-batch-zip-stale' || scenario === 'grammar-batch-occupied') {
     const saved = await seed('Original', false), id = identity(saved.id), occupied = scenario.endsWith('occupied');
     const rows = [headers, ['', 'Must roll back', '', 'Q', 'A'], [occupied ? 'newly-occupied' : id, 'Imported update', '', '', '']];
     await picker('导入语法 CSV', await file('stale', rows)); if (!occupied) await decision('Imported update').selectOption('update');
@@ -91,7 +91,7 @@ export async function grammarBatchCheck(ctx) {
     sql("c.execute('DROP TRIGGER fail_first_start'); c.commit()");
     await first.getByRole('button', { name: '开始复习', exact: true }).click(); await expect(first).toContainText('已开始复习');
     evidence.checks.push('T26/T39: real second pause write failure rolls back first and second notes, identities, cards, pause and receipt; same submission retries; first card resume fails visibly while second succeeds; imported content retained, first stays paused until explicit successful retry');
-  } else if (scenario === 'grammar-batch-replay') {
+  } else if (scenario === 'grammar-batch-replay' || scenario === 'grammar-batch-zip-replay') {
     await picker('导入语法 CSV', await file('lost-response', [['title', 'question', 'answer'], ['Independent', 'Q', 'A'], ['Independent', 'Q', 'A']]));
     await page.evaluate(() => { window.dropGrammarCommitResponse = true; });
     await region.getByRole('button', { name: '确认导入', exact: true }).click(); await expect(region.getByRole('alert')).toContainText('Committed response lost');
