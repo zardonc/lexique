@@ -1,5 +1,9 @@
 # 骨架验证记录
 
+## 语法交换最终审查修正（#212）
+
+单条语法 Markdown 保存选择器与 ZIP 共用已保存标题／交换身份的 Windows 安全命名规则，重名独立记录分别建议不同文件名。ZIP 写入生命周期、语法身份匹配及状态判定复用，格式位置诊断与原子提交语义保持；导出按钮移除常量可用性参数。新鲜 Windows x64 portable 的实际 Win32 文件名、语法 ZIP 往返、生词 CSV／Markdown／ZIP 检查通过；完整浏览器 488 项、后端 256 项、桌面库 167 项通过，两个既有子进程入口按用途忽略。准确测试源码、二进制、原生重试及证据归档见 [#212 审查验证](grammar-exchange-review-verification.md)。
+
 ## 语法 Markdown ZIP 交换（#217）
 
 Windows x64 真实选择器、独立 SQLite 库往返、恢复重启、ZIP 错误与冲突、学习状态和失败回滚检查已执行；完整浏览器及 Rust 套件重新通过。准确源码、二进制、重试及平台限制见 [#217 验证记录](grammar-zip-verification.md)。

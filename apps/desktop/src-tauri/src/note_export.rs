@@ -209,54 +209,54 @@ pub fn write_note_markdown(
 }
 
 pub fn write_note_zip(snapshot: &NoteExportSnapshot, destination: &Path) -> Result<(), String> {
-    use std::io::Write;
     if snapshot.records.is_empty() {
         return Err("No saved vocabulary in this export scope".into());
     }
-    let file = std::fs::File::create(destination)
-        .map_err(|error| format!("Could not create ZIP {}: {error}", destination.display()))?;
-    let mut archive = zip::ZipWriter::new(file);
-    let options =
-        zip::write::SimpleFileOptions::default().compression_method(zip::CompressionMethod::Stored);
-    for record in &snapshot.records {
-        let name = crate::note_markdown::note_markdown_filename(record);
-        archive
-            .start_file(&name, options)
-            .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
-        archive
-            .write_all(crate::note_markdown::format_note_markdown(record).as_bytes())
-            .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
-    }
-    archive
-        .finish()
-        .and_then(|file| {
-            file.sync_all()?;
-            Ok(file)
-        })
-        .map_err(|error| format!("Could not finish ZIP {}: {error}", destination.display()))?;
-    Ok(())
+    write_markdown_zip(
+        destination,
+        snapshot.records.iter().map(|record| {
+            (
+                crate::note_markdown::note_markdown_filename(record),
+                crate::note_markdown::format_note_markdown(record),
+            )
+        }),
+    )
 }
 
 pub fn write_grammar_zip(
     snapshot: &GrammarExportSnapshot,
     destination: &Path,
 ) -> Result<(), String> {
-    use std::io::Write;
     if snapshot.records.is_empty() {
         return Err("No saved grammar records in this export scope".into());
     }
+    write_markdown_zip(
+        destination,
+        snapshot.records.iter().map(|record| {
+            (
+                crate::note_markdown::grammar_markdown_filename(record),
+                crate::note_markdown::format_grammar_markdown(record),
+            )
+        }),
+    )
+}
+
+fn write_markdown_zip(
+    destination: &Path,
+    entries: impl IntoIterator<Item = (String, String)>,
+) -> Result<(), String> {
+    use std::io::Write;
     let file = std::fs::File::create(destination)
         .map_err(|error| format!("Could not create ZIP {}: {error}", destination.display()))?;
     let mut archive = zip::ZipWriter::new(file);
     let options =
         zip::write::SimpleFileOptions::default().compression_method(zip::CompressionMethod::Stored);
-    for record in &snapshot.records {
-        let name = crate::note_markdown::grammar_markdown_filename(record);
+    for (name, content) in entries {
         archive
             .start_file(&name, options)
             .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
         archive
-            .write_all(crate::note_markdown::format_grammar_markdown(record).as_bytes())
+            .write_all(content.as_bytes())
             .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
     }
     archive
@@ -372,7 +372,9 @@ pub async fn note_export_markdown(
             ExportSnapshot::Vocabulary(snapshot) => {
                 crate::note_markdown::note_markdown_filename(&snapshot.records[0])
             }
-            ExportSnapshot::Grammar(_) => "lexique-grammar.md".into(),
+            ExportSnapshot::Grammar(snapshot) => {
+                crate::note_markdown::grammar_markdown_filename(&snapshot.records[0])
+            }
         };
         (filename, snapshot.counts().1)
     } else {

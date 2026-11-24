@@ -10,7 +10,7 @@ import { grammarImportCheck } from './native-grammar-import.mjs';
 
 const [resources, binary, destinationPath, scenario, source] = process.argv.slice(2);
 const grammarImportScenarios = ['grammar-markdown', 'grammar-markdown-restart', 'grammar-markdown-validation', 'grammar-batch-mapping', 'grammar-batch-learning', 'grammar-batch-zip-learning', 'grammar-batch-stale', 'grammar-batch-zip-stale', 'grammar-batch-occupied', 'grammar-batch-failure', 'grammar-batch-zip-failure', 'grammar-batch-replay', 'grammar-batch-zip-replay', 'grammar-batch-restart', 'grammar-batch-selection', 'grammar-import', 'grammar-import-restart', 'grammar-import-identifiers', 'grammar-import-validation', 'grammar-import-failure', 'grammar-import-replay', 'grammar-import-known'];
-assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', 'grammar-vocabulary-markdown', 'grammar-zip-source', 'grammar-zip-destination', 'grammar-zip-backup', 'grammar-zip-invalid', 'grammar-zip-reopen', 'grammar-zip-paths', 'grammar-zip-conflicts', 'grammar-zip-corrupt', 'grammar-zip-collisions', 'grammar-zip-history-source', 'grammar-zip-history-destination', ...grammarImportScenarios].includes(scenario));
+assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names', 'grammar-seed', 'grammar-csv', 'grammar-backup', 'grammar-legacy', 'grammar-vocabulary', 'grammar-vocabulary-markdown', 'grammar-markdown-filenames', 'grammar-zip-source', 'grammar-zip-destination', 'grammar-zip-backup', 'grammar-zip-invalid', 'grammar-zip-reopen', 'grammar-zip-paths', 'grammar-zip-conflicts', 'grammar-zip-corrupt', 'grammar-zip-collisions', 'grammar-zip-history-source', 'grammar-zip-history-destination', ...grammarImportScenarios].includes(scenario));
 const fixture = await native24Fixture(resources, binary, destinationPath);
 const { destination } = fixture;
 const revision = spawnSync('git', ['rev-parse', 'HEAD', 'HEAD^{tree}'], { encoding: 'utf8', windowsHide: true, timeout: 5000 });
@@ -346,6 +346,39 @@ async function grammarCsv() {
   evidence.csv = { rows, all, single }; evidence.checks.push('T01–T05/T08/T37: real schema-20 migration, all/search/single saved CSV, counts/order, raw paired text, absent cards, unsaved drafts excluded, cancellation then save');
 }
 
+async function grammarMarkdownFilenames() {
+  for (const index of [0, 1]) await invoke('grammar_save', { request: { operation: `filename-${index}`, id: null, revision: null,
+    title: 'CON.same/title', body: `body-${index}`, category_ids: [] } });
+  const records = await grammars(), identities = readState(destination).grammar_exchange_identities;
+  await page.getByRole('banner').getByRole('combobox').first().selectOption('zh');
+  await notebook(); await page.getByRole('tab', { name: '语法', exact: true }).click();
+  const before = readState(destination), defaults = [];
+  for (const index of [0, 1]) {
+    await page.locator('.vocabulary-list button').nth(index).click();
+    await page.locator('.grammar-editor').getByRole('button', { name: '导出 CSV', exact: true }).click();
+    const selected = await picker('保存 Markdown', '', true);
+    defaults.push(selected.defaultFilename);
+    await page.getByRole('dialog', { name: '导出语法笔记' }).getByRole('button', { name: '关闭', exact: true }).click();
+  }
+  evidence.defaultFilenames = defaults;
+  assert.equal(new Set(defaults.map((name) => name.toLowerCase())).size, 2);
+  for (const [index, filename] of defaults.entries()) {
+    await page.locator('.vocabulary-list button').nth(index).click();
+    const body = await page.getByLabel('语法正文', { exact: true }).inputValue();
+    const selected = records.find((record) => record.body === body);
+    const identity = identities.find((item) => item.record_id === selected.id).exchange_id;
+    assert.equal(filename, `_CON.same_title-${identity}-${selected.id}.md`);
+    await page.locator('.grammar-editor').getByRole('button', { name: '导出 CSV', exact: true }).click();
+    await picker('保存 Markdown', join(destination, filename), true);
+    await expect(page.getByRole('dialog', { name: '导出语法笔记' }).getByRole('status').last()).toHaveText('已导出');
+    const content = await readFile(join(destination, filename), 'utf8');
+    assert.ok(content.includes(identity)); assert.ok(content.includes(selected.body));
+    await page.getByRole('dialog', { name: '导出语法笔记' }).getByRole('button', { name: '关闭', exact: true }).click();
+  }
+  compareLearning(readState(destination), before);
+  evidence.checks.push('two same-title records have distinct identity-aware Win32 save defaults and coexist as saved Markdown without changing learning state');
+}
+
 async function grammarZipSource() {
   const input = join(destination, 'incoming.csv');
   const rows = [['exchange_id', 'title', 'body', 'question', 'answer'],
@@ -617,7 +650,8 @@ try {
   }
   page = await fixture.start(); page.setDefaultTimeout(8000); await page.context().setOffline(true); await expect(page.getByRole('banner')).toBeVisible();
   if (evidence.sourceIdentities && scenario !== 'grammar-csv') assert.deepEqual(readState(destination).grammar_exchange_identities, evidence.sourceIdentities);
-  if (grammarImportScenarios.includes(scenario)) await grammarImportCheck({ scenario, page, destination, invoke, picker, evidence, python });
+  if (scenario === 'grammar-markdown-filenames') await grammarMarkdownFilenames();
+  else if (grammarImportScenarios.includes(scenario)) await grammarImportCheck({ scenario, page, destination, invoke, picker, evidence, python });
   else await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames, 'grammar-seed': grammarSeed, 'grammar-csv': grammarCsv, 'grammar-backup': grammarBackup, 'grammar-legacy': grammarBackup, 'grammar-vocabulary': grammarVocabulary, 'grammar-vocabulary-markdown': grammarVocabularyMarkdown, 'grammar-zip-source': grammarZipSource, 'grammar-zip-destination': grammarZipDestination, 'grammar-zip-backup': grammarBackup, 'grammar-zip-invalid': grammarZipInvalid, 'grammar-zip-reopen': grammarZipReopen, 'grammar-zip-paths': grammarZipPaths, 'grammar-zip-conflicts': grammarZipConflicts, 'grammar-zip-corrupt': grammarZipCorrupt, 'grammar-zip-collisions': grammarZipCollisions, 'grammar-zip-history-source': grammarZipHistorySource, 'grammar-zip-history-destination': grammarZipHistoryDestination })[scenario]();
   if (scenario !== 'seed') { evidence.records = await words(); await page.screenshot({ path: join(destination, 'native-interchange.png') }); await fixture.stop(true); }
   evidence.state = readState(destination);
