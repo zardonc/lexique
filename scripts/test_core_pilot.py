@@ -475,7 +475,7 @@ class CorePilotPreparationTests(unittest.TestCase):
             with closing(sqlite3.connect((root / "first/core.sqlite3").as_uri() + "?mode=ro", uri=True)) as connection:
                 senses = [json.loads(row[0]) for row in connection.execute("SELECT payload FROM senses ORDER BY frozen_row,sense_index")]
                 self.assertEqual([row["frozen_row"] for row in senses],
-                                 [row for row in range(1, 3951) if row not in (87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386, 2560, 2626, 2792, 3098, 3783, 3885, 3922, 3944)])
+                                 [row for row in range(1, 4088) if row not in (87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386, 2560, 2626, 2792, 3098, 3783, 3885, 3922, 3944, 3953, 4057)])
                 self.assertEqual([row["pos"] for row in senses[:5]], ["AUX", "NOM", "VER", "AUX", "VER"])
                 self.assertIn("all pronominal verbs", senses[0]["meaning_en"])
                 self.assertIn("past participle", senses[3]["meaning_en"])
