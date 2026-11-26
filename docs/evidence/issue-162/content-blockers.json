@@ -17,8 +17,8 @@
         51
       ],
       "required_resolution": "Evidence establishing an exact modern everyday NOM use, or a separate explicit owner scope decision. Planche is an explanatory alternative, not a replacement for the frozen group. No exception is approved.",
-      "status": "blocked_unresolved_modern_everyday_use",
-      "owner_exception_approved": false,
+      "status": "resolved_by_owner_zero_field_annotation",
+      "owner_exception_approved": true,
       "pending_fields": [
         "french_definition",
         "ipa",
@@ -118,7 +118,17 @@
           "authorized": false,
           "impact": "Consider the fixed French line-45 noun: wood cover boards covered in skin or cloth for medieval bindings, with /ɛ/, masculine/invariant and explicitly bookbinding scope. Contemporary Académie/Robert corroboration is specialist only. Four new matched meanings and exact selected-origin/rights review are required before admission; external dictionary wording has no redistribution permission here. Do not replace the row with planche or select Maire's quoted line 49 automatically."
         }
-      ]
+      ],
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      },
+      "admitted_fields": 0,
+      "missing_fields": 4
     }
   ],
   "annotation_exception_groups": 0,

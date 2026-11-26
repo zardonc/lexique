@@ -39,7 +39,7 @@ def reviewed(name):
 
 
 class Batch162Tests(unittest.TestCase):
-    def test_independent_review_keeps_ais_blocked_without_an_exception(self):
+    def test_owner_approved_ais_annotation_preserves_zero_fields_and_frozen_identity(self):
         admission = reviewed("admission.json")
         self.assertEqual((admission["independently_accepted_new_groups"],
                           admission["independently_accepted_new_fields"]), (36, 144))
@@ -47,17 +47,32 @@ class Batch162Tests(unittest.TestCase):
         self.assertEqual((admission["pending_independent_review_fields"],
                           admission["pending_independent_rights_fields"]), (0, 0))
         self.assertEqual((admission["annotation_exception_groups"],
-                          admission["specialist_exception_groups"]), (0, 0))
+                          admission["specialist_exception_groups"]), (1, 0))
         blocker = reviewed("content-blockers.json")["groups"][0]
         self.assertEqual((blocker["frozen_row"], blocker["headword"], blocker["lexique_cgram"]),
                          (4057, "ais", "NOM"))
-        self.assertFalse(blocker["owner_exception_approved"])
+        self.assertTrue(blocker["owner_exception_approved"])
         self.assertEqual(set(blocker["pending_fields"]),
                          {"french_definition", "ipa", "english", "chinese"})
         rejected = reviewed("rejected-proposals.json")["groups"][0]
         self.assertEqual(rejected["proposal"]["headword"], "ais")
         self.assertEqual(len(rejected["field_decisions"]), 4)
-        self.assertEqual(reviewed("groups.json")[6]["senses"], [])
+        group = reviewed("groups.json")[6]
+        self.assertEqual(group["senses"], [])
+        self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))
+        self.assertEqual((group["subtitle_lemma_per_million"], group["subtitle_pos_per_million"]),
+                         ("10.14", "10.14"))
+        approval = reviewed("owner-approval.json")
+        self.assertEqual(approval["approved_by"], "project_owner")
+        self.assertEqual(approval["approved_on"], "2026-11-26")
+        self.assertEqual(approval["exact_reply"],
+                         "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。")
+        annotations = reviewed("field-review.json")["annotation_exceptions"]
+        self.assertEqual([(item["frozen_row"], item["headword"], item["pos"]) for item in annotations],
+                         [(4057, "ais", "NOM")])
+        for gap in reviewed("field-review.json")["unresolved_fields"]:
+            self.assertEqual(gap["frozen_row"], 4057)
+            self.assertEqual(gap["annotation_exception_decision"], group["owner_approval"])
 
     def test_reviewed_fields_match_final_texts_fixed_spans_and_rights_decisions(self):
         groups = reviewed("groups.json")
@@ -72,7 +87,7 @@ class Batch162Tests(unittest.TestCase):
         review = reviewed("field-review.json")
         self.assertTrue(review["independence"])
         self.assertTrue(review["independent_acceptance"])
-        self.assertEqual(len(review["fields"]), 148)
+        self.assertEqual(len(review["fields"]), 144)
         rights = {(f["sense_id"], f["field"]): f for f in reviewed("rights.json")["fields"]}
         captures = {c["source_id"]: c for c in reviewed("source-captures.json")["sources"]}
         raw = {sid: Path(c["raw_path"]).read_text(encoding="utf-8").splitlines()
@@ -84,11 +99,7 @@ class Batch162Tests(unittest.TestCase):
             self.assertTrue(decision["review_reason"])
             self.assertTrue(right["selected_text_rights_reason"])
             self.assertEqual(right["independent_review"], "passed_at_selected_text_boundary")
-            if key not in selected:
-                self.assertEqual(decision["frozen_row"], 4057)
-                self.assertIsNone(decision["accepted_text"])
-                self.assertEqual(decision["frozen_scope_eligibility_status"], "rejected")
-                continue
+            self.assertIn(key, selected)
             field = selected[key]
             self.assertEqual(field["language"],
                              {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}[key[1]])
@@ -110,7 +121,7 @@ class Batch162Tests(unittest.TestCase):
             if key[1] != "ipa":
                 pos = next(line for line in reversed(before) if line.startswith("=== {{S|"))
                 self.assertIn("{{S|" + {"NOM": "nom", "ADJ": "adjectif", "VER": "verbe"}[decision["pos"]] + "|fr", pos)
-        self.assertEqual(len(review["usage"]), 37)
+        self.assertEqual(len(review["usage"]), 36)
         self.assertEqual(sum(u["everyday_sense_status"] == "passed" for u in review["usage"]), 36)
         self.assertTrue(all(r["independent_review"] == "passed" for r in review["spelling_relations"]))
 

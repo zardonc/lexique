@@ -1974,334 +1974,6 @@
       "selected_text_rights_reason": "séparation, fixed revision 40032001, selected French lines [8, 29]: French DAF8 import/reference marker(s) at [116]: conservative original credit to Académie française, eighth edition 1932–1935, under the established collective-work CPI L123-3 basis, expired 2006-01-01; fixed wiki transcription/adaptation remains separately CC BY-SA 4.0. The marker does not prove individual sentence authorship. Selected lexical/grammar spans have no attached outside quotation attribution. Neighbouring literary/news examples, etymology, translations, other POS/languages, images and audio are excluded. Full history attribution retains 50 named credits and 4 anonymous contributors; complete API pagination was checked and current registries do not identify fixed-sentence authors. CC BY-SA 4.0 sections 2(a), 3(a), 3(b), 4, disclaimer, licence link, modification and ShareAlike obligations are retained."
     },
     {
-      "sense_id": "b162-4057-ais-nom-selected",
-      "frozen_row": 4057,
-      "headword": "ais",
-      "pos": "NOM",
-      "field": "french_definition",
-      "language": "fr",
-      "proposed_text": "Terme vieilli désignant une planche de bois.",
-      "exact_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 19,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{vieilli|fr}} [[planche|Planche]] de [[bois]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 16,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|ɛ}}"
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 18,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "rejected_frozen_scope",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b162_fr_137962",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "proposed_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 19,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{vieilli|fr}} [[planche|Planche]] de [[bois]]."
-      },
-      "accepted_text": null,
-      "reviewed_text": "Terme vieilli désignant une planche de bois.",
-      "independence": true,
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "rejected",
-      "review_reason": "French scoped adaptation preserves the selected lexical definition. The masculine invariant noun and old wooden-board meaning are accurately represented, but fixed line 19 says vieilli. Contemporary corroboration establishes only technical bookbinding, not an everyday noun use; all four fields fail frozen ordinary-scope eligibility.",
-      "selected_text_rights_reason": "ais, fixed revision 39798131, selected French lines [18, 19]: French DAF8 import/reference marker(s) at [92]: conservative original credit to Académie française, eighth edition 1932–1935, under the established collective-work CPI L123-3 basis, expired 2006-01-01; fixed wiki transcription/adaptation remains separately CC BY-SA 4.0. The marker does not prove individual sentence authorship. Albert Maire's attributed 1896 wording at 49 is an unselected specialist definition; it supplies neither the old board proposal nor an accepted learner field. Rights clearance of the selected old word cannot establish everyday eligibility. Selected lexical/grammar spans have no attached outside quotation attribution. Neighbouring literary/news examples, etymology, translations, other POS/languages, images and audio are excluded. Full history attribution retains 50 named credits and 6 anonymous contributors; complete API pagination was checked and current registries do not identify fixed-sentence authors. CC BY-SA 4.0 sections 2(a), 3(a), 3(b), 4, disclaimer, licence link, modification and ShareAlike obligations are retained."
-    },
-    {
-      "sense_id": "b162-4057-ais-nom-selected",
-      "frozen_row": 4057,
-      "headword": "ais",
-      "pos": "NOM",
-      "field": "ipa",
-      "language": "und",
-      "proposed_text": "/ɛ/",
-      "exact_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 18,
-        "column_1_based": 1,
-        "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}",
-        "ipa_variant_column_1_based": 18,
-        "ipa_variant_excerpt": "ɛ"
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 16,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|ɛ}}"
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 18,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "rejected_frozen_scope",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b162_fr_137962",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "proposed_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 18,
-        "column_1_based": 1,
-        "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}",
-        "ipa_variant_column_1_based": 18,
-        "ipa_variant_excerpt": "ɛ"
-      },
-      "accepted_text": null,
-      "reviewed_text": "/ɛ/",
-      "independence": true,
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "rejected",
-      "review_reason": "The exact written variant /ɛ/ is applicable to this French NOM frame and isolated headword; no audio, liaison or other-language pronunciation is used. The masculine invariant noun and old wooden-board meaning are accurately represented, but fixed line 19 says vieilli. Contemporary corroboration establishes only technical bookbinding, not an everyday noun use; all four fields fail frozen ordinary-scope eligibility.",
-      "selected_text_rights_reason": "ais, fixed revision 39798131, selected French lines [18, 19]: French DAF8 import/reference marker(s) at [92]: conservative original credit to Académie française, eighth edition 1932–1935, under the established collective-work CPI L123-3 basis, expired 2006-01-01; fixed wiki transcription/adaptation remains separately CC BY-SA 4.0. The marker does not prove individual sentence authorship. Albert Maire's attributed 1896 wording at 49 is an unselected specialist definition; it supplies neither the old board proposal nor an accepted learner field. Rights clearance of the selected old word cannot establish everyday eligibility. Selected lexical/grammar spans have no attached outside quotation attribution. Neighbouring literary/news examples, etymology, translations, other POS/languages, images and audio are excluded. Full history attribution retains 50 named credits and 6 anonymous contributors; complete API pagination was checked and current registries do not identify fixed-sentence authors. CC BY-SA 4.0 sections 2(a), 3(a), 3(b), 4, disclaimer, licence link, modification and ShareAlike obligations are retained."
-    },
-    {
-      "sense_id": "b162-4057-ais-nom-selected",
-      "frozen_row": 4057,
-      "headword": "ais",
-      "pos": "NOM",
-      "field": "english",
-      "language": "en",
-      "proposed_text": "An old-fashioned word for a wooden board or plank.",
-      "exact_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 19,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{vieilli|fr}} [[planche|Planche]] de [[bois]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 16,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|ɛ}}"
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 18,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "rejected_frozen_scope",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b162_fr_137962",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "proposed_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 19,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{vieilli|fr}} [[planche|Planche]] de [[bois]]."
-      },
-      "accepted_text": null,
-      "reviewed_text": "An old-fashioned word for a wooden board or plank.",
-      "independence": true,
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "rejected",
-      "review_reason": "English explanatory translation preserves the selected French semantics and explicit conditions. The masculine invariant noun and old wooden-board meaning are accurately represented, but fixed line 19 says vieilli. Contemporary corroboration establishes only technical bookbinding, not an everyday noun use; all four fields fail frozen ordinary-scope eligibility.",
-      "selected_text_rights_reason": "ais, fixed revision 39798131, selected French lines [18, 19]: French DAF8 import/reference marker(s) at [92]: conservative original credit to Académie française, eighth edition 1932–1935, under the established collective-work CPI L123-3 basis, expired 2006-01-01; fixed wiki transcription/adaptation remains separately CC BY-SA 4.0. The marker does not prove individual sentence authorship. Albert Maire's attributed 1896 wording at 49 is an unselected specialist definition; it supplies neither the old board proposal nor an accepted learner field. Rights clearance of the selected old word cannot establish everyday eligibility. Selected lexical/grammar spans have no attached outside quotation attribution. Neighbouring literary/news examples, etymology, translations, other POS/languages, images and audio are excluded. Full history attribution retains 50 named credits and 6 anonymous contributors; complete API pagination was checked and current registries do not identify fixed-sentence authors. CC BY-SA 4.0 sections 2(a), 3(a), 3(b), 4, disclaimer, licence link, modification and ShareAlike obligations are retained."
-    },
-    {
-      "sense_id": "b162-4057-ais-nom-selected",
-      "frozen_row": 4057,
-      "headword": "ais",
-      "pos": "NOM",
-      "field": "chinese",
-      "language": "zh",
-      "proposed_text": "旧用词：木板。",
-      "exact_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 19,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{vieilli|fr}} [[planche|Planche]] de [[bois]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 16,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|ɛ}}"
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 18,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "rejected_frozen_scope",
-      "rights_eligibility_status": "passed_at_selected_text_boundary",
-      "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
-      "author_rights_proposal": {
-        "source_id": "b162_fr_137962",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      },
-      "proposed_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 19,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{vieilli|fr}} [[planche|Planche]] de [[bois]]."
-      },
-      "accepted_text": null,
-      "reviewed_text": "旧用词：木板。",
-      "independence": true,
-      "source_use_semantic_quality_status": "passed",
-      "frozen_scope_eligibility_status": "rejected",
-      "review_reason": "Chinese explanation preserves the selected French semantics and explicit conditions. The masculine invariant noun and old wooden-board meaning are accurately represented, but fixed line 19 says vieilli. Contemporary corroboration establishes only technical bookbinding, not an everyday noun use; all four fields fail frozen ordinary-scope eligibility.",
-      "selected_text_rights_reason": "ais, fixed revision 39798131, selected French lines [18, 19]: French DAF8 import/reference marker(s) at [92]: conservative original credit to Académie française, eighth edition 1932–1935, under the established collective-work CPI L123-3 basis, expired 2006-01-01; fixed wiki transcription/adaptation remains separately CC BY-SA 4.0. The marker does not prove individual sentence authorship. Albert Maire's attributed 1896 wording at 49 is an unselected specialist definition; it supplies neither the old board proposal nor an accepted learner field. Rights clearance of the selected old word cannot establish everyday eligibility. Selected lexical/grammar spans have no attached outside quotation attribution. Neighbouring literary/news examples, etymology, translations, other POS/languages, images and audio are excluded. Full history attribution retains 50 named credits and 6 anonymous contributors; complete API pagination was checked and current registries do not identify fixed-sentence authors. CC BY-SA 4.0 sections 2(a), 3(a), 3(b), 4, disclaimer, licence link, modification and ShareAlike obligations are retained."
-    },
-    {
       "sense_id": "b162-4058-diviser-ver-selected",
       "frozen_row": 4058,
       "headword": "diviser",
@@ -12789,113 +12461,6 @@
       "everyday_sense_reason": "Action or state of being apart from someone is preserved; no legal divorce, state/church separation or mathematical separation is inferred."
     },
     {
-      "sense_id": "b162-4057-ais-nom-selected",
-      "frozen_row": 4057,
-      "headword": "ais",
-      "pos": "NOM",
-      "source_headword": "ais",
-      "proposed_usage": "Masculine invariant noun; the proposed wooden-board use is explicitly old-fashioned and is not an eligible everyday sense.",
-      "language": "en",
-      "excluded_uses": "Bookbinding-only senses, rare material-general extensions and the international language code.",
-      "exact_source": {
-        "source_id": "b162_fr_137962",
-        "revid": 39798131,
-        "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-        "line_1_based": 19,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{vieilli|fr}} [[planche|Planche]] de [[bois]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 16,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|ɛ}}"
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 18,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}"
-        }
-      ],
-      "construction_and_flexion_evidence": [
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 16,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-inv|ɛ}}"
-        },
-        {
-          "source_id": "b162_fr_137962",
-          "revid": 39798131,
-          "url": "https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=ais&action=history",
-          "line_1_based": 18,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''ais''' {{pron|ɛ|fr}} {{m}}"
-        }
-      ],
-      "author_construction_and_flexion_interpretation": "Masculine invariant noun; the proposed wooden-board use is explicitly old-fashioned and is not an eligible everyday sense.",
-      "author_everyday_use_assessment": "The exact French noun’s wooden-board definition is explicitly vieilli. Other senses are bookbinding-specific, historical or rare; no eligible modern everyday NOM use is established.",
-      "accepted_usage_quality_status": "rejected_frozen_scope",
-      "everyday_sense_status": "rejected",
-      "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
-      "accepted_usage": null,
-      "accepted_excluded_uses": "Bookbinding-only senses, rare material-general extensions and the international language code.",
-      "independence": true,
-      "frozen_scope_eligibility_status": "rejected",
-      "source_use_semantic_quality_status": "passed",
-      "review_reason": "The masculine invariant noun and old wooden-board meaning are accurately represented, but fixed line 19 says vieilli. Contemporary corroboration establishes only technical bookbinding, not an everyday noun use; all four fields fail frozen ordinary-scope eligibility.",
-      "everyday_sense_reason": "The masculine invariant noun and old wooden-board meaning are accurately represented, but fixed line 19 says vieilli. Contemporary corroboration establishes only technical bookbinding, not an everyday noun use; all four fields fail frozen ordinary-scope eligibility."
-    },
-    {
       "sense_id": "b162-4058-diviser-ver-selected",
       "frozen_row": 4058,
       "headword": "diviser",
@@ -18020,36 +17585,68 @@
       "headword": "ais",
       "pos": "NOM",
       "field": "french_definition",
-      "status": "blocked_unresolved_modern_everyday_use",
-      "owner_exception_approved": false,
-      "reason": "The fixed definition is explicitly vieilli; no modern everyday noun definition was established."
+      "status": "unresolved",
+      "owner_exception_approved": true,
+      "reason": "The fixed definition is explicitly vieilli; no modern everyday noun definition was established.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
     },
     {
       "frozen_row": 4057,
       "headword": "ais",
       "pos": "NOM",
       "field": "ipa",
-      "status": "blocked_unresolved_modern_everyday_use",
-      "owner_exception_approved": false,
-      "reason": "The recorded /ɛ/ fits the old noun and bookbinding uses, but no eligible everyday selected sense exists to bind an admitted pronunciation."
+      "status": "unresolved",
+      "owner_exception_approved": true,
+      "reason": "The recorded /ɛ/ fits the old noun and bookbinding uses, but no eligible everyday selected sense exists to bind an admitted pronunciation.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
     },
     {
       "frozen_row": 4057,
       "headword": "ais",
       "pos": "NOM",
       "field": "english",
-      "status": "blocked_unresolved_modern_everyday_use",
-      "owner_exception_approved": false,
-      "reason": "The accurate old-fashioned-board explanation remains ineligible; dropping old-fashioned would misrepresent the fixed source."
+      "status": "unresolved",
+      "owner_exception_approved": true,
+      "reason": "The accurate old-fashioned-board explanation remains ineligible; dropping old-fashioned would misrepresent the fixed source.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
     },
     {
       "frozen_row": 4057,
       "headword": "ais",
       "pos": "NOM",
       "field": "chinese",
-      "status": "blocked_unresolved_modern_everyday_use",
-      "owner_exception_approved": false,
-      "reason": "The accurate 旧用词：木板 explanation remains ineligible; removing 旧用词 would misrepresent the fixed source."
+      "status": "unresolved",
+      "owner_exception_approved": true,
+      "reason": "The accurate 旧用词：木板 explanation remains ineligible; removing 旧用词 would misrepresent the fixed source.",
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
     }
   ],
   "reviewed_fields": 148,
@@ -18057,5 +17654,23 @@
   "rejected_fields": 4,
   "reviewed_uses": 37,
   "independently_accepted_uses": 36,
-  "rejected_uses": 1
+  "rejected_uses": 1,
+  "annotation_exceptions": [
+    {
+      "frozen_row": 4057,
+      "headword": "ais",
+      "pos": "NOM",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    }
+  ],
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotation"
 }

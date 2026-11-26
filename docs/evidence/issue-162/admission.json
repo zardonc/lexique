@@ -2,7 +2,7 @@
   "ticket": 162,
   "parent": 78,
   "schema": "lexique-d2-content-candidate-handoff-1",
-  "status": "independently_reviewed_partial_content_shard",
+  "status": "independently_reviewed_content_and_scoped_exceptions_parent_admission_pending",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     4051,
@@ -215,7 +215,7 @@
     "b162_fr_178697",
     "b162_fr_355354"
   ],
-  "annotation_exception_groups": 0,
+  "annotation_exception_groups": 1,
   "specialist_exception_groups": 0,
   "newly_admitted_fields": 0,
   "missing_authored_fields": 0,
@@ -239,5 +239,54 @@
   "eligible_replaced_fields": 9,
   "reviewer_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162",
   "reviewed_author_sha": "c0dac315eef979742b27c37a0f11c859c20d2b1f",
-  "original_expression_status": "resolved_at_selected_boundary"
+  "original_expression_status": "resolved_at_selected_boundary",
+  "accepted_groups": 36,
+  "accepted_fields": 144,
+  "approved_annotations": [
+    {
+      "frozen_row": 4057,
+      "headword": "ais",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "10.14",
+      "subtitle_pos_per_million": "10.14",
+      "senses": [],
+      "resource_admission": "blocked_unresolved_modern_everyday_use",
+      "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
+      "missing_fields": 4,
+      "status": "approved_annotation_exception",
+      "annotation_kind": "owner_approved_zero_field",
+      "admitted_fields": 0,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      },
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/162",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    }
+  ],
+  "approved_annotation_rows": [
+    4057
+  ],
+  "missing_annotation_fields": 4,
+  "ordinary_missing_fields": 0,
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotation",
+  "ticket_complete": false,
+  "owner_approval": {
+    "issue": "https://github.com/zardonc/lexique/issues/162",
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-26",
+    "timezone": "Etc/Unknown",
+    "exact_reply": "批准 ais/NOM 为零字段注记（推荐）：保留第 4057 行身份与词频，四字段继续计为缺失。",
+    "decision": "The project owner approved frozen row 4057 ais/NOM as a zero-field annotation. Preserve its exact identity, source ordering, both 10.14 frequency strings and the 4,087-group denominator; admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+  }
 }

@@ -33,3 +33,8 @@ Independent investigation, scripts and SHA-bound closeout logs remain at
 [Review verification](review-verification.json) records actual checks.
 Canonical conversion, combined packaging, native integration and learner
 acceptance remain coordinator-owned. Full D2 and release remain open.
+
+
+## Approved ais annotation
+
+Frozen row 4057 `ais/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both frequency strings and source order are preserved; four fields remain missing. The original proposal and independent rejection of everyday eligibility remain in [rejected proposals](rejected-proposals.json). [Owner approval](owner-approval.json) does not admit a specialist sense or change spelling/POS.

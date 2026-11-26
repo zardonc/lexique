@@ -99,3 +99,8 @@ The reviewed FR/EN/ZH changes select the normal baseball format with tie
 extensions, the stick-guided firework rocket and the current French admiral
 rank. IPA is unchanged. Exact text and modifications are recorded in
 [accepted replacements](accepted-replacements.json).
+
+
+## Approved ais annotation
+
+Frozen row 4057 `ais/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both frequency strings and source order are preserved; four fields remain missing. The original proposal and independent rejection of everyday eligibility remain in [rejected proposals](rejected-proposals.json). [Owner approval](owner-approval.json) does not admit a specialist sense or change spelling/POS.

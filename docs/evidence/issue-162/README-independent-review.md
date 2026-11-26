@@ -2,7 +2,7 @@
 
 **36 groups / 144 fields are independently eligible for admission.** All 37
 groups, 148 proposed fields and 37 uses were inspected. `ais/NOM` retains four
-missing fields, with no annotation or specialist exception authorized.
+missing fields, with the owner's zero-field annotation recorded separately; no specialist sense is authorized.
 Selected-text rights pass for all 148 reviewed texts; 144 are eligible.
 There are 135 unchanged accepted texts and nine exact replacements.
 
@@ -64,8 +64,7 @@ was established.
   selected-expression rights review would still be required; external prose
   and Albert Maire's line-49 quotation are not automatically admitted.
 
-`planche` can explain the noun; it cannot replace the frozen group. Neither
-option is authorized by this review.
+`planche` can explain the noun; it cannot replace the frozen group. The subsequent owner decision approves only the zero-field annotation; the specialist option remains unapproved.
 
 ## Source and rights evidence
 
@@ -88,3 +87,8 @@ while failing everyday-scope eligibility.
 docs/diff and preservation checks. Canonical conversion, combined packaging,
 native lookup/save/reopen and learner acceptance remain coordinator-owned and
 unrun; this partial shard does not close #162 or #78.
+
+
+## Approved ais annotation
+
+Frozen row 4057 `ais/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both frequency strings and source order are preserved; four fields remain missing. The original proposal and independent rejection of everyday eligibility remain in [rejected proposals](rejected-proposals.json). [Owner approval](owner-approval.json) does not admit a specialist sense or change spelling/POS.
