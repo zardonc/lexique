@@ -11,6 +11,65 @@ mod batch;
 #[path = "note_zip_tests.rs"]
 mod zip;
 
+#[test]
+fn grammar_markdown_preview_commits_and_matches_identity_after_file_and_title_rename() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        format: Some(NoteFormat::Markdown),
+        ..Default::default()
+    };
+    let source = |filename: &str| ImportSource {
+        filename: filename.into(),
+        format: NoteFormat::Markdown,
+    };
+    let input = "# Lexique grammar note v1\n\n## exchange_id\n\n```text\nidentity-one\n```\n\n## title\n\n```text\nOriginal\n```\n\n## body\n\n```text\nSaved body\n```\n";
+    let ExchangePreview::Grammar(first) = preview_note_bytes(
+        &connection,
+        source("first.md"),
+        input.as_bytes(),
+        "markdown-first",
+        &options,
+    )
+    .unwrap() else {
+        panic!("grammar preview")
+    };
+    assert_eq!(first.groups[0].status, "create");
+    let selected = [NoteImportSelection {
+        index: 0,
+        action: NoteImportAction::Create,
+        allow_unlinked: false,
+    }];
+    let saved = crate::grammar_import::commit_preview(&mut connection, &first, &selected).unwrap();
+    let renamed = input
+        .replace("Original", "Renamed")
+        .replace("## body\n\n```text\nSaved body\n```\n", "");
+    let ExchangePreview::Grammar(second) = preview_note_bytes(
+        &connection,
+        source("renamed.md"),
+        renamed.as_bytes(),
+        "markdown-second",
+        &options,
+    )
+    .unwrap() else {
+        panic!("grammar preview")
+    };
+    assert_eq!(second.groups[0].status, "different");
+    assert_eq!(
+        second.groups[0].existing.as_ref().unwrap().id,
+        saved.records[0].id
+    );
+    let update = [NoteImportSelection {
+        index: 0,
+        action: NoteImportAction::Update,
+        allow_unlinked: false,
+    }];
+    let updated = crate::grammar_import::commit_preview(&mut connection, &second, &update).unwrap();
+    assert_eq!(updated.records[0].body, "Saved body");
+    assert_eq!(updated.records[0].title, "Renamed");
+}
+
 fn preview_file(
     connection: &Connection,
     path: &Path,
@@ -472,7 +531,7 @@ fn external_manual_double_cards_keep_progress_and_pause_and_mixed_real_backup_re
     let staging = fixture.0.join("preview");
     std::fs::create_dir(&staging).unwrap();
     let admitted = crate::backup::validate_backup(&archive, &staging, &cancelled).unwrap();
-    assert_eq!(admitted.manifest.snapshot_version, 4);
+    assert_eq!(admitted.manifest.snapshot_version, 5);
     let restore_path = fixture.0.join("restored.sqlite3");
     let mut restored = Connection::open(&restore_path).unwrap();
     initialize(&restored).unwrap();
@@ -503,4 +562,33 @@ fn external_manual_double_cards_keep_progress_and_pause_and_mixed_real_backup_re
         progress
     );
     assert!(review_paused(&restored, external.id).unwrap());
+}
+
+#[test]
+fn vocabulary_preview_rejects_grammar_mapping() {
+    let connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let source = ImportSource {
+        format: NoteFormat::Csv,
+        filename: "notes.csv".into(),
+    };
+    let options = NoteImportOptions {
+        grammar_mapping: Some(crate::grammar_import::GrammarImportMapping {
+            title: Some(0),
+            ..Default::default()
+        }),
+        ..Default::default()
+    };
+    let err = preview_note_bytes(
+        &connection,
+        source,
+        b"headword,notes\nword,note\n",
+        "vocab-with-grammar-mapping",
+        &options,
+    )
+    .unwrap_err();
+    assert!(
+        err.contains("vocabulary CSV mapping"),
+        "unexpected error: {err}"
+    );
 }

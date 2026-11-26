@@ -6,7 +6,7 @@ export const D2_ISSUE_DIRECTORIES = Array.from({ length: 81 }, (_, index) => `is
 
 function ownedDestination(destination) {
   const root = resolve(destination);
-  assert.ok(['issue-75', ...D2_ISSUE_DIRECTORIES, 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201'].some(issue => {
+  assert.ok(['issue-75', ...D2_ISSUE_DIRECTORIES, 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201', 'ticket-213', 'ticket-214', 'ticket-215', 'ticket-216', 'ticket-217'].some(issue => {
     const owned = relative(resolve('../../target', issue), root);
     return owned && !owned.startsWith('..') && !isAbsolute(owned);
   }));
@@ -47,7 +47,7 @@ elif variant=='crc':
  output[audio.header_offset+30+n+e+80]^=1
 else:
  if variant=='unsupported-format': manifest['format_version']=2
- elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=5
+ elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=6
  elif variant=='count': manifest['counts']['cards']+=1
  elif variant=='unknown-field': snapshot['unexpected']=True
  elif variant=='invalid-number': snapshot['records'][0]['id']=0
@@ -109,6 +109,7 @@ export function readState(destination) {
 queries={
  'records':'SELECT id,record_kind,headword,snapshot,notes,example_fr,example_zh,example_source,example_sense,more_examples,revision,created_at,updated_at FROM vocabulary ORDER BY id',
  'grammar_cards':'SELECT * FROM grammar_cards ORDER BY card_id',
+ 'grammar_exchange_identities':'SELECT record_id,exchange_id FROM grammar_exchange_identities ORDER BY record_id',
  'categories':'SELECT * FROM learning_categories ORDER BY id',
  'record_categories':'SELECT * FROM record_categories ORDER BY record_id,category_id',
  'retained_review_usage':'SELECT * FROM retained_review_usage ORDER BY learning_day,reviewed_at',
@@ -140,16 +141,18 @@ queries={
 }
 json_columns={'snapshot','request','state','before_state','result','queue_before','example_source','more_examples','spec','voice','value'}
 c.execute('BEGIN')
+schema=c.execute('PRAGMA user_version').fetchone()[0]
 result={}
 for name,query in queries.items():
  result[name]=[]
+ if name=='grammar_exchange_identities' and schema==20: continue
  for row in c.execute(query):
   item=dict(row)
   for key in json_columns.intersection(item):
    if key=='value' and item.get('key')=='vocabulary-sort': continue
    if item[key] is not None and (key!='state' or name=='progress'): item[key]=json.loads(item[key])
   result[name].append(item)
-result['schema']=c.execute('PRAGMA user_version').fetchone()[0]
+result['schema']=schema
 result['integrity']=[r[0] for r in c.execute('PRAGMA integrity_check')]
 result['foreign_keys']=[list(r) for r in c.execute('PRAGMA foreign_key_check')]
 result['physical']=[dict(r) for r in c.execute('SELECT locator,physical_locator,content_hash FROM speech_versions ORDER BY locator')]
@@ -157,8 +160,8 @@ print(json.dumps(result,ensure_ascii=False))`, {}, true);
 }
 
 export function compareLearning(actual, expected) {
-  assert.equal(actual.schema, 20); assert.deepEqual(actual.integrity, ['ok']); assert.deepEqual(actual.foreign_keys, []);
-  for (const key of ['records', 'saves', 'cards', 'progress', 'ratings', 'queue_context', 'queue', 'paused', 'batches', 'batch_items', 'settings', 'preferences', 'absent_progress', 'grammar_cards', 'categories', 'record_categories', 'retained_review_usage', 'deleted_grammar_operations']) {
+  assert.equal(actual.schema, 21); assert.deepEqual(actual.integrity, ['ok']); assert.deepEqual(actual.foreign_keys, []);
+  for (const key of ['records', 'saves', 'cards', 'progress', 'ratings', 'queue_context', 'queue', 'paused', 'batches', 'batch_items', 'settings', 'preferences', 'absent_progress', 'grammar_cards', 'grammar_exchange_identities', 'categories', 'record_categories', 'retained_review_usage', 'deleted_grammar_operations']) {
     assert.deepEqual(actual[key], expected[key], `Independent restored ${key}`);
   }
 }

@@ -16,9 +16,10 @@ export type NoteExportSnapshot = z.infer<typeof snapshotSchema>;
 const resultSchema = z.object({ state: z.enum(['saved', 'cancelled']), records: count, rows: count }).strict().readonly();
 
 export const noteExportRuntime = {
-  async noteExportSnapshot(scope: NoteExportScope) {
+  async noteExportSnapshot(scope: NoteExportScope, recordKind?: 'vocabulary' | 'grammar') {
     if (!isTauri()) throw new Error('Note export is available in the desktop app only');
-    return snapshotSchema.parse(await invoke('note_export_snapshot', { scope: noteExportScopeSchema.parse(scope) }));
+    return snapshotSchema.parse(await invoke('note_export_snapshot', { scope: noteExportScopeSchema.parse(scope),
+      ...(recordKind && { recordKind: z.enum(['vocabulary', 'grammar']).parse(recordKind) }) }));
   },
   async exportNoteCsv(token: string) {
     if (!isTauri()) throw new Error('Note export is available in the desktop app only');

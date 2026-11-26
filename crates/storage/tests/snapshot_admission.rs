@@ -1870,7 +1870,7 @@ fn snapshot_types_domains_collections_and_identities_are_strict() {
     let baseline = strict_fixture();
     for (path, value) in [
         ("/snapshot_version", json!("1")),
-        ("/snapshot_version", json!(5)),
+        ("/snapshot_version", json!(6)),
         ("/records/0/id", json!(1.0)),
         ("/records/0/created_at", json!(9_007_199_254_740_992_i64)),
         ("/records/0/reference/sha256", json!("A".repeat(64))),

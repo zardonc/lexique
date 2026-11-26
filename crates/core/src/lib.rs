@@ -1,4 +1,4 @@
-pub const DATABASE_SCHEMA_VERSION: u32 = 20;
+pub const DATABASE_SCHEMA_VERSION: u32 = 21;
 
 pub mod dictionary;
 pub mod scheduling;

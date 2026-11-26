@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useMemo, useState } from 'react';
 import { NoteImport } from './note-import';
+import { GrammarImport } from './grammar-import';
 import { FrequencyBadge, FrequencyState, useFrequency } from './frequency';
 import type { RuntimeAdapter } from './platform/runtime';
 import { digestMeaning, errorMessage, sortSchema } from './platform/vocabulary';
@@ -149,7 +150,8 @@ function NotesActions({ kind, runtime, text, onOpen, onSaved, onPrepare, onCreat
   readonly onSaved: () => void; readonly onPrepare: (action: () => void) => void; readonly onCreateGrammar: () => void;
   readonly batch: BatchReview;
 }) {
-  return kind === 'grammar' ? <button onClick={onCreateGrammar}>{text.notesText.create}</button>
+  return kind === 'grammar' ? <><button onClick={onCreateGrammar}>{text.notesText.create}</button>
+    <GrammarImport runtime={runtime} text={text} onSaved={onSaved} onOpen={onOpen} onPrepare={onPrepare} /></>
     : <NoteImport runtime={runtime} text={text} onSaved={onSaved} onOpen={onOpen} onPrepare={onPrepare} batch={batch} />;
 }
 
@@ -185,7 +187,7 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch, categorie
     <NotesActions kind={kind} runtime={runtime} text={text} onSaved={list.retry} onOpen={onOpen} onPrepare={onScopeChange} onCreateGrammar={onCreateGrammar} batch={batch} />
     <CategoryManager state={categories} runtime={runtime} onMutation={onMutation} text={text.notesText} />
     <NotebookFilters list={list} kind={kind} categories={categories} filter={filter} onFilter={(value) => { reset(); setFilter(value); }} reset={reset} text={text} />
-    <NotebookExport runtime={runtime} text={text.exportText} kind={kind} sort={list.sort} query={list.query}
+    <NotebookExport runtime={runtime} text={text.exportText} grammarText={text.grammarExportText} kind={kind} sort={list.sort} query={list.query}
       category={filter} disabled={list.busy} loaded={!!list.records} />
     <ReadingState list={{ ...list, records: filtered }} text={text} kind={kind} />
     {!!words.length && <FrequencyState state={frequencies} text={text.frequency} />}

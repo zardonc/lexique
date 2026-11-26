@@ -12,7 +12,7 @@ import { D2_ISSUE_DIRECTORIES } from './native-backup-state.mjs';
 
 export async function native24Fixture(packagePath, binaryPath, destinationPath) {
   const destination = resolve(destinationPath);
-  assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59', 'issue-65', 'issue-66', 'issue-75', ...D2_ISSUE_DIRECTORIES, 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+  assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59', 'issue-65', 'issue-66', 'issue-75', ...D2_ISSUE_DIRECTORIES, 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201', 'ticket-213', 'ticket-214', 'ticket-215', 'ticket-216', 'ticket-217'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
   await mkdir(destination);
   // Reused test packages also contain old results. Only copy distribution resources:
   // a failed run must never inherit a successful report or someone else's data.

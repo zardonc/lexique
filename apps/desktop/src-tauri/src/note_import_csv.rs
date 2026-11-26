@@ -54,7 +54,7 @@ fn validate_mapping(mapping: &NoteImportMapping, columns: usize) -> Result<(), S
     Ok(())
 }
 
-fn validate_quotes(bytes: &[u8], delimiter: u8) -> Result<(), String> {
+pub(crate) fn validate_quotes(bytes: &[u8], delimiter: u8) -> Result<(), String> {
     // rust-csv accepts incomplete quoting; reject it before interpreting user fields.
     let mut state = 0;
     let mut line = 1;

@@ -58,15 +58,27 @@ pub struct GrammarCardRequest {
     pub answer: String,
 }
 
-pub(crate) fn validate_operation(operation: &str) -> Result<(), StorageError> {
-    if operation.is_empty()
-        || operation.len() > 128
-        || !operation
+fn is_ascii_identifier(value: &str) -> bool {
+    !value.is_empty()
+        && value.len() <= 128
+        && value
             .bytes()
             .all(|byte| byte.is_ascii_alphanumeric() || byte == b'-')
-    {
+}
+
+pub(crate) fn validate_operation(operation: &str) -> Result<(), StorageError> {
+    if !is_ascii_identifier(operation) {
         return Err(StorageError::Invalid(
             "Invalid save operation identifier".into(),
+        ));
+    }
+    Ok(())
+}
+
+pub(crate) fn validate_exchange_id(identity: &str) -> Result<(), StorageError> {
+    if !is_ascii_identifier(identity) {
+        return Err(StorageError::Invalid(
+            "Invalid grammar exchange identity".into(),
         ));
     }
     Ok(())

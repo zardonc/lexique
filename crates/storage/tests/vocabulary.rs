@@ -370,7 +370,7 @@ fn example_meaning_survives_upgrade_and_rejects_out_of_range() {
             .unwrap();
     }
     connection
-        .execute_batch("DROP TABLE grammar_cards; DROP TABLE record_categories; DROP TABLE learning_categories; DROP TABLE retained_review_usage; DROP TABLE deleted_grammar_operations; DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets; ALTER TABLE vocabulary DROP COLUMN example_sense; ALTER TABLE vocabulary DROP COLUMN example_source; PRAGMA user_version = 9;")
+        .execute_batch("DROP TRIGGER grammar_exchange_identity_insert; DROP TABLE grammar_exchange_identities; DROP TABLE grammar_cards; DROP TABLE record_categories; DROP TABLE learning_categories; DROP TABLE retained_review_usage; DROP TABLE deleted_grammar_operations; DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets; ALTER TABLE vocabulary DROP COLUMN example_sense; ALTER TABLE vocabulary DROP COLUMN example_source; PRAGMA user_version = 9;")
         .unwrap();
     initialize(&connection).unwrap();
     let migrated = get(&connection, original.id).unwrap();
@@ -931,7 +931,7 @@ fn legacy_examples_gain_no_source_on_upgrade_and_source_is_part_of_retry_identit
         .record;
     connection
         .execute_batch(
-            "DROP TABLE grammar_cards; DROP TABLE record_categories; DROP TABLE learning_categories; DROP TABLE retained_review_usage; DROP TABLE deleted_grammar_operations; ALTER TABLE vocabulary DROP COLUMN example_source; PRAGMA user_version = 17;",
+            "DROP TRIGGER grammar_exchange_identity_insert; DROP TABLE grammar_exchange_identities; DROP TABLE grammar_cards; DROP TABLE record_categories; DROP TABLE learning_categories; DROP TABLE retained_review_usage; DROP TABLE deleted_grammar_operations; ALTER TABLE vocabulary DROP COLUMN example_source; PRAGMA user_version = 17;",
         )
         .unwrap();
     initialize(&connection).unwrap();
