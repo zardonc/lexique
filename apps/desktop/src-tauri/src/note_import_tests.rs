@@ -563,3 +563,32 @@ fn external_manual_double_cards_keep_progress_and_pause_and_mixed_real_backup_re
     );
     assert!(review_paused(&restored, external.id).unwrap());
 }
+
+#[test]
+fn vocabulary_preview_rejects_grammar_mapping() {
+    let connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let source = ImportSource {
+        format: NoteFormat::Csv,
+        filename: "notes.csv".into(),
+    };
+    let options = NoteImportOptions {
+        grammar_mapping: Some(crate::grammar_import::GrammarImportMapping {
+            title: Some(0),
+            ..Default::default()
+        }),
+        ..Default::default()
+    };
+    let err = preview_note_bytes(
+        &connection,
+        source,
+        b"headword,notes\nword,note\n",
+        "vocab-with-grammar-mapping",
+        &options,
+    )
+    .unwrap_err();
+    assert!(
+        err.contains("vocabulary CSV mapping"),
+        "unexpected error: {err}"
+    );
+}

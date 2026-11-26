@@ -269,3 +269,29 @@ fn skipping_a_known_note_preserves_categories_active_card_progress_and_history()
         serde_json::to_value(before).unwrap()
     );
 }
+
+#[test]
+fn invalid_exchange_identity_reports_exchange_identity_error() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let long = "a".repeat(129);
+    for bad in ["bad id", "bad_id", long.as_str()] {
+        let mut content = incoming();
+        content.exchange_id = Some(bad.into());
+        for error in [
+            content.validate().unwrap_err().to_string(),
+            save_grammar_import(&mut connection, "invalid-id", &content, None, 1000)
+                .unwrap_err()
+                .to_string(),
+        ] {
+            assert!(
+                error.to_ascii_lowercase().contains("exchange identity"),
+                "unexpected error for {bad:?}: {error}"
+            );
+            assert!(
+                !error.to_ascii_lowercase().contains("save operation"),
+                "misleading operation error for {bad:?}: {error}"
+            );
+        }
+    }
+}

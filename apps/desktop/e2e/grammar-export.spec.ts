@@ -62,3 +62,27 @@ test('grammar all scope retains list order and shows an empty saved selection', 
     .toEqual({ kind: 'all', sort: 'review-due-asc' });
   await expect(dialog).toContainText('没有已保存的语法记录');
 });
+
+test('single grammar editor exposes Export Markdown button and preserves unsaved draft', async ({ page }) => {
+  const record = { id: 42, title: 'Saved title', body: 'Saved body', category_ids: [], card: null, revision: 1, created_at: 1000, updated_at: 1000 };
+  await nativeFixture(page, {
+    grammar_list: [{ value: [record] }],
+    note_export_snapshot: [{ value: { token: 'saved-grammar-md', records: 1, rows: 1 } }],
+    note_export_markdown: [{ value: { state: 'cancelled', records: 1, rows: 1 } }],
+  });
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
+  await page.getByRole('tab', { name: '语法', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('语法标题', { exact: true }).fill('Unsaved title');
+  await page.locator('.grammar-editor').getByRole('button', { name: '导出 Markdown', exact: true }).click();
+  const dialog = page.getByRole('dialog', { name: '导出语法笔记' });
+  await expect(dialog.getByLabel('导出范围')).toHaveValue('single');
+  await expect(dialog.getByLabel('导出范围')).toBeDisabled();
+  await dialog.getByRole('button', { name: '保存 Markdown', exact: true }).click();
+  await expect(dialog).toContainText('已取消');
+  await dialog.getByRole('button', { name: '关闭', exact: true }).click();
+  await expect(page.getByLabel('语法标题', { exact: true })).toHaveValue('Unsaved title');
+  const calls = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'note_export_snapshot' || call.command === 'note_export_markdown'));
+  expect(calls.filter((call) => call.command === 'note_export_snapshot').at(-1)?.args).toEqual({ scope: { kind: 'single', id: 42 }, recordKind: 'grammar' });
+  expect(calls.filter((call) => call.command === 'note_export_markdown').map((call) => call.args)).toEqual([{ token: 'saved-grammar-md' }]);
+});

@@ -154,6 +154,9 @@ pub fn preview_zip_bytes(
     source.validate().map_err(|error| error.to_string())?;
     let mut archive = zip::ZipArchive::new(Cursor::new(bytes))
         .map_err(|error| format!("{}: unreadable ZIP: {error}", source.filename))?;
+    archive
+        .validate_header_consistency()
+        .map_err(|error| format!("{}: invalid ZIP headers: {error}", source.filename))?;
     let mut preview = GrammarImportPreview {
         operation: operation.into(),
         source,
@@ -210,7 +213,7 @@ pub fn preview_zip_bytes(
                     },
                     existing: None,
                     status: "invalid",
-                    error: Some(format!("{}: {name}: {error}", preview.source.filename)),
+                    error: Some(error),
                 });
                 continue;
             }

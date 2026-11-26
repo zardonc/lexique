@@ -45,7 +45,7 @@ elif variant=='crc':
  output[audio.header_offset+30+n+e+80]^=1
 else:
  if variant=='unsupported-format': manifest['format_version']=2
- elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=5
+ elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=6
  elif variant=='count': manifest['counts']['cards']+=1
  elif variant=='unknown-field': snapshot['unexpected']=True
  elif variant=='invalid-number': snapshot['records'][0]['id']=0

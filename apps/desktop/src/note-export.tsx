@@ -70,7 +70,7 @@ export function NoteExport({ runtime, scope, text, disabled = false, recordKind 
 }) {
   const [open, setOpen] = useState(false);
   return <><button disabled={disabled} onClick={() => setOpen(true)}>{text.open}</button>
-    {!recordKind && scope.kind === 'single' && <button disabled={disabled} onClick={() => setOpen(true)}>{text.openMarkdown}</button>}
+    {scope.kind === 'single' && <button disabled={disabled} onClick={() => setOpen(true)}>{text.openMarkdown}</button>}
     {open && <ExportDialog runtime={runtime} scope={scope} text={text} recordKind={recordKind} close={() => setOpen(false)} />}</>;
 }
 

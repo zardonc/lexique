@@ -249,3 +249,26 @@ fn snapshot_rejects_missing_duplicate_and_unknown_exchange_identities_before_res
         );
     }
 }
+
+#[test]
+fn snapshot_invalid_exchange_identity_reports_exchange_identity_error() {
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    note(&source, "validation-first", None, None, "Règle");
+    note(&source, "validation-second", None, None, "Règle");
+    let mut value =
+        serde_json::to_value(export_learning_snapshot(&mut source, 2000).unwrap()).unwrap();
+    value["grammar_exchange_identities"][1]["exchange_id"] = "bad id".into();
+    let error = read_learning_snapshot(serde_json::to_vec(&value).unwrap().as_slice(), 2000)
+        .err()
+        .expect("invalid exchange_id must fail snapshot validation")
+        .to_string();
+    assert!(
+        error.to_ascii_lowercase().contains("exchange identity"),
+        "unexpected error: {error}"
+    );
+    assert!(
+        !error.to_ascii_lowercase().contains("save operation"),
+        "misleading operation error: {error}"
+    );
+}

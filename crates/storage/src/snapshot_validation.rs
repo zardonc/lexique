@@ -404,7 +404,7 @@ fn validate_notes(
     let mut exchange_ids = HashSet::new();
     for identity in &snapshot.grammar_exchange_identities {
         known(identity.record_id, &grammars)?;
-        crate::grammar::validate_operation(&identity.exchange_id)?;
+        crate::grammar::validate_exchange_id(&identity.exchange_id)?;
         require(
             snapshot.snapshot_version >= 5
                 && exchange_records.insert(identity.record_id)

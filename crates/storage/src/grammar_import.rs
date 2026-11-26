@@ -28,7 +28,7 @@ impl GrammarImportContent {
 
     pub fn validate(&self) -> Result<(), StorageError> {
         if let Some(identity) = self.exchange_id.as_deref().filter(|id| !id.is_empty()) {
-            crate::grammar::validate_operation(identity)?;
+            crate::grammar::validate_exchange_id(identity)?;
         }
         crate::grammar::validate_grammar_request(&GrammarSaveRequest {
             operation: "import-validation".into(),

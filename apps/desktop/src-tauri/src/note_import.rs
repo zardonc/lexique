@@ -139,6 +139,9 @@ fn preview_note_bytes(
         }
         .map(ExchangePreview::Grammar);
     }
+    if options.grammar_mapping.is_some() {
+        return Err("Vocabulary import requires vocabulary CSV mapping".into());
+    }
     match source.format {
         NoteFormat::Csv => {
             crate::note_import_csv::preview_csv_bytes(connection, source, bytes, operation, options)

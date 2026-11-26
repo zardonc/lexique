@@ -33,7 +33,8 @@ pub enum ExportRecordKind {
     Grammar,
 }
 
-enum ExportSnapshot {
+#[derive(Debug)]
+pub(crate) enum ExportSnapshot {
     Vocabulary(Arc<NoteExportSnapshot>),
     Grammar(GrammarExportSnapshot),
 }
@@ -98,14 +99,7 @@ impl ExportSnapshot {
 }
 
 impl NoteExports {
-    pub(crate) fn retained(&self, token: &str) -> Result<Arc<NoteExportSnapshot>, String> {
-        match self.retained_snapshot(token)?.as_ref() {
-            ExportSnapshot::Vocabulary(snapshot) => Ok(snapshot.clone()),
-            ExportSnapshot::Grammar(_) => Err("Grammar export supports CSV".into()),
-        }
-    }
-
-    fn retained_snapshot(&self, token: &str) -> Result<Arc<ExportSnapshot>, String> {
+    pub(crate) fn retained_snapshot(&self, token: &str) -> Result<Arc<ExportSnapshot>, String> {
         self.0
             .lock()
             .map_err(|_| "Note export snapshot unavailable")?

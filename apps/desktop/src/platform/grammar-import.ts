@@ -8,7 +8,7 @@ const operation = z.string().min(1).max(110).regex(/^[a-zA-Z0-9-]+$/);
 const column = z.number().int().nonnegative().safe().nullable();
 const mappingSchema = z.object({ exchange_id: column, title: column, body: column, question: column, answer: column }).strict().readonly();
 export type GrammarImportMapping = z.infer<typeof mappingSchema>;
-const optionsSchema = z.object({ delimiter: z.enum(['comma', 'semicolon']), mapping: mappingSchema.nullable(), format: z.enum(['markdown', 'zip']).optional() }).strict();
+const optionsSchema = z.object({ delimiter: z.enum(['comma', 'semicolon']), mapping: mappingSchema.nullable(), format: z.enum(['markdown', 'zip']).optional() }).strict().readonly();
 export type GrammarImportOptions = z.infer<typeof optionsSchema>;
 const content = z.object({ exchange_id: z.string().nullable(), title: z.string(), body: z.string().nullable(),
   question: z.string().nullable(), answer: z.string().nullable() }).strict().readonly();

@@ -485,3 +485,73 @@ fn csv_zip_csv_preserves_101_ordered_examples_exact_text_identity_and_progress_a
             .contains("too-many.md")
     );
 }
+
+#[test]
+fn grammar_zip_parse_errors_prefix_location_once_and_reject_disagreeing_headers() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        ..Default::default()
+    };
+    let invalid_path = archive(&fixture, &[("bad.md", "# Not a grammar note\n")]);
+    let (source, bytes) = read_note_file(&invalid_path, NoteFormat::Zip).unwrap();
+    let ExchangePreview::Grammar(preview) = preview_note_bytes(
+        &connection,
+        source,
+        &bytes,
+        "grammar-zip-parse-err",
+        &options,
+    )
+    .unwrap() else {
+        panic!("grammar preview")
+    };
+    assert_eq!(preview.groups.len(), 1);
+    assert_eq!(preview.groups[0].status, "invalid");
+    let err = preview.groups[0].error.as_deref().unwrap();
+    assert!(
+        err.starts_with("external.zip: bad.md: "),
+        "unexpected prefix: {err}"
+    );
+    assert_eq!(
+        err.matches("external.zip: bad.md:").count(),
+        1,
+        "double prefix in: {err}"
+    );
+
+    let path = archive(
+        &fixture,
+        &[(
+            "note.md",
+            "# Lexique grammar note v1\n## title\n```text\nRule\n```\n",
+        )],
+    );
+    let bytes = std::fs::read(&path).unwrap();
+    let mut crc = bytes.clone();
+    let name_length = u16::from_le_bytes([crc[26], crc[27]]) as usize;
+    let extra_length = u16::from_le_bytes([crc[28], crc[29]]) as usize;
+    crc[30 + name_length + extra_length] ^= 1;
+    let mut header = bytes.clone();
+    header[30] ^= 1;
+    for (variant, raw) in [
+        ("truncated", bytes[..30].to_vec()),
+        ("crc", crc),
+        ("headers", header),
+    ] {
+        std::fs::write(&path, raw).unwrap();
+        let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+        let err = preview_note_bytes(&connection, source, &bytes, "fatal-grammar-zip", &options)
+            .unwrap_err();
+        if variant == "headers" {
+            assert!(
+                err.contains("invalid ZIP headers"),
+                "expected invalid ZIP headers error, got: {err}"
+            );
+        }
+        assert!(
+            list_grammar(&connection, "", "created-asc")
+                .unwrap()
+                .is_empty()
+        );
+    }
+}

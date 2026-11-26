@@ -634,7 +634,7 @@ fn invalid_export_scope_destination_and_replaced_snapshot_preserve_real_results(
     );
     assert!(
         crate::note_export::NoteExports::default()
-            .retained("expired")
+            .retained_snapshot("expired")
             .unwrap_err()
             .contains("snapshot changed")
     );
