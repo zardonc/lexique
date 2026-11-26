@@ -73,13 +73,29 @@ def read(name):
 
 
 class Batch160Tests(unittest.TestCase):
-    def test_rex_remains_unresolved_without_an_owner_exception(self):
+    def test_owner_annotation_preserves_rex_identity_and_four_missing_fields(self):
+        approval, review = read("owner-approval.json"), read("field-review.json")
+        self.assertEqual((approval["frozen_row"], approval["headword"], approval["lexique_cgram"]),
+                         (3953, "rex", "NOM"))
+        self.assertEqual(approval["exact_reply"],
+                         "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。")
+        group = next(g for g in read("groups.json") if g["frozen_row"] == 3953)
+        self.assertEqual((group["subtitle_lemma_per_million"], group["subtitle_pos_per_million"]),
+                         ("10.57", "10.57"))
+        self.assertEqual(group["senses"], [])
+        self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))
+        self.assertFalse(any(f["frozen_row"] == 3953 for f in review["fields"]))
+        self.assertEqual([g["frozen_row"] for g in review["unresolved_fields"]], [3953] * 4)
+        self.assertEqual(read("content-blockers.json")["blocked_groups"], 0)
+
+    def test_rejected_rex_proposal_remains_preserved_after_owner_annotation(self):
         rex = next(g for g in read("groups.json") if g["frozen_row"] == 3953)
         self.assertEqual((rex["headword"], rex["lexique_cgram"]), ("rex", "NOM"))
         self.assertEqual(rex["senses"], [])
         blockers = read("content-blockers.json")
-        self.assertEqual((blockers["blocked_groups"], blockers["blocked_fields"]), (1, 4))
-        self.assertEqual(blockers["approved_annotation_exceptions"], 0)
+        self.assertEqual((blockers["blocked_groups"], blockers["blocked_fields"]), (0, 0))
+        self.assertEqual(blockers["approved_annotation_exceptions"], 1)
+        self.assertEqual(blockers["missing_annotation_fields"], 4)
         self.assertEqual(blockers["approved_specialist_exceptions"], 0)
         rejected = read("rejected-proposals.json")
         self.assertEqual(len(rejected["fields"]), 4)
@@ -115,8 +131,8 @@ class Batch160Tests(unittest.TestCase):
                     self.assertEqual(group[frequency], row[frequency])
                 if group["frozen_row"] == 3953:
                     self.assertEqual(group["senses"], [])
-                    self.assertEqual([f["field"] for f in group["missing_fields"]],
-                                     ["french_definition", "ipa", "english", "chinese"])
+                    self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))
+                    self.assertEqual(group["status"], "approved_annotation_exception")
                     continue
                 self.assertEqual(len(group["senses"]), 1)
                 sense = group["senses"][0]
@@ -142,7 +158,7 @@ class Batch160Tests(unittest.TestCase):
         self.assertEqual(admission["pending_independent_rights_fields"], 0)
         self.assertEqual((admission["newly_admitted_fields"], admission["canonical_new_fields"]), (0, 0))
         self.assertEqual(admission["scope_denominator_groups"], 4087)
-        self.assertEqual(admission["annotation_exception_groups"], 0)
+        self.assertEqual(admission["annotation_exception_groups"], 1)
         self.assertEqual(admission["specialist_exception_groups"], 0)
         expected = {(sense["sense_id"], name): field for group in read("groups.json")
                     for sense in group["senses"] for name, field in sense["fields"].items()}
@@ -236,7 +252,7 @@ class Batch160Tests(unittest.TestCase):
         self.assertEqual(cfc["author_rights_proposal"], "excluded_from_selected_content")
         self.assertEqual(cfc["line_1_based"], 37)
         self.assertEqual({r["line_1_based"] for r in coupure["selected_locations"]}, {9, 33})
-        self.assertEqual(read("content-blockers.json")["blocked_groups"], 1)
+        self.assertEqual(read("content-blockers.json")["blocked_groups"], 0)
 
     def test_accepted_constructions_and_original_expression_scope_remain_readable(self):
         senses = {g["headword"]: g["senses"][0] for g in read("groups.json") if g["senses"]}

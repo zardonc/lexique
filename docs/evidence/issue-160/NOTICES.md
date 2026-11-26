@@ -78,3 +78,8 @@ original-work attribution, modification notices and selected source material.
 Adaptations retain CC BY-SA 4.0 without additional restrictions. Public-domain
 original editions and separate third-party rights are assessed at their own
 boundaries. Actual combined converter/package obligations remain pending.
+
+
+## Approved rex annotation
+
+Frozen row 3953 `rex/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both 10.57 frequency strings and ordering are preserved; four fields remain missing. [Owner approval](owner-approval.json) does not resolve the rejected proposal's expression rights or admit a specialist sense. The [rejected proposal](rejected-proposals.json) and independent decisions remain preserved.

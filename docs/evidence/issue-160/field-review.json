@@ -20873,7 +20873,76 @@
       "review_reason": "Exact French headword/POS frame; source binding only, no lookup alias."
     }
   ],
-  "unresolved_fields": [],
+  "unresolved_fields": [
+    {
+      "field": "french_definition",
+      "status": "unresolved",
+      "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "owner_exception_approved": true,
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    },
+    {
+      "field": "ipa",
+      "status": "unresolved",
+      "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "owner_exception_approved": true,
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    },
+    {
+      "field": "english",
+      "status": "unresolved",
+      "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "owner_exception_approved": true,
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    },
+    {
+      "field": "chinese",
+      "status": "unresolved",
+      "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "owner_exception_approved": true,
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    }
+  ],
   "accepted_fields": 196,
   "accepted_groups": 49,
   "reviewed_proposed_fields": 200,
@@ -20887,5 +20956,23 @@
     "review_base": "72c389340a5ddb956d7b4394713aeb0b29600348",
     "checkout": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\t3-c745d4c8-f54eb8929cf60985",
     "proof_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-160-retry"
-  }
+  },
+  "annotation_exceptions": [
+    {
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    }
+  ],
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotation"
 }

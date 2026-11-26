@@ -2,7 +2,7 @@
   "ticket": 160,
   "parent": 78,
   "schema": "lexique-d2-content-independent-handoff-1",
-  "status": "independently_reviewed_partial_content_parent_admission_pending",
+  "status": "independently_reviewed_content_and_scoped_exceptions_parent_admission_pending",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     3951,
@@ -165,7 +165,7 @@
     "b160_fr_178650",
     "b160_fr_995415"
   ],
-  "annotation_exception_groups": 0,
+  "annotation_exception_groups": 1,
   "specialist_exception_groups": 0,
   "newly_admitted_fields": 0,
   "missing_authored_fields": 0,
@@ -189,5 +189,51 @@
   "review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-160-retry",
   "reviewed_author_sha": "71b10bb65731dec1cad6796322a67f8101e83a69",
   "accepted_field_characters": 8109,
-  "longest_accepted_field_characters": 231
+  "longest_accepted_field_characters": 231,
+  "approved_annotations": [
+    {
+      "frozen_row": 3953,
+      "headword": "rex",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "10.57",
+      "subtitle_pos_per_million": "10.57",
+      "senses": [],
+      "status": "approved_annotation_exception",
+      "missing_fields": 4,
+      "resource_admission": "blocked_scope_and_selected_expression_origin",
+      "annotation_kind": "owner_approved_zero_field",
+      "admitted_fields": 0,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      },
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      }
+    }
+  ],
+  "approved_annotation_rows": [
+    3953
+  ],
+  "missing_annotation_fields": 4,
+  "ordinary_missing_fields": 0,
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotation",
+  "ticket_complete": false,
+  "owner_approval": {
+    "issue": "https://github.com/zardonc/lexique/issues/160",
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-26",
+    "timezone": "Etc/Unknown",
+    "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+    "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+  }
 }

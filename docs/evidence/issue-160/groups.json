@@ -180,30 +180,27 @@
     "subtitle_lemma_per_million": "10.57",
     "subtitle_pos_per_million": "10.57",
     "senses": [],
-    "status": "unresolved_no_eligible_everyday_sense",
-    "missing_fields": [
-      {
-        "field": "french_definition",
-        "status": "unresolved",
-        "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression."
-      },
-      {
-        "field": "ipa",
-        "status": "unresolved",
-        "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression."
-      },
-      {
-        "field": "english",
-        "status": "unresolved",
-        "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression."
-      },
-      {
-        "field": "chinese",
-        "status": "unresolved",
-        "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression."
-      }
-    ],
-    "resource_admission": "blocked_scope_and_selected_expression_origin"
+    "status": "approved_annotation_exception",
+    "missing_fields": 4,
+    "resource_admission": "blocked_scope_and_selected_expression_origin",
+    "annotation_kind": "owner_approved_zero_field",
+    "admitted_fields": 0,
+    "owner_approval": {
+      "issue": "https://github.com/zardonc/lexique/issues/160",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-26",
+      "timezone": "Etc/Unknown",
+      "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+      "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+    },
+    "annotation_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/160",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-26",
+      "timezone": "Etc/Unknown",
+      "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+      "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+    }
   },
   {
     "frozen_row": 3954,

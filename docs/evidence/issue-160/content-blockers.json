@@ -1,26 +1,28 @@
 {
   "ticket": 160,
   "scope_denominator_groups": 4087,
-  "blocked_groups": 1,
-  "blocked_fields": 4,
+  "blocked_groups": 0,
+  "blocked_fields": 0,
   "dropped_groups": 0,
   "substituted_groups": 0,
-  "approved_annotation_exceptions": 0,
+  "approved_annotation_exceptions": 1,
   "approved_specialist_exceptions": 0,
   "blockers": [
     {
       "frozen_row": 3953,
       "headword": "rex",
       "pos": "NOM",
-      "missing_fields": [
-        "french_definition",
-        "ipa",
-        "english",
-        "chinese"
-      ],
+      "missing_fields": 4,
       "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
       "frozen_identity_preserved": true,
-      "owner_approval": null,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/160",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-26",
+        "timezone": "Etc/Unknown",
+        "exact_reply": "批准 rex/NOM 为零字段注记（推荐）：保留第 3953 行及词频，四字段继续计为缺失。",
+        "decision": "The project owner approved frozen row 3953 rex/NOM as a zero-field annotation. Preserve its identity, ordering, both 10.57 frequency strings and the 4,087-group denominator. Admit zero fields and retain four missing fields. No specialist sense, alias or spelling/POS substitution is approved."
+      },
       "source_findings": [
         {
           "source_id": "b160_fr_38021",
@@ -50,8 +52,12 @@
         "Keep current scope: supply fixed licensed evidence of an ordinary modern French rex/NOM construction, matching FR/IPA/EN/ZH and resolved original-expression rights, then obtain independent acceptance.",
         "Explicitly approve a narrowly defined specialist rex/NOM breed sense and amend issue 78/160; complete exact breed semantics and selected-expression rights before admission.",
         "Explicitly approve rex/NOM as a zero-field annotation while preserving row 3953, both frequencies and all four missing fields."
-      ]
+      ],
+      "status": "resolved_by_owner_zero_field_annotation",
+      "owner_exception_approved": true,
+      "admitted_fields": 0
     }
   ],
-  "status": "independent_review_complete_one_unresolved_group"
+  "status": "independent_review_complete_one_unresolved_group",
+  "missing_annotation_fields": 4
 }

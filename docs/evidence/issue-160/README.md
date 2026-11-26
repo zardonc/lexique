@@ -3,7 +3,7 @@
 Rows 3951–4000 retain **50 exact frozen groups and both frequency strings**.
 Independent review accepts **49 everyday groups / 196 FR/IPA/EN/ZH fields**.
 `rex/NOM`, row 3953, remains unresolved with zero accepted fields and four
-missing fields. No annotation or specialist exception is approved.
+missing fields. The subsequent owner decision approves only the zero-field annotation; no specialist sense is approved.
 
 Scope: [#160](https://github.com/zardonc/lexique/issues/160), parent
 [#78](https://github.com/zardonc/lexique/issues/78). Reviewed author commit:
@@ -43,3 +43,8 @@ from canonical admission, which remains coordinator-owned. [Reuse](reuse.json)
 retains the unchanged core-159-v1 baseline of 3,927 groups and zero reused groups.
 The global denominator remains 4,087 groups. Native lookup/save/reopen,
 conversion/combined packaging, learner acceptance and release gates are pending.
+
+
+## Approved rex annotation
+
+Frozen row 3953 `rex/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both 10.57 frequency strings and ordering are preserved; four fields remain missing. [Owner approval](owner-approval.json) does not resolve the rejected proposal's expression rights or admit a specialist sense. The [rejected proposal](rejected-proposals.json) and independent decisions remain preserved.
