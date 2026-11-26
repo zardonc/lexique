@@ -31,8 +31,10 @@ function fixture(run) {
 
 test('public pnpm build preserves spaced arguments and sends locked to Cargo', () => fixture((directory, cli) => {
   writeFileSync(cli, `require('node:fs').writeFileSync('received.json', JSON.stringify(process.argv.slice(2)));`);
-  assert.ok(process.env.npm_execpath, 'Run through pnpm test:tooling');
-  const result = spawnSync(process.execPath, [process.env.npm_execpath, 'desktop:build', '--debug', '--no-bundle',
+  const pnpmPath = process.env.npm_execpath;
+  assert.ok(pnpmPath, 'Run through pnpm test:tooling');
+  const standalone = pnpmPath.endsWith('.exe');
+  const result = spawnSync(standalone ? pnpmPath : process.execPath, [...(standalone ? [] : [pnpmPath]), 'desktop:build', '--debug', '--no-bundle',
     '--config', 'config with spaces.json'], { cwd: directory, encoding: 'utf8' });
   assert.equal(result.status, 0, result.stdout + result.stderr);
   assert.deepEqual(JSON.parse(readFileSync(join(directory, 'received.json'), 'utf8')),
