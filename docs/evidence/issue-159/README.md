@@ -1,7 +1,8 @@
 # Issue #159 reviewed content shard
 
-`core-159-v1` canonically admits **48 groups / 192 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+`core-159-v1` canonically admits **48 groups / 192 fields** from this batch. Native lookup, trusted save and restart/reopen at `5fcba9932f74e298d4a798e6eb195faad5f51507` passed for every admitted batch group; see [combined evidence](../issues-150-159/README.md) for the subsequent review-fix state. [Final integration](final-integration.json) records the `5fcba99` package and preservation checks.
 
+## Independent source-review record
 
 **48 admitted-content groups / 192 fields and two owner-approved zero-field
 annotations** retain all 50 frozen identities in rows 3901–3950. Both frequency
@@ -33,6 +34,7 @@ Original author and independent-review verification files record their historica
 boundaries. Final proof is retained at
 `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-159-owner-scope`.
 
-Canonical conversion, combined packaging, native lookup/save/reopen and learner
-acceptance remain coordinator-owned and pending. The scoped shard is ready for
-coordinator assembly; #159's integration gates and parent #78 remain incomplete.
+At the pre-assembly shard review stage, canonical conversion, combined
+packaging and native lookup/save/reopen were coordinator-owned prior to
+integration in `core-159-v1`; learner acceptance and full #78 release gates
+remain incomplete.

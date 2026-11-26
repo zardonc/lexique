@@ -80,8 +80,9 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     core_admission = core_report["admission"]
     core_description = (
         f"Lexique FR–EN–ZH is a reviewed development core: {core_admission['accepted_groups']:,} of 4,087 frozen POS groups.\n"
-        "Its four fields and English usage notes, selected source excerpts, attribution and\n"
-        "CC BY-SA 4.0 license are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
+        "Its four fields and English usage notes, selected source excerpts, attribution,\n"
+        "CC BY-SA 4.0 license (COPYING) and FranceTerme Licence Ouverte 1.0 (LICENSE-FranceTerme.pdf)\n"
+        "are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
         f"Settings opens these bundled source materials offline. {core_admission['remaining_unaccepted_groups']:,} groups remain unaccepted,\n"
         f"including {core_admission['annotation_exception_groups']} approved zero-field annotations; "
         f"{core_admission['approved_specialist_exception_groups']} specialist senses are counted separately.\n"
@@ -184,6 +185,8 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     checksums = {path.relative_to(output).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
                  for path in files}
     (output / "SHA256SUMS.json").write_text(json.dumps(checksums, indent=2) + "\n")
+    installed_bytes = sum(path.stat().st_size for path in output.rglob("*") if path.is_file())
+    core_installed_bytes = sum(path.stat().st_size for path in core_output.rglob("*") if path.is_file())
     with zipfile.ZipFile(archive, "x", zipfile.ZIP_DEFLATED, compresslevel=9, strict_timestamps=False) as zipped:
         for path in sorted(output.rglob("*")):
             if path.is_file():
@@ -198,6 +201,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     with checksum_path.open("x", encoding="utf-8") as checksum_file:
         checksum_file.write(f"{checksum}  {archive.name}\n")
     return {"archive": str(archive), "bytes": archive.stat().st_size,
+            "installed_bytes": installed_bytes, "core_installed_bytes": core_installed_bytes,
             "sha256": checksum, "verified_files": len(expected) + 1}
 
 

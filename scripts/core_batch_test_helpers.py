@@ -1,5 +1,8 @@
 """Shared verification of fixed source captures for core batch tests."""
 import json
+from pathlib import Path
+import shutil
+import tempfile
 from urllib.parse import parse_qs, urlparse
 
 
@@ -44,3 +47,14 @@ def verify_archived_contributor_captures(test_case, captures, resolve_path):
                 for key, value in continuation.items():
                     test_case.assertEqual(query[key], [str(value)])
     return names, anonymous, chains
+
+
+def assert_core_load_inputs_rejected(test_case, resource_dir, materials, load_inputs, mutate, pattern, prefix):
+    """Stage canonical core inputs, apply a mutation, and assert load_inputs rejects it."""
+    with tempfile.TemporaryDirectory(prefix=prefix) as temporary:
+        stage = Path(temporary)
+        for name in (*materials, "input-checksums.json"):
+            shutil.copyfile(resource_dir / name, stage / name)
+        mutate(stage)
+        with test_case.assertRaisesRegex(ValueError, pattern):
+            load_inputs(stage)

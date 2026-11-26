@@ -1,7 +1,8 @@
 # Issue #155 independent content review
 
-`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen at `5fcba9932f74e298d4a798e6eb195faad5f51507` passed for every admitted batch group; see [combined evidence](../issues-150-159/README.md) for the subsequent FranceTerme integration and review-fix state. [Final integration](final-integration.json) records the `5fcba99` package and preservation checks.
 
+## Independent source-review record
 
 **50 exact groups, 200 fields and 50 selected uses pass independent content
 review.** Rows 3701–3750 preserve their frozen word/POS identities, order and both
@@ -54,11 +55,13 @@ final batch, source-identity and documentation results. Complete helpers,
 captures and logs are retained under `target/issue-155-review` and archived at
 `C:\Users\inthe\IdeaProjects\lexique-d2-150-159\context\reviewer-evidence\issue-155`. The final archive records the delivered HEAD and integration tip.
 
-Independent selected-content acceptance contributes zero canonical/native
-admissions until the coordinator assembles and validates the resource. Canonical
-conversion, inclusion of the extra FranceTerme licence/notice, matching native
-lookup/save/reopen, global preservation and learner/release gates remain pending
-with the coordinator. The global denominator remains 4,087; this review changes
+At the pre-assembly shard review stage, independent selected-content acceptance
+contributed zero canonical/native admissions before coordinator assembly;
+canonical conversion, FranceTerme licence/notice packaging and `5fcba99` native
+lookup/save/reopen were subsequently executed at coordinator integration (with
+post-review attribution/size/verification updates tracked in
+[combined evidence](../issues-150-159/README.md)), while learner and release
+gates remain open. The global denominator remains 4,087; this review changes
 neither the frozen manifest nor user learning data.
 
 The historical title-comparator fetches for `nan` and `naan` returned 503 and 404

@@ -1,14 +1,15 @@
 # Issue #158 evidence
 
-`core-159-v1` canonically admits **49 groups / 196 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+`core-159-v1` canonically admits **49 groups / 196 fields** from this batch. Native lookup, trusted save and restart/reopen at `5fcba9932f74e298d4a798e6eb195faad5f51507` passed for every admitted batch group; see [combined evidence](../issues-150-159/README.md) for the subsequent review-fix state. [Final integration](final-integration.json) records the `5fcba99` package and preservation checks.
 
+## Independent source-review record
 
 [Independent review](README-independent-review.md) covers all 50 frozen groups,
 200 proposals and 50 uses. Selected quality/use and rights acceptance is
 **49 groups / 196 fields**. Row 3885 `cm/NOM` is an owner-approved zero-field
 annotation with four explicit unresolved fields. All 50 frozen identities,
-frequency strings and source order remain intact. Canonical/native acceptance
-remains pending.
+frequency strings and source order remain intact; at that shard review stage,
+canonical/native acceptance was pending prior to coordinator assembly.
 
 [Groups](groups.json), [field/use decisions](field-review.json),
 [selected spans](source-excerpts.json), [source context](source-context.json),

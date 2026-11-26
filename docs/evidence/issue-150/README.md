@@ -1,7 +1,8 @@
 # #150 independently reviewed content shard
 
-`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen at `5fcba9932f74e298d4a798e6eb195faad5f51507` passed for every admitted batch group; see [combined evidence](../issues-150-159/README.md) for the subsequent review-fix state. [Final integration](final-integration.json) records the `5fcba99` package and preservation checks.
 
+## Independent source-review record
 
 **50 exact frozen groups / 50 selected everyday uses / 200 fields accepted**
 at the independent content and selected-rights boundary. Fields: **197 unchanged,
@@ -25,10 +26,10 @@ content. [Field/use decisions](field-review.json), [selected excerpts](source-ex
 [Independent review](README-independent-review.md) identifies commits, reviewer,
 checks and archived proof.
 
-## Limitations
+## Historical shard limitations
 
-The canonical baseline remains `core-149-v1`: 3,431 admitted groups / 13,724
-fields, three specialist groups and 19 zero-field annotations. This shard adds
-zero canonical fields until coordinator assembly/conversion and native gates
-pass. Canonical missing fields for this batch remain 200. Learner acceptance,
-offline/platform checks and release readiness retain separate completion states.
+At the pre-assembly shard review stage, the canonical baseline was `core-149-v1`:
+3,431 admitted groups / 13,724 fields, three specialist groups and 19
+zero-field annotations, so this shard recorded zero canonical fields prior to
+coordinator assembly in `core-159-v1`. Learner acceptance, offline/platform
+checks and release readiness retain separate completion states.

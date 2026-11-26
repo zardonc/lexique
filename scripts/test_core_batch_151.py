@@ -2,11 +2,14 @@
 import csv
 import json
 from pathlib import Path
-import tempfile
 from urllib.parse import parse_qs, urlparse
 import unittest
 
-from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
+from core_batch_test_helpers import (
+    assert_core_load_inputs_rejected,
+    verify_archived_contributor_captures,
+    verify_archived_source_captures,
+)
 import core_pilot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -102,21 +105,18 @@ class Batch151Tests(unittest.TestCase):
         self.assertFalse(captures["contributor_registry"]["selected_sentence_authorship_proved"])
 
     def test_existing_converter_rejects_the_pending_author_package(self):
-        scratch = ROOT / "target/issue-151"
-        scratch.mkdir(parents=True, exist_ok=True)
-        with tempfile.TemporaryDirectory(dir=scratch) as folder:
-            stage = Path(folder)
-            for name in (*core_pilot.MATERIALS, "input-checksums.json"):
-                (stage / name).write_text("{}\n", encoding="utf-8")
-            (stage / "scope-manifest.csv").write_bytes((ROOT / "resources/core-pilot-79/scope-manifest.csv").read_bytes())
+        def mutate(stage):
             (stage / "curated-inputs.json").write_text(json.dumps({
                 "schema": "lexique-core-pilot-curation-1", "content_license": "CC-BY-SA-4.0",
                 "scope_denominator_groups": 4087, "scope_denominator_headwords": 3773,
                 "groups": read("authored/groups.json"), "sources": read("authored/sources.json")["sources"],
             }, ensure_ascii=False), encoding="utf-8")
             (stage / "field-review.json").write_bytes((EVIDENCE / "authored/field-review.json").read_bytes())
-            with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
-                core_pilot.load_inputs(stage)
+
+        assert_core_load_inputs_rejected(
+            self, core_pilot.RESOURCE, core_pilot.MATERIALS, core_pilot.load_inputs,
+            mutate, "A separate independent field review is required", "admission-151-",
+        )
 
     def test_independent_review_binds_accepted_fields_uses_and_rights(self):
         review, rights, admission = read("field-review.json"), read("rights.json"), read("admission.json")

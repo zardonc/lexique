@@ -113,7 +113,10 @@ are retained in [selected-source-context.json](selected-source-context.json).
 Whole-page captures, unselected quotations and media are excluded.
 
 Selected and adapted contributions use **CC BY-SA 4.0**; see [NOTICES.md](NOTICES.md)
-and [COPYING](COPYING). The beau/NOM prose adapts Théodore Soulice's public-domain
+and [COPYING](COPYING). The `audition/NOM` sense also retains Ministère de la Culture /
+FranceTerme attribution (CULT430, Journal officiel du 18 January 2005) under
+Licence Ouverte 1.0; see [LICENSE-FranceTerme.pdf](LICENSE-FranceTerme.pdf).
+The beau/NOM prose adapts Théodore Soulice's public-domain
 1836 original, printed p. 56 / scan p. 62; the fixed Wikisource transcription is
 revision 14772408, lines 142–143, ending before the separate beau idéal clause.
 Wikisource transcription and Lexique adaptations retain their own CC BY-SA 4.0

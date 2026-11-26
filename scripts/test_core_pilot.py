@@ -8,7 +8,8 @@ import sqlite3
 import tempfile
 import unittest
 
-from core_pilot import prepare
+import re
+from core_pilot import ANNOTATIONS, MATERIALS, prepare
 
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/core-pilot-79"
@@ -191,6 +192,10 @@ class CorePilotPreparationTests(unittest.TestCase):
                 self.assertFalse((Path(temporary) / "output/core.sqlite3").exists())
 
     def test_annotation_approval_dates_match_the_owner_decision_cohort(self):
+        self.assertEqual(len(ANNOTATIONS), 23)
+        for entry in ANNOTATIONS:
+            self.assertEqual(len(entry), 5)
+            self.assertRegex(entry[4], r"^\d{4}-\d{2}-\d{2}$")
         for index, wrong_date in ((0, "2026-11-19"), (14, "2026-11-18"),
                                   (15, "2026-11-19"), (16, "2026-11-19"), (17, "2026-11-19"),
                                   (18, "2026-11-21"), (19, "2026-11-21"), (20, "2026-11-21"),
@@ -486,6 +491,35 @@ class CorePilotPreparationTests(unittest.TestCase):
                     self.assertIn(str(field["exact_source"]["line_1_based"]), source["span"])
                 with self.assertRaises(sqlite3.OperationalError):
                     connection.execute("DELETE FROM senses")
+                meta_source = json.loads(
+                    connection.execute("SELECT value FROM metadata WHERE key = 'source'").fetchone()[0]
+                )
+                self.assertIn("FranceTerme", meta_source["attribution"])
+                self.assertIn("Licence Ouverte 1.0", meta_source["attribution"])
+                batch_153 = [sense for sense in senses if 3601 <= sense["frozen_row"] <= 3650]
+                self.assertEqual(len(batch_153), 50)
+                for sense in batch_153:
+                    ipa_mod = sense["field_sources"]["ipa"]["modification"]
+                    if sense["frozen_row"] == 3613:
+                        self.assertIn("for vôtres the component is isolated from les vôtres", ipa_mod)
+                    else:
+                        self.assertNotIn("vôtres", ipa_mod)
+                        self.assertEqual(
+                            ipa_mod,
+                            "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+                        )
+            measurements = report["measurements"]
+            expected_raw = sum((RESOURCE / name).stat().st_size for name in (*MATERIALS, "input-checksums.json"))
+            expected_bundled = sum(
+                path.stat().st_size for path in (root / "first").iterdir()
+                if path.name not in ("core.sqlite3", "report.json")
+            )
+            self.assertEqual(measurements["raw_inputs_bytes"], expected_raw)
+            self.assertEqual(measurements["bundled_materials_bytes"], expected_bundled)
+            self.assertEqual(
+                measurements["installed_core_bytes_excluding_report"],
+                measurements["read_only_sqlite_bytes"] + expected_bundled,
+            )
             coverage = json.loads((root / "first/coverage.json").read_text(encoding="utf-8"))
             self.assertEqual(len(coverage["incomplete_groups"]), 163)
             self.assertTrue(all(set(group["incomplete_fields"]) == set(FIELD_NAMES)

@@ -15,8 +15,14 @@ assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'cor
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
+const ANNOTATION_ROWS_BY_ISSUE = {
+  82: [87], 87: [305], 97: [816, 849], 98: [859, 860], 99: [934],
+  101: [1005], 102: [1051], 105: [1208, 1218, 1219, 1220], 106: [1300], 108: [1386],
+  132: [2560], 133: [2626], 136: [2792], 142: [3098], 156: [3783], 158: [3885], 159: [3922, 3944],
+};
+const ALL_ANNOTATION_ROWS = new Set(Object.values(ANNOTATION_ROWS_BY_ISSUE).flat());
 const expectedRows = Array.from({ length: 3950 }, (_, index) => index + 1)
-  .filter((row) => ![87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386, 2560, 2626, 2792, 3098, 3783, 3885, 3922, 3944].includes(row));
+  .filter((row) => !ALL_ANNOTATION_ROWS.has(row));
 const membership = expectedRows.map((row) => {
   const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
   assert.ok(match, `Invalid frozen scope row ${row}`);
@@ -286,9 +292,7 @@ async function contentBatch() {
   assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 159, 'Expected batch issue 84–159');
   const firstRow = 151 + (issue - 84) * 50;
   const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
-  const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934],
-    101: [1005], 102: [1051], 105: [1208, 1218, 1219, 1220], 106: [1300], 108: [1386],
-    132: [2560], 133: [2626], 136: [2792], 142: [3098], 156: [3783], 158: [3885], 159: [3922, 3944] })[issue] ?? [];
+  const annotationRows = ANNOTATION_ROWS_BY_ISSUE[issue] ?? [];
   assert.equal(groups.length, 50 - annotationRows.length);
   for (const row of annotationRows) {
     const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);

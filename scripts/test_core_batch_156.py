@@ -2,11 +2,13 @@
 import csv
 import json
 from pathlib import Path
-import shutil
-import tempfile
 import unittest
 
-from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
+from core_batch_test_helpers import (
+    assert_core_load_inputs_rejected,
+    verify_archived_contributor_captures,
+    verify_archived_source_captures,
+)
 from core_pilot import load_inputs, MATERIALS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -219,15 +221,11 @@ class Batch156Tests(unittest.TestCase):
             self.assertEqual(relation["alias_admission"], "not_admitted")
 
     def test_real_admission_rejects_an_author_review_without_independent_acceptance(self):
-        temporary_root = ROOT / "target/issue-156"
-        temporary_root.mkdir(parents=True, exist_ok=True)
-        with tempfile.TemporaryDirectory(prefix="admission-156-", dir=temporary_root) as folder:
-            staged = Path(folder)
-            for name in (*MATERIALS, "input-checksums.json"):
-                shutil.copy2(ROOT / "resources/core-pilot-79" / name, staged / name)
-            shutil.copy2(EVIDENCE / "authored/field-review.json", staged / "field-review.json")
-            with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
-                load_inputs(staged)
+        assert_core_load_inputs_rejected(
+            self, ROOT / "resources/core-pilot-79", MATERIALS, load_inputs,
+            lambda staged: (staged / "field-review.json").write_bytes((EVIDENCE / "authored/field-review.json").read_bytes()),
+            "A separate independent field review is required", "admission-156-",
+        )
 
     def test_fixed_source_bytes_spans_frames_and_complete_contributors(self):
         captures = read("source-captures.json")
@@ -331,17 +329,15 @@ class Batch156Tests(unittest.TestCase):
                     self.assertEqual(field["independent_review"], "passed")
 
     def test_real_admission_rejects_an_unresolved_independent_quality_decision(self):
-        temporary_root = ROOT / 'target/issue-156-review'
-        temporary_root.mkdir(parents=True, exist_ok=True)
-        with tempfile.TemporaryDirectory(prefix='quality-156-', dir=temporary_root) as folder:
-            staged = Path(folder)
-            for name in (*MATERIALS, 'input-checksums.json'):
-                shutil.copy2(ROOT / 'resources/core-pilot-79' / name, staged / name)
-            review = json.loads((staged / 'field-review.json').read_text(encoding='utf-8'))
-            review['fields'][0]['accepted_text_quality_status'] = 'unresolved'
-            (staged / 'field-review.json').write_text(json.dumps(review), encoding='utf-8')
-            with self.assertRaisesRegex(ValueError, 'A selected field is not independently reviewed or rights-eligible'):
-                load_inputs(staged)
+        def mutate(staged):
+            review = json.loads((staged / "field-review.json").read_text(encoding="utf-8"))
+            review["fields"][0]["accepted_text_quality_status"] = "unresolved"
+            (staged / "field-review.json").write_text(json.dumps(review), encoding="utf-8")
+
+        assert_core_load_inputs_rejected(
+            self, ROOT / "resources/core-pilot-79", MATERIALS, load_inputs,
+            mutate, "A selected field is not independently reviewed or rights-eligible", "quality-156-",
+        )
 
 
 if __name__ == "__main__":

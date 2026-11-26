@@ -1,10 +1,11 @@
 # D2 batch #156: rows 3751–3800
 
-`core-159-v1` canonically admits **49 groups / 196 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+`core-159-v1` canonically admits **49 groups / 196 fields** from this batch. Native lookup, trusted save and restart/reopen at `5fcba9932f74e298d4a798e6eb195faad5f51507` passed for every admitted batch group; see [combined evidence](../issues-150-159/README.md) for the subsequent review-fix state. [Final integration](final-integration.json) records the `5fcba99` package and preservation checks.
 
+## Independent source-review record
 
 **49 ordinary groups / 196 unchanged fields**, plus one owner-approved zero-field
-annotation for frozen row 3783 `ya/NOM`, are ready for coordinator admission.
+annotation for frozen row 3783 `ya/NOM`, were prepared for coordinator admission.
 The annotation retains four explicit unresolved missing fields and both original
 frequency strings (`11.45`). The denominator remains 4,087 groups.
 
@@ -35,7 +36,9 @@ are archived at
 `C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-156-owner-scope`.
 That archive includes an unchanged copy of the original review archive.
 
-Canonical assembly, combined redistribution, native lookup/save/reopen, upgrade
-preservation and learner/offline/platform acceptance remain pending. No new
-canonical fields are admitted by this shard. The [verification record](owner-scope-verification.json)
-records the focused checks and preservation boundary.
+At the pre-assembly shard review stage, [admission counts](admission.json)
+recorded zero shard-admitted canonical fields prior to coordinator assembly,
+combined redistribution, native lookup/save/reopen and upgrade preservation;
+learner, whole-machine offline, other-platform and release acceptance remain
+open. The [verification record](owner-scope-verification.json) records the
+focused shard checks and preservation boundary.

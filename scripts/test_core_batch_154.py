@@ -4,12 +4,14 @@ import json
 from html import unescape
 from pathlib import Path
 import re
-import shutil
-import tempfile
 import unittest
 
 import core_pilot
-from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
+from core_batch_test_helpers import (
+    assert_core_load_inputs_rejected,
+    verify_archived_contributor_captures,
+    verify_archived_source_captures,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/evidence/issue-154"
@@ -141,13 +143,11 @@ class Batch154Tests(unittest.TestCase):
         self.assertEqual((admission["accepted_unchanged_fields"], admission["accepted_changed_fields"]), (198, 2))
 
     def test_author_review_cannot_enter_the_existing_admission_pipeline(self):
-        with tempfile.TemporaryDirectory(prefix="core-batch-154-") as folder:
-            source_dir = Path(folder)
-            for name in (*core_pilot.MATERIALS, "input-checksums.json"):
-                shutil.copyfile(core_pilot.RESOURCE / name, source_dir / name)
-            shutil.copyfile(EVIDENCE / "authored/field-review.json", source_dir / "field-review.json")
-            with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
-                core_pilot.load_inputs(source_dir)
+        assert_core_load_inputs_rejected(
+            self, core_pilot.RESOURCE, core_pilot.MATERIALS, core_pilot.load_inputs,
+            lambda stage: (stage / "field-review.json").write_bytes((EVIDENCE / "authored/field-review.json").read_bytes()),
+            "A separate independent field review is required", "core-batch-154-",
+        )
 
     def test_fixed_spans_contributors_and_notices_accompany_all_fields(self):
         captures = read("source-captures.json")

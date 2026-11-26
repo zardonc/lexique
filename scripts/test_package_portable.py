@@ -110,6 +110,13 @@ class PortableTests(unittest.TestCase):
             self.assertIn("23 approved zero-field annotations", description)
             self.assertIn("3 specialist senses", description)
             self.assertIn("dictionary/core-pilot-79/", description)
+            self.assertIn("LICENSE-FranceTerme.pdf", description)
+            self.assertIn("Licence Ouverte 1.0", description)
+            self.assertEqual(result["installed_bytes"], sum(info.file_size for info in zipped.infolist()))
+            self.assertEqual(
+                result["core_installed_bytes"],
+                sum(info.file_size for info in zipped.infolist() if info.filename.startswith(prefix)),
+            )
 
     def test_missing_or_changed_core_resource_and_notices_prevent_delivery(self):
         core = self.root / "target/release/dictionary/core-pilot-79"

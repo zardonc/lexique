@@ -2,12 +2,14 @@
 import csv
 import json
 from pathlib import Path
-import shutil
-import tempfile
 from urllib.parse import parse_qs, urlparse
 import unittest
 
-from core_batch_test_helpers import verify_archived_source_captures, verify_archived_contributor_captures
+from core_batch_test_helpers import (
+    assert_core_load_inputs_rejected,
+    verify_archived_contributor_captures,
+    verify_archived_source_captures,
+)
 from core_pilot import load_inputs, MATERIALS, RESOURCE
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -91,24 +93,22 @@ class Batch159Tests(unittest.TestCase):
                 self.assertEqual(groups[row]["fields"][name]["text"], text)
 
     def test_converter_rejects_author_proposals_without_independent_review(self):
-        with tempfile.TemporaryDirectory(prefix="lexique-159-admission-") as temporary:
-            stage = Path(temporary)
-            for name in (*MATERIALS, "input-checksums.json"):
-                shutil.copyfile(RESOURCE / name, stage / name)
-            shutil.copyfile(EVIDENCE / "authored/field-review.json", stage / "field-review.json")
-            with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
-                load_inputs(stage)
+        assert_core_load_inputs_rejected(
+            self, RESOURCE, MATERIALS, load_inputs,
+            lambda stage: (stage / "field-review.json").write_bytes((EVIDENCE / "authored/field-review.json").read_bytes()),
+            "A separate independent field review is required", "lexique-159-admission-",
+        )
 
     def test_converter_rejects_scope_unresolved_field_review(self):
-        with tempfile.TemporaryDirectory(prefix="lexique-159-scope-") as temporary:
-            stage = Path(temporary)
-            for name in (*MATERIALS, "input-checksums.json"):
-                shutil.copyfile(RESOURCE / name, stage / name)
+        def mutate(stage):
             review = json.loads((stage / "field-review.json").read_text(encoding="utf-8"))
             review["fields"][0]["accepted_text_quality_status"] = "unresolved"
             (stage / "field-review.json").write_text(json.dumps(review), encoding="utf-8")
-            with self.assertRaisesRegex(ValueError, "A selected field is not independently reviewed or rights-eligible"):
-                load_inputs(stage)
+
+        assert_core_load_inputs_rejected(
+            self, RESOURCE, MATERIALS, load_inputs,
+            mutate, "A selected field is not independently reviewed or rights-eligible", "lexique-159-scope-",
+        )
 
     def test_exact_frozen_groups_have_complete_resource_records(self):
         if (EVIDENCE / "groups.json").exists():

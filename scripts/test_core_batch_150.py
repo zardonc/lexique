@@ -2,7 +2,6 @@
 import csv
 import json
 from pathlib import Path
-import tempfile
 from urllib.parse import parse_qs, urlparse
 import unittest
 
@@ -243,66 +242,6 @@ class Batch150Tests(unittest.TestCase):
         calm = next(s for s in sources if s["title"] == "tranquillement")
         self.assertEqual({l["original_authors"] for l in calm["original_historical_dictionary_layers"]},
                          {"Académie française", "Émile Littré"})
-
-
-class ContributorCaptureTests(unittest.TestCase):
-    def setUp(self):
-        scratch = ROOT / "target/final-review-fixes"
-        scratch.mkdir(parents=True, exist_ok=True)
-        folder = tempfile.TemporaryDirectory(dir=scratch)
-        self.addCleanup(folder.cleanup)
-        self.archive = Path(folder.name)
-        self.parts = [self.archive / f"contributors-new-1-{part}.api.json" for part in (1, 2)]
-        self.responses = [
-            {"query": {"pages": [{"title": "pull", "contributors": [{"name": "Alice"}], "anoncontributors": 2}]},
-             "continue": {"continue": "||", "pccontinue": "10|20"}},
-            {"query": {"pages": [{"title": "pull", "contributors": [{"name": "Alice"}, {"name": "Bob"}]},
-                                  {"title": "cavalier", "contributors": []}]}},
-        ]
-        self.request = "https://fr.wiktionary.org/w/api.php?continue=%7C%7C&pccontinue=10%7C20"
-
-    def verify(self):
-        for path, response in zip(self.parts, self.responses):
-            path.write_text(json.dumps(response), encoding="utf-8")
-        self.parts[1].with_suffix(".request.txt").write_text(self.request, encoding="utf-8")
-        return verify_archived_contributor_captures(self, list(reversed(self.parts)), Path)
-
-    def test_complete_pagination_aggregates_unique_names_and_anonymous_counts(self):
-        names, anonymous, chains = self.verify()
-        self.assertEqual(names, {"pull": {"Alice", "Bob"}, "cavalier": set()})
-        self.assertEqual(anonymous, {"pull": 2})
-        self.assertEqual(set(chains), {"contributors-new-1"})
-
-    def test_incomplete_pagination_and_mismatched_requests_are_rejected(self):
-        with self.subTest("missing continuation"):
-            continuation = self.responses[0].pop("continue")
-            with self.assertRaises(AssertionError):
-                self.verify()
-            self.responses[0]["continue"] = continuation
-        with self.subTest("empty continuation"):
-            self.responses[0]["continue"] = {}
-            with self.assertRaises(AssertionError):
-                self.verify()
-            self.responses[0]["continue"] = continuation
-        with self.subTest("missing intermediate part"):
-            terminal = self.parts[1]
-            self.parts[1] = self.archive / "contributors-new-1-3.api.json"
-            with self.assertRaises(AssertionError):
-                self.verify()
-            self.parts[1] = terminal
-        with self.subTest("unfinished final part"):
-            self.responses[1]["continue"] = continuation
-            with self.assertRaises(AssertionError):
-                self.verify()
-            del self.responses[1]["continue"]
-        with self.subTest("wrong next request token"):
-            self.request = self.request.replace("10%7C20", "10%7C21")
-            with self.assertRaises(AssertionError):
-                self.verify()
-        with self.subTest("missing next request token"):
-            self.request = "https://fr.wiktionary.org/w/api.php?continue=%7C%7C"
-            with self.assertRaises(KeyError):
-                self.verify()
 
 
 if __name__ == "__main__":

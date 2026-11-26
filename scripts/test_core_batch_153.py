@@ -260,6 +260,25 @@ class Batch153Tests(unittest.TestCase):
         self.assertEqual(len(relations), 50)
         self.assertTrue(all(r["alias_admission"] == "not_admitted" and r["independent_review"] == "passed" for r in relations))
 
+    def test_ipa_modification_votres_clause_applies_only_to_row_3613(self):
+        standard_ipa = "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied."
+        canonical = json.loads((ROOT / "resources/core-pilot-79/curated-inputs.json").read_text(encoding="utf-8"))
+        slices = [
+            ("docs/evidence/issue-153/groups.json", read("groups.json")),
+            ("resources/core-pilot-79/curated-inputs.json",
+             [g for g in canonical["groups"] if 3601 <= g["frozen_row"] <= 3650]),
+        ]
+        for label, groups in slices:
+            self.assertEqual(len(groups), 50, label)
+            for group in groups:
+                ipa_mod = group["senses"][0]["fields"]["ipa"]["modification"]
+                with self.subTest(source=label, row=group["frozen_row"]):
+                    if group["frozen_row"] == 3613:
+                        self.assertIn("for vôtres the component is isolated from les vôtres", ipa_mod)
+                    else:
+                        self.assertNotIn("vôtres", ipa_mod)
+                        self.assertEqual(ipa_mod, standard_ipa)
+
 
 if __name__ == "__main__":
     unittest.main()

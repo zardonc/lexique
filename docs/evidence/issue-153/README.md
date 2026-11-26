@@ -1,7 +1,8 @@
 # Issue #153 reviewed resource shard
 
-`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen passed for every admitted batch group. [Final integration](final-integration.json) and [combined evidence](../issues-150-159/README.md) record the matching package and preservation checks.
+`core-159-v1` canonically admits **50 groups / 200 fields** from this batch. Native lookup, trusted save and restart/reopen at `5fcba9932f74e298d4a798e6eb195faad5f51507` passed for every admitted batch group; see [combined evidence](../issues-150-159/README.md) for the subsequent IPA modification fix and review-fix state. [Final integration](final-integration.json) records the `5fcba99` package and preservation checks.
 
+## Independent source-review record
 
 **50 exact groups, 50 modern everyday selected uses and 200 fields accepted**
 by separate independent field/use/rights review. **197 fields are unchanged,
@@ -19,8 +20,9 @@ maintenance with the Geography restriction. The original 1827 expression’s
 expired compilation boundary is resolved and credited. No publisher definition
 is bundled; no frequency claim, substitute or owner exception is made.
 
-Canonical assembly, combined notices/conversion, native lookup/save/reopen,
-learner acceptance and release/platform/offline checks remain integration-owned.
-The existing 4,087-group denominator and core-149-v1 baseline are unchanged by
-this shard. [Admission](admission.json) separates independent acceptance from
-200 fields pending canonical admission.
+At the pre-assembly shard review stage, canonical assembly, combined
+notices/conversion and native lookup/save/reopen remained integration-owned,
+leaving the 4,087-group denominator and `core-149-v1` baseline unchanged prior
+to coordinator integration (recorded as 200 fields awaiting canonical admission
+in the shard [Admission](admission.json)). Learner acceptance and
+release/platform/offline checks remain incomplete.
