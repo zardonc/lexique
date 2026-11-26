@@ -14,7 +14,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -23,7 +23,10 @@
           "raw_reference": ": {{siècle|XV|lang=fr}} Composé{{R|TLFi}} de ''{{lien|diffus|fr}}'' et ''{{lien|-er|fr}}''. Il correspond à l’adaptation, en français, du latin ''{{lien|diffundo|la}}'' {{cf|effuser|infuser|perfuser|transfuser|lang=fr}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected diffuser lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_7899",
@@ -35,12 +38,28 @@
       "timestamp": "2026-08-03T10:29:19Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=plafond&oldid=39770888",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=plafond&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 describes the upper covered-room surface; the wiki definition combines that ordinary ceiling description and material details. The accepted adaptation keeps the room ceiling only."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -58,7 +77,10 @@
           "raw_reference": "* {{R:Treccani}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 describes the upper covered-room surface; the wiki definition combines that ordinary ceiling description and material details. The accepted adaptation keeps the room ceiling only."
     },
     {
       "id": "b161_fr_134983",
@@ -70,11 +92,11 @@
       "timestamp": "2025-09-13T14:58:04Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=graver&oldid=38667818",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=graver&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -87,7 +109,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "The selected trait/figure, burin/ciseau and material sentence follows DAF8 physical engraving. Its original credit applies; optical-disc, printing and literary examples are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -108,7 +132,10 @@
           "raw_reference": "* {{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected trait/figure, burin/ciseau and material sentence follows DAF8 physical engraving. Its original credit applies; optical-disc, printing and literary examples are excluded."
     },
     {
       "id": "b161_fr_159321",
@@ -120,11 +147,11 @@
       "timestamp": "2026-06-24T09:34:17Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=encaisser&oldid=39620114",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=encaisser&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -137,7 +164,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 supplies financial receipt and making an effect payable; the selected wiki receiving/recouvrer extension is a later lexical reformulation. No DAF8 exact-sentence identity is asserted."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -153,7 +182,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 supplies financial receipt and making an effect payable; the selected wiki receiving/recouvrer extension is a later lexical reformulation. No DAF8 exact-sentence identity is asserted."
     },
     {
       "id": "b161_fr_170766",
@@ -165,11 +197,11 @@
       "timestamp": "2026-08-03T13:41:22Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=p%C3%AAcheur&oldid=39773123",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=p%C3%AAcheur&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -182,7 +214,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 contains the professional or habitual recreational fisher definition. The selected wiki sentence retains it; feminine and accents are kept separately."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -193,7 +227,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 contains the professional or habitual recreational fisher definition. The selected wiki sentence retains it; feminine and accents are kept separately."
     },
     {
       "id": "b161_fr_171253",
@@ -205,11 +242,11 @@
       "timestamp": "2026-08-03T10:14:54Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=photographier&oldid=39770384",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=photographier&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -222,7 +259,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "The selected obtenir une image par les procédés de la photographie sentence occurs in DAF8. No surrounding later quotation is adapted."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -233,7 +272,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected obtenir une image par les procédés de la photographie sentence occurs in DAF8. No surrounding later quotation is adapted."
     },
     {
       "id": "b161_fr_174710",
@@ -245,11 +287,11 @@
       "timestamp": "2026-08-18T13:11:25Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=renforcer&oldid=39812807",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=renforcer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -262,7 +304,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 Fortifier, rendre plus fort matches the selected short definition. Technical photographic examples contribute no field."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -273,7 +317,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 Fortifier, rendre plus fort matches the selected short definition. Technical photographic examples contribute no field."
     },
     {
       "id": "b161_fr_175167",
@@ -285,12 +332,28 @@
       "timestamp": "2026-10-25T18:11:20Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9volutionnaire&oldid=39957276",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9volutionnaire&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 figurative reversal of established principles supports the selected adjective, although très novateur is a wiki expansion. The political noun is excluded."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -303,7 +366,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 figurative reversal of established principles supports the selected adjective, although très novateur is a wiki expansion. The political noun is excluded."
     },
     {
       "id": "b161_fr_236418",
@@ -319,10 +385,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected ciné lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_248390",
@@ -338,10 +407,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected costaud lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_7412",
@@ -353,11 +425,11 @@
       "timestamp": "2026-08-28T07:46:06Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=quantit%C3%A9&oldid=39835494",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=quantit%C3%A9&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -370,7 +442,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 courant number/proportion plus ou moins grande sentence matches the selected ordinary quantity clause; its abundance and prosody senses are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -386,7 +460,10 @@
           "raw_reference": "* {{R:Godefroy|complément=1}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 courant number/proportion plus ou moins grande sentence matches the selected ordinary quantity clause; its abundance and prosody senses are excluded."
     },
     {
       "id": "b161_fr_8340",
@@ -402,10 +479,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected couché lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_9470",
@@ -417,11 +497,11 @@
       "timestamp": "2026-10-20T08:54:14Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=philosophie&oldid=39947980",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=philosophie&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -434,7 +514,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 Doctrine ou système supplies the historical doctrine boundary; viewing/expressing the world is a wiki expansion. No claim of literal historical identity for the full sentence."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -445,7 +527,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 Doctrine ou système supplies the historical doctrine boundary; viewing/expressing the world is a wiki expansion. No claim of literal historical identity for the full sentence."
     },
     {
       "id": "b161_fr_37823",
@@ -457,12 +542,27 @@
       "timestamp": "2024-05-23T12:10:55Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=infiniment&oldid=34799702",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=infiniment&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Émile Littré (1801–1881)",
+          "edition": "Dictionnaire de la langue française, 1872–1877",
+          "legal_basis": "CPI L123-1: author lifetime plus seventy years; conservative expiry 1952-01-01.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
+          "conservative_expiry": "1952-01-01",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md",
+          "scope": "Historical original expression only; no modern electronic transcription admitted.",
+          "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "Littré sense 2 Beaucoup, extrêmement matches the selected intensity synonyms in reverse order. Mathematical infinity and surrounding cited letters are excluded; no modern electronic edition is admitted."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -470,7 +570,10 @@
           "raw_reference": "* {{R:Littré}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "Littré sense 2 Beaucoup, extrêmement matches the selected intensity synonyms in reverse order. Mathematical infinity and surrounding cited letters are excluded; no modern electronic edition is admitted."
     },
     {
       "id": "b161_fr_154890",
@@ -482,11 +585,11 @@
       "timestamp": "2025-11-01T07:51:44Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=compromettre&oldid=39001354",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=compromettre&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -499,7 +602,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 includes reputation put in peril; the wiki selected mettre en péril is a general risk extension. The obsolete woman/relationship and arbitration clauses are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -510,7 +615,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 includes reputation put in peril; the wiki selected mettre en péril is a general risk extension. The obsolete woman/relationship and arbitration clauses are excluded."
     },
     {
       "id": "b161_fr_156314",
@@ -522,11 +630,11 @@
       "timestamp": "2026-09-07T07:52:42Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cultiver&oldid=39863661",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=cultiver&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -539,7 +647,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "The land/fertility/improved productions sentence matches DAF8. Figurative education and relationships contribute no fields."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -555,7 +665,10 @@
           "raw_reference": "* {{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The land/fertility/improved productions sentence matches DAF8. Figurative education and relationships contribute no fields."
     },
     {
       "id": "b161_fr_161619",
@@ -567,12 +680,28 @@
       "timestamp": "2026-10-31T08:42:56Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=flot&oldid=39969590",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=flot&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 figurative crowd/abundance explains the historical semantic boundary; wiki masse/grande quantité is a short reformulation. Literal sea/tide definitions are excluded."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -600,7 +729,10 @@
           "raw_reference": "* {{R:Littré}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 figurative crowd/abundance explains the historical semantic boundary; wiki masse/grande quantité is a short reformulation. Literal sea/tide definitions are excluded."
     },
     {
       "id": "b161_fr_162579",
@@ -612,11 +744,11 @@
       "timestamp": "2025-11-01T16:06:57Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=g%C3%AAnant&oldid=39005637",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=g%C3%AAnant&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -629,7 +761,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 defines Qui gêne, not the selected Embarrassant sentence. Original article credit is retained conservatively, without treating the later synonym as a proven original quotation."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -640,7 +774,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 defines Qui gêne, not the selected Embarrassant sentence. Original article credit is retained conservatively, without treating the later synonym as a proven original quotation."
     },
     {
       "id": "b161_fr_168096",
@@ -652,11 +789,11 @@
       "timestamp": "2026-10-28T10:38:05Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=migraine&oldid=39961368",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=migraine&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -669,7 +806,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 clinical half-head/gastric definition differs from the selected explicitly hyperbolic headache. Its clinical prose and examples are excluded; original article credit does not override modern-use scoping."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -685,7 +824,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 clinical half-head/gastric definition differs from the selected explicitly hyperbolic headache. Its clinical prose and examples are excluded; original article credit does not override modern-use scoping."
     },
     {
       "id": "b161_fr_179520",
@@ -697,11 +839,11 @@
       "timestamp": "2026-09-09T12:36:31Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vaste&oldid=39868231",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=vaste&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -714,7 +856,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "Qui est d’une grande étendue matches DAF8. Figurative intellect and the anatomical noun are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -730,7 +874,10 @@
           "raw_reference": "* {{R:Gaffiot}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "Qui est d’une grande étendue matches DAF8. Figurative intellect and the anatomical noun are excluded."
     },
     {
       "id": "b161_fr_36581",
@@ -742,11 +889,11 @@
       "timestamp": "2026-11-18T20:28:29Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9pais&oldid=40044097",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9pais&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -759,7 +906,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 grande consistance, grande densité matches the selected clause. Littré also has the consistency/density sense; both original-work credits are retained, without importing modern transcription prose."
+        },
+        {
+          "original_authors": "Émile Littré (1801–1881)",
+          "edition": "Dictionnaire de la langue française, 1872–1877",
+          "legal_basis": "CPI L123-1: author lifetime plus seventy years; conservative expiry 1952-01-01.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
+          "conservative_expiry": "1952-01-01",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md",
+          "scope": "Historical original expression only; no modern electronic transcription admitted.",
+          "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 grande consistance, grande densité matches the selected clause. Littré also has the consistency/density sense; both original-work credits are retained, without importing modern transcription prose."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -775,7 +938,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 grande consistance, grande densité matches the selected clause. Littré also has the consistency/density sense; both original-work credits are retained, without importing modern transcription prose."
     },
     {
       "id": "b161_fr_62927",
@@ -787,12 +953,28 @@
       "timestamp": "2026-10-23T10:30:46Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=selle&oldid=39953953",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=selle&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 riding-animal seat supplies the historical meaning, but the selected leather-seat wording is the wiki contribution. Stool, bicycle and excrement senses are excluded."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -810,7 +992,10 @@
           "raw_reference": "{{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 riding-animal seat supplies the historical meaning, but the selected leather-seat wording is the wiki contribution. Stool, bicycle and excrement senses are excluded."
     },
     {
       "id": "b161_fr_118513",
@@ -826,7 +1011,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -875,7 +1060,10 @@
           "raw_reference": "* {{R:KTSK|consulté le=30 août 2025}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected cocktail lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_161374",
@@ -887,11 +1075,11 @@
       "timestamp": "2026-11-20T19:39:06Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fid%C3%A9lit%C3%A9&oldid=40049469",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=fid%C3%A9lit%C3%A9&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -904,7 +1092,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "The selected duties/affections/regular engagement clause matches DAF8. Cartographic line 40 with Import:CFC is entirely outside accepted fields and supporting spans."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -922,7 +1112,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected duties/affections/regular engagement clause matches DAF8. Cartographic line 40 with Import:CFC is entirely outside accepted fields and supporting spans."
     },
     {
       "id": "b161_fr_161950",
@@ -934,11 +1127,11 @@
       "timestamp": "2026-11-01T21:28:25Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=frein&oldid=39975224",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=frein&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -951,7 +1144,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 Dispositif destiné à modérer la vitesse/enrayer les roues matches the selected brake sentence. Horse-bit and moral definitions are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -967,7 +1162,10 @@
           "raw_reference": "* {{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 Dispositif destiné à modérer la vitesse/enrayer les roues matches the selected brake sentence. Horse-bit and moral definitions are excluded."
     },
     {
       "id": "b161_fr_165791",
@@ -979,11 +1177,11 @@
       "timestamp": "2026-11-19T17:58:26Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=jeton&oldid=40046464",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=jeton&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -996,7 +1194,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 contains the flat/round counter and both historical calculation and contemporary scoring/payment clauses. Only the latter ordinary gaming clause is adapted."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1012,7 +1212,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 contains the flat/round counter and both historical calculation and contemporary scoring/payment clauses. Only the latter ordinary gaming clause is adapted."
     },
     {
       "id": "b161_fr_167269",
@@ -1024,11 +1227,11 @@
       "timestamp": "2026-10-30T22:04:11Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=manifester&oldid=39969165",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=manifester&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1041,7 +1244,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 has intransitive faire une manifestation; selected participation is a wiki reformulation in its own explicit intransitive line, without importing transitive revelation prose."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1057,7 +1262,10 @@
           "raw_reference": "*{{R:Ménard|p=828b}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 has intransitive faire une manifestation; selected participation is a wiki reformulation in its own explicit intransitive line, without importing transitive revelation prose."
     },
     {
       "id": "b161_fr_172402",
@@ -1069,11 +1277,11 @@
       "timestamp": "2026-06-04T22:35:40Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pr%C3%A9caution&oldid=39565389",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=pr%C3%A9caution&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1086,7 +1294,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "The preventive action to avoid inconvenience/harm follows DAF8. The attitude/prudence definition is excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1097,7 +1307,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The preventive action to avoid inconvenience/harm follows DAF8. The attitude/prudence definition is excluded."
     },
     {
       "id": "b161_fr_173478",
@@ -1109,11 +1322,11 @@
       "timestamp": "2026-05-10T20:33:34Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=qu%C3%AAte&oldid=39498505",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=qu%C3%AAte&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1126,7 +1339,23 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "Action par laquelle on cherche occurs in DAF8 and Littré. Both originals receive credit; the hunting/charitable and modern-transcription layers are not selected."
+        },
+        {
+          "original_authors": "Émile Littré (1801–1881)",
+          "edition": "Dictionnaire de la langue française, 1872–1877",
+          "legal_basis": "CPI L123-1: author lifetime plus seventy years; conservative expiry 1952-01-01.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
+          "conservative_expiry": "1952-01-01",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md",
+          "scope": "Historical original expression only; no modern electronic transcription admitted.",
+          "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "Action par laquelle on cherche occurs in DAF8 and Littré. Both originals receive credit; the hunting/charitable and modern-transcription layers are not selected."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1147,7 +1376,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "Action par laquelle on cherche occurs in DAF8 and Littré. Both originals receive credit; the hunting/charitable and modern-transcription layers are not selected."
     },
     {
       "id": "b161_fr_250747",
@@ -1163,7 +1395,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1172,7 +1404,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected rigolo lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_24172",
@@ -1184,11 +1419,11 @@
       "timestamp": "2026-09-30T09:38:01Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ci&oldid=39910811",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=ci&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1201,7 +1436,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 Ici and following compounds support the historical adverb boundary. The fixed wiki modern compound-only restriction is retained; accounting, pronouns and isolated archaic uses are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1252,7 +1489,10 @@
           "raw_reference": "* {{R:AkadUniVort|rac1=\"ci\"|UVn1=654|cat=UV}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 Ici and following compounds support the historical adverb boundary. The fixed wiki modern compound-only restriction is retained; accounting, pronouns and isolated archaic uses are excluded."
     },
     {
       "id": "b161_fr_24849",
@@ -1264,11 +1504,11 @@
       "timestamp": "2026-11-23T19:35:14Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=hache&oldid=40057307",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=hache&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1281,7 +1521,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 handled cutting/splitting instrument supplies the historical core. The wiki wedge shape and material history are separate updates; material history and quotes are not adapted into fields."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1342,7 +1584,10 @@
           "raw_reference": ": Vocalisation de ''h''{{R|DRAE}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 handled cutting/splitting instrument supplies the historical core. The wiki wedge shape and material history are separate updates; material history and quotes are not adapted into fields."
     },
     {
       "id": "b161_fr_25376",
@@ -1358,7 +1603,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1407,7 +1652,10 @@
           "raw_reference": "{{R|Pergnier, 1989|Maurice {{smcp|Pergnier}}, ''Les anglicismes'', Presses universitaires de France, 1989.}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected wagon lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_72016",
@@ -1419,14 +1667,33 @@
       "timestamp": "2026-10-21T18:43:58Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=uni&oldid=39951487",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=uni&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "The CNRTL DAF8 adjective comparator returned no entry content. The traditional plain/unadorned/one-tone formulation receives conservative DAF8 original credit under the established expired original-work basis; no literal original-edition match is claimed."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The CNRTL DAF8 adjective comparator returned no entry content. The traditional plain/unadorned/one-tone formulation receives conservative DAF8 original credit under the established expired original-work basis; no literal original-edition match is claimed."
     },
     {
       "id": "b161_fr_102320",
@@ -1438,11 +1705,11 @@
       "timestamp": "2026-11-10T04:16:42Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=hypocrite&oldid=40001012",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=hypocrite&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1455,7 +1722,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 person showing hypocrisy supplies the historical noun. The selected list of feigned qualities is wiki wording; nearby adjective and quotations are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1466,7 +1735,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 person showing hypocrisy supplies the historical noun. The selected list of feigned qualities is wiki wording; nearby adjective and quotations are excluded."
     },
     {
       "id": "b161_fr_119824",
@@ -1478,11 +1750,11 @@
       "timestamp": "2026-08-03T13:38:08Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=circuit&oldid=39772994",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=circuit&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1495,7 +1767,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 sports path/detour/electrical definitions are distinct from the selected short organised-route clause. The marker gives conservative original article credit, not selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1536,7 +1810,10 @@
           "raw_reference": "* {{RÉF|1}} {{R:BaTelÒc}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 sports path/detour/electrical definitions are distinct from the selected short organised-route clause. The marker gives conservative original article credit, not selected-sentence authorship."
     },
     {
       "id": "b161_fr_121753",
@@ -1548,11 +1825,11 @@
       "timestamp": "2026-10-16T09:58:41Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=arrangement&oldid=39937062",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=arrangement&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1565,7 +1842,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 action d’arranger ou résultat matches the selected definition. Mathematical and musical extensions are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1576,7 +1855,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 action d’arranger ou résultat matches the selected definition. Mathematical and musical extensions are excluded."
     },
     {
       "id": "b161_fr_121937",
@@ -1588,11 +1870,11 @@
       "timestamp": "2026-09-25T08:16:51Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=assistance&oldid=39902922",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=assistance&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1605,7 +1887,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 Aide, secours matches the selected help sense. Audience and official attendance definitions are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1616,7 +1900,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 Aide, secours matches the selected help sense. Audience and official attendance definitions are excluded."
     },
     {
       "id": "b161_fr_141749",
@@ -1632,10 +1919,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected média lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_463389",
@@ -1651,10 +1941,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected inhabituel lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_2293",
@@ -1666,11 +1959,11 @@
       "timestamp": "2026-10-26T14:20:43Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=marron&oldid=39958534",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=marron&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1683,7 +1976,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 colour approaching chestnut and adjective examples support the historical colour boundary. Wiki ripe-chestnut wording and agreement notes are distinct updates; other numbered adjectives are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1839,7 +2134,10 @@
           "raw_reference": "* {{R:DuCange}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 colour approaching chestnut and adjective examples support the historical colour boundary. Wiki ripe-chestnut wording and agreement notes are distinct updates; other numbered adjectives are excluded."
     },
     {
       "id": "b161_fr_12808",
@@ -1851,12 +2149,28 @@
       "timestamp": "2026-11-01T22:07:39Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cristal&oldid=39975286",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=cristal&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 crystal glass with lead oxide and rock-crystal clarity supports the selected material sentence. Mineral/polyhedron and object-plural definitions are excluded."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -1914,7 +2228,10 @@
           "raw_reference": "* {{R:DicionárioFonético|cristal|id=9323}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 crystal glass with lead oxide and rock-crystal clarity supports the selected material sentence. Mineral/polyhedron and object-plural definitions are excluded."
     },
     {
       "id": "b161_fr_13894",
@@ -1930,7 +2247,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2004,7 +2321,10 @@
           "raw_reference": "* {{R:Traina}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected soda lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     },
     {
       "id": "b161_fr_26854",
@@ -2016,12 +2336,28 @@
       "timestamp": "2026-09-15T19:51:33Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tambour&oldid=39877909",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=tambour&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "The selected cylinder/two skins/sticks instrument sentence matches DAF8. The person and machinery extensions contribute no field."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -2039,7 +2375,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected cylinder/two skins/sticks instrument sentence matches DAF8. The person and machinery extensions contribute no field."
     },
     {
       "id": "b161_fr_29932",
@@ -2051,11 +2390,11 @@
       "timestamp": "2026-10-01T07:25:14Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ver&oldid=39912146",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=ver&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2068,7 +2407,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 long crawling animal without articulated limbs and larvae supports the historical core; wiki cylindrical/invertebrate wording is a modern adaptation. Computing/parasite-only senses are excluded."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2129,7 +2470,10 @@
           "raw_reference": "* {{R:FDT|15|forme de verbe|p=21}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 long crawling animal without articulated limbs and larvae supports the historical core; wiki cylindrical/invertebrate wording is a modern adaptation. Computing/parasite-only senses are excluded."
     },
     {
       "id": "b161_fr_151034",
@@ -2141,11 +2485,11 @@
       "timestamp": "2026-11-01T22:10:36Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=caporal&oldid=39975367",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=caporal&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2158,7 +2502,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 lowest infantry rank and tobacco differ from selected modern French Army/Air Force hierarchy and OR-3. Those modern details are wiki contributions; no old rank hierarchy is imported."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2204,7 +2550,10 @@
           "raw_reference": "* {{R:Mistral}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 lowest infantry rank and tobacco differ from selected modern French Army/Air Force hierarchy and OR-3. Those modern details are wiki contributions; no old rank hierarchy is imported."
     },
     {
       "id": "b161_fr_155727",
@@ -2216,12 +2565,28 @@
       "timestamp": "2026-11-24T07:41:57Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=coude&oldid=40057713",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=coude&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 outer bend of the arm matches the first clause; the forearm/upper-arm joint is wiki clarification. Sleeve, pipe and figurative clauses are excluded."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -2244,7 +2609,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 outer bend of the arm matches the first clause; the forearm/upper-arm joint is wiki clarification. Sleeve, pipe and figurative clauses are excluded."
     },
     {
       "id": "b161_fr_178473",
@@ -2256,41 +2624,11 @@
       "timestamp": "2026-09-26T07:29:50Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tombeau&oldid=39904367",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=tombeau&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": [
-        {
-          "line_1_based": 3,
-          "raw_reference": ": {{siècle|XII|lang=fr}} En {{étyl|fro|fr|mot=tombel}}{{R|TLFi}}, équivalent du {{composé de|tombe|-eau|lang=fr}}{{R|Littré}}.",
-          "role": "reference_identity_not_selected_sentence_authorship"
-        },
-        {
-          "line_1_based": 105,
-          "raw_reference": "* {{R:DAF8}}",
-          "role": "reference_identity_not_selected_sentence_authorship"
-        }
-      ]
-    },
-    {
-      "id": "b161_fr_179548",
-      "edition": "fr",
-      "entry_language": "fr",
-      "title": "vaurien",
-      "pageid": 179548,
-      "revid": 36912712,
-      "timestamp": "2025-01-11T11:20:40Z",
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vaurien&oldid=36912712",
-      "history_url": "https://fr.wiktionary.org/w/index.php?title=vaurien&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "content_license": "CC-BY-SA-4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
-      "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2303,7 +2641,58 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 funerary monument at burial place matches the core; the modern professional above-ground versus caveau note is a separate wiki contribution. Literary/music tributes are excluded."
+        }
+      ],
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
+      "external_reference_markers": [
+        {
+          "line_1_based": 3,
+          "raw_reference": ": {{siècle|XII|lang=fr}} En {{étyl|fro|fr|mot=tombel}}{{R|TLFi}}, équivalent du {{composé de|tombe|-eau|lang=fr}}{{R|Littré}}.",
+          "role": "reference_identity_not_selected_sentence_authorship"
+        },
+        {
+          "line_1_based": 105,
+          "raw_reference": "* {{R:DAF8}}",
+          "role": "reference_identity_not_selected_sentence_authorship"
+        }
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 funerary monument at burial place matches the core; the modern professional above-ground versus caveau note is a separate wiki contribution. Literary/music tributes are excluded."
+    },
+    {
+      "id": "b161_fr_179548",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "vaurien",
+      "pageid": 179548,
+      "revid": 36912712,
+      "timestamp": "2025-01-11T11:20:40Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vaurien&oldid=36912712",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=vaurien&action=history",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Actual revision returned by the retained first-party API capture.",
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+          "selected_expression_reason": "DAF8 explicitly supplies a familiar less-severe sense after the harsh morally worthless definition. The selected chenapan paraphrase keeps that boundary; neither edition creates a non-insult threshold."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2314,7 +2703,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "DAF8 explicitly supplies a familiar less-severe sense after the harsh morally worthless definition. The selected chenapan paraphrase keeps that boundary; neither edition creates a non-insult threshold."
     },
     {
       "id": "b161_fr_193630",
@@ -2330,7 +2722,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2339,7 +2731,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "selected_expression_reason": "The selected britannique lexical definition and its French grammatical/IPA frame carry no attached external import or quotation. Bibliographic/etymological references and neighbouring examples do not supply the selected wording."
     }
   ]
 }
