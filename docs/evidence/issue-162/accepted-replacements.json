@@ -1,0 +1,97 @@
+{
+  "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
+  "fields": [
+    {
+      "frozen_row": 4061,
+      "sense_id": "b162-4061-base-ball-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Sport où deux équipes de neuf joueurs cherchent à marquer en frappant une balle et en parcourant quatre bases ; après neuf manches, l’équipe qui a accompli le plus de tours gagne.",
+      "accepted_text": "Sport où deux équipes de neuf joueurs cherchent à marquer en frappant une balle et en parcourant quatre bases ; le match comporte normalement neuf manches, avec prolongation en cas d’égalité.",
+      "reason": "The French variant line binds exact base-ball to baseball, with its own nominal IPA. Two teams of nine and four bases are supported; the author's absolute nine-inning ending is corrected because tied games can continue. The explanation keeps nine innings as the normal format rather than a mandatory ending."
+    },
+    {
+      "frozen_row": 4061,
+      "sense_id": "b162-4061-base-ball-nom-selected",
+      "field": "english",
+      "proposed_text": "Baseball: a sport played by two teams of nine, scoring by hitting a ball and running around four bases; the team with the most runs after nine innings wins.",
+      "accepted_text": "Baseball: a sport played by two teams of nine, scoring by hitting a ball and running around four bases; normally played over nine innings, with extra innings if tied.",
+      "reason": "The French variant line binds exact base-ball to baseball, with its own nominal IPA. Two teams of nine and four bases are supported; the author's absolute nine-inning ending is corrected because tied games can continue. The explanation keeps nine innings as the normal format rather than a mandatory ending."
+    },
+    {
+      "frozen_row": 4061,
+      "sense_id": "b162-4061-base-ball-nom-selected",
+      "field": "chinese",
+      "proposed_text": "棒球：两队各九人，通过击球并跑过四个垒位得分，九局后得分较多的一队获胜。",
+      "accepted_text": "棒球：两队各九人，通过击球并跑过四个垒位得分；比赛通常进行九局，平局时延长比赛。",
+      "reason": "The French variant line binds exact base-ball to baseball, with its own nominal IPA. Two teams of nine and four bases are supported; the author's absolute nine-inning ending is corrected because tied games can continue. The explanation keeps nine innings as the normal format rather than a mandatory ending."
+    },
+    {
+      "frozen_row": 4071,
+      "sense_id": "b162-4071-fusée-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Pièce de feu d’artifice constituée de papier ou de carton rempli de poudre, que l’on lance à la main ou qui monte dans l’air après l’allumage.",
+      "accepted_text": "Pièce de feu d’artifice faite de papier ou de carton, remplie de poudre à canon et attachée à une baguette, qui s’élève d’elle-même dans l’air après allumage.",
+      "reason": "The self-rising firework in line 16 is a modern ordinary rocket use confirmed by Le Robert. Accepted meanings select the stick-guided powder-filled type; the historical hand-thrown subtype and the author's Chinese ignition-scope mismatch are excluded. Spacecraft, weapon fuse and CFC cartography wording supply no field."
+    },
+    {
+      "frozen_row": 4071,
+      "sense_id": "b162-4071-fusée-nom-selected",
+      "field": "english",
+      "proposed_text": "A firework made of paper or cardboard filled with explosive powder, either thrown by hand or rising into the air after ignition.",
+      "accepted_text": "A firework rocket made of paper or cardboard, filled with gunpowder and attached to a stick, which rises into the air after ignition.",
+      "reason": "The self-rising firework in line 16 is a modern ordinary rocket use confirmed by Le Robert. Accepted meanings select the stick-guided powder-filled type; the historical hand-thrown subtype and the author's Chinese ignition-scope mismatch are excluded. Spacecraft, weapon fuse and CFC cartography wording supply no field."
+    },
+    {
+      "frozen_row": 4071,
+      "sense_id": "b162-4071-fusée-nom-selected",
+      "field": "chinese",
+      "proposed_text": "烟火、焰火火箭：以纸或纸板包裹火药，点燃后可手掷或自行升空。",
+      "accepted_text": "焰火火箭：以纸或纸板制成，内装火药并连着导向杆，点燃后自行升空。",
+      "reason": "The self-rising firework in line 16 is a modern ordinary rocket use confirmed by Le Robert. Accepted meanings select the stick-guided powder-filled type; the historical hand-thrown subtype and the author's Chinese ignition-scope mismatch are excluded. Spacecraft, weapon fuse and CFC cartography wording supply no field."
+    },
+    {
+      "frozen_row": 4077,
+      "sense_id": "b162-4077-amiral-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Chef suprême des forces navales d’un État.",
+      "accepted_text": "En France, grade d’officier général de la marine, au-dessus de vice-amiral d’escadre et équivalent à général d’armée.",
+      "reason": "The author conflates military rank with holding supreme command. Fixed French subdefinition line 35 instead establishes the current French naval rank above vice-amiral d'escadre and equivalent to général d'armée. All meanings select that ordinary rank vocabulary with France explicit; no claim that every holder commands all naval forces remains."
+    },
+    {
+      "frozen_row": 4077,
+      "sense_id": "b162-4077-amiral-nom-selected",
+      "field": "english",
+      "proposed_text": "The supreme commander of a state’s naval forces.",
+      "accepted_text": "In France, the naval rank of admiral, above vice-amiral d’escadre and equivalent to the army rank of général d’armée.",
+      "reason": "The author conflates military rank with holding supreme command. Fixed French subdefinition line 35 instead establishes the current French naval rank above vice-amiral d'escadre and equivalent to général d'armée. All meanings select that ordinary rank vocabulary with France explicit; no claim that every holder commands all naval forces remains."
+    },
+    {
+      "frozen_row": 4077,
+      "sense_id": "b162-4077-amiral-nom-selected",
+      "field": "chinese",
+      "proposed_text": "一个国家海军力量的最高指挥官。",
+      "accepted_text": "在法国，海军上将军衔，高于海军中将（vice-amiral d’escadre），相当于陆军上将（général d’armée）。",
+      "reason": "The author conflates military rank with holding supreme command. Fixed French subdefinition line 35 instead establishes the current French naval rank above vice-amiral d'escadre and equivalent to général d'armée. All meanings select that ordinary rank vocabulary with France explicit; no claim that every holder commands all naval forces remains."
+    }
+  ],
+  "usage": [
+    {
+      "frozen_row": 4061,
+      "proposed_usage": "Masculine noun; the frozen spelling base-ball is explicitly attested as a variant of baseball. The selected sense describes the standard nine-inning game.",
+      "accepted_usage": "Masculine noun; exact base-ball is an attested French variant of baseball. The normal game has nine innings and can continue if tied.",
+      "reason": "The French variant line binds exact base-ball to baseball, with its own nominal IPA. Two teams of nine and four bases are supported; the author's absolute nine-inning ending is corrected because tied games can continue. The explanation keeps nine innings as the normal format rather than a mandatory ending."
+    },
+    {
+      "frozen_row": 4071,
+      "proposed_usage": "Feminine noun for the firework, including the two types specified by the source.",
+      "accepted_usage": "Feminine noun for the self-rising stick-guided firework rocket, selecting the second type in the fixed definition.",
+      "reason": "The self-rising firework in line 16 is a modern ordinary rocket use confirmed by Le Robert. Accepted meanings select the stick-guided powder-filled type; the historical hand-thrown subtype and the author's Chinese ignition-scope mismatch are excluded. Spacecraft, weapon fuse and CFC cartography wording supply no field."
+    },
+    {
+      "frozen_row": 4077,
+      "proposed_usage": "Masculine noun, feminine amirale or amiralesse, for the supreme naval commander specified by the source.",
+      "accepted_usage": "Masculine noun, feminine amirale or amiralesse; the contemporary French naval rank above vice-amiral d’escadre and equivalent to général d’armée.",
+      "reason": "The author conflates military rank with holding supreme command. Fixed French subdefinition line 35 instead establishes the current French naval rank above vice-amiral d'escadre and equivalent to général d'armée. All meanings select that ordinary rank vocabulary with France explicit; no claim that every holder commands all naval forces remains."
+    }
+  ]
+}

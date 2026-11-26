@@ -1,53 +1,35 @@
-# #162 author content shard
+# Issue #162 reviewed content shard
 
-Frozen rows 4051–4087 retain **37 exact word/POS groups** and both original
-frequency strings. [Groups](groups.json) contain 148 sourced FR/IPA/EN/ZH
-proposals: 36 groups have modern everyday candidates; `ais/NOM` retains an
-explicitly old-fashioned wooden-board proposal with unresolved everyday
-eligibility. No exception or replacement is authorized.
+**36 of 37 frozen groups / 144 fields are independently eligible for admission.**
+Rows 4051–4087 retain exact identities, order and both frequency strings.
+The denominator remains 4,087 groups. Row 4057 `ais/NOM` retains four missing
+fields; no annotation or specialist exception is authorized.
 
-[Readable candidates](review-candidates.md), [source excerpts](source-excerpts.json),
+[Groups](groups.json), [field/use decisions](field-review.json),
+[rights](rights.json), [source excerpts](source-excerpts.json),
 [source context](source-context.json), [fixed captures](source-captures.json),
-[sources](sources.json), [field/use review](field-review.json),
-[rights](rights.json), [selected rights](selected-rights.md),
-[notices](NOTICES.md) and [COPYING](COPYING) accompany the handoff.
+[sources](sources.json), [selected rights](selected-rights.md),
+[notices](NOTICES.md) and [COPYING](COPYING) accompany the reviewed content.
+[Readable content](review-candidates.md) shows accepted text;
+[nine replacements](accepted-replacements.json) correct `base-ball`, `fusée`
+and `amiral`. [The independent review](README-independent-review.md) explains
+the editorial decisions and actual source boundaries.
 
-## Review and admission
+[Admission](admission.json) reports 144 independently eligible fields, four
+missing admitted fields and no pending independent quality/rights decisions.
+No field is canonically admitted by this shard. [Reuse](reuse.json) retains
+the unchanged core-159-v1 baseline of 3,927 groups and no reused #162 group.
 
-All separate field quality, use/construction, spelling, original-expression and
-selected-span rights reviews remain pending. [Admission](admission.json)
-retains the 4,087-group denominator, zero accepted/admitted new fields,
-148 missing admitted fields and 148 pending quality/rights fields.
-[Reuse](reuse.json) records the unchanged core-159-v1 baseline: 3,927 admitted
-groups and no already admitted #162 group.
+[Authored snapshots](authored-snapshot.json) preserve all 18 author files
+byte-for-byte at the supplied author head. [Rejected proposals](rejected-proposals.json)
+retain the complete old-board `ais` proposal and four independent decisions.
+[Blockers](content-blockers.json) and [modern corroboration](modern-corroboration.json)
+record the unproved everyday use and two owner-only alternatives.
 
-[Blockers](content-blockers.json) retain `ais/NOM`, row 4057, fixed French
-definition line 19 marked `vieilli`, and its alternative historical,
-bookbinding-specific and rare senses. No modern everyday use has been
-established. `planche` can explain the proposal but cannot replace the group.
-The ticket remains incomplete until its use requirement and independent gates
-are resolved.
-
-## Author verification
-
-The approved resource/admission tests check exact frozen membership and
-frequencies, all four proposed fields, fixed source bytes and spans, French/POS
-frames, written IPA, spelling/construction restrictions, full contributor
-pagination, attribution, legal materials and honest pending review. The existing
-converter rejects the author review as independent acceptance.
-[Author verification](author-verification.json) records commands and results;
-the [independent handoff](README-independent-review.md) identifies the checkout,
-diff base and external execution archive.
-
-The archive at
-`C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-162`
-retains 38 fixed first-party article/API revisions, eight contributor API
-responses, copied legal authorities with original acquisition metadata,
-selected inputs, reproducible author helpers, focused failure/pass logs and
-scoped patches. Author checks establish a reviewable candidate shard; they do
-not establish independent language quality or selected-expression rights.
-
-Canonical conversion, combined packaging and native lookup/save/reopen remain
-coordinator owned and unrun. Frontend/Rust checks are unrun because this shard
-changes neither runtime. Learner acceptance, CEFR and whole-core/platform/release
-gates remain pending.
+Raw author bytes remain at
+`C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-162`.
+Independent investigation, scripts and SHA-bound closeout logs remain at
+`C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-162`.
+[Review verification](review-verification.json) records actual checks.
+Canonical conversion, combined packaging, native integration and learner
+acceptance remain coordinator-owned. Full D2 and release remain open.

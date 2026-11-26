@@ -1,418 +1,548 @@
-# Exact #162 author proposals
+# Issue #162 independently reviewed content
 
-These 37 exact groups and 148 fields are pending separate independent review.
-[groups.json](groups.json) preserves all text; [field-review.json](field-review.json)
-binds each field and use to exact fixed-source spans. The author’s source and
-scope checks are separate from independent language/rights decisions.
+36 groups / 144 fields are eligible; ais/NOM remains blocked. Exact author
+texts and the four rejected fields remain in [rejected proposals](rejected-proposals.json).
 
-| Row | Exact group | French definition | IPA | English | Chinese |
-| --- | --- | --- | --- | --- | --- |
-| 4051 | `environnement/NOM` | Conditions dans lesquelles on évolue et on interagit. | /ɑ̃.vi.ʁɔn.mɑ̃/ | The conditions in which someone develops and interacts. | 人所处并在其中发展、互动的环境条件。 |
-| 4052 | `litre/NOM` | Unité de capacité du système métrique égale à un décimètre cube, utilisée pour mesurer les volumes. | /litʁ/ | Litre: a metric unit of capacity equal to one cubic decimetre, used to measure volumes. | 升：公制容量单位，等于一立方分米，用于计量体积。 |
-| 4053 | `certitude/NOM` | Assurance complète au sujet d’une chose. | /sɛʁ.ti.tyd/ | Complete certainty about something. | 对某事的完全确信；确定无疑。 |
-| 4054 | `israélien/ADJ` | Qui se rapporte au pays d’Israël. | /iz.ʁa.e.ljɛ̃/ | Israeli: relating to the country of Israel. | 以色列的；与以色列这个国家有关的。 |
-| 4055 | `compassion/NOM` | Sentiment par lequel on partage la souffrance d’autrui, parce qu’on la perçoit ou qu’on la connaît. | /kɔ̃.pa.sjɔ̃/ | Compassion: a feeling of sharing another person’s suffering, through perceiving or knowing it. | 同情、怜悯：因感知或了解他人的痛苦而与之共感的情感。 |
-| 4056 | `séparation/NOM` | Action ou fait de s’éloigner de quelqu’un ou d’en être éloigné. | /se.pa.ʁa.sjɔ̃/ | Separation: the act or state of being apart from someone. | 与某人分开的行为或状态；分离。 |
-| 4057 | `ais/NOM` | Terme vieilli désignant une planche de bois. | /ɛ/ | An old-fashioned word for a wooden board or plank. | 旧用词：木板。 |
-| 4058 | `diviser/VER` | Séparer quelque chose en plusieurs parties. | /di.vi.ze/ | To divide something into parts. | 把某物分成若干部分；分割。 |
-| 4059 | `flûte/NOM` | Instrument à vent en forme de tube percé de trous, dont les sons sont produits par l’air soufflé sur un biseau et modifiés par les doigts sur les trous. | /flyt/ | Flute: a wind instrument with a tube and holes, sounded by blowing air across an edge and changing which holes the fingers cover. | 笛：带孔的管状吹奏乐器，气流吹过刃口发声，通过手指开闭孔洞改变音高。 |
-| 4060 | `protester/VER` | Exprimer formellement son opposition à quelque chose, en déclarant qu’on le tient pour nul ou illégal. | /pʁɔ.tɛs.te/ | To protest formally against something, declaring that one considers it invalid or illegal. | 正式对某事表示抗议，声明认为其无效或违法。 |
-| 4061 | `base-ball/NOM` | Sport où deux équipes de neuf joueurs cherchent à marquer en frappant une balle et en parcourant quatre bases ; après neuf manches, l’équipe qui a accompli le plus de tours gagne. | /bɛz.bol/ | Baseball: a sport played by two teams of nine, scoring by hitting a ball and running around four bases; the team with the most runs after nine innings wins. | 棒球：两队各九人，通过击球并跑过四个垒位得分，九局后得分较多的一队获胜。 |
-| 4062 | `décharger/VER` | Retirer la charge d’un véhicule, d’un bateau ou d’un animal de transport. | /de.ʃaʁ.ʒe/ | To unload the cargo or load from a vehicle, boat or transport animal. | 卸下车辆、船只或驮运牲畜所载的货物、负载。 |
-| 4063 | `fréquence/NOM` | Répétition régulière et continuelle d’une action ou d’un fait. | /fʁe.kɑ̃s/ | Regular, continual recurrence of an action or event. | 某种行为或事件持续、规律地重复发生；频繁发生。 |
-| 4064 | `morgue/NOM` | Attitude fière et orgueilleuse ; arrogance. | /mɔʁɡ/ | A haughty, arrogant manner. | 傲慢、自大的态度。 |
-| 4065 | `nièce/NOM` | Fille de son frère ou de sa sœur. | /njɛs/ | Niece: the daughter of one’s brother or sister. | 侄女或外甥女：兄弟或姐妹的女儿。 |
-| 4066 | `patienter/VER` | Attendre avec patience. | /pa.sjɑ̃.te/ | To wait patiently. | 耐心等待。 |
-| 4067 | `pelle/NOM` | Outil à manche muni d’une plaque généralement métallique, servant à déplacer de la terre, du sable ou d’autres matières, ou à remuer des matières pâteuses. | /pɛl/ | Shovel or spade: a handled tool with a usually metal blade for moving earth, sand or other material, or stirring thick mixtures. | 铲、锹：通常带金属铲面的有柄工具，用于搬移土、沙等物料或搅动稠厚混合物。 |
-| 4068 | `revue/NOM` | Publication périodique qui traite de façon développée de sujets variés, politiques, littéraires ou scientifiques, par exemple. | /ʁə.vy/ | A periodical or journal dealing at some length with subjects such as politics, literature or science. | 期刊、杂志：较为深入地讨论政治、文学、科学等主题的定期出版物。 |
-| 4069 | `brisé/ADJ` | Qui est cassé ou rompu. | /bʁi.ze/ | Broken or snapped. | 破碎的；折断的。 |
-| 4070 | `coton/NOM` | Fibre textile végétale formée des fins filaments qui entourent les graines du cotonnier. | /kɔ.tɔ̃/ | Cotton: the plant textile fibre formed by the fine filaments around cotton-plant seeds. | 棉：包围棉籽的细纤维所形成的植物纺织纤维。 |
-| 4071 | `fusée/NOM` | Pièce de feu d’artifice constituée de papier ou de carton rempli de poudre, que l’on lance à la main ou qui monte dans l’air après l’allumage. | /fy.ze/ | A firework made of paper or cardboard filled with explosive powder, either thrown by hand or rising into the air after ignition. | 烟火、焰火火箭：以纸或纸板包裹火药，点燃后可手掷或自行升空。 |
-| 4072 | `stable/ADJ` | Qui reste en place ou dans une situation ferme, sans varier. | /stabl/ | Stable: remaining in place or in a firm state, without changing. | 稳定的：保持原位或稳固状态，不发生变化的。 |
-| 4073 | `débuter/VER` | Commencer ; s’emploie sans complément d’objet direct, éventuellement avec un complément introduit par une préposition. | /de.by.te/ | To begin; used intransitively, optionally with a prepositional complement, rather than a direct object. | 开始；用作不及物动词，可接介词引出的补语，此处不采用直接宾语结构。 |
-| 4074 | `quelconque/ADJ` | Dans l’usage familier, qui est ordinaire, sans caractère particulier ni distinction. | /kɛl.kɔ̃k/ | In familiar usage, ordinary or unremarkable, with no distinctive character. | 通俗用法：普通的、平平无奇的，没有特别之处的。 |
-| 4075 | `serrure/NOM` | Mécanisme permettant d’ouvrir ou de fermer une porte ou un panneau au moyen d’une clé. | /se.ʁyʁ/ | Lock: a mechanism operated with a key to open or close a door or panel. | 锁：以钥匙操作，用于开启或关闭门、面板的机构。 |
-| 4076 | `spécialité/NOM` | Domaine d’études ou de travaux délimité auquel une personne se consacre. | /spe.sja.li.te/ | A speciality: a defined field of study or work to which a person devotes themselves. | 专长、专业领域：一个人专注从事的特定研究或工作领域。 |
-| 4077 | `amiral/NOM` | Chef suprême des forces navales d’un État. | /a.mi.ʁal/ | The supreme commander of a state’s naval forces. | 一个国家海军力量的最高指挥官。 |
-| 4078 | `désigner/VER` | Indiquer une personne ou une chose par des mots ou des marques qui permettent de la reconnaître. | /de.zi.ɲe/ | To indicate a person or thing using words or signs that allow it to be identified. | 通过文字或标记指出某人、某物，使其可以被辨认。 |
-| 4079 | `inquiétude/NOM` | État d’une personne inquiète, qui manque de tranquillité morale. | /ɛ̃.kje.tyd/ | Worry or uneasiness: the state of someone who lacks peace of mind. | 忧虑、不安：心中无法安定的状态。 |
-| 4080 | `académie/NOM` | Lieu d’enseignement avancé. | /a.ka.de.mi/ | An institution providing advanced education or training. | 提供高阶教育或培训的学院、教育机构。 |
-| 4081 | `comique/NOM` | Personne qui aime faire rire. | /kɔ.mik/ | A person who likes to make others laugh. | 喜欢逗人发笑的人。 |
-| 4082 | `caillou/NOM` | Pierre de petite ou de moyenne dimension. | /ka.ju/ | A small or medium-sized stone. | 小块或中等大小的石头。 |
-| 4083 | `tout-puissant/ADJ` | Qui dispose d’un très grand pouvoir. | /tu.pɥi.sɑ̃/ | All-powerful: having very great power. | 权力极大的；非常有势力的。 |
-| 4084 | `paye/NOM` | Salaire ou rémunération d’un travail. | /pɛj/ | Pay or wages: remuneration for work. | 工资、薪酬；工作的报酬。 |
-| 4085 | `artistique/ADJ` | Qui se rapporte à l’art. | /aʁ.tis.tik/ | Artistic: relating to art. | 艺术的；与艺术有关的。 |
-| 4086 | `explorer/VER` | Examiner méthodiquement pour découvrir quelque chose ou quelqu’un. | /ɛk.splɔ.ʁe/ | To examine methodically in order to discover something or someone. | 为了发现某事物或某人而有步骤地探查、考察。 |
-| 4087 | `poignet/NOM` | Articulation qui relie l’avant-bras à la main. | /pwa.ɲɛ/ | Wrist: the joint connecting the forearm to the hand. | 手腕：连接前臂与手的关节。 |
+## Row 4051: `environnement/NOM`
 
-## Selected and excluded uses
+Masculine noun for the surrounding conditions of life or interaction.
 
-### 4051 — environnement/NOM
+Excluded uses: The physical surroundings alone, the natural environment and computing platforms.
 
-Selected: Masculine noun for the surrounding conditions of life or interaction.
+- **french_definition:** Conditions dans lesquelles on évolue et on interagit.
+  Source `b162_fr_2135`, fixed line 21.
+- **ipa:** /ɑ̃.vi.ʁɔn.mɑ̃/
+  Source `b162_fr_2135`, fixed line 8.
+- **english:** The conditions in which someone develops and interacts.
+  Source `b162_fr_2135`, fixed line 21.
+- **chinese:** 人所处并在其中发展、互动的环境条件。
+  Source `b162_fr_2135`, fixed line 21.
 
-Excluded: The physical surroundings alone, the natural environment and computing platforms.
+## Row 4052: `litre/NOM`
 
-Definition: [environnement, revision 39773867](https://fr.wiktionary.org/w/index.php?title=environnement&oldid=39773867), line 21.
+Masculine noun for the everyday unit of capacity.
 
-IPA: [environnement, revision 39773867](https://fr.wiktionary.org/w/index.php?title=environnement&oldid=39773867), line 8.
+Excluded uses: The bottle or its contents, the feminine funeral decoration and forms of litrer.
 
-### 4052 — litre/NOM
+- **french_definition:** Unité de capacité du système métrique égale à un décimètre cube, utilisée pour mesurer les volumes.
+  Source `b162_fr_2269`, fixed line 15.
+- **ipa:** /litʁ/
+  Source `b162_fr_2269`, fixed line 14.
+- **english:** Litre: a metric unit of capacity equal to one cubic decimetre, used to measure volumes.
+  Source `b162_fr_2269`, fixed line 15.
+- **chinese:** 升：公制容量单位，等于一立方分米，用于计量体积。
+  Source `b162_fr_2269`, fixed line 15.
 
-Selected: Masculine noun for the everyday unit of capacity.
+## Row 4053: `certitude/NOM`
 
-Excluded: The bottle or its contents, the feminine funeral decoration and forms of litrer.
+Feminine noun for certainty about something.
 
-Definition: [litre, revision 39958865](https://fr.wiktionary.org/w/index.php?title=litre&oldid=39958865), line 15.
+Excluded uses: Stability or permanence; a separate philosophical account of belief.
 
-IPA: [litre, revision 39958865](https://fr.wiktionary.org/w/index.php?title=litre&oldid=39958865), line 14.
+- **french_definition:** Assurance complète au sujet d’une chose.
+  Source `b162_fr_117955`, fixed line 8.
+- **ipa:** /sɛʁ.ti.tyd/
+  Source `b162_fr_117955`, fixed line 7.
+- **english:** Complete certainty about something.
+  Source `b162_fr_117955`, fixed line 8.
+- **chinese:** 对某事的完全确信；确定无疑。
+  Source `b162_fr_117955`, fixed line 8.
 
-### 4053 — certitude/NOM
+## Row 4054: `israélien/ADJ`
 
-Selected: Feminine noun for certainty about something.
+Masculine singular adjective, feminine israélienne, relating to Israel.
 
-Excluded: Stability or permanence; a separate philosophical account of belief.
+Excluded uses: A noun naming a person; religious identity inferred from nationality.
 
-Definition: [certitude, revision 40013909](https://fr.wiktionary.org/w/index.php?title=certitude&oldid=40013909), line 8.
+- **french_definition:** Qui se rapporte au pays d’Israël.
+  Source `b162_fr_268085`, fixed line 10.
+- **ipa:** /iz.ʁa.e.ljɛ̃/
+  Source `b162_fr_268085`, fixed line 9.
+- **english:** Israeli: relating to the country of Israel.
+  Source `b162_fr_268085`, fixed line 10.
+- **chinese:** 以色列的；与以色列这个国家有关的。
+  Source `b162_fr_268085`, fixed line 10.
 
-IPA: [certitude, revision 40013909](https://fr.wiktionary.org/w/index.php?title=certitude&oldid=40013909), line 7.
+## Row 4055: `compassion/NOM`
 
-### 4054 — israélien/ADJ
+Feminine noun for sharing another person’s suffering.
 
-Selected: Masculine singular adjective, feminine israélienne, relating to Israel.
+Excluded uses: An unrelated emotion or a claim that compassion necessarily involves action.
 
-Excluded: A noun naming a person; religious identity inferred from nationality.
+- **french_definition:** Sentiment par lequel on partage la souffrance d’autrui, parce qu’on la perçoit ou qu’on la connaît.
+  Source `b162_fr_118963`, fixed line 8.
+- **ipa:** /kɔ̃.pa.sjɔ̃/
+  Source `b162_fr_118963`, fixed line 7.
+- **english:** Compassion: a feeling of sharing another person’s suffering, through perceiving or knowing it.
+  Source `b162_fr_118963`, fixed line 8.
+- **chinese:** 同情、怜悯：因感知或了解他人的痛苦而与之共感的情感。
+  Source `b162_fr_118963`, fixed line 8.
 
-Definition: [israélien, revision 39364240](https://fr.wiktionary.org/w/index.php?title=isra%C3%A9lien&oldid=39364240), line 10.
+## Row 4056: `séparation/NOM`
 
-IPA: [israélien, revision 39364240](https://fr.wiktionary.org/w/index.php?title=isra%C3%A9lien&oldid=39364240), line 9.
+Feminine noun for separation from a person; this does not by itself specify a divorce.
 
-### 4055 — compassion/NOM
+Excluded uses: A partition, boundary, topological operation, state/church separation or religious ritual.
 
-Selected: Feminine noun for sharing another person’s suffering.
+- **french_definition:** Action ou fait de s’éloigner de quelqu’un ou d’en être éloigné.
+  Source `b162_fr_176328`, fixed line 29.
+- **ipa:** /se.pa.ʁa.sjɔ̃/
+  Source `b162_fr_176328`, fixed line 8.
+- **english:** Separation: the act or state of being apart from someone.
+  Source `b162_fr_176328`, fixed line 29.
+- **chinese:** 与某人分开的行为或状态；分离。
+  Source `b162_fr_176328`, fixed line 29.
 
-Excluded: An unrelated emotion or a claim that compassion necessarily involves action.
+## Row 4057: `ais/NOM`
 
-Definition: [compassion, revision 39718001](https://fr.wiktionary.org/w/index.php?title=compassion&oldid=39718001), line 8.
+Four fields missing; no owner exception authorized. See [blockers](content-blockers.json).
 
-IPA: [compassion, revision 39718001](https://fr.wiktionary.org/w/index.php?title=compassion&oldid=39718001), line 7.
+## Row 4058: `diviser/VER`
 
-### 4056 — séparation/NOM
+Transitive verb, diviser quelque chose, for splitting it into parts.
 
-Selected: Feminine noun for separation from a person; this does not by itself specify a divorce.
+Excluded uses: Mathematical division requiring equal parts, division of opinions and typographic hyphenation.
 
-Excluded: A partition, boundary, topological operation, state/church separation or religious ritual.
+- **french_definition:** Séparer quelque chose en plusieurs parties.
+  Source `b162_fr_2271`, fixed line 8.
+- **ipa:** /di.vi.ze/
+  Source `b162_fr_2271`, fixed line 7.
+- **english:** To divide something into parts.
+  Source `b162_fr_2271`, fixed line 8.
+- **chinese:** 把某物分成若干部分；分割。
+  Source `b162_fr_2271`, fixed line 8.
 
-Definition: [séparation, revision 40032001](https://fr.wiktionary.org/w/index.php?title=s%C3%A9paration&oldid=40032001), line 29.
+## Row 4059: `flûte/NOM`
 
-IPA: [séparation, revision 40032001](https://fr.wiktionary.org/w/index.php?title=s%C3%A9paration&oldid=40032001), line 8.
+Feminine noun for the wind instrument; no restriction to a particular flute type.
 
-### 4057 — ais/NOM
+Excluded uses: The interjection, champagne glass, bread, player, organ stop and other figurative or technical nouns.
 
-Selected: Masculine invariant noun; the proposed wooden-board use is explicitly old-fashioned and is not an eligible everyday sense.
+- **french_definition:** Instrument à vent en forme de tube percé de trous, dont les sons sont produits par l’air soufflé sur un biseau et modifiés par les doigts sur les trous.
+  Source `b162_fr_23677`, fixed line 12.
+- **ipa:** /flyt/
+  Source `b162_fr_23677`, fixed line 11.
+- **english:** Flute: a wind instrument with a tube and holes, sounded by blowing air across an edge and changing which holes the fingers cover.
+  Source `b162_fr_23677`, fixed line 12.
+- **chinese:** 笛：带孔的管状吹奏乐器，气流吹过刃口发声，通过手指开闭孔洞改变音高。
+  Source `b162_fr_23677`, fixed line 12.
 
-Excluded: Bookbinding-only senses, rare material-general extensions and the international language code.
+## Row 4060: `protester/VER`
 
-Definition: [ais, revision 39798131](https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131), line 19.
+Intransitive verb, protester contre quelque chose; the selected formal-objection use retains the source’s invalidity or illegality condition.
 
-IPA: [ais, revision 39798131](https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131), line 18.
+Excluded uses: The transitive solemn assurance, a commercial bill protest and a metaphorical contradiction.
 
-### 4058 — diviser/VER
+- **french_definition:** Exprimer formellement son opposition à quelque chose, en déclarant qu’on le tient pour nul ou illégal.
+  Source `b162_fr_172973`, fixed line 34.
+- **ipa:** /pʁɔ.tɛs.te/
+  Source `b162_fr_172973`, fixed line 6.
+- **english:** To protest formally against something, declaring that one considers it invalid or illegal.
+  Source `b162_fr_172973`, fixed line 34.
+- **chinese:** 正式对某事表示抗议，声明认为其无效或违法。
+  Source `b162_fr_172973`, fixed line 34.
 
-Selected: Transitive verb, diviser quelque chose, for splitting it into parts.
+## Row 4061: `base-ball/NOM`
 
-Excluded: Mathematical division requiring equal parts, division of opinions and typographic hyphenation.
+Masculine noun; exact base-ball is an attested French variant of baseball. The normal game has nine innings and can continue if tied.
 
-Definition: [diviser, revision 39825616](https://fr.wiktionary.org/w/index.php?title=diviser&oldid=39825616), line 8.
+Excluded uses: No replacement of the frozen spelling, imported English entry or separately admitted lookup alias.
 
-IPA: [diviser, revision 39825616](https://fr.wiktionary.org/w/index.php?title=diviser&oldid=39825616), line 7.
+- **french_definition:** Sport où deux équipes de neuf joueurs cherchent à marquer en frappant une balle et en parcourant quatre bases ; le match comporte normalement neuf manches, avec prolongation en cas d’égalité.
+  Source `b162_fr_76537`, fixed line 12.
+- **ipa:** /bɛz.bol/
+  Source `b162_fr_185925`, fixed line 9.
+- **english:** Baseball: a sport played by two teams of nine, scoring by hitting a ball and running around four bases; normally played over nine innings, with extra innings if tied.
+  Source `b162_fr_76537`, fixed line 12.
+- **chinese:** 棒球：两队各九人，通过击球并跑过四个垒位得分；比赛通常进行九局，平局时延长比赛。
+  Source `b162_fr_76537`, fixed line 12.
 
-### 4059 — flûte/NOM
+## Row 4062: `décharger/VER`
 
-Selected: Feminine noun for the wind instrument; no restriction to a particular flute type.
+Transitive verb, décharger un véhicule or sa charge, for unloading.
 
-Excluded: The interjection, champagne glass, bread, player, organ stop and other figurative or technical nouns.
+Excluded uses: Pronominal delegation or discharge, a firearm, ejaculation and obsolete medical or printing uses.
 
-Definition: [flûte, revision 39463772](https://fr.wiktionary.org/w/index.php?title=fl%C3%BBte&oldid=39463772), line 12.
+- **french_definition:** Retirer la charge d’un véhicule, d’un bateau ou d’un animal de transport.
+  Source `b162_fr_156644`, fixed line 7.
+- **ipa:** /de.ʃaʁ.ʒe/
+  Source `b162_fr_156644`, fixed line 6.
+- **english:** To unload the cargo or load from a vehicle, boat or transport animal.
+  Source `b162_fr_156644`, fixed line 7.
+- **chinese:** 卸下车辆、船只或驮运牲畜所载的货物、负载。
+  Source `b162_fr_156644`, fixed line 7.
 
-IPA: [flûte, revision 39463772](https://fr.wiktionary.org/w/index.php?title=fl%C3%BBte&oldid=39463772), line 11.
+## Row 4063: `fréquence/NOM`
 
-### 4060 — protester/VER
+Feminine noun for repeated occurrence.
 
-Selected: Intransitive verb, protester contre quelque chose; the selected formal-objection use retains the source’s invalidity or illegality condition.
+Excluded uses: Statistical probability, heart or breathing rate, measured physical frequency and radio bands.
 
-Excluded: The transitive solemn assurance, a commercial bill protest and a metaphorical contradiction.
+- **french_definition:** Répétition régulière et continuelle d’une action ou d’un fait.
+  Source `b162_fr_2403`, fixed line 9.
+- **ipa:** /fʁe.kɑ̃s/
+  Source `b162_fr_2403`, fixed line 8.
+- **english:** Regular, continual recurrence of an action or event.
+  Source `b162_fr_2403`, fixed line 9.
+- **chinese:** 某种行为或事件持续、规律地重复发生；频繁发生。
+  Source `b162_fr_2403`, fixed line 9.
 
-Definition: [protester, revision 40001742](https://fr.wiktionary.org/w/index.php?title=protester&oldid=40001742), line 34.
+## Row 4064: `morgue/NOM`
 
-IPA: [protester, revision 40001742](https://fr.wiktionary.org/w/index.php?title=protester&oldid=40001742), line 6.
+Feminine noun for an arrogant manner.
 
-### 4061 — base-ball/NOM
+Excluded uses: The separate place where bodies are kept for identification; forms of morguer.
 
-Selected: Masculine noun; the frozen spelling base-ball is explicitly attested as a variant of baseball. The selected sense describes the standard nine-inning game.
+- **french_definition:** Attitude fière et orgueilleuse ; arrogance.
+  Source `b162_fr_168446`, fixed line 11.
+- **ipa:** /mɔʁɡ/
+  Source `b162_fr_168446`, fixed line 10.
+- **english:** A haughty, arrogant manner.
+  Source `b162_fr_168446`, fixed line 11.
+- **chinese:** 傲慢、自大的态度。
+  Source `b162_fr_168446`, fixed line 11.
 
-Excluded: No replacement of the frozen spelling, imported English entry or separately admitted lookup alias.
+## Row 4065: `nièce/NOM`
 
-Definition: [baseball, revision 39760220](https://fr.wiktionary.org/w/index.php?title=baseball&oldid=39760220), line 12.
+Feminine noun for a brother’s or sister’s daughter.
 
-IPA: [base-ball, revision 40046605](https://fr.wiktionary.org/w/index.php?title=base-ball&oldid=40046605), line 9.
+Excluded uses: Daughters of cousins and extended relationships by marriage.
 
-### 4062 — décharger/VER
+- **french_definition:** Fille de son frère ou de sa sœur.
+  Source `b162_fr_147363`, fixed line 10.
+- **ipa:** /njɛs/
+  Source `b162_fr_147363`, fixed line 9.
+- **english:** Niece: the daughter of one’s brother or sister.
+  Source `b162_fr_147363`, fixed line 10.
+- **chinese:** 侄女或外甥女：兄弟或姐妹的女儿。
+  Source `b162_fr_147363`, fixed line 10.
 
-Selected: Transitive verb, décharger un véhicule or sa charge, for unloading.
+## Row 4066: `patienter/VER`
 
-Excluded: Pronominal delegation or discharge, a firearm, ejaculation and obsolete medical or printing uses.
+Intransitive verb, patienter, for waiting patiently.
 
-Definition: [décharger, revision 39723982](https://fr.wiktionary.org/w/index.php?title=d%C3%A9charger&oldid=39723982), line 7.
+Excluded uses: A transitive construction or a meaning of treating a patient.
 
-IPA: [décharger, revision 39723982](https://fr.wiktionary.org/w/index.php?title=d%C3%A9charger&oldid=39723982), line 6.
+- **french_definition:** Attendre avec patience.
+  Source `b162_fr_170585`, fixed line 7.
+- **ipa:** /pa.sjɑ̃.te/
+  Source `b162_fr_170585`, fixed line 6.
+- **english:** To wait patiently.
+  Source `b162_fr_170585`, fixed line 7.
+- **chinese:** 耐心等待。
+  Source `b162_fr_170585`, fixed line 7.
 
-### 4063 — fréquence/NOM
+## Row 4067: `pelle/NOM`
 
-Selected: Feminine noun for repeated occurrence.
+Feminine noun for the material-moving hand tool.
 
-Excluded: Statistical probability, heart or breathing rate, measured physical frequency and radio bands.
+Excluded uses: Dustpan, excavator, kiss, fall, tooth, oar blade or forms of peller.
 
-Definition: [fréquence, revision 39717672](https://fr.wiktionary.org/w/index.php?title=fr%C3%A9quence&oldid=39717672), line 9.
+- **french_definition:** Outil à manche muni d’une plaque généralement métallique, servant à déplacer de la terre, du sable ou d’autres matières, ou à remuer des matières pâteuses.
+  Source `b162_fr_8591`, fixed line 11.
+- **ipa:** /pɛl/
+  Source `b162_fr_8591`, fixed line 10.
+- **english:** Shovel or spade: a handled tool with a usually metal blade for moving earth, sand or other material, or stirring thick mixtures.
+  Source `b162_fr_8591`, fixed line 11.
+- **chinese:** 铲、锹：通常带金属铲面的有柄工具，用于搬移土、沙等物料或搅动稠厚混合物。
+  Source `b162_fr_8591`, fixed line 11.
 
-IPA: [fréquence, revision 39717672](https://fr.wiktionary.org/w/index.php?title=fr%C3%A9quence&oldid=39717672), line 8.
+## Row 4068: `revue/NOM`
 
-### 4064 — morgue/NOM
+Feminine noun for a periodical publication.
 
-Selected: Feminine noun for an arrogant manner.
+Excluded uses: Inspection, military review, theatrical revue and feminine forms of revu or revoir.
 
-Excluded: The separate place where bodies are kept for identification; forms of morguer.
+- **french_definition:** Publication périodique qui traite de façon développée de sujets variés, politiques, littéraires ou scientifiques, par exemple.
+  Source `b162_fr_27204`, fixed line 28.
+- **ipa:** /ʁə.vy/
+  Source `b162_fr_27204`, fixed line 10.
+- **english:** A periodical or journal dealing at some length with subjects such as politics, literature or science.
+  Source `b162_fr_27204`, fixed line 28.
+- **chinese:** 期刊、杂志：较为深入地讨论政治、文学、科学等主题的定期出版物。
+  Source `b162_fr_27204`, fixed line 28.
 
-Definition: [morgue, revision 39521142](https://fr.wiktionary.org/w/index.php?title=morgue&oldid=39521142), line 11.
+## Row 4069: `brisé/ADJ`
 
-IPA: [morgue, revision 39521142](https://fr.wiktionary.org/w/index.php?title=morgue&oldid=39521142), line 10.
+Masculine singular adjective, feminine brisée, describing a broken object.
 
-### 4065 — nièce/NOM
+Excluded uses: A verb-form-only reading, extreme tiredness, geometry, architecture, bookbinding and heraldry.
 
-Selected: Feminine noun for a brother’s or sister’s daughter.
+- **french_definition:** Qui est cassé ou rompu.
+  Source `b162_fr_150382`, fixed line 14.
+- **ipa:** /bʁi.ze/
+  Source `b162_fr_150382`, fixed line 7.
+- **english:** Broken or snapped.
+  Source `b162_fr_150382`, fixed line 14.
+- **chinese:** 破碎的；折断的。
+  Source `b162_fr_150382`, fixed line 14.
 
-Excluded: Daughters of cousins and extended relationships by marriage.
+## Row 4070: `coton/NOM`
 
-Definition: [nièce, revision 39773756](https://fr.wiktionary.org/w/index.php?title=ni%C3%A8ce&oldid=39773756), line 10.
+Masculine noun for the textile fibre.
 
-IPA: [nièce, revision 39773756](https://fr.wiktionary.org/w/index.php?title=ni%C3%A8ce&oldid=39773756), line 9.
+Excluded uses: A sweater, dog breed, hard plant stem, fog or down on other plants or a face.
 
-### 4066 — patienter/VER
+- **french_definition:** Fibre textile végétale formée des fins filaments qui entourent les graines du cotonnier.
+  Source `b162_fr_23705`, fixed line 10.
+- **ipa:** /kɔ.tɔ̃/
+  Source `b162_fr_23705`, fixed line 9.
+- **english:** Cotton: the plant textile fibre formed by the fine filaments around cotton-plant seeds.
+  Source `b162_fr_23705`, fixed line 10.
+- **chinese:** 棉：包围棉籽的细纤维所形成的植物纺织纤维。
+  Source `b162_fr_23705`, fixed line 10.
 
-Selected: Intransitive verb, patienter, for waiting patiently.
+## Row 4071: `fusée/NOM`
 
-Excluded: A transitive construction or a meaning of treating a patient.
+Feminine noun for the self-rising stick-guided firework rocket, selecting the second type in the fixed definition.
 
-Definition: [patienter, revision 39010974](https://fr.wiktionary.org/w/index.php?title=patienter&oldid=39010974), line 7.
+Excluded uses: The historical hand-thrown firework type; spacecraft, shell fuses, sword grips, figurative outbursts, heraldry, cartography, machinery and other technical senses.
 
-IPA: [patienter, revision 39010974](https://fr.wiktionary.org/w/index.php?title=patienter&oldid=39010974), line 6.
+- **french_definition:** Pièce de feu d’artifice faite de papier ou de carton, remplie de poudre à canon et attachée à une baguette, qui s’élève d’elle-même dans l’air après allumage.
+  Source `b162_fr_34452`, fixed line 16.
+- **ipa:** /fy.ze/
+  Source `b162_fr_34452`, fixed line 11.
+- **english:** A firework rocket made of paper or cardboard, filled with gunpowder and attached to a stick, which rises into the air after ignition.
+  Source `b162_fr_34452`, fixed line 16.
+- **chinese:** 焰火火箭：以纸或纸板制成，内装火药并连着导向杆，点燃后自行升空。
+  Source `b162_fr_34452`, fixed line 16.
 
-### 4067 — pelle/NOM
+## Row 4072: `stable/ADJ`
 
-Selected: Feminine noun for the material-moving hand tool.
+Adjective with the same masculine and feminine singular spelling.
 
-Excluded: Dustpan, excavator, kiss, fall, tooth, oar blade or forms of peller.
+Excluded uses: The graph-theory noun, technical mathematics, tested software releases or forestry terminology.
 
-Definition: [pelle, revision 39931964](https://fr.wiktionary.org/w/index.php?title=pelle&oldid=39931964), line 11.
+- **french_definition:** Qui reste en place ou dans une situation ferme, sans varier.
+  Source `b162_fr_121550`, fixed line 8.
+- **ipa:** /stabl/
+  Source `b162_fr_121550`, fixed line 7.
+- **english:** Stable: remaining in place or in a firm state, without changing.
+  Source `b162_fr_121550`, fixed line 8.
+- **chinese:** 稳定的：保持原位或稳固状态，不发生变化的。
+  Source `b162_fr_121550`, fixed line 8.
 
-IPA: [pelle, revision 39931964](https://fr.wiktionary.org/w/index.php?title=pelle&oldid=39931964), line 10.
+## Row 4073: `débuter/VER`
 
-### 4068 — revue/NOM
+Intransitive or indirect-transitive verb: débuter, débuter par or dans; the retained grammar explicitly excludes a direct object.
 
-Selected: Feminine noun for a periodical publication.
+Excluded uses: Direct-transitive débuter quelque chose, a separate career-debut sense and the obsolete boules-game use.
 
-Excluded: Inspection, military review, theatrical revue and feminine forms of revu or revoir.
+- **french_definition:** Commencer ; s’emploie sans complément d’objet direct, éventuellement avec un complément introduit par une préposition.
+  Source `b162_fr_156579`, fixed line 9.
+- **ipa:** /de.by.te/
+  Source `b162_fr_156579`, fixed line 8.
+- **english:** To begin; used intransitively, optionally with a prepositional complement, rather than a direct object.
+  Source `b162_fr_156579`, fixed line 9.
+- **chinese:** 开始；用作不及物动词，可接介词引出的补语，此处不采用直接宾语结构。
+  Source `b162_fr_156579`, fixed line 9.
 
-Definition: [revue, revision 39807518](https://fr.wiktionary.org/w/index.php?title=revue&oldid=39807518), line 28.
+## Row 4074: `quelconque/ADJ`
 
-IPA: [revue, revision 39807518](https://fr.wiktionary.org/w/index.php?title=revue&oldid=39807518), line 10.
+Adjective, masculine/feminine quelconque, plural quelconques, for the familiar unremarkable quality.
 
-### 4069 — brisé/ADJ
+Excluded uses: Indefinite any/whatever, technical arbitrariness and the rare noun for an ordinary person.
 
-Selected: Masculine singular adjective, feminine brisée, describing a broken object.
+- **french_definition:** Dans l’usage familier, qui est ordinaire, sans caractère particulier ni distinction.
+  Source `b162_fr_173468`, fixed line 25.
+- **ipa:** /kɛl.kɔ̃k/
+  Source `b162_fr_173468`, fixed line 7.
+- **english:** In familiar usage, ordinary or unremarkable, with no distinctive character.
+  Source `b162_fr_173468`, fixed line 25.
+- **chinese:** 通俗用法：普通的、平平无奇的，没有特别之处的。
+  Source `b162_fr_173468`, fixed line 25.
 
-Excluded: A verb-form-only reading, extreme tiredness, geometry, architecture, bookbinding and heraldry.
+## Row 4075: `serrure/NOM`
 
-Definition: [brisé, revision 39720459](https://fr.wiktionary.org/w/index.php?title=bris%C3%A9&oldid=39720459), line 14.
+Feminine noun for the everyday key-operated lock.
 
-IPA: [brisé, revision 39720459](https://fr.wiktionary.org/w/index.php?title=bris%C3%A9&oldid=39720459), line 7.
+Excluded uses: The specifically named railway safety interlock.
 
-### 4070 — coton/NOM
+- **french_definition:** Mécanisme permettant d’ouvrir ou de fermer une porte ou un panneau au moyen d’une clé.
+  Source `b162_fr_7879`, fixed line 10.
+- **ipa:** /se.ʁyʁ/
+  Source `b162_fr_7879`, fixed line 9.
+- **english:** Lock: a mechanism operated with a key to open or close a door or panel.
+  Source `b162_fr_7879`, fixed line 10.
+- **chinese:** 锁：以钥匙操作，用于开启或关闭门、面板的机构。
+  Source `b162_fr_7879`, fixed line 10.
 
-Selected: Masculine noun for the textile fibre.
+## Row 4076: `spécialité/NOM`
 
-Excluded: A sweater, dog breed, hard plant stem, fog or down on other plants or a face.
+Feminine noun for a person’s field of study or work.
 
-Definition: [coton, revision 39887758](https://fr.wiktionary.org/w/index.php?title=coton&oldid=39887758), line 10.
+Excluded uses: A regional dish or product, a branded medicine, mortgage law and earmarked funds.
 
-IPA: [coton, revision 39887758](https://fr.wiktionary.org/w/index.php?title=coton&oldid=39887758), line 9.
+- **french_definition:** Domaine d’études ou de travaux délimité auquel une personne se consacre.
+  Source `b162_fr_177052`, fixed line 13.
+- **ipa:** /spe.sja.li.te/
+  Source `b162_fr_177052`, fixed line 7.
+- **english:** A speciality: a defined field of study or work to which a person devotes themselves.
+  Source `b162_fr_177052`, fixed line 13.
+- **chinese:** 专长、专业领域：一个人专注从事的特定研究或工作领域。
+  Source `b162_fr_177052`, fixed line 13.
 
-### 4071 — fusée/NOM
+## Row 4077: `amiral/NOM`
 
-Selected: Feminine noun for the firework, including the two types specified by the source.
+Masculine noun, feminine amirale or amiralesse; the contemporary French naval rank above vice-amiral d’escadre and equivalent to général d’armée.
 
-Excluded: Spacecraft propulsion, shell fuse, cartographic correction marks, machinery, figurative outbursts and forms of fuser or fusé.
+Excluded uses: Supreme command as an office; the separate Canadian rank specification, obsolete generic fleet commander, adjective, old ship/knife nouns and animal names.
 
-Definition: [fusée, revision 40007397](https://fr.wiktionary.org/w/index.php?title=fus%C3%A9e&oldid=40007397), line 16.
+- **french_definition:** En France, grade d’officier général de la marine, au-dessus de vice-amiral d’escadre et équivalent à général d’armée.
+  Source `b162_fr_67289`, fixed line 35.
+- **ipa:** /a.mi.ʁal/
+  Source `b162_fr_67289`, fixed line 26.
+- **english:** In France, the naval rank of admiral, above vice-amiral d’escadre and equivalent to the army rank of général d’armée.
+  Source `b162_fr_67289`, fixed line 35.
+- **chinese:** 在法国，海军上将军衔，高于海军中将（vice-amiral d’escadre），相当于陆军上将（général d’armée）。
+  Source `b162_fr_67289`, fixed line 35.
 
-IPA: [fusée, revision 40007397](https://fr.wiktionary.org/w/index.php?title=fus%C3%A9e&oldid=40007397), line 11.
+## Row 4078: `désigner/VER`
 
-### 4072 — stable/ADJ
+Transitive verb, désigner une personne or une chose, for identification by words or marks.
 
-Selected: Adjective with the same masculine and feminine singular spelling.
+Excluded uses: Appointment to an office, determining a choice and symbolising something.
 
-Excluded: The graph-theory noun, technical mathematics, tested software releases or forestry terminology.
+- **french_definition:** Indiquer une personne ou une chose par des mots ou des marques qui permettent de la reconnaître.
+  Source `b162_fr_10682`, fixed line 9.
+- **ipa:** /de.zi.ɲe/
+  Source `b162_fr_10682`, fixed line 8.
+- **english:** To indicate a person or thing using words or signs that allow it to be identified.
+  Source `b162_fr_10682`, fixed line 9.
+- **chinese:** 通过文字或标记指出某人、某物，使其可以被辨认。
+  Source `b162_fr_10682`, fixed line 9.
 
-Definition: [stable, revision 39973650](https://fr.wiktionary.org/w/index.php?title=stable&oldid=39973650), line 8.
+## Row 4079: `inquiétude/NOM`
 
-IPA: [stable, revision 39973650](https://fr.wiktionary.org/w/index.php?title=stable&oldid=39973650), line 7.
+Feminine noun for lack of peace of mind.
 
-### 4073 — débuter/VER
+Excluded uses: Changeable temperament, obsolete physical restlessness, clinical pathology and the regional rocking-chair noun.
 
-Selected: Intransitive or indirect-transitive verb: débuter, débuter par or dans; the retained grammar explicitly excludes a direct object.
+- **french_definition:** État d’une personne inquiète, qui manque de tranquillité morale.
+  Source `b162_fr_165169`, fixed line 9.
+- **ipa:** /ɛ̃.kje.tyd/
+  Source `b162_fr_165169`, fixed line 8.
+- **english:** Worry or uneasiness: the state of someone who lacks peace of mind.
+  Source `b162_fr_165169`, fixed line 9.
+- **chinese:** 忧虑、不安：心中无法安定的状态。
+  Source `b162_fr_165169`, fixed line 9.
 
-Excluded: Direct-transitive débuter quelque chose, a separate career-debut sense and the obsolete boules-game use.
+## Row 4080: `académie/NOM`
 
-Definition: [débuter, revision 39720076](https://fr.wiktionary.org/w/index.php?title=d%C3%A9buter&oldid=39720076), line 9.
+Feminine noun for a place of advanced education.
 
-IPA: [débuter, revision 39720076](https://fr.wiktionary.org/w/index.php?title=d%C3%A9buter&oldid=39720076), line 8.
+Excluded uses: A scholarly society, a French education district, a nude art study, a gaming house and historical Protestant institutions.
 
-### 4074 — quelconque/ADJ
+- **french_definition:** Lieu d’enseignement avancé.
+  Source `b162_fr_26268`, fixed line 18.
+- **ipa:** /a.ka.de.mi/
+  Source `b162_fr_26268`, fixed line 9.
+- **english:** An institution providing advanced education or training.
+  Source `b162_fr_26268`, fixed line 18.
+- **chinese:** 提供高阶教育或培训的学院、教育机构。
+  Source `b162_fr_26268`, fixed line 18.
 
-Selected: Adjective, masculine/feminine quelconque, plural quelconques, for the familiar unremarkable quality.
+## Row 4081: `comique/NOM`
 
-Excluded: Indefinite any/whatever, technical arbitrariness and the rare noun for an ordinary person.
+Masculine or feminine noun for a person who likes making others laugh.
 
-Definition: [quelconque, revision 39844961](https://fr.wiktionary.org/w/index.php?title=quelconque&oldid=39844961), line 25.
+Excluded uses: The adjective funny, the separate theatrical performer or obsolete professional-humour use, and comedy as a genre.
 
-IPA: [quelconque, revision 39844961](https://fr.wiktionary.org/w/index.php?title=quelconque&oldid=39844961), line 7.
+- **french_definition:** Personne qui aime faire rire.
+  Source `b162_fr_154691`, fixed line 106.
+- **ipa:** /kɔ.mik/
+  Source `b162_fr_154691`, fixed line 94.
+- **english:** A person who likes to make others laugh.
+  Source `b162_fr_154691`, fixed line 106.
+- **chinese:** 喜欢逗人发笑的人。
+  Source `b162_fr_154691`, fixed line 106.
 
-### 4075 — serrure/NOM
+## Row 4082: `caillou/NOM`
 
-Selected: Feminine noun for the everyday key-operated lock.
+Masculine noun, plural cailloux, for a stone.
 
-Excluded: The specifically named railway safety interlock.
+Excluded uses: Gemstones, reefs, a head, ice, sugar, an oyster, a camera lens, a geographical nickname or regional pig.
 
-Definition: [serrure, revision 39954458](https://fr.wiktionary.org/w/index.php?title=serrure&oldid=39954458), line 10.
+- **french_definition:** Pierre de petite ou de moyenne dimension.
+  Source `b162_fr_355354`, fixed line 12.
+- **ipa:** /ka.ju/
+  Source `b162_fr_355354`, fixed line 10.
+- **english:** A small or medium-sized stone.
+  Source `b162_fr_355354`, fixed line 12.
+- **chinese:** 小块或中等大小的石头。
+  Source `b162_fr_355354`, fixed line 12.
 
-IPA: [serrure, revision 39954458](https://fr.wiktionary.org/w/index.php?title=serrure&oldid=39954458), line 9.
+## Row 4083: `tout-puissant/ADJ`
 
-### 4076 — spécialité/NOM
+Masculine singular compound adjective, feminine toute-puissante; selected general great-power use.
 
-Selected: Feminine noun for a person’s field of study or work.
+Excluded uses: The separately stated religious sense of absolute, unlimited power or a capitalised divine name.
 
-Excluded: A regional dish or product, a branded medicine, mortgage law and earmarked funds.
+- **french_definition:** Qui dispose d’un très grand pouvoir.
+  Source `b162_fr_178697`, fixed line 10.
+- **ipa:** /tu.pɥi.sɑ̃/
+  Source `b162_fr_178697`, fixed line 9.
+- **english:** All-powerful: having very great power.
+  Source `b162_fr_178697`, fixed line 10.
+- **chinese:** 权力极大的；非常有势力的。
+  Source `b162_fr_178697`, fixed line 10.
 
-Definition: [spécialité, revision 39554254](https://fr.wiktionary.org/w/index.php?title=sp%C3%A9cialit%C3%A9&oldid=39554254), line 13.
+## Row 4084: `paye/NOM`
 
-IPA: [spécialité, revision 39554254](https://fr.wiktionary.org/w/index.php?title=sp%C3%A9cialit%C3%A9&oldid=39554254), line 7.
+Feminine noun for remuneration; exact frozen spelling paye and its recorded /pɛj/ variant are retained.
 
-### 4077 — amiral/NOM
+Excluded uses: Forms of payer, the act of paying, a debtor, an obsolete payer and a familiar long-period sense.
 
-Selected: Masculine noun, feminine amirale or amiralesse, for the supreme naval commander specified by the source.
+- **french_definition:** Salaire ou rémunération d’un travail.
+  Source `b162_fr_170648`, fixed line 10.
+- **ipa:** /pɛj/
+  Source `b162_fr_170648`, fixed line 9.
+- **english:** Pay or wages: remuneration for work.
+  Source `b162_fr_170648`, fixed line 10.
+- **chinese:** 工资、薪酬；工作的报酬。
+  Source `b162_fr_170648`, fixed line 10.
 
-Excluded: An unrestricted equivalence to every admiral rank, the separate Canadian rank, obsolete officer/flagship senses, animals and the adjective.
+## Row 4085: `artistique/ADJ`
 
-Definition: [amiral, revision 39879243](https://fr.wiktionary.org/w/index.php?title=amiral&oldid=39879243), line 27.
+Adjective with the same masculine and feminine singular form.
 
-IPA: [amiral, revision 39879243](https://fr.wiktionary.org/w/index.php?title=amiral&oldid=39879243), line 26.
+Excluded uses: No inference of artistic talent, merit or a specific art form.
 
-### 4078 — désigner/VER
+- **french_definition:** Qui se rapporte à l’art.
+  Source `b162_fr_9200`, fixed line 8.
+- **ipa:** /aʁ.tis.tik/
+  Source `b162_fr_9200`, fixed line 7.
+- **english:** Artistic: relating to art.
+  Source `b162_fr_9200`, fixed line 8.
+- **chinese:** 艺术的；与艺术有关的。
+  Source `b162_fr_9200`, fixed line 8.
 
-Selected: Transitive verb, désigner une personne or une chose, for identification by words or marks.
+## Row 4086: `explorer/VER`
 
-Excluded: Appointment to an office, determining a choice and symbolising something.
+Transitive verb, explorer quelque chose, for methodical investigation. IPA is the written French pronunciation notation; the linked recording is not copied.
 
-Definition: [désigner, revision 39718786](https://fr.wiktionary.org/w/index.php?title=d%C3%A9signer&oldid=39718786), line 9.
+Excluded uses: A separate unfamiliar-region exploration sense and specifically surgical internal examination.
 
-IPA: [désigner, revision 39718786](https://fr.wiktionary.org/w/index.php?title=d%C3%A9signer&oldid=39718786), line 8.
+- **french_definition:** Examiner méthodiquement pour découvrir quelque chose ou quelqu’un.
+  Source `b162_fr_11370`, fixed line 12.
+- **ipa:** /ɛk.splɔ.ʁe/
+  Source `b162_fr_11370`, fixed line 69.
+- **english:** To examine methodically in order to discover something or someone.
+  Source `b162_fr_11370`, fixed line 12.
+- **chinese:** 为了发现某事物或某人而有步骤地探查、考察。
+  Source `b162_fr_11370`, fixed line 12.
 
-### 4079 — inquiétude/NOM
+## Row 4087: `poignet/NOM`
 
-Selected: Feminine noun for lack of peace of mind.
+Masculine noun for the wrist joint.
 
-Excluded: Changeable temperament, obsolete physical restlessness, clinical pathology and the regional rocking-chair noun.
+Excluded uses: The clothing cuff.
 
-Definition: [inquiétude, revision 38988583](https://fr.wiktionary.org/w/index.php?title=inqui%C3%A9tude&oldid=38988583), line 9.
-
-IPA: [inquiétude, revision 38988583](https://fr.wiktionary.org/w/index.php?title=inqui%C3%A9tude&oldid=38988583), line 8.
-
-### 4080 — académie/NOM
-
-Selected: Feminine noun for a place of advanced education.
-
-Excluded: A scholarly society, a French education district, a nude art study, a gaming house and historical Protestant institutions.
-
-Definition: [académie, revision 39770682](https://fr.wiktionary.org/w/index.php?title=acad%C3%A9mie&oldid=39770682), line 18.
-
-IPA: [académie, revision 39770682](https://fr.wiktionary.org/w/index.php?title=acad%C3%A9mie&oldid=39770682), line 9.
-
-### 4081 — comique/NOM
-
-Selected: Masculine or feminine noun for a person who likes making others laugh.
-
-Excluded: The adjective funny, the separate theatrical performer or obsolete professional-humour use, and comedy as a genre.
-
-Definition: [comique, revision 39657276](https://fr.wiktionary.org/w/index.php?title=comique&oldid=39657276), line 106.
-
-IPA: [comique, revision 39657276](https://fr.wiktionary.org/w/index.php?title=comique&oldid=39657276), line 94.
-
-### 4082 — caillou/NOM
-
-Selected: Masculine noun, plural cailloux, for a stone.
-
-Excluded: Gemstones, reefs, a head, ice, sugar, an oyster, a camera lens, a geographical nickname or regional pig.
-
-Definition: [caillou, revision 40009241](https://fr.wiktionary.org/w/index.php?title=caillou&oldid=40009241), line 12.
-
-IPA: [caillou, revision 40009241](https://fr.wiktionary.org/w/index.php?title=caillou&oldid=40009241), line 10.
-
-### 4083 — tout-puissant/ADJ
-
-Selected: Masculine singular compound adjective, feminine toute-puissante; selected general great-power use.
-
-Excluded: The separately stated religious sense of absolute, unlimited power or a capitalised divine name.
-
-Definition: [tout-puissant, revision 39016209](https://fr.wiktionary.org/w/index.php?title=tout-puissant&oldid=39016209), line 10.
-
-IPA: [tout-puissant, revision 39016209](https://fr.wiktionary.org/w/index.php?title=tout-puissant&oldid=39016209), line 9.
-
-### 4084 — paye/NOM
-
-Selected: Feminine noun for remuneration; exact frozen spelling paye and its recorded /pɛj/ variant are retained.
-
-Excluded: Forms of payer, the act of paying, a debtor, an obsolete payer and a familiar long-period sense.
-
-Definition: [paye, revision 39720781](https://fr.wiktionary.org/w/index.php?title=paye&oldid=39720781), line 10.
-
-IPA: [paye, revision 39720781](https://fr.wiktionary.org/w/index.php?title=paye&oldid=39720781), line 9.
-
-### 4085 — artistique/ADJ
-
-Selected: Adjective with the same masculine and feminine singular form.
-
-Excluded: No inference of artistic talent, merit or a specific art form.
-
-Definition: [artistique, revision 39773996](https://fr.wiktionary.org/w/index.php?title=artistique&oldid=39773996), line 8.
-
-IPA: [artistique, revision 39773996](https://fr.wiktionary.org/w/index.php?title=artistique&oldid=39773996), line 7.
-
-### 4086 — explorer/VER
-
-Selected: Transitive verb, explorer quelque chose, for methodical investigation. IPA is the written French pronunciation notation; the linked recording is not copied.
-
-Excluded: A separate unfamiliar-region exploration sense and specifically surgical internal examination.
-
-Definition: [explorer, revision 39004604](https://fr.wiktionary.org/w/index.php?title=explorer&oldid=39004604), line 12.
-
-IPA: [explorer, revision 39004604](https://fr.wiktionary.org/w/index.php?title=explorer&oldid=39004604), line 69.
-
-### 4087 — poignet/NOM
-
-Selected: Masculine noun for the wrist joint.
-
-Excluded: The clothing cuff.
-
-Definition: [poignet, revision 39770863](https://fr.wiktionary.org/w/index.php?title=poignet&oldid=39770863), line 11.
-
-IPA: [poignet, revision 39770863](https://fr.wiktionary.org/w/index.php?title=poignet&oldid=39770863), line 10.
+- **french_definition:** Articulation qui relie l’avant-bras à la main.
+  Source `b162_fr_55898`, fixed line 11.
+- **ipa:** /pwa.ɲɛ/
+  Source `b162_fr_55898`, fixed line 10.
+- **english:** Wrist: the joint connecting the forearm to the hand.
+  Source `b162_fr_55898`, fixed line 11.
+- **chinese:** 手腕：连接前臂与手的关节。
+  Source `b162_fr_55898`, fixed line 11.

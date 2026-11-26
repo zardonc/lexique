@@ -1,4 +1,4 @@
-"""Check #162 author proposals at the approved resource/admission boundary."""
+"""Check #162 reviewed content and preserved author proposals at the resource boundary."""
 import csv
 import json
 from pathlib import Path
@@ -31,10 +31,117 @@ MEMBERSHIP = [
 
 
 def read(name):
+    return json.loads((EVIDENCE / "authored" / name).read_text(encoding="utf-8"))
+
+
+def reviewed(name):
     return json.loads((EVIDENCE / name).read_text(encoding="utf-8"))
 
 
 class Batch162Tests(unittest.TestCase):
+    def test_independent_review_keeps_ais_blocked_without_an_exception(self):
+        admission = reviewed("admission.json")
+        self.assertEqual((admission["independently_accepted_new_groups"],
+                          admission["independently_accepted_new_fields"]), (36, 144))
+        self.assertEqual(admission["missing_admitted_fields"], 4)
+        self.assertEqual((admission["pending_independent_review_fields"],
+                          admission["pending_independent_rights_fields"]), (0, 0))
+        self.assertEqual((admission["annotation_exception_groups"],
+                          admission["specialist_exception_groups"]), (0, 0))
+        blocker = reviewed("content-blockers.json")["groups"][0]
+        self.assertEqual((blocker["frozen_row"], blocker["headword"], blocker["lexique_cgram"]),
+                         (4057, "ais", "NOM"))
+        self.assertFalse(blocker["owner_exception_approved"])
+        self.assertEqual(set(blocker["pending_fields"]),
+                         {"french_definition", "ipa", "english", "chinese"})
+        rejected = reviewed("rejected-proposals.json")["groups"][0]
+        self.assertEqual(rejected["proposal"]["headword"], "ais")
+        self.assertEqual(len(rejected["field_decisions"]), 4)
+        self.assertEqual(reviewed("groups.json")[6]["senses"], [])
+
+    def test_reviewed_fields_match_final_texts_fixed_spans_and_rights_decisions(self):
+        groups = reviewed("groups.json")
+        self.assertEqual([(g["headword"], g["lexique_cgram"]) for g in groups], MEMBERSHIP)
+        for group, original in zip(groups, read("groups.json"), strict=True):
+            for key in ("frozen_row", "headword", "lexique_cgram", "subtitle_lemma_per_million",
+                        "subtitle_pos_per_million"):
+                self.assertEqual(group[key], original[key])
+        selected = {(s["sense_id"], name): field for g in groups for s in g["senses"]
+                    for name, field in s["fields"].items()}
+        self.assertEqual(len(selected), 144)
+        review = reviewed("field-review.json")
+        self.assertTrue(review["independence"])
+        self.assertTrue(review["independent_acceptance"])
+        self.assertEqual(len(review["fields"]), 148)
+        rights = {(f["sense_id"], f["field"]): f for f in reviewed("rights.json")["fields"]}
+        captures = {c["source_id"]: c for c in reviewed("source-captures.json")["sources"]}
+        raw = {sid: Path(c["raw_path"]).read_text(encoding="utf-8").splitlines()
+               for sid, c in captures.items()}
+        for decision in review["fields"]:
+            key = decision["sense_id"], decision["field"]
+            right = rights[key]
+            self.assertTrue(decision["independence"])
+            self.assertTrue(decision["review_reason"])
+            self.assertTrue(right["selected_text_rights_reason"])
+            self.assertEqual(right["independent_review"], "passed_at_selected_text_boundary")
+            if key not in selected:
+                self.assertEqual(decision["frozen_row"], 4057)
+                self.assertIsNone(decision["accepted_text"])
+                self.assertEqual(decision["frozen_scope_eligibility_status"], "rejected")
+                continue
+            field = selected[key]
+            self.assertEqual(field["language"],
+                             {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}[key[1]])
+            self.assertEqual(field["text"], decision["accepted_text"])
+            self.assertEqual(field["text"], right["accepted_text"])
+            self.assertEqual(field["independent_review"], "passed")
+            self.assertEqual(decision["accepted_text_quality_status"], "passed")
+            self.assertEqual(decision["rights_eligibility_status"], "passed_at_selected_text_boundary")
+            self.assertEqual(decision["exact_source"]["revid"], captures[field["source_id"]]["revid"])
+            span = field["source_span"]
+            self.assertEqual(span, right["exact_source_span"])
+            self.assertEqual(span["raw_source_excerpt"], decision["exact_source"]["reviewed_excerpt"])
+            line = raw[field["source_id"]][span["line_1_based"] - 1]
+            column = span["column_1_based"] - 1
+            self.assertEqual(line[column:column + len(span["raw_source_excerpt"])], span["raw_source_excerpt"])
+            before = raw[field["source_id"]][:span["line_1_based"]]
+            language = next(line for line in reversed(before) if line.startswith("== "))
+            self.assertIn("{{langue|fr}}", language)
+            if key[1] != "ipa":
+                pos = next(line for line in reversed(before) if line.startswith("=== {{S|"))
+                self.assertIn("{{S|" + {"NOM": "nom", "ADJ": "adjectif", "VER": "verbe"}[decision["pos"]] + "|fr", pos)
+        self.assertEqual(len(review["usage"]), 37)
+        self.assertEqual(sum(u["everyday_sense_status"] == "passed" for u in review["usage"]), 36)
+        self.assertTrue(all(r["independent_review"] == "passed" for r in review["spelling_relations"]))
+
+    def test_replacements_keep_modern_use_and_exclude_other_language_imports(self):
+        groups = {g["frozen_row"]: g for g in reviewed("groups.json")}
+        replacements = reviewed("accepted-replacements.json")["fields"]
+        self.assertEqual(len(replacements), 9)
+        self.assertEqual({f["frozen_row"] for f in replacements}, {4061, 4071, 4077})
+        baseball = groups[4061]["senses"][0]["fields"]
+        self.assertIn("normalement neuf manches", baseball["french_definition"]["text"])
+        self.assertIn("extra innings if tied", baseball["english"]["text"])
+        self.assertIn("平局时延长", baseball["chinese"]["text"])
+        rocket = groups[4071]["senses"][0]["fields"]
+        self.assertIn("baguette", rocket["french_definition"]["text"])
+        self.assertIn("attached to a stick", rocket["english"]["text"])
+        self.assertNotIn("手掷", rocket["chinese"]["text"])
+        admiral = groups[4077]["senses"][0]["fields"]
+        for name in ("french_definition", "english", "chinese"):
+            self.assertEqual(admiral[name]["source_span"]["line_1_based"], 35)
+        self.assertIn("En France", admiral["french_definition"]["text"])
+        self.assertNotIn("supreme commander", admiral["english"]["text"])
+        explorer = next(s for s in reviewed("sources.json")["sources"] if s["title"] == "explorer")
+        self.assertEqual(explorer["original_historical_dictionary_layers"], [])
+        marker = next(m for m in explorer["external_reference_markers"] if m["line_1_based"] == 112)
+        self.assertEqual(marker["independent_boundary_decision"],
+                         "excluded_English_noun_section_not_French_verb_original")
+        records = reviewed("modern-corroboration.json")["sources"]
+        rule = next(r for r in records if r["id"] == "baseball-rule")
+        self.assertTrue(Path(rule["raw_path"]).is_file())
+        self.assertIn(rule["exact_excerpt"], Path(rule["text_path"]).read_text(encoding="utf-8"))
+
     def test_author_package_retains_pending_reviews_and_one_exact_use_blocker(self):
         admission, review, rights = read("admission.json"), read("field-review.json"), read("rights.json")
         self.assertEqual(admission["scope_denominator_groups"], 4087)
@@ -130,7 +237,7 @@ class Batch162Tests(unittest.TestCase):
 
     def test_converter_rejects_author_review_as_independent_acceptance(self):
         def replace_review(stage):
-            (stage / "field-review.json").write_bytes((EVIDENCE / "field-review.json").read_bytes())
+            (stage / "field-review.json").write_bytes((EVIDENCE / "authored/field-review.json").read_bytes())
 
         assert_core_load_inputs_rejected(
             self, RESOURCE, MATERIALS, load_inputs, replace_review,

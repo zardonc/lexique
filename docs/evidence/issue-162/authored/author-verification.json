@@ -1,0 +1,60 @@
+{
+  "ticket": 162,
+  "parent": 78,
+  "kind": "author_resource_boundary_verification",
+  "independent_review": "pending",
+  "author_checkout": "C:/Users/inthe/.t3/worktrees/lexique/t3-a30dd422-8ad2ec7c9d1607e8",
+  "branch": "t3/issue-162-author-shard",
+  "base_commit": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "merged_integration_tip": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "platform": "Windows x64, PowerShell 7, uv-managed Python 3.14",
+  "tested_content_state": "Owned author shard and tests; delivered commit and exact-head check are recorded in the external closeout.json",
+  "evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-162",
+  "full_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-162/scoped-author.patch",
+  "tests_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-162/scoped-tests.patch",
+  "frozen_groups": 37,
+  "proposed_fields": 148,
+  "ordinary_everyday_candidate_groups": 36,
+  "blocked_research_candidate_groups": 1,
+  "blocked_rows": [4057],
+  "fixed_sources": 38,
+  "contributor_response_parts": 8,
+  "independently_accepted_fields": 0,
+  "checks": [
+    {
+      "command": "uv run --no-project python -X utf8 -m unittest discover -s scripts -p test_core_batch_162.py -v",
+      "status": "passed",
+      "tests": 7,
+      "log": "green-package.log",
+      "failure_before_implementation": ["red-membership.log", "red-content.log", "red-package.log"]
+    },
+    {
+      "command": "uv run --no-project python -X utf8 C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-162/reproduce.py",
+      "status": "passed",
+      "boundary": "Thirteen author output files reproduced byte-for-byte from retained sources without network requests",
+      "log": "reproduction.log"
+    },
+    {
+      "command": "git merge --no-edit codex/d2-content-160-162",
+      "status": "passed_already_up_to_date",
+      "integration_tip": "0963287ea5ed593cc84215377d62e6db1a072566"
+    },
+    {
+      "command": "pwsh -NoProfile -File scripts/check-docs.ps1",
+      "status": "passed",
+      "log": "docs-check.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "unrun": {
+    "independent_field_quality_construction_spelling_and_selected_rights": "Separate reviewer owned and pending",
+    "canonical_conversion_and_combined_packaging": "Coordinator owned",
+    "native_lookup_trusted_save_reopen_upgrade": "Coordinator owned",
+    "frontend_lint_typecheck_build_and_rust_checks": "No runtime changes",
+    "learner_acceptance_cefr_and_release": "Outside the author handoff"
+  }
+}
