@@ -1,8 +1,9 @@
-"""Check #161 authored content at the resource-artifact boundary."""
+"""Check #161 independently reviewed content at the resource-artifact boundary."""
 import csv
 import json
 from pathlib import Path
 import re
+import subprocess
 import unittest
 
 from core_batch_test_helpers import (
@@ -12,6 +13,7 @@ from core_batch_test_helpers import (
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/evidence/issue-161"
+AUTHOR_SHA = "10a62d9c4d0ced4515ba45dfb1922e4ec1c065e8"
 
 
 def read(name):
@@ -19,6 +21,11 @@ def read(name):
 
 
 class Batch161Tests(unittest.TestCase):
+    def test_vaurien_retains_the_milder_sense_without_an_insult_threshold(self):
+        group = next(g for g in read("groups.json") if g["frozen_row"] == 4047)
+        self.assertEqual(group["senses"][0]["fields"]["english"]["text"],
+                         "(Informal, in a milder sense) A rascal or scamp.")
+
     def test_exact_frozen_membership_has_four_scoped_candidate_fields(self):
         groups = read("groups.json")
         with (ROOT / "resources/core-pilot-79/scope-manifest.csv").open(
@@ -91,19 +98,26 @@ class Batch161Tests(unittest.TestCase):
                     self.assertFalse(line.startswith(("#*", "##*")))
                     self.assertNotIn("{{Import:CFC", line)
 
-    def test_author_rights_and_quality_remain_pending_independent_admission(self):
+    def test_independent_decisions_preserve_proposals_and_separate_canonical_admission(self):
         admission = read("admission.json")
         self.assertEqual((admission["frozen_groups"], admission["proposed_fields"],
                           admission["scope_denominator_groups"]), (50, 200, 4087))
-        self.assertEqual(admission["independently_accepted_new_fields"], 0)
+        self.assertEqual(admission["independently_accepted_new_groups"], 50)
+        self.assertEqual(admission["independently_accepted_new_fields"], 200)
+        self.assertEqual(admission["newly_admitted_fields"], 0)
         self.assertEqual(admission["missing_admitted_fields"], 200)
+        self.assertEqual((admission["accepted_unchanged_fields"], admission["accepted_changed_fields"]), (199, 1))
+        self.assertEqual(admission["pending_independent_review_fields"], 0)
         self.assertEqual(admission["annotation_exception_groups"], 0)
         self.assertEqual(admission["specialist_exception_groups"], 0)
         self.assertEqual(admission["unresolved_field_blockers"], [])
         review = read("field-review.json")
         rights = read("rights.json")
-        self.assertFalse(review["independent_acceptance"])
-        self.assertIsNone(review["reviewer"])
+        self.assertTrue(review["independent_acceptance"])
+        self.assertTrue(review["reviewer"])
+        authored = json.loads((EVIDENCE / "authored/groups.json").read_text(encoding="utf-8"))
+        proposals = {(s["sense_id"], name): field for g in authored
+                     for s in g["senses"] for name, field in s["fields"].items()}
         expected = {(s["sense_id"], name): field for g in read("groups.json")
                     for s in g["senses"] for name, field in s["fields"].items()}
         self.assertEqual({(f["sense_id"], f["field"]) for f in rights["fields"]}, set(expected))
@@ -115,15 +129,30 @@ class Batch161Tests(unittest.TestCase):
             self.assertTrue(record["attribution"])
             self.assertTrue(record["author_rights_basis"])
             self.assertTrue(record["modification"])
-            self.assertEqual(record["independent_review"], "pending")
-            self.assertIsNone(record["reviewer"])
+            self.assertEqual(record["accepted_text"], field["text"])
+            self.assertEqual(record["independent_review"], "passed")
+            self.assertEqual(record["reviewer"], review["reviewer"])
+            self.assertTrue(record["selected_text_rights_reason"])
         for record in review["fields"]:
             field = expected[record["sense_id"], record["field"]]
-            self.assertEqual(record["proposed_text"], field["text"])
-            self.assertEqual(record["accepted_text_quality_status"], "pending")
-            self.assertEqual(field["independent_review"], "pending")
+            self.assertEqual(record["proposed_text"], proposals[record["sense_id"], record["field"]]["text"])
+            self.assertEqual(record["accepted_text"], field["text"])
+            self.assertEqual(record["accepted_text_quality_status"], "passed")
+            self.assertEqual(field["independent_review"], "passed")
+            self.assertTrue(record["review_reason"])
+            self.assertTrue(record["independence"])
         self.assertEqual(len(review["usage"]), 50)
-        self.assertTrue(all(u["everyday_sense_status"] == "pending_separate_review" for u in review["usage"]))
+        for usage in review["usage"]:
+            self.assertEqual(usage["everyday_sense_status"], "passed")
+            self.assertEqual(usage["accepted_usage"], usage["proposed_usage"])
+            self.assertTrue(usage["review_reason"])
+        self.assertEqual(len(review["spelling_relations"]), 50)
+        self.assertTrue(all(r["independent_review"] == "passed" and r["review_reason"]
+                            for r in review["spelling_relations"]))
+        replacements = read("accepted-replacements.json")["fields"]
+        self.assertEqual([(r["frozen_row"], r["field"]) for r in replacements], [(4047, "english")])
+        self.assertEqual(replacements[0]["proposed_text"],
+                         "(Informal, less severe than an insult) A rascal or scamp.")
 
     def test_restricted_uses_and_excluded_imports_are_explicit(self):
         groups = {g["frozen_row"]: g for g in read("groups.json")}
@@ -149,17 +178,37 @@ class Batch161Tests(unittest.TestCase):
         self.assertTrue(all(r["alias_admission"] == "not_admitted"
                             for r in read("source-context.json")["spelling_relations"]))
 
-    def test_authored_package_retains_notices_and_complete_legal_text(self):
+    def test_original_expression_credits_and_authored_snapshot_are_preserved(self):
         notices = (EVIDENCE / "NOTICES.md").read_text(encoding="utf-8")
         for source in read("sources.json")["sources"]:
             self.assertIn(source["fixed_url"], notices)
             self.assertIn(source["history_url"], notices)
         self.assertIn("Académie française", notices)
+        self.assertIn("Émile Littré", notices)
+        originals = read("original-expression-review.json")
+        self.assertEqual(len(originals["sources"]), 50)
+        self.assertEqual(originals["unresolved_rights"], [])
+        for source in originals["sources"]:
+            self.assertTrue(source["selected_expression_reason"])
+            self.assertEqual(source["independent_review"], "passed_at_selected_text_boundary")
+        sources = {s["title"]: s for s in read("sources.json")["sources"]}
+        for title in ("infiniment", "épais", "quête"):
+            self.assertTrue(any("Littré" in layer["original_authors"]
+                                for layer in sources[title]["original_historical_dictionary_layers"]))
+        self.assertTrue(sources["uni"]["original_historical_dictionary_layers"])
         self.assertEqual((EVIDENCE / "COPYING").read_bytes().rstrip(),
                          (ROOT / "resources/core-pilot-79/COPYING").read_bytes().rstrip())
-        for name in ("groups.json", "sources.json", "source-context.json", "source-excerpts.json",
-                     "source-captures.json", "field-review.json", "rights.json", "admission.json", "reuse.json"):
+        for path in (EVIDENCE / "authored").rglob("*"):
+            if path.is_file():
+                relative = path.relative_to(ROOT).as_posix()
+                original = subprocess.check_output(["git", "show", f"{AUTHOR_SHA}:{relative}"], cwd=ROOT)
+                self.assertEqual(path.read_bytes(), original)
+        for name in ("reuse.json", "COPYING"):
             self.assertEqual((EVIDENCE / name).read_bytes(), (EVIDENCE / "authored" / name).read_bytes())
+        self.assertEqual(read("content-blockers.json")["blockers"], [])
+        self.assertEqual(read("content-blockers.json")["independent_quality_and_rights"], "passed")
+        authored_review = json.loads((EVIDENCE / "authored/field-review.json").read_text(encoding="utf-8"))
+        self.assertFalse(authored_review["independent_acceptance"])
 
 
 if __name__ == "__main__":
