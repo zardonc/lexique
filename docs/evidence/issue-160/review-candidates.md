@@ -1,9 +1,10 @@
 # Exact #160 author proposals
 
-All 50 exact groups and 200 fields await separate independent review.
-[Groups](groups.json) retain the texts; [field review](field-review.json) binds
-each field and selected use to its fixed source. Author checks do not establish
-independent language quality or rights clearance.
+This document retains the original 50-group / 200-field authored proposals.
+[Original groups](authored/groups.json) preserve those texts; the accepted
+49-group / 196-field subset is in [groups](groups.json) and
+[field review](field-review.json). [Replacements](review-corrections.json) and
+[rejected proposals](rejected-proposals.json) record the exact decisions.
 
 | Row | Exact group | French | IPA | English | Chinese |
 | --- | --- | --- | --- | --- | --- |

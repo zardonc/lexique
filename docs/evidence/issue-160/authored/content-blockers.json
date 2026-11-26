@@ -1,0 +1,27 @@
+{
+  "ticket": 160,
+  "scope_denominator_groups": 4087,
+  "blocked_groups": 0,
+  "blocked_fields": 0,
+  "dropped_groups": 0,
+  "substituted_groups": 0,
+  "approved_annotation_exceptions": 0,
+  "approved_specialist_exceptions": 0,
+  "blockers": [],
+  "status": "no_author_identified_use_blocker_independent_eligibility_pending",
+  "independent_quality_and_rights": "pending_for_all_200_fields",
+  "review_attention": [
+    {
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "issue": "Assess the exact French cat-breed definition as an ordinary pet-context use; no specialist exception is requested."
+    },
+    {
+      "frozen_row": 3971,
+      "headword": "sir",
+      "pos": "NOM",
+      "issue": "Review lowercase frozen sir to capitalized French title Sir, including the French IPA /sœʁ/ and exclusion of English polite-address use."
+    }
+  ]
+}

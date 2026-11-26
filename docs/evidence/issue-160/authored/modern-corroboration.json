@@ -1,0 +1,22 @@
+{
+  "captures": [
+    {
+      "word": "sir",
+      "url": "https://www.cnrtl.fr/definition/sir",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\author-evidence\\issue-160\\sources\\cnrtl-sir.html",
+      "captured_at_utc": "2026-11-26T19:57:08.600131+00:00",
+      "status": 200,
+      "redistribution": "Read-only source/spelling corroboration; no CNRTL prose supplies a learner field.",
+      "author_observation": "The retained French CNRTL page labels the lowercase headword sir as a masculine noun and displays capitalized Sir as the British title. This corroborates capitalization binding; no CNRTL expression supplies a field.",
+      "field_content_reused": false,
+      "independent_review": "pending"
+    },
+    {
+      "word": "rex",
+      "url": "https://www.cnrtl.fr/definition/rex",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "unavailable_rex_corroboration": "CNRTL returned HTTP 404 for rex. The fixed French Wiktionnaire cat-breed definition remains the author source; everyday eligibility requires independent review."
+}
