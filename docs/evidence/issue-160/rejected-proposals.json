@@ -1,0 +1,634 @@
+{
+  "status": "not_admitted_no_owner_exception",
+  "groups": [
+    {
+      "frozen_row": 3953,
+      "headword": "rex",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "10.57",
+      "subtitle_pos_per_million": "10.57",
+      "senses": [
+        {
+          "sense_id": "b160-3953-rex-nom-selected",
+          "source_headword": "rex",
+          "use": "Masculine noun, same written form in singular and plural, for a rex cat in the pet/breed sense.",
+          "use_language": "en",
+          "excluded_uses": "Rex rabbits, military retour d’expérience, Latin king and proper names.",
+          "independent_review": "pending",
+          "resource_admission": "pending_separate_independent_review",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Chat de type rex, à queue longue ou moyenne et au pelage court et ondulé, constitué uniquement de sous-poil.",
+              "source_id": "b160_fr_38021",
+              "source_span": {
+                "line_1_based": 14,
+                "column_1_based": 1,
+                "raw_source_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+              "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+              "independent_review": "pending",
+              "rights_eligibility_status": "pending_separate_selected_span_audit"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/ʁɛks/",
+              "source_id": "b160_fr_38021",
+              "source_span": {
+                "line_1_based": 13,
+                "column_1_based": 1,
+                "raw_source_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+              "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+              "independent_review": "pending",
+              "rights_eligibility_status": "pending_separate_selected_span_audit"
+            },
+            "english": {
+              "language": "en",
+              "text": "A rex cat: a cat with a long or medium-length tail and a short, wavy coat consisting only of underfur.",
+              "source_id": "b160_fr_38021",
+              "source_span": {
+                "line_1_based": 14,
+                "column_1_based": 1,
+                "raw_source_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+              "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+              "independent_review": "pending",
+              "rights_eligibility_status": "pending_separate_selected_span_audit"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "雷克斯猫：尾巴长或中等长，短而卷曲的被毛仅由底毛构成。",
+              "source_id": "b160_fr_38021",
+              "source_span": {
+                "line_1_based": 14,
+                "column_1_based": 1,
+                "raw_source_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+              "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+              "independent_review": "pending",
+              "rights_eligibility_status": "pending_separate_selected_span_audit"
+            }
+          },
+          "author_everyday_eligibility": "proposed_pending_independent_review"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "proposed_text": "Chat de type rex, à queue longue ou moyenne et au pelage court et ondulé, constitué uniquement de sous-poil.",
+      "exact_source": {
+        "source_id": "b160_fr_38021",
+        "revid": 39911686,
+        "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 2,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-inv|ʁɛks|sp=oui}}"
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "unresolved_not_admitted",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b160_fr_38021",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "independence": true,
+      "accepted_text": null,
+      "source_use_semantic_quality_status": "unresolved",
+      "review_reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression. This field explains the same selected use and retains its register, construction and regional restrictions.",
+      "proposed_text_quality_status": "unresolved",
+      "candidate_language_pos_and_ipa": "supported_at_fixed_french_nominal_frame"
+    },
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "field": "ipa",
+      "language": "und",
+      "proposed_text": "/ʁɛks/",
+      "exact_source": {
+        "source_id": "b160_fr_38021",
+        "revid": 39911686,
+        "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+        "line_1_based": 13,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}",
+        "ipa_variant_column_1_based": 18,
+        "ipa_variant_excerpt": "ʁɛks"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 2,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-inv|ʁɛks|sp=oui}}"
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "unresolved_not_admitted",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b160_fr_38021",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "independence": true,
+      "accepted_text": null,
+      "source_use_semantic_quality_status": "unresolved",
+      "review_reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression. The isolated IPA is directly supported by the French nominal pronunciation line; no foreign-language or alternate POS reading enters.",
+      "proposed_text_quality_status": "unresolved",
+      "candidate_language_pos_and_ipa": "supported_at_fixed_french_nominal_frame"
+    },
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "proposed_text": "A rex cat: a cat with a long or medium-length tail and a short, wavy coat consisting only of underfur.",
+      "exact_source": {
+        "source_id": "b160_fr_38021",
+        "revid": 39911686,
+        "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 2,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-inv|ʁɛks|sp=oui}}"
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "unresolved_not_admitted",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b160_fr_38021",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "independence": true,
+      "accepted_text": null,
+      "source_use_semantic_quality_status": "unresolved",
+      "review_reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression. This field explains the same selected use and retains its register, construction and regional restrictions.",
+      "proposed_text_quality_status": "unresolved",
+      "candidate_language_pos_and_ipa": "supported_at_fixed_french_nominal_frame"
+    },
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "proposed_text": "雷克斯猫：尾巴长或中等长，短而卷曲的被毛仅由底毛构成。",
+      "exact_source": {
+        "source_id": "b160_fr_38021",
+        "revid": 39911686,
+        "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 2,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-inv|ʁɛks|sp=oui}}"
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "unresolved_not_admitted",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b160_fr_38021",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "independence": true,
+      "accepted_text": null,
+      "source_use_semantic_quality_status": "unresolved",
+      "review_reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression. This field explains the same selected use and retains its register, construction and regional restrictions.",
+      "proposed_text_quality_status": "unresolved",
+      "candidate_language_pos_and_ipa": "supported_at_fixed_french_nominal_frame"
+    }
+  ],
+  "usage": [
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "source_headword": "rex",
+      "proposed_usage": "Masculine noun, same written form in singular and plural, for a rex cat in the pet/breed sense.",
+      "language": "en",
+      "excluded_uses": "Rex rabbits, military retour d’expérience, Latin king and proper names.",
+      "exact_source": {
+        "source_id": "b160_fr_38021",
+        "revid": 39911686,
+        "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 2,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-inv|ʁɛks|sp=oui}}"
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+        }
+      ],
+      "construction_and_flexion_evidence": [
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 2,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-inv|ʁɛks|sp=oui}}"
+        },
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+        }
+      ],
+      "author_construction_and_flexion_interpretation": "Selected construction: Masculine noun, same written form in singular and plural, for a rex cat in the pet/breed sense. Exact language/POS/headword grammar is retained in supporting_sources.",
+      "author_everyday_use_assessment": "Modern selected sense with register, construction and region retained; unrelated technical, obsolete and grammatical alternatives are excluded.",
+      "accepted_usage_quality_status": "unresolved",
+      "everyday_sense_status": "unresolved",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "accepted_usage": null,
+      "everyday_sense_reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
+      "review_reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
+      "independence": true
+    }
+  ],
+  "rights": [
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "field": "french_definition",
+      "source_id": "b160_fr_38021",
+      "source_revision": 39911686,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+      "exact_source_span": {
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
+      "contributors_record": "source-context.json#b160_fr_38021",
+      "author_rights_basis": "Author-proposed CC BY-SA 4.0 contributor/adaptation route, with separately attributed original-work layers where established. Exact selected-expression origin and any imported rights await independent audit; an article licence or bibliography alone does not settle them.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
+      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+      "independent_review": "unresolved",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "accepted_text": null,
+      "proposed_text": "Chat de type rex, à queue longue ou moyenne et au pelage court et ondulé, constitué uniquement de sous-poil.",
+      "selected_text_rights_reason": "Fixed rex revision 39911686, lexical definition at line 14 and French IPA/grammar at line 13 were inspected separately from quotations, media, etymology and other languages. Protected breed/animal-science bibliography at French lines 88–90 leaves the proposed detailed expression origin unresolved; no field is admitted. Accepted text is a scoped adaptation/new explanation, not an external quotation."
+    },
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "field": "ipa",
+      "source_id": "b160_fr_38021",
+      "source_revision": 39911686,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+      "exact_source_span": {
+        "line_1_based": 13,
+        "column_1_based": 1,
+        "raw_source_excerpt": "'''rex''' {{pron|ʁɛks|fr}} {{m}}, {{sp}}"
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
+      "contributors_record": "source-context.json#b160_fr_38021",
+      "author_rights_basis": "Author-proposed CC BY-SA 4.0 contributor/adaptation route, with separately attributed original-work layers where established. Exact selected-expression origin and any imported rights await independent audit; an article licence or bibliography alone does not settle them.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Isolated IPA notation only, not audio or linked media.",
+      "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+      "independent_review": "unresolved",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "accepted_text": null,
+      "proposed_text": "/ʁɛks/",
+      "selected_text_rights_reason": "Fixed rex revision 39911686, lexical definition at line 14 and French IPA/grammar at line 13 were inspected separately from quotations, media, etymology and other languages. Protected breed/animal-science bibliography at French lines 88–90 leaves the proposed detailed expression origin unresolved; no field is admitted. Recorded French IPA is lexical pronunciation data, no audio copied."
+    },
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "field": "english",
+      "source_id": "b160_fr_38021",
+      "source_revision": 39911686,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+      "exact_source_span": {
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
+      "contributors_record": "source-context.json#b160_fr_38021",
+      "author_rights_basis": "Author-proposed CC BY-SA 4.0 contributor/adaptation route, with separately attributed original-work layers where established. Exact selected-expression origin and any imported rights await independent audit; an article licence or bibliography alone does not settle them.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
+      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+      "independent_review": "unresolved",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "accepted_text": null,
+      "proposed_text": "A rex cat: a cat with a long or medium-length tail and a short, wavy coat consisting only of underfur.",
+      "selected_text_rights_reason": "Fixed rex revision 39911686, lexical definition at line 14 and French IPA/grammar at line 13 were inspected separately from quotations, media, etymology and other languages. Protected breed/animal-science bibliography at French lines 88–90 leaves the proposed detailed expression origin unresolved; no field is admitted. Accepted text is a scoped adaptation/new explanation, not an external quotation."
+    },
+    {
+      "sense_id": "b160-3953-rex-nom-selected",
+      "frozen_row": 3953,
+      "field": "chinese",
+      "source_id": "b160_fr_38021",
+      "source_revision": 39911686,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
+      "exact_source_span": {
+        "line_1_based": 14,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[race|Race]] de [[chat]], à [[queue]] [[long]]ue ou [[moyen]]ne et à [[poil]] [[court]] et [[ondulé]] car il n’est constitué que du [[sous-poil]]."
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
+      "contributors_record": "source-context.json#b160_fr_38021",
+      "author_rights_basis": "Author-proposed CC BY-SA 4.0 contributor/adaptation route, with separately attributed original-work layers where established. Exact selected-expression origin and any imported rights await independent audit; an article licence or bibliography alone does not settle them.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
+      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+      "independent_review": "unresolved",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "accepted_text": null,
+      "proposed_text": "雷克斯猫：尾巴长或中等长，短而卷曲的被毛仅由底毛构成。",
+      "selected_text_rights_reason": "Fixed rex revision 39911686, lexical definition at line 14 and French IPA/grammar at line 13 were inspected separately from quotations, media, etymology and other languages. Protected breed/animal-science bibliography at French lines 88–90 leaves the proposed detailed expression origin unresolved; no field is admitted. Accepted text is a scoped adaptation/new explanation, not an external quotation."
+    }
+  ],
+  "blockers": [
+    {
+      "frozen_row": 3953,
+      "headword": "rex",
+      "pos": "NOM",
+      "missing_fields": [
+        "french_definition",
+        "ipa",
+        "english",
+        "chinese"
+      ],
+      "reason": "French masculine invariant noun and /ʁɛks/ are attested, but the selected definition is a breed description. The proposed generic pet use does not establish modern everyday eligibility. Its reference list names animal-science and breed publications without resolving the origin of the detailed selected expression.",
+      "frozen_identity_preserved": true,
+      "owner_approval": null,
+      "source_findings": [
+        {
+          "source_id": "b160_fr_38021",
+          "revid": 39911686,
+          "definition_line": 14,
+          "ipa_line": 13,
+          "protected_reference_lines": [
+            88,
+            89,
+            90
+          ]
+        },
+        {
+          "url": "https://www.larousse.fr/dictionnaires/francais/rex/69192",
+          "finding": "Masculine rabbit/fur definition, not the proposed ordinary cat use.",
+          "evidence": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-160-retry\\rex-primary-readback.json",
+          "field_content_reused": false
+        },
+        {
+          "url": "https://www.linternaute.fr/dictionnaire/fr/definition/rex/",
+          "finding": "Cat and rabbit definitions explicitly placed in zootechnie; does not establish ordinary pet eligibility.",
+          "evidence": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-160-retry\\rex-primary-readback.json",
+          "field_content_reused": false
+        }
+      ],
+      "owner_alternatives": [
+        "Keep current scope: supply fixed licensed evidence of an ordinary modern French rex/NOM construction, matching FR/IPA/EN/ZH and resolved original-expression rights, then obtain independent acceptance.",
+        "Explicitly approve a narrowly defined specialist rex/NOM breed sense and amend issue 78/160; complete exact breed semantics and selected-expression rights before admission.",
+        "Explicitly approve rex/NOM as a zero-field annotation while preserving row 3953, both frequencies and all four missing fields."
+      ]
+    }
+  ],
+  "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator"
+}

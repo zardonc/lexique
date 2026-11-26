@@ -1,0 +1,56 @@
+{
+  "ticket": 160,
+  "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+  "author_sha": "71b10bb65731dec1cad6796322a67f8101e83a69",
+  "review_base": "72c389340a5ddb956d7b4394713aeb0b29600348",
+  "checkout": "C:/Users/inthe/.t3/worktrees/lexique/t3-c745d4c8-f54eb8929cf60985",
+  "platform": "Windows, PowerShell 7, Python through uv",
+  "evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-160-retry",
+  "changes": "Issue-160 shard and scripts/test_core_batch_160.py only; committed source and test patch retained in the evidence root",
+  "diff_command": "git diff --binary 72c389340a5ddb956d7b4394713aeb0b29600348 -- docs/evidence/issue-160 scripts/test_core_batch_160.py",
+  "full_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-160-retry/reviewed-scope.patch",
+  "test_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-160-retry/reviewed-tests.patch",
+  "reviewed_proposed_fields": 200,
+  "reviewed_proposed_uses": 50,
+  "accepted_groups": 49,
+  "accepted_fields": 196,
+  "blocked_groups": 1,
+  "missing_fields": 4,
+  "new_annotation_exceptions": 0,
+  "new_specialist_exceptions": 0,
+  "exact_field_replacements": 12,
+  "checks": [
+    {
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_160.py Batch160Tests.test_rex_remains_unresolved_without_an_owner_exception",
+      "status": "expected_failure_before_correction",
+      "log": "red-rex.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_160.py",
+      "status": "passed",
+      "tests": 8,
+      "log": "focused-tests.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-160-retry/audit.py",
+      "status": "passed",
+      "log": "source-audit.log",
+      "coverage": "Fixed source/API bytes, all retained spans, complete contributor pagination, legal-policy bytes, independent accepted/rejected decisions, exact authored snapshots, local links and scope preservation"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "canonical_conversion": "coordinator_owned_not_run",
+  "native_lookup_save_reopen": "coordinator_owned_not_run",
+  "frontend_rust_browser": "not_run_no_runtime_changes",
+  "learner_acceptance": "not_run",
+  "release": "incomplete",
+  "limitations": [
+    "Rex everyday eligibility and detailed-expression origin remain unresolved; full proposals, four missing fields and owner alternatives are retained.",
+    "The source review accepts a shard subset; canonical conversion and combined package obligations require coordinator validation.",
+    "Direct LOOF requests and tool readbacks timed out; no LOOF page or search snippet is treated as accepted evidence. Larousse and Linternaute dictionary pages were read successfully.",
+    "Archived authored documents preserve their original relative links; archival link checks use the original issue-160 shard context."
+  ]
+}

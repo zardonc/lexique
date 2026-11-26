@@ -10,11 +10,11 @@
       "timestamp": "2026-10-22T11:42:36Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=roux&oldid=39952233",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=roux&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -27,7 +27,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -39,7 +41,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed roux revision 39952233, lexical definition at line 31 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_9163",
@@ -51,11 +55,11 @@
       "timestamp": "2026-11-17T09:40:59Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=perle&oldid=40039653",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=perle&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935); Émile Littré, Dictionnaire de la langue française (1872–1877).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -68,7 +72,25 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
+        },
+        {
+          "original_authors": "Émile Littré (1801–1881)",
+          "edition": "Dictionnaire de la langue française, 1872–1877",
+          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle L123-1: economic rights last for the author’s life and seventy years after the year of death; original author died in 1881.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
+          "conservative_expiry": "1952-01-01",
+          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
+          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work rights and BnF edition evidence",
+          "scope": "Conservative original-work credit for the French Littré reference; selected-sentence authorship is not inferred from the bibliography.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptation and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -94,7 +116,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed perle revision 40039653, lexical definition at line 13 and French IPA/grammar at line 12 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_38021",
@@ -106,11 +130,11 @@
       "timestamp": "2026-09-30T19:46:54Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=rex&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "unresolved_not_admitted",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -123,9 +147,29 @@
           "line_1_based": 206,
           "raw_reference": "* {{R:Gaffiot}}",
           "role": "reference_identity_not_selected_sentence_authorship"
+        },
+        {
+          "line_1_based": 88,
+          "raw_reference": "* Christian Meyer, Johann Huguenin, éds., [http://dico-sciences-animales.cirad.fr/ ''Dictionnaire des sciences animales''], Cirad, Montpellier, France, avril 2013, articles ''chat'', ''lapin Rex''",
+          "role": "protected_breed_bibliography_origin_unresolved",
+          "field_content_reused": false
+        },
+        {
+          "line_1_based": 89,
+          "raw_reference": "* René-Pierre Audras, ''Toutes les races de chats'', Bordas (Multiguide nature) éditions, Paris, 1988, pp. 101–105",
+          "role": "protected_breed_bibliography_origin_unresolved",
+          "field_content_reused": false
+        },
+        {
+          "line_1_based": 90,
+          "raw_reference": "* Confédération nationale de l’aviculture française, ''Standards officiels des lapins de race'', Imprimeries Réunies, Strasbourg, 1963, pp. 76–82, article ''Rex''",
+          "role": "protected_breed_bibliography_origin_unresolved",
+          "field_content_reused": false
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed rex revision 39911686, lexical definition at line 14 and French IPA/grammar at line 13 were inspected separately from quotations, media, etymology and other languages. Protected breed/animal-science bibliography at French lines 88–90 leaves the proposed detailed expression origin unresolved; no field is admitted."
     },
     {
       "id": "b160_fr_63959",
@@ -137,12 +181,30 @@
       "timestamp": "2026-08-03T14:04:15Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=balcon&oldid=39774075",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=balcon&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
-      "original_historical_dictionary_layers": [],
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01, using final publication in 1935",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md: Original works and adaptation layers; independently reviewed original collective-work basis only, not these new selected fields.",
+          "scope": "Original 1935 article A8B0140, tome 1 page 117, independently read; accepted balcony wording retains the projecting-platform/balustrade core and excludes the modern interior-access addition.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "original_expression_readback": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-160-retry\\primary-selected-passages.json",
+          "original_expression_url": "https://dictionnaire-academie.fr/article/A8B0140",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
+        }
+      ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
         {
@@ -176,7 +238,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed balcon revision 39774075, lexical definition at line 12 and French IPA/grammar at line 11 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose. Original DAF8 A8B0140 independently confirms the accepted projecting structure/balustrade core; the interior-access clause is excluded."
     },
     {
       "id": "b160_fr_104899",
@@ -188,11 +252,11 @@
       "timestamp": "2026-11-05T15:56:14Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=terrasse&oldid=39988051",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=terrasse&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -205,7 +269,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -222,7 +288,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed terrasse revision 39988051, lexical definition at line 29 and French IPA/grammar at line 11 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_148540",
@@ -234,11 +302,11 @@
       "timestamp": "2025-09-29T19:12:30Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=attrape&oldid=38787442",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=attrape&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -251,7 +319,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -268,7 +338,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed attrape revision 38787442, lexical definition at line 12 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_158757",
@@ -280,11 +352,11 @@
       "timestamp": "2026-11-16T11:00:38Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=effectuer&oldid=40037060",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=effectuer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -297,7 +369,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -309,7 +383,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed effectuer revision 40037060, lexical definition at line 7 and French IPA/grammar at line 6 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_158799",
@@ -321,11 +397,11 @@
       "timestamp": "2026-07-22T20:56:22Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9garer&oldid=39696838",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9garer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -338,7 +414,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -350,7 +428,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed égarer revision 39696838, lexical definition at line 29 and French IPA/grammar at line 6 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_167764",
@@ -362,11 +442,11 @@
       "timestamp": "2026-09-07T11:56:42Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=m%C3%A9nager&oldid=39864029",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=m%C3%A9nager&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -379,7 +459,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -401,7 +483,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed ménager revision 39864029, lexical definition at line 126 and French IPA/grammar at line 91 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_174385",
@@ -413,11 +497,11 @@
       "timestamp": "2025-12-13T11:28:42Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=refroidir&oldid=39175274",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=refroidir&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -430,7 +514,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -442,7 +528,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed refroidir revision 39175274, lexical definition at line 7 and French IPA/grammar at line 6 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_2166",
@@ -454,11 +542,11 @@
       "timestamp": "2026-09-22T22:27:42Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=chimique&oldid=39895082",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=chimique&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -471,7 +559,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -482,7 +572,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed chimique revision 39895082, lexical definition at line 9 and French IPA/grammar at line 8 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_12794",
@@ -494,11 +586,11 @@
       "timestamp": "2026-11-24T20:13:27Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=br%C3%BBlant&oldid=40059154",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=br%C3%BBlant&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -511,7 +603,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -528,7 +622,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed brûlant revision 40059154, lexical definition at line 10 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_116708",
@@ -540,11 +636,11 @@
       "timestamp": "2026-03-03T07:55:32Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tracer&oldid=39337270",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=tracer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -557,7 +653,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -573,7 +671,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed tracer revision 39337270, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_116990",
@@ -585,11 +685,11 @@
       "timestamp": "2026-07-31T22:41:45Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=jet&oldid=39717089",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=jet&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -602,7 +702,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -639,7 +741,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed jet revision 39717089, lexical definition at line 36 and French IPA/grammar at line 17 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_155788",
@@ -651,11 +755,11 @@
       "timestamp": "2026-11-23T13:11:54Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=coupure&oldid=40056813",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=coupure&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -668,7 +772,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -697,7 +803,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed coupure revision 40056813, lexical definition at line 33 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose. CFC line 37 belongs to cartography; accepted power-outage wording is line 33 and nominal IPA is line 9."
     },
     {
       "id": "b160_fr_163862",
@@ -709,11 +817,11 @@
       "timestamp": "2026-08-08T07:41:56Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=horloge&oldid=39786419",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=horloge&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -726,7 +834,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -742,7 +852,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed horloge revision 39786419, lexical definition at line 14 and French IPA/grammar at line 13 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_165257",
@@ -754,11 +866,11 @@
       "timestamp": "2026-04-16T11:25:54Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=insulte&oldid=39450223",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=insulte&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -771,7 +883,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -803,7 +917,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed insulte revision 39450223, lexical definition at line 21 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_172126",
@@ -815,11 +931,11 @@
       "timestamp": "2026-08-03T10:45:43Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=porteur&oldid=39771542",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=porteur&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -832,7 +948,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -844,7 +962,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed porteur revision 39771542, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_176306",
@@ -856,11 +976,11 @@
       "timestamp": "2026-10-16T09:44:47Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sens%C3%A9&oldid=39937037",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=sens%C3%A9&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -873,7 +993,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -890,7 +1012,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed sensé revision 39937037, lexical definition at line 10 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_178655",
@@ -902,11 +1026,11 @@
       "timestamp": "2026-07-20T17:19:24Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tourmenter&oldid=39691341",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=tourmenter&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -919,7 +1043,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -931,7 +1057,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed tourmenter revision 39691341, lexical definition at line 19 and French IPA/grammar at line 6 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_5386",
@@ -943,11 +1071,11 @@
       "timestamp": "2026-10-14T18:03:03Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=coutume&oldid=39933527",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=coutume&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -960,7 +1088,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -976,7 +1106,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed coutume revision 39933527, lexical definition at line 12 and French IPA/grammar at line 11 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_25614",
@@ -988,11 +1120,11 @@
       "timestamp": "2026-09-13T09:38:37Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=resto&oldid=39874104",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=resto&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1017,7 +1149,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed resto revision 39874104, lexical definition at line 10 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_36634",
@@ -1029,11 +1163,11 @@
       "timestamp": "2026-11-21T14:51:29Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fiche&oldid=40051169",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=fiche&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original historical layer where imported: Émile Littré, Dictionnaire de la langue française (1872–1877).",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935); Émile Littré, Dictionnaire de la langue française (1872–1877).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1046,7 +1180,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1060,7 +1196,9 @@
           "scope": "Original Littré text where imported; no modern XMLittré or ARTFL transcription is copied. The page marker does not identify the selected sentence’s exact author.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptation and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "passed_at_original_work_boundary"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1093,7 +1231,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed fiche revision 40051169, lexical definition at line 58 and French IPA/grammar at line 13 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose. The line-58 digital record is a modern editorial definition; Littré/DAF8 are credited as other original article layers, not its authors."
     },
     {
       "id": "b160_fr_154600",
@@ -1105,11 +1245,11 @@
       "timestamp": "2026-08-01T16:43:52Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=coiffure&oldid=39726032",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=coiffure&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1122,7 +1262,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1148,7 +1290,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed coiffure revision 39726032, lexical definition at line 10 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_154875",
@@ -1160,11 +1304,11 @@
       "timestamp": "2026-02-16T16:56:58Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=complot&oldid=39307025",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=complot&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1177,7 +1321,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1238,7 +1384,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed complot revision 39307025, lexical definition at line 12 and French IPA/grammar at line 11 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_158840",
@@ -1250,11 +1398,11 @@
       "timestamp": "2026-10-04T07:03:12Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9go%C3%AFste&oldid=39917507",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9go%C3%AFste&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1267,7 +1415,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1279,7 +1429,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed égoïste revision 39917507, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_171234",
@@ -1291,11 +1443,11 @@
       "timestamp": "2026-08-02T00:05:46Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pharmacie&oldid=39738613",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=pharmacie&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1308,7 +1460,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1325,7 +1479,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed pharmacie revision 39738613, lexical definition at line 17 and French IPA/grammar at line 8 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_195851",
@@ -1337,11 +1493,11 @@
       "timestamp": "2026-08-19T17:35:59Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cach%C3%A9&oldid=39816193",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=cach%C3%A9&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1351,7 +1507,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed caché revision 39816193, lexical definition at line 10 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_373713",
@@ -1363,15 +1521,17 @@
       "timestamp": "2026-08-18T15:55:32Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=habill%C3%A9&oldid=39813193",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=habill%C3%A9&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed habillé revision 39813193, lexical definition at line 11 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_884",
@@ -1383,11 +1543,11 @@
       "timestamp": "2026-07-31T23:22:49Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=situer&oldid=39717667",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=situer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1400,7 +1560,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1412,7 +1574,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed situer revision 39717667, lexical definition at line 7 and French IPA/grammar at line 6 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_32948",
@@ -1424,11 +1588,11 @@
       "timestamp": "2026-05-31T07:48:30Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pirate&oldid=39551220",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=pirate&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1443,7 +1607,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed pirate revision 39551220, lexical definition at line 11 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_37388",
@@ -1455,11 +1621,11 @@
       "timestamp": "2026-08-03T14:00:53Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=officiellement&oldid=39773928",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=officiellement&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935); Émile Littré, Dictionnaire de la langue française (1872–1877).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1472,7 +1638,25 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
+        },
+        {
+          "original_authors": "Émile Littré (1801–1881)",
+          "edition": "Dictionnaire de la langue française, 1872–1877",
+          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
+          "legal_basis": "Code de la propriété intellectuelle L123-1: economic rights last for the author’s life and seventy years after the year of death; original author died in 1881.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
+          "conservative_expiry": "1952-01-01",
+          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
+          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work rights and BnF edition evidence",
+          "scope": "Conservative original-work credit for the French Littré reference; selected-sentence authorship is not inferred from the bibliography.",
+          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped definition adaptation and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1489,7 +1673,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed officiellement revision 39773928, lexical definition at line 7 and French IPA/grammar at line 6 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_114987",
@@ -1501,11 +1687,11 @@
       "timestamp": "2026-10-28T16:47:21Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pou&oldid=39962228",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=pou&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1518,7 +1704,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1550,7 +1738,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed pou revision 39962228, lexical definition at line 11 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_157298",
@@ -1562,11 +1752,11 @@
       "timestamp": "2026-08-18T13:45:57Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9pression&oldid=39812898",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9pression&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1579,7 +1769,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1591,7 +1783,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed dépression revision 39812898, lexical definition at line 34 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_160071",
@@ -1603,11 +1797,11 @@
       "timestamp": "2025-11-03T12:55:02Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=errer&oldid=39024727",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=errer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1620,7 +1814,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1647,7 +1843,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed errer revision 39024727, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_172704",
@@ -1659,11 +1857,11 @@
       "timestamp": "2026-02-18T10:51:38Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=privil%C3%A8ge&oldid=39310392",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=privil%C3%A8ge&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1676,7 +1874,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1692,7 +1892,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed privilège revision 39310392, lexical definition at line 11 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_174301",
@@ -1704,11 +1906,11 @@
       "timestamp": "2026-08-04T05:31:40Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9f%C3%A9rence&oldid=39776129",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9f%C3%A9rence&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1721,7 +1923,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1733,7 +1937,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed référence revision 39776129, lexical definition at line 10 and French IPA/grammar at line 9 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_176919",
@@ -1745,11 +1951,11 @@
       "timestamp": "2026-10-22T06:19:16Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=souhait&oldid=39951876",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=souhait&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1762,7 +1968,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1774,7 +1982,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed souhait revision 39951876, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_367692",
@@ -1786,11 +1996,11 @@
       "timestamp": "2026-07-06T13:01:49Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gangster&oldid=39653983",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=gangster&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1805,7 +2015,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed gangster revision 39653983, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_39095",
@@ -1817,15 +2029,17 @@
       "timestamp": "2026-10-28T07:20:04Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=invention&oldid=39960673",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=invention&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed invention revision 39960673, lexical definition at line 13 and French IPA/grammar at line 8 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_120866",
@@ -1837,11 +2051,11 @@
       "timestamp": "2026-11-02T20:08:10Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=barque&oldid=39981819",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=barque&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1854,7 +2068,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1866,7 +2082,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed barque revision 39981819, lexical definition at line 11 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_150677",
@@ -1878,11 +2096,11 @@
       "timestamp": "2026-04-12T10:47:25Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cafard&oldid=39440137",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=cafard&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1895,7 +2113,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1927,7 +2147,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed cafard revision 39440137, lexical definition at line 69 and French IPA/grammar at line 68 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_156145",
@@ -1939,11 +2161,11 @@
       "timestamp": "2026-08-25T16:04:24Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=critiquer&oldid=39830030",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=critiquer&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1956,7 +2178,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1972,7 +2196,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed critiquer revision 39830030, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_157344",
@@ -1984,11 +2210,11 @@
       "timestamp": "2026-07-31T18:23:20Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9put%C3%A9&oldid=39715799",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9put%C3%A9&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2001,7 +2227,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2012,7 +2240,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed député revision 39715799, lexical definition at line 24 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_170491",
@@ -2024,11 +2254,11 @@
       "timestamp": "2025-08-11T21:51:42Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=parrain&oldid=38519441",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=parrain&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2041,7 +2271,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2053,7 +2285,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed parrain revision 38519441, lexical definition at line 8 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_175207",
@@ -2065,11 +2299,11 @@
       "timestamp": "2026-05-15T12:40:11Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=revivre&oldid=39510647",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=revivre&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2082,7 +2316,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2094,7 +2330,9 @@
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed revivre revision 39510647, lexical definition at line 13 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_178650",
@@ -2106,11 +2344,11 @@
       "timestamp": "2026-11-01T20:44:52Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tracasser&oldid=39975157",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=tracasser&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2123,7 +2361,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2139,7 +2379,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed tracasser revision 39975157, lexical definition at line 15 and French IPA/grammar at line 6 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_354051",
@@ -2151,11 +2393,11 @@
       "timestamp": "2026-10-24T10:21:16Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=radar&oldid=39954977",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=radar&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2175,7 +2417,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed radar revision 39954977, lexical definition at line 13 and French IPA/grammar at line 10 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_995415",
@@ -2187,11 +2431,11 @@
       "timestamp": "2026-11-02T14:10:26Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=soie&oldid=39978038",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=soie&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations. Separately credited original works: Académie française, eighth edition (1932–1935).",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2204,7 +2448,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+          "review_reason": "Original historical edition only: DAF8 collective publication expires conservatively 2006-01-01; original Littré author/work expires conservatively 1952-01-01. Current Wiktionnaire transcription/adaptation remains CC BY-SA 4.0. Bibliography does not prove selected-sentence authorship."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2221,7 +2467,9 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed soie revision 39978038, lexical definition at line 14 and French IPA/grammar at line 7 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     },
     {
       "id": "b160_fr_2763623",
@@ -2233,15 +2481,17 @@
       "timestamp": "2024-11-10T14:49:17Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Sir&oldid=36381831",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=Sir&action=history",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "attribution": "Wiktionnaire contributors (full linked article history and retained contributor registry); Lexique contributors for selection, scoped adaptations and explanatory EN/ZH translations.",
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
-      "author_original_expression_status": "pending_separate_exact_origin_audit"
+      "author_original_expression_status": "pending_separate_exact_origin_audit",
+      "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+      "selected_expression_rights_reason": "Fixed Sir revision 36381831, lexical definition at line 9 and French IPA/grammar at line 8 were inspected separately from quotations, media, etymology and other languages. The accepted lexical adaptation and new EN/ZH explanations use that selected contribution, with credited historical original layers where applicable; no marked protected example or different imported definition enters. Bibliographic references alone do not establish authorship or licence external prose."
     }
   ]
 }

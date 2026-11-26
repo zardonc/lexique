@@ -1,36 +1,45 @@
-# #160 author content shard
+# #160 independent content review
 
-Rows 3951–4000 retain **50 exact frozen groups and 200 sourced FR/IPA/EN/ZH
-candidate fields**, including both frequency strings. Every field is pending
-independent quality and selected-expression rights review; zero fields are
-independently accepted or admitted.
+Rows 3951–4000 retain **50 exact frozen groups and both frequency strings**.
+Independent review accepts **49 everyday groups / 196 FR/IPA/EN/ZH fields**.
+`rex/NOM`, row 3953, remains unresolved with zero accepted fields and four
+missing fields. No annotation or specialist exception is approved.
 
 Scope: [#160](https://github.com/zardonc/lexique/issues/160), parent
-[#78](https://github.com/zardonc/lexique/issues/78). Author checkout:
-`C:/Users/inthe/.t3/worktrees/lexique/t3-768c0b35-40bf988e67dfbf34`, branch `t3/issue-160-content-shard`, integration base
-`0963287ea5ed593cc84215377d62e6db1a072566`.
-Raw evidence and reproducible author helpers: `C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160`.
-[Author verification](author-verification.json) records checks and limitations.
+[#78](https://github.com/zardonc/lexique/issues/78). Reviewed author commit:
+`71b10bb65731dec1cad6796322a67f8101e83a69`; integration/review base:
+`72c389340a5ddb956d7b4394713aeb0b29600348`. Reviewer checkout:
+`C:/Users/inthe/.t3/worktrees/lexique/t3-c745d4c8-f54eb8929cf60985`, branch
+`t3/review-issue160-dictionary`. This reviewer is separate from the author and
+coordinator. [Review verification](review-verification.json) records the checks.
+Retained audit evidence:
+`C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-160-retry`.
 
-[Readable proposals](review-candidates.md), [groups](groups.json),
-[field/use review](field-review.json), [sources](sources.json),
-[fixed excerpts](source-excerpts.json), [context](source-context.json),
-[captures](source-captures.json), [rights](rights.json),
-[selected rights](selected-rights.md), [notices](NOTICES.md) and [COPYING](COPYING)
-provide the complete author handoff. [Admission](admission.json) retains the
-4,087-group denominator, zero newly admitted fields and 200 missing admitted
-fields. [Reuse](reuse.json) records the unchanged core-159-v1 baseline of 3,927
-groups; no #160 group was previously admitted.
+[Groups](groups.json), [field/use decisions](field-review.json),
+[sources](sources.json), [fixed excerpts](source-excerpts.json),
+[context](source-context.json), [captures](source-captures.json),
+[rights](rights.json), [selected rights](selected-rights.md),
+[notices](NOTICES.md) and [COPYING](COPYING) contain the accepted subset.
+[Exact replacements](review-corrections.json) record twelve FR/EN/ZH changes:
+balcony original-expression scope, the French British-title construction,
+Canadian deputy chambers, and the figurative/hyperbolic revivre use.
+Each accepted field retains its source span, proposed/accepted text and reason.
+[Original authored snapshots](authored/README.md) remain byte-identical to the
+reviewed author commit.
 
-No author-identified use blocker remains. [Review attention](content-blockers.json)
-calls out rex's pet/breed use and sir's capitalization. The fixed French Sir
-article supplies the British title and /sœʁ/; the lowercase English-addressing
-article is excluded. [CNRTL corroboration](modern-corroboration.json) retains the
-lowercase French headword and capitalized title without reusing its prose.
-CNRTL returned 404 for rex; the fixed French cat-breed definition remains the
-candidate source. No new specialist or annotation exception is requested.
+Fixed French `Sir` supplies the masculine invariant title and `/sœʁ/`.
+Retained CNRTL independently establishes lowercase French `sir` and the
+capitalized title before a given name. English ordinary polite address and
+French `sire` are excluded; no lookup alias is added. CNRTL prose is not a field.
 
-Independent review, canonical conversion/combined notices, native lookup,
-trusted save/reopen, learner acceptance and release gates remain pending.
-Frontend/Rust/browser checks are unrun: this shard changes neither runtime.
-User learning data and canonical integration files are untouched.
+[Rex proposals](rejected-proposals.json) retain the complete rejected text,
+source/rights decisions and [owner alternatives](content-blockers.json).
+The fixed source describes a breed; the independent dictionary readbacks do
+not establish the proposed ordinary pet use. Detailed-expression origin also
+remains unresolved at the animal-science/breed bibliography boundary.
+
+[Admission](admission.json) separates 196 independently accepted shard fields
+from canonical admission, which remains coordinator-owned. [Reuse](reuse.json)
+retains the unchanged core-159-v1 baseline of 3,927 groups and zero reused groups.
+The global denominator remains 4,087 groups. Native lookup/save/reopen,
+conversion/combined packaging, learner acceptance and release gates are pending.

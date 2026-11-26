@@ -1,9 +1,10 @@
 # Source and modification notices for #160
 
 The Wiktionnaire contribution layer and Lexique's scoped French adaptations and
-new English/Chinese explanations use the proposed [CC BY-SA 4.0](COPYING) route.
-Project source code remains MIT. All 200 fields await independent quality and
-selected-expression rights review.
+new English/Chinese explanations use [CC BY-SA 4.0](COPYING).
+Project source code remains MIT. 196 fields pass independent quality and selected-expression rights review.
+The four rex proposal fields are not admitted; its full proposal and missing
+fields remain in [rejected proposals](rejected-proposals.json).
 
 Exact rows 3951–4000 and both unchanged frequency strings derive from Boris New
 and Christophe Pallier's [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -22,9 +23,9 @@ credit for selection, adaptations and explanatory translations.
 | Article | Fixed revision | Full history | Declared original work |
 | --- | --- | --- | --- |
 | roux | [39952233](https://fr.wiktionary.org/w/index.php?title=roux&oldid=39952233) | [History](https://fr.wiktionary.org/w/index.php?title=roux&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
-| perle | [40039653](https://fr.wiktionary.org/w/index.php?title=perle&oldid=40039653) | [History](https://fr.wiktionary.org/w/index.php?title=perle&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
-| rex | [39911686](https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686) | [History](https://fr.wiktionary.org/w/index.php?title=rex&action=history) | No imported original-work marker identified |
-| balcon | [39774075](https://fr.wiktionary.org/w/index.php?title=balcon&oldid=39774075) | [History](https://fr.wiktionary.org/w/index.php?title=balcon&action=history) | No imported original-work marker identified |
+| perle | [40039653](https://fr.wiktionary.org/w/index.php?title=perle&oldid=40039653) | [History](https://fr.wiktionary.org/w/index.php?title=perle&action=history) | Académie française, eighth edition (1932–1935); Émile Littré, original Dictionnaire de la langue française (1872–1877), conservatively credited at the French reference boundary |
+| rex | [39911686](https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686) | [History](https://fr.wiktionary.org/w/index.php?title=rex&action=history) | Unadmitted proposal; animal-science and breed bibliography origin unresolved |
+| balcon | [39774075](https://fr.wiktionary.org/w/index.php?title=balcon&oldid=39774075) | [History](https://fr.wiktionary.org/w/index.php?title=balcon&action=history) | Académie française, eighth edition (1935), article A8B0140, tome 1 page 117; original projecting-platform/balustrade expression independently compared |
 | terrasse | [39988051](https://fr.wiktionary.org/w/index.php?title=terrasse&oldid=39988051) | [History](https://fr.wiktionary.org/w/index.php?title=terrasse&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | attrape | [38787442](https://fr.wiktionary.org/w/index.php?title=attrape&oldid=38787442) | [History](https://fr.wiktionary.org/w/index.php?title=attrape&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | effectuer | [40037060](https://fr.wiktionary.org/w/index.php?title=effectuer&oldid=40037060) | [History](https://fr.wiktionary.org/w/index.php?title=effectuer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
@@ -52,7 +53,7 @@ credit for selection, adaptations and explanatory translations.
 | habillé | [39813193](https://fr.wiktionary.org/w/index.php?title=habill%C3%A9&oldid=39813193) | [History](https://fr.wiktionary.org/w/index.php?title=habill%C3%A9&action=history) | No imported original-work marker identified |
 | situer | [39717667](https://fr.wiktionary.org/w/index.php?title=situer&oldid=39717667) | [History](https://fr.wiktionary.org/w/index.php?title=situer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | pirate | [39551220](https://fr.wiktionary.org/w/index.php?title=pirate&oldid=39551220) | [History](https://fr.wiktionary.org/w/index.php?title=pirate&action=history) | No imported original-work marker identified |
-| officiellement | [39773928](https://fr.wiktionary.org/w/index.php?title=officiellement&oldid=39773928) | [History](https://fr.wiktionary.org/w/index.php?title=officiellement&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| officiellement | [39773928](https://fr.wiktionary.org/w/index.php?title=officiellement&oldid=39773928) | [History](https://fr.wiktionary.org/w/index.php?title=officiellement&action=history) | Académie française, eighth edition (1932–1935); Émile Littré, original Dictionnaire de la langue française (1872–1877), conservatively credited at the French reference boundary |
 | pou | [39962228](https://fr.wiktionary.org/w/index.php?title=pou&oldid=39962228) | [History](https://fr.wiktionary.org/w/index.php?title=pou&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | dépression | [39812898](https://fr.wiktionary.org/w/index.php?title=d%C3%A9pression&oldid=39812898) | [History](https://fr.wiktionary.org/w/index.php?title=d%C3%A9pression&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | errer | [39024727](https://fr.wiktionary.org/w/index.php?title=errer&oldid=39024727) | [History](https://fr.wiktionary.org/w/index.php?title=errer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |

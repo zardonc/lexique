@@ -1,0 +1,116 @@
+{
+  "reviewer": "Independent issue-160 field/use and selected-expression rights reviewer on t3/review-issue160-dictionary; separate from author and coordinator",
+  "replacements": [
+    {
+      "frozen_row": 3959,
+      "headword": "balcon",
+      "sense_id": "b160-3959-balcon-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Plate-forme en saillie sur la façade d’un bâtiment, bordée d’une balustrade et accessible depuis l’intérieur.",
+      "accepted_text": "Plate-forme en saillie sur la façade d’un bâtiment, entourée d’une balustrade.",
+      "reason": "Concrete projecting building platform with a balustrade. Accepted wording keeps the common core also attested in the original 1935 definition; interior-access wording is omitted from the accepted adaptation."
+    },
+    {
+      "frozen_row": 3959,
+      "headword": "balcon",
+      "sense_id": "b160-3959-balcon-nom-selected",
+      "field": "english",
+      "proposed_text": "A balcony: a platform projecting from a building’s façade, enclosed by a railing and accessible from inside.",
+      "accepted_text": "A balcony: a platform projecting from a building’s façade, enclosed by a railing.",
+      "reason": "Concrete projecting building platform with a balustrade. Accepted wording keeps the common core also attested in the original 1935 definition; interior-access wording is omitted from the accepted adaptation."
+    },
+    {
+      "frozen_row": 3959,
+      "headword": "balcon",
+      "sense_id": "b160-3959-balcon-nom-selected",
+      "field": "chinese",
+      "proposed_text": "阳台：从建筑外墙凸出、四周设有栏杆并与室内相通的平台。",
+      "accepted_text": "阳台：从建筑外墙凸出、四周设有栏杆的平台。",
+      "reason": "Concrete projecting building platform with a balustrade. Accepted wording keeps the common core also attested in the original 1935 definition; interior-access wording is omitted from the accepted adaptation."
+    },
+    {
+      "frozen_row": 3971,
+      "headword": "sir",
+      "sense_id": "b160-3971-sir-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Titre porté par les chevaliers et les baronnets en Grande-Bretagne.",
+      "accepted_text": "Titre porté par les chevaliers et les baronnets en Grande-Bretagne, placé devant leur prénom.",
+      "reason": "French masculine invariant borrowing for the title of knights/baronets, before a given name. Fixed Sir supplies the title and /sœʁ/; retained CNRTL independently labels lowercase sir nom masculin and shows lower/uppercase title use. Ordinary English polite address is excluded."
+    },
+    {
+      "frozen_row": 3971,
+      "headword": "sir",
+      "sense_id": "b160-3971-sir-nom-selected",
+      "field": "english",
+      "proposed_text": "Sir, the title borne by knights and baronets in Great Britain.",
+      "accepted_text": "Sir: the British title used before a knight’s or baronet’s given name; not the general polite English form of address.",
+      "reason": "French masculine invariant borrowing for the title of knights/baronets, before a given name. Fixed Sir supplies the title and /sœʁ/; retained CNRTL independently labels lowercase sir nom masculin and shows lower/uppercase title use. Ordinary English polite address is excluded."
+    },
+    {
+      "frozen_row": 3971,
+      "headword": "sir",
+      "sense_id": "b160-3971-sir-nom-selected",
+      "field": "chinese",
+      "proposed_text": "Sir，英国授予爵士及从男爵的称号。",
+      "accepted_text": "Sir：英国骑士和从男爵所用的称号，置于其名字前；此处不指普通敬称“先生”。",
+      "reason": "French masculine invariant borrowing for the title of knights/baronets, before a given name. Fixed Sir supplies the title and /sœʁ/; retained CNRTL independently labels lowercase sir nom masculin and shows lower/uppercase title use. Ordinary English polite address is excluded."
+    },
+    {
+      "frozen_row": 3992,
+      "headword": "député",
+      "sense_id": "b160-3992-député-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "En France ou au Canada, personne élue à la chambre basse ou unique d’un parlement ; sous la Ve République française, membre de l’Assemblée nationale.",
+      "accepted_text": "Personne élue à la chambre basse ou unique d’un parlement : en France, membre de l’Assemblée nationale sous la Ve République ; au Canada, membre de la Chambre des communes ou d’une assemblée législative provinciale ou territoriale.",
+      "reason": "Masculine elected representative in France/Canada; accepted meanings explicitly retain French National Assembly and Canadian Commons/provincial/territorial legislatures."
+    },
+    {
+      "frozen_row": 3992,
+      "headword": "député",
+      "sense_id": "b160-3992-député-nom-selected",
+      "field": "english",
+      "proposed_text": "In France or Canada, an elected member of a parliament’s lower or single chamber; under France’s Fifth Republic, a member of the National Assembly.",
+      "accepted_text": "An elected member of a parliament’s lower or single chamber: in France’s Fifth Republic, the National Assembly; in Canada, the House of Commons or a provincial or territorial legislature.",
+      "reason": "Masculine elected representative in France/Canada; accepted meanings explicitly retain French National Assembly and Canadian Commons/provincial/territorial legislatures."
+    },
+    {
+      "frozen_row": 3992,
+      "headword": "député",
+      "sense_id": "b160-3992-député-nom-selected",
+      "field": "chinese",
+      "proposed_text": "在法国或加拿大，指议会下院或一院制议会的民选议员；在法国第五共和国，指国民议会议员。",
+      "accepted_text": "议会下院或一院制议会的民选议员：在法国第五共和国，指国民议会议员；在加拿大，指联邦众议院议员或省、地区立法机构的议员。",
+      "reason": "Masculine elected representative in France/Canada; accepted meanings explicitly retain French National Assembly and Canadian Commons/provincial/territorial legislatures."
+    },
+    {
+      "frozen_row": 3998,
+      "headword": "revivre",
+      "sense_id": "b160-3998-revivre-ver-selected",
+      "field": "french_definition",
+      "proposed_text": "Au figuré, retrouver des forces, de l’espoir ou de la joie.",
+      "accepted_text": "Au figuré et par exagération, retrouver des forces, de l’espoir ou de la joie.",
+      "reason": "Figurative and hyperbolic intransitive recovery of strength/hope/joy; causative faire revivre remains intransitive, excluding literal resurrection and transitive reliving."
+    },
+    {
+      "frozen_row": 3998,
+      "headword": "revivre",
+      "sense_id": "b160-3998-revivre-ver-selected",
+      "field": "english",
+      "proposed_text": "Figuratively, to feel alive again by regaining strength, hope or joy.",
+      "accepted_text": "Figuratively and hyperbolically, to feel alive again by regaining strength, hope or joy.",
+      "reason": "Figurative and hyperbolic intransitive recovery of strength/hope/joy; causative faire revivre remains intransitive, excluding literal resurrection and transitive reliving."
+    },
+    {
+      "frozen_row": 3998,
+      "headword": "revivre",
+      "sense_id": "b160-3998-revivre-ver-selected",
+      "field": "chinese",
+      "proposed_text": "比喻：恢复力量、希望或快乐；重新焕发生机。",
+      "accepted_text": "比喻、夸张用法：恢复力量、希望或快乐；重新焕发生机。",
+      "reason": "Figurative and hyperbolic intransitive recovery of strength/hope/joy; causative faire revivre remains intransitive, excluding literal resurrection and transitive reliving."
+    }
+  ],
+  "rejected_rows": [
+    3953
+  ]
+}
