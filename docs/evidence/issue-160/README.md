@@ -26,6 +26,9 @@ Canadian deputy chambers, and the figurative/hyperbolic revivre use.
 Each accepted field retains its source span, proposed/accepted text and reason.
 [Original authored snapshots](authored/README.md) remain byte-identical to the
 reviewed author commit.
+The archived notices and selected-rights prose retain their original relative links at the
+issue-160 root. Current [notices](NOTICES.md) and [selected rights](selected-rights.md)
+provide the active links; the two captured originals are byte-preserved source documents.
 
 Fixed French `Sir` supplies the masculine invariant title and `/sœʁ/`.
 Retained CNRTL independently establishes lowercase French `sir` and the

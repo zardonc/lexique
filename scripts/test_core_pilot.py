@@ -17,22 +17,23 @@ FIELD_NAMES = {"french_definition": "definition_fr", "ipa": "ipa", "english": "m
 
 
 class CorePilotPreparationTests(unittest.TestCase):
-    def test_batches_120_through_159_match_the_frozen_membership_in_the_produced_core(self):
+    def test_batches_120_through_162_match_the_frozen_membership_in_the_produced_core(self):
         with (RESOURCE / "scope-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
             scope = list(csv.DictReader(handle))
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "prepared"
             report = prepare(output)
-            self.assertEqual(report["admission"]["accepted_groups"], 3927)
-            self.assertEqual(report["admission"]["complete_fields"], 15708)
+            self.assertEqual(report["admission"]["accepted_groups"], 4062)
+            self.assertEqual(report["admission"]["complete_fields"], 16248)
             with closing(sqlite3.connect(output / "core.sqlite3")) as connection:
-                for issue in range(120, 160):
+                for issue in range(120, 163):
                     first = 1951 + (issue - 120) * 50
                     batch = next(item for item in report["content_batches"] if item["issue"] == issue)
-                    annotations = {132: [2560], 133: [2626], 136: [2792], 142: [3098], 156: [3783], 158: [3885], 159: [3922, 3944]}.get(issue, [])
+                    annotations = {132: [2560], 133: [2626], 136: [2792], 142: [3098], 156: [3783], 158: [3885], 159: [3922, 3944], 160: [3953], 162: [4057]}.get(issue, [])
+                    target = min(50, len(scope) - first + 1)
                     self.assertEqual((batch["accepted_groups"], batch["complete_fields"],
                                       batch["reused_pilot_groups"], batch["annotation_exception_groups"]),
-                                     (50 - len(annotations), (50 - len(annotations)) * 4, 0, len(annotations)))
+                                     (target - len(annotations), (target - len(annotations)) * 4, 0, len(annotations)))
                     senses = [json.loads(row[0]) for row in connection.execute(
                         "SELECT payload FROM senses WHERE frozen_row BETWEEN ? AND ? ORDER BY frozen_row,sense_index",
                         (first, first + 49))]
@@ -139,7 +140,7 @@ class CorePilotPreparationTests(unittest.TestCase):
             report = prepare(output)
             admission = report["admission"]
             self.assertEqual((admission["accepted_groups"], admission["complete_fields"],
-                              admission["annotation_exception_groups"]), (3927, 15708, 23))
+                              admission["annotation_exception_groups"]), (4062, 16248, 25))
             batch = next(row for row in report["content_batches"] if row["issue"] == 87)
             self.assertEqual((batch["target_groups"], batch["accepted_groups"], batch["complete_fields"],
                               batch["annotation_exception_groups"], batch["scope_acceptance"]),
@@ -158,13 +159,14 @@ class CorePilotPreparationTests(unittest.TestCase):
                                                         (2560, "oublie", "NOM"), (2626, "r", "ADV"),
                                                         (2792, "man", "NOM"), (3098, "damoiseau", "NOM"),
                                                         (3783, "ya", "NOM"), (3885, "cm", "NOM"),
-                                                        (3922, "haver", "VER"), (3944, "da", "ONO")])
+                                                        (3922, "haver", "VER"), (3944, "da", "ONO"),
+                                                        (3953, "rex", "NOM"), (4057, "ais", "NOM")])
             self.assertTrue(all(set(row["incomplete_fields"]) == set(FIELD_NAMES) for row in annotations))
             self.assertEqual(annotations[1]["annotation_exception_decision"]["issue"],
                              "https://github.com/zardonc/lexique/issues/87")
             self.assertEqual((coverage["denominator_groups"], coverage["denominator_headwords"],
                               coverage["complete_groups"], coverage["remaining_unaccepted_groups"],
-                              coverage["remaining_groups"]), (4087, 3773, 3924, 160, 163))
+                              coverage["remaining_groups"]), (4087, 3773, 4059, 25, 28))
 
     def test_annotations_reject_wrong_binding_approval_or_field_count(self):
         for change in ("missing", "duplicate", "row", "headword", "pos", "owner", "issue", "fields"):
@@ -192,14 +194,15 @@ class CorePilotPreparationTests(unittest.TestCase):
                 self.assertFalse((Path(temporary) / "output/core.sqlite3").exists())
 
     def test_annotation_approval_dates_match_the_owner_decision_cohort(self):
-        self.assertEqual(len(ANNOTATIONS), 23)
+        self.assertEqual(len(ANNOTATIONS), 25)
         for entry in ANNOTATIONS:
             self.assertEqual(len(entry), 5)
             self.assertRegex(entry[4], r"^\d{4}-\d{2}-\d{2}$")
         for index, wrong_date in ((0, "2026-11-19"), (14, "2026-11-18"),
                                   (15, "2026-11-19"), (16, "2026-11-19"), (17, "2026-11-19"),
                                   (18, "2026-11-21"), (19, "2026-11-21"), (20, "2026-11-21"),
-                                  (21, "2026-11-21"), (22, "2026-11-21")):
+                                  (21, "2026-11-21"), (22, "2026-11-21"),
+                                  (23, "2026-11-23"), (24, "2026-11-23")):
             with self.subTest(index=index), tempfile.TemporaryDirectory() as temporary:
                 source = Path(temporary) / "inputs"
                 shutil.copytree(RESOURCE, source)
@@ -288,9 +291,9 @@ class CorePilotPreparationTests(unittest.TestCase):
             self.assertEqual(unresolved["complete_fields"], 0)
             self.assertEqual(unresolved["incomplete_fields"], list(FIELD_NAMES))
             self.assertEqual(unresolved["everyday_sense_status"], "unresolved")
-            self.assertEqual(report["admission"]["accepted_groups"], 3927)
-            self.assertEqual(report["admission"]["complete_fields"], 15708)
-            self.assertEqual(report["admission"]["remaining_unaccepted_groups"], 160)
+            self.assertEqual(report["admission"]["accepted_groups"], 4062)
+            self.assertEqual(report["admission"]["complete_fields"], 16248)
+            self.assertEqual(report["admission"]["remaining_unaccepted_groups"], 25)
 
     def test_first_content_batch_keeps_all_fifty_frozen_word_pos_pairs(self):
         expected = [
@@ -375,12 +378,12 @@ class CorePilotPreparationTests(unittest.TestCase):
             self.assertEqual(gap["incomplete_fields"], [])
             self.assertEqual(gap["incomplete_requirements"], ["modern_everyday_sense"])
             self.assertIn("psychoanalytic", gap["reason"])
-            self.assertEqual(coverage["accepted_groups"], 3927)
-            self.assertEqual(coverage["remaining_unaccepted_groups"], 160)
+            self.assertEqual(coverage["accepted_groups"], 4062)
+            self.assertEqual(coverage["remaining_unaccepted_groups"], 25)
             self.assertEqual(coverage["approved_specialist_exception_groups"], 3)
             self.assertEqual(report["admission"]["everyday_sense_review"], "incomplete")
             self.assertEqual(report["admission"]["selected_scope_acceptance"], "passed")
-            self.assertEqual(report["admission"]["accepted_groups"], 3927)
+            self.assertEqual(report["admission"]["accepted_groups"], 4062)
             self.assertEqual(report["first_release"], "incomplete")
 
     def test_missing_unapproved_or_wrongly_bound_specialist_exception_fails_admission(self):
@@ -454,9 +457,9 @@ class CorePilotPreparationTests(unittest.TestCase):
             second = prepare(root / "second")
             self.assertEqual(report["sqlite_sha256"], second["sqlite_sha256"])
             self.assertEqual((root / "first/core.sqlite3").read_bytes(), (root / "second/core.sqlite3").read_bytes())
-            self.assertEqual(report["admission"]["complete_groups"], 3924)
-            self.assertEqual(report["admission"]["complete_fields"], 15708)
-            self.assertEqual(report["admission"]["remaining_groups"], 163)
+            self.assertEqual(report["admission"]["complete_groups"], 4059)
+            self.assertEqual(report["admission"]["complete_fields"], 16248)
+            self.assertEqual(report["admission"]["remaining_groups"], 28)
             curated = json.loads((root / "first/curated-inputs.json").read_text(encoding="utf-8"))
             material_limits = " ".join(curated["material_limits"])
             admission = report["admission"]
@@ -521,7 +524,7 @@ class CorePilotPreparationTests(unittest.TestCase):
                 measurements["read_only_sqlite_bytes"] + expected_bundled,
             )
             coverage = json.loads((root / "first/coverage.json").read_text(encoding="utf-8"))
-            self.assertEqual(len(coverage["incomplete_groups"]), 163)
+            self.assertEqual(len(coverage["incomplete_groups"]), 28)
             self.assertTrue(all(set(group["incomplete_fields"]) == set(FIELD_NAMES)
                                 for group in coverage["incomplete_groups"] if group["frozen_row"] not in {34, 128, 3128}))
             self.assertIn("COPYING", report["inputs"])
