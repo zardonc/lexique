@@ -1,0 +1,38 @@
+{
+  "ticket": 161,
+  "kind": "author_checks_not_independent_review",
+  "base_commit": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "platform": "Windows x64, PowerShell 7",
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-161",
+  "delivery_commit_pointer": "delivery.json in author_evidence_root",
+  "commands": [
+    {
+      "command": "uv run python scripts/test_core_batch_161.py",
+      "status": "passed",
+      "tests": 5,
+      "log": "final-author-tests.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "tdd": {
+    "membership": ["red-membership.log", "green-membership.log"],
+    "rights": ["red-rights.log", "green-rights.log"],
+    "notices": ["red-notices.log", "green-notices.log"]
+  },
+  "source_capture": "50 first-party fixed revisions, complete contributor chains, retained raw bytes; recovered from HTTP 429 with retained failure and successful capture-retry logs",
+  "independent_quality": "pending",
+  "independent_selected_expression_rights": "pending",
+  "canonical_conversion_and_combined_packaging": "coordinator_owned_not_run",
+  "native_lookup_save_and_reopen": "coordinator_owned_not_run",
+  "frontend_and_rust_checks": "not_run_no_runtime_change",
+  "known_author_content_blockers": []
+}
