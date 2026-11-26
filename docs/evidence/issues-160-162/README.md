@@ -30,6 +30,8 @@ Initial integration checks found stale coverage prose/row-bound assertions and r
 
 ## Release boundaries
 
+The [final independent Standards and Spec review](final-review.md) found no blocking findings. The sole P3 fixture-duplication advisory is corrected; nine #160 tests and three helper tests passed afterward.
+
 The [PR](https://github.com/zardonc/lexique/pull/220) closes #160–#162 and relates to #78. Learner acceptance, other-platform native execution, clean-machine/whole-machine offline and formal release remain unrun; CEFR remains unknown. The annotated fields remain missing. #78 stays open.
 
 Resource rollback restores the previous read-only core; saved learner digests retain their original resource versions. This package uses schema 21, while the old core-159-v1 executable uses schema 20: binary rollback needs a compatible pre-upgrade backup or its separately preserved old data directory. Do not open the upgraded learner database with the old executable.

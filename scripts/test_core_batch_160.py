@@ -3,10 +3,10 @@ import csv
 import json
 from pathlib import Path
 import shutil
-import tempfile
 import unittest
 
 from core_batch_test_helpers import (
+    assert_core_load_inputs_rejected,
     verify_archived_contributor_captures,
     verify_archived_source_captures,
 )
@@ -103,13 +103,13 @@ class Batch160Tests(unittest.TestCase):
         self.assertEqual(len(blockers["blockers"][0]["owner_alternatives"]), 3)
 
     def test_converter_rejects_author_proposals_without_independent_review(self):
-        with tempfile.TemporaryDirectory(prefix="lexique-160-admission-") as temporary:
-            stage = Path(temporary)
-            for name in (*MATERIALS, "input-checksums.json"):
-                shutil.copyfile(RESOURCE / name, stage / name)
+        def replace_review(stage):
             shutil.copyfile(EVIDENCE / "authored/field-review.json", stage / "field-review.json")
-            with self.assertRaisesRegex(ValueError, "A separate independent field review is required"):
-                load_inputs(stage)
+
+        assert_core_load_inputs_rejected(
+            self, RESOURCE, MATERIALS, load_inputs, replace_review,
+            "A separate independent field review is required", "lexique-160-admission-"
+        )
 
     def test_exact_frozen_groups_retain_accepted_content_or_explicit_gaps(self):
         if (EVIDENCE / "groups.json").exists():
