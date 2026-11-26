@@ -2,7 +2,7 @@
   "ticket": 162,
   "parent": 78,
   "schema": "lexique-d2-content-candidate-handoff-1",
-  "status": "authored_candidates_pending_separate_independent_review",
+  "status": "independently_reviewed_partial_content_shard",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     4051,
@@ -48,16 +48,16 @@
   "proposed_senses": 37,
   "proposed_fields": 148,
   "source_count": 38,
-  "independently_accepted_new_groups": 0,
-  "independently_accepted_new_fields": 0,
-  "independent_reviewer": null,
-  "resource_admission": "pending_separate_independent_review",
+  "independently_accepted_new_groups": 36,
+  "independently_accepted_new_fields": 144,
+  "independent_reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
+  "resource_admission": "36_groups_eligible_one_ordinary_group_blocked_coordinator_conversion_pending",
   "unresolved_field_blockers": [
     {
       "frozen_row": 4057,
       "headword": "ais",
       "lexique_cgram": "NOM",
-      "reason": "The exact French noun’s wooden-board definition is explicitly vieilli. Other senses are bookbinding-specific, historical or rare; no eligible modern everyday NOM use is established.",
+      "reason": "The masculine invariant noun and old wooden-board meaning are accurately represented, but fixed line 19 says vieilli. Contemporary corroboration establishes only technical bookbinding, not an everyday noun use; all four fields fail frozen ordinary-scope eligibility.",
       "source_title": "ais",
       "lines_1_based": [
         15,
@@ -70,7 +70,7 @@
         51
       ],
       "required_resolution": "Evidence establishing an exact modern everyday NOM use, or a separate explicit owner scope decision. Planche is an explanatory alternative, not a replacement for the frozen group. No exception is approved.",
-      "status": "unresolved_modern_everyday_use",
+      "status": "blocked_unresolved_modern_everyday_use",
       "owner_exception_approved": false,
       "pending_fields": [
         "french_definition",
@@ -118,54 +118,69 @@
       "plausible_alternatives": [
         "An independently licensed source establishing contemporary everyday use of this exact ais/NOM group.",
         "An explicit owner decision for a scoped specialist use or zero-field annotation, neither currently authorized."
+      ],
+      "independent_review": "rejected_frozen_scope",
+      "reviewer": "Independent issue 162 field/use and selected-rights reviewer on t3/review-issue-162-shard; separate from author and integration owner",
+      "modern_corroboration": "modern-corroboration.json",
+      "field_blockers": [
+        {
+          "frozen_row": 4057,
+          "headword": "ais",
+          "pos": "NOM",
+          "field": "french_definition",
+          "status": "blocked_unresolved_modern_everyday_use",
+          "owner_exception_approved": false,
+          "reason": "The fixed definition is explicitly vieilli; no modern everyday noun definition was established."
+        },
+        {
+          "frozen_row": 4057,
+          "headword": "ais",
+          "pos": "NOM",
+          "field": "ipa",
+          "status": "blocked_unresolved_modern_everyday_use",
+          "owner_exception_approved": false,
+          "reason": "The recorded /ɛ/ fits the old noun and bookbinding uses, but no eligible everyday selected sense exists to bind an admitted pronunciation."
+        },
+        {
+          "frozen_row": 4057,
+          "headword": "ais",
+          "pos": "NOM",
+          "field": "english",
+          "status": "blocked_unresolved_modern_everyday_use",
+          "owner_exception_approved": false,
+          "reason": "The accurate old-fashioned-board explanation remains ineligible; dropping old-fashioned would misrepresent the fixed source."
+        },
+        {
+          "frozen_row": 4057,
+          "headword": "ais",
+          "pos": "NOM",
+          "field": "chinese",
+          "status": "blocked_unresolved_modern_everyday_use",
+          "owner_exception_approved": false,
+          "reason": "The accurate 旧用词：木板 explanation remains ineligible; removing 旧用词 would misrepresent the fixed source."
+        }
+      ],
+      "owner_decision_options": [
+        {
+          "option": "zero_field_annotation",
+          "authorized": false,
+          "impact": "Keep exact row 4057 ais/NOM and both 10.14 frequencies, zero senses and four missing fields; count a 24th annotation only after explicit owner approval. No new specialist content or alias."
+        },
+        {
+          "option": "scoped_bookbinding_specialist",
+          "authorized": false,
+          "impact": "Consider the fixed French line-45 noun: wood cover boards covered in skin or cloth for medieval bindings, with /ɛ/, masculine/invariant and explicitly bookbinding scope. Contemporary Académie/Robert corroboration is specialist only. Four new matched meanings and exact selected-origin/rights review are required before admission; external dictionary wording has no redistribution permission here. Do not replace the row with planche or select Maire's quoted line 49 automatically."
+        }
       ]
     }
   ],
   "reused_groups": 0,
   "reused_fields": 0,
-  "pending_independent_review_rows": [
-    4051,
-    4052,
-    4053,
-    4054,
-    4055,
-    4056,
-    4057,
-    4058,
-    4059,
-    4060,
-    4061,
-    4062,
-    4063,
-    4064,
-    4065,
-    4066,
-    4067,
-    4068,
-    4069,
-    4070,
-    4071,
-    4072,
-    4073,
-    4074,
-    4075,
-    4076,
-    4077,
-    4078,
-    4079,
-    4080,
-    4081,
-    4082,
-    4083,
-    4084,
-    4085,
-    4086,
-    4087
-  ],
-  "independent_quality": "pending",
-  "selected_span_rights": "pending",
-  "construction_and_spelling_review": "pending",
-  "final_output_validation": "author_resource_boundary_check_only",
+  "pending_independent_review_rows": [],
+  "independent_quality": "complete_144_eligible_4_rejected_scope_fields",
+  "selected_span_rights": "passed_148_reviewed_texts_144_admission_eligible",
+  "construction_and_spelling_review": "complete",
+  "final_output_validation": "passed_focused_shard_source_docs_diff_and_preservation_checks",
   "native_checks": "integration_owned_not_run",
   "conversion_and_packaging": "integration_owned_not_run",
   "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\author-evidence\\issue-162",
@@ -194,7 +209,6 @@
     "b162_fr_173468",
     "b162_fr_177052",
     "b162_fr_9200",
-    "b162_fr_11370",
     "b162_fr_55898",
     "b162_fr_154691",
     "b162_fr_170648",
@@ -210,12 +224,20 @@
   ],
   "ordinary_everyday_candidate_groups": 36,
   "blocked_research_candidate_groups": 1,
-  "pending_independent_review_fields": 148,
-  "pending_independent_rights_fields": 148,
+  "pending_independent_review_fields": 0,
+  "pending_independent_rights_fields": 0,
   "author_semantic_scope_check": "All 37 research uses and 148 fields are bound to captured French definition, POS and written IPA. Thirty-six groups have modern everyday candidates. Ais retains an explicitly old-fashioned wooden-board proposal and unresolved everyday eligibility.",
-  "missing_admitted_fields": 148,
+  "missing_admitted_fields": 4,
   "learner_acceptance": "not_run",
   "blocked_research_candidate_fields": 4,
   "author_complete_against_everyday_requirement": false,
-  "author_original_expression_status": "pending_separate_exact_origin_audit"
+  "author_original_expression_status": "pending_separate_exact_origin_audit",
+  "independently_reviewed_fields": 148,
+  "rejected_new_groups": 1,
+  "rejected_new_fields": 4,
+  "eligible_unchanged_fields": 135,
+  "eligible_replaced_fields": 9,
+  "reviewer_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162",
+  "reviewed_author_sha": "c0dac315eef979742b27c37a0f11c859c20d2b1f",
+  "original_expression_status": "resolved_at_selected_boundary"
 }

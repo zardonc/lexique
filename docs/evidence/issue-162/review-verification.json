@@ -1,0 +1,87 @@
+{
+  "ticket": 162,
+  "reviewer_branch": "t3/review-issue-162-shard",
+  "reviewed_checkout": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\t3-67852fe6-206c6fca89ebbfc5",
+  "author_sha": "c0dac315eef979742b27c37a0f11c859c20d2b1f",
+  "diff_base": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "review_scope": "committed author shard plus retained scoped working-tree review patch; final delivered SHA is recorded after commit in the external closeout",
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162",
+  "platform": "Windows x64, PowerShell 7, uv Python 3.14",
+  "eligible_groups": 36,
+  "eligible_fields": 144,
+  "rejected_groups": 1,
+  "rejected_fields": 4,
+  "exact_replacements": 9,
+  "new_exception_approvals": 0,
+  "checks": [
+    {
+      "command": "uv run --no-project python -X utf8 -m unittest discover -s scripts -p test_core_batch_162.py -v",
+      "status": "passed",
+      "tests": 10,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162\\reviewed-tests.log"
+    },
+    {
+      "command": "uv run --no-project python -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162\\inspect_evidence.py C:\\Users\\inthe\\.t3\\worktrees\\lexique\\t3-67852fe6-206c6fca89ebbfc5",
+      "status": "passed",
+      "source_audit": {
+        "raw_api_byte_equal_sources": 38,
+        "selected_spans": 148,
+        "selected_and_supporting_span_occurrences": 736,
+        "live_eligible_fields": 144,
+        "policy_api_checks": [
+          {
+            "pageid": 11150,
+            "revid": 38903168,
+            "byte_equal": false,
+            "normalized_text_equal": true
+          },
+          {
+            "pageid": 273395,
+            "revid": 22113837,
+            "byte_equal": false,
+            "normalized_text_equal": true
+          }
+        ],
+        "contributor_responses": 8,
+        "complete_chains": 5,
+        "title_registries": 38,
+        "named_credits": 2008,
+        "anonymous_counts": 299,
+        "status": "passed",
+        "reviewed_checkout": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\t3-67852fe6-206c6fca89ebbfc5",
+        "author_sha": "c0dac315eef979742b27c37a0f11c859c20d2b1f"
+      }
+    },
+    {
+      "command": "uv run --no-project python -X utf8 C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162\\check_preservation.py C:\\Users\\inthe\\.t3\\worktrees\\lexique\\t3-67852fe6-206c6fca89ebbfc5",
+      "status": "passed",
+      "authored_files_byte_preserved": 18,
+      "frozen_groups_preserved": 37,
+      "canonical_and_shared_paths_unchanged": true
+    },
+    {
+      "command": "pwsh -NoProfile -File scripts/check-docs.ps1",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162\\docs-check.log"
+    },
+    {
+      "command": "git diff --check and git diff --cached --check",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162\\diff-check.log"
+    }
+  ],
+  "red_regression": {
+    "status": "expected_failure_before_review",
+    "reason": "Author package reports 0 independently accepted groups/fields rather than reviewed 36/144",
+    "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162\\red-review-admission.log"
+  },
+  "post_commit_sha_binding": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-160-162\\context\\reviewer-evidence\\issue-162\\closeout.json",
+  "unrun": [
+    "Canonical conversion and combined packaging",
+    "Native lookup/save/reopen and integration",
+    "Frontend lint/typecheck/build and Rust checks: no runtime changes",
+    "Learner acceptance and whole-core/release gates"
+  ],
+  "retained_full_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-162/review-full.patch",
+  "retained_test_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-162/review-tests.patch"
+}

@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany the reviewed shard.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,13 +14,14 @@ Rows 4051–4087 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected sense is eligible in each of 36 groups; ais/NOM retains no
+admitted sense. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
-aliases. [Readable proposals](review-candidates.md) retain every exact field and
+aliases. [Readable content](review-candidates.md) retains every exact field and
 the selected and excluded uses.
 
 ## Article credits
@@ -65,7 +66,7 @@ are credited for selection, French adaptation and the new English/Chinese text.
 | quelconque | [39844961](https://fr.wiktionary.org/w/index.php?title=quelconque&oldid=39844961) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=quelconque&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | spécialité | [39554254](https://fr.wiktionary.org/w/index.php?title=sp%C3%A9cialit%C3%A9&oldid=39554254) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=sp%C3%A9cialit%C3%A9&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | artistique | [39773996](https://fr.wiktionary.org/w/index.php?title=artistique&oldid=39773996) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=artistique&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
-| explorer | [39004604](https://fr.wiktionary.org/w/index.php?title=explorer&oldid=39004604) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=explorer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| explorer | [39004604](https://fr.wiktionary.org/w/index.php?title=explorer&oldid=39004604) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=explorer&action=history) | No original-work import marker identified in the selected French section |
 | poignet | [39770863](https://fr.wiktionary.org/w/index.php?title=poignet&oldid=39770863) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=poignet&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | comique | [39657276](https://fr.wiktionary.org/w/index.php?title=comique&oldid=39657276) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=comique&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | paye | [39720781](https://fr.wiktionary.org/w/index.php?title=paye&oldid=39720781) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=paye&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
@@ -76,10 +77,10 @@ are credited for selection, French adaptation and the new English/Chinese text.
 Articles declaring Académie française eighth-edition imports (1932–1935)
 retain original credit separately from the wiki and Lexique adaptation layers.
 [Selected rights](selected-rights.md) records the established collective-work
-basis and its 2006-01-01 expiry. New fields require their own independent review.
-`ais/NOM` retains an explicitly old-fashioned wooden-board proposal
-in the fixed sources. These research candidates are blocked, with no approved
-exception or replacement. All other candidates still require independent review.
+basis and its 2006-01-01 expiry. Selected-expression rights are independently
+reviewed. The explorer DAF8
+marker is in the unselected English noun section. Ais/NOM retains four blocked
+fields with no approved exception; its full proposal is preserved separately.
 
 ## Redistribution obligations
 
@@ -90,5 +91,11 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 148 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 148 proposed texts have separate quality and selected-span rights decisions.
+Only 144 fields in 36 groups are independently eligible; canonical admission
+and combined packaging remain coordinator-owned.
+
+The reviewed FR/EN/ZH changes select the normal baseball format with tie
+extensions, the stick-guided firework rocket and the current French admiral
+rank. IPA is unchanged. Exact text and modifications are recorded in
+[accepted replacements](accepted-replacements.json).
