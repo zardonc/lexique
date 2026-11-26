@@ -1,0 +1,407 @@
+{
+  "status": "passed",
+  "platform": "Windows x64",
+  "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+  "runtime_and_resources_unchanged_since_build": false,
+  "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+  "core": {
+    "version": "core-159-v1",
+    "bytes": 18268160,
+    "sha256": "67f7ecf014d7c47a6872a1be5d3e0954ba39fd3cb279ab65a80c62715dc346f5",
+    "native_limit_bytes": 20000000
+  },
+  "admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 3927,
+    "approved_specialist_exception_groups": 3,
+    "remaining_unaccepted_groups": 160,
+    "annotation_exception_groups": 23,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 3924,
+    "complete_senses": 3927,
+    "complete_fields": 15708,
+    "remaining_groups": 163
+  },
+  "preservation": {
+    "status": "passed",
+    "prior_groups_unchanged": 3431,
+    "prior_fields_unchanged": 13724,
+    "scope_groups": 4087,
+    "new_groups": 496,
+    "content_version": "core-159-v1",
+    "scope_manifest_bytes": "unchanged",
+    "compiled_prior_payloads": "unchanged"
+  },
+  "package": {
+    "archive": "target\\d2-150-159\\final-package\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 49921060,
+    "sha256": "f69dbd9511db2991f26a077ec1434fea6b54789a0445bcc083cea2a775fa9c63",
+    "verified_files": 187
+  },
+  "batch_runs": [
+    {
+      "issue": 150,
+      "frozen_rows": [
+        3451,
+        3500
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-150/core159-final",
+      "checks": [
+        {
+          "check": "Batch #150: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 151,
+      "frozen_rows": [
+        3501,
+        3550
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-151/core159-final",
+      "checks": [
+        {
+          "check": "Batch #151: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 152,
+      "frozen_rows": [
+        3551,
+        3600
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-152/core159-final",
+      "checks": [
+        {
+          "check": "Batch #152: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 153,
+      "frozen_rows": [
+        3601,
+        3650
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-153/core159-final",
+      "checks": [
+        {
+          "check": "Batch #153: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 154,
+      "frozen_rows": [
+        3651,
+        3700
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-154/core159-final",
+      "checks": [
+        {
+          "check": "Batch #154: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 155,
+      "frozen_rows": [
+        3701,
+        3750
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-155/core159-final",
+      "checks": [
+        {
+          "check": "Batch #155: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 156,
+      "frozen_rows": [
+        3751,
+        3800
+      ],
+      "admitted_groups": 49,
+      "admitted_fields": 196,
+      "annotation_groups": 1,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-156/core159-final",
+      "checks": [
+        {
+          "check": "Batch #156: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 49 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 157,
+      "frozen_rows": [
+        3801,
+        3850
+      ],
+      "admitted_groups": 50,
+      "admitted_fields": 200,
+      "annotation_groups": 0,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-157/core159-final",
+      "checks": [
+        {
+          "check": "Batch #157: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 158,
+      "frozen_rows": [
+        3851,
+        3900
+      ],
+      "admitted_groups": 49,
+      "admitted_fields": 196,
+      "annotation_groups": 1,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-158/core159-final",
+      "checks": [
+        {
+          "check": "Batch #158: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 49 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    {
+      "issue": 159,
+      "frozen_rows": [
+        3901,
+        3950
+      ],
+      "admitted_groups": 48,
+      "admitted_fields": 192,
+      "annotation_groups": 2,
+      "specialist_groups": 0,
+      "native_result": "passed",
+      "native_evidence": "target/issue-159/core159-final",
+      "checks": [
+        {
+          "check": "Batch #159: 48 admitted groups / 192 fields match audited content; 2 approved annotation exceptions; 0 reviewed spelling queries; 48 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "binary_sha256": "1f6934912d0bfcda829c156daed52f8baca01e183809a8d720e15acf34d77b03",
+      "build_source_sha": "5fcba9932f74e298d4a798e6eb195faad5f51507",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    }
+  ],
+  "upgrade": {
+    "result": "passed",
+    "evidence": "target/issue-159/upgrade-from-core149",
+    "baseline": "target/issue-149/baseline-core149-v1",
+    "checks": [
+      {
+        "check": "The existing lâche adjective and noun digests remain frozen after the resource update",
+        "status": "passed"
+      },
+      {
+        "check": "New resource version is visible while previous digest, progress and audio remain frozen",
+        "status": "passed"
+      }
+    ]
+  },
+  "rust_tests_passed": 242,
+  "post_review_fixes": {
+    "base_reviewed_sha": "3e3aa4c71c8277522919f2ac395ad1b04c867158",
+    "fix_source_sha": "66b12b514ed21cd1da4393b8c6465c57c7819e53",
+    "runtime_and_resources_unchanged_since_fix_build": true,
+    "binary_sha256": "3ffc6cc987cdd752f0d74ee1e018495ab1477501918366b8ad067c3f3f999d54",
+    "core_version": "core-159-v1",
+    "core_sha256": "1240f403db18f130943000d37782857ca6695a92f60c0776466789a3ddbed2fc",
+    "measurements": {
+      "raw_inputs_bytes": 180797580,
+      "read_only_sqlite_bytes": 18268160,
+      "bundled_materials_bytes": 180896776,
+      "installed_core_bytes_excluding_report": 199164936,
+      "report_json_bytes": 603916,
+      "prepared_core_directory_bytes": 199768852,
+      "native_limit_bytes": 20000000
+    },
+    "package": {
+      "archive": "target\\d2-150-159\\post-review-package\\Lexique-0.1.0-windows-x64-portable.zip",
+      "bytes": 49926877,
+      "installed_bytes": 269347109,
+      "core_installed_bytes": 199768852,
+      "sha256": "ed30cd6feac68c9085c479edc7d236a32659a6d67cf3afbdecfbb884a7295e6b",
+      "verified_files": 187
+    },
+    "checks": {
+      "core_prepare": "passed",
+      "test_core_pilot_passed": 18,
+      "test_core_batch_150_159_passed": 76,
+      "test_core_batch_test_helpers_passed": 3,
+      "test_package_portable_passed": 16,
+      "test_native_d2_fixtures_passed": 2,
+      "lint_typecheck_build": "passed",
+      "cargo_fmt": "passed",
+      "cargo_check": "passed",
+      "rust_test_build": "passed",
+      "rust_tests_passed": 242,
+      "dictionary_links_tests_passed": 2,
+      "desktop_build": "passed",
+      "portable_package": "passed",
+      "native_batches_150_159_passed": 10,
+      "native_upgrade_from_core149": "passed",
+      "docs_check": "passed",
+      "preservation_diff": "passed"
+    },
+    "native_evidence": {
+      "batches": "target/issue-150..159/core159-verified",
+      "upgrade": "target/issue-159/upgrade-from-core149-verified",
+      "baseline": "target/issue-149/baseline-core149-v1",
+      "hard_timeout_seconds": 60,
+      "external_webview_requests": [],
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      }
+    },
+    "native_package_refresh_required": false
+  },
+  "limitations": [
+    "Learner acceptance",
+    "Whole-machine offline denial",
+    "Other-platform native execution",
+    "Full D2 / CEFR",
+    "Formal release acceptance"
+  ]
+}

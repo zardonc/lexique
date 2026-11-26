@@ -1,0 +1,58 @@
+[
+  {
+    "frozen_row": 3676,
+    "headword": "gratter",
+    "pos": "VER",
+    "sense_id": "b154-3676-gratter-ver-selected",
+    "field": "french_definition",
+    "proposed_text": "Racler une surface pour la nettoyer, l’effacer ou la polir (verbe transitif).",
+    "accepted_text": "Racler une surface pour la nettoyer, effacer quelque chose qui s’y trouve ou la polir (verbe transitif).",
+    "proposed_source": {
+      "source_id": "b154_fr_9678",
+      "revid": 39773451,
+      "url": "https://fr.wiktionary.org/w/index.php?title=gratter&oldid=39773451",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=gratter&action=history",
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# [[racler|Racler]] pour [[nettoyer]], pour [[effacer]] ou pour [[polir]]."
+    },
+    "accepted_source": {
+      "source_id": "b154_fr_9678",
+      "revid": 39773451,
+      "url": "https://fr.wiktionary.org/w/index.php?title=gratter&oldid=39773451",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=gratter&action=history",
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# [[racler|Racler]] pour [[nettoyer]], pour [[effacer]] ou pour [[polir]]."
+    },
+    "reason": "Cleaning and polishing apply to the surface; erasure applies to something on it, as the English and Chinese fields correctly state. The exact replacement resolves the proposed l’effacer referent while retaining the three purposes at L8. Transitive gratter selects surface scraping for cleaning/erasure/polish; body scratching is a different sense."
+  },
+  {
+    "frozen_row": 3685,
+    "headword": "musulman",
+    "pos": "NOM",
+    "sense_id": "b154-3685-musulman-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Personne qui pratique la religion musulmane, l’islam (nom masculin ; féminin : musulmane).",
+    "accepted_text": "Adepte de l’islam (nom masculin ; féminin : musulmane).",
+    "proposed_source": {
+      "source_id": "b154_fr_1645418",
+      "revid": 40013958,
+      "url": "https://fr.wiktionary.org/w/index.php?title=musulman&oldid=40013958",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=musulman&action=history",
+      "line_1_based": 70,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|religion|fr}} Adepte de la [[religion]] instaurée par Mahomet."
+    },
+    "accepted_source": {
+      "source_id": "b154_fr_1645418",
+      "revid": 40013958,
+      "url": "https://fr.wiktionary.org/w/index.php?title=musulman&oldid=40013958",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=musulman&action=history",
+      "line_1_based": 70,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{lexique|religion|fr}} Adepte de la [[religion]] instaurée par Mahomet."
+    },
+    "reason": "Adepte de l’islam matches source Adepte and EN/ZH. The proposed pratique requires observance beyond affiliation; the exact replacement removes that narrower implication. Exact musulman/NOM is a masculine adherent of Islam; the feminine musulmane is attested. Adherence, not nationality or a minimum level of religious practice, defines this person noun."
+  }
+]

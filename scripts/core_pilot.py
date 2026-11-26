@@ -15,25 +15,28 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources/core-pilot-79"
 ANNOTATIONS = (
-    (87, "quoi", "ADJ", 82), (305, "dont", "PRO:int", 87),
-    (816, "t", "PRO:per", 97), (849, "c", "PRO:dem", 97),
-    (859, "l", "ART:def", 98), (860, "l", "PRO:per", 98),
-    (934, "i", "ADJ:num", 99),
-    (1005, "m", "PRO:per", 101), (1051, "s", "PRO:per", 102),
-    (1208, "quiconque", "PRO:int", 105), (1218, "qu", "CON", 105),
-    (1219, "qu", "PRO:int", 105), (1220, "qu", "PRO:rel", 105),
-    (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
-    (2560, "oublie", "NOM", 132), (2626, "r", "ADV", 133),
-    (2792, "man", "NOM", 136), (3098, "damoiseau", "NOM", 142),
+    (87, "quoi", "ADJ", 82, "2026-11-18"), (305, "dont", "PRO:int", 87, "2026-11-18"),
+    (816, "t", "PRO:per", 97, "2026-11-18"), (849, "c", "PRO:dem", 97, "2026-11-18"),
+    (859, "l", "ART:def", 98, "2026-11-18"), (860, "l", "PRO:per", 98, "2026-11-18"),
+    (934, "i", "ADJ:num", 99, "2026-11-18"),
+    (1005, "m", "PRO:per", 101, "2026-11-19"), (1051, "s", "PRO:per", 102, "2026-11-19"),
+    (1208, "quiconque", "PRO:int", 105, "2026-11-19"), (1218, "qu", "CON", 105, "2026-11-19"),
+    (1219, "qu", "PRO:int", 105, "2026-11-19"), (1220, "qu", "PRO:rel", 105, "2026-11-19"),
+    (1300, "d", "PRE", 106, "2026-11-19"), (1386, "nulle", "PRO:ind", 108, "2026-11-19"),
+    (2560, "oublie", "NOM", 132, "2026-11-21"), (2626, "r", "ADV", 133, "2026-11-21"),
+    (2792, "man", "NOM", 136, "2026-11-21"), (3098, "damoiseau", "NOM", 142, "2026-11-22"),
+    (3783, "ya", "NOM", 156, "2026-11-23"), (3885, "cm", "NOM", 158, "2026-11-23"),
+    (3922, "haver", "VER", 159, "2026-11-23"), (3944, "da", "ONO", 159, "2026-11-23"),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = tuple(row for row in range(1, 3451) if row not in ANNOTATION_ROWS)
+ROWS = tuple(row for row in range(1, 3951) if row not in ANNOTATION_ROWS)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
     "COPYING", "curated-inputs.json", "field-review.json", "MEMBERSHIP-NOTICES.txt",
     "scope-manifest.csv", "selected-source-context.json", "selected-source-excerpts.json",
     "LEXIQUE-UPSTREAM-README.txt", "lexique-provenance.json", "README.md", "NOTICES.md",
+    "LICENSE-FranceTerme.pdf",
 )
 
 
@@ -100,9 +103,8 @@ def load_inputs(source_dir):
         entry[:3] for entry in ANNOTATIONS
     ]:
         raise ValueError("Annotation exceptions must retain their exact approved frozen identities")
-    for entry, (_, _, _, issue) in zip(annotations, ANNOTATIONS, strict=True):
+    for entry, (_, _, _, issue, approved_on) in zip(annotations, ANNOTATIONS, strict=True):
         decision = entry.get("decision", {})
-        approved_on = "2026-11-22" if issue == 142 else "2026-11-21" if issue >= 130 else "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
         if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != approved_on:
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
         text(decision.get("decision"), "annotation exception decision")
@@ -274,7 +276,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         raise ValueError("Missing separate MIT project/converter licence")
     version = text(curated["content_version"], "content version", 200)
     source = {"title": "Lexique FR–EN–ZH", "version": version,
-              "attribution": "Wiktionnaire/Wiktionary and Wikisource contributors; Théodore Soulice (1836); Académie française (DAF8, 1935); selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
+              "attribution": "Wiktionnaire/Wiktionary and Wikisource contributors; Théodore Soulice (1836); Académie française (DAF8, 1935); Ministère de la Culture / FranceTerme (CULT430, 2005-01-18, Licence Ouverte 1.0); selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
               "license": "CC BY-SA 4.0", "source_url": "https://github.com/zardonc/lexique/tree/main/resources/core-pilot-79",
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
     metadata = {"format_version": "1", "content_version": version, "source": compact(source),
@@ -354,8 +356,11 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
                             **scope_gaps.get(row, {})}
                            for row in range(first, last + 1)],
             })
+        raw_inputs_bytes = sum((source_dir / name).stat().st_size for name in (*MATERIALS, "input-checksums.json"))
+        bundled_materials_bytes = sum(file.stat().st_size for file in staged.iterdir() if file.name != "core.sqlite3")
+        read_only_sqlite_bytes = database.stat().st_size
         report = {"format_version": 1, "content_version": version, "sqlite_sha256": digest(database),
-                  "sqlite_bytes": database.stat().st_size, "inputs": inputs,
+                  "sqlite_bytes": read_only_sqlite_bytes, "inputs": inputs,
                   "admission": {"independent_field_review": "passed", "produced_resource_self_check": "passed",
                                 "everyday_sense_review": "incomplete" if scope_gaps else "passed",
                                 "selected_scope_acceptance": "passed" if not ((scope_gaps.keys() & selected_rows) - specialist_rows) else "incomplete",
@@ -365,10 +370,13 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
                   "content_batches": content_batches,
                   "limits": {"query_utf8_bytes": 512, "matching_senses": 200, "response_bytes": 4 * 1024 * 1024,
-                             "resource_bytes": 16_000_000, "field_unicode_scalars": 20_000},
+                             "resource_bytes": 20_000_000, "field_unicode_scalars": 20_000},
                   "measurements": {"maximum_sense_json_bytes": max(len(compact(row[3]).encode()) for row in selected),
                                    "maximum_field_unicode_scalars": max(len(row[3][name]) for row in selected for name in ("definition_fr", "meaning_en", "meaning_zh")),
-                                   "read_only_sqlite_bytes": database.stat().st_size}}
+                                   "raw_inputs_bytes": raw_inputs_bytes,
+                                   "read_only_sqlite_bytes": read_only_sqlite_bytes,
+                                   "bundled_materials_bytes": bundled_materials_bytes,
+                                   "installed_core_bytes_excluding_report": read_only_sqlite_bytes + bundled_materials_bytes}}
         (staged / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         destination.mkdir(parents=True, exist_ok=True)
         for file in staged.iterdir():

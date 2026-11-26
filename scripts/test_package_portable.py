@@ -48,7 +48,7 @@ class PortableTests(unittest.TestCase):
                           "field-review.json", "input-checksums.json", "lexique-provenance.json",
                           "LEXIQUE-UPSTREAM-README.txt", "LICENSE-MIT", "MEMBERSHIP-NOTICES.txt",
                           "NOTICES.md", "README.md", "scope-manifest.csv",
-                          "selected-source-context.json", "selected-source-excerpts.json")
+                          "selected-source-context.json", "selected-source-excerpts.json", "LICENSE-FranceTerme.pdf")
         self.write("target/release/dictionary/core-pilot-79/core.sqlite3", b"reviewed core dictionary")
         core_inputs = {}
         for filename in core_materials:
@@ -56,9 +56,11 @@ class PortableTests(unittest.TestCase):
             self.write(f"target/release/dictionary/core-pilot-79/{filename}", data)
             core_inputs[filename] = hashlib.sha256(data).hexdigest()
         core_report = json.dumps({
-            "format_version": 1, "content_version": "core-149-v1",
+            "format_version": 1, "content_version": "core-159-v1",
             "sqlite_sha256": hashlib.sha256(b"reviewed core dictionary").hexdigest(),
             "sqlite_bytes": len(b"reviewed core dictionary"), "inputs": core_inputs,
+            "admission": {"accepted_groups": 3927, "remaining_unaccepted_groups": 160,
+                          "annotation_exception_groups": 23, "approved_specialist_exception_groups": 3},
         }).encode()
         self.write("target/desktop-core-pilot/report.json", core_report)
         self.write("target/release/dictionary/core-pilot-79/report.json", core_report)
@@ -103,14 +105,22 @@ class PortableTests(unittest.TestCase):
             for filename, digest in report["inputs"].items():
                 self.assertEqual(hashlib.sha256(zipped.read(prefix + filename)).hexdigest(), digest)
             description = zipped.read(self.name + "/README.txt").decode("utf-8")
-            self.assertIn("2,932 of 4,087", description)
-            self.assertIn("1,155 groups remain unaccepted", description)
-            self.assertIn("eighteen approved zero-field annotations", description)
+            self.assertIn("3,927 of 4,087", description)
+            self.assertIn("160 groups remain unaccepted", description)
+            self.assertIn("23 approved zero-field annotations", description)
+            self.assertIn("3 specialist senses", description)
             self.assertIn("dictionary/core-pilot-79/", description)
+            self.assertIn("LICENSE-FranceTerme.pdf", description)
+            self.assertIn("Licence Ouverte 1.0", description)
+            self.assertEqual(result["installed_bytes"], sum(info.file_size for info in zipped.infolist()))
+            self.assertEqual(
+                result["core_installed_bytes"],
+                sum(info.file_size for info in zipped.infolist() if info.filename.startswith(prefix)),
+            )
 
     def test_missing_or_changed_core_resource_and_notices_prevent_delivery(self):
         core = self.root / "target/release/dictionary/core-pilot-79"
-        for filename in ("core.sqlite3", "COPYING", "curated-inputs.json", "NOTICES.md", "report.json"):
+        for filename in ("core.sqlite3", "COPYING", "LICENSE-FranceTerme.pdf", "curated-inputs.json", "NOTICES.md", "report.json"):
             path = core / filename
             original = path.read_bytes()
             for replacement in (None, b"unexpected core material"):

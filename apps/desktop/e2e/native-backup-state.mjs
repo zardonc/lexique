@@ -2,9 +2,11 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { resolve, join, relative, isAbsolute } from 'node:path';
 
+export const D2_ISSUE_DIRECTORIES = Array.from({ length: 81 }, (_, index) => `issue-${79 + index}`);
+
 function ownedDestination(destination) {
   const root = resolve(destination);
-  assert.ok(['issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83', 'issue-84', 'issue-85', 'issue-86', 'issue-87', 'issue-88', 'issue-89', 'issue-90', 'issue-91', 'issue-92', 'issue-93', 'issue-94', 'issue-95', 'issue-96', 'issue-97', 'issue-98', 'issue-99', 'issue-100', 'issue-101', 'issue-102', 'issue-103', 'issue-104', 'issue-105', 'issue-106', 'issue-107', 'issue-108', 'issue-109', 'issue-110', 'issue-111', 'issue-112', 'issue-113', 'issue-114', 'issue-115', 'issue-116', 'issue-117', 'issue-118', 'issue-119', 'issue-120', 'issue-121', 'issue-122', 'issue-123', 'issue-124', 'issue-125', 'issue-126', 'issue-127', 'issue-128', 'issue-129', 'issue-130', 'issue-131', 'issue-132', 'issue-133', 'issue-134', 'issue-135', 'issue-136', 'issue-137', 'issue-138', 'issue-139', 'issue-140', 'issue-141', 'issue-142', 'issue-143', 'issue-144', 'issue-145', 'issue-146', 'issue-147', 'issue-148', 'issue-149', 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201', 'ticket-213', 'ticket-214', 'ticket-215', 'ticket-216', 'ticket-217'].some(issue => {
+  assert.ok(['issue-75', ...D2_ISSUE_DIRECTORIES, 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201', 'ticket-213', 'ticket-214', 'ticket-215', 'ticket-216', 'ticket-217'].some(issue => {
     const owned = relative(resolve('../../target', issue), root);
     return owned && !owned.startsWith('..') && !isAbsolute(owned);
   }));
@@ -139,16 +141,18 @@ queries={
 }
 json_columns={'snapshot','request','state','before_state','result','queue_before','example_source','more_examples','spec','voice','value'}
 c.execute('BEGIN')
+schema=c.execute('PRAGMA user_version').fetchone()[0]
 result={}
 for name,query in queries.items():
  result[name]=[]
+ if name=='grammar_exchange_identities' and schema==20: continue
  for row in c.execute(query):
   item=dict(row)
   for key in json_columns.intersection(item):
    if key=='value' and item.get('key')=='vocabulary-sort': continue
    if item[key] is not None and (key!='state' or name=='progress'): item[key]=json.loads(item[key])
   result[name].append(item)
-result['schema']=c.execute('PRAGMA user_version').fetchone()[0]
+result['schema']=schema
 result['integrity']=[r[0] for r in c.execute('PRAGMA integrity_check')]
 result['foreign_keys']=[list(r) for r in c.execute('PRAGMA foreign_key_check')]
 result['physical']=[dict(r) for r in c.execute('SELECT locator,physical_locator,content_hash FROM speech_versions ORDER BY locator')]

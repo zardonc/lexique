@@ -7,6 +7,7 @@ const CORE_MATERIALS: &[&str] = &[
     "core.sqlite3",
     "report.json",
     "COPYING",
+    "LICENSE-FranceTerme.pdf",
     "NOTICES.md",
     "README.md",
     "curated-inputs.json",
@@ -189,6 +190,11 @@ mod tests {
         let error = bundled_materials(&root).unwrap_err();
         assert_eq!(error.code, "missing");
         assert!(error.message.contains("COPYING"));
+        std::fs::write(folder.join("COPYING"), b"bundled test material").unwrap();
+        std::fs::remove_file(folder.join("LICENSE-FranceTerme.pdf")).unwrap();
+        let error = bundled_materials(&root).unwrap_err();
+        assert_eq!(error.code, "missing");
+        assert!(error.message.contains("LICENSE-FranceTerme.pdf"));
         std::fs::remove_dir_all(root).unwrap();
     }
 }

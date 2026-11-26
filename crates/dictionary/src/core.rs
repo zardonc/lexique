@@ -8,7 +8,7 @@ use unicode_normalization::UnicodeNormalization;
 
 use crate::{CORE_DICTIONARY_ID, DictionaryError, Entry, Lookup, Source, failure, mdx, snapshot};
 
-pub const MAX_RESOURCE_BYTES: u64 = 16_000_000;
+pub const MAX_RESOURCE_BYTES: u64 = 20_000_000;
 pub const MAX_MATCHING_SENSES: usize = 200;
 
 fn metadata(connection: &Connection, key: &str) -> Result<String, DictionaryError> {

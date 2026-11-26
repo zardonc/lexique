@@ -1,0 +1,99 @@
+{
+  "platform": "Windows, PowerShell 7, uv Python 3.14.10",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\review-154",
+  "branch": "codex/d2-review-154",
+  "original_author_commit": "b5520107f0f06a9732e93a332435bd3cce90a471",
+  "assigned_review_base": "069d3caa54b97afbcb6ac5f93c1367cfa996c019",
+  "latest_merged_integration": "453736d7d6b28d35d66076f716aa5361dc55f122",
+  "tested_changes": "Eight batch tests at 0cdc1c52e69ba9472713c6442dead4ed2b641896 plus the owned erasure correction. The subsequent integration merge preserved the shared helper, converter and canonical inputs; documentation passed on the merged tree. Cumulative owned patch retained.",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-154",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py (author baseline)",
+      "status": "passed",
+      "tests": 5,
+      "log": "author-baseline.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py Batch154Tests.test_muslim_adherence_does_not_require_practising (before correction)",
+      "status": "failed_as_expected",
+      "tests": 1,
+      "log": "red-adherence.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py",
+      "status": "passed",
+      "tests": 8,
+      "log": "final-batch-tests.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-154-review/audit.py",
+      "status": "passed",
+      "log": "final-source-audit.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-154-review/verify_preservation.py",
+      "status": "passed",
+      "log": "final-preservation.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "final-docs-check.log",
+      "documents": 559,
+      "local_links": 4286,
+      "repository_fallback_links": 0,
+      "skipped_local_links": 422,
+      "problems": []
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py Batch154Tests.test_scraping_erases_a_mark_on_the_surface (before correction)",
+      "status": "failed_as_expected",
+      "tests": 1,
+      "log": "red-erasure.log"
+    }
+  ],
+  "source_audit": {
+    "source_pages": 54,
+    "field_and_usage_spans": 250,
+    "support_occurrences": 1004,
+    "contributor_parts": 11,
+    "status": "passed"
+  },
+  "proposal_preservation": {
+    "preserved_authored_files": 16,
+    "authored_group_bytes_equal_original_commit": true,
+    "changed_fields": [
+      [
+        3676,
+        "french_definition"
+      ],
+      [
+        3685,
+        "french_definition"
+      ]
+    ],
+    "unchanged_field_count": 198,
+    "unchanged_use_count": 50,
+    "membership_frequency_and_field_source_spans_preserved": true,
+    "proposal_snapshot_base": "871431f18d295db56d2bcb210fcaa84e80b90b00",
+    "status": "passed"
+  },
+  "accepted_unchanged_fields": 198,
+  "accepted_changed_fields": 2,
+  "unresolved_fields": 0,
+  "accepted_selected_uses": 50,
+  "source_rights_gaps": [],
+  "scope_gaps": [],
+  "native_canonical_and_combined_package_gates": "coordinator_owned_not_run",
+  "frontend_rust_and_global_checks": "not_run_no_runtime_changes",
+  "learner_acceptance": "not_run",
+  "final_integration_merge": "integration-final-tip.log; merged before final content commit",
+  "authored_snapshot_policy": "Original files are byte-preserved; authored/.gitattributes marks this raw snapshot as original text for the existing document checker.",
+  "integration_merge_commit": "0ed30586c93e3d848856cda17231a8533ca5cd66"
+}

@@ -1,7 +1,7 @@
 # Lexique FR–EN–ZH D2 core
 
-This development resource contains **3,431 independently reviewed senses / 13,724 fields**
-in 3,431 frozen headword/POS groups, content version `core-149-v1`.
+This development resource contains **3,927 independently reviewed senses / 15,708 fields**
+in 3,927 frozen headword/POS groups, content version `core-159-v1`.
 The ordinary `épée/NOM` weapon meaning has independently reviewed French,
 English and Chinese fields without mandatory blade geometry or carrying
 equipment; its fixed source, IPA, attribution and CC BY-SA 4.0 adaptation
@@ -9,9 +9,9 @@ remain recorded in the [field review](field-review.json).
 Deliver this core with its matching rebuilt executable; the native reader
 rejects a resource whose hash differs from its build. Existing saved digests
 keep their original content.
-Its permanent target is **4,087 groups / 3,773 headwords**; **3,431 groups are accepted
-and 656 remain unaccepted**. Everyday coverage is **3,428 complete groups
-and 659 incomplete groups**. All **13,724 fields** have exact independent reviews.
+Its permanent target is **4,087 groups / 3,773 headwords**; **3,927 groups are accepted
+and 160 remain unaccepted**. Everyday coverage is **3,924 complete groups
+and 163 incomplete groups**. All **15,708 fields** have exact independent reviews.
 
 | Batch | Frozen rows | Admitted groups | Fields | Reused groups | Annotation exceptions |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -81,6 +81,16 @@ and 659 incomplete groups**. All **13,724 fields** have exact independent review
 | #147 | 3301–3350 | 50 | 200 | 0 | 0 |
 | #148 | 3351–3400 | 50 | 200 | 0 | 0 |
 | #149 | 3401–3450 | 50 | 200 | 0 | 0 |
+| #150 | 3451–3500 | 50 | 200 | 0 | 0 |
+| #151 | 3501–3550 | 50 | 200 | 0 | 0 |
+| #152 | 3551–3600 | 50 | 200 | 0 | 0 |
+| #153 | 3601–3650 | 50 | 200 | 0 | 0 |
+| #154 | 3651–3700 | 50 | 200 | 0 | 0 |
+| #155 | 3701–3750 | 50 | 200 | 0 | 0 |
+| #156 | 3751–3800 | 49 | 196 | 0 | 1 |
+| #157 | 3801–3850 | 50 | 200 | 0 | 0 |
+| #158 | 3851–3900 | 49 | 196 | 0 | 1 |
+| #159 | 3901–3950 | 48 | 192 | 0 | 2 |
 
 All prior **2,932 groups / 11,728 fields**, their raw records, source bindings,
 independent reviews, contexts and compiled payloads remain exact. Row 483
@@ -89,8 +99,8 @@ independent reviews, contexts and compiled payloads remain exact. Row 483
 
 The owner-approved specialist senses are row 34 `ça/NOM` (psychoanalytic id, #81)
 row 128 `par/NOM` (single-hole standard golf strokes, #83), and row 3128 `pars/NOM` (masculine golf plural, #143). Their
-restrictions, approvals and four-field records remain intact. Annotation exceptions are row 87 `quoi/ADJ`, row 305 `dont/PRO:int`, row 816 `t/PRO:per`, row 849 `c/PRO:dem`, row 859 `l/ART:def`, row 860 `l/PRO:per`, row 934 `i/ADJ:num`, row 1005 `m/PRO:per`, row 1051 `s/PRO:per`, row 1208 `quiconque/PRO:int`, row 1218 `qu/CON`, row 1219 `qu/PRO:int`, row 1220 `qu/PRO:rel`, row 1300 `d/PRE`, row 1386 `nulle/PRO:ind`, row 2560 `oublie/NOM`, row 2626 `r/ADV`, row 2792 `man/NOM`, row 3098 `damoiseau/NOM`. Each retains its exact frozen identity, frequencies, four missing fields and zero admitted content.
-The 19 owner-approved annotations retain 76 missing fields in the fixed denominator.
+restrictions, approvals and four-field records remain intact. Annotation exceptions are row 87 `quoi/ADJ`, row 305 `dont/PRO:int`, row 816 `t/PRO:per`, row 849 `c/PRO:dem`, row 859 `l/ART:def`, row 860 `l/PRO:per`, row 934 `i/ADJ:num`, row 1005 `m/PRO:per`, row 1051 `s/PRO:per`, row 1208 `quiconque/PRO:int`, row 1218 `qu/CON`, row 1219 `qu/PRO:int`, row 1220 `qu/PRO:rel`, row 1300 `d/PRE`, row 1386 `nulle/PRO:ind`, row 2560 `oublie/NOM`, row 2626 `r/ADV`, row 2792 `man/NOM`, row 3098 `damoiseau/NOM`, row 3783 `ya/NOM`, row 3885 `cm/NOM`, row 3922 `haver/VER`, row 3944 `da/ONO`. Each retains its exact frozen identity, frequencies, four missing fields and zero admitted content.
+The 23 owner-approved annotations retain 92 missing fields in the fixed denominator.
 Existing annotation and specialist approvals remain intact. New approvals are recorded with their matching issue and date in field-review.json.
 No new runtime alias is admitted; existing apostrophized records and relative `dont` at row 306 remain intact.
 
@@ -103,7 +113,10 @@ are retained in [selected-source-context.json](selected-source-context.json).
 Whole-page captures, unselected quotations and media are excluded.
 
 Selected and adapted contributions use **CC BY-SA 4.0**; see [NOTICES.md](NOTICES.md)
-and [COPYING](COPYING). The beau/NOM prose adapts Théodore Soulice's public-domain
+and [COPYING](COPYING). The `audition/NOM` sense also retains Ministère de la Culture /
+FranceTerme attribution (CULT430, Journal officiel du 18 January 2005) under
+Licence Ouverte 1.0; see [LICENSE-FranceTerme.pdf](LICENSE-FranceTerme.pdf).
+The beau/NOM prose adapts Théodore Soulice's public-domain
 1836 original, printed p. 56 / scan p. 62; the fixed Wikisource transcription is
 revision 14772408, lines 142–143, ending before the separate beau idéal clause.
 Wikisource transcription and Lexique adaptations retain their own CC BY-SA 4.0
@@ -133,3 +146,8 @@ There are three specialist groups: `ça/NOM`, singular `par/NOM`, and plural
 19 zero-field annotations retain 76 missing fields. The frozen manifest, 15 spelling relations and 11
 runtime aliases remain unchanged. Previously saved references, digests and
 learning/audio relationships retain their creation-time content.
+
+
+Rows 3451–3950 add 496 admitted groups / 1,984 independently reviewed fields and 4 approved zero-field annotations.
+All prior 3,431 groups / 13,724 fields, frozen membership, approved exceptions
+and runtime spelling relationships remain unchanged.

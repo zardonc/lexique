@@ -1,0 +1,31 @@
+{
+  "frozen_row": 3885,
+  "headword": "cm",
+  "lexique_cgram": "NOM",
+  "status": "approved_annotation_exception",
+  "accepted_fields": 0,
+  "missing_fields": 4,
+  "finding": "Fixed cm classifies the French measurement form as a symbol. Fixed centimètre supplies the noun meaning; cm supplies the centimètre pronunciation. OQLF independently labels centimètre n. m. and describes cm symbol orthography. This does not establish an everyday lexical noun sense of exact cm.",
+  "proposed_owner_decision": "Annotate frozen row 3885 cm/NOM with zero admitted fields and four missing fields, retaining its exact identity, frequencies and global denominator. Record the everyday measurement symbol and its nominal centimètre reading as the reason; no substitute centimètre/NOM group is introduced.",
+  "proposal_kind": "zero_field_annotation",
+  "owner_approval_observed": true,
+  "implemented_annotation": true,
+  "alternative_completion": "Supply independently verifiable evidence establishing an exact French cm noun sense, spelling relation and current everyday use; specialist approval alone does not resolve the source symbol-versus-noun binding.",
+  "evidence": [
+    "source-excerpts.json",
+    "modern-corroboration.json",
+    "field-review.json"
+  ],
+  "annotation_exception_decision": {
+    "issue": "https://github.com/zardonc/lexique/issues/158",
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-23",
+    "timezone": "America/Vancouver",
+    "decision": "The project owner approved frozen row 3885 cm/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, with the exact reply \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This issue-158 implementation applies only to row 3885; row 3783 ya/NOM belongs to issue 156. Decision record: context/approved-scope-decisions.md.",
+    "exact_reply": "Annotate ya and cm with zero fields",
+    "evidence": "docs/evidence/issue-158/owner-approval.json"
+  },
+  "owner_approval": "docs/evidence/issue-158/owner-approval.json",
+  "decision_record": "context/approved-scope-decisions.md",
+  "rejected_proposal": "docs/evidence/issue-158/rejected-cm-proposal.json"
+}

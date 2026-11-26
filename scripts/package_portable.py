@@ -53,7 +53,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     core_report = read_json(core_report_path)
     core = release / "dictionary/core-pilot-79"
     core_names = {*MATERIALS, "input-checksums.json", "LICENSE-MIT", "core_pilot.py", "coverage.json"}
-    if (core_report.get("format_version") != 1 or core_report.get("content_version") != "core-149-v1"
+    if (core_report.get("format_version") != 1 or core_report.get("content_version") != "core-159-v1"
             or not isinstance(core_report.get("inputs"), dict) or set(core_report["inputs"]) != core_names):
         raise ValueError("Prepared core report must name all reviewed materials")
     if (core / "report.json").read_bytes() != core_report_path.read_bytes():
@@ -77,6 +77,16 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         if hashlib.sha256((frequency / filename).read_bytes()).hexdigest() != expected:
             raise ValueError(f"Release frequency source or notice differs: {filename}")
     verify(root, conjugation / "freedict-fra-eng-0.4.1")
+    core_admission = core_report["admission"]
+    core_description = (
+        f"Lexique FR–EN–ZH is a reviewed development core: {core_admission['accepted_groups']:,} of 4,087 frozen POS groups.\n"
+        "Its four fields and English usage notes, selected source excerpts, attribution,\n"
+        "CC BY-SA 4.0 license (COPYING) and FranceTerme Licence Ouverte 1.0 (LICENSE-FranceTerme.pdf)\n"
+        "are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
+        f"Settings opens these bundled source materials offline. {core_admission['remaining_unaccepted_groups']:,} groups remain unaccepted,\n"
+        f"including {core_admission['annotation_exception_groups']} approved zero-field annotations; "
+        f"{core_admission['approved_specialist_exception_groups']} specialist senses are counted separately.\n"
+    )
     if all(speech_inputs):
         with tempfile.TemporaryDirectory(prefix="lexique-speech-stage-") as temporary:
             staged = Path(temporary) / "speech"
@@ -123,11 +133,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
-        "Lexique FR–EN–ZH is a reviewed development core: 2,932 of 4,087 frozen POS groups.\n"
-        "Its four fields and English usage notes, selected source excerpts, attribution and\n"
-        "CC BY-SA 4.0 license are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
-        "Settings opens these bundled source materials offline. 1,155 groups remain unaccepted,\n"
-        "including eighteen approved zero-field annotations; two specialist senses are counted separately.\n"
+        f"{core_description}"
         "learner acceptance and the full D2 resource are not complete.\n"
         "Selection shortcut: Ctrl+Alt+Shift+D. Screen OCR shortcut: Ctrl+Alt+Shift+O.\n"
         "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"
@@ -179,6 +185,8 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     checksums = {path.relative_to(output).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
                  for path in files}
     (output / "SHA256SUMS.json").write_text(json.dumps(checksums, indent=2) + "\n")
+    installed_bytes = sum(path.stat().st_size for path in output.rglob("*") if path.is_file())
+    core_installed_bytes = sum(path.stat().st_size for path in core_output.rglob("*") if path.is_file())
     with zipfile.ZipFile(archive, "x", zipfile.ZIP_DEFLATED, compresslevel=9, strict_timestamps=False) as zipped:
         for path in sorted(output.rglob("*")):
             if path.is_file():
@@ -193,6 +201,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     with checksum_path.open("x", encoding="utf-8") as checksum_file:
         checksum_file.write(f"{checksum}  {archive.name}\n")
     return {"archive": str(archive), "bytes": archive.stat().st_size,
+            "installed_bytes": installed_bytes, "core_installed_bytes": core_installed_bytes,
             "sha256": checksum, "verified_files": len(expected) + 1}
 
 

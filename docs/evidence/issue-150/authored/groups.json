@@ -1,0 +1,4052 @@
+[
+  {
+    "frozen_row": 3451,
+    "headword": "pull",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.43",
+    "subtitle_pos_per_million": "13.43",
+    "senses": [
+      {
+        "sense_id": "b150-3451-pull-nom-selected",
+        "source_headword": "pull",
+        "use": "Masculine clothing noun; the French abbreviation of pull-over.",
+        "use_language": "en",
+        "excluded_uses": "English pulling; other-language homographs.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Pull-over : vêtement chaud couvrant le buste et les bras.",
+            "source_id": "b150_fr_116636",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{vêtements|fr}} {{ellipse|fr}} [[pull-over|Pull-over]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/pyl/",
+            "source_id": "b150_fr_116636",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''pull''' {{pron|pyl|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Sweater or jumper covering the torso and arms; short for pull-over.",
+            "source_id": "b150_fr_116636",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{vêtements|fr}} {{ellipse|fr}} [[pull-over|Pull-over]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "套头衫；覆盖躯干和手臂的保暖上衣，是 pull-over 的简称。",
+            "source_id": "b150_fr_116636",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{vêtements|fr}} {{ellipse|fr}} [[pull-over|Pull-over]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3452,
+    "headword": "cavalier",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.41",
+    "subtitle_pos_per_million": "10.95",
+    "senses": [
+      {
+        "sense_id": "b150-3452-cavalier-nom-selected",
+        "source_headword": "cavalier",
+        "use": "Masculine noun for a horse rider, with the separately attested feminine cavalière.",
+        "use_language": "en",
+        "excluded_uses": "Cavalry ranks, chess or card pieces, technical objects and the adjective.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Personne de sexe masculin qui monte à cheval ; le féminin est cavalière.",
+            "source_id": "b150_fr_2506",
+            "source_span": {
+              "line_1_based": 19,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|équitation|fr}} Celui qui [[monter|monte]] à [[cheval]] {{équiv-pour|une femme|cavalière|lang=fr}}."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ka.va.lje/",
+            "source_id": "b150_fr_2506",
+            "source_span": {
+              "line_1_based": 18,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''cavalier''' {{pron|ka.va.lje|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Male horse rider; the feminine noun is cavalière.",
+            "source_id": "b150_fr_2506",
+            "source_span": {
+              "line_1_based": 19,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|équitation|fr}} Celui qui [[monter|monte]] à [[cheval]] {{équiv-pour|une femme|cavalière|lang=fr}}."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "男性骑马者；对应的女性名词是 cavalière。",
+            "source_id": "b150_fr_2506",
+            "source_span": {
+              "line_1_based": 19,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|équitation|fr}} Celui qui [[monter|monte]] à [[cheval]] {{équiv-pour|une femme|cavalière|lang=fr}}."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3453,
+    "headword": "satellite",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.41",
+    "subtitle_pos_per_million": "13.41",
+    "senses": [
+      {
+        "sense_id": "b150-3453-satellite-nom-selected",
+        "source_headword": "satellite",
+        "use": "Masculine noun for an orbiting natural or artificial object.",
+        "use_language": "en",
+        "excluded_uses": "Mechanical gears, armed followers and the adjective.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Objet naturel ou artificiel qui tourne en orbite autour d’une planète.",
+            "source_id": "b150_fr_9939",
+            "source_span": {
+              "line_1_based": 14,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|astronomie|fr}} [[objet|Objet]] [[naturel]] ou [[artificiel]] qui [[orbiter|orbite]] autour d’une [[planète]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/sa.te.lit/",
+            "source_id": "b150_fr_9939",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''satellite''' {{pron|sa.te.lit|fr}} ou {{pron|sa.tɛ.lit|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Natural or artificial object orbiting a planet; a satellite.",
+            "source_id": "b150_fr_9939",
+            "source_span": {
+              "line_1_based": 14,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|astronomie|fr}} [[objet|Objet]] [[naturel]] ou [[artificiel]] qui [[orbiter|orbite]] autour d’une [[planète]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "围绕行星运行的天然或人造物体；卫星。",
+            "source_id": "b150_fr_9939",
+            "source_span": {
+              "line_1_based": 14,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|astronomie|fr}} [[objet|Objet]] [[naturel]] ou [[artificiel]] qui [[orbiter|orbite]] autour d’une [[planète]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3454,
+    "headword": "administration",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.4",
+    "subtitle_pos_per_million": "13.4",
+    "senses": [
+      {
+        "sense_id": "b150-3454-administration-nom-selected",
+        "source_headword": "administration",
+        "use": "Feminine action noun for management of affairs.",
+        "use_language": "en",
+        "excluded_uses": "The period of an administration; a body of officials; administering a medicine.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Action de diriger et de gérer des affaires publiques ou privées.",
+            "source_id": "b150_fr_28524",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[action|Action]] d’[[administrer]] ; [[direction]] ou [[conduite]] des [[affaire]]s publiques ou particulières."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ad.mi.nis.tʁa.sjɔ̃/",
+            "source_id": "b150_fr_28524",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''administration''' {{pron|ad.mi.nis.tʁa.sjɔ̃|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Administration: directing and managing public or private affairs.",
+            "source_id": "b150_fr_28524",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[action|Action]] d’[[administrer]] ; [[direction]] ou [[conduite]] des [[affaire]]s publiques ou particulières."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "行政管理或经营管理；组织、处理公共或私人事务的行为。",
+            "source_id": "b150_fr_28524",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[action|Action]] d’[[administrer]] ; [[direction]] ou [[conduite]] des [[affaire]]s publiques ou particulières."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3455,
+    "headword": "barrage",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.4",
+    "subtitle_pos_per_million": "13.4",
+    "senses": [
+      {
+        "sense_id": "b150-3455-barrage-nom-selected",
+        "source_headword": "barrage",
+        "use": "Masculine noun for a barrier across a route; the DAF8-referenced definition is selected.",
+        "use_language": "en",
+        "excluded_uses": "The Rivarol-referenced hydraulic definition, rock formations, sport play-offs and figurative opposition.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Barrière qui ferme un chemin et empêche le passage.",
+            "source_id": "b150_fr_149217",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[barrière|Barrière]] qui [[fermer|ferme]] un [[chemin]]{{R|DAF8}}."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ba.ʁaʒ/",
+            "source_id": "b150_fr_149217",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''barrage''' {{pron|bɑ.ʁaʒ|fr}} <small>ou</small> {{pron|ba.ʁaʒ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Barrier or roadblock closing a route and preventing passage.",
+            "source_id": "b150_fr_149217",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[barrière|Barrière]] qui [[fermer|ferme]] un [[chemin]]{{R|DAF8}}."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "封闭道路、阻止通行的障碍或路障。",
+            "source_id": "b150_fr_149217",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[barrière|Barrière]] qui [[fermer|ferme]] un [[chemin]]{{R|DAF8}}."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3456,
+    "headword": "dessert",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.4",
+    "subtitle_pos_per_million": "13.4",
+    "senses": [
+      {
+        "sense_id": "b150-3456-dessert-nom-selected",
+        "source_headword": "dessert",
+        "use": "Masculine food noun.",
+        "use_language": "en",
+        "excluded_uses": "The time during which dessert is served; the desservir verb form.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Mets généralement sucré servi habituellement à la fin d’un repas.",
+            "source_id": "b150_fr_9245",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{préparations|fr}} [[mets#fr|Mets]] généralement [[sucré]] habituellement servi à la fin d’un [[repas]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/de.sɛʁ/",
+            "source_id": "b150_fr_9245",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''dessert''' {{pron|de.sɛʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Dessert: a usually sweet dish normally served at the end of a meal.",
+            "source_id": "b150_fr_9245",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{préparations|fr}} [[mets#fr|Mets]] généralement [[sucré]] habituellement servi à la fin d’un [[repas]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "餐末通常供应的甜食；甜点。",
+            "source_id": "b150_fr_9245",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{préparations|fr}} [[mets#fr|Mets]] généralement [[sucré]] habituellement servi à la fin d’un [[repas]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3457,
+    "headword": "juin",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.4",
+    "subtitle_pos_per_million": "13.4",
+    "senses": [
+      {
+        "sense_id": "b150-3457-juin-nom-selected",
+        "source_headword": "juin",
+        "use": "Masculine month noun; one recorded French pronunciation selected.",
+        "use_language": "en",
+        "excluded_uses": "Old French entries and other pronunciation variants.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Sixième mois de l’année du calendrier grégorien, qui compte trente jours.",
+            "source_id": "b150_fr_123",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[sixième|Sixième]] [[mois]] de l’[[année]] du [[calendrier grégorien]], qui compte 30 jours."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʒɥɛ̃/",
+            "source_id": "b150_fr_123",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''juin''' {{pron|ʒɥɛ̃|fr}} <small>ou</small> {{pron|ʒy.ɛ̃|fr}} <small>ou</small> {{pron|ʒy.œ̃|fr}} {{CA|nocat=1}} <small>ou</small> {{pron|ʒwɛ̃|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "June, the sixth month of the Gregorian calendar, with thirty days.",
+            "source_id": "b150_fr_123",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[sixième|Sixième]] [[mois]] de l’[[année]] du [[calendrier grégorien]], qui compte 30 jours."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "六月；公历一年中的第六个月，有三十天。",
+            "source_id": "b150_fr_123",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[sixième|Sixième]] [[mois]] de l’[[année]] du [[calendrier grégorien]], qui compte 30 jours."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3458,
+    "headword": "agresser",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "13.39",
+    "subtitle_pos_per_million": "13.39",
+    "senses": [
+      {
+        "sense_id": "b150-3458-agresser-ver-selected",
+        "source_headword": "agresser",
+        "use": "Transitive verb with a person as object; assault is not limited to physical blows.",
+        "use_language": "en",
+        "excluded_uses": "Old French and harmless competitive meanings of attack.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Porter atteinte à l’intégrité physique, psychologique ou sexuelle d’une personne par la force, la contrainte, la surprise ou la ruse.",
+            "source_id": "b150_fr_8100",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|illégalité|fr}} [[entamer|Entamer]] par la [[force]], par la [[contrainte]], par la [[surprise]] ou par la [[ruse]] l’[[intégrité]] [[physique]], [[psychologique]] ou [[sexuelle]] d’une personne."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/a.ɡʁe.se/",
+            "source_id": "b150_fr_8100",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''agresser''' {{pron|a.ɡʁe.se|fr}} ou {{pron|a.ɡʁɛ.se|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "To assault a person, violating their physical, psychological or sexual integrity through force, coercion, surprise or deception.",
+            "source_id": "b150_fr_8100",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|illégalité|fr}} [[entamer|Entamer]] par la [[force]], par la [[contrainte]], par la [[surprise]] ou par la [[ruse]] l’[[intégrité]] [[physique]], [[psychologique]] ou [[sexuelle]] d’une personne."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "以暴力、胁迫、突然袭击或欺骗的方式侵犯他人的身体、心理或性方面的完整与安全。",
+            "source_id": "b150_fr_8100",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|illégalité|fr}} [[entamer|Entamer]] par la [[force]], par la [[contrainte]], par la [[surprise]] ou par la [[ruse]] l’[[intégrité]] [[physique]], [[psychologique]] ou [[sexuelle]] d’une personne."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3459,
+    "headword": "reporter",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "13.39",
+    "subtitle_pos_per_million": "5.32",
+    "senses": [
+      {
+        "sense_id": "b150-3459-reporter-ver-selected",
+        "source_headword": "reporter",
+        "use": "Transitive scheduling verb; reporter quelque chose.",
+        "use_language": "en",
+        "excluded_uses": "Journalist noun, carrying again, accounting transfers and se reporter.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Remettre une chose à plus tard, en différer la réalisation.",
+            "source_id": "b150_fr_174771",
+            "source_span": {
+              "line_1_based": 32,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[remettre|Remettre]] à plus tard, [[différer]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁə.pɔʁ.te/",
+            "source_id": "b150_fr_174771",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''reporter''' {{pron|ʁə.pɔʁ.te|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "To postpone or defer something until a later time.",
+            "source_id": "b150_fr_174771",
+            "source_span": {
+              "line_1_based": 32,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[remettre|Remettre]] à plus tard, [[différer]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "将某事推迟到以后；延期。",
+            "source_id": "b150_fr_174771",
+            "source_span": {
+              "line_1_based": 32,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[remettre|Remettre]] à plus tard, [[différer]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3460,
+    "headword": "tristesse",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.39",
+    "subtitle_pos_per_million": "13.39",
+    "senses": [
+      {
+        "sense_id": "b150-3460-tristesse-nom-selected",
+        "source_headword": "tristesse",
+        "use": "Feminine noun for a feeling of sadness.",
+        "use_language": "en",
+        "excluded_uses": "A temperament or atmosphere; this is not a diagnosis of clinical depression.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "État de peine et d’affliction causé par un événement malheureux.",
+            "source_id": "b150_fr_62935",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[affliction|Affliction]], [[état]] de [[dépression]] [[moral]]e causé par quelque [[événement]] [[fâcheux]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/tʁis.tɛs/",
+            "source_id": "b150_fr_62935",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''tristesse''' {{pron|tʁis.tɛs|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Sadness or sorrow caused by an unhappy event.",
+            "source_id": "b150_fr_62935",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[affliction|Affliction]], [[état]] de [[dépression]] [[moral]]e causé par quelque [[événement]] [[fâcheux]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "因不幸的事情而产生的悲伤、难过。",
+            "source_id": "b150_fr_62935",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[affliction|Affliction]], [[état]] de [[dépression]] [[moral]]e causé par quelque [[événement]] [[fâcheux]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3461,
+    "headword": "planche",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.37",
+    "subtitle_pos_per_million": "13.37",
+    "senses": [
+      {
+        "sense_id": "b150-3461-planche-nom-selected",
+        "source_headword": "planche",
+        "use": "Feminine noun for a wooden board.",
+        "use_language": "en",
+        "excluded_uses": "Book plates, printing blocks, floating on the back and the verb form.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Pièce de bois refendu de faible épaisseur ; une planche de bois.",
+            "source_id": "b150_fr_145263",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[ais|Ais]], [[pièce]] de [[bois]] [[refendre|refendu]], ayant peu d’[[épaisseur]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/plɑ̃ʃ/",
+            "source_id": "b150_fr_145263",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''planche''' {{pron|plɑ̃ʃ|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Board or plank: a thin piece of sawn wood.",
+            "source_id": "b150_fr_145263",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[ais|Ais]], [[pièce]] de [[bois]] [[refendre|refendu]], ayant peu d’[[épaisseur]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "由木材锯切而成、厚度较小的木板。",
+            "source_id": "b150_fr_145263",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[ais|Ais]], [[pièce]] de [[bois]] [[refendre|refendu]], ayant peu d’[[épaisseur]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3462,
+    "headword": "capitale",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.35",
+    "subtitle_pos_per_million": "13.35",
+    "senses": [
+      {
+        "sense_id": "b150-3462-capitale-nom-selected",
+        "source_headword": "capitale",
+        "use": "Feminine city noun.",
+        "use_language": "en",
+        "excluded_uses": "Capital letters including the CFC-imported cartographic sense; regional capitals; adjective inflection.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Ville où siègent le gouvernement et le pouvoir législatif d’un État.",
+            "source_id": "b150_fr_9663",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ellipse|fr}} [[ville|Ville]] où siègent le [[gouvernement]] et le [[pouvoir]] [[législatif]] de l’[[État]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ka.pi.tal/",
+            "source_id": "b150_fr_9663",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''capitale''' {{pron|ka.pi.tal|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Capital city, where a state’s government and legislature are based.",
+            "source_id": "b150_fr_9663",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ellipse|fr}} [[ville|Ville]] où siègent le [[gouvernement]] et le [[pouvoir]] [[législatif]] de l’[[État]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "首都；国家政府和立法机关所在地的城市。",
+            "source_id": "b150_fr_9663",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ellipse|fr}} [[ville|Ville]] où siègent le [[gouvernement]] et le [[pouvoir]] [[législatif]] de l’[[État]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3463,
+    "headword": "capital",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "13.34",
+    "subtitle_pos_per_million": "6.78",
+    "senses": [
+      {
+        "sense_id": "b150-3463-capital-adj-selected",
+        "source_headword": "capital",
+        "use": "Adjective, masculine singular headword; importance sense.",
+        "use_language": "en",
+        "excluded_uses": "Money or assets as a noun, obsolete head-related meanings and capital punishment.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "D’une très grande importance ; primordial.",
+            "source_id": "b150_fr_107569",
+            "source_span": {
+              "line_1_based": 21,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui est d'une très grande [[importance]] ; qui est [[primordial]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ka.pi.tal/",
+            "source_id": "b150_fr_107569",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''capital''' {{pron|ka.pi.tal|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Of great importance; crucial or essential.",
+            "source_id": "b150_fr_107569",
+            "source_span": {
+              "line_1_based": 21,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui est d'une très grande [[importance]] ; qui est [[primordial]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "极其重要的；至关重要的。",
+            "source_id": "b150_fr_107569",
+            "source_span": {
+              "line_1_based": 21,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui est d'une très grande [[importance]] ; qui est [[primordial]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3464,
+    "headword": "demeure",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.34",
+    "subtitle_pos_per_million": "13.34",
+    "senses": [
+      {
+        "sense_id": "b150-3464-demeure-nom-selected",
+        "source_headword": "demeure",
+        "use": "Feminine dwelling noun; formal register retained.",
+        "use_language": "en",
+        "excluded_uses": "Legal delay and mise en demeure; the demeurer verb form.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dans un registre soutenu, habitation ou domicile.",
+            "source_id": "b150_fr_157141",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{soutenu|fr}} [[habitation|Habitation]], [[domicile]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/də.mœʁ/",
+            "source_id": "b150_fr_157141",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''demeure''' {{pron|də.mœʁ|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Dwelling or residence, in a formal register.",
+            "source_id": "b150_fr_157141",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{soutenu|fr}} [[habitation|Habitation]], [[domicile]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "（书面语）住所、住宅。",
+            "source_id": "b150_fr_157141",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{soutenu|fr}} [[habitation|Habitation]], [[domicile]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3465,
+    "headword": "record",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.34",
+    "subtitle_pos_per_million": "13.34",
+    "senses": [
+      {
+        "sense_id": "b150-3465-record-nom-selected",
+        "source_headword": "record",
+        "use": "Masculine noun for a record level, not restricted to sport.",
+        "use_language": "en",
+        "excluded_uses": "Quebec vinyl records, historical court decisions and adjective uses.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Niveau qui dépasse tout ce qui avait été atteint auparavant.",
+            "source_id": "b150_fr_115128",
+            "source_span": {
+              "line_1_based": 16,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[niveau|Niveau]] qui dépasse ce qui a été précédemment atteint ; [[summum]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁə.kɔʁ/",
+            "source_id": "b150_fr_115128",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''record''' {{pron|ʁə.kɔʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Record: a level exceeding everything previously achieved.",
+            "source_id": "b150_fr_115128",
+            "source_span": {
+              "line_1_based": 16,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[niveau|Niveau]] qui dépasse ce qui a été précédemment atteint ; [[summum]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "超过此前所有水平的纪录。",
+            "source_id": "b150_fr_115128",
+            "source_span": {
+              "line_1_based": 16,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[niveau|Niveau]] qui dépasse ce qui a été précédemment atteint ; [[summum]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3466,
+    "headword": "intervention",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.33",
+    "subtitle_pos_per_million": "13.33",
+    "senses": [
+      {
+        "sense_id": "b150-3466-intervention-nom-selected",
+        "source_headword": "intervention",
+        "use": "Feminine noun, informal ellipsis of intervention chirurgicale.",
+        "use_language": "en",
+        "excluded_uses": "General intervening, speeches and military intervention.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Familièrement, intervention chirurgicale ; opération.",
+            "source_id": "b150_fr_165437",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ellipse|fr}} {{familier|fr}} Intervention [[chirurgical]]e."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɛ̃.tɛʁ.vɑ̃.sjɔ̃/",
+            "source_id": "b150_fr_165437",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''intervention''' {{pron|ɛ̃.tɛʁ.vɑ̃.sjɔ̃|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "In everyday informal usage, a surgical intervention or operation.",
+            "source_id": "b150_fr_165437",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ellipse|fr}} {{familier|fr}} Intervention [[chirurgical]]e."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "（口语）外科手术；intervention chirurgicale 的省略说法。",
+            "source_id": "b150_fr_165437",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{ellipse|fr}} {{familier|fr}} Intervention [[chirurgical]]e."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3467,
+    "headword": "conviction",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.32",
+    "subtitle_pos_per_million": "13.32",
+    "senses": [
+      {
+        "sense_id": "b150-3467-conviction-nom-selected",
+        "source_headword": "conviction",
+        "use": "Feminine noun for firm belief or certainty.",
+        "use_language": "en",
+        "excluded_uses": "Legal evidence and the English sense of a criminal conviction.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Certitude que l’on a de la vérité d’un fait ou d’un principe.",
+            "source_id": "b150_fr_120577",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[effet|Effet]] qu’une [[preuve]] [[évident]]e [[produire|produit]] dans l’esprit, [[certitude]] que l’on a de la [[vérité]] d’un [[fait]], d’un [[principe]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/kɔ̃.vik.sjɔ̃/",
+            "source_id": "b150_fr_120577",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''conviction''' {{pron|kɔ̃.vik.sjɔ̃|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Firm belief or certainty that a fact or principle is true.",
+            "source_id": "b150_fr_120577",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[effet|Effet]] qu’une [[preuve]] [[évident]]e [[produire|produit]] dans l’esprit, [[certitude]] que l’on a de la [[vérité]] d’un [[fait]], d’un [[principe]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "确信某一事实或原则为真；坚定的信念。",
+            "source_id": "b150_fr_120577",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[effet|Effet]] qu’une [[preuve]] [[évident]]e [[produire|produit]] dans l’esprit, [[certitude]] que l’on a de la [[vérité]] d’un [[fait]], d’un [[principe]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3468,
+    "headword": "inconscient",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "13.32",
+    "subtitle_pos_per_million": "10.45",
+    "senses": [
+      {
+        "sense_id": "b150-3468-inconscient-adj-selected",
+        "source_headword": "inconscient",
+        "use": "Adjective for thoughtlessness, explicitly labelled courant in the source.",
+        "use_language": "en",
+        "excluded_uses": "Unconscious mental states, loss of consciousness and the noun.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dans l’usage courant, irréfléchi ; qui agit sans réfléchir.",
+            "source_id": "b150_fr_164660",
+            "source_span": {
+              "line_1_based": 15,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{courant|fr}} Qui est [[irréfléchi]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɛ̃.kɔ̃.sjɑ̃/",
+            "source_id": "b150_fr_164660",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''inconscient''' {{pron|ɛ̃.kɔ̃.sjɑ̃|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "In ordinary usage, thoughtless or reckless; acting without thinking.",
+            "source_id": "b150_fr_164660",
+            "source_span": {
+              "line_1_based": 15,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{courant|fr}} Qui est [[irréfléchi]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "（常用义）欠考虑的、鲁莽的；做事不经过思考的。",
+            "source_id": "b150_fr_164660",
+            "source_span": {
+              "line_1_based": 15,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{courant|fr}} Qui est [[irréfléchi]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3469,
+    "headword": "pointe",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.32",
+    "subtitle_pos_per_million": "13.32",
+    "senses": [
+      {
+        "sense_id": "b150-3469-pointe-nom-selected",
+        "source_headword": "pointe",
+        "use": "Feminine noun for a sharp tip.",
+        "use_language": "en",
+        "excluded_uses": "Nails, engraving tools, peak hours and other figurative senses.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Extrémité aiguë et piquante de quelque chose.",
+            "source_id": "b150_fr_7979",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[extrémité|Extrémité]] [[piquant]]e et [[aigu#fr|aigüe]] de [[quelque chose]] que ce [[être|soit]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/pwɛ̃t/",
+            "source_id": "b150_fr_7979",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''pointe''' {{pron|pwɛ̃t|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Sharp, pointed tip of something.",
+            "source_id": "b150_fr_7979",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[extrémité|Extrémité]] [[piquant]]e et [[aigu#fr|aigüe]] de [[quelque chose]] que ce [[être|soit]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "某物尖锐、能刺人的末端；尖端。",
+            "source_id": "b150_fr_7979",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[extrémité|Extrémité]] [[piquant]]e et [[aigu#fr|aigüe]] de [[quelque chose]] que ce [[être|soit]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3470,
+    "headword": "frite",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.31",
+    "subtitle_pos_per_million": "9.33",
+    "senses": [
+      {
+        "sense_id": "b150-3470-frite-nom-selected",
+        "source_headword": "frite",
+        "use": "Feminine count noun, one fried potato stick.",
+        "use_language": "en",
+        "excluded_uses": "Swimming noodles, slang face or blows and feminine participle of frire.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Bâtonnet de pomme de terre frit dans l’huile.",
+            "source_id": "b150_fr_50532",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|cuisine|fr}} [[bâtonnet|Bâtonnet]] de [[pomme de terre|pomme de terre]] frit dans l’[[huile]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/fʁit/",
+            "source_id": "b150_fr_50532",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''frite''' {{pron|fʁit|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "A chip or French fry: one stick of potato fried in oil.",
+            "source_id": "b150_fr_50532",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|cuisine|fr}} [[bâtonnet|Bâtonnet]] de [[pomme de terre|pomme de terre]] frit dans l’[[huile]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "一根用油炸成的土豆条；薯条。",
+            "source_id": "b150_fr_50532",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|cuisine|fr}} [[bâtonnet|Bâtonnet]] de [[pomme de terre|pomme de terre]] frit dans l’[[huile]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3471,
+    "headword": "historique",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "13.31",
+    "subtitle_pos_per_million": "11.31",
+    "senses": [
+      {
+        "sense_id": "b150-3471-historique-adj-selected",
+        "source_headword": "historique",
+        "use": "Adjective with identical masculine and feminine singular forms.",
+        "use_language": "en",
+        "excluded_uses": "The noun, obsolete celebrity sense and the distinct momentous or non-fictional uses.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Relatif à l’histoire.",
+            "source_id": "b150_fr_11006",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Relatif à l’[[histoire]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/is.tɔ.ʁik/",
+            "source_id": "b150_fr_11006",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''historique''' {{pron|is.tɔ.ʁik|fr}} {{mf}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Historical: relating to history.",
+            "source_id": "b150_fr_11006",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Relatif à l’[[histoire]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "与历史有关的；历史的。",
+            "source_id": "b150_fr_11006",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Relatif à l’[[histoire]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3472,
+    "headword": "conte",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.3",
+    "subtitle_pos_per_million": "13.3",
+    "senses": [
+      {
+        "sense_id": "b150-3472-conte-nom-selected",
+        "source_headword": "conte",
+        "use": "Masculine narrative noun.",
+        "use_language": "en",
+        "excluded_uses": "Gossip or deceptive informal stories; compter and its spelling.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Récit d’aventures imaginaires, vraisemblables ou mêlées de merveilleux.",
+            "source_id": "b150_fr_8025",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[récit|Récit]] d’[[aventure]]s [[imaginaire]]s, soit qu’elles aient de la [[vraisemblance]] ou que s’y mêle du [[merveilleux]], du [[féerique]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/kɔ̃t/",
+            "source_id": "b150_fr_8025",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''conte''' {{pron|kɔ̃t|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Tale of imaginary adventures, whether plausible or involving the marvellous.",
+            "source_id": "b150_fr_8025",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[récit|Récit]] d’[[aventure]]s [[imaginaire]]s, soit qu’elles aient de la [[vraisemblance]] ou que s’y mêle du [[merveilleux]], du [[féerique]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "讲述虚构冒险的故事，可以看似真实，也可以带有奇幻色彩。",
+            "source_id": "b150_fr_8025",
+            "source_span": {
+              "line_1_based": 11,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[récit|Récit]] d’[[aventure]]s [[imaginaire]]s, soit qu’elles aient de la [[vraisemblance]] ou que s’y mêle du [[merveilleux]], du [[féerique]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3473,
+    "headword": "fiancer",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "13.3",
+    "subtitle_pos_per_million": "13.3",
+    "senses": [
+      {
+        "sense_id": "b150-3473-fiancer-ver-selected",
+        "source_headword": "fiancer",
+        "use": "Pronominal engagement construction se fiancer; IPA is the captured bare infinitive.",
+        "use_language": "en",
+        "excluded_uses": "Officiating an engagement ceremony, arranging another person’s engagement and literary figurative uses.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dans se fiancer, s’engager par une promesse de mariage.",
+            "source_id": "b150_fr_161355",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[engager|Engager]] par une [[promesse]] de [[mariage]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/fi.ɑ̃.se/",
+            "source_id": "b150_fr_161355",
+            "source_span": {
+              "line_1_based": 54,
+              "column_1_based": 1,
+              "raw_source_excerpt": "*{{pron|fi.ɑ̃.se|fr}}, ou souvent {{pron|fi.jɑ̃.se|fr}}, l’enchainement {{pron|i.ɑ̃|fr}} n’étant pas très naturel en français."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "In se fiancer, to become engaged by making a promise of marriage.",
+            "source_id": "b150_fr_161355",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[engager|Engager]] par une [[promesse]] de [[mariage]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "用于 se fiancer，指作出结婚的承诺；订婚。",
+            "source_id": "b150_fr_161355",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[engager|Engager]] par une [[promesse]] de [[mariage]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3474,
+    "headword": "profondeur",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.3",
+    "subtitle_pos_per_million": "13.3",
+    "senses": [
+      {
+        "sense_id": "b150-3474-profondeur-nom-selected",
+        "source_headword": "profondeur",
+        "use": "Feminine dimension noun, surface or entrance to the bottom.",
+        "use_language": "en",
+        "excluded_uses": "Military thickness and figurative profundity.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Étendue mesurée depuis la surface ou l’entrée jusqu’au fond.",
+            "source_id": "b150_fr_172768",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[étendue|Étendue]] d’une [[chose]] [[considérer|considérée]] [[depuis]] la [[surface]] ou l’[[entrée]] [[jusqu’]]au [[fond]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/pʁɔ.fɔ̃.dœʁ/",
+            "source_id": "b150_fr_172768",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''profondeur''' {{pron|pʁɔ.fɔ̃.dœʁ|fr}} {{f}} "
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Depth: extent from the surface or entrance to the bottom or back.",
+            "source_id": "b150_fr_172768",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[étendue|Étendue]] d’une [[chose]] [[considérer|considérée]] [[depuis]] la [[surface]] ou l’[[entrée]] [[jusqu’]]au [[fond]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "深度；从表面或入口到最深处、底部的距离。",
+            "source_id": "b150_fr_172768",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[étendue|Étendue]] d’une [[chose]] [[considérer|considérée]] [[depuis]] la [[surface]] ou l’[[entrée]] [[jusqu’]]au [[fond]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3475,
+    "headword": "publicité",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.3",
+    "subtitle_pos_per_million": "13.3",
+    "senses": [
+      {
+        "sense_id": "b150-3475-publicité-nom-selected",
+        "source_headword": "publicité",
+        "use": "Feminine advertising noun.",
+        "use_language": "en",
+        "excluded_uses": "Public notoriety, making legal information public and open court hearings.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Action et ensemble des moyens employés pour promouvoir la vente d’un produit auprès du public.",
+            "source_id": "b150_fr_173104",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|marketing|fr}} Action, fait de promouvoir la [[vente]] d'un [[produit]] en exerçant sur le public une [[influence]], une action [[psychologique]] afin de créer en lui des [[besoin]]s, des [[désir]]s ; ensemble des moyens employés pour [[promouvoir]] un produit."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/py.bli.si.te/",
+            "source_id": "b150_fr_173104",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''publicité''' {{pron|py.bli.si.te|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Advertising: activity and means used to promote sales of a product to the public.",
+            "source_id": "b150_fr_173104",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|marketing|fr}} Action, fait de promouvoir la [[vente]] d'un [[produit]] en exerçant sur le public une [[influence]], une action [[psychologique]] afin de créer en lui des [[besoin]]s, des [[désir]]s ; ensemble des moyens employés pour [[promouvoir]] un produit."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "为向公众推销产品而采取的宣传活动及手段；广告宣传。",
+            "source_id": "b150_fr_173104",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|marketing|fr}} Action, fait de promouvoir la [[vente]] d'un [[produit]] en exerçant sur le public une [[influence]], une action [[psychologique]] afin de créer en lui des [[besoin]]s, des [[désir]]s ; ensemble des moyens employés pour [[promouvoir]] un produit."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3476,
+    "headword": "quotidien",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "13.3",
+    "subtitle_pos_per_million": "10.15",
+    "senses": [
+      {
+        "sense_id": "b150-3476-quotidien-adj-selected",
+        "source_headword": "quotidien",
+        "use": "Adjective, masculine singular headword.",
+        "use_language": "en",
+        "excluded_uses": "The daily newspaper noun and the separately restricted newspaper publication sense.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "De chaque jour ; qui se rapporte à chaque jour.",
+            "source_id": "b150_fr_173636",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# De [[chaque]] [[jour]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ko.ti.djɛ̃/",
+            "source_id": "b150_fr_173636",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''quotidien''' {{pron|ko.ti.djɛ̃|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Daily; of each day.",
+            "source_id": "b150_fr_173636",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# De [[chaque]] [[jour]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "每天的；日常的。",
+            "source_id": "b150_fr_173636",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# De [[chaque]] [[jour]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3477,
+    "headword": "angle",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.29",
+    "subtitle_pos_per_million": "13.29",
+    "senses": [
+      {
+        "sense_id": "b150-3477-angle-nom-selected",
+        "source_headword": "angle",
+        "use": "Masculine noun for a physical corner.",
+        "use_language": "en",
+        "excluded_uses": "Angular measurements, viewpoints, figurative harshness and other languages.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Coin ou extrémité d’une chose où des lignes se croisent.",
+            "source_id": "b150_fr_7416",
+            "source_span": {
+              "line_1_based": 24,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[coin|Coin]], [[extrémité]] d’une [[chose]] [[terminer|terminé]]e par un [[croisement]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɑ̃ɡl/",
+            "source_id": "b150_fr_7416",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''angle''' {{pron|ɑ̃ɡl|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Corner or end of something where lines meet.",
+            "source_id": "b150_fr_7416",
+            "source_span": {
+              "line_1_based": 24,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[coin|Coin]], [[extrémité]] d’une [[chose]] [[terminer|terminé]]e par un [[croisement]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "物体上边线相交形成的角、拐角。",
+            "source_id": "b150_fr_7416",
+            "source_span": {
+              "line_1_based": 24,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[coin|Coin]], [[extrémité]] d’une [[chose]] [[terminer|terminé]]e par un [[croisement]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3478,
+    "headword": "lot",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.28",
+    "subtitle_pos_per_million": "13.28",
+    "senses": [
+      {
+        "sense_id": "b150-3478-lot-nom-selected",
+        "source_headword": "lot",
+        "use": "Masculine lottery-prize noun.",
+        "use_language": "en",
+        "excluded_uses": "Inheritance shares, batches of goods, destiny and dated slang for a woman.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Ce que gagne le détenteur d’un billet gagnant dans une loterie.",
+            "source_id": "b150_fr_32100",
+            "source_span": {
+              "line_1_based": 24,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Ce qui [[échoir|échoit]] dans une [[loterie]] à [[chacun]] des [[billet]]s [[gagnant]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/lo/",
+            "source_id": "b150_fr_32100",
+            "source_span": {
+              "line_1_based": 17,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''lot''' {{pron|lo|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Prize won by the holder of a winning lottery ticket.",
+            "source_id": "b150_fr_32100",
+            "source_span": {
+              "line_1_based": 24,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Ce qui [[échoir|échoit]] dans une [[loterie]] à [[chacun]] des [[billet]]s [[gagnant]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "中奖的彩票持有人获得的奖品或奖金。",
+            "source_id": "b150_fr_32100",
+            "source_span": {
+              "line_1_based": 24,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Ce qui [[échoir|échoit]] dans une [[loterie]] à [[chacun]] des [[billet]]s [[gagnant]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3479,
+    "headword": "tailler",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "13.28",
+    "subtitle_pos_per_million": "13.28",
+    "senses": [
+      {
+        "sense_id": "b150-3479-tailler-ver-selected",
+        "source_headword": "tailler",
+        "use": "Transitive shaping or trimming verb.",
+        "use_language": "en",
+        "excluded_uses": "Obsolete surgery and card-dealing senses; slang se tailler.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Couper ou enlever le superflu d’une matière pour lui donner une forme ou la rendre propre à un usage.",
+            "source_id": "b150_fr_27024",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[couper|Couper]], [[retrancher]] d’une [[matière]], en [[ôter]] [[avec]] le [[marteau]], le [[ciseau]], ou tout autre [[instrument]], ce qu’il y a de [[superflu]], pour lui [[donner]] une [[certain]]e [[forme]], pour la [[rendre]] [[propre]] à [[tel ou tel]] [[usage]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ta.je/",
+            "source_id": "b150_fr_27024",
+            "source_span": {
+              "line_1_based": 6,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''tailler''' {{pron|tɑ.je|fr}} ou {{pron|ta.je|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "To cut or trim away excess material to give it a shape or make it fit for a use.",
+            "source_id": "b150_fr_27024",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[couper|Couper]], [[retrancher]] d’une [[matière]], en [[ôter]] [[avec]] le [[marteau]], le [[ciseau]], ou tout autre [[instrument]], ce qu’il y a de [[superflu]], pour lui [[donner]] une [[certain]]e [[forme]], pour la [[rendre]] [[propre]] à [[tel ou tel]] [[usage]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "切削、修剪或去除材料的多余部分，使其成形或适合某种用途。",
+            "source_id": "b150_fr_27024",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[couper|Couper]], [[retrancher]] d’une [[matière]], en [[ôter]] [[avec]] le [[marteau]], le [[ciseau]], ou tout autre [[instrument]], ce qu’il y a de [[superflu]], pour lui [[donner]] une [[certain]]e [[forme]], pour la [[rendre]] [[propre]] à [[tel ou tel]] [[usage]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3480,
+    "headword": "entretenir",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "13.27",
+    "subtitle_pos_per_million": "13.27",
+    "senses": [
+      {
+        "sense_id": "b150-3480-entretenir-ver-selected",
+        "source_headword": "entretenir",
+        "use": "Transitive maintenance verb, with the maintained thing as object.",
+        "use_language": "en",
+        "excluded_uses": "Financially supporting someone, conversation and pronominal constructions.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Tenir une chose en bon état.",
+            "source_id": "b150_fr_159760",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[tenir|Tenir]] en [[bon]] [[état]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɑ̃.tʁə.tə.niʁ/",
+            "source_id": "b150_fr_159760",
+            "source_span": {
+              "line_1_based": 6,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''entretenir''' {{pron|ɑ̃.tʁət.niʁ|fr}} ou {{pron|ɑ̃.tʁə.tə.niʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "To maintain something in good condition.",
+            "source_id": "b150_fr_159760",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[tenir|Tenir]] en [[bon]] [[état]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "维护、保养某物，使其保持良好状态。",
+            "source_id": "b150_fr_159760",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[tenir|Tenir]] en [[bon]] [[état]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3481,
+    "headword": "lance",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.27",
+    "subtitle_pos_per_million": "13.27",
+    "senses": [
+      {
+        "sense_id": "b150-3481-lance-nom-selected",
+        "source_headword": "lance",
+        "use": "Feminine noun for the weapon, an ordinary object sense without an obsolete label.",
+        "use_language": "en",
+        "excluded_uses": "Historical soldier designation, hoses and other lance-shaped objects, slang water and lancer verb forms.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Arme constituée d’un long manche de bois terminé par un fer pointu.",
+            "source_id": "b150_fr_166215",
+            "source_span": {
+              "line_1_based": 16,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[arme|Arme]] à [[long]] [[bois]], [[terminer|terminée]] par un fer [[pointu]] et qui, au [[Moyen Âge]], était [[fort]] [[gros]]se vers la [[poignée]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/lɑ̃s/",
+            "source_id": "b150_fr_166215",
+            "source_span": {
+              "line_1_based": 15,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''lance''' {{pron|lɑ̃s|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Lance or spear: a weapon with a long wooden shaft ending in a pointed metal head.",
+            "source_id": "b150_fr_166215",
+            "source_span": {
+              "line_1_based": 16,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[arme|Arme]] à [[long]] [[bois]], [[terminer|terminée]] par un fer [[pointu]] et qui, au [[Moyen Âge]], était [[fort]] [[gros]]se vers la [[poignée]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "长柄末端装有尖锐金属头的武器；长矛。",
+            "source_id": "b150_fr_166215",
+            "source_span": {
+              "line_1_based": 16,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[arme|Arme]] à [[long]] [[bois]], [[terminer|terminée]] par un fer [[pointu]] et qui, au [[Moyen Âge]], était [[fort]] [[gros]]se vers la [[poignée]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3482,
+    "headword": "fillette",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.26",
+    "subtitle_pos_per_million": "13.26",
+    "senses": [
+      {
+        "sense_id": "b150-3482-fillette-nom-selected",
+        "source_headword": "fillette",
+        "use": "Feminine child noun.",
+        "use_language": "en",
+        "excluded_uses": "Insults directed at men, regional wine bottles and slang shoe sizes.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Petite fille qui n’est plus un bébé et n’a pas encore atteint la puberté.",
+            "source_id": "b150_fr_161435",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[petite fille|Petite fille]], [[enfant]] du [[sexe]] ou [[genre]] [[féminin]] qui n’est [[plus]] un [[bébé]] sans être [[pubère]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/fi.jɛt/",
+            "source_id": "b150_fr_161435",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''fillette''' {{pron|fi.jɛt|fr}} {{f}} {{équiv-pour|lang=fr|un homme|garçonnet}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Little girl, no longer a baby and not yet pubescent.",
+            "source_id": "b150_fr_161435",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[petite fille|Petite fille]], [[enfant]] du [[sexe]] ou [[genre]] [[féminin]] qui n’est [[plus]] un [[bébé]] sans être [[pubère]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "已不是婴儿、但尚未进入青春期的小女孩。",
+            "source_id": "b150_fr_161435",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[petite fille|Petite fille]], [[enfant]] du [[sexe]] ou [[genre]] [[féminin]] qui n’est [[plus]] un [[bébé]] sans être [[pubère]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3483,
+    "headword": "tranquillement",
+    "lexique_cgram": "ADV",
+    "subtitle_lemma_per_million": "13.26",
+    "subtitle_pos_per_million": "13.26",
+    "senses": [
+      {
+        "sense_id": "b150-3483-tranquillement-adv-selected",
+        "source_headword": "tranquillement",
+        "use": "Adverb derived from the calm, unagitated adjective use.",
+        "use_language": "en",
+        "excluded_uses": "Other-language homographs and unsupported meanings of slowly.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "D’une manière paisible et calme, sans agitation.",
+            "source_id": "b150_fr_37464",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# D’une manière [[tranquille]] ; avec [[tranquillité]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/tʁɑ̃.kil.mɑ̃/",
+            "source_id": "b150_fr_37464",
+            "source_span": {
+              "line_1_based": 6,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''tranquillement''' {{pron|tʁɑ̃.kil.mɑ̃|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Quietly or calmly, without agitation.",
+            "source_id": "b150_fr_37464",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# D’une manière [[tranquille]] ; avec [[tranquillité]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "平静地、安静地；不慌乱地。",
+            "source_id": "b150_fr_37464",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# D’une manière [[tranquille]] ; avec [[tranquillité]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3484,
+    "headword": "effondrer",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "13.24",
+    "subtitle_pos_per_million": "13.24",
+    "senses": [
+      {
+        "sense_id": "b150-3484-effondrer-ver-selected",
+        "source_headword": "effondrer",
+        "use": "Pronominal physical-collapse construction s’effondrer; source grammar and crouler semantics are combined.",
+        "use_language": "en",
+        "excluded_uses": "Obsolete soil-working and gutting, financial drops, emotional collapse and the transitive causative use.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dans s’effondrer, se rompre et crouler ; s’écrouler.",
+            "source_id": "b150_fr_158771",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[défoncer|Défoncer]], [[rompre]], faire [[crouler]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/e.fɔ̃.dʁe/",
+            "source_id": "b150_fr_158771",
+            "source_span": {
+              "line_1_based": 6,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''effondrer''' {{pron|e.fɔ̃.dʁe|fr}} {{prnl}} ou {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal|’}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "In s’effondrer, to collapse or fall down after giving way.",
+            "source_id": "b150_fr_158771",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[défoncer|Défoncer]], [[rompre]], faire [[crouler]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "用于 s’effondrer，指因支撑破坏而倒塌、坍塌。",
+            "source_id": "b150_fr_158771",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[défoncer|Défoncer]], [[rompre]], faire [[crouler]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3485,
+    "headword": "mark",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.24",
+    "subtitle_pos_per_million": "13.24",
+    "senses": [
+      {
+        "sense_id": "b150-3485-mark-nom-selected",
+        "source_headword": "mark",
+        "use": "Masculine currency noun; contemporary references to the former Deutsche mark, not current legal tender.",
+        "use_language": "en",
+        "excluded_uses": "Reichsmark, Finnish mark, skeet projectiles and specialist wrestling-fan slang.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Deutschemark, ancienne monnaie de la République fédérale d’Allemagne, remplacée par l’euro.",
+            "source_id": "b150_fr_69507",
+            "source_span": {
+              "line_1_based": 17,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[deutschemark|Deutschemark]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/maʁk/",
+            "source_id": "b150_fr_69507",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''mark''' {{pron|maʁk|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Deutsche mark, the former currency of the Federal Republic of Germany, replaced by the euro.",
+            "source_id": "b150_fr_69507",
+            "source_span": {
+              "line_1_based": 17,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[deutschemark|Deutschemark]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "德国马克；德意志联邦共和国曾使用、后被欧元取代的货币。",
+            "source_id": "b150_fr_69507",
+            "source_span": {
+              "line_1_based": 17,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[deutschemark|Deutschemark]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3486,
+    "headword": "carnet",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.23",
+    "subtitle_pos_per_million": "13.23",
+    "senses": [
+      {
+        "sense_id": "b150-3486-carnet-nom-selected",
+        "source_headword": "carnet",
+        "use": "Masculine notebook noun.",
+        "use_language": "en",
+        "excluded_uses": "Swiss or Belgian savings passbooks and ticket booklets.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Petit livre de notes ou de comptes que l’on porte avec soi.",
+            "source_id": "b150_fr_7996",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|papeterie|fr}} Petit [[livre]] de [[compte]]s ou de [[note]]s que l’on [[porter|porte]] [[avec]] soi."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/kaʁ.nɛ/",
+            "source_id": "b150_fr_7996",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''carnet''' {{pron|kaʁ.nɛ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Small notebook or account book carried with oneself.",
+            "source_id": "b150_fr_7996",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|papeterie|fr}} Petit [[livre]] de [[compte]]s ou de [[note]]s que l’on [[porter|porte]] [[avec]] soi."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "随身携带的小笔记本或账本。",
+            "source_id": "b150_fr_7996",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|papeterie|fr}} Petit [[livre]] de [[compte]]s ou de [[note]]s que l’on [[porter|porte]] [[avec]] soi."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3487,
+    "headword": "enveloppe",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.23",
+    "subtitle_pos_per_million": "13.23",
+    "senses": [
+      {
+        "sense_id": "b150-3487-enveloppe-nom-selected",
+        "source_headword": "enveloppe",
+        "use": "Feminine postal noun.",
+        "use_language": "en",
+        "excluded_uses": "General coverings, membranes, airship shells, budget allocations and the verb form.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Poche de papier servant à expédier une lettre.",
+            "source_id": "b150_fr_8026",
+            "source_span": {
+              "line_1_based": 38,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|poste|fr}} [[poche|Poche]] de [[papier]] servant à [[expédier]] une [[lettre]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɑ̃.və.lɔp/",
+            "source_id": "b150_fr_8026",
+            "source_span": {
+              "line_1_based": 23,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''enveloppe''' {{pron|ɑ̃v.lɔp|ɑ̃.və.lɔp|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Paper envelope used to send a letter.",
+            "source_id": "b150_fr_8026",
+            "source_span": {
+              "line_1_based": 38,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|poste|fr}} [[poche|Poche]] de [[papier]] servant à [[expédier]] une [[lettre]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "用于寄送信件的纸质封套；信封。",
+            "source_id": "b150_fr_8026",
+            "source_span": {
+              "line_1_based": 38,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|poste|fr}} [[poche|Poche]] de [[papier]] servant à [[expédier]] une [[lettre]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3488,
+    "headword": "impatient",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "13.23",
+    "subtitle_pos_per_million": "12.64",
+    "senses": [
+      {
+        "sense_id": "b150-3488-impatient-adj-selected",
+        "source_headword": "impatient",
+        "use": "Adjective, masculine singular headword; lack-of-patience sense.",
+        "use_language": "en",
+        "excluded_uses": "Poetic inability to tolerate something and the noun.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui manque de patience dans l’attente ou devant une souffrance.",
+            "source_id": "b150_fr_117892",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui [[manquer|manque]] de [[patience]], [[soit]] dans la [[souffrance]] de [[quelque]] [[mal]], soit dans l’[[attente]] de quelque [[bien]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɛ̃.pa.sjɑ̃/",
+            "source_id": "b150_fr_117892",
+            "source_span": {
+              "line_1_based": 6,
+              "column_1_based": 1,
+              "raw_source_excerpt": "{{fr-accord-cons|ɛ̃.pa.sjɑ̃|t}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Impatient: lacking patience while waiting or enduring discomfort.",
+            "source_id": "b150_fr_117892",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui [[manquer|manque]] de [[patience]], [[soit]] dans la [[souffrance]] de [[quelque]] [[mal]], soit dans l’[[attente]] de quelque [[bien]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "在等待或忍受痛苦时缺乏耐心的；不耐烦的。",
+            "source_id": "b150_fr_117892",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui [[manquer|manque]] de [[patience]], [[soit]] dans la [[souffrance]] de [[quelque]] [[mal]], soit dans l’[[attente]] de quelque [[bien]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3489,
+    "headword": "résistance",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.23",
+    "subtitle_pos_per_million": "13.23",
+    "senses": [
+      {
+        "sense_id": "b150-3489-résistance-nom-selected",
+        "source_headword": "résistance",
+        "use": "Feminine physical-resistance noun; ordinary material property.",
+        "use_language": "en",
+        "excluded_uses": "Electrical quantities, resistance movements and opposition by a person.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qualité d’un corps qui résiste à l’action d’un autre corps.",
+            "source_id": "b150_fr_7659",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[qualité|Qualité]] par [[laquelle]] un [[corps]] [[résister|résiste]] à l’[[action]] d’un autre corps."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁe.zis.tɑ̃s/",
+            "source_id": "b150_fr_7659",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''résistance''' {{pron|ʁe.zis.tɑ̃s|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Resistance: the capacity of a physical body or material to withstand another body’s action.",
+            "source_id": "b150_fr_7659",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[qualité|Qualité]] par [[laquelle]] un [[corps]] [[résister|résiste]] à l’[[action]] d’un autre corps."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "物体或材料抵抗另一物体作用的能力；抵抗力、耐受性。",
+            "source_id": "b150_fr_7659",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[qualité|Qualité]] par [[laquelle]] un [[corps]] [[résister|résiste]] à l’[[action]] d’un autre corps."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3490,
+    "headword": "ère",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.23",
+    "subtitle_pos_per_million": "13.23",
+    "senses": [
+      {
+        "sense_id": "b150-3490-ère-nom-selected",
+        "source_headword": "ère",
+        "use": "Feminine era noun in its extended period sense.",
+        "use_language": "en",
+        "excluded_uses": "A dating system’s fixed starting point and formal geological subdivisions.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Époque remarquable où commence un nouvel ordre de choses.",
+            "source_id": "b150_fr_160016",
+            "source_span": {
+              "line_1_based": 20,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{par extension}} [[époque|Époque]] très [[remarquable]] où un [[nouvel]] [[ordre]] de choses s’[[établir|établit]], commence."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɛʁ/",
+            "source_id": "b150_fr_160016",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''ère''' {{pron|ɛʁ|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Era: a notable period beginning with a new order of things.",
+            "source_id": "b150_fr_160016",
+            "source_span": {
+              "line_1_based": 20,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{par extension}} [[époque|Époque]] très [[remarquable]] où un [[nouvel]] [[ordre]] de choses s’[[établir|établit]], commence."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "以新的事物秩序开始为特点的重要时期；时代。",
+            "source_id": "b150_fr_160016",
+            "source_span": {
+              "line_1_based": 20,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{par extension}} [[époque|Époque]] très [[remarquable]] où un [[nouvel]] [[ordre]] de choses s’[[établir|établit]], commence."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3491,
+    "headword": "phase",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.22",
+    "subtitle_pos_per_million": "13.22",
+    "senses": [
+      {
+        "sense_id": "b150-3491-phase-nom-selected",
+        "source_headword": "phase",
+        "use": "Feminine stage noun.",
+        "use_language": "en",
+        "excluded_uses": "Astronomical appearances, electrical signals or wires and matter states.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "État ou étape dans une succession par laquelle passe un phénomène.",
+            "source_id": "b150_fr_120460",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[état|États]] [[successif]]s par lesquels [[passer|passent]] [[certain]]s [[phénomène]]s de la [[vie]], de l’[[histoire]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/faz/",
+            "source_id": "b150_fr_120460",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''phase''' {{pron|fɑz|fr}} <small>ou</small> {{pron|faz|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Phase or stage in a succession of states through which a phenomenon passes.",
+            "source_id": "b150_fr_120460",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[état|États]] [[successif]]s par lesquels [[passer|passent]] [[certain]]s [[phénomène]]s de la [[vie]], de l’[[histoire]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "某种现象在连续变化中经历的状态或阶段。",
+            "source_id": "b150_fr_120460",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[état|États]] [[successif]]s par lesquels [[passer|passent]] [[certain]]s [[phénomène]]s de la [[vie]], de l’[[histoire]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3492,
+    "headword": "remarquable",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "13.22",
+    "subtitle_pos_per_million": "13.22",
+    "senses": [
+      {
+        "sense_id": "b150-3492-remarquable-adj-selected",
+        "source_headword": "remarquable",
+        "use": "Adjective with identical masculine and feminine singular forms.",
+        "use_language": "en",
+        "excluded_uses": "No automatic claim that the thing is morally good or favourable.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui mérite d’être remarqué et attire l’attention.",
+            "source_id": "b150_fr_174547",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui [[mériter|mérite]] d’être remarqué ; qui [[attirer|attire]] l’[[attention]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁə.maʁ.kabl/",
+            "source_id": "b150_fr_174547",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''remarquable''' {{pron|ʁə.maʁ.kabl|fr}} {{mf}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Remarkable or noteworthy; deserving notice and attracting attention.",
+            "source_id": "b150_fr_174547",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui [[mériter|mérite]] d’être remarqué ; qui [[attirer|attire]] l’[[attention]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "值得注意的、引人注目的；显著的。",
+            "source_id": "b150_fr_174547",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Qui [[mériter|mérite]] d’être remarqué ; qui [[attirer|attire]] l’[[attention]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3493,
+    "headword": "revenu",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.22",
+    "subtitle_pos_per_million": "6.72",
+    "senses": [
+      {
+        "sense_id": "b150-3493-revenu-nom-selected",
+        "source_headword": "revenu",
+        "use": "Masculine financial noun; annual-income scope and the source’s optional-schwa IPA notation retained.",
+        "use_language": "en",
+        "excluded_uses": "Metallurgical tempering and the past participle of revenir.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Ce que l’on retire annuellement d’un emploi, d’un domaine, d’une pension ou d’une rente.",
+            "source_id": "b150_fr_175069",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Ce qu’on [[retirer|retire]] [[annuellement]] d’un [[domaine]], d’un [[emploi]], d’une [[pension]], d’une [[constitution]] de [[rente]], etc."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁ(ə.)v(ə.)ny/",
+            "source_id": "b150_fr_175069",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''revenu''' {{pron|ʁ(ə.)v(ə.)ny|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Annual income obtained from employment, property, a pension or an annuity.",
+            "source_id": "b150_fr_175069",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Ce qu’on [[retirer|retire]] [[annuellement]] d’un [[domaine]], d’un [[emploi]], d’une [[pension]], d’une [[constitution]] de [[rente]], etc."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "从工作、地产、养老金或年金等获得的年度收入。",
+            "source_id": "b150_fr_175069",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Ce qu’on [[retirer|retire]] [[annuellement]] d’un [[domaine]], d’un [[emploi]], d’une [[pension]], d’une [[constitution]] de [[rente]], etc."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3494,
+    "headword": "richesse",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.21",
+    "subtitle_pos_per_million": "13.21",
+    "senses": [
+      {
+        "sense_id": "b150-3494-richesse-nom-selected",
+        "source_headword": "richesse",
+        "use": "Feminine wealth noun.",
+        "use_language": "en",
+        "excluded_uses": "Natural abundance, valuable objects and figurative richness of ideas.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Abondance de biens ; opulence.",
+            "source_id": "b150_fr_175185",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[opulence|Opulence]] ; [[abondance]] de [[bien]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁi.ʃɛs/",
+            "source_id": "b150_fr_175185",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''richesse''' {{pron|ʁi.ʃɛs|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Wealth or affluence; an abundance of possessions.",
+            "source_id": "b150_fr_175185",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[opulence|Opulence]] ; [[abondance]] de [[bien]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "财物充裕；富有、富裕。",
+            "source_id": "b150_fr_175185",
+            "source_span": {
+              "line_1_based": 8,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# [[opulence|Opulence]] ; [[abondance]] de [[bien]]s."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3495,
+    "headword": "baby",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.2",
+    "subtitle_pos_per_million": "13.2",
+    "senses": [
+      {
+        "sense_id": "b150-3495-baby-nom-selected",
+        "source_headword": "baby",
+        "use": "Masculine informal game noun, pronounced ba.bi; false anglicism, abbreviation of baby-foot.",
+        "use_language": "en",
+        "excluded_uses": "Obsolete baby or infant, affectionate address, whisky serving, cattle, religion and feminine shoes.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Familièrement, baby-foot : jeu de football de table avec des joueurs miniatures fixés sur des barres mobiles.",
+            "source_id": "b150_fr_83052",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|baby-foot|fr}} {{faux anglicismes|fr}} {{familier|fr}} ''Abréviation de'' [[baby-foot]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ba.bi/",
+            "source_id": "b150_fr_83052",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''baby''' {{pron|ba.bi|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Informal French short form of baby-foot: table football played with miniature players on movable rods.",
+            "source_id": "b150_fr_83052",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|baby-foot|fr}} {{faux anglicismes|fr}} {{familier|fr}} ''Abréviation de'' [[baby-foot]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "（法语口语）baby-foot 的简称；用活动横杆上的小人踢球的桌上足球游戏。",
+            "source_id": "b150_fr_83052",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|baby-foot|fr}} {{faux anglicismes|fr}} {{familier|fr}} ''Abréviation de'' [[baby-foot]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3496,
+    "headword": "délire",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.2",
+    "subtitle_pos_per_million": "13.2",
+    "senses": [
+      {
+        "sense_id": "b150-3496-délire-nom-selected",
+        "source_headword": "délire",
+        "use": "Masculine noun in the nonmedical idea/proposal sense.",
+        "use_language": "en",
+        "excluded_uses": "Clinical delusions, delirium, emotional frenzy and positive excitement.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Idée ou proposition stupide, insensée.",
+            "source_id": "b150_fr_157062",
+            "source_span": {
+              "line_1_based": 28,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Idée, proposition [[stupide]], [[insensé]]e."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/de.liʁ/",
+            "source_id": "b150_fr_157062",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''délire''' {{pron|de.liʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "An absurd or nonsensical idea or proposal.",
+            "source_id": "b150_fr_157062",
+            "source_span": {
+              "line_1_based": 28,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Idée, proposition [[stupide]], [[insensé]]e."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "愚蠢、荒唐或毫无道理的想法、提议。",
+            "source_id": "b150_fr_157062",
+            "source_span": {
+              "line_1_based": 28,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Idée, proposition [[stupide]], [[insensé]]e."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3497,
+    "headword": "dépôt",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.2",
+    "subtitle_pos_per_million": "13.2",
+    "senses": [
+      {
+        "sense_id": "b150-3497-dépôt-nom-selected",
+        "source_headword": "dépôt",
+        "use": "Masculine place noun.",
+        "use_language": "en",
+        "excluded_uses": "The act of depositing, financial deposits, security agreements and sediment.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Lieu où l’on entrepose des objets ou des marchandises.",
+            "source_id": "b150_fr_13989",
+            "source_span": {
+              "line_1_based": 23,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Lieu où l’on [[entreposer|entrepose]] des objets ou des marchandises."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/de.po/",
+            "source_id": "b150_fr_13989",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''dépôt''' {{pron|de.po|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Depot or storage place where objects or goods are kept.",
+            "source_id": "b150_fr_13989",
+            "source_span": {
+              "line_1_based": 23,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Lieu où l’on [[entreposer|entrepose]] des objets ou des marchandises."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "存放物品或货物的场所；仓库、堆放处。",
+            "source_id": "b150_fr_13989",
+            "source_span": {
+              "line_1_based": 23,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Lieu où l’on [[entreposer|entrepose]] des objets ou des marchandises."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3498,
+    "headword": "disponible",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "13.19",
+    "subtitle_pos_per_million": "13.19",
+    "senses": [
+      {
+        "sense_id": "b150-3498-disponible-adj-selected",
+        "source_headword": "disponible",
+        "use": "Adjective with identical masculine and feminine singular forms; usable-availability sense.",
+        "use_language": "en",
+        "excluded_uses": "Legal disposable shares, administration status and sexual uses.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Que l’on a à sa disposition et dont on peut disposer.",
+            "source_id": "b150_fr_158039",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Que l’on a à sa [[disposition]], dont on peut [[disposer]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/dis.pɔ.nibl/",
+            "source_id": "b150_fr_158039",
+            "source_span": {
+              "line_1_based": 6,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''disponible''' {{pron|dis.pɔ.nibl|fr}} {{mf}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Available; at one’s disposal and able to be used.",
+            "source_id": "b150_fr_158039",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Que l’on a à sa [[disposition]], dont on peut [[disposer]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "可以支配或使用的；可用的。",
+            "source_id": "b150_fr_158039",
+            "source_span": {
+              "line_1_based": 7,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# Que l’on a à sa [[disposition]], dont on peut [[disposer]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3499,
+    "headword": "paysage",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "13.19",
+    "subtitle_pos_per_million": "13.19",
+    "senses": [
+      {
+        "sense_id": "b150-3499-paysage-nom-selected",
+        "source_headword": "paysage",
+        "use": "Masculine landscape noun.",
+        "use_language": "en",
+        "excluded_uses": "Ecological systems, figurative domains and paintings of landscapes.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Étendue de territoire que l’on peut voir d’un regard.",
+            "source_id": "b150_fr_141464",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|agriculture|géographie|jardinage|fr}} [[étendue|Étendue]] de [[territoire]] couverte par le [[regard]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/pe.i.zaʒ/",
+            "source_id": "b150_fr_141464",
+            "source_span": {
+              "line_1_based": 9,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''paysage''' {{pron|pe.i.zaʒ|fr}} <small>ou</small> {{pron|pɛ.i.zaʒ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Landscape: an expanse of land visible to the eye.",
+            "source_id": "b150_fr_141464",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|agriculture|géographie|jardinage|fr}} [[étendue|Étendue]] de [[territoire]] couverte par le [[regard]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "视野中可见的一片地域；景观、风景。",
+            "source_id": "b150_fr_141464",
+            "source_span": {
+              "line_1_based": 12,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{lexique|agriculture|géographie|jardinage|fr}} [[étendue|Étendue]] de [[territoire]] couverte par le [[regard]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 3500,
+    "headword": "anéantir",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "13.18",
+    "subtitle_pos_per_million": "13.18",
+    "senses": [
+      {
+        "sense_id": "b150-3500-anéantir-ver-selected",
+        "source_headword": "anéantir",
+        "use": "Transitive complete-destruction verb.",
+        "use_language": "en",
+        "excluded_uses": "Hyperbolic exhaustion, passive bewilderment and pronominal uses.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Réduire à rien, détruire complètement.",
+            "source_id": "b150_fr_138459",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{par extension}} [[réduire|Réduire]] à [[rien]], [[détruire]] [[absolument]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/a.ne.ɑ̃.tiʁ/",
+            "source_id": "b150_fr_138459",
+            "source_span": {
+              "line_1_based": 6,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''anéantir''' {{pron|a.ne.ɑ̃.tiʁ|fr}} {{t|fr}} {{conjugaison|fr|grp=2}} {{lien pronominal|'}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "To annihilate or destroy completely.",
+            "source_id": "b150_fr_138459",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{par extension}} [[réduire|Réduire]] à [[rien]], [[détruire]] [[absolument]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "彻底毁灭；使之化为乌有。",
+            "source_id": "b150_fr_138459",
+            "source_span": {
+              "line_1_based": 13,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{par extension}} [[réduire|Réduire]] à [[rien]], [[détruire]] [[absolument]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  }
+]

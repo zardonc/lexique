@@ -64,6 +64,16 @@ hook 向选择器保留已有 `saveError`，失败文案及按钮按实际保存
 
 更新证据根为 `C:\Users\inthe\IdeaProjects\lexique-category-review-195\review-fixes\target\ticket-201`，包括 `verification-run.json`、`native-runs.json`、`acceptance-summary.json`、`focused-native-failure.json`、浏览器回归和三份新 dump 分析；原生根为 `native-ee8d3ef`。此前干净提交 `a42f21e8664887aa899498dea6ae6ecb6d8ec822`（tree `9d06c344b0d3f5e986f49094f238544319d38086`）的完整 storage **242 项通过**（44.06 秒）、desktop library **147 项通过**、speech cache **11 项通过**及 472 个浏览器／12 个原生场景，保留于相邻 `evidence\ticket-201`，原生 All 备份和探索性 undo 的 RTSS 失败证据也保留。更新未修改 backend／desktop／speech 层及其测试，因此未重跑这三套测试，也不将旧结果改标为更新源码结果。命令、T01–T19 边界、元数据路径映射与重复步骤见[验收记录](evidence/issue-195/README.md)；#196–#200 的证据保留各自版本。SQLite schema 仍为 20，旧 v1–v4 缺少范围时默认 All；旧 strict v4 reader 会拒绝整份新范围备份，回滚须使用受支持的旧备份并另行保留当前数据。其他平台、干净机器安装、全机断网、正式发行验收未运行；本次修复后的最终 combined-head CI 待后续运行。
 
+## D2 冻结批次 #150–#159
+
+`core-159-v1` 准入冻结行 3451–3950 的 **496 新组／1,984 字段**，累计 **3,927 组／15,708 字段**。所有者批准 `ya/NOM`、`cm/NOM`、`haver/VER` 和 `da/ONO` 四项零字段注记；身份、顺序、频率与 4,087 组／3,773 词头分母保持。160 组未准入，3,924 组日常完整、163 组日常未完整；原三项专业义单独计量，全核心有 23 注记／92 缺字段。原 3,431 组／13,724 字段、来源与复核数组、冻结清单和 SQLite payload 保持。
+
+匹配 Windows x64 程序构建于 `5fcba9932f74e298d4a798e6eb195faad5f51507`。核心为 18,268,160 字节，现有 reader／转换报告上限同步为 20,000,000 字节。FranceTerme Licence Ouverte 1.0 原始 PDF 和 `audition` 的来源／日期通知随包保留；所有 Git 保存的材料与本机字节一致。18 项核心检查、75 项批次检查、16 项 portable 测试、lint、类型检查、生产构建、原生目录夹具、文档链接、Rust 格式／locked 编译、单独预编译和 242 项后端测试通过，后端执行硬限保持 60 秒。
+
+十批原生场景核对全部准入内容的四字段和出处、可信保存与重启重开；从关闭的 `core-149-v1` 基线升级保持原引用、摘要、笔记、例句、FSRS 和音频关系。十一个场景均保留 60 秒硬限，SQLite 完整性通过，外部 WebView 请求与所属剩余进程均为零。实际程序／资源身份、各批结果、升级与保持记录见[综合证据](evidence/issues-150-159/README.md)及[验证记录](evidence/issues-150-159/verification-final.json)。升级与回退使用匹配程序／核心，保留学习数据目录与备份。[PR #219](https://github.com/zardonc/lexique/pull/219) 交付此批，#78 保持开放；学习者验收、整机离线、其他平台原生、完整 D2／CEFR 与正式发行仍未验证。
+
+复核修正补充（提交 `66b12b514ed21cd1da4393b8c6465c57c7819e53`，基于 `3e3aa4c71c8277522919f2ac395ad1b04c867158`）：已清除第 153 批 49 条非 `vôtres` 组 IPA `modification` 误带说明（保留 3613 行与 `docs/evidence/issue-153/authored/*`），将 `LICENSE-FranceTerme.pdf`／Licence Ouverte 1.0 纳入 Rust `CORE_MATERIALS`、`core_pilot.py`、`package_portable.py` 与 README 校验，补记 Decision 15 各项体积（原始输入 180,797,580 字节、只读 SQLite 18,268,160 字节／SHA-256 `1240f403db18f130943000d37782857ca6695a92f60c0776466789a3ddbed2fc`、随包材料 180,896,776 字节、不含 `report.json` 安装贡献 199,164,936 字节、解压后 `dictionary/core-pilot-79/` 199,768,852 字节、解压后 portable 总安装体积 269,347,109 字节、ZIP 49,926,877 字节／SHA-256 `ed30cd6feac68c9085c479edc7d236a32659a6d67cf3afbdecfbb884a7295e6b`），并更新根 README 与 7 篇过时批次 README 及测试／脚本结构。修正后在 Windows x64（Visual Studio 2026 v18.0）重新验证：`core_pilot.py prepare`、18 项核心测试、76 项批次测试、3 项共享辅助测试、16 项 portable 测试、2 项原生目录夹具测试、lint、类型检查、前端构建、`cargo fmt`、`cargo check --locked --workspace`、单独预编译、242 项后端测试（23.65 秒，保持 60 秒硬限）、2 项 `dictionary_links` 单元测试、桌面端构建（`Lexique.exe` SHA-256 `3ffc6cc987cdd752f0d74ee1e018495ab1477501918366b8ad067c3f3f999d54`）、portable 打包、十批原生场景（`target/issue-150..159/core159-verified`）与 `core-149-v1` 升级场景（`target/issue-159/upgrade-from-core149-verified`）、文档链接检查及保持性比对全部通过，外部 WebView 请求与所属剩余进程均为零。
+
 ## D2 冻结批次 #140–#149
 
 `core-149-v1` 准入冻结行 2951–3450 的 **499 新组／1,996 字段**，累计 **3,431 组／13,724 字段**。所有者批准精确行 3128 `pars/NOM` 的阳性高尔夫复数专业义（IPA `/paʁ/`），以及精确行 3098 `damoiseau/NOM` 的零字段注记。分母仍为 4,087 组／3,773 词头；656 组未准入，3,428 组日常完整、659 组日常未完整，三项专业义单独计量。全核心保留 19 注记／76 缺字段。原 2,932 组／11,728 字段、来源数组、SQLite payload、15 拼写关系、11 别名和冻结身份／顺序／频率均保持。
@@ -72,7 +82,7 @@ Windows x64 的匹配程序构建于 `906acc0a477e5d035bc2227e54245b7ae4255416`�
 
 十批原生场景核对全部已准入组的四字段和出处，可信保存并重启重开。从关闭的 `core-139-v1` 基线升级通过，原引用、冻结摘要、笔记、例句、FSRS 与当前／受保护音频关系保持；升级夹具明确选择英语并保留原主题。升级夹具源码为 `25489e6c59ffd8b1bcbe4d6ec2dc9105eee59e6e`，应用运行时与资源和构建提交相同。十一个成功场景均保留 60 秒硬限，SQLite 完整性通过、外部 WebView 请求为零、所属剩余进程为零。
 
-命令、结果、程序／资源身份及独立质量／所选表达权利复核见[综合证据](evidence/issues-140-149/README.md)与各批 `final-integration.json`。升级与回退须使用匹配程序／核心，保留学习数据目录与备份。[PR #211](https://github.com/zardonc/lexique/pull/211) 待审，#78 保持开放。学习者验收、整机离线、其他平台原生、完整 D2／CEFR 和正式发行仍未验证。
+命令、结果、程序／资源身份及独立质量／所选表达权利复核见[综合证据](evidence/issues-140-149/README.md)与各批 `final-integration.json`。升级与回退须使用匹配程序／核心，保留学习数据目录与备份。[PR #211](https://github.com/zardonc/lexique/pull/211) 已于 2026-11-23 合并为 `03a27e42c261afda7ffd4a927a4d2810f8221e8a`，最终 head 为 `7d6eebba93fa9302685e67b13294e635e6a5119d`；其保留的检查快照包含一项 Windows ARM 原生失败，既有证据按所测提交保留。#78 保持开放。学习者验收、整机离线、其他平台原生、完整 D2／CEFR 和正式发行仍未验证。
 
 ## D2 冻结批次 #130–#139
 

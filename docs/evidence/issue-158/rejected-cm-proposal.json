@@ -1,0 +1,1293 @@
+{
+  "frozen_row": 3885,
+  "headword": "cm",
+  "lexique_cgram": "NOM",
+  "status": "unadmitted_research_proposal",
+  "authored_proposal": {
+    "frozen_row": 3885,
+    "headword": "cm",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "10.89",
+    "subtitle_pos_per_million": "10.89",
+    "senses": [
+      {
+        "sense_id": "b158-3885-cm-nom-selected",
+        "source_headword": "centimètre",
+        "use": "Frozen NOM group bound to the nominal centimetre reading of the measurement symbol cm; source symbol classification is retained for independent review.",
+        "use_language": "en",
+        "excluded_uses": "Roman numeral 900, a tape measure, squared/cubed units, and treating the symbol as an independently attested lexical noun.",
+        "independent_review": "pending",
+        "resource_admission": "pending_separate_independent_review",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Unité de longueur appelée centimètre, valant un centième de mètre ; écrite cm dans les mesures et lue centimètre. Le symbole cm reste invariable et ne prend pas de point.",
+            "source_id": "b158_fr_2093",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/sɑ̃.ti.mɛtʁ/",
+            "source_id": "b158_fr_241139",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "english": {
+            "language": "en",
+            "text": "Centimetre, one hundredth of a metre; written cm in measurements and read centimètre in French. The symbol cm is invariable and has no full stop.",
+            "source_id": "b158_fr_2093",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "厘米，等于百分之一米；计量时写作 cm，法语读作 centimètre。符号 cm 不变形，末尾不加缩写点。",
+            "source_id": "b158_fr_2093",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "pending",
+            "rights_eligibility_status": "pending_separate_selected_span_audit"
+          }
+        }
+      }
+    ]
+  },
+  "reviewed_proposal": {
+    "frozen_row": 3885,
+    "headword": "cm",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "10.89",
+    "subtitle_pos_per_million": "10.89",
+    "senses": [
+      {
+        "sense_id": "b158-3885-cm-nom-selected",
+        "source_headword": "centimètre",
+        "use": "Frozen NOM group bound to the nominal centimetre reading of the measurement symbol cm; source symbol classification is retained for independent review.",
+        "use_language": "en",
+        "excluded_uses": "Roman numeral 900, a tape measure, squared/cubed units, and treating the symbol as an independently attested lexical noun.",
+        "independent_review": "unresolved_exact_NOM_binding",
+        "resource_admission": "blocked_exact_NOM_binding",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Unité de longueur appelée centimètre, valant un centième de mètre ; écrite cm dans les mesures et lue centimètre. Le symbole cm reste invariable et ne prend pas de point.",
+            "source_id": "b158_fr_2093",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "unresolved_exact_NOM_binding",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+            "resource_admission": "blocked_exact_NOM_binding"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/sɑ̃.ti.mɛtʁ/",
+            "source_id": "b158_fr_241139",
+            "source_span": {
+              "line_1_based": 22,
+              "column_1_based": 1,
+              "raw_source_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "unresolved_exact_NOM_binding",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+            "resource_admission": "blocked_exact_NOM_binding"
+          },
+          "english": {
+            "language": "en",
+            "text": "Centimetre, one hundredth of a metre; written cm in measurements and read centimètre in French. The symbol cm is invariable and has no full stop.",
+            "source_id": "b158_fr_2093",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "unresolved_exact_NOM_binding",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+            "resource_admission": "blocked_exact_NOM_binding"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "厘米，等于百分之一米；计量时写作 cm，法语读作 centimètre。符号 cm 不变形，末尾不加缩写点。",
+            "source_id": "b158_fr_2093",
+            "source_span": {
+              "line_1_based": 10,
+              "column_1_based": 1,
+              "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "independent_review": "unresolved_exact_NOM_binding",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+            "resource_admission": "blocked_exact_NOM_binding"
+          }
+        }
+      }
+    ]
+  },
+  "field_review": [
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "proposed_text": "Unité de longueur appelée centimètre, valant un centième de mètre ; écrite cm dans les mesures et lue centimètre. Le symbole cm reste invariable et ne prend pas de point.",
+      "exact_source": {
+        "source_id": "b158_fr_2093",
+        "revid": 39697323,
+        "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|sɑ̃.ti.mɛtʁ}}"
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''centimètre''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# [[symbole|Symbole]] du [[centimètre#conv|centimètre]], [[unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant 0,01 [[mètre#fr|mètre]] (10{{e|&minus;2}} mètre)."
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b158_fr_2093",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "external_factual_corroboration": {
+        "evidence": "modern-corroboration.json",
+        "frozen_row": 3885,
+        "role": "Usage/grammar facts, not a copied external learner definition",
+        "independent_review": "pending"
+      },
+      "proposed_exact_source": {
+        "source_id": "b158_fr_2093",
+        "revid": 39697323,
+        "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "accepted_text": null,
+      "review_reason": "One hundredth of a metre and symbol spelling are true sourced facts, but they do not establish a selected noun sense of exact cm; no accepted French field. Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists.",
+      "independence": true,
+      "selected_text_rights_reason": "Scoped French adaptation of selected semantics. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "ipa",
+      "language": "und",
+      "proposed_text": "/sɑ̃.ti.mɛtʁ/",
+      "exact_source": {
+        "source_id": "b158_fr_241139",
+        "revid": 39962845,
+        "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|sɑ̃.ti.mɛtʁ}}"
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''centimètre''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# [[symbole|Symbole]] du [[centimètre#conv|centimètre]], [[unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant 0,01 [[mètre#fr|mètre]] (10{{e|&minus;2}} mètre)."
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b158_fr_241139",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "external_factual_corroboration": {
+        "evidence": "modern-corroboration.json",
+        "frozen_row": 3885,
+        "role": "Usage/grammar facts, not a copied external learner definition",
+        "independent_review": "pending"
+      },
+      "proposed_exact_source": {
+        "source_id": "b158_fr_241139",
+        "revid": 39962845,
+        "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}",
+        "ipa_variant_column_1_based": 17,
+        "ipa_variant_excerpt": "sɑ̃.ti.mɛtʁ"
+      },
+      "accepted_text": null,
+      "review_reason": "Fixed source b158_fr_241139 line 22 explicitly records /sɑ̃.ti.mɛtʁ/ for the selected isolated spelling/use; no consonant sound value, other inflection, liaison or media is inferred. The source frame is symbole, not NOM; the correct full reading is not evidence for a lexical cm noun. Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists.",
+      "independence": true,
+      "selected_text_rights_reason": "One recorded French IPA variant selected with slashes; no audio or media copied. cm, fixed revision 39962845, actual selected field lines [22]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. No historical/imported original-work notice is attached to this selected lexical expression. Selected Wiktionnaire editorial text and Lexique adaptations retain CC BY-SA 4.0; no proprietary referenced wording is adopted. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "proposed_text": "Centimetre, one hundredth of a metre; written cm in measurements and read centimètre in French. The symbol cm is invariable and has no full stop.",
+      "exact_source": {
+        "source_id": "b158_fr_2093",
+        "revid": 39697323,
+        "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|sɑ̃.ti.mɛtʁ}}"
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''centimètre''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# [[symbole|Symbole]] du [[centimètre#conv|centimètre]], [[unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant 0,01 [[mètre#fr|mètre]] (10{{e|&minus;2}} mètre)."
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b158_fr_2093",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "external_factual_corroboration": {
+        "evidence": "modern-corroboration.json",
+        "frozen_row": 3885,
+        "role": "Usage/grammar facts, not a copied external learner definition",
+        "independent_review": "pending"
+      },
+      "proposed_exact_source": {
+        "source_id": "b158_fr_2093",
+        "revid": 39697323,
+        "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "accepted_text": null,
+      "review_reason": "Centimetre and symbol invariability are accurately explained, but noun binding belongs to centimètre; no accepted English field. Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists.",
+      "independence": true,
+      "selected_text_rights_reason": "New English explanatory translation under CC BY-SA 4.0, not an upstream bilingual quote. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "proposed_text": "厘米，等于百分之一米；计量时写作 cm，法语读作 centimètre。符号 cm 不变形，末尾不加缩写点。",
+      "exact_source": {
+        "source_id": "b158_fr_2093",
+        "revid": 39697323,
+        "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|sɑ̃.ti.mɛtʁ}}"
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''centimètre''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# [[symbole|Symbole]] du [[centimètre#conv|centimètre]], [[unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant 0,01 [[mètre#fr|mètre]] (10{{e|&minus;2}} mètre)."
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+        }
+      ],
+      "author_validation": "passed_fixed_capture_binding_check",
+      "accepted_text_quality_status": "unresolved",
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "author_rights_proposal": {
+        "source_id": "b158_fr_2093",
+        "evidence": "rights.json and source-context.json",
+        "selected_span_independent_rights_review": "pending"
+      },
+      "external_factual_corroboration": {
+        "evidence": "modern-corroboration.json",
+        "frozen_row": 3885,
+        "role": "Usage/grammar facts, not a copied external learner definition",
+        "independent_review": "pending"
+      },
+      "proposed_exact_source": {
+        "source_id": "b158_fr_2093",
+        "revid": 39697323,
+        "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "accepted_text": null,
+      "review_reason": "厘米、计量符号及不变形 correctly explain measurement facts, but do not prove cm/NOM; no accepted Chinese field. Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists.",
+      "independence": true,
+      "selected_text_rights_reason": "New Chinese explanatory translation under CC BY-SA 4.0, not an upstream bilingual quote. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    }
+  ],
+  "usage": [
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "source_headword": "centimètre",
+      "proposed_usage": "Frozen NOM group bound to the nominal centimetre reading of the measurement symbol cm; source symbol classification is retained for independent review.",
+      "language": "en",
+      "excluded_uses": "Roman numeral 900, a tape measure, squared/cubed units, and treating the symbol as an independently attested lexical noun.",
+      "exact_source": {
+        "source_id": "b158_fr_2093",
+        "revid": 39697323,
+        "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "supporting_sources": [
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|sɑ̃.ti.mɛtʁ}}"
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''centimètre''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# [[symbole|Symbole]] du [[centimètre#conv|centimètre]], [[unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant 0,01 [[mètre#fr|mètre]] (10{{e|&minus;2}} mètre)."
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+        }
+      ],
+      "construction_and_flexion_evidence": [
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|sɑ̃.ti.mɛtʁ}}"
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''centimètre''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# [[symbole|Symbole]] du [[centimètre#conv|centimètre]], [[unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant 0,01 [[mètre#fr|mètre]] (10{{e|&minus;2}} mètre)."
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+        }
+      ],
+      "author_construction_and_flexion_interpretation": "Frozen headword and subclass retained. Frozen NOM group bound to the nominal centimetre reading of the measurement symbol cm; source symbol classification is retained for independent review. Exclusions: Roman numeral 900, a tape measure, squared/cubed units, and treating the symbol as an independently attested lexical noun. cm is classified as a symbol in the source, not a lexical noun; centimètre supplies the masculine nominal unit semantics and cm supplies the explicit written/read binding. This proposal does not relabel the source or exempt the frozen group.",
+      "author_everyday_use_assessment": "Modern selected sense with register, construction and region retained; unrelated technical, obsolete and grammatical alternatives are excluded.",
+      "accepted_usage_quality_status": "unresolved",
+      "everyday_sense_status": "unresolved_exact_NOM_binding",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "external_corroboration": {
+        "frozen_row": 3885,
+        "publisher": "Office québécois de la langue française",
+        "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8350387/centimetre",
+        "captured_at_utc": "2026-11-23T17:55:03.163002+00:00",
+        "source_version": "OQLF terminology entry updated 2007; fixed retained HTML response",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158\\fixed-author-materials\\modern\\centimetre-oqlf.html",
+        "readable_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158\\fixed-author-materials\\modern\\centimetre-oqlf.txt",
+        "exact_excerpts": [
+          "centimètre\nn. m.\ncm",
+          "ne sont jamais suivis d'un point abréviatif, ne prennent jamais la marque du pluriel"
+        ],
+        "author_interpretation": "OQLF identifies centimètre as n. m. and lists cm with its symbol-writing rules. Wiktionnaire supplies the exact French cm pronunciation and the centimètre noun definition explicitly identifying cm as its symbol. The proposal retains the frozen cm/NOM membership while exposing the source symbol classification; it does not claim that cm is an independently attested lexical noun or that NOM is the source symbol label. The symbol has no plural ending or abbreviation point; centimètre is its nominal spoken reading. Independent construction/classification review remains pending.",
+        "learner_text_copied": false,
+        "rights_boundary": "External factual usage/grammar corroboration retained for review. Proprietary description and definition wording is not copied into learner fields or claimed as Wiktionnaire-licensed content; learner fields are scoped Wiktionnaire adaptations and new Lexique explanations. Actual independent rights assessment remains pending.",
+        "independent_review": "passed_factual_symbol_relation_not_NOM_eligibility",
+        "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+        "review_reason": "OQLF attaches n. m. to centimètre and describes cm as a symbol. Measurements and its centimètre reading are current and everyday, but no source here classifies exact cm as a lexical noun.",
+        "independent_recapture": {
+          "name": "cm-oqlf",
+          "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8350387/centimetre",
+          "final_url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8350387/centimetre",
+          "status": 200,
+          "headers": {
+            "Content-Type": "text/html; charset=utf-8",
+            "Transfer-Encoding": "chunked",
+            "Connection": "close",
+            "Date": "Mon, 23 Nov 2026 17:55:03 GMT",
+            "X-UA-Compatible": "IE=edge",
+            "X-Content-Type-Options": "nosniff",
+            "Server": "Apache",
+            "Content-Language": "fr-CA",
+            "X-TYPO3-Debug-Cache": "Cached page generated 2026-11-23 10:26. Expires 2026-11-24 10:26",
+            "Expires": "Tue, 24 Nov 2026 15:26:00 GMT",
+            "Cache-Control": "max-age=77458",
+            "Pragma": "public",
+            "X-TYPO3-Cache-Tags": "pageId_25497",
+            "X-TYPO3-Cache-Lifetime": "77458",
+            "X-TYPO3-Parsetime": "0ms",
+            "Vary": "Accept-Encoding",
+            "X-Cache": "Hit from cloudfront",
+            "Via": "1.1 72ba5a35cd84ad30e4fd5bf87d23ed86.cloudfront.net (CloudFront)",
+            "X-Amz-Cf-Pop": "YVR52-P1",
+            "X-Amz-Cf-Id": "3UcUjx15vpYJXvKoghqOUQRTMBKWz_U8WwOffui_0G5o6dLX40mZ9g==",
+            "Age": "2629"
+          },
+          "captured_at_utc": "2026-11-23T18:38:52.622319+00:00",
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158\\cm-oqlf.html",
+          "readable_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158\\cm-oqlf.txt",
+          "learner_text_copied": false,
+          "frozen_row": 3885,
+          "publisher": "OQLF",
+          "exact_excerpts": [
+            "centimètre",
+            "n. m.",
+            "cm"
+          ],
+          "independent_review": "passed_factual_usage_and_grammar",
+          "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+          "review_reason": "The noun label belongs to centimètre; cm has symbol orthography, not established lexical NOM status.",
+          "rights_boundary": "External current grammatical/register facts only. Proprietary definitions and descriptions are not copied into learner fields or assigned the Wiktionnaire licence."
+        }
+      },
+      "accepted_usage": null,
+      "accepted_excluded_uses": "Roman numeral 900, a tape measure, squared/cubed units, and treating the symbol as an independently attested lexical noun.",
+      "everyday_use_decision": "unresolved",
+      "review_reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists.",
+      "everyday_sense_reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists.",
+      "independence": true,
+      "proposed_external_corroboration": {
+        "frozen_row": 3885,
+        "publisher": "Office québécois de la langue française",
+        "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8350387/centimetre",
+        "captured_at_utc": "2026-11-23T17:55:03.163002+00:00",
+        "source_version": "OQLF terminology entry updated 2007; fixed retained HTML response",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158\\fixed-author-materials\\modern\\centimetre-oqlf.html",
+        "readable_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-150-159\\context\\reviewer-evidence\\issue-158\\fixed-author-materials\\modern\\centimetre-oqlf.txt",
+        "exact_excerpts": [
+          "centimètre\nn. m.\ncm",
+          "ne sont jamais suivis d'un point abréviatif, ne prennent jamais la marque du pluriel"
+        ],
+        "author_interpretation": "OQLF identifies centimètre as n. m. and lists cm with its symbol-writing rules. Wiktionnaire supplies the exact French cm pronunciation and the centimètre noun definition explicitly identifying cm as its symbol. The proposal retains the frozen cm/NOM membership while exposing the source symbol classification; it does not claim that cm is an independently attested lexical noun or that NOM is the source symbol label. The symbol has no plural ending or abbreviation point; centimètre is its nominal spoken reading. Independent construction/classification review remains pending.",
+        "learner_text_copied": false,
+        "rights_boundary": "External factual usage/grammar corroboration retained for review. Proprietary description and definition wording is not copied into learner fields or claimed as Wiktionnaire-licensed content; learner fields are scoped Wiktionnaire adaptations and new Lexique explanations. Actual independent rights assessment remains pending.",
+        "independent_review": "pending",
+        "reviewer": null
+      }
+    }
+  ],
+  "rights": [
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "field": "french_definition",
+      "source_id": "b158_fr_2093",
+      "source_revision": 39697323,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+      "exact_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "contributors_record": "source-context.json#b158_fr_2093",
+      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
+      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "accepted_text": null,
+      "reviewed_text": "Unité de longueur appelée centimètre, valant un centième de mètre ; écrite cm dans les mesures et lue centimètre. Le symbole cm reste invariable et ne prend pas de point.",
+      "selected_text_rights_reason": "Scoped French adaptation of selected semantics. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "field": "ipa",
+      "source_id": "b158_fr_241139",
+      "source_revision": 39962845,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+      "exact_source_span": {
+        "line_1_based": 22,
+        "column_1_based": 1,
+        "raw_source_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "contributors_record": "source-context.json#b158_fr_241139",
+      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Isolated IPA notation only, not audio or linked media.",
+      "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "accepted_text": null,
+      "reviewed_text": "/sɑ̃.ti.mɛtʁ/",
+      "selected_text_rights_reason": "One recorded French IPA variant selected with slashes; no audio or media copied. cm, fixed revision 39962845, actual selected field lines [22]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. No historical/imported original-work notice is attached to this selected lexical expression. Selected Wiktionnaire editorial text and Lexique adaptations retain CC BY-SA 4.0; no proprietary referenced wording is adopted. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "field": "english",
+      "source_id": "b158_fr_2093",
+      "source_revision": 39697323,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+      "exact_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "contributors_record": "source-context.json#b158_fr_2093",
+      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
+      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "accepted_text": null,
+      "reviewed_text": "Centimetre, one hundredth of a metre; written cm in measurements and read centimètre in French. The symbol cm is invariable and has no full stop.",
+      "selected_text_rights_reason": "New English explanatory translation under CC BY-SA 4.0, not an upstream bilingual quote. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "field": "chinese",
+      "source_id": "b158_fr_2093",
+      "source_revision": 39697323,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+      "exact_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+      },
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
+      "contributors_record": "source-context.json#b158_fr_2093",
+      "author_rights_basis": "Fixed Wiktionnaire lexical definition or phonetic/grammatical contribution under CC BY-SA 4.0; French selection/adaptation and new Lexique EN/ZH explanations share that licence. The attributed original DAF8 layer retains its separate collective-work public-domain basis.",
+      "original_historical_dictionary_layers": [],
+      "selected_boundary": "Selected lexical definition only; no neighbouring attributed literary/news quotation or referenced external prose supplies this field.",
+      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "accepted_text": null,
+      "reviewed_text": "厘米，等于百分之一米；计量时写作 cm，法语读作 centimètre。符号 cm 不变形，末尾不加缩写点。",
+      "selected_text_rights_reason": "New Chinese explanatory translation under CC BY-SA 4.0, not an upstream bilingual quote. centimètre, fixed revision 39697323, actual selected field lines [10]: selected French lexical/head/grammar spans are distinct from literary/news quotations, media, external etymology and other-language sections. DAF8 reference markers at [146] identify Académie française, collective eighth edition 1932–1935. Potentially inherited lexical expression is conservatively credited to that original work without claiming sentence authorship. Independently applying CPI L123-3 to final 1935 publication gives 1936-01-01 plus seventy years, expiry 2006-01-01. Later wiki transcription/editorial work and Lexique adaptations retain CC BY-SA 4.0; original credit and work respect remain. Bibliographic markers at [146] identify references, not licences for their external prose. Selected fields do not copy referenced etymology, examples or transcluded material. Selected measurement semantics/recorded reading are legally usable, but the exact frozen cm/NOM quality binding is unresolved; legal eligibility does not confer noun admission. Fixed article URL, full linked history, complete named-contributor chain and anonymous-history credit provide article attribution; no contributor is invented as sentence author. Retained full CC BY-SA 4.0, modification notices, original credits, ShareAlike and no additional restrictions accompany selected adaptations. Actual combined canonical packaging remains pending."
+    }
+  ],
+  "source_excerpts": [
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "field": "french_definition",
+      "source_id": "b158_fr_2093",
+      "revid": 39697323,
+      "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''.",
+      "accepted_text": null,
+      "independent_review": "unresolved_exact_NOM_binding",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator"
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "field": "ipa",
+      "source_id": "b158_fr_241139",
+      "revid": 39962845,
+      "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+      "line_1_based": 22,
+      "column_1_based": 1,
+      "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}",
+      "ipa_variant_column_1_based": 17,
+      "ipa_variant_excerpt": "sɑ̃.ti.mɛtʁ",
+      "accepted_text": null,
+      "independent_review": "unresolved_exact_NOM_binding",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator"
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "field": "english",
+      "source_id": "b158_fr_2093",
+      "revid": 39697323,
+      "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''.",
+      "accepted_text": null,
+      "independent_review": "unresolved_exact_NOM_binding",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator"
+    },
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "field": "chinese",
+      "source_id": "b158_fr_2093",
+      "revid": 39697323,
+      "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''.",
+      "accepted_text": null,
+      "independent_review": "unresolved_exact_NOM_binding",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator"
+    }
+  ],
+  "spelling_relations": [
+    {
+      "sense_id": "b158-3885-cm-nom-selected",
+      "frozen_row": 3885,
+      "frozen_headword": "cm",
+      "source_headword": "centimètre",
+      "relation": "attested_french_source_form_or_construction",
+      "relation_role": "source_binding_only",
+      "alias_admission": "not_admitted",
+      "proposed_evidence": [
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 20,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 21,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "reviewed_excerpt": "{{fr-rég|sɑ̃.ti.mɛtʁ}}"
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''centimètre''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 22,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''cm''' {{pron|sɑ̃.ti.mɛtʁ|fr}} {{m}}"
+        },
+        {
+          "source_id": "b158_fr_241139",
+          "revid": 39962845,
+          "url": "https://fr.wiktionary.org/w/index.php?title=cm&oldid=39962845",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=cm&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# [[symbole|Symbole]] du [[centimètre#conv|centimètre]], [[unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant 0,01 [[mètre#fr|mètre]] (10{{e|&minus;2}} mètre)."
+        },
+        {
+          "source_id": "b158_fr_2093",
+          "revid": 39697323,
+          "url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&oldid=39697323",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=centim%C3%A8tre&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{unités|fr|de longueur}} [[unité de mesure|Unité de mesure]] de [[longueur]] du [[Système international]] (SI), valant '''[[Annexe:Principales puissances de 10|10{{e|&minus;2}}]]''' '''[[mètre#fr-nom-2|mètre]]''', et dont le [[symbole]] est '''[[cm#conv|cm]]'''."
+        }
+      ],
+      "construction_and_flexion_interpretation": "Frozen headword and subclass retained. Frozen NOM group bound to the nominal centimetre reading of the measurement symbol cm; source symbol classification is retained for independent review. Exclusions: Roman numeral 900, a tape measure, squared/cubed units, and treating the symbol as an independently attested lexical noun. cm is classified as a symbol in the source, not a lexical noun; centimètre supplies the masculine nominal unit semantics and cm supplies the explicit written/read binding. This proposal does not relabel the source or exempt the frozen group.",
+      "independent_review": "unresolved_exact_NOM_binding",
+      "reviewer": "Separate issue-158 field/use/selected-rights reviewer; review checkout codex/d2-review-158, independent of author and coordinator",
+      "review_reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists. This is a source-binding assessment only; no runtime alias is admitted."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "french_definition",
+      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
+    },
+    {
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "ipa",
+      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
+    },
+    {
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "english",
+      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
+    },
+    {
+      "frozen_row": 3885,
+      "headword": "cm",
+      "pos": "NOM",
+      "field": "chinese",
+      "reason": "Unresolved exact cm/NOM binding. Fixed cm has symbole|fr at 21 and head/IPA at 22, whereas centimètre noun semantics are a distinct headword. OQLF attaches n. m. to centimètre and separately describes cm as a symbol. Everyday measurement use and the full reading do not establish the frozen lexical NOM group. No annotation or specialist approval exists."
+    }
+  ],
+  "scope_gap_proposal": {
+    "frozen_row": 3885,
+    "headword": "cm",
+    "lexique_cgram": "NOM",
+    "status": "unresolved_exact_NOM_binding",
+    "accepted_fields": 0,
+    "missing_fields": 4,
+    "finding": "Fixed cm classifies the French measurement form as a symbol. Fixed centimètre supplies the noun meaning; cm supplies the centimètre pronunciation. OQLF independently labels centimètre n. m. and describes cm symbol orthography. This does not establish an everyday lexical noun sense of exact cm.",
+    "proposed_owner_decision": "Annotate frozen row 3885 cm/NOM with zero admitted fields and four missing fields, retaining its exact identity, frequencies and global denominator. Record the everyday measurement symbol and its nominal centimètre reading as the reason; no substitute centimètre/NOM group is introduced.",
+    "proposal_kind": "zero_field_annotation",
+    "owner_approval_observed": false,
+    "implemented_annotation": false,
+    "alternative_completion": "Supply independently verifiable evidence establishing an exact French cm noun sense, spelling relation and current everyday use; specialist approval alone does not resolve the source symbol-versus-noun binding.",
+    "evidence": [
+      "source-excerpts.json",
+      "modern-corroboration.json",
+      "field-review.json"
+    ]
+  },
+  "annotation_exception_decision": {
+    "issue": "https://github.com/zardonc/lexique/issues/158",
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-23",
+    "timezone": "America/Vancouver",
+    "decision": "The project owner approved frozen row 3885 cm/NOM as a zero-field annotation on 2026-11-23, America/Vancouver, with the exact reply \"Annotate ya and cm with zero fields\". Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. No alias, spelling/POS substitution or specialist sense is approved. This issue-158 implementation applies only to row 3885; row 3783 ya/NOM belongs to issue 156. Decision record: context/approved-scope-decisions.md.",
+    "exact_reply": "Annotate ya and cm with zero fields",
+    "evidence": "docs/evidence/issue-158/owner-approval.json"
+  }
+}

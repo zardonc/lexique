@@ -1,0 +1,113 @@
+{
+  "ticket": 155,
+  "role": "independent_content_reviewer",
+  "reviewer": "lexique-review-155 / codex/d2-review-155",
+  "original_author_commit": "66c89c5853d53fc9343869e060791e3be7a9d580",
+  "review_base": "069d3caa54b97afbcb6ac5f93c1367cfa996c019",
+  "merged_integration_tip": "54f4361d13f84e8aac97d1b3ce0520ac69e88971",
+  "tested_checkout_head": "febf88e3d6bb6914d2272845b19d2c24e53e9389",
+  "tested_changes": "Staged independent issue-155 records and focused test; final verification metadata added afterward. The subsequent integration merge changes only issue-157 evidence and its test, with no change to issue-155 or shared dependencies.",
+  "platform": "Windows x64 / PowerShell 7 / uv Python 3.14.10 / pnpm 11.25.0",
+  "baseline_content_version": "core-149-v1",
+  "baseline_admitted_groups": 3431,
+  "scope_denominator_groups": 4087,
+  "frozen_rows": [3701, 3750],
+  "independently_accepted_groups": 50,
+  "independently_accepted_fields": 200,
+  "unchanged_fields": 195,
+  "changed_fields": 5,
+  "unresolved_fields": [],
+  "reviewed_uses": 50,
+  "changed_use_descriptions": 1,
+  "reviewed_spelling_and_pos_relations": 50,
+  "exact_scope_gaps": [],
+  "specialist_or_annotation_exceptions": [],
+  "fixed_source_articles": 52,
+  "contributor_capture_parts": 11,
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-155",
+  "review_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/review-155/target/issue-155-review",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/reviewer-evidence/issue-155",
+  "archive_head_record": "archive-manifest.json records the delivered commit after commit creation",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_155.py",
+      "stage": "author_baseline",
+      "result": "passed",
+      "tests": 5,
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_155.py Batch155Tests.test_wave_and_day_count_explanations_match_the_selected_meanings Batch155Tests.test_franceterme_original_has_its_exact_terms_and_notice",
+      "stage": "focused_regression_before_corrections",
+      "result": "expected_failure",
+      "tests": 2,
+      "failures": 4,
+      "exit_code": 1,
+      "boundary": "Exact onde FR/EN meaning, apres-demain ZH day count and missing FranceTerme original-work rights layer.",
+      "log": "content-rights-red.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_155.py Batch155Tests.test_audition_selection_scope_uses_casting_equivalents",
+      "stage": "focused_regression_before_corrections",
+      "result": "expected_failure",
+      "tests": 1,
+      "failures": 2,
+      "exit_code": 1,
+      "boundary": "Exact audition EN/ZH performer-selection scope.",
+      "log": "audition-red.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_155.py",
+      "stage": "final_reviewed_content",
+      "result": "passed",
+      "tests": 9,
+      "duration_seconds": 0.634,
+      "exit_code": 0,
+      "boundary": "Exact membership and four-field/use alignment, actual fixed source bytes, complete contributor continuations, preserved proposals and accepted replacements, independent source/rights consistency and FranceTerme licence/notice.",
+      "log": "final-batch.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-155-review/audit.py",
+      "result": "passed",
+      "exit_code": 0,
+      "source_pages": 52,
+      "field_and_usage_spans": 250,
+      "support_occurrences": 975,
+      "contributor_parts": 11,
+      "log": "final-source-audit.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "exit_code": 0,
+      "documents": 560,
+      "local_links": 4302,
+      "skipped_local_links": 422,
+      "problems": [],
+      "log": "final-docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "exit_code": 0,
+      "log": "final-diff-check-corrected.log"
+    },
+    {
+      "command": "Literal byte comparison of staged LICENSE-FranceTerme.pdf with retained original PDF",
+      "result": "passed",
+      "bytes": 540249,
+      "log": "license-preservation.log"
+    }
+  ],
+  "review_diff_command": "git diff --cached --binary",
+  "review_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/review-155/target/issue-155-review/final-staged.patch",
+  "test_diff_command": "git diff --cached --binary -- scripts/test_core_batch_155.py",
+  "test_patch": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/review-155/target/issue-155-review/final-test.patch",
+  "native_lookup_save_reopen": "not_run_coordinator_owned",
+  "canonical_conversion_and_packaging": "not_run_coordinator_owned",
+  "global_preservation": "not_run_coordinator_owned",
+  "learner_acceptance": "not_run",
+  "frontend_and_rust_checks": "not_run_no_frontend_or_rust_changes",
+  "rights_boundary": "All 200 selected fields have separate resolved quality and rights decisions. CC BY-SA 4.0 contribution/adaptation obligations accompany separately identified DAF8 and Littre historical originals and FranceTerme CULT430 under its explicitly linked Licence Ouverte 1.0. CFC cartographic expression is excluded.",
+  "coordinator_redistribution_requirement": "Bundle LICENSE-FranceTerme.pdf and the Ministere de la Culture / FranceTerme CULT430 source and Journal officiel 18 January 2005 notice, alongside COPYING and the complete combined notices."
+}

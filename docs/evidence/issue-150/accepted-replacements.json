@@ -1,0 +1,62 @@
+[
+  {
+    "frozen_row": 3475,
+    "headword": "publicité",
+    "pos": "NOM",
+    "sense_id": "b150-3475-publicité-nom-selected",
+    "field": "french_definition",
+    "proposed_text": "Action et ensemble des moyens employés pour promouvoir la vente d’un produit auprès du public.",
+    "accepted_text": "Annonce commerciale diffusée dans un journal, sur une affiche ou par un autre moyen de réclame.",
+    "proposed_source_span": {
+      "line_1_based": 22,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{lexique|marketing|fr}} Action, fait de promouvoir la [[vente]] d'un [[produit]] en exerçant sur le public une [[influence]], une action [[psychologique]] afin de créer en lui des [[besoin]]s, des [[désir]]s ; ensemble des moyens employés pour [[promouvoir]] un produit."
+    },
+    "accepted_source_span": {
+      "line_1_based": 26,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[annonce|Annonce]] de caractère [[commercial]] par les [[journal|journaux]], les [[affiche]]s, les [[prospectus]] et tous autres moyens de [[réclame]]."
+    },
+    "reason": "The accepted commercial-advertisement sense is bound to DAF8-backed line 26; TLFi-derived advertising-activity line 22 is excluded."
+  },
+  {
+    "frozen_row": 3475,
+    "headword": "publicité",
+    "pos": "NOM",
+    "sense_id": "b150-3475-publicité-nom-selected",
+    "field": "english",
+    "proposed_text": "Advertising: activity and means used to promote sales of a product to the public.",
+    "accepted_text": "A commercial advertisement carried in a newspaper, on a poster or through another advertising medium.",
+    "proposed_source_span": {
+      "line_1_based": 22,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{lexique|marketing|fr}} Action, fait de promouvoir la [[vente]] d'un [[produit]] en exerçant sur le public une [[influence]], une action [[psychologique]] afin de créer en lui des [[besoin]]s, des [[désir]]s ; ensemble des moyens employés pour [[promouvoir]] un produit."
+    },
+    "accepted_source_span": {
+      "line_1_based": 26,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[annonce|Annonce]] de caractère [[commercial]] par les [[journal|journaux]], les [[affiche]]s, les [[prospectus]] et tous autres moyens de [[réclame]]."
+    },
+    "reason": "The accepted commercial-advertisement sense is bound to DAF8-backed line 26; TLFi-derived advertising-activity line 22 is excluded."
+  },
+  {
+    "frozen_row": 3475,
+    "headword": "publicité",
+    "pos": "NOM",
+    "sense_id": "b150-3475-publicité-nom-selected",
+    "field": "chinese",
+    "proposed_text": "为向公众推销产品而采取的宣传活动及手段；广告宣传。",
+    "accepted_text": "通过报纸、海报或其他宣传媒介发布的商业广告。",
+    "proposed_source_span": {
+      "line_1_based": 22,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# {{lexique|marketing|fr}} Action, fait de promouvoir la [[vente]] d'un [[produit]] en exerçant sur le public une [[influence]], une action [[psychologique]] afin de créer en lui des [[besoin]]s, des [[désir]]s ; ensemble des moyens employés pour [[promouvoir]] un produit."
+    },
+    "accepted_source_span": {
+      "line_1_based": 26,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[annonce|Annonce]] de caractère [[commercial]] par les [[journal|journaux]], les [[affiche]]s, les [[prospectus]] et tous autres moyens de [[réclame]]."
+    },
+    "reason": "The accepted commercial-advertisement sense is bound to DAF8-backed line 26; TLFi-derived advertising-activity line 22 is excluded."
+  }
+]

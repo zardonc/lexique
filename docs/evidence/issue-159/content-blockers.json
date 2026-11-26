@@ -1,0 +1,81 @@
+{
+  "ticket": 159,
+  "scope_denominator_groups": 4087,
+  "blocked_groups": 0,
+  "blocked_fields": 0,
+  "dropped_groups": 0,
+  "substituted_groups": 0,
+  "approved_annotation_exceptions": 2,
+  "approved_specialist_exceptions": 0,
+  "blockers": [],
+  "annotation_missing_fields": 8,
+  "approved_annotations": [
+    {
+      "frozen_row": 3922,
+      "headword": "haver",
+      "lexique_cgram": "VER",
+      "subtitle_lemma_per_million": "10.73",
+      "subtitle_pos_per_million": "10.73",
+      "senses": [],
+      "status": "approved_annotation_exception",
+      "annotation_kind": "owner_approved_zero_field",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3922 haver/VER as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "alias_admission": "not_admitted",
+      "unresolved_reason": "Exact French transitive VER is established, with h aspiré; fixed source and retained TLFi supply mining only, so everyday scope remains unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "rejected_proposal": "docs/evidence/issue-159/rejected-proposals.json"
+    },
+    {
+      "frozen_row": 3944,
+      "headword": "da",
+      "lexique_cgram": "ONO",
+      "subtitle_lemma_per_million": "10.6",
+      "subtitle_pos_per_million": "8.02",
+      "senses": [],
+      "status": "approved_annotation_exception",
+      "annotation_kind": "owner_approved_zero_field",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "owner_approval": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "annotation_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/159",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-23",
+        "timezone": "America/Vancouver",
+        "decision": "The project owner approved frozen row 3944 da/ONO as a zero-field annotation on 2026-11-23, America/Vancouver, selecting exactly 'Annotate both groups with zero fields'. Preserve its exact identity, source order, both frequency strings and the 4,087-group denominator; admit zero fields and report four missing fields. This approval applies only to rows 3922 and 3944. No spelling/POS substitution, alias or specialist sense is approved.",
+        "exact_reply": "Annotate both groups with zero fields",
+        "evidence": "docs/evidence/issue-159/owner-approval.json"
+      },
+      "alias_admission": "not_admitted",
+      "unresolved_reason": "French particule heading and adverbe in the definition do not establish ONO; vieilli does not establish modern everyday use. Both requirements remain unresolved. The owner resolved scope by approving this exact zero-field annotation; linguistic eligibility remains unresolved.",
+      "rejected_proposal": "docs/evidence/issue-159/rejected-proposals.json"
+    }
+  ],
+  "rejected_proposals": "docs/evidence/issue-159/rejected-proposals.json"
+}

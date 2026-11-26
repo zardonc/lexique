@@ -1,0 +1,76 @@
+{
+  "reviewer": "Independent field/use/selected-rights reviewer #153; codex/d2-review-153; separate from author and integration owner",
+  "author_commit": "483a88f65fbcbfcf928f40255f212f78e9d35988",
+  "author_head": "47ba513425d8f647a8f8b3eb66406a937687a0ef",
+  "review_base": "291d265b80d6c8f302f058a8de6b541bc521e7a7",
+  "unchanged_fields": 197,
+  "changed_fields": 3,
+  "unresolved_fields": 0,
+  "replacements": [
+    {
+      "frozen_row": 3612,
+      "headword": "by",
+      "pos": "NOM",
+      "sense_id": "b153-3612-by-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Fossé traversant un étang et aboutissant à sa bonde (nom masculin ; emploi de drainage, caractère quotidien non établi).",
+      "accepted_text": "Fossé traversant un étang et aboutissant à sa bonde (nom masculin ; géographie, drainage d’un étang).",
+      "exact_source": {
+        "source_id": "b153_fr_116491",
+        "revid": 39744914,
+        "url": "https://fr.wiktionary.org/w/index.php?title=by&oldid=39744914",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=by&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[fossé|Fossé]] qui traverse un [[étang]], aboutissant à sa [[bonde]]."
+      },
+      "review_reason": "The fixed line and original 1827 scan both identify a ditch through a pond to its bonde. Retain that wording and masculine gender; the current publisher’s Geography label scopes the use. Contemporary maintenance evidence resolves the editorial everyday gap."
+    },
+    {
+      "frozen_row": 3612,
+      "headword": "by",
+      "pos": "NOM",
+      "sense_id": "b153-3612-by-nom-selected",
+      "field": "english",
+      "proposed_text": "A ditch crossing a pond and ending at its outlet sluice (masculine French noun; drainage use, everyday status not established).",
+      "accepted_text": "A ditch crossing a pond and ending at its drain outlet (masculine French noun; geography, pond drainage).",
+      "exact_source": {
+        "source_id": "b153_fr_116491",
+        "revid": 39744914,
+        "url": "https://fr.wiktionary.org/w/index.php?title=by&oldid=39744914",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=by&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[fossé|Fossé]] qui traverse un [[étang]], aboutissant à sa [[bonde]]."
+      },
+      "review_reason": "Drain outlet matches bonde without requiring a sluice mechanism. Pond geography restricts this French noun and excludes English by; current usage corroboration supplies no bundled wording."
+    },
+    {
+      "frozen_row": 3612,
+      "headword": "by",
+      "pos": "NOM",
+      "sense_id": "b153-3612-by-nom-selected",
+      "field": "chinese",
+      "proposed_text": "穿过池塘并通向其排水闸的沟渠（法语阳性名词；排水用语，尚未确立其日常用法）。",
+      "accepted_text": "穿过池塘并通向其排水口的沟渠（法语阳性名词；地理用语，池塘排水）。",
+      "exact_source": {
+        "source_id": "b153_fr_116491",
+        "revid": 39744914,
+        "url": "https://fr.wiktionary.org/w/index.php?title=by&oldid=39744914",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=by&action=history",
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[fossé|Fossé]] qui traverse un [[étang]], aboutissant à sa [[bonde]]."
+      },
+      "review_reason": "排水口 identifies the outlet without inventing a gate. 穿过池塘、沟渠 and 地理用语 preserve the fixed meaning and masculine French noun; the contemporary use supports removal of the unresolved-status phrase."
+    }
+  ],
+  "usage_changes": [
+    {
+      "frozen_row": 3612,
+      "proposed_usage": "French pond-drainage noun; retained proposal with unresolved modern everyday eligibility.",
+      "accepted_usage": "French masculine noun for a pond drainage ditch leading to its drain outlet; geography and routine pond maintenance.",
+      "reason": "The publisher’s current French masculine-noun entry labels Geography, supplies a blocked-drain situation involving plastic bags, and dates its update 11/03/26. Clearing a pond drainage ditch is a routine concrete maintenance activity. This is sufficient modern everyday semantic evidence under the ticket, which has no commonness/frequency threshold; retain the pond-drainage restriction. The example is dictionary usage evidence, not measured corpus frequency or a claim of widespread use. No owner exception is involved."
+    }
+  ]
+}

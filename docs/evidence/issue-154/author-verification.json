@@ -1,0 +1,65 @@
+{
+  "ticket": 154,
+  "parent": 78,
+  "kind": "author_resource_boundary_verification",
+  "platform": "Windows x64; PowerShell 7; uv Python 3.14.10",
+  "checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/author-154",
+  "branch": "codex/d2-content-154",
+  "diff_base": "03a27e42c261afda7ffd4a927a4d2810f8221e8a",
+  "tested_revision": "scoped authored changes before commit; exact committed SHA and post-merge results retained in external delivery-pointers.json",
+  "evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-150-159/context/author-evidence/issue-154",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_154.py",
+      "status": "passed",
+      "tests": 5,
+      "scope": "Exact frozen membership/frequency and complete proposed fields; pending review/rights; actual admission-loader rejection; fixed capture/spans/IPA, contributor pagination and notices; special grammatical/register and excluded-source boundaries"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 ../context/author-evidence/issue-154/reproduce.py",
+      "status": "passed",
+      "byte_equal_files": 15,
+      "network_used": false
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 ../context/author-evidence/issue-154/verify_delivery.py",
+      "status": "passed",
+      "scope": "Local Markdown links"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "scope": "Scoped staged evidence and resource test"
+    }
+  ],
+  "tdd": {
+    "missing_batch": "Focused resource check failed for the absent 50 groups before authoring; passed after source-bound content was added",
+    "rights_notices_and_modern_corroboration": "Each added boundary check failed for its absent evidence before the matching evidence was attached; the final five checks pass",
+    "logs": ["red.log", "green-membership.log", "red-rights.log", "green-rights.log", "red-notices.log", "green-notices.log", "red-modern.log", "green-modern.log"]
+  },
+  "counts": {
+    "scope_denominator_groups": 4087,
+    "exact_proposed_groups": 50,
+    "proposed_senses": 50,
+    "proposed_fields": 200,
+    "fixed_french_sources": 54,
+    "contributor_parts": 11,
+    "independently_accepted_fields": 0,
+    "pending_independent_quality_fields": 200,
+    "pending_independent_rights_fields": 200,
+    "missing_admitted_fields": 200,
+    "missing_authored_fields": 0,
+    "reused_admitted_groups": 0,
+    "annotation_or_specialist_exceptions": 0
+  },
+  "baseline_preservation": "Only docs/evidence/issue-154/** and scripts/test_core_batch_154.py authored; canonical resources and learner data unchanged",
+  "independent_acceptance": false,
+  "reviewer": null,
+  "unrun": [
+    "Separate independent field/use/spelling quality review and actual selected-expression rights comparison",
+    "Canonical conversion, combined packaging and global coverage assembly: coordinator-owned",
+    "Native lookup, trusted save/reopen and resource-upgrade preservation: coordinator-owned",
+    "Learner acceptance, whole-machine offline and other-platform execution",
+    "Frontend lint/typecheck/build and Rust checks: no application or Rust changes"
+  ]
+}
