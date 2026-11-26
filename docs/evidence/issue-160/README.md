@@ -51,3 +51,8 @@ conversion/combined packaging, learner acceptance and release gates are pending.
 ## Approved rex annotation
 
 Frozen row 3953 `rex/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both 10.57 frequency strings and ordering are preserved; four fields remain missing. [Owner approval](owner-approval.json) does not resolve the rejected proposal's expression rights or admit a specialist sense. The [rejected proposal](rejected-proposals.json) and independent decisions remain preserved.
+
+
+## Canonical and native integration
+
+`core-162-v1` admits this batch's 49 groups / 196 fields. [Final integration evidence](../issues-160-162/README.md) and the [SHA-bound receipt](../issues-160-162/verification.json) record conversion, exact prior-content preservation, matching Windows x64 packaging, every admitted group lookup/save/reopen and the closed core-159-v1 upgrade. The authored and independent admission records retain their historical shard-stage boundaries. Approved annotations retain zero fields and four missing fields each; learner acceptance, other platforms and formal release remain open.

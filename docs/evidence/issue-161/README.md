@@ -36,12 +36,16 @@ Reviewer archive:
 It retains literal source/API/request/authority copies, original-edition HTML/text,
 review decisions, audit proof, regression logs and the reviewed patch.
 
-## Limitations
+## Historical shard-stage limitations
 
-Canonical assembly, conversion/combined notices, native all-group lookup and
-save/reopen, learner acceptance and release checks remain coordinator-owned.
+At the recorded shard review commit, canonical assembly, conversion/combined notices and native all-group lookup/save/reopen were coordinator-owned and unrun. Learner acceptance and release remain separate gates.
 Independent acceptance contributes **zero newly admitted canonical fields**;
-this shard records **200 missing canonical-admission fields** until integration.
+this shard records **200 missing canonical-admission fields** at that pre-integration stage.
 The CNRTL DAF8 `uni` adjective comparator returned no entry content; no original
 sentence match is claimed. Conservative original credit and the established
 expired DAF8 original-work basis remain separate from the fixed wiki licence.
+
+
+## Canonical and native integration
+
+`core-162-v1` admits this batch's 50 groups / 200 fields. [Final integration evidence](../issues-160-162/README.md) and the [SHA-bound receipt](../issues-160-162/verification.json) record conversion, exact prior-content preservation, matching Windows x64 packaging, every admitted group lookup/save/reopen and the closed core-159-v1 upgrade. The authored and independent admission records retain their historical shard-stage boundaries. Approved annotations retain zero fields and four missing fields each; learner acceptance, other platforms and formal release remain open.
