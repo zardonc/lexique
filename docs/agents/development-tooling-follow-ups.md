@@ -1,10 +1,17 @@
 # Development tooling follow-ups
 
-The review guidance below applies now. Native destination preflight, CI trigger
-filtering and bounded output tooling remain pending following
-[PR #180](https://github.com/zardonc/lexique/pull/180) and
-[PR #192](https://github.com/zardonc/lexique/pull/192).
-The existing lint, typecheck, test and documentation jobs remain in place.
+Native destination preflight, CI trigger filtering and desktop test
+precompilation are implemented. The review guidance below applies now;
+bounded output tooling remains pending. The existing lint, typecheck, test
+and documentation jobs remain in place.
+
+## Desktop test compilation
+
+The [desktop library test command](../../package.json) compiles the release
+test binary before starting its eight timed partitions. A compilation failure
+stops the command before execution. Initial compilation stays outside the
+runner's hard 60-second limit; each test partition retains that limit.
+CI keeps its explicit precompilation steps for separate build logs.
 
 ## Native crash diagnosis
 
@@ -37,33 +44,28 @@ head before delivering the combined result.
 
 ## Native destination preflight
 
-Add a focused check against the destination guards in
+The [tracked fixture tests](../../scripts/test-native-d2-fixtures.mjs) exercise
+the destination guards in
 [native-24-harness.mjs](../../apps/desktop/e2e/native-24-harness.mjs) and
-[native-backup-state.mjs](../../apps/desktop/e2e/native-backup-state.mjs), wired
-into the existing [tooling checks](../../package.json) before native packaging.
-The merge verification exercised 110 checks, but its script is local evidence
-under ignored `target/`, rather than a tracked regression.
+[native-backup-state.mjs](../../apps/desktop/e2e/native-backup-state.mjs).
+They run through the existing [tooling checks](../../package.json) and before
+portable packaging, without starting the application.
 
-Completion means both guards accept descendants of every explicitly approved
-fixture directory, including `grammar-classification`, and reject the directory
-root itself, sibling prefixes and paths resolving outside it. Each new content
-batch needs its approved destinations covered before a native build. Preserve
-the explicit ownership boundaries when implementing the check.
+The tests cover approved fixture descendants, including
+`grammar-classification`, and reject directory roots, sibling prefixes and
+paths resolving outside them. Each new content batch needs its approved
+destinations covered before a native build.
 
 ## CI triggers
 
-The unfiltered push and pull-request triggers in
-[ci.yml](../../.github/workflows/ci.yml) ran two full eleven-job matrices for
-the same PR #180 head. Limit automatic full matrices to pull requests and
-pushes to `main`; retain manual dispatch for branch verification.
+[ci.yml](../../.github/workflows/ci.yml) runs automatic full matrices for
+pull requests and pushes to `main`. Manual dispatch remains available for
+branch verification; a branch push with an open PR starts only the
+pull-request matrix.
 
-Completion means pull-request required checks and post-merge validation still
-run, manual branch dispatch works, and a branch push with an open PR starts
-only the pull-request matrix. The separate ARM timing spike remains unexplained;
-duplicate runs have not been established as its cause. Both
-[PR CI](https://github.com/zardonc/lexique/actions/runs/44663885434) and
-[push CI](https://github.com/zardonc/lexique/actions/runs/44663892957) passed
-on `245e76b99c17703ed6d27c550a0e29724d89ed15`, with an ARM retry in push CI.
+The separate ARM timing spike remains unexplained; duplicate runs have not
+been established as its cause. A passing rerun establishes recovery without
+identifying the cause of a timing overrun.
 
 ## Bounded output tooling
 

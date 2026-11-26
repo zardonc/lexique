@@ -62,7 +62,7 @@ pnpm test:tooling        # 原生目录准入、构建参数传递与隔离打�
 pnpm test:speech:cleanup # Windows 缓存清理；需设置 LEXIQUE_TEST_EXECUTABLE
 cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run
 pnpm test:speech:cache   # Windows 缓存发布 / 并发 / 重解析点；执行硬限 60 秒
-pnpm test:desktop:lib    # 原生桌面库全套测试；顺序八次执行，每次硬限 60 秒
+pnpm test:desktop:lib    # 先预编译原生桌面库，再顺序八次执行测试，每次硬限 60 秒
 ```
 
 GitHub Actions 的 `scaffold checks` 在 PR（含草稿）创建、重新打开或收到新提交时自动运行。合并或直接推送到 `main` 后，CI 检查 `main` 上的新提交。尚未开 PR 的分支可手动运行 `scaffold checks`。详见 [CI 工作流](.github/workflows/ci.yml)。
