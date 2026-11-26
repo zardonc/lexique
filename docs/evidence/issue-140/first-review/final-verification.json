@@ -1,0 +1,142 @@
+{
+  "ticket": 140,
+  "role": "independent_content_and_selected_source_rights_reviewer",
+  "reviewer": "Independent semantic and selected-rights reviewer #140; separate from author and coordinator",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-140",
+  "branch": "codex/d2-review-140",
+  "author_commit": "d4bb5e678cefbfa9e3dd7ef60eff118e48f922e7",
+  "review_base": "a72f0411da8f1bb698ab4f0bdb995f6a6595c05e",
+  "tested_base_sha": "4a4ce485a7a386e73060a23c362e5ece429ceaba",
+  "tested_changes": "Owned staged/working review shard relative to tested_base_sha; final committed identity retained in external closeout.json.",
+  "diff_command": "git diff 4a4ce485a7a386e73060a23c362e5ece429ceaba -- docs/evidence/issue-140 scripts/test_core_batch_140.py",
+  "scope": [
+    "docs/evidence/issue-140/**",
+    "scripts/test_core_batch_140.py"
+  ],
+  "platform": "Windows x64, PowerShell 7, uv Python 3.14.10, pnpm 11.25.0",
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-140",
+  "review_audit_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-140\\target\\issue-140-review",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-140",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_mater_register_is_speech_not_a_proverb",
+      "phase": "focused regression on authored/inherited state",
+      "result": "expected_failure_one_assertion",
+      "log": "target/issue-140-review/RED-mater.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_mater_register_is_speech_not_a_proverb",
+      "phase": "reviewed correction/rights ledger",
+      "result": "passed",
+      "log": "target/issue-140-review/GREEN-mater.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_humour_chinese_retains_irony_with_clear_wording",
+      "phase": "focused regression on authored/inherited state",
+      "result": "expected_failure_one_assertion",
+      "log": "target/issue-140-review/RED-humour.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_humour_chinese_retains_irony_with_clear_wording",
+      "phase": "reviewed correction/rights ledger",
+      "result": "passed",
+      "log": "target/issue-140-review/GREEN-humour.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_site_french_retains_the_common_authority_condition",
+      "phase": "focused regression on authored/inherited state",
+      "result": "expected_failure_one_assertion",
+      "log": "target/issue-140-review/RED-site.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_site_french_retains_the_common_authority_condition",
+      "phase": "reviewed correction/rights ledger",
+      "result": "passed",
+      "log": "target/issue-140-review/GREEN-site.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_cite_describes_apartment_housing",
+      "phase": "focused regression on authored/inherited state",
+      "result": "expected_failure_one_assertion",
+      "log": "target/issue-140-review/RED-cite.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_cite_describes_apartment_housing",
+      "phase": "reviewed correction/rights ledger",
+      "result": "passed",
+      "log": "target/issue-140-review/GREEN-cite.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_daf8_french_expiry_does_not_complete_territorial_rights",
+      "phase": "focused regression on authored/inherited state",
+      "result": "expected_failure_one_assertion",
+      "log": "target/issue-140-review/RED-rights.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py Batch140ResourceTests.test_daf8_french_expiry_does_not_complete_territorial_rights",
+      "phase": "reviewed correction/rights ledger",
+      "result": "passed",
+      "log": "target/issue-140-review/GREEN-rights.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-140-review/audit.py",
+      "result": "passed_53_literal_article_api_matches_all_selected_spans_and_complete_contributor_chains",
+      "log": "target/issue-140-review/final-source-audit.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_140.py",
+      "result": "passed_11_tests",
+      "log": "target/issue-140-review/final-shard.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "log": "target/issue-140-review/docs-final.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "log": "target/issue-140-review/diff-check.log"
+    },
+    {
+      "command": "git merge --no-edit codex/d2-content-140-149",
+      "result": "passed_preserved_owned_review_changes",
+      "integration_head": "4a4ce485a7a386e73060a23c362e5ece429ceaba",
+      "log": "target/issue-140-review/integration-merge-final.log"
+    }
+  ],
+  "exact_groups": 50,
+  "selected_uses": 50,
+  "quality_accepted_fields": 200,
+  "unchanged_quality_fields": 196,
+  "changed_quality_fields": 4,
+  "unresolved_quality_fields": 0,
+  "jointly_accepted_fields": 98,
+  "jointly_accepted_groups": 16,
+  "unresolved_rights_fields": 102,
+  "unresolved_rights_groups": 34,
+  "pending_independent_quality_fields": 0,
+  "pending_canonical_admission_fields": 200,
+  "newly_admitted_canonical_fields": 0,
+  "originals_preserved_byte_for_byte": 15,
+  "source_audit_summary": {
+    "source_count": 53,
+    "field_spans_checked": 200,
+    "supporting_span_occurrences_checked": 3099,
+    "named_article_credits": 2943,
+    "anonymous_article_credits": 434,
+    "all_chains_complete": true
+  },
+  "lexical_article_recaptures": 0,
+  "own_first_party_legal_captures": 2,
+  "selected_sentence_authorship_proved": false,
+  "material_gap": "DAF8 selected/supporting original expression/source material lacks US territorial clearance; French 2006 expiry alone does not resolve 17 USC 104A/304. Exact implicated sources/spans and missing evidence are in rights.json and field-review.json.",
+  "unrun": [
+    "Canonical conversion and actual combined packaged source/notices",
+    "Native lookup/save/reopen and resource-update preservation",
+    "Learner acceptance",
+    "Whole-core and release gates"
+  ],
+  "pushed": false,
+  "tracker_changes": false
+}

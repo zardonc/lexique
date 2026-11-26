@@ -1,0 +1,79 @@
+{
+  "ticket": 143,
+  "role": "selected_expression_source_sufficiency_and_scoped_annotation_fix",
+  "reviewer": "Selected-expression and source-sufficiency reviewer #143; separate from original author and first reviewer",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\rights-142143",
+  "branch": "codex/d2-rights-142143",
+  "platform": "Windows; PowerShell 7; uv Python 3.14.10; Node via nvm; pnpm 11.25.0",
+  "review_base": "fa142521e974fcf895afccab8d5f1dbae31195c3",
+  "first_review_commit": "4047cf5a66eddf4c3bd7e011382e391a061252ea",
+  "tested_head": "e339936a84e4bcdf3e8b925123383f6498859e1f",
+  "tested_changes": "HEAD plus exact owned evidence/test patch; final commit and patch are bound in external closeout.json",
+  "merged_integration_tip": "9bcc0d6f30e5e3c9aeea7076795e497510f38a26",
+  "integration_merge_commit": "e339936a84e4bcdf3e8b925123383f6498859e1f",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-142143-rights-fix",
+  "first_review_snapshot": "first-review/snapshot.json",
+  "accepted_groups": 50,
+  "quality_accepted_fields": 200,
+  "rights_accepted_fields": 200,
+  "resolved_selected_textual_fields": 18,
+  "unresolved_selected_textual_rights_fields": 0,
+  "annotation_exceptions": 0,
+  "missing_annotation_fields": 0,
+  "unresolved_field_requirements": 0,
+  "additional_wording_replacements": 7,
+  "new_canonical_fields": 0,
+  "source_audit": {
+    "issue": 143,
+    "status": "passed",
+    "fixed_raw_api_pairs": 54,
+    "selected_fields": 200,
+    "exact_selected_support_spans": 428,
+    "preserved_authored_and_first_review_files": 27,
+    "developed_original_definitions_in_current_packets": 0,
+    "frozen_identity_frequency_and_unowned_group_changes": 0,
+    "contributor_registry_changes": 0
+  },
+  "focused_regressions": [
+    "red-143.log",
+    "green-143.log"
+  ],
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_143.py",
+      "result": "passed: 5",
+      "log": "batch-143.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/rights-142143/audit.py",
+      "result": "passed",
+      "log": "audit.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "documents": 506,
+      "local_links": 3907,
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --check; scoped staged path check",
+      "result": "passed",
+      "logs": [
+        "diff-check.log",
+        "scope.json"
+      ]
+    }
+  ],
+  "unrun": [
+    "canonical assembly/conversion",
+    "combined packaged notices/materials",
+    "native builds and execution",
+    "frontend/Rust runtime checks (no application code changed)",
+    "learner acceptance",
+    "whole-machine offline and platform/release gates"
+  ],
+  "tracker_changes": false,
+  "pushed": false,
+  "whole_daf8_us_clearance": false
+}

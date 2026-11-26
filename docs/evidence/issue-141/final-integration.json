@@ -1,0 +1,28 @@
+{
+  "issue": 141,
+  "frozen_rows": [
+    3001,
+    3050
+  ],
+  "admitted_groups": 50,
+  "admitted_fields": 200,
+  "annotation_groups": 0,
+  "specialist_groups": 0,
+  "native_result": "passed",
+  "native_evidence": "target/issue-141/core149-final",
+  "checks": [
+    {
+      "check": "Batch #141: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+      "status": "passed"
+    }
+  ],
+  "binary_sha256": "41a5c1dd3dd3e5229bf43cf988d8257e540a5e35501304b46640be2647e46e2b",
+  "build_source_sha": "906acc0a477e5d035bc2227e54245b7ae4255416",
+  "hard_timeout_seconds": 60,
+  "external_webview_requests": [],
+  "cleanup": {
+    "hosts": [],
+    "workers": [],
+    "helpers": 0
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "ticket": 146,
+  "parent": 78,
+  "status": "independent_review_complete_ready_for_integration",
+  "reviewer": "Independent semantic and selected-rights reviewer #146; separate from author and coordinator",
+  "review_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-146",
+  "review_branch": "codex/d2-review-146",
+  "author_commit": "dfec10789e7785c6e9231ee45126a960d853aa80",
+  "initial_review_base": "b85dfe73f9db3285588d7349d18f0a3922e33da6",
+  "integration_merged_before_final_commit": "9bcc0d6f30e5e3c9aeea7076795e497510f38a26",
+  "platform": "Windows x64 / PowerShell 7 / uv Python 3.14.10 / pnpm 11.25.0",
+  "recorded_at_utc": "2026-11-23T00:03:20.204119+00:00",
+  "frozen_rows": [
+    3251,
+    3300
+  ],
+  "frozen_groups": 50,
+  "everyday_selected_uses": 50,
+  "independently_accepted_fields": 200,
+  "unchanged_text_fields": 200,
+  "replaced_text_fields": 0,
+  "corrected_primary_source_fields": 3,
+  "narrowed_supporting_use_records": 1,
+  "unresolved_selected_fields": [],
+  "annotation_exception_groups": 0,
+  "specialist_exception_groups": 0,
+  "scope_denominator_groups": 4087,
+  "canonical_admitted_new_fields": 0,
+  "author_snapshot_literal_git_object_matches": 15,
+  "source_audit": {
+    "source_count": 54,
+    "field_spans_checked": 200,
+    "recursive_span_occurrences_checked": 3224,
+    "named_article_credits": 2823,
+    "anonymous_article_credits": 467,
+    "all_chains_complete": true
+  },
+  "owned_tracked_paths": [
+    "docs/evidence/issue-146/**",
+    "scripts/test_core_batch_146.py"
+  ],
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\review-146\\target\\issue-146-review",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\reviewer-evidence\\issue-146",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-146-review/snapshot.py",
+      "result": "passed",
+      "log": "snapshot.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_146.py (RED)",
+      "result": "failed_as_expected",
+      "failures": [
+        "incorrect la plupart binding",
+        "historical patrol purpose support",
+        "independent acceptance absent"
+      ],
+      "log": "RED.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-146-review/audit_sources.py",
+      "result": "passed",
+      "log": "source-audit.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_146.py",
+      "result": "passed",
+      "tests": 10,
+      "skipped": 1,
+      "skip_reason": "canonical --admitted gate is coordinator-owned",
+      "log": "GREEN.log"
+    },
+    {
+      "command": "pnpm test:docs (before staging newly created link targets)",
+      "result": "failed",
+      "reason": "checker requires tracked/staged local targets",
+      "log": "docs.log"
+    },
+    {
+      "command": "pnpm test:docs (staged shard)",
+      "result": "passed",
+      "log": "docs-green.log"
+    },
+    {
+      "command": "git diff --check; git diff --cached --check",
+      "result": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "unrun_checks": {
+    "canonical_conversion_and_packaging": "coordinator_owned",
+    "native_lookup_save_reopen": "coordinator_owned",
+    "learner_acceptance": "not_run",
+    "frontend_rust_ui": "no_application_or_rust_changes",
+    "whole_core_and_release": "pending"
+  },
+  "authority_capture_tooling": "Primary US authority PDF extraction used ephemeral pypdf 6.4.0 with uv --no-project; no repository dependency/lockfile changes.",
+  "docs_check": {
+    "status": "passed",
+    "documents": 507,
+    "local_links": 3914,
+    "repository_fallback_links": 0,
+    "skipped_local_links": 404,
+    "problems": []
+  }
+}

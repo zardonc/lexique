@@ -1,0 +1,89 @@
+{
+  "reviewer": "Independent semantic and selected-rights reviewer #146; separate from author and coordinator",
+  "text_replacements": [],
+  "source_binding_replacements": [
+    {
+      "sense_id": "b146-3255-la plupart-pro-ind-selected",
+      "field": "french_definition",
+      "kind": "primary_source_binding_correction",
+      "proposed_text": "La plupart : le plus grand nombre des personnes ou des choses déjà évoquées ; emploi pronominal sans complément, avec un verbe au pluriel.",
+      "accepted_text": "La plupart : le plus grand nombre des personnes ou des choses déjà évoquées ; emploi pronominal sans complément, avec un verbe au pluriel.",
+      "proposed_source_id": "b146_fr_171808",
+      "accepted_source_id": "b146_fr_171808",
+      "proposed_source_span": {
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{term|quelquefois}} {{absolument}} Le plus grand nombre des gens. — {{note}} S’emploie sans relation à aucun nom qui précède ; et alors il est masculin pluriel."
+      },
+      "accepted_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 24,
+        "raw_source_excerpt": "La plus grande [[partie]], le plus grand nombre."
+      },
+      "reason": "Fixed A9P2969 independently confirms the antecedent indefinite-pronoun value. Plupart’s NOM label describes its noun origin; the whole la plupart expression has the ticket’s PRO:ind function. Line 23’s unrelated absolute people-only use is not the accepted definition binding.",
+      "reviewer": "Independent semantic and selected-rights reviewer #146; separate from author and coordinator"
+    },
+    {
+      "sense_id": "b146-3255-la plupart-pro-ind-selected",
+      "field": "english",
+      "kind": "primary_source_binding_correction",
+      "proposed_text": "Most of them: la plupart used as an indefinite pronoun without a complement, replacing a previously mentioned plural group; the verb is plural.",
+      "accepted_text": "Most of them: la plupart used as an indefinite pronoun without a complement, replacing a previously mentioned plural group; the verb is plural.",
+      "proposed_source_id": "b146_fr_171808",
+      "accepted_source_id": "b146_fr_171808",
+      "proposed_source_span": {
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{term|quelquefois}} {{absolument}} Le plus grand nombre des gens. — {{note}} S’emploie sans relation à aucun nom qui précède ; et alors il est masculin pluriel."
+      },
+      "accepted_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 24,
+        "raw_source_excerpt": "La plus grande [[partie]], le plus grand nombre."
+      },
+      "reason": "Fixed A9P2969 independently confirms the antecedent indefinite-pronoun value. Plupart’s NOM label describes its noun origin; the whole la plupart expression has the ticket’s PRO:ind function. Line 23’s unrelated absolute people-only use is not the accepted definition binding.",
+      "reviewer": "Independent semantic and selected-rights reviewer #146; separate from author and coordinator"
+    },
+    {
+      "sense_id": "b146-3255-la plupart-pro-ind-selected",
+      "field": "chinese",
+      "kind": "primary_source_binding_correction",
+      "proposed_text": "他们中的大多数、其中的大部分；la plupart 不带补语作不定代词，指前面提到的复数群体，谓语用复数。",
+      "accepted_text": "他们中的大多数、其中的大部分；la plupart 不带补语作不定代词，指前面提到的复数群体，谓语用复数。",
+      "proposed_source_id": "b146_fr_171808",
+      "accepted_source_id": "b146_fr_171808",
+      "proposed_source_span": {
+        "line_1_based": 23,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{term|quelquefois}} {{absolument}} Le plus grand nombre des gens. — {{note}} S’emploie sans relation à aucun nom qui précède ; et alors il est masculin pluriel."
+      },
+      "accepted_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 24,
+        "raw_source_excerpt": "La plus grande [[partie]], le plus grand nombre."
+      },
+      "reason": "Fixed A9P2969 independently confirms the antecedent indefinite-pronoun value. Plupart’s NOM label describes its noun origin; the whole la plupart expression has the ticket’s PRO:ind function. Line 23’s unrelated absolute people-only use is not the accepted definition binding.",
+      "reviewer": "Independent semantic and selected-rights reviewer #146; separate from author and coordinator"
+    }
+  ],
+  "supporting_span_replacements": [
+    {
+      "source_id": "b146_fr_129156",
+      "line_1_based": 15,
+      "column_1_based": 1,
+      "proposed_excerpt": "# {{lexique|militaire|fr}} [[marche|Marche]] de [[surveillance]], d’une [[exploration]] faite par un [[détachement]] de [[soldat]]s, d’[[agent]]s de [[police]], [[soit]] pour [[empêcher]] les [[surprise]]s de la [[part]] de l’[[ennemi]], [[être|soit]] pour [[prévenir]] les [[désordre]]s et [[arrêter]] les [[malfaiteur]]s.",
+      "accepted_excerpt": "# {{lexique|militaire|fr}} [[marche|Marche]] de [[surveillance]], d’une [[exploration]] faite par un [[détachement]] de [[soldat]]s, d’[[agent]]s de [[police]]",
+      "frozen_row": 3292,
+      "affected_fields": [
+        "french_definition",
+        "ipa",
+        "english",
+        "chinese"
+      ],
+      "reason": "Le détachement lui-même qui fait la patrouille is a short conventional metonymic definition. The supporting personnel/surveillance fragment is factual; the longer historical enemy-surprise/crime purpose clauses are excluded from accepted spans rather than treated as cleared expression."
+    }
+  ],
+  "unchanged_text_fields": 200,
+  "changed_text_fields": 0,
+  "unresolved_fields": []
+}

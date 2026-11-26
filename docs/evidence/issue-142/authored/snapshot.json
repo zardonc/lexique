@@ -1,0 +1,72 @@
+{
+  "role": "Original content-author proposals, no independent acceptance",
+  "files": [
+    "COPYING",
+    "NOTICES.md.txt",
+    "README.md.txt",
+    "admission.json",
+    "field-review.json",
+    "groups.json",
+    "reuse.json",
+    "review-candidates.md.txt",
+    "rights.json",
+    "selected-rights.md.txt",
+    "source-captures.json",
+    "source-context.json",
+    "source-excerpts.json",
+    "sources.json",
+    "usage-corroboration.json",
+    "verification.json"
+  ],
+  "source_archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142",
+  "pending_quality_fields": 200,
+  "pending_rights_fields": 200,
+  "unresolved_modern_use_rows": [
+    3098
+  ],
+  "author_commit": "0b177a99e2d7809d18a80bb37fd2c39e7da153fd",
+  "author_content_commits": [
+    "d216259",
+    "04ebd88"
+  ],
+  "review_base": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
+  "exact_byte_preservation_checked": true,
+  "author_pr": "https://github.com/zardonc/lexique/pull/211",
+  "original_files": [
+    "COPYING",
+    "NOTICES.md",
+    "README.md",
+    "admission.json",
+    "field-review.json",
+    "groups.json",
+    "reuse.json",
+    "review-candidates.md",
+    "rights.json",
+    "selected-rights.md",
+    "source-captures.json",
+    "source-context.json",
+    "source-excerpts.json",
+    "sources.json",
+    "usage-corroboration.json",
+    "verification.json"
+  ],
+  "filename_mapping": {
+    "COPYING": "COPYING",
+    "NOTICES.md": "NOTICES.md.txt",
+    "README.md": "README.md.txt",
+    "admission.json": "admission.json",
+    "field-review.json": "field-review.json",
+    "groups.json": "groups.json",
+    "reuse.json": "reuse.json",
+    "review-candidates.md": "review-candidates.md.txt",
+    "rights.json": "rights.json",
+    "selected-rights.md": "selected-rights.md.txt",
+    "source-captures.json": "source-captures.json",
+    "source-context.json": "source-context.json",
+    "source-excerpts.json": "source-excerpts.json",
+    "sources.json": "sources.json",
+    "usage-corroboration.json": "usage-corroboration.json",
+    "verification.json": "verification.json"
+  },
+  "markdown_snapshot_format": "Original .md files are stored byte-for-byte as .md.txt, preventing relocated author-relative links from becoming live documentation links."
+}
