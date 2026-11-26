@@ -29,7 +29,11 @@ pub struct NoteImportOptions {
     pub delimiter: NoteDelimiter,
     pub mapping: Option<NoteImportMapping>,
     #[serde(default)]
+    pub grammar_mapping: Option<crate::grammar_import::GrammarImportMapping>,
+    #[serde(default)]
     pub format: Option<NoteFormat>,
+    #[serde(default)]
+    pub record_kind: crate::note_export::ExportRecordKind,
 }
 #[derive(Clone, Debug, Serialize)]
 pub struct NoteImportGroup {
@@ -70,7 +74,19 @@ pub enum NoteImportAction {
 struct Session {
     operation: String,
     file: Option<(ImportSource, Vec<u8>)>,
-    preview: Option<NoteImportPreview>,
+    preview: Option<ExchangePreview>,
+}
+#[derive(Clone, Debug, Serialize)]
+#[serde(untagged)]
+pub enum ExchangePreview {
+    Vocabulary(NoteImportPreview),
+    Grammar(crate::grammar_import::GrammarImportPreview),
+}
+#[derive(Serialize)]
+#[serde(untagged)]
+pub enum ExchangeResult {
+    Vocabulary(NoteImportResult),
+    Grammar(lexique_storage::GrammarImportResult),
 }
 #[derive(Default)]
 pub struct NoteImportState(Mutex<Option<Session>>);
@@ -102,7 +118,30 @@ fn preview_note_bytes(
     bytes: &[u8],
     operation: &str,
     options: &NoteImportOptions,
-) -> Result<NoteImportPreview, String> {
+) -> Result<ExchangePreview, String> {
+    if matches!(
+        options.record_kind,
+        crate::note_export::ExportRecordKind::Grammar
+    ) {
+        if options.mapping.is_some() {
+            return Err("Grammar import requires grammar CSV mapping".into());
+        }
+        return match source.format {
+            NoteFormat::Csv => crate::grammar_import::preview_csv_with_options(
+                connection, source, bytes, operation, options,
+            ),
+            NoteFormat::Markdown => {
+                crate::grammar_import::preview_markdown_bytes(connection, source, bytes, operation)
+            }
+            NoteFormat::Zip => {
+                crate::grammar_import::preview_zip_bytes(connection, source, bytes, operation)
+            }
+        }
+        .map(ExchangePreview::Grammar);
+    }
+    if options.grammar_mapping.is_some() {
+        return Err("Vocabulary import requires vocabulary CSV mapping".into());
+    }
     match source.format {
         NoteFormat::Csv => {
             crate::note_import_csv::preview_csv_bytes(connection, source, bytes, operation, options)
@@ -112,6 +151,7 @@ fn preview_note_bytes(
         }
         NoteFormat::Zip => crate::note_zip::preview_zip_bytes(connection, source, bytes, operation),
     }
+    .map(ExchangePreview::Vocabulary)
 }
 
 #[cfg(test)]
@@ -246,7 +286,7 @@ pub async fn note_import_preview(
     window: tauri::WebviewWindow,
     operation: String,
     options: NoteImportOptions,
-) -> Result<Option<NoteImportPreview>, String> {
+) -> Result<Option<ExchangePreview>, String> {
     if window.label() != "main" {
         return Err("Note import requires the main window".into());
     }
@@ -260,7 +300,9 @@ pub async fn note_import_preview(
         file: None,
         preview: None,
     });
-    tauri::async_runtime::spawn_blocking(move || {
+    let cleanup_app = app.clone();
+    let cleanup_operation = operation.clone();
+    let result = tauri::async_runtime::spawn_blocking(move || {
         let _admission = admission;
         let format = options.format.clone().unwrap_or(NoteFormat::Csv);
         let dialog = app.dialog().file().set_parent(&window);
@@ -281,7 +323,9 @@ pub async fn note_import_preview(
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
         let mut preview =
             preview_note_bytes(&connection, source.clone(), &bytes, &operation, &options)?;
-        enrich_preview_from_app(&app, &mut preview)?;
+        if let ExchangePreview::Vocabulary(preview) = &mut preview {
+            enrich_preview_from_app(&app, preview)?;
+        }
         let state = app.state::<NoteImportState>();
         let mut state = state
             .0
@@ -296,7 +340,12 @@ pub async fn note_import_preview(
         Ok(Some(preview))
     })
     .await
-    .map_err(|e| format!("Note preview task failed: {e}"))?
+    .map_err(|e| format!("Note preview task failed: {e}"))
+    .and_then(|result| result);
+    if !matches!(&result, Ok(Some(_))) {
+        note_import_cancel(cleanup_app.state(), cleanup_operation)?;
+    }
+    result
 }
 #[tauri::command]
 pub async fn note_import_remap(
@@ -304,7 +353,7 @@ pub async fn note_import_remap(
     window: tauri::WebviewWindow,
     operation: String,
     options: NoteImportOptions,
-) -> Result<NoteImportPreview, String> {
+) -> Result<ExchangePreview, String> {
     if window.label() != "main" {
         return Err("Note import requires the main window".into());
     }
@@ -326,7 +375,9 @@ pub async fn note_import_remap(
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
         let mut preview =
             preview_note_bytes(&connection, source.clone(), bytes, &operation, &options)?;
-        enrich_preview_from_app(&app, &mut preview)?;
+        if let ExchangePreview::Vocabulary(preview) = &mut preview {
+            enrich_preview_from_app(&app, preview)?;
+        }
         session.preview = Some(preview.clone());
         Ok(preview)
     })
@@ -339,7 +390,7 @@ pub async fn note_import_commit(
     window: tauri::WebviewWindow,
     operation: String,
     selections: Vec<NoteImportSelection>,
-) -> Result<NoteImportResult, String> {
+) -> Result<ExchangeResult, String> {
     if window.label() != "main" {
         return Err("Note import requires the main window".into());
     }
@@ -358,7 +409,16 @@ pub async fn note_import_commit(
             .ok_or("Note preview no longer available; preview again")?;
         let mut connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        commit_preview(&mut connection, preview, &selections)
+        match preview {
+            ExchangePreview::Vocabulary(preview) => {
+                commit_preview(&mut connection, preview, &selections)
+                    .map(ExchangeResult::Vocabulary)
+            }
+            ExchangePreview::Grammar(preview) => {
+                crate::grammar_import::commit_preview(&mut connection, preview, &selections)
+                    .map(ExchangeResult::Grammar)
+            }
+        }
     })
     .await
     .map_err(|e| format!("Note import task failed: {e}"))?

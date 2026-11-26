@@ -322,7 +322,7 @@ async function backup() {
   let exported; await expect.poll(async () => { exported = await latest('lexique-backup-progress'); return exported?.state; }, { timeout: 10000 }).toBe('completed');
   const archive = inspectPackage(destination, filename); assert.deepEqual(archive.snapshot.preferences.review_scope, selected);
   if (audio) assert.ok(archive.entries.some((name) => name.startsWith('audio/')));
-  assert.equal(archive.snapshot.snapshot_version, 4); assert.equal(archive.snapshot.categories.length, 2);
+  assert.equal(archive.snapshot.snapshot_version, 5); assert.equal(archive.snapshot.categories.length, 2);
   await writeFile(join(destination, 'snapshot.json'), JSON.stringify(archive.snapshot, null, 2));
   const original = readState(destination);
   await setScope(scope([ecoleCategory.id]));
@@ -356,7 +356,7 @@ try {
   await ({ selection, live, undo, diagnostics, failure }[scenario] ?? backup)();
   evidence.scope = await applied(); evidence.sqlite = readState(destination);
   evidence.storedScope = fixtureSql(destination, "print(json.dumps(dict(c.execute(\"SELECT key,value FROM app_metadata WHERE key='review-scope'\").fetchone())))", {}, true);
-  assert.equal(evidence.sqlite.schema, 20); assert.deepEqual(evidence.sqlite.integrity, ['ok']); assert.deepEqual(evidence.sqlite.foreign_keys, []);
+  assert.equal(evidence.sqlite.schema, 21); assert.deepEqual(evidence.sqlite.integrity, ['ok']); assert.deepEqual(evidence.sqlite.foreign_keys, []);
   await writeFile(join(destination, 'results.json'), JSON.stringify(evidence, null, 2));
   console.log(JSON.stringify({ scenario, passed: true, checks: evidence.checks.length, queueReads: evidence.views.length }));
   await fixture.stop(true);

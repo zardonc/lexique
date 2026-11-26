@@ -27,6 +27,79 @@ fn preview_zip(
 }
 
 #[test]
+fn grammar_zip_coalesces_equal_identities_and_excludes_conflicting_groups() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let one = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n## title\n```text\nSame\n```\n";
+    let changed = one.replace("Same", "Changed");
+    let path = archive(
+        &fixture,
+        &[("a.md", one), ("b.md", one), ("c.md", &changed)],
+    );
+    let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        ..Default::default()
+    };
+    let ExchangePreview::Grammar(preview) =
+        preview_note_bytes(&connection, source, &bytes, "grammar-zip", &options).unwrap()
+    else {
+        panic!("grammar preview")
+    };
+    assert_eq!(preview.groups.len(), 1);
+    assert_eq!(preview.groups[0].status, "invalid");
+    assert_eq!(preview.groups[0].rows, vec![1, 2, 3]);
+}
+
+#[test]
+fn grammar_zip_invalid_pair_conflicts_with_same_identity_in_either_order() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let valid = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n## title\n```text\nSame\n```\n";
+    let invalid = format!("{valid}## question\n```text\nOnly question\n```\n");
+    for entries in [
+        vec![("good.md", valid), ("bad.md", invalid.as_str())],
+        vec![("bad.md", invalid.as_str()), ("good.md", valid)],
+    ] {
+        let path = archive(&fixture, &entries);
+        let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+        let options = NoteImportOptions {
+            record_kind: crate::note_export::ExportRecordKind::Grammar,
+            ..Default::default()
+        };
+        let ExchangePreview::Grammar(preview) =
+            preview_note_bytes(&connection, source, &bytes, "pair-conflict", &options).unwrap()
+        else {
+            panic!("grammar preview")
+        };
+        assert_eq!(preview.groups.len(), 1);
+        assert_eq!(preview.groups[0].status, "invalid");
+        assert_eq!(preview.groups[0].files.as_ref().unwrap().len(), 2);
+    }
+}
+
+#[test]
+fn grammar_zip_missing_title_invalidates_matching_identity() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let valid = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n## title\n```text\nValid\n```\n";
+    let missing = "# Lexique grammar note v1\n## exchange_id\n```text\nid-one\n```\n";
+    let path = archive(&fixture, &[("valid.md", valid), ("missing.md", missing)]);
+    let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        ..Default::default()
+    };
+    let ExchangePreview::Grammar(preview) =
+        preview_note_bytes(&connection, source, &bytes, "missing-title", &options).unwrap()
+    else {
+        panic!("grammar preview")
+    };
+    assert_eq!(preview.groups.len(), 1);
+    assert_eq!(preview.groups[0].status, "invalid");
+}
+
+#[test]
 fn ordinary_tool_deflated_zip_imports_through_real_file_and_sqlite() {
     let fixture = Fixture::new();
     let mut connection = fixture.open();
@@ -411,4 +484,74 @@ fn csv_zip_csv_preserves_101_ordered_examples_exact_text_identity_and_progress_a
             .unwrap()
             .contains("too-many.md")
     );
+}
+
+#[test]
+fn grammar_zip_parse_errors_prefix_location_once_and_reject_disagreeing_headers() {
+    let fixture = Fixture::new();
+    let connection = fixture.open();
+    let options = NoteImportOptions {
+        record_kind: crate::note_export::ExportRecordKind::Grammar,
+        ..Default::default()
+    };
+    let invalid_path = archive(&fixture, &[("bad.md", "# Not a grammar note\n")]);
+    let (source, bytes) = read_note_file(&invalid_path, NoteFormat::Zip).unwrap();
+    let ExchangePreview::Grammar(preview) = preview_note_bytes(
+        &connection,
+        source,
+        &bytes,
+        "grammar-zip-parse-err",
+        &options,
+    )
+    .unwrap() else {
+        panic!("grammar preview")
+    };
+    assert_eq!(preview.groups.len(), 1);
+    assert_eq!(preview.groups[0].status, "invalid");
+    let err = preview.groups[0].error.as_deref().unwrap();
+    assert!(
+        err.starts_with("external.zip: bad.md: "),
+        "unexpected prefix: {err}"
+    );
+    assert_eq!(
+        err.matches("external.zip: bad.md:").count(),
+        1,
+        "double prefix in: {err}"
+    );
+
+    let path = archive(
+        &fixture,
+        &[(
+            "note.md",
+            "# Lexique grammar note v1\n## title\n```text\nRule\n```\n",
+        )],
+    );
+    let bytes = std::fs::read(&path).unwrap();
+    let mut crc = bytes.clone();
+    let name_length = u16::from_le_bytes([crc[26], crc[27]]) as usize;
+    let extra_length = u16::from_le_bytes([crc[28], crc[29]]) as usize;
+    crc[30 + name_length + extra_length] ^= 1;
+    let mut header = bytes.clone();
+    header[30] ^= 1;
+    for (variant, raw) in [
+        ("truncated", bytes[..30].to_vec()),
+        ("crc", crc),
+        ("headers", header),
+    ] {
+        std::fs::write(&path, raw).unwrap();
+        let (source, bytes) = read_note_file(&path, NoteFormat::Zip).unwrap();
+        let err = preview_note_bytes(&connection, source, &bytes, "fatal-grammar-zip", &options)
+            .unwrap_err();
+        if variant == "headers" {
+            assert!(
+                err.contains("invalid ZIP headers"),
+                "expected invalid ZIP headers error, got: {err}"
+            );
+        }
+        assert!(
+            list_grammar(&connection, "", "created-asc")
+                .unwrap()
+                .is_empty()
+        );
+    }
 }

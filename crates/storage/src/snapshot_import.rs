@@ -23,6 +23,13 @@ pub fn import_learning_snapshot(
         ));
     }
     insert_records(&tx, snapshot)?;
+    // Legacy snapshots keep the identities assigned by the insert trigger.
+    for identity in &snapshot.grammar_exchange_identities {
+        tx.execute(
+            "UPDATE grammar_exchange_identities SET exchange_id = ?1 WHERE record_id = ?2",
+            params![identity.exchange_id, identity.record_id],
+        )?;
+    }
     insert_speech_demands(&tx, snapshot)?;
     insert_review(&tx, snapshot)?;
     insert_grammar_cards(&tx, snapshot)?;

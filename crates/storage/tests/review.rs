@@ -1025,6 +1025,9 @@ fn legacy_schema_upgrade_undo_retry_survives_reopening() {
         )
         .unwrap();
         connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards')", []).unwrap();
+        connection
+            .execute_batch("DROP TRIGGER grammar_exchange_identity_insert; DROP TABLE grammar_exchange_identities;")
+            .unwrap();
         let triggers = connection.prepare("SELECT name FROM sqlite_master WHERE type='trigger' AND name LIKE 'queue_revision_%'").unwrap().query_map([], |row| row.get::<_,String>(0)).unwrap().collect::<Result<Vec<_>,_>>().unwrap();
         for trigger in triggers {
             connection

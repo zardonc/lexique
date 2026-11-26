@@ -5,6 +5,48 @@ use lexique_storage::{
 };
 use rusqlite::Connection;
 
+#[test]
+fn grammar_markdown_roundtrips_saved_raw_fields_and_identity() {
+    let record = lexique_storage::GrammarExportRecord {
+        id: 1,
+        exchange_id: "grammar-identity".into(),
+        title: "À l'école".into(),
+        body: "  中文\n````\r\nfin\r".into(),
+        question: "Pourquoi ?\n".into(),
+        answer: "  réponse `oui`  ".into(),
+    };
+    let text = super::format_grammar_markdown(&record);
+    assert!(text.contains("`````text\n"));
+    let parsed = super::parse_grammar_markdown(&text).unwrap();
+    assert_eq!(parsed.exchange_id.as_deref(), Some("grammar-identity"));
+    assert_eq!(parsed.title, record.title);
+    assert_eq!(parsed.body.as_deref(), Some(record.body.as_str()));
+    assert_eq!(parsed.question.as_deref(), Some(record.question.as_str()));
+    assert_eq!(parsed.answer.as_deref(), Some(record.answer.as_str()));
+}
+
+#[test]
+fn grammar_template_rejects_wrong_marker_missing_title_and_incomplete_pair_with_section_context() {
+    for (text, expected) in [
+        ("# Lexique note v1\n", "template identifier"),
+        ("# Lexique grammar note v1\n", "## title"),
+        (
+            "# Lexique grammar note v1\n## title\n```text\nTitle\n```\n## question\n```text\nWhy?\n```\n",
+            "Question and answer",
+        ),
+        (
+            "# Lexique grammar note v1\n## title\n```text\nTitle\n```\n## body\ninvalid\n",
+            "## body",
+        ),
+    ] {
+        assert!(
+            super::parse_grammar_markdown(text)
+                .unwrap_err()
+                .contains(expected)
+        );
+    }
+}
+
 fn directory() -> std::path::PathBuf {
     let path = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"))
         .join("../../../target/issue-188/files")
@@ -592,7 +634,7 @@ fn invalid_export_scope_destination_and_replaced_snapshot_preserve_real_results(
     );
     assert!(
         crate::note_export::NoteExports::default()
-            .retained("expired")
+            .retained_snapshot("expired")
             .unwrap_err()
             .contains("snapshot changed")
     );

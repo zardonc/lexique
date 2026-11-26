@@ -9,8 +9,12 @@ mod note_interchange;
 pub use note_interchange::*;
 mod note_export;
 pub use note_export::*;
+mod grammar_export;
+pub use grammar_export::*;
 mod grammar;
 pub use grammar::*;
+mod grammar_import;
+pub use grammar_import::*;
 mod categories;
 pub use categories::*;
 mod speech;
@@ -56,6 +60,7 @@ const LEARNING_ROWS: &str = "SELECT 1 FROM vocabulary UNION ALL SELECT 1 FROM sa
      UNION ALL SELECT 1 FROM legacy_speech UNION ALL SELECT 1 FROM word_audio_operations
      UNION ALL SELECT 1 FROM word_audio_publications UNION ALL SELECT 1 FROM word_audio_repairs
      UNION ALL SELECT 1 FROM grammar_cards UNION ALL SELECT 1 FROM learning_categories
+     UNION ALL SELECT 1 FROM grammar_exchange_identities
      UNION ALL SELECT 1 FROM record_categories UNION ALL SELECT 1 FROM retained_review_usage
      UNION ALL SELECT 1 FROM deleted_grammar_operations
      UNION ALL SELECT 1 FROM app_metadata LIMIT 1";
@@ -217,6 +222,9 @@ fn migrate(connection: &Connection, version: u32) -> Result<u32, StorageError> {
     }
     if version < 20 {
         transaction.execute_batch(include_str!("../migrations/0020_external_notes.sql"))?;
+    }
+    if version < 21 {
+        transaction.execute_batch(include_str!("../migrations/0021_grammar_exchange.sql"))?;
     }
     if transaction
         .prepare("PRAGMA foreign_key_check")?

@@ -6,8 +6,11 @@ use std::{
     },
 };
 
-use lexique_storage::{NoteExportScope, NoteExportSnapshot, capture_note_export};
-use serde::Serialize;
+use lexique_storage::{
+    GrammarExportSnapshot, NoteExportScope, NoteExportSnapshot, capture_grammar_export,
+    capture_note_export,
+};
+use serde::{Deserialize, Serialize};
 use tauri::{Manager, State};
 use tauri_plugin_dialog::DialogExt;
 
@@ -20,10 +23,83 @@ static NEXT_SNAPSHOT: AtomicU64 = AtomicU64::new(1);
 mod tests;
 
 #[derive(Default)]
-pub struct NoteExports(Mutex<Option<(String, Arc<NoteExportSnapshot>)>>);
+pub struct NoteExports(Mutex<Option<(String, Arc<ExportSnapshot>)>>);
+
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ExportRecordKind {
+    #[default]
+    Vocabulary,
+    Grammar,
+}
+
+#[derive(Debug)]
+pub(crate) enum ExportSnapshot {
+    Vocabulary(Arc<NoteExportSnapshot>),
+    Grammar(GrammarExportSnapshot),
+}
+
+impl ExportSnapshot {
+    fn save_markdown(&self, destination: Option<&Path>) -> Result<ExportResult, String> {
+        let (records, rows) = self.counts();
+        if records != 1 {
+            return Err("Single Markdown export requires one saved record".into());
+        }
+        let state = if let Some(path) = destination {
+            match self {
+                Self::Vocabulary(snapshot) => write_note_markdown(snapshot, path)?,
+                Self::Grammar(snapshot) => {
+                    std::fs::write(
+                        path,
+                        crate::note_markdown::format_grammar_markdown(&snapshot.records[0]),
+                    )
+                    .map_err(|error| {
+                        format!("Could not write Markdown file {}: {error}", path.display())
+                    })?;
+                }
+            }
+            "saved"
+        } else {
+            "cancelled"
+        };
+        Ok(ExportResult {
+            state,
+            records,
+            rows,
+        })
+    }
+
+    fn counts(&self) -> (usize, usize) {
+        match self {
+            Self::Vocabulary(snapshot) => (snapshot.records.len(), snapshot.row_count()),
+            Self::Grammar(snapshot) => (snapshot.records.len(), snapshot.records.len()),
+        }
+    }
+
+    fn save_csv(&self, destination: Option<&Path>) -> Result<ExportResult, String> {
+        let (records, rows) = self.counts();
+        if records == 0 {
+            return Err("No saved records in this export scope".into());
+        }
+        let state = if let Some(path) = destination {
+            match self {
+                Self::Vocabulary(snapshot) => write_note_csv(snapshot, path)?,
+                Self::Grammar(snapshot) => write_grammar_csv(snapshot, path)?,
+            }
+            "saved"
+        } else {
+            "cancelled"
+        };
+        Ok(ExportResult {
+            state,
+            records,
+            rows,
+        })
+    }
+}
 
 impl NoteExports {
-    pub(crate) fn retained(&self, token: &str) -> Result<Arc<NoteExportSnapshot>, String> {
+    pub(crate) fn retained_snapshot(&self, token: &str) -> Result<Arc<ExportSnapshot>, String> {
         self.0
             .lock()
             .map_err(|_| "Note export snapshot unavailable")?
@@ -32,6 +108,36 @@ impl NoteExports {
             .map(|(_, snapshot)| snapshot.clone())
             .ok_or_else(|| "Note export snapshot changed; select the scope again".into())
     }
+}
+
+pub fn write_grammar_csv(
+    snapshot: &GrammarExportSnapshot,
+    destination: &Path,
+) -> Result<(), String> {
+    if snapshot.records.is_empty() {
+        return Err("No saved grammar records in this export scope".into());
+    }
+    let mut writer = csv::WriterBuilder::new()
+        .terminator(csv::Terminator::CRLF)
+        .from_writer(vec![0xef, 0xbb, 0xbf]);
+    writer
+        .write_record(["exchange_id", "title", "body", "question", "answer"])
+        .map_err(|error| format!("Could not serialize CSV header: {error}"))?;
+    for record in &snapshot.records {
+        writer
+            .write_record([
+                &record.exchange_id,
+                &record.title,
+                &record.body,
+                &record.question,
+                &record.answer,
+            ])
+            .map_err(|error| format!("Could not serialize grammar CSV record: {error}"))?;
+    }
+    let bytes = writer
+        .into_inner()
+        .map_err(|error| format!("Could not finish CSV: {error}"))?;
+    std::fs::write(destination, bytes).map_err(|error| format!("Could not write CSV file: {error}"))
 }
 
 #[derive(Serialize)]
@@ -97,22 +203,54 @@ pub fn write_note_markdown(
 }
 
 pub fn write_note_zip(snapshot: &NoteExportSnapshot, destination: &Path) -> Result<(), String> {
-    use std::io::Write;
     if snapshot.records.is_empty() {
         return Err("No saved vocabulary in this export scope".into());
     }
+    write_markdown_zip(
+        destination,
+        snapshot.records.iter().map(|record| {
+            (
+                crate::note_markdown::note_markdown_filename(record),
+                crate::note_markdown::format_note_markdown(record),
+            )
+        }),
+    )
+}
+
+pub fn write_grammar_zip(
+    snapshot: &GrammarExportSnapshot,
+    destination: &Path,
+) -> Result<(), String> {
+    if snapshot.records.is_empty() {
+        return Err("No saved grammar records in this export scope".into());
+    }
+    write_markdown_zip(
+        destination,
+        snapshot.records.iter().map(|record| {
+            (
+                crate::note_markdown::grammar_markdown_filename(record),
+                crate::note_markdown::format_grammar_markdown(record),
+            )
+        }),
+    )
+}
+
+fn write_markdown_zip(
+    destination: &Path,
+    entries: impl IntoIterator<Item = (String, String)>,
+) -> Result<(), String> {
+    use std::io::Write;
     let file = std::fs::File::create(destination)
         .map_err(|error| format!("Could not create ZIP {}: {error}", destination.display()))?;
     let mut archive = zip::ZipWriter::new(file);
     let options =
         zip::write::SimpleFileOptions::default().compression_method(zip::CompressionMethod::Stored);
-    for record in &snapshot.records {
-        let name = crate::note_markdown::note_markdown_filename(record);
+    for (name, content) in entries {
         archive
             .start_file(&name, options)
             .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
         archive
-            .write_all(crate::note_markdown::format_note_markdown(record).as_bytes())
+            .write_all(content.as_bytes())
             .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
     }
     archive
@@ -132,22 +270,32 @@ pub async fn note_export_snapshot(
     path: State<'_, DatabasePath>,
     maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     scope: NoteExportScope,
+    record_kind: Option<ExportRecordKind>,
 ) -> Result<ExportSummary, String> {
     crate::backup_operations::main_window(&window)?;
     let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let _reader = reader;
-        let snapshot =
-            capture_note_export(&mut open(&path)?, &scope).map_err(|error| error.to_string())?;
+        let mut connection = open(&path)?;
+        let snapshot = match record_kind.unwrap_or_default() {
+            ExportRecordKind::Vocabulary => ExportSnapshot::Vocabulary(Arc::new(
+                capture_note_export(&mut connection, &scope).map_err(|error| error.to_string())?,
+            )),
+            ExportRecordKind::Grammar => ExportSnapshot::Grammar(
+                capture_grammar_export(&mut connection, &scope)
+                    .map_err(|error| error.to_string())?,
+            ),
+        };
         let token = format!(
             "note-export-{}",
             NEXT_SNAPSHOT.fetch_add(1, Ordering::Relaxed)
         );
+        let (records, rows) = snapshot.counts();
         let summary = ExportSummary {
             token: token.clone(),
-            records: snapshot.records.len(),
-            rows: snapshot.row_count(),
+            records,
+            rows,
         };
         *app.state::<NoteExports>()
             .0
@@ -167,9 +315,9 @@ pub async fn note_export_csv(
     token: String,
 ) -> Result<ExportResult, String> {
     crate::backup_operations::main_window(&window)?;
-    let snapshot = exports.retained(&token)?;
-    if snapshot.records.is_empty() {
-        return Err("No saved vocabulary in this export scope".into());
+    let snapshot = exports.retained_snapshot(&token)?;
+    if snapshot.counts().0 == 0 {
+        return Err("No saved records in this export scope".into());
     }
     tauri::async_runtime::spawn_blocking(move || {
         let window = app
@@ -180,22 +328,19 @@ pub async fn note_export_csv(
             .file()
             .set_parent(&window)
             .add_filter("CSV", &["csv"])
-            .set_file_name("lexique-notes.csv")
+            .set_file_name(match snapshot.as_ref() {
+                ExportSnapshot::Grammar(_) => "lexique-grammar.csv",
+                _ => "lexique-notes.csv",
+            })
             .blocking_save_file();
-        let state = if let Some(destination) = destination {
-            let path = destination
-                .into_path()
-                .map_err(|error| format!("Could not resolve CSV destination: {error}"))?;
-            write_note_csv(&snapshot, &path)?;
-            "saved"
-        } else {
-            "cancelled"
-        };
-        Ok(ExportResult {
-            state,
-            records: snapshot.records.len(),
-            rows: snapshot.row_count(),
-        })
+        let path = destination
+            .map(|destination| {
+                destination
+                    .into_path()
+                    .map_err(|error| format!("Could not resolve CSV destination: {error}"))
+            })
+            .transpose()?;
+        snapshot.save_csv(path.as_deref())
     })
     .await
     .map_err(|error| format!("CSV export task failed: {error}"))?
@@ -211,16 +356,21 @@ pub async fn note_export_markdown(
     crate::backup_operations::main_window(&window)?;
     let snapshot = token
         .as_deref()
-        .map(|token| exports.retained(token))
+        .map(|token| exports.retained_snapshot(token))
         .transpose()?;
     let (filename, rows) = if let Some(snapshot) = &snapshot {
-        let [record] = snapshot.records.as_slice() else {
-            return Err("Single Markdown export requires one saved vocabulary record".into());
+        if snapshot.counts().0 != 1 {
+            return Err("Single Markdown export requires one saved record".into());
+        }
+        let filename = match snapshot.as_ref() {
+            ExportSnapshot::Vocabulary(snapshot) => {
+                crate::note_markdown::note_markdown_filename(&snapshot.records[0])
+            }
+            ExportSnapshot::Grammar(snapshot) => {
+                crate::note_markdown::grammar_markdown_filename(&snapshot.records[0])
+            }
         };
-        (
-            crate::note_markdown::note_markdown_filename(record),
-            snapshot.row_count(),
-        )
+        (filename, snapshot.counts().1)
     } else {
         ("lexique-note-v1.md".into(), 1)
     };
@@ -232,21 +382,24 @@ pub async fn note_export_markdown(
             .add_filter("Markdown", &["md"])
             .set_file_name(&filename)
             .blocking_save_file();
-        let state = if let Some(destination) = destination {
-            let path = destination
-                .into_path()
-                .map_err(|error| format!("Could not resolve Markdown destination: {error}"))?;
-            if let Some(snapshot) = &snapshot {
-                write_note_markdown(snapshot, &path)?;
-            } else {
-                std::fs::write(
-                    &path,
-                    include_str!("../../../../docs/examples/lexique-note-v1.md"),
-                )
-                .map_err(|error| {
-                    format!("Could not write Markdown file {}: {error}", path.display())
-                })?;
-            }
+        let path = destination
+            .map(|destination| {
+                destination
+                    .into_path()
+                    .map_err(|error| format!("Could not resolve Markdown destination: {error}"))
+            })
+            .transpose()?;
+        if let Some(snapshot) = &snapshot {
+            return snapshot.save_markdown(path.as_deref());
+        }
+        let state = if let Some(path) = path {
+            std::fs::write(
+                &path,
+                include_str!("../../../../docs/examples/lexique-note-v1.md"),
+            )
+            .map_err(|error| {
+                format!("Could not write Markdown file {}: {error}", path.display())
+            })?;
             "saved"
         } else {
             "cancelled"
@@ -269,9 +422,9 @@ pub async fn note_export_zip(
     token: String,
 ) -> Result<ExportResult, String> {
     crate::backup_operations::main_window(&window)?;
-    let snapshot = exports.retained(&token)?;
-    if snapshot.records.is_empty() {
-        return Err("No saved vocabulary in this export scope".into());
+    let snapshot = exports.retained_snapshot(&token)?;
+    if snapshot.counts().0 == 0 {
+        return Err("No saved records in this export scope".into());
     }
     tauri::async_runtime::spawn_blocking(move || {
         let destination = app
@@ -279,21 +432,27 @@ pub async fn note_export_zip(
             .file()
             .set_parent(&window)
             .add_filter("Markdown ZIP", &["zip"])
-            .set_file_name("lexique-notes.zip")
+            .set_file_name(match snapshot.as_ref() {
+                ExportSnapshot::Grammar(_) => "lexique-grammar.zip",
+                _ => "lexique-notes.zip",
+            })
             .blocking_save_file();
         let state = if let Some(destination) = destination {
             let path = destination
                 .into_path()
                 .map_err(|error| format!("Could not resolve ZIP destination: {error}"))?;
-            write_note_zip(&snapshot, &path)?;
+            match snapshot.as_ref() {
+                ExportSnapshot::Grammar(snapshot) => write_grammar_zip(snapshot, &path)?,
+                ExportSnapshot::Vocabulary(snapshot) => write_note_zip(snapshot, &path)?,
+            };
             "saved"
         } else {
             "cancelled"
         };
         Ok(ExportResult {
             state,
-            records: snapshot.records.len(),
-            rows: snapshot.row_count(),
+            records: snapshot.counts().0,
+            rows: snapshot.counts().1,
         })
     })
     .await
