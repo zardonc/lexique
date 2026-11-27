@@ -178,7 +178,7 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
         assert_eq!(lookup.dictionary_id.as_deref(), Some("builtin-core"));
         assert_eq!(
             lookup.source.version,
-            format!("{}+gender-1", curated["content_version"].as_str().unwrap())
+            format!("{}+gender-2", curated["content_version"].as_str().unwrap())
         );
         assert_eq!(
             lookup
