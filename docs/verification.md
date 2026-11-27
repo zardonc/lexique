@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## 翻译页查词与本地语音（#225、#226）
+
+2026-11-27，Windows x64 使用隔离数据目录和真实 WebView2：本地模拟 OpenAI 兼容 SSE 返回法语译文，选中译文查到随包离线词典，复用现有 Supertonic 3 资源调用本地播放；测试退出后 host、worker 与辅助进程均为零。浏览器全量 492 项通过，随后新增的语音长度及迟到预览取消测试在翻译定向套件中通过。完整套件覆盖前述实现，但不包含随后新增的测试用例。
+
+执行 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust`、`cargo test --locked -p lexique-desktop --lib`、`pnpm test:docs`、`pnpm test:e2e` 及 `pnpm desktop:build --no-bundle`；桌面库 180 项通过、2 项既有忽略。Rust 测试预编译首次因 Windows Store Python 占位程序失败，使用本机便携 Python 后通过；一次全量浏览器启动与并行 OCR 资源准备冲突，串行重试通过。原生检查使用 `pnpm --filter @lexique/desktop exec node e2e/native-translation-speech-check.mjs`，传入隔离资源、构建产物与新建目标目录。
+
+此原生检查未在同一旅程覆盖系统取词、OCR、模拟 DeepL、导入 MDX、凭据损坏恢复及备份恢复；也未验证 macOS、ARM64、全机断网或正式发行。真实远端服务验证须另行记录，浏览器模拟与本地服务不能代替该验证。
+
 ## 语法交换最终审查修正（#212）
 
 单条语法 Markdown 保存选择器与 ZIP 共用已保存标题／交换身份的 Windows 安全命名规则，重名独立记录分别建议不同文件名。ZIP 写入生命周期、语法身份匹配及状态判定复用，格式位置诊断与原子提交语义保持；导出按钮移除常量可用性参数。新鲜 Windows x64 portable 的实际 Win32 文件名、语法 ZIP 往返、生词 CSV／Markdown／ZIP 检查通过；完整浏览器 488 项、后端 256 项、桌面库 167 项通过，两个既有子进程入口按用途忽略。准确测试源码、二进制、原生重试及证据归档见 [#212 审查验证](grammar-exchange-review-verification.md)。

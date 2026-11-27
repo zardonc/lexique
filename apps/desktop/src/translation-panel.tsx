@@ -3,6 +3,8 @@ import type { Locale } from './content';
 import type { RuntimeAdapter } from './platform/runtime';
 import type { TranslationPreferences, TranslationResult, TranslationSettings } from './platform/translation';
 import { translationError } from './translation-errors';
+import { ExampleSpeech } from './example-speech';
+import { notebookMessages } from './notebook-content';
 
 const labels = {
   zh: { source: '原文语言', target: '目标语言', auto: '自动检测', swap: '互换语言', translate: '翻译', retry: '重试', cancel: '取消', copy: '复制译文', settings: '前往设置', disabled: '在线翻译未启用', missing: '密钥未配置', unreadable: '密钥无法读取', preview: '在线翻译仅在桌面应用中可用', error: '翻译失败', incomplete: '译文不完整，请重试。', copied: '已复制译文', result: '译文' },
@@ -12,7 +14,7 @@ const labels = {
 const languages = ['fr', 'zh-CN', 'en'] as const;
 type Language = typeof languages[number];
 
-export function useTranslation(runtime: RuntimeAdapter, locale: Locale, raw: string) {
+export function useTranslation(runtime: RuntimeAdapter, locale: Locale, { raw, visible }: { readonly raw: string; readonly visible: boolean }) {
   const [settings, setSettings] = useState<TranslationSettings | null>();
   const [result, setResult] = useState<TranslationResult>();
   const [status, setStatus] = useState('');
@@ -20,7 +22,7 @@ export function useTranslation(runtime: RuntimeAdapter, locale: Locale, raw: str
   const [complete, setComplete] = useState(false);
   const [saving, setSaving] = useState(false);
   const active = useRef<string | undefined>(undefined);
-  useEffect(() => { let live = true; void runtime.translationSettings(locale).then((value) => { if (live) setSettings(value); }).catch(() => { if (live) setStatus('settings_error'); }); return () => { live = false; }; }, [runtime, locale]);
+  useEffect(() => { let live = true; if (visible) void runtime.translationSettings(locale).then((value) => { if (live) setSettings(value); }).catch(() => { if (live) setStatus('settings_error'); }); return () => { live = false; }; }, [runtime, locale, visible]);
   function cancel() { const id = active.current; active.current = undefined; if (id) void runtime.cancelTranslation(id).catch(() => {}); setBusy(false); setComplete(false); setResult(undefined); }
   useEffect(() => () => { const id = active.current; active.current = undefined; if (id) void runtime.cancelTranslation(id).catch(() => {}); }, [runtime]);
   async function change(preferences: TranslationPreferences) {
@@ -55,9 +57,10 @@ function LanguageControls({ translation, locale, preferences }: { readonly trans
   </div>;
 }
 
-function TranslationOutput({ translation, locale }: { readonly translation: ReturnType<typeof useTranslation>; readonly locale: Locale }) {
+function TranslationOutput({ translation, locale, runtime, onSelection, visible }: { readonly translation: ReturnType<typeof useTranslation>; readonly locale: Locale; readonly runtime: RuntimeAdapter; readonly onSelection: (value: string) => void; readonly visible: boolean }) {
   const text = labels[locale], { result, status } = translation;
-  return <>{result && <section><h3>{text.result}</h3><p>{result.source} → {result.target}</p><pre>{result.text}</pre>{!translation.busy && !translation.complete && <p role="alert">{text.incomplete}</p>}<button type="button" disabled={!translation.complete} onClick={() => void navigator.clipboard.writeText(result.text).then(() => translation.setStatus('copied')).catch(() => translation.setStatus('clipboard_error'))}>{text.copy}</button></section>}
+  function select(node: HTMLElement) { const selection = window.getSelection(); if (translation.complete && selection && node.contains(selection.anchorNode) && node.contains(selection.focusNode)) onSelection(selection.toString()); }
+  return <>{result && <section><h3>{text.result}</h3><p>{result.source} → {result.target}</p><pre lang={result.target} tabIndex={0} onMouseUp={(event) => select(event.currentTarget)} onKeyUp={(event) => select(event.currentTarget)}>{result.text}</pre>{visible && translation.complete && result.target === 'fr' && <ExampleSpeech value={result.text} runtime={runtime} text={notebookMessages[locale]} />}{!translation.busy && !translation.complete && <p role="alert">{text.incomplete}</p>}<button type="button" disabled={!translation.complete} onClick={() => void navigator.clipboard.writeText(result.text).then(() => translation.setStatus('copied')).catch(() => translation.setStatus('clipboard_error'))}>{text.copy}</button></section>}
     {status && <p role="status">{status === 'copied' ? text.copied : `${text.error}: ${translationError(locale, status)}`}</p>}</>;
 }
 
@@ -72,17 +75,17 @@ function serviceState(settings: TranslationSettings, locale: Locale) {
   return { available, reason, destination };
 }
 
-function LoadedTranslation({ translation, locale, raw, onSettings, settings }: { readonly translation: ReturnType<typeof useTranslation>; readonly locale: Locale; readonly raw: string; readonly onSettings: () => void; readonly settings: TranslationSettings }) {
+function LoadedTranslation({ translation, locale, raw, onSettings, settings, runtime, onSelection, visible }: { readonly translation: ReturnType<typeof useTranslation>; readonly locale: Locale; readonly raw: string; readonly onSettings: () => void; readonly settings: TranslationSettings; readonly runtime: RuntimeAdapter; readonly onSelection: (value: string) => void; readonly visible: boolean }) {
   const text = labels[locale], { busy, saving } = translation;
   const preferences = settings.preferences;
   const { available, reason, destination } = serviceState(settings, locale);
   return <section><LanguageControls translation={translation} locale={locale} preferences={preferences} /><p>{available ? destination : <>{reason} <button type="button" onClick={onSettings}>{text.settings}</button></>}</p>
     <div className="actions"><button type="button" disabled={!available || busy || saving || !raw.trim()} onClick={() => void translation.translate()}>{translation.result && !translation.complete && !busy ? text.retry : text.translate}</button>{busy && <button type="button" onClick={translation.cancel}>{text.cancel}</button>}</div>
-    <TranslationOutput translation={translation} locale={locale} />
+    <TranslationOutput translation={translation} locale={locale} runtime={runtime} onSelection={onSelection} visible={visible} />
   </section>;
 }
 
-export function TranslationPanel(props: { readonly translation: ReturnType<typeof useTranslation>; readonly locale: Locale; readonly raw: string; readonly onSettings: () => void }) {
+export function TranslationPanel(props: { readonly translation: ReturnType<typeof useTranslation>; readonly locale: Locale; readonly raw: string; readonly onSettings: () => void; readonly runtime: RuntimeAdapter; readonly onSelection: (value: string) => void; readonly visible: boolean }) {
   const { settings, status } = props.translation, text = labels[props.locale];
   if (settings === null) return <p>{text.preview}</p>;
   if (!settings) return status ? <p role="alert">{text.error}: {translationError(props.locale, status)}</p> : null;
