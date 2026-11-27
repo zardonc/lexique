@@ -13,6 +13,8 @@ from cefr_gender_pilot import (
     triage_core_noun_genders,
 )
 
+from core_pilot import apply_human_review
+
 ROOT = Path(__file__).resolve().parents[1]
 
 # The selected usage narrows some multi-gender headers; other unchanged spellings allow both.
@@ -90,22 +92,25 @@ def capture(item, sources, capture_dir):
     return header, "fixed_oldid_capture", number
 
 
-def review_report(rows):
+def review_report(rows, review=None):
     residual = [row for row in rows if row["queue"] != "auto_accepted"]
-    extra = [row for row in rows if row["queue"] == "auto_accepted" and row["gender"] is None]
+    extra = [row for row in rows if row["queue"] == "auto_accepted" and row["review_status"] != "deterministic_agreement"]
     accepted = sum(row["gender"] is not None for row in rows)
-    lines = ["# Core noun gender residual review", "",
-             f"The 187 original residuals and {len(extra)} additional exceptions have fixed-source evidence and sense-bound candidates. Independent human review is pending for all {len(residual) + len(extra)} rows; their shipped gender remains null. {accepted} of {len(rows)} noun senses have deterministic gender agreement.", "",
-             "Evidence: [noun-genders.json](../../resources/core-pilot-79/noun-genders.json), CC BY-SA 4.0. Each link pins the source revision; line numbers refer to its wikitext. Lexique 3.83 is a cross-check, and the selected spelling and definition determine the candidate. Full captures remain in `target/core-gender-completion/fixed-revisions/`.", ""]
+    status = (f"Reviewer: {review['reviewer']}; reviewed on {review['reviewed_on']}. Policy: use Lexique when nonnull, otherwise Candidate; omit when both are null. All {len(review['decisions'])} scoped decisions are recorded in the evidence and replayed during regeneration."
+              if review else f"Independent human review is pending for {len(residual) + len(extra)} rows.")
+    lines = ["# Core noun gender residual review", "", status, "",
+             f"The 187 original residuals and {len(extra)} additional exceptions are retained below. {accepted} of {len(rows)} noun senses have admitted gender.", "",
+             "Evidence: [noun-genders.json](../../resources/core-pilot-79/noun-genders.json), CC BY-SA 4.0. Each header link pins its revision and wikitext line. Reviewed Lexique decisions cite [Lexique 3.83](../../resources/core-pilot-79/lexique-provenance.json); Candidate decisions retain the fixed-source header and selected usage. Full captures remain in `target/core-gender-completion/fixed-revisions/`.", ""]
     for title, group in [("Original 187 residuals", residual), ("Additional seven exceptions", extra)]:
-        lines.extend([f"## {title}", "", "| Frozen row / sense | Headword | Selected definition / usage | Fixed header / line | Lexique | Candidate | Rationale / status |",
-                      "| --- | --- | --- | --- | --- | --- | --- |"])
+        lines.extend([f"## {title}", "", "| Frozen row / sense | Headword | Selected definition / usage | Fixed header / line | Lexique | Candidate | Admitted / reviewer | Rationale / status |",
+                      "| --- | --- | --- | --- | --- | --- | --- | --- |"])
         for row in group:
             cells = [f"{row['frozen_row']} / {row['sense_id']}", row["headword"],
                      row["definition_fr"] + " / " + row["usage"],
                      f"[{row['revid']}, L{row['line_1_based']}]({row['fixed_url']}) {row['raw_header']}",
                      row["lexique_gender"] or "null", row["candidate_gender"] or "null",
-                     row["rationale"] + " Pending independent human review."]
+                     (row["gender"] or "omitted") + " / " + (review["reviewer"] if row["review_status"] == "human_reviewed" and review else "pending"),
+                     row["rationale"] + " Status: " + row["review_status"] + "."]
             lines.append("| " + " | ".join(str(cell).replace("|", "\\|").replace("\n", " ") for cell in cells) + " |")
         lines.append("")
     return "\n".join(lines)
@@ -160,12 +165,17 @@ def main():
                           (" Source does not establish one simple gender; retain null." if candidate is None else
                            " Candidate follows the fixed header within this usage; independent review is pending.")),
         })
+    evidence_path = resource / "noun-genders.json"
+    review = json.loads(evidence_path.read_text(encoding="utf-8")).get("human_review") if evidence_path.is_file() else None
+    apply_human_review(rows, review)
     payload = {"schema": "lexique-core-noun-genders-1", "content_license": "CC-BY-SA-4.0", "rows": rows}
+    if review:
+        payload["human_review"] = review
     (args.output / "noun-genders.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     residual = [row for row in rows if row["queue"] != "auto_accepted"]
     assert len(rows) == 2134 and len(residual) == 187
     (args.output / "residual-table.json").write_text(json.dumps(residual, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
-    (args.output / "noun-gender-residual-review.md").write_text(review_report(rows), encoding="utf-8", newline="\n")
+    (args.output / "noun-gender-residual-review.md").write_text(review_report(rows, review), encoding="utf-8", newline="\n")
     (args.output / "capture-failures.json").write_text(json.dumps(failures, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"nouns": len(rows), "residuals": len(residual), "trimmed_headers": len(trimmed), "captured": len(captured), "failures": len(failures)}))
     if failures:

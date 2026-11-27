@@ -6,10 +6,27 @@ import hashlib
 from pathlib import Path
 from unittest.mock import patch
 
-from complete_core_genders import ROOT, fetch_missing_revisions, main, selected_header
+from complete_core_genders import ROOT, apply_human_review, fetch_missing_revisions, main, review_report, selected_header
 
 
 class HeaderCaptureTests(unittest.TestCase):
+    def test_review_policy_replays_exact_columns_and_retains_extra_exceptions(self):
+        rows = [{"sense_id": str(i), "lexique_gender": lexique, "candidate_gender": candidate,
+                 "gender": None, "review_status": "pending_independent_human_review"}
+                for i, (lexique, candidate) in enumerate((("m", "mf"), (None, "mf"), (None, None)))]
+        review = {"reviewer": "LMY", "reviewed_on": "2026-11-27", "policy": "lexique_then_candidate_else_omit",
+                  "decisions": [{key: row[key] for key in ("sense_id", "lexique_gender", "candidate_gender")} for row in rows]}
+        apply_human_review(rows, review)
+        self.assertEqual([row["gender"] for row in rows], ["m", "mf", None])
+        self.assertTrue(all(row["review_status"] == "human_reviewed" for row in rows))
+        rows[0]["candidate_gender"] = "f"
+        with self.assertRaisesRegex(ValueError, "reviewed columns"):
+            apply_human_review(rows, review)
+        row = {**rows[1], "queue": "auto_accepted", "frozen_row": 2, "headword": "nom",
+               "definition_fr": "Nom.", "usage": "nom", "revid": 1, "line_1_based": 1,
+               "fixed_url": "https://fr.wiktionary.org/w/index.php?oldid=1", "raw_header": "{{mf}}", "rationale": "Usage."}
+        self.assertIn("2 / 1", review_report([row], review))
+
     def test_generated_review_files_and_pinned_input_use_lf_bytes(self):
         source = {"id": "fixed", "revid": 1, "fixed_url": "https://fr.wiktionary.org/w/index.php?oldid=1"}
         items = [{"frozen_row": index + 1, "headword": "nom", "source_headword": "nom", "sense_id": str(index),

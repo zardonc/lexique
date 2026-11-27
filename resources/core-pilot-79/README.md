@@ -1,7 +1,11 @@
 # Lexique FR–EN–ZH D2 core
 
 This development resource contains **4,062 independently reviewed senses / 16,248 fields**
-in 4,062 frozen headword/POS groups, content version `core-162-v1`.
+in 4,062 frozen headword/POS groups, content version `core-162-v1+gender-2`.
+Optional noun gender covers 2,133 of 2,134 noun senses. LMY reviewed the 194
+residual decisions on 2026-11-27: use Lexique when nonnull, otherwise Candidate;
+omit when both are null (`gens`). Exact column decisions, fixed headers and
+source identities are retained in [noun-genders.json](noun-genders.json).
 The ordinary `épée/NOM` weapon meaning has independently reviewed French,
 English and Chinese fields without mandatory blade geometry or carrying
 equipment; its fixed source, IPA, attribution and CC BY-SA 4.0 adaptation
