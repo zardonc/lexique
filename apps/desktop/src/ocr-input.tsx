@@ -16,17 +16,17 @@ export const ocrMessages = {
     uncertain: 'La reconnaissance est incertaine. Comparez la capture et corrigez le texte.', confidence: 'Confiance de reconnaissance : ' },
 } as const;
 
-export function OcrInput({ ocr, locale, onCancel }: {
-  readonly ocr: ReturnType<typeof useOcrInput>; readonly locale: Locale; readonly onCancel: () => void;
+export function OcrInput({ ocr, locale, onCancel, onStart }: {
+  readonly ocr: ReturnType<typeof useOcrInput>; readonly locale: Locale; readonly onCancel: () => void; readonly onStart: () => void;
 }) {
   const text = ocrMessages[locale];
   return <div className="ocr-input">
-    <button type="button" onClick={ocr.screen}>{text.screen}</button>
+    <button type="button" onClick={() => { onStart(); ocr.screen(); }}>{text.screen}</button>
     <label>{text.image}<input type="file" accept="image/png,image/jpeg" onChange={(event) => {
-      const file = event.target.files?.[0]; if (file) void ocr.importImage(file); event.target.value = '';
+      const file = event.target.files?.[0]; if (file) { onStart(); void ocr.importImage(file); } event.target.value = '';
     }} /></label><p className="dictionary-hint">{text.hint}</p>
     {ocr.image && <><img className="ocr-preview" src={ocr.image.data_url} alt={text.preview} />
-      <button type="button" disabled={ocr.busy} onClick={ocr.recognize}>{text.recognize}</button></>}
+      <button type="button" disabled={ocr.busy} onClick={() => { onStart(); ocr.recognize(); }}>{text.recognize}</button></>}
     {(ocr.image || ocr.busy) && <button type="button" onClick={() => { ocr.cancel(); onCancel(); }}>{text.cancel}</button>}
     {ocr.busy && <p role="status">{text.working} {Math.round(ocr.progress * 100)}%</p>}
     {ocr.error && <p role="alert">{text.failed}{ocr.error}</p>}

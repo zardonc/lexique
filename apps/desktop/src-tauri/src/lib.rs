@@ -6,6 +6,14 @@ mod conjugation;
 mod dictionaries;
 mod dictionary_links;
 mod interface;
+mod translation_commands;
+#[cfg(windows)]
+mod translation_credentials;
+#[cfg(target_os = "macos")]
+mod translation_credentials_macos;
+mod translation_deepl;
+mod translation_openai;
+mod translation_store;
 use interface::interface_preferences;
 mod backup;
 mod backup_operations;
@@ -116,6 +124,7 @@ pub fn run() {
         .manage(restore_operations::RestoreOperations::default())
         .manage(dictionaries::Registry::default())
         .manage(selection::SelectionState::default())
+        .manage(translation_commands::TranslationOperation::default())
         .manage(ocr_capture::CaptureState::default())
         .manage(startup::StartupState::new(startup::unavailable(
             "Learning initialization has not completed",
@@ -191,6 +200,11 @@ pub fn run() {
             conjugation_lookup,
             conjugation_preferences,
             interface_preferences,
+            translation_commands::translation_settings,
+            translation_commands::translation_clear_key,
+            translation_commands::translation_execute,
+            translation_commands::translation_cancel,
+            translation_commands::translation_test_connection,
             conjugation_block_order,
             vocabulary_find,
             vocabulary_list,

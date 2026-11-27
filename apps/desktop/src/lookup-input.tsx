@@ -10,6 +10,7 @@ import type { RuntimeAdapter } from './platform/runtime';
 import { selectionText, type SelectionEvent } from './platform/selection';
 import { useOcrInput } from './use-ocr-input';
 import { OcrInput } from './ocr-input';
+import { TranslationPanel, useTranslation } from './translation-panel';
 
 function useInputLookup(runtime: RuntimeAdapter, selection?: SelectionEvent) {
   const [raw, setRaw] = useState('');
@@ -60,31 +61,35 @@ function InputResults({ input, locale, onDictionary }: {
   </>;
 }
 
-export function LookupInputPanel({ runtime, locale, selection, onCancel, onDictionary }: {
+export function LookupInputPanel({ runtime, locale, selection, onCancel, onDictionary, onSettings }: {
   readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly selection?: SelectionEvent;
-  readonly onCancel: () => void; readonly onDictionary: (view: DictionaryView) => void;
+  readonly onCancel: () => void; readonly onDictionary: (view: DictionaryView) => void; readonly onSettings: () => void;
 }) {
   const text = lookupInputMessages[locale], dictionaryText = messages[locale].dictionary;
   const input = useInputLookup(runtime, selection), field = useRef<HTMLTextAreaElement>(null);
-  const ocr = useOcrInput(runtime, selection, input.edit);
+  const translation = useTranslation(runtime, locale, input.raw);
+  function edit(value: string) { translation.cancel(); input.edit(value); }
+  const ocr = useOcrInput(runtime, selection, edit);
+  useEffect(() => { translation.cancel(); }, [selection]);
   const raw = input.raw;
   const capturing = selection?.kind === 'pending';
   function selected() { const node = field.current; return node && node.selectionEnd > node.selectionStart ? raw.slice(node.selectionStart, node.selectionEnd) : raw; }
   return <div className="lookup-input" onPaste={(event) => {
     const file = event.clipboardData.files[0];
-    if (file) { event.preventDefault(); void ocr.importImage(file); }
+    if (file) { event.preventDefault(); translation.cancel(); void ocr.importImage(file); }
   }}>
-    <OcrInput ocr={ocr} locale={locale} onCancel={onCancel} />
+    <OcrInput ocr={ocr} locale={locale} onCancel={onCancel} onStart={translation.cancel} />
     <form onSubmit={(event) => { event.preventDefault(); void input.lookup(selected()); }}>
       <label htmlFor="lookup-input-raw">{text.raw}</label>
       <textarea ref={field} id="lookup-input-raw" lang="fr" rows={4} value={raw} required
         autoCapitalize="none" autoCorrect="off" spellCheck={false}
-        onChange={(event) => { ocr.stop(); if (selection) onCancel(); input.edit(event.target.value); }} />
+        onChange={(event) => { ocr.stop(); if (selection) onCancel(); edit(event.target.value); }} />
       <p className="dictionary-hint">{text.hint}</p>
       {raw && !dictionaryQuery.safeParse(raw.trim()).success && <p>{text.long}</p>}
       <div className="actions"><button type="submit" disabled={input.loading || capturing}>{input.loading ? dictionaryText.loading : text.query}</button>
         {(input.loading || capturing) && <button type="button" onClick={() => { input.cancel(); onCancel(); }}>{text.cancel}</button>}</div>
     </form>
+    <TranslationPanel translation={translation} locale={locale} raw={raw} onSettings={onSettings} />
     {capturing && <p role="status">{text.capturing}</p>}
     <InputResults input={input} locale={locale} onDictionary={onDictionary} />
   </div>;

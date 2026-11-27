@@ -15,6 +15,7 @@ import type { SelectionEvent, ShortcutStatus } from './selection';
 import type { Locale } from '../content';
 import { interfacePreferencesSchema } from './interface';
 import type { InterfacePreferences } from './interface';
+import { translationRuntime } from './translation';
 import { backupStatusSchema, backupPreviewOperation, backupPreviewStatusSchema } from './backup';
 import type { BackupStatus, BackupPreviewStatus, RawPendingRequest, RestoreStatus, StartupStatus } from './backup';
 import { restoreRuntime } from './restore';
@@ -116,7 +117,7 @@ const batchSchema = z.object({ operation: z.string().min(1).max(128), cancelled:
 export type BatchRequest = z.infer<typeof batchRequestSchema>;
 export type BatchStatus = z.infer<typeof batchSchema>;
 
-export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<typeof noteImportRuntime>, Readonly<typeof noteExportRuntime> {
+export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<typeof noteImportRuntime>, Readonly<typeof noteExportRuntime>, Readonly<typeof translationRuntime> {
   readonly startRestore: (operation: string, pendingRequests?: readonly RawPendingRequest[]) => Promise<RestoreStatus>;
   readonly restoreStatus: (operation: string) => Promise<RestoreStatus>;
   readonly onRestoreProgress: (callback: (status: RestoreStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
@@ -193,6 +194,7 @@ async function readShortcut(command: string, shortcut?: string) {
 }
 
 export const runtime: RuntimeAdapter = {
+  ...translationRuntime,
   ...noteImportRuntime,
   ...restoreRuntime,
   ...notesRuntime,

@@ -23,6 +23,8 @@ mod conjugation;
 pub use conjugation::*;
 mod interface;
 pub use interface::*;
+mod translation;
+pub use translation::*;
 mod review;
 pub use review::*;
 mod review_scope;

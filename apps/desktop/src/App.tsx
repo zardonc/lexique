@@ -12,6 +12,7 @@ import { VocabularyEditor } from './vocabulary-view';
 import { notebookMessages } from './notebook-content';
 import { LeaveDialog, useLeaveGuard } from './leave-guard';
 import { SpeechSettings } from './speech-settings';
+import { TranslationSettingsPanel } from './translation-settings';
 import { ReviewSettingsPanel } from './review-settings';
 import { ReviewQueuePanel } from './review-queue';
 import { useBatchReview } from './use-batch-review';
@@ -77,7 +78,7 @@ function PageIntroduction({ page, text }: { readonly page: number; readonly text
 function pageTitleId(page: number) { return page === 3 || page === 1 ? 'main-page-heading' : 'page-title'; }
 
 function SettingsPanels({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
-  return <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
+  return <><TranslationSettingsPanel runtime={runtime} locale={locale} /><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
     <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr />
     <DictionarySettings runtime={runtime} locale={locale} /><DictionaryResources runtime={runtime} locale={locale} /></>;
 }
@@ -134,7 +135,7 @@ function LearningPage({ runtime, state }: { readonly runtime: RuntimeAdapter; re
     categories={categories} onMutation={mutate} onScopeChange={scopeChange} onCreateGrammar={() => scopeChange(grammar.create)}
     onOpen={(record) => scopeChange(() => { if ('title' in record) grammar.open(record); else notebook.open(record); })} />;
   if (page === 3) return <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} />;
-  if (page === 5) return <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel} onDictionary={navigation.openDictionaryResult} />;
+  if (page === 5) return <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel} onDictionary={navigation.openDictionaryResult} onSettings={() => navigation.changePage(7)} />;
   if (page === 7) return <SettingsPanels runtime={runtime} locale={locale} />;
   return <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>;
 }
