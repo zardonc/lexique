@@ -1,0 +1,27 @@
+{
+  "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+  "fields": [
+    {
+      "sense_id": "b161-4047-vaurien-nom-selected",
+      "frozen_row": 4047,
+      "headword": "vaurien",
+      "field": "english",
+      "proposed_text": "(Informal, less severe than an insult) A rascal or scamp.",
+      "accepted_text": "(Informal, in a milder sense) A rascal or scamp.",
+      "proposed_source_span": {
+        "line_1_based": 17,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{familier|fr}} {{term|dans un [[sens]] moins [[sévère]]}} [[chenapan|Chenapan]]."
+      },
+      "accepted_source_span": {
+        "line_1_based": 17,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{familier|fr}} {{term|dans un [[sens]] moins [[sévère]]}} [[chenapan|Chenapan]]."
+      },
+      "source_id": "b161_fr_179548",
+      "reviewer": "Independent field/use and selected-rights reviewer #161; separate from author and integration owner",
+      "reason": "In a milder sense preserves the source comparison between senses; less severe than an insult introduced an unsupported insult threshold."
+    }
+  ],
+  "usage": []
+}

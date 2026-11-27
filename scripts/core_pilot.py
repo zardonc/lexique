@@ -27,9 +27,10 @@ ANNOTATIONS = (
     (2792, "man", "NOM", 136, "2026-11-21"), (3098, "damoiseau", "NOM", 142, "2026-11-22"),
     (3783, "ya", "NOM", 156, "2026-11-23"), (3885, "cm", "NOM", 158, "2026-11-23"),
     (3922, "haver", "VER", 159, "2026-11-23"), (3944, "da", "ONO", 159, "2026-11-23"),
+    (3953, "rex", "NOM", 160, "2026-11-26"), (4057, "ais", "NOM", 162, "2026-11-26"),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = tuple(row for row in range(1, 3951) if row not in ANNOTATION_ROWS)
+ROWS = tuple(row for row in range(1, 4088) if row not in ANNOTATION_ROWS)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (

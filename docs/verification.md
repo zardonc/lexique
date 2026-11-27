@@ -1035,3 +1035,14 @@ Whole-machine offline execution, other-platform native flows, learner acceptance
 最终头 `f2cced1` 的 PR／push 两次 CI 各十一项首次运行通过，PR CI 与该头的源码树一致，包含 436 项浏览器测试与 144 项 Windows x64 桌面测试。[合并后 main CI](https://github.com/zardonc/lexique/actions/runs/44859507861)在 `5012111` 通过。
 
 精确来源树、二进制 SHA-256、命令、原生链路、失败与恢复证据、快照降级限制见[组合验收记录](note-interchange-verification.md)。`native-green-01` 与 `post-main-01-device-names` 两份转储均定位到 `RTSSHooks64.dll + 0x1490AF`；按用户确认作为 RTSS 注入相关环境失败排除出 #192 阻塞项，见[转储归因](note-interchange-verification.md#rtss-crash-attribution)。未执行关闭 RTSS 的对照测试；其他历史 renderer 失败和 V03 偶发超时未据此归因。其他平台原生、干净机器安装与整机离线验收未执行，发行门槛仍保留。
+
+
+## D2 冻结终批（#160–#162）
+
+2026-11-26：`core-162-v1` 覆盖最后冻结行 3951–4087，新增 **135 组／540 字段**，累计 **4,062 组／16,248 字段**。独立审查与所有者决策保留 `rex/NOM`（3953 行）和 `ais/NOM`（4057 行）为零字段注记；全核心 25 注记／100 缺字段，三项既有专业义分别计量，固定分母仍为 4,087 组／3,773 词头。原 3,927 组／15,708 字段、来源与复核数组、冻结清单和 SQLite payload 逐项比较保持。
+
+源码 `14212a3d16e06758caf38b7d6bd9af4b5ee10020` 的 Windows x64 新便携包通过三批实际原生查找／保存／重开；审查后的 FR／IPA／EN／ZH 与用途、出处均逐组核对，注记没有纳入义项。另从已关闭的 `core-159-v1`／schema 20 数据目录升级到 schema 21，旧 `être`／`lâche` 笔记、摘要、例句、FSRS 和现有音频保持，新增终批首尾词成功保存。四场景保留 60 秒硬限，外部 WebView 请求与遗留 host／worker／helper 均为零。
+
+实际 SQLite 为 **18,894,848 字节**，现有 20,000,000 字节上限保持；原始输入 188,037,047 字节，随包材料 188,097,945 字节，不含报告的核心安装贡献 206,992,793 字节，完整核心目录 207,619,409 字节，便携包总安装体积 277,304,673 字节，ZIP 50,515,415 字节。二进制／数据库／ZIP 摘要、命令、截图、检查与原始证据位置见[综合记录](evidence/issues-160-162/README.md)、[验证收据](evidence/issues-160-162/verification.json)及[当前交付收据](evidence/issues-160-162/delivery-verification.json)。
+
+学习者验收、其他平台原生、干净机器／整机离线与正式发行未运行；CEFR 未知。#78 保持开放，这些 Windows 开发构件检查不替代剩余发行门槛。

@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "content_version": "core-162-v1",
+  "application_source": "14212a3d16e06758caf38b7d6bd9af4b5ee10020",
+  "delivery_source": "54d45691d754a54a3452ea06d8d39770ed073511",
+  "binary_sha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
+  "sqlite_sha256": "d81e1acda7a0575271ae86968d20aa00510d8844a401a2499acb915e1ee78603",
+  "measurements": {
+    "maximum_sense_json_bytes": 6000,
+    "maximum_field_unicode_scalars": 566,
+    "raw_inputs_bytes": 188037047,
+    "read_only_sqlite_bytes": 18894848,
+    "bundled_materials_bytes": 188097945,
+    "installed_core_bytes_excluding_report": 206992793
+  },
+  "portable": {
+    "archive": "target\\f220p\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 50515415,
+    "installed_bytes": 277304673,
+    "core_installed_bytes": 207619409,
+    "sha256": "e56a2cc644b69434494a1da0c55d7a10dbdd504461c44cfa53a89634c3b5d50d",
+    "verified_files": 187
+  },
+  "preservation": {
+    "earlier_notice_prefix": "byte_identical",
+    "prior_core_materials": [
+      "COPYING",
+      "core.sqlite3",
+      "core_pilot.py",
+      "coverage.json",
+      "curated-inputs.json",
+      "field-review.json",
+      "lexique-provenance.json",
+      "LEXIQUE-UPSTREAM-README.txt",
+      "LICENSE-FranceTerme.pdf",
+      "LICENSE-MIT",
+      "MEMBERSHIP-NOTICES.txt",
+      "README.md",
+      "scope-manifest.csv",
+      "selected-source-context.json",
+      "selected-source-excerpts.json"
+    ],
+    "authored_snapshots_and_owner_approvals": "unchanged",
+    "executable": "byte_identical"
+  },
+  "native_batch_162": {
+    "check": {
+      "check": "Batch #162: 36 admitted groups / 144 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 36 headwords saved and reopened with unchanged provenance and learning state",
+      "status": "passed"
+    },
+    "metadata": {
+      "startedAt": "2026-11-27T04:03:50.214Z",
+      "binarySha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
+      "command": [
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+        "batch",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\f220p\\Lexique-0.1.0-windows-x64-portable",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\f220p\\Lexique-0.1.0-windows-x64-portable\\Lexique.exe",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\f220p\\Lexique-0.1.0-windows-x64-portable\\conjugation",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\f220p\\Lexique-0.1.0-windows-x64-portable\\frequency",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\f220p\\Lexique-0.1.0-windows-x64-portable\\dictionary\\core-pilot-79\\curated-inputs.json",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\review-fixes\\f220n2",
+        "162"
+      ],
+      "hardTimeoutSeconds": 60
+    },
+    "external_requests": 0,
+    "cleanup": {
+      "hosts": [],
+      "workers": [],
+      "helpers": 0
+    },
+    "results": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\review-fixes\\f220n2\\results.json"
+  },
+  "checks": {
+    "core": "18 passed",
+    "batches": "25 passed",
+    "helpers": "5 passed",
+    "portable": "16 passed",
+    "docs": "passed",
+    "reproduction": "5/5 passed"
+  },
+  "evidence_root": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\review-220-fixes"
+}

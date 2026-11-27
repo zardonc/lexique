@@ -1,7 +1,7 @@
 # Lexique FR–EN–ZH D2 core
 
-This development resource contains **3,927 independently reviewed senses / 15,708 fields**
-in 3,927 frozen headword/POS groups, content version `core-159-v1`.
+This development resource contains **4,062 independently reviewed senses / 16,248 fields**
+in 4,062 frozen headword/POS groups, content version `core-162-v1`.
 The ordinary `épée/NOM` weapon meaning has independently reviewed French,
 English and Chinese fields without mandatory blade geometry or carrying
 equipment; its fixed source, IPA, attribution and CC BY-SA 4.0 adaptation
@@ -9,9 +9,9 @@ remain recorded in the [field review](field-review.json).
 Deliver this core with its matching rebuilt executable; the native reader
 rejects a resource whose hash differs from its build. Existing saved digests
 keep their original content.
-Its permanent target is **4,087 groups / 3,773 headwords**; **3,927 groups are accepted
-and 160 remain unaccepted**. Everyday coverage is **3,924 complete groups
-and 163 incomplete groups**. All **15,708 fields** have exact independent reviews.
+Its permanent target is **4,087 groups / 3,773 headwords**; **4,062 groups are accepted
+and 25 remain unaccepted**. Everyday coverage is **4,059 complete groups
+and 28 incomplete groups**. All **16,248 fields** have exact independent reviews.
 
 | Batch | Frozen rows | Admitted groups | Fields | Reused groups | Annotation exceptions |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -91,6 +91,9 @@ and 163 incomplete groups**. All **15,708 fields** have exact independent review
 | #157 | 3801–3850 | 50 | 200 | 0 | 0 |
 | #158 | 3851–3900 | 49 | 196 | 0 | 1 |
 | #159 | 3901–3950 | 48 | 192 | 0 | 2 |
+| #160 | 3951–4000 | 49 | 196 | 0 | 1 |
+| #161 | 4001–4050 | 50 | 200 | 0 | 0 |
+| #162 | 4051–4087 | 36 | 144 | 0 | 1 |
 
 All prior **2,932 groups / 11,728 fields**, their raw records, source bindings,
 independent reviews, contexts and compiled payloads remain exact. Row 483
@@ -99,8 +102,8 @@ independent reviews, contexts and compiled payloads remain exact. Row 483
 
 The owner-approved specialist senses are row 34 `ça/NOM` (psychoanalytic id, #81)
 row 128 `par/NOM` (single-hole standard golf strokes, #83), and row 3128 `pars/NOM` (masculine golf plural, #143). Their
-restrictions, approvals and four-field records remain intact. Annotation exceptions are row 87 `quoi/ADJ`, row 305 `dont/PRO:int`, row 816 `t/PRO:per`, row 849 `c/PRO:dem`, row 859 `l/ART:def`, row 860 `l/PRO:per`, row 934 `i/ADJ:num`, row 1005 `m/PRO:per`, row 1051 `s/PRO:per`, row 1208 `quiconque/PRO:int`, row 1218 `qu/CON`, row 1219 `qu/PRO:int`, row 1220 `qu/PRO:rel`, row 1300 `d/PRE`, row 1386 `nulle/PRO:ind`, row 2560 `oublie/NOM`, row 2626 `r/ADV`, row 2792 `man/NOM`, row 3098 `damoiseau/NOM`, row 3783 `ya/NOM`, row 3885 `cm/NOM`, row 3922 `haver/VER`, row 3944 `da/ONO`. Each retains its exact frozen identity, frequencies, four missing fields and zero admitted content.
-The 23 owner-approved annotations retain 92 missing fields in the fixed denominator.
+restrictions, approvals and four-field records remain intact. Annotation exceptions are row 87 `quoi/ADJ`, row 305 `dont/PRO:int`, row 816 `t/PRO:per`, row 849 `c/PRO:dem`, row 859 `l/ART:def`, row 860 `l/PRO:per`, row 934 `i/ADJ:num`, row 1005 `m/PRO:per`, row 1051 `s/PRO:per`, row 1208 `quiconque/PRO:int`, row 1218 `qu/CON`, row 1219 `qu/PRO:int`, row 1220 `qu/PRO:rel`, row 1300 `d/PRE`, row 1386 `nulle/PRO:ind`, row 2560 `oublie/NOM`, row 2626 `r/ADV`, row 2792 `man/NOM`, row 3098 `damoiseau/NOM`, row 3783 `ya/NOM`, row 3885 `cm/NOM`, row 3922 `haver/VER`, row 3944 `da/ONO`, row 3953 `rex/NOM`, row 4057 `ais/NOM`. Each retains its exact frozen identity, frequencies, four missing fields and zero admitted content.
+The 25 owner-approved annotations retain 100 missing fields in the fixed denominator.
 Existing annotation and specialist approvals remain intact. New approvals are recorded with their matching issue and date in field-review.json.
 No new runtime alias is admitted; existing apostrophized records and relative `dont` at row 306 remain intact.
 
@@ -151,3 +154,8 @@ learning/audio relationships retain their creation-time content.
 Rows 3451–3950 add 496 admitted groups / 1,984 independently reviewed fields and 4 approved zero-field annotations.
 All prior 3,431 groups / 13,724 fields, frozen membership, approved exceptions
 and runtime spelling relationships remain unchanged.
+
+
+## Final frozen batches
+
+Rows 3951–4087 add 135 admitted groups / 540 reviewed fields and the owner-approved zero-field annotations `rex/NOM` at row 3953 and `ais/NOM` at row 4057. The fixed 4,087-group scope retains 25 annotations / 100 missing fields and three specialist senses. All 3,927 prior groups / 15,708 fields remain unchanged. Learner acceptance and formal release remain separate gates.

@@ -6094,3 +6094,371 @@ The independent review accepts 192 fields across 48 ordinary groups and
 retains selected-text rights clearance for all 200 audited texts. Eight research
 fields are not admitted; two owner-approved annotations retain their frozen
 identities and eight missing fields. Canonical admission remains pending.
+
+
+# Source and modification notices for #160
+
+The Wiktionnaire contribution layer and Lexique's scoped French adaptations and
+new English/Chinese explanations use [CC BY-SA 4.0](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-160/COPYING).
+Project source code remains MIT. 196 fields pass independent quality and selected-expression rights review.
+The four rex proposal fields are not admitted; its full proposal and missing
+fields remain in [rejected proposals](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-160/rejected-proposals.json).
+
+Exact rows 3951–4000 and both unchanged frequency strings derive from Boris New
+and Christophe Pallier's [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
+CC BY-SA 4.0, through the [frozen manifest](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/resources/core-pilot-79/scope-manifest.csv).
+CEFR remains unknown. Audio, images, etymological prose and literary/news examples
+are not learner fields. French definitions are scoped adaptations; EN/ZH are new
+explanatory translations of those exact selected uses. One captured IPA variant
+is selected per use. The Sir spelling binding adds no lookup alias.
+
+Wiktionnaire contributors retain credit through each full article history and
+the complete paginated named registry/anonymous counts in [source context](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-160/source-context.json).
+The current registry may include contributors after the fixed revision and does
+not identify the author of a selected expression. Lexique contributors receive
+credit for selection, adaptations and explanatory translations.
+
+| Article | Fixed revision | Full history | Declared original work |
+| --- | --- | --- | --- |
+| roux | [39952233](https://fr.wiktionary.org/w/index.php?title=roux&oldid=39952233) | [History](https://fr.wiktionary.org/w/index.php?title=roux&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| perle | [40039653](https://fr.wiktionary.org/w/index.php?title=perle&oldid=40039653) | [History](https://fr.wiktionary.org/w/index.php?title=perle&action=history) | Académie française, eighth edition (1932–1935); Émile Littré, original Dictionnaire de la langue française (1872–1877), conservatively credited at the French reference boundary |
+| rex | [39911686](https://fr.wiktionary.org/w/index.php?title=rex&oldid=39911686) | [History](https://fr.wiktionary.org/w/index.php?title=rex&action=history) | Unadmitted proposal; animal-science and breed bibliography origin unresolved |
+| balcon | [39774075](https://fr.wiktionary.org/w/index.php?title=balcon&oldid=39774075) | [History](https://fr.wiktionary.org/w/index.php?title=balcon&action=history) | Académie française, eighth edition (1935), article A8B0140, tome 1 page 117; original projecting-platform/balustrade expression independently compared |
+| terrasse | [39988051](https://fr.wiktionary.org/w/index.php?title=terrasse&oldid=39988051) | [History](https://fr.wiktionary.org/w/index.php?title=terrasse&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| attrape | [38787442](https://fr.wiktionary.org/w/index.php?title=attrape&oldid=38787442) | [History](https://fr.wiktionary.org/w/index.php?title=attrape&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| effectuer | [40037060](https://fr.wiktionary.org/w/index.php?title=effectuer&oldid=40037060) | [History](https://fr.wiktionary.org/w/index.php?title=effectuer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| égarer | [39696838](https://fr.wiktionary.org/w/index.php?title=%C3%A9garer&oldid=39696838) | [History](https://fr.wiktionary.org/w/index.php?title=%C3%A9garer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| ménager | [39864029](https://fr.wiktionary.org/w/index.php?title=m%C3%A9nager&oldid=39864029) | [History](https://fr.wiktionary.org/w/index.php?title=m%C3%A9nager&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| refroidir | [39175274](https://fr.wiktionary.org/w/index.php?title=refroidir&oldid=39175274) | [History](https://fr.wiktionary.org/w/index.php?title=refroidir&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| chimique | [39895082](https://fr.wiktionary.org/w/index.php?title=chimique&oldid=39895082) | [History](https://fr.wiktionary.org/w/index.php?title=chimique&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| brûlant | [40059154](https://fr.wiktionary.org/w/index.php?title=br%C3%BBlant&oldid=40059154) | [History](https://fr.wiktionary.org/w/index.php?title=br%C3%BBlant&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| tracer | [39337270](https://fr.wiktionary.org/w/index.php?title=tracer&oldid=39337270) | [History](https://fr.wiktionary.org/w/index.php?title=tracer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| jet | [39717089](https://fr.wiktionary.org/w/index.php?title=jet&oldid=39717089) | [History](https://fr.wiktionary.org/w/index.php?title=jet&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| coupure | [40056813](https://fr.wiktionary.org/w/index.php?title=coupure&oldid=40056813) | [History](https://fr.wiktionary.org/w/index.php?title=coupure&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| horloge | [39786419](https://fr.wiktionary.org/w/index.php?title=horloge&oldid=39786419) | [History](https://fr.wiktionary.org/w/index.php?title=horloge&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| insulte | [39450223](https://fr.wiktionary.org/w/index.php?title=insulte&oldid=39450223) | [History](https://fr.wiktionary.org/w/index.php?title=insulte&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| porteur | [39771542](https://fr.wiktionary.org/w/index.php?title=porteur&oldid=39771542) | [History](https://fr.wiktionary.org/w/index.php?title=porteur&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| sensé | [39937037](https://fr.wiktionary.org/w/index.php?title=sens%C3%A9&oldid=39937037) | [History](https://fr.wiktionary.org/w/index.php?title=sens%C3%A9&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| tourmenter | [39691341](https://fr.wiktionary.org/w/index.php?title=tourmenter&oldid=39691341) | [History](https://fr.wiktionary.org/w/index.php?title=tourmenter&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| coutume | [39933527](https://fr.wiktionary.org/w/index.php?title=coutume&oldid=39933527) | [History](https://fr.wiktionary.org/w/index.php?title=coutume&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| resto | [39874104](https://fr.wiktionary.org/w/index.php?title=resto&oldid=39874104) | [History](https://fr.wiktionary.org/w/index.php?title=resto&action=history) | No imported original-work marker identified |
+| fiche | [40051169](https://fr.wiktionary.org/w/index.php?title=fiche&oldid=40051169) | [History](https://fr.wiktionary.org/w/index.php?title=fiche&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877 |
+| coiffure | [39726032](https://fr.wiktionary.org/w/index.php?title=coiffure&oldid=39726032) | [History](https://fr.wiktionary.org/w/index.php?title=coiffure&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| complot | [39307025](https://fr.wiktionary.org/w/index.php?title=complot&oldid=39307025) | [History](https://fr.wiktionary.org/w/index.php?title=complot&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| égoïste | [39917507](https://fr.wiktionary.org/w/index.php?title=%C3%A9go%C3%AFste&oldid=39917507) | [History](https://fr.wiktionary.org/w/index.php?title=%C3%A9go%C3%AFste&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| pharmacie | [39738613](https://fr.wiktionary.org/w/index.php?title=pharmacie&oldid=39738613) | [History](https://fr.wiktionary.org/w/index.php?title=pharmacie&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| caché | [39816193](https://fr.wiktionary.org/w/index.php?title=cach%C3%A9&oldid=39816193) | [History](https://fr.wiktionary.org/w/index.php?title=cach%C3%A9&action=history) | No imported original-work marker identified |
+| habillé | [39813193](https://fr.wiktionary.org/w/index.php?title=habill%C3%A9&oldid=39813193) | [History](https://fr.wiktionary.org/w/index.php?title=habill%C3%A9&action=history) | No imported original-work marker identified |
+| situer | [39717667](https://fr.wiktionary.org/w/index.php?title=situer&oldid=39717667) | [History](https://fr.wiktionary.org/w/index.php?title=situer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| pirate | [39551220](https://fr.wiktionary.org/w/index.php?title=pirate&oldid=39551220) | [History](https://fr.wiktionary.org/w/index.php?title=pirate&action=history) | No imported original-work marker identified |
+| officiellement | [39773928](https://fr.wiktionary.org/w/index.php?title=officiellement&oldid=39773928) | [History](https://fr.wiktionary.org/w/index.php?title=officiellement&action=history) | Académie française, eighth edition (1932–1935); Émile Littré, original Dictionnaire de la langue française (1872–1877), conservatively credited at the French reference boundary |
+| pou | [39962228](https://fr.wiktionary.org/w/index.php?title=pou&oldid=39962228) | [History](https://fr.wiktionary.org/w/index.php?title=pou&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| dépression | [39812898](https://fr.wiktionary.org/w/index.php?title=d%C3%A9pression&oldid=39812898) | [History](https://fr.wiktionary.org/w/index.php?title=d%C3%A9pression&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| errer | [39024727](https://fr.wiktionary.org/w/index.php?title=errer&oldid=39024727) | [History](https://fr.wiktionary.org/w/index.php?title=errer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| privilège | [39310392](https://fr.wiktionary.org/w/index.php?title=privil%C3%A8ge&oldid=39310392) | [History](https://fr.wiktionary.org/w/index.php?title=privil%C3%A8ge&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| référence | [39776129](https://fr.wiktionary.org/w/index.php?title=r%C3%A9f%C3%A9rence&oldid=39776129) | [History](https://fr.wiktionary.org/w/index.php?title=r%C3%A9f%C3%A9rence&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| souhait | [39951876](https://fr.wiktionary.org/w/index.php?title=souhait&oldid=39951876) | [History](https://fr.wiktionary.org/w/index.php?title=souhait&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| gangster | [39653983](https://fr.wiktionary.org/w/index.php?title=gangster&oldid=39653983) | [History](https://fr.wiktionary.org/w/index.php?title=gangster&action=history) | No imported original-work marker identified |
+| invention | [39960673](https://fr.wiktionary.org/w/index.php?title=invention&oldid=39960673) | [History](https://fr.wiktionary.org/w/index.php?title=invention&action=history) | No imported original-work marker identified |
+| barque | [39981819](https://fr.wiktionary.org/w/index.php?title=barque&oldid=39981819) | [History](https://fr.wiktionary.org/w/index.php?title=barque&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| cafard | [39440137](https://fr.wiktionary.org/w/index.php?title=cafard&oldid=39440137) | [History](https://fr.wiktionary.org/w/index.php?title=cafard&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| critiquer | [39830030](https://fr.wiktionary.org/w/index.php?title=critiquer&oldid=39830030) | [History](https://fr.wiktionary.org/w/index.php?title=critiquer&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| député | [39715799](https://fr.wiktionary.org/w/index.php?title=d%C3%A9put%C3%A9&oldid=39715799) | [History](https://fr.wiktionary.org/w/index.php?title=d%C3%A9put%C3%A9&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| parrain | [38519441](https://fr.wiktionary.org/w/index.php?title=parrain&oldid=38519441) | [History](https://fr.wiktionary.org/w/index.php?title=parrain&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| revivre | [39510647](https://fr.wiktionary.org/w/index.php?title=revivre&oldid=39510647) | [History](https://fr.wiktionary.org/w/index.php?title=revivre&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| tracasser | [39975157](https://fr.wiktionary.org/w/index.php?title=tracasser&oldid=39975157) | [History](https://fr.wiktionary.org/w/index.php?title=tracasser&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| radar | [39954977](https://fr.wiktionary.org/w/index.php?title=radar&oldid=39954977) | [History](https://fr.wiktionary.org/w/index.php?title=radar&action=history) | No imported original-work marker identified |
+| soie | [39978038](https://fr.wiktionary.org/w/index.php?title=soie&oldid=39978038) | [History](https://fr.wiktionary.org/w/index.php?title=soie&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| Sir | [36381831](https://fr.wiktionary.org/w/index.php?title=Sir&oldid=36381831) | [History](https://fr.wiktionary.org/w/index.php?title=Sir&action=history) | No imported original-work marker identified |
+
+Retain licence/disclaimer text, fixed sources and histories, contributor and
+original-work attribution, modification notices and selected source material.
+Adaptations retain CC BY-SA 4.0 without additional restrictions. Public-domain
+original editions and separate third-party rights are assessed at their own
+boundaries. The core-162-v1 package includes the required licences, notices and source materials.
+
+
+## Approved rex annotation
+
+Frozen row 3953 `rex/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both 10.57 frequency strings and ordering are preserved; four fields remain missing. [Owner approval](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-160/owner-approval.json) does not resolve the rejected proposal's expression rights or admit a specialist sense. The [rejected proposal](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-160/rejected-proposals.json) and independent decisions remain preserved.
+
+
+# Issue #161 selected content notices
+
+These 50 groups / 200 fields pass independent selected-field quality, everyday-use, spelling and selected-expression rights review and are admitted in core-162-v1. The integration receipt records their Windows x64 lookup, trusted save and reopen verification.
+
+French lexical adaptations and new English/Chinese explanatory translations: Lexique contributors. Fixed Wiktionnaire transcription and contribution layers, and Lexique adaptations: CC BY-SA 4.0. Retain attribution, source/history links, modification notices and ShareAlike; impose no additional restrictions. The complete legal text accompanies this shard in COPYING.
+
+Original historical layer where declared: Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935). The established collective-work L123-3 original-work basis expires conservatively on 2006-01-01; later Wiki and Lexique contributions retain CC BY-SA 4.0. Import/reference markers do not identify the author of a selected sentence. The selected expressions pass separate rights review; original-work credit is retained at each inspected boundary in original-expression-review.json.
+
+Only selected lexical definitions, isolated IPA and necessary French/POS/construction evidence supply the selected fields. Literary/news quotations, media, etymologies and other-language sections remain outside the selected resource. The CFC cartographic definition of fidélité at line 40 is excluded. Full API/raw sources are retained separately for inspection.
+
+Frozen membership: Boris New and Christophe Pallier, Lexique 3.83, CC BY-SA 4.0. Exact 50 rows 4001–4050, spelling, grammatical subclass and subtitle frequency strings are retained from the accepted scope manifest. The global denominator remains 4,087 groups.
+
+Modifications: lexical selection, markup removal, scoped French adaptation, new English and Chinese explanations of the same selected French use, and one recorded isolated-headword IPA variant in slashes. No runtime spelling alias is admitted.
+
+## Fixed article credits
+
+- diffuser, revision 39719894: https://fr.wiktionary.org/w/index.php?title=diffuser&oldid=39719894
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=diffuser&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- plafond, revision 39770888: https://fr.wiktionary.org/w/index.php?title=plafond&oldid=39770888
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=plafond&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- graver, revision 38667818: https://fr.wiktionary.org/w/index.php?title=graver&oldid=38667818
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=graver&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- encaisser, revision 39620114: https://fr.wiktionary.org/w/index.php?title=encaisser&oldid=39620114
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=encaisser&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- pêcheur, revision 39773123: https://fr.wiktionary.org/w/index.php?title=p%C3%AAcheur&oldid=39773123
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=p%C3%AAcheur&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- photographier, revision 39770384: https://fr.wiktionary.org/w/index.php?title=photographier&oldid=39770384
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=photographier&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- renforcer, revision 39812807: https://fr.wiktionary.org/w/index.php?title=renforcer&oldid=39812807
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=renforcer&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- révolutionnaire, revision 39957276: https://fr.wiktionary.org/w/index.php?title=r%C3%A9volutionnaire&oldid=39957276
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=r%C3%A9volutionnaire&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- ciné, revision 38994759: https://fr.wiktionary.org/w/index.php?title=cin%C3%A9&oldid=38994759
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=cin%C3%A9&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- costaud, revision 39318761: https://fr.wiktionary.org/w/index.php?title=costaud&oldid=39318761
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=costaud&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- quantité, revision 39835494: https://fr.wiktionary.org/w/index.php?title=quantit%C3%A9&oldid=39835494
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=quantit%C3%A9&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- couché, revision 39770772: https://fr.wiktionary.org/w/index.php?title=couch%C3%A9&oldid=39770772
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=couch%C3%A9&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- philosophie, revision 39947980: https://fr.wiktionary.org/w/index.php?title=philosophie&oldid=39947980
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=philosophie&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- infiniment, revision 34799702: https://fr.wiktionary.org/w/index.php?title=infiniment&oldid=34799702
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=infiniment&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.
+- compromettre, revision 39001354: https://fr.wiktionary.org/w/index.php?title=compromettre&oldid=39001354
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=compromettre&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- cultiver, revision 39863661: https://fr.wiktionary.org/w/index.php?title=cultiver&oldid=39863661
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=cultiver&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- flot, revision 39969590: https://fr.wiktionary.org/w/index.php?title=flot&oldid=39969590
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=flot&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- gênant, revision 39005637: https://fr.wiktionary.org/w/index.php?title=g%C3%AAnant&oldid=39005637
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=g%C3%AAnant&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- migraine, revision 39961368: https://fr.wiktionary.org/w/index.php?title=migraine&oldid=39961368
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=migraine&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- vaste, revision 39868231: https://fr.wiktionary.org/w/index.php?title=vaste&oldid=39868231
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=vaste&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- épais, revision 40044097: https://fr.wiktionary.org/w/index.php?title=%C3%A9pais&oldid=40044097
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=%C3%A9pais&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.
+- selle, revision 39953953: https://fr.wiktionary.org/w/index.php?title=selle&oldid=39953953
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=selle&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- cocktail, revision 39879180: https://fr.wiktionary.org/w/index.php?title=cocktail&oldid=39879180
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=cocktail&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- fidélité, revision 40049469: https://fr.wiktionary.org/w/index.php?title=fid%C3%A9lit%C3%A9&oldid=40049469
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=fid%C3%A9lit%C3%A9&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- frein, revision 39975224: https://fr.wiktionary.org/w/index.php?title=frein&oldid=39975224
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=frein&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- jeton, revision 40046464: https://fr.wiktionary.org/w/index.php?title=jeton&oldid=40046464
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=jeton&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- manifester, revision 39969165: https://fr.wiktionary.org/w/index.php?title=manifester&oldid=39969165
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=manifester&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- précaution, revision 39565389: https://fr.wiktionary.org/w/index.php?title=pr%C3%A9caution&oldid=39565389
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=pr%C3%A9caution&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- quête, revision 39498505: https://fr.wiktionary.org/w/index.php?title=qu%C3%AAte&oldid=39498505
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=qu%C3%AAte&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935; Émile Littré (1801–1881), Dictionnaire de la langue française, 1872–1877.
+- rigolo, revision 39641608: https://fr.wiktionary.org/w/index.php?title=rigolo&oldid=39641608
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=rigolo&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- ci, revision 39910811: https://fr.wiktionary.org/w/index.php?title=ci&oldid=39910811
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=ci&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- hache, revision 40057307: https://fr.wiktionary.org/w/index.php?title=hache&oldid=40057307
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=hache&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- wagon, revision 39772268: https://fr.wiktionary.org/w/index.php?title=wagon&oldid=39772268
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=wagon&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- uni, revision 39951487: https://fr.wiktionary.org/w/index.php?title=uni&oldid=39951487
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=uni&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- hypocrite, revision 40001012: https://fr.wiktionary.org/w/index.php?title=hypocrite&oldid=40001012
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=hypocrite&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- circuit, revision 39772994: https://fr.wiktionary.org/w/index.php?title=circuit&oldid=39772994
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=circuit&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- arrangement, revision 39937062: https://fr.wiktionary.org/w/index.php?title=arrangement&oldid=39937062
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=arrangement&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- assistance, revision 39902922: https://fr.wiktionary.org/w/index.php?title=assistance&oldid=39902922
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=assistance&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- média, revision 39942837: https://fr.wiktionary.org/w/index.php?title=m%C3%A9dia&oldid=39942837
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=m%C3%A9dia&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- inhabituel, revision 39863355: https://fr.wiktionary.org/w/index.php?title=inhabituel&oldid=39863355
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=inhabituel&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- marron, revision 39958534: https://fr.wiktionary.org/w/index.php?title=marron&oldid=39958534
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=marron&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- cristal, revision 39975286: https://fr.wiktionary.org/w/index.php?title=cristal&oldid=39975286
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=cristal&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- soda, revision 39941094: https://fr.wiktionary.org/w/index.php?title=soda&oldid=39941094
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=soda&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+- tambour, revision 39877909: https://fr.wiktionary.org/w/index.php?title=tambour&oldid=39877909
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=tambour&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- ver, revision 39912146: https://fr.wiktionary.org/w/index.php?title=ver&oldid=39912146
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=ver&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- caporal, revision 39975367: https://fr.wiktionary.org/w/index.php?title=caporal&oldid=39975367
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=caporal&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- coude, revision 40057713: https://fr.wiktionary.org/w/index.php?title=coude&oldid=40057713
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=coude&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- tombeau, revision 39904367: https://fr.wiktionary.org/w/index.php?title=tombeau&oldid=39904367
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=tombeau&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- vaurien, revision 36912712: https://fr.wiktionary.org/w/index.php?title=vaurien&oldid=36912712
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=vaurien&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Original-work credit: Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935.
+- britannique, revision 39771514: https://fr.wiktionary.org/w/index.php?title=britannique&oldid=39771514
+  History/contributors: https://fr.wiktionary.org/w/index.php?title=britannique&action=history
+  Attribution: Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.
+
+## Additional original-work credit
+
+Émile Littré (1801–1881), Dictionnaire de la langue française (1872–1877), for the independently inspected historical expression boundaries of infiniment, épais and quête. The original author-work basis expires conservatively on 1952-01-01 under CPI L123-1. Wiki and Lexique adaptation layers retain CC BY-SA 4.0. No modern XMLittré, ARTFL or CNRTL transcription is admitted.
+
+
+# Source and modification notices for #162
+
+The fixed Wiktionnaire contribution layer and Lexique’s scoped French
+adaptations and new English/Chinese explanations retain
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
+Project source code remains MIT. The [complete legal text](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/COPYING),
+source/history links, contributor records, original-work credits and
+modification notices accompany the reviewed shard.
+
+Exact word/POS membership and both unchanged frequency strings derive from
+Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
+CC BY-SA 4.0, through the [frozen scope manifest](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/resources/core-pilot-79/scope-manifest.csv).
+Rows 4051–4087 retain their order and grammatical subclasses. CEFR is unknown.
+
+## Modifications
+
+One selected sense is eligible in each of 36 groups; ais/NOM retains no
+admitted sense. French wording is a scoped
+adaptation of the selected lexical semantics; English and Chinese are new
+Lexique explanations, not upstream bilingual quotations. Construction, gender,
+number, register and region restrictions are retained. One recorded applicable
+isolated IPA variant is selected. Audio, images, lyrics and literary/news
+quotations supply no learner field. Source spelling relationships add no lookup
+aliases. [Readable content](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/review-candidates.md) retains every exact field and
+the selected and excluded uses.
+
+## Article credits
+
+Wiktionnaire contributors are credited through each complete linked article
+history and the paginated named registry/returned anonymous counts in
+[source-context.json](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/source-context.json). Anonymous identities retain history
+attribution. A current contributor registry can extend beyond a fixed revision
+and does not identify who authored a selected sentence. Lexique contributors
+are credited for selection, French adaptation and the new English/Chinese text.
+
+| Source article | Fixed revision | Complete history | Declared original work |
+| --- | --- | --- | --- |
+| environnement | [39773867](https://fr.wiktionary.org/w/index.php?title=environnement&oldid=39773867) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=environnement&action=history) | No original-work import marker identified |
+| litre | [39958865](https://fr.wiktionary.org/w/index.php?title=litre&oldid=39958865) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=litre&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| diviser | [39825616](https://fr.wiktionary.org/w/index.php?title=diviser&oldid=39825616) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=diviser&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| flûte | [39463772](https://fr.wiktionary.org/w/index.php?title=fl%C3%BBte&oldid=39463772) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=fl%C3%BBte&action=history) | No original-work import marker identified |
+| certitude | [40013909](https://fr.wiktionary.org/w/index.php?title=certitude&oldid=40013909) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=certitude&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| compassion | [39718001](https://fr.wiktionary.org/w/index.php?title=compassion&oldid=39718001) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=compassion&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| ais | [39798131](https://fr.wiktionary.org/w/index.php?title=ais&oldid=39798131) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=ais&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| protester | [40001742](https://fr.wiktionary.org/w/index.php?title=protester&oldid=40001742) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=protester&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| séparation | [40032001](https://fr.wiktionary.org/w/index.php?title=s%C3%A9paration&oldid=40032001) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=s%C3%A9paration&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| israélien | [39364240](https://fr.wiktionary.org/w/index.php?title=isra%C3%A9lien&oldid=39364240) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=isra%C3%A9lien&action=history) | No original-work import marker identified |
+| fréquence | [39717672](https://fr.wiktionary.org/w/index.php?title=fr%C3%A9quence&oldid=39717672) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=fr%C3%A9quence&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| pelle | [39931964](https://fr.wiktionary.org/w/index.php?title=pelle&oldid=39931964) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=pelle&action=history) | No original-work import marker identified |
+| coton | [39887758](https://fr.wiktionary.org/w/index.php?title=coton&oldid=39887758) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=coton&action=history) | No original-work import marker identified |
+| revue | [39807518](https://fr.wiktionary.org/w/index.php?title=revue&oldid=39807518) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=revue&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| nièce | [39773756](https://fr.wiktionary.org/w/index.php?title=ni%C3%A8ce&oldid=39773756) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=ni%C3%A8ce&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| brisé | [39720459](https://fr.wiktionary.org/w/index.php?title=bris%C3%A9&oldid=39720459) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=bris%C3%A9&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| décharger | [39723982](https://fr.wiktionary.org/w/index.php?title=d%C3%A9charger&oldid=39723982) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=d%C3%A9charger&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| morgue | [39521142](https://fr.wiktionary.org/w/index.php?title=morgue&oldid=39521142) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=morgue&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| patienter | [39010974](https://fr.wiktionary.org/w/index.php?title=patienter&oldid=39010974) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=patienter&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| base-ball | [40046605](https://fr.wiktionary.org/w/index.php?title=base-ball&oldid=40046605) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=base-ball&action=history) | No original-work import marker identified |
+| serrure | [39954458](https://fr.wiktionary.org/w/index.php?title=serrure&oldid=39954458) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=serrure&action=history) | No original-work import marker identified |
+| désigner | [39718786](https://fr.wiktionary.org/w/index.php?title=d%C3%A9signer&oldid=39718786) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=d%C3%A9signer&action=history) | No original-work import marker identified |
+| académie | [39770682](https://fr.wiktionary.org/w/index.php?title=acad%C3%A9mie&oldid=39770682) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=acad%C3%A9mie&action=history) | No original-work import marker identified |
+| fusée | [40007397](https://fr.wiktionary.org/w/index.php?title=fus%C3%A9e&oldid=40007397) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=fus%C3%A9e&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| amiral | [39879243](https://fr.wiktionary.org/w/index.php?title=amiral&oldid=39879243) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=amiral&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| stable | [39973650](https://fr.wiktionary.org/w/index.php?title=stable&oldid=39973650) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=stable&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| débuter | [39720076](https://fr.wiktionary.org/w/index.php?title=d%C3%A9buter&oldid=39720076) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=d%C3%A9buter&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| inquiétude | [38988583](https://fr.wiktionary.org/w/index.php?title=inqui%C3%A9tude&oldid=38988583) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=inqui%C3%A9tude&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| quelconque | [39844961](https://fr.wiktionary.org/w/index.php?title=quelconque&oldid=39844961) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=quelconque&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| spécialité | [39554254](https://fr.wiktionary.org/w/index.php?title=sp%C3%A9cialit%C3%A9&oldid=39554254) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=sp%C3%A9cialit%C3%A9&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| artistique | [39773996](https://fr.wiktionary.org/w/index.php?title=artistique&oldid=39773996) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=artistique&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| explorer | [39004604](https://fr.wiktionary.org/w/index.php?title=explorer&oldid=39004604) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=explorer&action=history) | No original-work import marker identified in the selected French section |
+| poignet | [39770863](https://fr.wiktionary.org/w/index.php?title=poignet&oldid=39770863) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=poignet&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| comique | [39657276](https://fr.wiktionary.org/w/index.php?title=comique&oldid=39657276) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=comique&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| paye | [39720781](https://fr.wiktionary.org/w/index.php?title=paye&oldid=39720781) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=paye&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| tout-puissant | [39016209](https://fr.wiktionary.org/w/index.php?title=tout-puissant&oldid=39016209) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=tout-puissant&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| caillou | [40009241](https://fr.wiktionary.org/w/index.php?title=caillou&oldid=40009241) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=caillou&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| baseball | [39760220](https://fr.wiktionary.org/w/index.php?title=baseball&oldid=39760220) | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=baseball&action=history) | No original-work import marker identified |
+
+Articles declaring Académie française eighth-edition imports (1932–1935)
+retain original credit separately from the wiki and Lexique adaptation layers.
+[Selected rights](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/selected-rights.md) records the established collective-work
+basis and its 2006-01-01 expiry. Selected-expression rights are independently
+reviewed. The explorer DAF8
+marker is in the unselected English noun section. Ais/NOM is an owner-approved
+zero-field annotation at row 4057; four fields remain missing and its rejected
+proposal is preserved separately.
+
+## Redistribution obligations
+
+Retain CC BY-SA 4.0 legal text and licence/source identifiers, complete
+contributor/history attribution, applicable original-work credits, modification
+notices and selected source material. Adaptations use CC BY-SA 4.0 without
+additional restrictions. External works retain their separate rights.
+The core-162-v1 package contains the matching source materials, notices and
+converted resource.
+
+All 148 proposed texts have separate quality and selected-span rights decisions.
+The independently accepted 144 fields in 36 groups are admitted in
+core-162-v1 with matching combined packaging and Windows x64 native evidence.
+
+The reviewed FR/EN/ZH changes select the normal baseball format with tie
+extensions, the stick-guided firework rocket and the current French admiral
+rank. IPA is unchanged. Exact text and modifications are recorded in
+[accepted replacements](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/accepted-replacements.json).
+
+
+## Approved ais annotation
+
+Frozen row 4057 `ais/NOM` is an owner-approved zero-field annotation dated 2026-11-26. Its identity, both frequency strings and source order are preserved; four fields remain missing. The original proposal and independent rejection of everyday eligibility remain in [rejected proposals](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/rejected-proposals.json). [Owner approval](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/owner-approval.json) does not admit a specialist sense or change spelling/POS.

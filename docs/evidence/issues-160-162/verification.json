@@ -1,0 +1,179 @@
+{
+  "status": "passed_windows_x64_development_artifact",
+  "build_source": "14212a3d16e06758caf38b7d6bd9af4b5ee10020",
+  "binary_sha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
+  "content_version": "core-162-v1",
+  "sqlite_sha256": "d81e1acda7a0575271ae86968d20aa00510d8844a401a2499acb915e1ee78603",
+  "sqlite_bytes": 18894848,
+  "measurements": {
+    "maximum_sense_json_bytes": 6000,
+    "maximum_field_unicode_scalars": 566,
+    "raw_inputs_bytes": 188036913,
+    "read_only_sqlite_bytes": 18894848,
+    "bundled_materials_bytes": 188097811,
+    "installed_core_bytes_excluding_report": 206992659
+  },
+  "portable": {
+    "archive": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 50515371,
+    "installed_bytes": 277304539,
+    "core_installed_bytes": 207619275,
+    "sha256": "349992f829adf5442182d87323e9dcbfc307736d768bde1fbc0a804e9ba3f6a6",
+    "verified_files": 187
+  },
+  "preservation": {
+    "status": "passed",
+    "prior_groups_unchanged": 3927,
+    "prior_fields_unchanged": 15708,
+    "scope_groups": 4087,
+    "new_groups": 135,
+    "content_version": "core-162-v1",
+    "scope_manifest_bytes": "unchanged",
+    "compiled_prior_payloads": "unchanged"
+  },
+  "native_batches": [
+    {
+      "issue": 160,
+      "groups": 49,
+      "fields": 196,
+      "annotations": 1,
+      "check": {
+        "check": "Batch #160: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 49 headwords saved and reopened with unchanged provenance and learning state",
+        "status": "passed"
+      },
+      "metadata": {
+        "startedAt": "2026-11-26T21:28:27.961Z",
+        "binarySha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
+        "command": [
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+          "batch",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\Lexique.exe",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\conjugation",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\frequency",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\dictionary\\core-pilot-79\\curated-inputs.json",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-160\\n",
+          "160"
+        ],
+        "hardTimeoutSeconds": 60
+      },
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      },
+      "external_requests": 0,
+      "retained_results": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-160\\n\\results.json"
+    },
+    {
+      "issue": 161,
+      "groups": 50,
+      "fields": 200,
+      "annotations": 0,
+      "check": {
+        "check": "Batch #161: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 50 headwords saved and reopened with unchanged provenance and learning state",
+        "status": "passed"
+      },
+      "metadata": {
+        "startedAt": "2026-11-26T21:28:49.035Z",
+        "binarySha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
+        "command": [
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+          "batch",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\Lexique.exe",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\conjugation",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\frequency",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\dictionary\\core-pilot-79\\curated-inputs.json",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-161\\n",
+          "161"
+        ],
+        "hardTimeoutSeconds": 60
+      },
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      },
+      "external_requests": 0,
+      "retained_results": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-161\\n\\results.json"
+    },
+    {
+      "issue": 162,
+      "groups": 36,
+      "fields": 144,
+      "annotations": 1,
+      "check": {
+        "check": "Batch #162: 36 admitted groups / 144 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 36 headwords saved and reopened with unchanged provenance and learning state",
+        "status": "passed"
+      },
+      "metadata": {
+        "startedAt": "2026-11-26T21:29:09.777Z",
+        "binarySha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
+        "command": [
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+          "batch",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\Lexique.exe",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\conjugation",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\frequency",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\dictionary\\core-pilot-79\\curated-inputs.json",
+          "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-162\\n",
+          "162"
+        ],
+        "hardTimeoutSeconds": 60
+      },
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      },
+      "external_requests": 0,
+      "retained_results": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-162\\n\\results.json"
+    }
+  ],
+  "native_upgrade": {
+    "checks": [
+      {
+        "check": "The existing lâche adjective and noun digests remain frozen after the resource update",
+        "status": "passed"
+      },
+      {
+        "check": "New resource version is visible while previous digest, progress and audio remain frozen",
+        "status": "passed"
+      }
+    ],
+    "metadata": {
+      "startedAt": "2026-11-26T21:29:28.252Z",
+      "binarySha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
+      "command": [
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+        "upgrade",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\Lexique.exe",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\conjugation",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\frequency",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\portable\\Lexique-0.1.0-windows-x64-portable\\dictionary\\core-pilot-79\\curated-inputs.json",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-162\\u",
+        "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-159\\b2"
+      ],
+      "hardTimeoutSeconds": 60
+    },
+    "cleanup": {
+      "hosts": [],
+      "workers": [],
+      "helpers": 0
+    },
+    "external_requests": 0,
+    "previous_schema": 20,
+    "current_schema": 21,
+    "old_records_unchanged": 2,
+    "new_records": 2,
+    "retained_baseline": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-159\\b2",
+    "retained_results": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\issue-162\\u\\results.json"
+  },
+  "learner_acceptance": "not_run",
+  "other_platform_native": "not_run",
+  "whole_machine_offline": "not_run",
+  "formal_release": "incomplete"
+}

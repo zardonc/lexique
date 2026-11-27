@@ -1,9 +1,22 @@
 """Shared verification of fixed source captures for core batch tests."""
 import json
 from pathlib import Path
+import re
 import shutil
 import tempfile
 from urllib.parse import parse_qs, urlparse
+
+
+def assert_french_pos_frame(test_case, lines, line_1_based, lexique_cgram=None):
+    """Verify the selected excerpt's French language and, when applicable, POS frame."""
+    before = lines[:line_1_based]
+    language = next(line for line in reversed(before) if re.match(r"^==\s*\{\{langue\|", line))
+    test_case.assertRegex(language, r"^==\s*\{\{langue\|fr\}\}\s*==$")
+    if lexique_cgram is not None:
+        pos = next(line for line in reversed(before) if line.startswith("=== {{S|")
+                   and not any(tag in line for tag in ("étymologie", "prononciation", "références")))
+        names = {"NOM": "nom", "VER": "verbe", "ADJ": "adjectif", "ADV": "adverbe"}
+        test_case.assertIn("{{S|" + names[lexique_cgram] + "|fr", pos)
 
 
 def verify_archived_source_captures(test_case, captures, sources, resolve_path):

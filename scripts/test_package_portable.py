@@ -56,11 +56,11 @@ class PortableTests(unittest.TestCase):
             self.write(f"target/release/dictionary/core-pilot-79/{filename}", data)
             core_inputs[filename] = hashlib.sha256(data).hexdigest()
         core_report = json.dumps({
-            "format_version": 1, "content_version": "core-159-v1",
+            "format_version": 1, "content_version": "core-162-v1",
             "sqlite_sha256": hashlib.sha256(b"reviewed core dictionary").hexdigest(),
             "sqlite_bytes": len(b"reviewed core dictionary"), "inputs": core_inputs,
-            "admission": {"accepted_groups": 3927, "remaining_unaccepted_groups": 160,
-                          "annotation_exception_groups": 23, "approved_specialist_exception_groups": 3},
+            "admission": {"accepted_groups": 4062, "remaining_unaccepted_groups": 25,
+                          "annotation_exception_groups": 25, "approved_specialist_exception_groups": 3},
         }).encode()
         self.write("target/desktop-core-pilot/report.json", core_report)
         self.write("target/release/dictionary/core-pilot-79/report.json", core_report)
@@ -105,9 +105,9 @@ class PortableTests(unittest.TestCase):
             for filename, digest in report["inputs"].items():
                 self.assertEqual(hashlib.sha256(zipped.read(prefix + filename)).hexdigest(), digest)
             description = zipped.read(self.name + "/README.txt").decode("utf-8")
-            self.assertIn("3,927 of 4,087", description)
-            self.assertIn("160 groups remain unaccepted", description)
-            self.assertIn("23 approved zero-field annotations", description)
+            self.assertIn("4,062 of 4,087", description)
+            self.assertIn("25 groups remain unaccepted", description)
+            self.assertIn("25 approved zero-field annotations", description)
             self.assertIn("3 specialist senses", description)
             self.assertIn("dictionary/core-pilot-79/", description)
             self.assertIn("LICENSE-FranceTerme.pdf", description)

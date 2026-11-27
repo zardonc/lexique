@@ -1,0 +1,138 @@
+{
+  "ticket": 160,
+  "parent": 78,
+  "role": "content_author",
+  "checkout": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\t3-768c0b35-40bf988e67dfbf34",
+  "branch": "t3/issue-160-content-shard",
+  "initial_base": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "tested_base": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "integration_branch": "codex/d2-content-160-162",
+  "merged_integration_tip": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "diff_base": "0963287ea5ed593cc84215377d62e6db1a072566",
+  "changes_covered": "Scoped author shard and resource-boundary tests; commit SHA supplied in handoff and retained post-commit evidence.",
+  "evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160",
+  "independent_acceptance": false,
+  "independent_reviewer": null,
+  "newly_admitted_groups": 0,
+  "newly_admitted_fields": 0,
+  "missing_admitted_fields": 200,
+  "frozen_rows": [
+    3951,
+    3952,
+    3953,
+    3954,
+    3955,
+    3956,
+    3957,
+    3958,
+    3959,
+    3960,
+    3961,
+    3962,
+    3963,
+    3964,
+    3965,
+    3966,
+    3967,
+    3968,
+    3969,
+    3970,
+    3971,
+    3972,
+    3973,
+    3974,
+    3975,
+    3976,
+    3977,
+    3978,
+    3979,
+    3980,
+    3981,
+    3982,
+    3983,
+    3984,
+    3985,
+    3986,
+    3987,
+    3988,
+    3989,
+    3990,
+    3991,
+    3992,
+    3993,
+    3994,
+    3995,
+    3996,
+    3997,
+    3998,
+    3999,
+    4000
+  ],
+  "proposed_groups": 50,
+  "proposed_fields": 200,
+  "checks": [
+    {
+      "log": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/red-membership.log",
+      "status": "expected_failure_before_content",
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_160.py Batch160Tests.test_exact_frozen_groups_have_complete_resource_records"
+    },
+    {
+      "log": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/red-rights.log",
+      "status": "expected_failure_before_rights_material",
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_160.py Batch160Tests.test_each_field_has_source_specific_pending_rights_and_quality_records"
+    },
+    {
+      "tests": 6,
+      "log": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/verification.log",
+      "status": "passed",
+      "command": "uv run --no-project python -B -X utf8 scripts/test_core_batch_160.py"
+    },
+    {
+      "log": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/reproduction.log",
+      "status": "passed",
+      "command": "uv run --no-project python -B -X utf8 C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/reproduce.py"
+    },
+    {
+      "status": "passed_already_up_to_date",
+      "command": "git merge --no-edit codex/d2-content-160-162"
+    },
+    {
+      "status": "passed_no_shared_changes",
+      "command": "git diff --quiet -- resources scripts/core_pilot.py scripts/core_batch_test_helpers.py package.json"
+    },
+    {
+      "local_links": 29,
+      "status": "passed",
+      "documents": 4,
+      "log": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/docs-check.log",
+      "command": "Test-Documentation scoped to docs/evidence/issue-160/*.md"
+    },
+    {
+      "log": "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/diff-check.log",
+      "status": "passed",
+      "command": "git diff --cached --check"
+    }
+  ],
+  "pending_checks": [
+    "Independent selected-field quality and exact-expression rights review",
+    "Canonical conversion and combined redistribution notices",
+    "Native lookup of all 50 groups, trusted save and reopen",
+    "Learner acceptance and wider release/platform gates"
+  ],
+  "unrun_checks": [
+    "Frontend lint/typecheck/build: no frontend changes",
+    "Rust formatting/compile/native tests: no Rust changes",
+    "Browser/native UI: integration coordinator owned"
+  ],
+  "use_blockers": [],
+  "rights_and_quality_blockers": "All 200 fields retain pending independent quality and exact-expression rights review",
+  "limitations": [
+    "sir binds lowercase frozen spelling to capitalized French title Sir; external spelling evidence is research-only.",
+    "CNRTL rex corroboration returned 404; fixed French Wiktionnaire pet/breed source remains a candidate.",
+    "Raw source capture includes 429 backed-off retries; successful fixed sources and terminal contributor pagination are retained."
+  ],
+  "patches": [
+    "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/scoped-author.patch",
+    "C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-160/scoped-tests.patch"
+  ]
+}
