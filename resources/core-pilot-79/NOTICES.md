@@ -13,11 +13,19 @@ Credit Wiktionnaire and Wiktionary contributors, and Lexique contributors for th
 recorded selection/adaptations. Every field's fixed article/version and author
 history are recorded in [curated-inputs.json](curated-inputs.json), with exact
 selected lines in [selected-source-excerpts.json](selected-source-excerpts.json).
-Credit Boris New and Christophe Pallier for Lexique 3.83 membership/frequencies,
+Credit Boris New and Christophe Pallier for Lexique 3.83 membership/frequencies and noun gender,
 retaining the actual corpus contributors and source statements in
 [LEXIQUE-UPSTREAM-README.txt](LEXIQUE-UPSTREAM-README.txt),
 [lexique-provenance.json](lexique-provenance.json), and
 [MEMBERSHIP-NOTICES.txt](MEMBERSHIP-NOTICES.txt).
+
+Optional noun gender retains its selected field source. LMY's 2026-11-27 review
+selects Lexique 3.83 `NOM`/`genre` when nonnull, otherwise the fixed-header
+Candidate within the selected usage; both null values omit the field.
+[noun-genders.json](noun-genders.json) records all 194 reviewed column decisions,
+including 37 disagreements where Lexique takes precedence. Values derived from
+Lexique retain its attribution and CC BY-SA 4.0 licence; Candidate adaptations
+retain the fixed Wiktionnaire source and the review modification notice.
 
 Modifications by Lexique: selected one specified use per frozen
 group; removed wiki markup; added selected IPA slash delimiters; translated or

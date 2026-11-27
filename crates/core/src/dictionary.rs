@@ -2,6 +2,14 @@ use serde::{Deserialize, Serialize};
 
 pub const CORE_DICTIONARY_ID: &str = "builtin-core";
 
+#[derive(Clone, Copy, Debug, Deserialize, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "lowercase")]
+pub enum NounGender {
+    M,
+    F,
+    Mf,
+}
+
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(deny_unknown_fields)]
 pub struct FieldSource {
@@ -22,6 +30,8 @@ pub struct FieldSources {
     pub ipa: FieldSource,
     pub meaning_en: FieldSource,
     pub meaning_zh: FieldSource,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub gender: Option<FieldSource>,
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq, Eq)]
@@ -38,6 +48,8 @@ pub struct CoreSense {
     pub meaning_en: String,
     pub meaning_zh: String,
     pub field_sources: FieldSources,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub gender: Option<NounGender>,
 }
 
 fn text(name: &str, value: &str, maximum: usize) -> Result<(), String> {
@@ -62,6 +74,11 @@ fn web_url(value: &str) -> bool {
 
 impl CoreSense {
     pub fn validate(&self) -> Result<(), String> {
+        if (self.gender.is_some() && self.pos != "NOM")
+            || self.gender.is_some() != self.field_sources.gender.is_some()
+        {
+            return Err("Noun gender requires a NOM sense and matching provenance".into());
+        }
         if !(1..=4_087).contains(&self.frozen_row)
             || !matches!(
                 self.pos.as_str(),
@@ -107,7 +124,10 @@ impl CoreSense {
             &self.field_sources.ipa,
             &self.field_sources.meaning_en,
             &self.field_sources.meaning_zh,
-        ] {
+        ]
+        .into_iter()
+        .chain(self.field_sources.gender.iter())
+        {
             for value in [
                 &source.title,
                 &source.version,

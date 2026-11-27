@@ -12,6 +12,7 @@ const CORE_MATERIALS: &[&str] = &[
     "README.md",
     "curated-inputs.json",
     "field-review.json",
+    "noun-genders.json",
     "scope-manifest.csv",
     "selected-source-context.json",
     "selected-source-excerpts.json",
@@ -162,7 +163,11 @@ mod tests {
         }
         let pages: Vec<Page> =
             serde_json::from_str(include_str!("../../src/dictionary-resources.json")).unwrap();
-        assert_eq!(pages.len(), 13);
+        assert_eq!(pages.len(), 14);
+        assert_eq!(
+            page("flelex-tt-beacco").unwrap(),
+            "https://cental.uclouvain.be/cefrlex/flelex/download/"
+        );
         for item in &pages {
             assert_eq!(pages.iter().filter(|other| other.id == item.id).count(), 1);
             assert!(item.url.starts_with("https://"));

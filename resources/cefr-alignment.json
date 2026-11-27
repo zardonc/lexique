@@ -1,0 +1,127 @@
+{
+  "pos_map": {
+    "NOM": [
+      "NOM"
+    ],
+    "VER": [
+      "VER"
+    ],
+    "AUX": [
+      "VER"
+    ],
+    "ADJ": [
+      "ADJ"
+    ],
+    "ADJ:ind": [
+      "ADJ"
+    ],
+    "ADJ:num": [
+      "ADJ"
+    ],
+    "ADJ:dem": [
+      "ADJ"
+    ],
+    "ADJ:int": [
+      "ADJ"
+    ],
+    "ADJ:pos": [
+      "DET:POS"
+    ],
+    "ART:def": [
+      "DET:ART",
+      "PRP:det"
+    ],
+    "ART:ind": [
+      "DET:ART",
+      "PRP:det"
+    ],
+    "PRO:per": [
+      "PRO"
+    ],
+    "PRO:ind": [
+      "PRO"
+    ],
+    "PRO:int": [
+      "PRO"
+    ],
+    "PRO:rel": [
+      "PRO"
+    ],
+    "PRO:dem": [
+      "PRO"
+    ],
+    "PRO:pos": [
+      "PRO"
+    ],
+    "ADV": [
+      "ADV"
+    ],
+    "PRE": [
+      "PRP",
+      "PRP:det"
+    ],
+    "CON": [
+      "KON"
+    ],
+    "ONO": [
+      "INT"
+    ]
+  },
+  "aliases": {
+    "aujourd'hui": [
+      "aujourd’hui"
+    ],
+    "aujourd’hui": [
+      "aujourd'hui"
+    ],
+    "coeur": [
+      "cœur"
+    ],
+    "cœur": [
+      "coeur"
+    ],
+    "d'": [
+      "d’"
+    ],
+    "d’": [
+      "d'"
+    ],
+    "l'": [
+      "l’"
+    ],
+    "l’": [
+      "l'"
+    ],
+    "oeil": [
+      "œil"
+    ],
+    "quelqu'un": [
+      "quelqu’un"
+    ],
+    "quelqu’un": [
+      "quelqu'un"
+    ],
+    "s'": [
+      "s’"
+    ],
+    "s’": [
+      "s'"
+    ],
+    "t'": [
+      "t’"
+    ],
+    "t’": [
+      "t'"
+    ],
+    "œil": [
+      "oeil"
+    ]
+  },
+  "excluded_sense_ids": [
+    "ca-noun-psychoanalytic-id",
+    "par-noun-golf-standard-strokes",
+    "b143-3128-pars-nom-golf-standard-counts",
+    "moi-noun-self-regard",
+    "b102-1070-ben-nom-selected"
+  ]
+}

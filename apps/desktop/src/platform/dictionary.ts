@@ -33,9 +33,11 @@ export const coreSenseSchema = z.object({
   headword: coreText(200), source_headword: coreText(200), pos: z.enum(['AUX', 'NOM', 'VER', 'ADV', 'ADJ', 'ONO', 'PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos', 'ADJ:int', 'PRO:pos']),
   usage: coreText(20_000), definition_fr: coreText(20_000), ipa: coreText(200),
   meaning_en: coreText(20_000), meaning_zh: coreText(20_000),
+  gender: z.enum(['m', 'f', 'mf']).nullable().optional(),
   field_sources: z.object({ definition_fr: fieldSource, ipa: fieldSource,
-    meaning_en: fieldSource, meaning_zh: fieldSource }).strict().readonly(),
-}).strict().readonly();
+    meaning_en: fieldSource, meaning_zh: fieldSource, gender: fieldSource.nullable().optional() }).strict().readonly(),
+}).strict().refine((sense) => (!sense.gender || sense.pos === 'NOM')
+  && !!sense.gender === !!sense.field_sources.gender).readonly();
 export type CoreSense = z.infer<typeof coreSenseSchema>;
 
 export interface DictionarySense {

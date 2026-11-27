@@ -44,8 +44,9 @@ function useInputLookup(runtime: RuntimeAdapter, selection?: SelectionEvent) {
   return { raw, loading, result, error, failure, edit, lookup, cancel };
 }
 
-function InputResults({ input, locale, onDictionary }: {
+function InputResults({ input, locale, runtime, onDictionary }: {
   readonly input: ReturnType<typeof useInputLookup>; readonly locale: Locale;
+  readonly runtime: RuntimeAdapter;
   readonly onDictionary: (view: DictionaryView) => void;
 }) {
   const text = lookupInputMessages[locale], dictionaryText = messages[locale].dictionary;
@@ -54,7 +55,7 @@ function InputResults({ input, locale, onDictionary }: {
     {failure && <p role="alert">{text[failure.code]} {failure.message}</p>}
     {error && <p role="alert">{dictionaryText[error.code]} {error.message}</p>}
     {result === null && <p role="status">{dictionaryText.preview}</p>}
-    {result && <section className="dictionary-original"><DictionaryResults result={result} text={dictionaryText} />
+    {result && <section className="dictionary-original"><DictionaryResults result={result} text={dictionaryText} runtime={runtime} />
       {result.entries[0] && <button onClick={() => onDictionary({ result, ordinal: result.entries[0]!.ordinal })}>{text.full}</button>}
     </section>}
   </>;
@@ -86,6 +87,6 @@ export function LookupInputPanel({ runtime, locale, selection, onCancel, onDicti
         {(input.loading || capturing) && <button type="button" onClick={() => { input.cancel(); onCancel(); }}>{text.cancel}</button>}</div>
     </form>
     {capturing && <p role="status">{text.capturing}</p>}
-    <InputResults input={input} locale={locale} onDictionary={onDictionary} />
+    <InputResults input={input} locale={locale} runtime={runtime} onDictionary={onDictionary} />
   </div>;
 }

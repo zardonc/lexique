@@ -2,7 +2,9 @@ use tauri::{Manager, State};
 
 #[cfg(windows)]
 mod audio_maintenance;
+mod cefr;
 mod conjugation;
+use cefr::{cefr_import, cefr_lookup, cefr_remove, cefr_settings};
 mod dictionaries;
 mod dictionary_links;
 mod interface;
@@ -115,6 +117,7 @@ pub fn run() {
         .manage(note_export::NoteExports::default())
         .manage(restore_operations::RestoreOperations::default())
         .manage(dictionaries::Registry::default())
+        .manage(cefr::CefrResource::default())
         .manage(selection::SelectionState::default())
         .manage(ocr_capture::CaptureState::default())
         .manage(startup::StartupState::new(startup::unavailable(
@@ -166,6 +169,10 @@ pub fn run() {
             }
         })
         .invoke_handler(tauri::generate_handler![
+            cefr_settings,
+            cefr_import,
+            cefr_remove,
+            cefr_lookup,
             runtime_status,
             startup::startup_status,
             startup::startup_retry,

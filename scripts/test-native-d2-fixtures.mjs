@@ -10,7 +10,7 @@ import { fixtureSql, inspectPackage } from '../apps/desktop/e2e/native-backup-st
 
 process.chdir(fileURLToPath(new URL('../apps/desktop/', import.meta.url)));
 const target = resolve('../../target');
-const issues = Array.from({ length: 13 }, (_, index) => `issue-${150 + index}`);
+const issues = Array.from({ length: 15 }, (_, index) => `issue-${150 + index}`);
 
 async function removeOwned(path) {
   const inside = relative(target, resolve(path));

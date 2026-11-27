@@ -1,8 +1,11 @@
 import type { CoreSense } from './platform/dictionary';
 import { digestMeaning } from './platform/vocabulary';
 import type { DigestEntry } from './platform/vocabulary';
+import { useMemo } from 'react';
+import { CefrBadge, useCefr } from './cefr';
+import type { RuntimeAdapter } from './platform/runtime';
 
-export const coreMessages = {
+const baseCoreMessages = {
   en: { definitionFr: 'French definition', ipa: 'IPA', meaningEn: 'English meaning', meaningZh: 'Chinese meaning', usage: 'Usage', sourceSpelling: 'Source spelling',
     sources: 'Field sources', source: 'Source', version: 'Version', attribution: 'Attribution', license: 'Licence',
     sourceUrl: 'Source link', licenseUrl: 'Licence link', span: 'Source span', modification: 'Modifications',
@@ -19,12 +22,17 @@ export const coreMessages = {
     pos: { AUX: '助动词', NOM: '名词', VER: '动词', ADV: '副词', ADJ: '形容词', ONO: '感叹词／拟声词',
       'PRO:per': '人称代词', 'PRE': '介词', 'ART:def': '定冠词', 'CON': '连词', 'ADJ:num': '数词形容词', 'ART:ind': '不定冠词', 'PRO:ind': '不定代词', 'PRO:int': '疑问代词', 'PRO:rel': '关系代词', 'PRO:dem': '指示代词', 'ADJ:ind': '不定形容词', 'ADJ:dem': '指示形容词', 'ADJ:pos': '物主形容词', 'ADJ:int': '疑问形容词', 'PRO:pos': '物主代词' } },
 } as const;
+export const coreMessages = {
+  en: { ...baseCoreMessages.en, gender: 'Noun gender', genders: { m: 'Masculine', f: 'Feminine', mf: 'Masculine or feminine' }, cefrError: 'Could not load CEFR grades', retry: 'Retry' },
+  fr: { ...baseCoreMessages.fr, gender: 'Genre du nom', genders: { m: 'Masculin', f: 'Féminin', mf: 'Masculin ou féminin' }, cefrError: 'Impossible de lire les niveaux CECR', retry: 'Réessayer' },
+  zh: { ...baseCoreMessages.zh, gender: '名词性别', genders: { m: '阳性', f: '阴性', mf: '阴阳同形' }, cefrError: '无法读取 CEFR 分级', retry: '重试' },
+} as const;
 type CoreText = (typeof coreMessages)[keyof typeof coreMessages];
 
 export function digestLabel(entry: DigestEntry | undefined, missing: string) {
   if (!entry) return missing;
   const meaning = digestMeaning(entry) || missing;
-  return entry.core ? `${entry.core.pos} · ${meaning}` : meaning;
+  return entry.core ? `${entry.core.pos}${entry.core.gender ? ` · ${entry.core.gender}` : ''} · ${meaning}` : meaning;
 }
 
 function CoreFieldSource({ source, label, text }: {
@@ -42,10 +50,14 @@ function CoreFieldSource({ source, label, text }: {
   </dl></section>;
 }
 
-export function CoreSenseContent({ sense, text }: { readonly sense: CoreSense; readonly text: CoreText }) {
+export function CoreSenseContent({ sense, text, runtime }: { readonly sense: CoreSense; readonly text: CoreText; readonly runtime?: RuntimeAdapter }) {
+  const queries = useMemo(() => [{ key: sense.headword, sense: { sense_id: sense.sense_id, pos: sense.pos, source_headword: sense.source_headword } }], [sense]);
+  const cefr = useCefr(runtime, queries);
   const pos = `${text.pos[sense.pos]} (${sense.pos})`;
   return <section className="core-sense" aria-label={pos} data-sense-id={sense.sense_id} data-pos={sense.pos}>
-    <h4>{pos}</h4><dl>
+    <h4>{pos} <CefrBadge level={cefr.lookup?.entries[0]?.level} /></h4>
+    {cefr.error && <p role="alert">{text.cefrError}: {cefr.error} <button onClick={cefr.retry}>{text.retry}</button></p>}<dl>
+      {sense.gender && <><dt>{text.gender}</dt><dd>{text.genders[sense.gender]} ({sense.gender})</dd></>}
       <dt>{text.definitionFr}</dt><dd lang="fr">{sense.definition_fr}</dd>
       <dt>{text.ipa}</dt><dd lang="und">{sense.ipa}</dd>
       <dt>{text.meaningEn}</dt><dd lang="en">{sense.meaning_en}</dd>
@@ -56,6 +68,7 @@ export function CoreSenseContent({ sense, text }: { readonly sense: CoreSense; r
     <details className="core-sources"><summary>{text.sources}</summary>
       {([['definition_fr', text.definitionFr], ['ipa', text.ipa], ['meaning_en', text.meaningEn], ['meaning_zh', text.meaningZh]] as const)
         .map(([field, label]) => <CoreFieldSource key={field} source={sense.field_sources[field]} label={label} text={text} />)}
+      {sense.field_sources.gender && <CoreFieldSource source={sense.field_sources.gender} label={text.gender} text={text} />}
     </details>
   </section>;
 }

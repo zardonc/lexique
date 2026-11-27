@@ -112,3 +112,4 @@ fn read_entries(connection: &Connection, key: &str) -> Result<Vec<Entry>, Dictio
     })
     .collect()
 }
+pub mod cefr;

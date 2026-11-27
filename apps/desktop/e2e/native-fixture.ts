@@ -82,6 +82,9 @@ class NativeFixture {
     return null;
   }
   private lookupReply(command: string, args?: Record<string, unknown>) {
+    if (command === 'cefr_settings') return { row_count: null };
+    if (command === 'cefr_lookup') return { imported: false, entries: (args?.queries as { key: string; sense: { sense_id: string } | null }[])
+      .map((query) => ({ key: query.key, sense_id: query.sense?.sense_id ?? null, level: null })) };
     if (command === 'conjugation_lookup') return { query: args?.key, tables: [] };
     if (command === 'frequency_lookup') return { source: { title: 'Lexique 3.83', version: '3.83', attribution: 'Boris New; Christophe Pallier',
       license: 'CC BY-SA 4.0', source_url: 'https://www.lexique.org/databases/Lexique383/Lexique383.tsv', license_url: 'https://creativecommons.org/licenses/by-sa/4.0/' },
