@@ -1043,6 +1043,6 @@ Whole-machine offline execution, other-platform native flows, learner acceptance
 
 源码 `14212a3d16e06758caf38b7d6bd9af4b5ee10020` 的 Windows x64 新便携包通过三批实际原生查找／保存／重开；审查后的 FR／IPA／EN／ZH 与用途、出处均逐组核对，注记没有纳入义项。另从已关闭的 `core-159-v1`／schema 20 数据目录升级到 schema 21，旧 `être`／`lâche` 笔记、摘要、例句、FSRS 和现有音频保持，新增终批首尾词成功保存。四场景保留 60 秒硬限，外部 WebView 请求与遗留 host／worker／helper 均为零。
 
-实际 SQLite 为 **18,894,848 字节**，现有 20,000,000 字节上限保持；原始输入 188,036,913 字节，随包材料 188,097,811 字节，不含报告的核心安装贡献 206,992,659 字节，完整核心目录 207,619,275 字节，便携包总安装体积 277,304,539 字节，ZIP 50,515,371 字节。二进制／数据库／ZIP 摘要、命令、截图、检查与原始证据位置见[综合记录](evidence/issues-160-162/README.md)及[验证收据](evidence/issues-160-162/verification.json)。
+实际 SQLite 为 **18,894,848 字节**，现有 20,000,000 字节上限保持；原始输入 188,037,047 字节，随包材料 188,097,945 字节，不含报告的核心安装贡献 206,992,793 字节，完整核心目录 207,619,409 字节，便携包总安装体积 277,304,673 字节，ZIP 50,515,415 字节。二进制／数据库／ZIP 摘要、命令、截图、检查与原始证据位置见[综合记录](evidence/issues-160-162/README.md)、[验证收据](evidence/issues-160-162/verification.json)及[当前交付收据](evidence/issues-160-162/delivery-verification.json)。
 
 学习者验收、其他平台原生、干净机器／整机离线与正式发行未运行；CEFR 未知。#78 保持开放，这些 Windows 开发构件检查不替代剩余发行门槛。

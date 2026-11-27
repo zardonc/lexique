@@ -2,10 +2,7 @@
   "status": "passed",
   "content_version": "core-162-v1",
   "application_source": "14212a3d16e06758caf38b7d6bd9af4b5ee10020",
-  "test_driver": {
-    "base": "5affa269f0ffe358ffd16597fbdb5d1b55fa248c",
-    "working_diff": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\review-220-fixes\\logic.patch"
-  },
+  "delivery_source": "54d45691d754a54a3452ea06d8d39770ed073511",
   "binary_sha256": "36506f2508b233e24a4961560a20aefed1a2ff0bd3e1944da5624e03f07438b2",
   "sqlite_sha256": "d81e1acda7a0575271ae86968d20aa00510d8844a401a2499acb915e1ee78603",
   "measurements": {
@@ -83,6 +80,5 @@
     "docs": "passed",
     "reproduction": "5/5 passed"
   },
-  "execution_note": "Native fixture SQLite readback required the verified Python directory first on PATH. The prior Windows Store alias attempt did not complete assertions; its log remains in target/review-220-fixes/native-162.log.",
   "evidence_root": "C:\\Users\\inthe\\.t3\\worktrees\\lexique\\codex-d2-content-160-16-19fe5709109038c1\\target\\review-220-fixes"
 }
