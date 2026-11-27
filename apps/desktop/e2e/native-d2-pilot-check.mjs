@@ -597,7 +597,7 @@ async function lifecycle() {
   else if (scenario === 'corrupt') { await chmod(coreFile, 0o666); await writeFile(coreFile, 'Synthetic invalid isolated core resource'); }
   else { await chmod(coreFile, 0o666); fixtureSql(destination, `
 c.close(); resource=sqlite3.connect(p['resource'])
-resource.execute("UPDATE metadata SET value='2' WHERE key='format_version'")
+resource.execute("UPDATE metadata SET value='3' WHERE key='format_version'")
 resource.commit(); resource.close()
 print(json.dumps(True))`, { resource: coreFile }, true); }
   await start();

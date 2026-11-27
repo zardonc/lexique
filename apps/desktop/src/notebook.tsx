@@ -4,6 +4,7 @@ import { GrammarImport } from './grammar-import';
 import { FrequencyBadge, FrequencyState, useFrequency } from './frequency';
 import type { RuntimeAdapter } from './platform/runtime';
 import { digestMeaning, errorMessage, sortSchema } from './platform/vocabulary';
+import { CefrBadge, CefrState, cefrRecordLevel, digestCefrQueries, useCefr } from './cefr';
 import type { VocabularyRecord, VocabularySort } from './platform/vocabulary';
 import type { NotebookText } from './notebook-content';
 import type { BatchReview } from './use-batch-review';
@@ -103,14 +104,16 @@ function visiblePage(page: number, capacity: number, records: readonly ReviewRec
 
 function recordTitle(record: ReviewRecord) { return 'title' in record ? record.title : record.headword; }
 
-function RecordContent({ record, frequency, text }: {
+function RecordContent({ record, frequency, text, cefr }: {
   readonly record: ReviewRecord; readonly frequency: ReturnType<typeof useFrequency>; readonly text: NotebookText;
+  readonly cefr: ReturnType<typeof useCefr>;
 }) {
   if ('title' in record) return <><strong>{record.title}</strong><span className="note-excerpt">{record.body}</span></>;
   return <><span className="headword-line"><strong lang="fr">{record.headword}</strong>
-    <FrequencyBadge entry={frequency.lookup?.entries.find((entry) => entry.key === record.headword)} text={text.frequency} /></span>
+    <FrequencyBadge entry={frequency.lookup?.entries.find((entry) => entry.key === record.headword)} text={text.frequency} />
+    <CefrBadge level={cefrRecordLevel(record.headword, cefr.lookup)} /></span>
     <span>{record.digest.map((entry, index) => {
-      const meaning = digestMeaning(entry) || text.missing;
+      const meaning = `${entry.core?.gender ? `${entry.core.gender} · ` : ''}${digestMeaning(entry) || text.missing}`;
       return <Fragment key={index}>{index > 0 && ' · '}{entry.core ? <span lang="zh">{meaning}</span> : meaning}</Fragment>;
     })}</span>{record.import_source && <span>{text.interchange.external}: {record.import_source.filename}</span>}
     {!record.reference && <span>{text.interchange.missing}</span>}<span className="note-excerpt">{record.notes}</span></>;
@@ -175,7 +178,8 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch, categorie
   const records = useMemo(() => filtered?.slice(currentPage * capacity, (currentPage + 1) * capacity) ?? [], [filtered, currentPage, capacity]);
   const words = (filtered ?? []).filter((record): record is VocabularyRecord => 'headword' in record);
   const keys = useMemo(() => records.flatMap((record) => 'headword' in record ? [record.headword] : []), [records]);
-  const frequencies = useFrequency(runtime, keys);
+  const cefrQueries = useMemo(() => records.flatMap((record) => 'headword' in record ? digestCefrQueries(record.headword, record.digest) : []), [records]);
+  const frequencies = useFrequency(runtime, keys), cefr = useCefr(runtime, cefrQueries);
   function reset() { setSelected([]); setPage(0); }
   useActiveCategory(filter, categories.categories, () => { setFilter('all'); reset(); });
   if (list.records === null) return <p role="status">{text.preview}</p>;
@@ -190,7 +194,7 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch, categorie
     <NotebookExport runtime={runtime} text={text.exportText} grammarText={text.grammarExportText} kind={kind} sort={list.sort} query={list.query}
       category={filter} disabled={list.busy} loaded={!!list.records} />
     <ReadingState list={{ ...list, records: filtered }} text={text} kind={kind} />
-    {!!words.length && <FrequencyState state={frequencies} text={text.frequency} />}
+    {!!words.length && <><FrequencyState state={frequencies} text={text.frequency} /><CefrState error={cefr.error} retry={cefr.retry} text={text.core} /></>}
     <PageControls page={currentPage} count={filtered?.length ?? 0} capacity={capacity} text={text}
       changePage={(value) => { setSelected([]); setPage(value); }} changeCapacity={(value) => { reset(); setCapacity(value); }} />
     <SelectAll records={records} selected={selected} setSelected={setSelected} text={text} />
@@ -200,7 +204,7 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch, categorie
     {!list.error && <ul className="vocabulary-list">{records.map((record) => <li key={record.id}>
       <label><input type="checkbox" aria-label={`${text.select} ${recordTitle(record)}`} checked={selected.includes(record.id)}
         onChange={(event) => { const checked = event.target.checked; setSelected((current) => toggleSelection(current, record.id, checked)); }} /></label>
-      <button onClick={() => onOpen(record)}><RecordContent record={record} frequency={frequencies} text={text} /></button>
+      <button onClick={() => onOpen(record)}><RecordContent record={record} frequency={frequencies} text={text} cefr={cefr} /></button>
     </li>)}</ul>}</div>
   </section>;
 }

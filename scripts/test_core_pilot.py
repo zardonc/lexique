@@ -17,6 +17,22 @@ FIELD_NAMES = {"french_definition": "definition_fr", "ipa": "ipa", "english": "m
 
 
 class CorePilotPreparationTests(unittest.TestCase):
+    def test_gender_evidence_keeps_pending_semantic_decisions_out_of_the_resource(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "prepared"
+            report = prepare(output)
+            self.assertEqual(report["format_version"], 2)
+            with closing(sqlite3.connect(output / "core.sqlite3")) as connection:
+                senses = [json.loads(row[0]) for row in connection.execute("SELECT payload FROM senses")]
+            self.assertEqual(sum("gender" in sense for sense in senses), 1940)
+            self.assertTrue(all(sense["pos"] == "NOM" and "gender" in sense["field_sources"] for sense in senses if "gender" in sense))
+            self.assertTrue(all("cefr" not in sense for sense in senses))
+            child = next(sense for sense in senses if sense["headword"] == "enfant")
+            self.assertNotIn("gender", child)
+            evidence = json.loads((output / "noun-genders.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(evidence["rows"]), 2134)
+            self.assertEqual(sum(row["queue"] != "auto_accepted" for row in evidence["rows"]), 187)
+
     def test_batches_120_through_162_match_the_frozen_membership_in_the_produced_core(self):
         with (RESOURCE / "scope-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
             scope = list(csv.DictReader(handle))

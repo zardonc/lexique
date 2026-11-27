@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-cefr-lookup"
+description = "Enables the cefr_lookup command without any pre-configured scope."
+commands.allow = ["cefr_lookup"]
+
+[[permission]]
+identifier = "deny-cefr-lookup"
+description = "Denies the cefr_lookup command without any pre-configured scope."
+commands.deny = ["cefr_lookup"]

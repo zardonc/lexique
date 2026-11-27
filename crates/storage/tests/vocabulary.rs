@@ -112,6 +112,46 @@ fn core_snapshot() -> Snapshot {
 }
 
 #[test]
+fn noun_gender_survives_save_restore_and_replay_without_backfilling_older_digests() {
+    use lexique_core::dictionary::NounGender;
+    use lexique_storage::{
+        export_learning_snapshot, import_learning_snapshot, read_learning_snapshot,
+    };
+    for gender in [None, Some(NounGender::Mf)] {
+        let mut connection = Connection::open_in_memory().unwrap();
+        initialize(&connection).unwrap();
+        let mut snapshot = core_snapshot();
+        let core = snapshot.digest[0].core.as_mut().unwrap();
+        core.gender = gender;
+        core.field_sources.gender = gender.map(|_| core.field_sources.ipa.clone());
+        let request = create("gender-saved", "coeur", "personal note");
+        let saved = save(&mut connection, &request, Some(snapshot))
+            .unwrap()
+            .record;
+        let exported = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
+        let bytes = serde_json::to_vec(&exported).unwrap();
+        let json: serde_json::Value = serde_json::from_slice(&bytes).unwrap();
+        let digest = &json["records"][0]["digest"][0]["core"];
+        assert_eq!(digest.get("gender").is_some(), gender.is_some());
+        assert!(digest.get("cefr").is_none());
+        let decoded = read_learning_snapshot(bytes.as_slice(), 1_800_000_000).unwrap();
+        let mut restored = Connection::open_in_memory().unwrap();
+        initialize(&restored).unwrap();
+        import_learning_snapshot(&mut restored, &decoded, 1_800_000_000).unwrap();
+        let replay = save(&mut restored, &request, None).unwrap();
+        assert_eq!(replay.outcome, "replayed");
+        assert_eq!(replay.record.digest, saved.digest);
+    }
+    let mut invalid = core_snapshot();
+    let core = invalid.digest[0].core.as_mut().unwrap();
+    core.gender = Some(NounGender::M);
+    assert!(core.validate().is_err());
+    core.field_sources.gender = Some(core.field_sources.ipa.clone());
+    core.pos = "VER".into();
+    assert!(core.validate().is_err());
+}
+
+#[test]
 fn core_saves_validate_frozen_identities_before_creation_and_preserve_retry_branches() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();

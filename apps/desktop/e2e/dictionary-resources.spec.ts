@@ -57,7 +57,8 @@ test('the directory shows nine categories, bundled notices, format limits and th
   await expect(core).toHaveAttribute('href', 'https://github.com/zardonc/lexique/tree/main/resources/core-pilot-79');
   await core.click();
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_resource_open').map((call) => call.args))).toEqual([{ id: 'builtin-core' }]);
-  await expect(directory).toContainText('4,075 组仍未完成');
+  await expect(directory).toContainText('4,062 个已审核');
+  await expect(directory).toContainText('25 个注记词性组');
   await directory.getByText('法语—中文', { exact: true }).click();
   await expect(directory).toContainText('Casio 数据的具体版次未确认');
   await expect(directory.getByText('StarDict', { exact: true })).toBeVisible();

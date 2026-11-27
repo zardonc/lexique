@@ -1,5 +1,47 @@
 # 骨架验证记录
 
+## CEFR 匹配、LF 证据与生词本修正
+
+2026-11-27，目录测试确认十四项及官方 FLELex URL；固定名词证据按 UTF-8／LF 输出与校验，
+兼容 Git 的 LF 检出。CEFR 按查询拼写、选定义项来源拼写、已核验别名的顺序逐项匹配，
+保留词性及同拼写歧义边界；无须合并不同拼写的等级。未保存的收藏摘要也接收运行时适配器。
+
+生词本按可见页汇总查询，遵循每次 200 项的现有 IPC 上限，失败只显示一条可重试提示；
+Rust 使用已有 BTreeMap 的词头范围检索。五项回归、LF 捕获回读及资源准备通过，
+工作区 Rust 262 项、原生目录／导入三项、完整相关浏览器 166 项通过。
+源因、命令与证据范围见[修正记录](evidence/cefr-bug-fixes-20261127.md)。
+
+## 自选 CEFR 与名词性别
+
+2026-11-27，隔离分支 `codex/cefr-option2-and-core-gender-pilot` 基于 `136c43f`。
+固定 `oldid` 词头补录覆盖全部 307 条需规范化行，坐标回读零失败；
+[复核表](evidence/noun-gender-residual-review.md)完整列出 187 条原始残差及七条新增例外。
+2,134 个名词中 1,940 条确定性性别进入资源，194 条待独立人工复核，值保持空缺。
+资源格式 2／`core-162-v1+gender-1` 保留 4,062 个义项、25 个注记，SQLite 为 21,143,552 字节。
+
+Rust 的可选性别与成对来源保持旧摘要读取兼容；新收藏、词典、生词本和卡片背面显示性别。
+CEFR 使用用户本机导入的 TT-Beacco 文件与随包 MIT 对齐规则；设置提供官方下载、替换、移出，
+严格校验后安装，失败保留原文件。学习记录、摘要、交换导出、备份及同步均不保存等级。
+未导入不显示等级占位，识义正面保持词头。决策见 [ADR 0012](adr/0012-user-imported-cefr-grading-overlay.md)。
+
+| 检查 | 结果与边界 |
+| --- | --- |
+| `uv run --offline --no-project python scripts/test_complete_core_genders.py` 与 `scripts/complete_core_genders.py --output target/core-gender-completion` | 三项回归通过；307 条固定词头回读通过，API 批次去重、修订编号、缺失响应与 LF 检出校验通过 |
+| Python `test_cefr_gender_pilot.py`、`test_core_pilot.py`、`test_package_portable.py` | 分别 7／19／16 项通过；覆盖 TSV／映射、资源内容／来源及便携包材料 |
+| `pnpm lint`、`pnpm typecheck`、`pnpm build` | 通过；前端构建保留现有大 chunk 提示 |
+| `pnpm rust:test:build` 后 `pnpm test:rust` | 通过；编译独立进行，执行保留硬 60 秒限制，含性别摘要兼容与 CEFR 解析／义项测试 |
+| `cargo check --locked --workspace`、`cargo test --locked --release -p lexique-desktop --lib --no-run` | 通过；Windows x64、固定工具链与 MSVC 环境 |
+| `node scripts/test-rust.mjs --desktop-lib cefr::tests:: --test-threads=1` | 一项通过；原生文件导入、拒绝无效替换、覆盖中断暂存、重新读取与移出 |
+| `node --test scripts/test-native-d2-fixtures.mjs` | 两项通过；使用 uv 管理的 Python |
+| `pnpm test:e2e`：`cefr-gender`、`core-pilot`、`core-contract`、`core-preservation`、`dictionary`、`dictionary-tabs`、`dictionary-resources`、`notebook`、`review`、`review-queue`、`selection`、`ocr`，`--workers=4` | 166 个适用用例在同次运行通过。含三语、缺省字段、未保存收藏、背面、提示隐藏、CEFR 失败显示、分页批量查询及替换／移出 |
+| `cargo fmt --all --check`、`scripts/check-docs.ps1 -RepositoryRoot .`、`git diff --check` | 通过；596 个文档、4,602 个本地链接，无问题 |
+
+完整命令输出保留在隔离工作树的 `target/`。原根工作树的既有修改保持原样；FLELex 文件与实际等级表
+未进入版本控制，没有改写学习数据。完整浏览器套件未运行，本次选择与变更相关的 12 个 spec。
+
+独立语义人工复核、原生 WebView2 设置／文件选择及显示流程、整机断网、其他平台和正式发行
+尚未验证。自动化文件测试与模拟 IPC 的浏览器检查不扩大上述证据范围。
+
 ## 语法交换最终审查修正（#212）
 
 单条语法 Markdown 保存选择器与 ZIP 共用已保存标题／交换身份的 Windows 安全命名规则，重名独立记录分别建议不同文件名。ZIP 写入生命周期、语法身份匹配及状态判定复用，格式位置诊断与原子提交语义保持；导出按钮移除常量可用性参数。新鲜 Windows x64 portable 的实际 Win32 文件名、语法 ZIP 往返、生词 CSV／Markdown／ZIP 检查通过；完整浏览器 488 项、后端 256 项、桌面库 167 项通过，两个既有子进程入口按用途忽略。准确测试源码、二进制、原生重试及证据归档见 [#212 审查验证](grammar-exchange-review-verification.md)。

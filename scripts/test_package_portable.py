@@ -45,7 +45,7 @@ class PortableTests(unittest.TestCase):
             "sqlite_sha256": hashlib.sha256(b"verified dictionary").hexdigest(),
         }).encode())
         core_materials = ("COPYING", "core_pilot.py", "coverage.json", "curated-inputs.json",
-                          "field-review.json", "input-checksums.json", "lexique-provenance.json",
+                          "field-review.json", "input-checksums.json", "lexique-provenance.json", "noun-genders.json",
                           "LEXIQUE-UPSTREAM-README.txt", "LICENSE-MIT", "MEMBERSHIP-NOTICES.txt",
                           "NOTICES.md", "README.md", "scope-manifest.csv",
                           "selected-source-context.json", "selected-source-excerpts.json", "LICENSE-FranceTerme.pdf")

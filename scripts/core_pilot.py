@@ -4,6 +4,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 from pathlib import Path
 import shutil
 import sqlite3
@@ -37,7 +38,7 @@ MATERIALS = (
     "COPYING", "curated-inputs.json", "field-review.json", "MEMBERSHIP-NOTICES.txt",
     "scope-manifest.csv", "selected-source-context.json", "selected-source-excerpts.json",
     "LEXIQUE-UPSTREAM-README.txt", "lexique-provenance.json", "README.md", "NOTICES.md",
-    "LICENSE-FranceTerme.pdf",
+    "LICENSE-FranceTerme.pdf", "noun-genders.json",
 )
 
 
@@ -110,6 +111,12 @@ def load_inputs(source_dir):
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
         text(decision.get("decision"), "annotation exception decision")
     groups = curated.get("groups", [])
+    genders = read_json(source_dir / "noun-genders.json")
+    if genders.get("schema") != "lexique-core-noun-genders-1" or genders.get("content_license") != "CC-BY-SA-4.0":
+        raise ValueError("Invalid noun-gender evidence schema or licence")
+    gender_rows = {row["sense_id"]: row for row in genders["rows"]}
+    if len(gender_rows) != 2134 or len(gender_rows) != len(genders["rows"]):
+        raise ValueError("Noun-gender evidence must cover exactly 2,134 admitted noun senses")
     if [group.get("frozen_row") for group in groups] != list(ROWS):
         raise ValueError("Admitted frozen scope rows changed")
     sources = {source["id"]: source for source in curated["sources"]}
@@ -220,7 +227,26 @@ def load_inputs(source_dir):
                 if source.get("source_frame") == "fixed_licensed_dataset_capture":
                     provenance[target]["attribution"] += f"; dataset credits: {source['history_url']}"
             payload["field_sources"] = provenance
+            if group["lexique_cgram"] == "NOM":
+                gender = gender_rows.pop(identity)
+                gender_source = sources[gender["source_id"]]
+                if (gender["frozen_row"], gender["headword"], gender["revid"], gender["fixed_url"]) != (
+                    group["frozen_row"], group["headword"], gender_source["revid"], gender_source["fixed_url"]
+                ) or gender["source_id"] not in {sense["fields"][name]["source_id"] for name in ("ipa", "french_definition")}:
+                    raise ValueError("Noun gender differs from its frozen identity or fixed source")
+                if gender["review_status"] not in ("deterministic_agreement", "pending_independent_human_review"):
+                    raise ValueError("Invalid noun-gender review status")
+                if gender["gender"] is not None:
+                    markers = set(re.findall(r"\{\{\s*(m|f|mf)(?:\|[^}]*)?\}\}", gender["raw_header"]))
+                    if gender["review_status"] != "deterministic_agreement" or markers != {gender["gender"]} or gender["gender"] not in ("m", "f"):
+                        raise ValueError("Unreviewed or unsupported noun gender cannot enter the core resource")
+                    payload["gender"] = gender["gender"]
+                    provenance["gender"] = {**provenance["ipa"], "source_url": gender["fixed_url"],
+                        "span": f"Fixed wikitext line {gender['line_1_based']}; exact header in noun-genders.json",
+                        "modification": "Extracted explicit grammatical gender for the selected noun sense; Lexique 3.83 cross-check."}
             selected.append((group["frozen_row"], index, group["headword"], payload))
+    if gender_rows:
+        raise ValueError("Noun-gender evidence includes unbound senses")
     if len(selected) != len(ROWS) or len(seen) != len(ROWS):
         raise ValueError("Admitted selected-sense scope changed")
     unresolved = reviewed.get("unresolved_fields", [])
@@ -275,12 +301,12 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
     project_license = Path(project_license)
     if not project_license.is_file():
         raise ValueError("Missing separate MIT project/converter licence")
-    version = text(curated["content_version"], "content version", 200)
+    version = text(curated["content_version"], "content version", 200) + "+gender-1"
     source = {"title": "Lexique FR–EN–ZH", "version": version,
               "attribution": "Wiktionnaire/Wiktionary and Wikisource contributors; Théodore Soulice (1836); Académie française (DAF8, 1935); Ministère de la Culture / FranceTerme (CULT430, 2005-01-18, Licence Ouverte 1.0); selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
               "license": "CC BY-SA 4.0", "source_url": "https://github.com/zardonc/lexique/tree/main/resources/core-pilot-79",
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
-    metadata = {"format_version": "1", "content_version": version, "source": compact(source),
+    metadata = {"format_version": "2", "content_version": version, "source": compact(source),
                 "scope_denominator_groups": "4087", "scope_denominator_headwords": "3773"}
     selected_rows = {row[0] for row in selected}
     complete_rows = selected_rows - scope_gaps.keys()
@@ -360,7 +386,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         raw_inputs_bytes = sum((source_dir / name).stat().st_size for name in (*MATERIALS, "input-checksums.json"))
         bundled_materials_bytes = sum(file.stat().st_size for file in staged.iterdir() if file.name != "core.sqlite3")
         read_only_sqlite_bytes = database.stat().st_size
-        report = {"format_version": 1, "content_version": version, "sqlite_sha256": digest(database),
+        report = {"format_version": 2, "content_version": version, "sqlite_sha256": digest(database),
                   "sqlite_bytes": read_only_sqlite_bytes, "inputs": inputs,
                   "admission": {"independent_field_review": "passed", "produced_resource_self_check": "passed",
                                 "everyday_sense_review": "incomplete" if scope_gaps else "passed",
