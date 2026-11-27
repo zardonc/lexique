@@ -1,0 +1,377 @@
+{
+  "status": "partial_D2_acceptance",
+  "application_source": "c473ba3343d24ccc3dfe4ad94a611538db2b2441",
+  "packaging_and_native_check_source": "cfd2869ccb56df4ae51e4502aa41aa4d3757bc9d",
+  "platform": "Windows x64",
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target",
+  "content_version": "core-162-v1+gender-2",
+  "resource_format": 2,
+  "sqlite_sha256": "9a65546c1a19107afe0763d5fd57bb046eda3e2f3071208d661506b220dbf55d",
+  "measurements": {
+    "maximum_sense_json_bytes": 6754,
+    "maximum_field_unicode_scalars": 566,
+    "raw_inputs_bytes": 189907650,
+    "read_only_sqlite_bytes": 21286912,
+    "bundled_materials_bytes": 189973820,
+    "installed_core_bytes_excluding_report": 211260732
+  },
+  "limits": {
+    "query_utf8_bytes": 512,
+    "matching_senses": 200,
+    "response_bytes": 4194304,
+    "resource_bytes": 25165824,
+    "field_unicode_scalars": 20000
+  },
+  "portable": {
+    "archive": "target\\issue-164\\lmy-package\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 50918521,
+    "installed_bytes": 281851359,
+    "core_installed_bytes": 211887450,
+    "sha256": "f3e78aa0fd09b59c058e6437784b3080ebe91e659437f77f655608c5bbadbfbd",
+    "verified_files": 188
+  },
+  "admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 4062,
+    "approved_specialist_exception_groups": 3,
+    "remaining_unaccepted_groups": 25,
+    "annotation_exception_groups": 25,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 4059,
+    "complete_senses": 4062,
+    "complete_fields": 16248,
+    "remaining_groups": 28
+  },
+  "native": {
+    "batch162": {
+      "checks": [
+        {
+          "check": "Batch #162: 36 admitted groups / 144 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 36 headwords saved and reopened with unchanged provenance and learning state",
+          "status": "passed"
+        }
+      ],
+      "metadata": {
+        "startedAt": "2026-11-27T22:35:02.686Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
+        "command": [
+          "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+          "batch",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
+          "../../resources/core-pilot-79/curated-inputs.json",
+          "../../target/issue-164/lmy-batch162-final",
+          "162"
+        ],
+        "hardTimeoutSeconds": 60
+      },
+      "network_boundary": "External WebView routes denied after native startup; whole-machine network denial unrun",
+      "external_requests": 0,
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      },
+      "successful_dictionary_queries": 37,
+      "maximum_lookup_round_trip_ms": 50.86840000000029,
+      "maximum_lookup_response_bytes": 6046
+    },
+    "missing": {
+      "checks": [
+        {
+          "rejected": "dictionary_lookup",
+          "error": {
+            "code": "missing",
+            "message": "Could not read resource \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-missing\\dictionary\\core-pilot-79\\core.sqlite3: 系统找不到指定的文件。 (os error 2)"
+          }
+        },
+        {
+          "rejected": "vocabulary_save",
+          "error": {
+            "message": "missing: Could not read resource \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-missing\\dictionary\\core-pilot-79\\core.sqlite3: 系统找不到指定的文件。 (os error 2)"
+          }
+        },
+        {
+          "check": "missing resource retains core and legacy records, digest indices, source associations, history, operations and current/protected audio",
+          "status": "passed"
+        }
+      ],
+      "metadata": {
+        "startedAt": "2026-11-27T22:35:48.683Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
+        "command": [
+          "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+          "missing",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
+          "../../resources/core-pilot-79/curated-inputs.json",
+          "../../target/issue-164/lmy-missing",
+          "../../target/d2-review-selection.json"
+        ],
+        "hardTimeoutSeconds": 60
+      },
+      "network_boundary": "External WebView routes denied after native startup; whole-machine network denial unrun",
+      "external_requests": 0,
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      },
+      "successful_dictionary_queries": 4,
+      "maximum_lookup_round_trip_ms": 37.05099999999993,
+      "maximum_lookup_response_bytes": 11988
+    },
+    "corrupt": {
+      "checks": [
+        {
+          "rejected": "dictionary_lookup",
+          "error": {
+            "code": "corrupt",
+            "message": "Resource checksum mismatch: \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-corrupt\\dictionary\\core-pilot-79\\core.sqlite3"
+          }
+        },
+        {
+          "rejected": "vocabulary_save",
+          "error": {
+            "message": "corrupt: Resource checksum mismatch: \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-corrupt\\dictionary\\core-pilot-79\\core.sqlite3"
+          }
+        },
+        {
+          "check": "corrupt resource retains core and legacy records, digest indices, source associations, history, operations and current/protected audio",
+          "status": "passed"
+        }
+      ],
+      "metadata": {
+        "startedAt": "2026-11-27T22:36:55.266Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
+        "command": [
+          "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+          "corrupt",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
+          "../../resources/core-pilot-79/curated-inputs.json",
+          "../../target/issue-164/lmy-corrupt",
+          "../../target/d2-review-selection.json"
+        ],
+        "hardTimeoutSeconds": 60
+      },
+      "network_boundary": "External WebView routes denied after native startup; whole-machine network denial unrun",
+      "external_requests": 0,
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      },
+      "successful_dictionary_queries": 4,
+      "maximum_lookup_round_trip_ms": 41.82600000000002,
+      "maximum_lookup_response_bytes": 11988
+    },
+    "final-delivery": {
+      "checks": [
+        {
+          "check": "Exact learner packet, long content, native synthetic TSV import/restart/rejection/replacement/removal, frozen saved digests",
+          "status": "passed",
+          "selectedSenseIds": [
+            "etre-aux-compound-tense",
+            "etre-noun-living-being",
+            "etre-verb-copula",
+            "avoir-aux-compound-tense",
+            "avoir-verb-possession",
+            "faire-verb-do",
+            "le-definite-article",
+            "le-personal-direct-object",
+            "de-preposition-origin",
+            "qui-interrogative-person",
+            "qui-relative-subject",
+            "mon-possessive-adjective-speaker",
+            "bien-adjective-decent-behaviour",
+            "bien-adv-manner",
+            "bien-noun-possession",
+            "b91-537-école-nom-selected",
+            "b86-264-adj",
+            "b86-265-nom",
+            "pas-negative-adverb",
+            "pas-noun-footstep",
+            "b85-230-child",
+            "b86-253-nom",
+            "b103-1137-acteur-nom-selected",
+            "b97-822-nom-selected",
+            "b109-1450-lâche-adj-selected",
+            "b110-1451-lâche-nom-selected",
+            "b115-1750-tien-nom-selected",
+            "b116-1751-tien-pro-pos-selected",
+            "je-personal-subject",
+            "ne-negative-adverb",
+            "et-additive-coordination",
+            "un-cardinal-one",
+            "un-indefinite-article",
+            "un-indefinite-pronoun",
+            "ca-informal-demonstrative",
+            "tout-adjective-entire",
+            "tout-indefinite-adjective-distributive",
+            "ce-demonstrative-determiner",
+            "bon-interjection-acknowledgement",
+            "b85-243-which",
+            "b86-261-pro-pos",
+            "b113-1610-mlle-nom-selected",
+            "b102-1057-mme-nom-selected",
+            "b107-1334-planète-nom-selected"
+          ]
+        }
+      ],
+      "metadata": {
+        "startedAt": "2026-11-27T22:33:01.702Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
+        "command": [
+          "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
+          "delivery",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
+          "../../resources/core-pilot-79/curated-inputs.json",
+          "../../target/issue-164/lmy-delivery-final",
+          "../../target/d2-review-selection.json"
+        ],
+        "hardTimeoutSeconds": 60
+      },
+      "network_boundary": "External WebView routes denied after native startup; whole-machine network denial unrun",
+      "external_requests": 0,
+      "cleanup": {
+        "hosts": [],
+        "workers": [],
+        "helpers": 0
+      },
+      "successful_dictionary_queries": 33,
+      "maximum_lookup_round_trip_ms": 46.3421000000003,
+      "maximum_lookup_response_bytes": 22023
+    }
+  },
+  "learner_packet": {
+    "status": "pending_real_learner_review",
+    "senses": 44,
+    "headwords": 30,
+    "pos_classes": [
+      "ADJ",
+      "ADJ:dem",
+      "ADJ:ind",
+      "ADJ:int",
+      "ADJ:num",
+      "ADJ:pos",
+      "ADV",
+      "ART:def",
+      "ART:ind",
+      "AUX",
+      "CON",
+      "NOM",
+      "ONO",
+      "PRE",
+      "PRO:dem",
+      "PRO:ind",
+      "PRO:int",
+      "PRO:per",
+      "PRO:pos",
+      "PRO:rel",
+      "VER"
+    ],
+    "sense_ids": [
+      "etre-aux-compound-tense",
+      "etre-noun-living-being",
+      "etre-verb-copula",
+      "avoir-aux-compound-tense",
+      "avoir-verb-possession",
+      "faire-verb-do",
+      "le-definite-article",
+      "le-personal-direct-object",
+      "de-preposition-origin",
+      "qui-interrogative-person",
+      "qui-relative-subject",
+      "mon-possessive-adjective-speaker",
+      "bien-adjective-decent-behaviour",
+      "bien-adv-manner",
+      "bien-noun-possession",
+      "b91-537-école-nom-selected",
+      "b86-264-adj",
+      "b86-265-nom",
+      "pas-negative-adverb",
+      "pas-noun-footstep",
+      "b85-230-child",
+      "b86-253-nom",
+      "b103-1137-acteur-nom-selected",
+      "b97-822-nom-selected",
+      "b109-1450-lâche-adj-selected",
+      "b110-1451-lâche-nom-selected",
+      "b115-1750-tien-nom-selected",
+      "b116-1751-tien-pro-pos-selected",
+      "je-personal-subject",
+      "ne-negative-adverb",
+      "et-additive-coordination",
+      "un-cardinal-one",
+      "un-indefinite-article",
+      "un-indefinite-pronoun",
+      "ca-informal-demonstrative",
+      "tout-adjective-entire",
+      "tout-indefinite-adjective-distributive",
+      "ce-demonstrative-determiner",
+      "bon-interjection-acknowledgement",
+      "b85-243-which",
+      "b86-261-pro-pos",
+      "b113-1610-mlle-nom-selected",
+      "b102-1057-mme-nom-selected",
+      "b107-1334-planète-nom-selected"
+    ]
+  },
+  "noun_gender": {
+    "nouns": 2134,
+    "admitted": 2133,
+    "pending_independent_human_review": 0,
+    "fixed_header_captures": 307,
+    "reviewer": "LMY",
+    "reviewed_on": "2026-11-27",
+    "policy": "lexique_then_candidate_else_omit",
+    "reviewed_rows": 194,
+    "new_admissions": {
+      "m": 92,
+      "f": 41,
+      "mf": 60
+    },
+    "omitted": [
+      {
+        "frozen_row": 253,
+        "headword": "gens",
+        "reason": "Lexique and Candidate are null"
+      }
+    ]
+  },
+  "checks": {
+    "portable_tests": "16 passed",
+    "core_preparation_tests": "20 passed",
+    "native_directory_tests": "2 passed",
+    "lint": "passed",
+    "resource_budget_regression": "passed",
+    "native_scenarios": "4 passed",
+    "policy_capture_tests": "4 passed",
+    "shipped_converter_isolation": "passed",
+    "existing_4062_senses_fields_and_sources": "unchanged",
+    "rust_precompile_and_tests": "passed; hard 60-second execution limit",
+    "typecheck": "passed",
+    "rustfmt": "passed",
+    "windows_x64_release_build": "passed"
+  },
+  "limits_of_evidence": [
+    "External WebView requests denied after startup, not whole-machine network denial.",
+    "Native file-input injection uses synthetic TSV data, not the Win32 picker or an official FLELex download.",
+    "Current candidate old-binary/resource upgrade not rerun; prior core-162-v1 upgrade evidence remains separate.",
+    "Full/Lite dictionary resources share the existing packaging boundary; formal full/Lite speech/download and other-platform gates remain unrun.",
+    "Real learner feedback and acceptance remain pending; LMY noun decisions are complete."
+  ],
+  "previous_candidate_receipt": "verification-gender-1.json"
+}
