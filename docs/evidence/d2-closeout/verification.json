@@ -1,19 +1,19 @@
 {
   "status": "partial_D2_acceptance",
-  "application_source": "e1ed65d470a34b05ca8b938cd5cf41a9f1f3d3e0",
-  "packaging_and_native_check_source": "ffe7d749ace4babc01acf89a75aa5f66d3694987",
+  "application_source": "c473ba3343d24ccc3dfe4ad94a611538db2b2441",
+  "packaging_and_native_check_source": "cfd2869ccb56df4ae51e4502aa41aa4d3757bc9d",
   "platform": "Windows x64",
   "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target",
-  "content_version": "core-162-v1+gender-1",
+  "content_version": "core-162-v1+gender-2",
   "resource_format": 2,
-  "sqlite_sha256": "80f9fe5f482014856cc4f486d6128597d5e56a0846199024f7d05eaaf3bd56eb",
+  "sqlite_sha256": "9a65546c1a19107afe0763d5fd57bb046eda3e2f3071208d661506b220dbf55d",
   "measurements": {
     "maximum_sense_json_bytes": 6754,
     "maximum_field_unicode_scalars": 566,
-    "raw_inputs_bytes": 189910716,
-    "read_only_sqlite_bytes": 21143552,
-    "bundled_materials_bytes": 189973862,
-    "installed_core_bytes_excluding_report": 211117414
+    "raw_inputs_bytes": 189907650,
+    "read_only_sqlite_bytes": 21286912,
+    "bundled_materials_bytes": 189973820,
+    "installed_core_bytes_excluding_report": 211260732
   },
   "limits": {
     "query_utf8_bytes": 512,
@@ -23,11 +23,11 @@
     "field_unicode_scalars": 20000
   },
   "portable": {
-    "archive": "target\\issue-164\\final-package\\Lexique-0.1.0-windows-x64-portable.zip",
-    "bytes": 50890522,
-    "installed_bytes": 281708041,
-    "core_installed_bytes": 211744132,
-    "sha256": "5f4d672e4a2f3aed9eeebdca926899d29021c4c99670ee9e72059a2f7c8ee5bc",
+    "archive": "target\\issue-164\\lmy-package\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 50918521,
+    "installed_bytes": 281851359,
+    "core_installed_bytes": 211887450,
+    "sha256": "f3e78aa0fd09b59c058e6437784b3080ebe91e659437f77f655608c5bbadbfbd",
     "verified_files": 188
   },
   "admission": {
@@ -54,17 +54,17 @@
         }
       ],
       "metadata": {
-        "startedAt": "2026-11-27T21:50:18.466Z",
-        "binarySha256": "a74b7082dbfc8315481f372a17d154dce1e92a05ebbc5b2f595a9cf350776b33",
+        "startedAt": "2026-11-27T22:35:02.686Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
         "command": [
           "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
           "batch",
-          "../../target/issue-164/cefr-delivery/Lexique-0.1.0-windows-x64-portable",
-          "../../target/issue-164/cefr-delivery/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
-          "../../target/release/conjugation",
-          "../../target/release/frequency",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
           "../../resources/core-pilot-79/curated-inputs.json",
-          "../../target/issue-164/batch162",
+          "../../target/issue-164/lmy-batch162-final",
           "162"
         ],
         "hardTimeoutSeconds": 60
@@ -77,7 +77,7 @@
         "helpers": 0
       },
       "successful_dictionary_queries": 37,
-      "maximum_lookup_round_trip_ms": 47.52190000000019,
+      "maximum_lookup_round_trip_ms": 50.86840000000029,
       "maximum_lookup_response_bytes": 6046
     },
     "missing": {
@@ -86,13 +86,13 @@
           "rejected": "dictionary_lookup",
           "error": {
             "code": "missing",
-            "message": "Could not read resource \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\missing\\dictionary\\core-pilot-79\\core.sqlite3: 系统找不到指定的文件。 (os error 2)"
+            "message": "Could not read resource \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-missing\\dictionary\\core-pilot-79\\core.sqlite3: 系统找不到指定的文件。 (os error 2)"
           }
         },
         {
           "rejected": "vocabulary_save",
           "error": {
-            "message": "missing: Could not read resource \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\missing\\dictionary\\core-pilot-79\\core.sqlite3: 系统找不到指定的文件。 (os error 2)"
+            "message": "missing: Could not read resource \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-missing\\dictionary\\core-pilot-79\\core.sqlite3: 系统找不到指定的文件。 (os error 2)"
           }
         },
         {
@@ -101,17 +101,18 @@
         }
       ],
       "metadata": {
-        "startedAt": "2026-11-27T21:56:20.863Z",
-        "binarySha256": "a74b7082dbfc8315481f372a17d154dce1e92a05ebbc5b2f595a9cf350776b33",
+        "startedAt": "2026-11-27T22:35:48.683Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
         "command": [
           "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
           "missing",
-          "../../target/issue-164/cefr-delivery/Lexique-0.1.0-windows-x64-portable",
-          "../../target/issue-164/cefr-delivery/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
-          "../../target/release/conjugation",
-          "../../target/release/frequency",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
           "../../resources/core-pilot-79/curated-inputs.json",
-          "../../target/issue-164/missing"
+          "../../target/issue-164/lmy-missing",
+          "../../target/d2-review-selection.json"
         ],
         "hardTimeoutSeconds": 60
       },
@@ -123,7 +124,7 @@
         "helpers": 0
       },
       "successful_dictionary_queries": 4,
-      "maximum_lookup_round_trip_ms": 44.9366,
+      "maximum_lookup_round_trip_ms": 37.05099999999993,
       "maximum_lookup_response_bytes": 11988
     },
     "corrupt": {
@@ -132,13 +133,13 @@
           "rejected": "dictionary_lookup",
           "error": {
             "code": "corrupt",
-            "message": "Resource checksum mismatch: \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\corrupt\\dictionary\\core-pilot-79\\core.sqlite3"
+            "message": "Resource checksum mismatch: \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-corrupt\\dictionary\\core-pilot-79\\core.sqlite3"
           }
         },
         {
           "rejected": "vocabulary_save",
           "error": {
-            "message": "corrupt: Resource checksum mismatch: \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\corrupt\\dictionary\\core-pilot-79\\core.sqlite3"
+            "message": "corrupt: Resource checksum mismatch: \\\\?\\C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\target\\issue-164\\lmy-corrupt\\dictionary\\core-pilot-79\\core.sqlite3"
           }
         },
         {
@@ -147,17 +148,18 @@
         }
       ],
       "metadata": {
-        "startedAt": "2026-11-27T21:58:40.780Z",
-        "binarySha256": "a74b7082dbfc8315481f372a17d154dce1e92a05ebbc5b2f595a9cf350776b33",
+        "startedAt": "2026-11-27T22:36:55.266Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
         "command": [
           "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
           "corrupt",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable/conjugation",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable/frequency",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
           "../../resources/core-pilot-79/curated-inputs.json",
-          "../../target/issue-164/corrupt"
+          "../../target/issue-164/lmy-corrupt",
+          "../../target/d2-review-selection.json"
         ],
         "hardTimeoutSeconds": 60
       },
@@ -169,7 +171,7 @@
         "helpers": 0
       },
       "successful_dictionary_queries": 4,
-      "maximum_lookup_round_trip_ms": 76.09839999999986,
+      "maximum_lookup_round_trip_ms": 41.82600000000002,
       "maximum_lookup_response_bytes": 11988
     },
     "final-delivery": {
@@ -226,17 +228,17 @@
         }
       ],
       "metadata": {
-        "startedAt": "2026-11-27T21:59:23.876Z",
-        "binarySha256": "a74b7082dbfc8315481f372a17d154dce1e92a05ebbc5b2f595a9cf350776b33",
+        "startedAt": "2026-11-27T22:33:01.702Z",
+        "binarySha256": "c6fb0e3e4c315fa07b971b2b5c4c54f7f8d77f4699563beb6e250d6af75e2591",
         "command": [
           "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\cefr-gender-pilot\\worktree\\apps\\desktop\\e2e\\native-d2-pilot-check.mjs",
           "delivery",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable/conjugation",
-          "../../target/issue-164/final-package/Lexique-0.1.0-windows-x64-portable/frequency",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable",
+          "../../target/issue-164/lmy-package/Lexique-0.1.0-windows-x64-portable/Lexique.exe",
+          "../../target/desktop-conjugation-v6-stats",
+          "../../target/desktop-frequency-v1",
           "../../resources/core-pilot-79/curated-inputs.json",
-          "../../target/issue-164/final-delivery",
+          "../../target/issue-164/lmy-delivery-final",
           "../../target/d2-review-selection.json"
         ],
         "hardTimeoutSeconds": 60
@@ -249,7 +251,7 @@
         "helpers": 0
       },
       "successful_dictionary_queries": 33,
-      "maximum_lookup_round_trip_ms": 45.41110000000026,
+      "maximum_lookup_round_trip_ms": 46.3421000000003,
       "maximum_lookup_response_bytes": 22023
     }
   },
@@ -329,23 +331,47 @@
   },
   "noun_gender": {
     "nouns": 2134,
-    "admitted": 1940,
-    "pending_independent_human_review": 194,
-    "fixed_header_captures": 307
+    "admitted": 2133,
+    "pending_independent_human_review": 0,
+    "fixed_header_captures": 307,
+    "reviewer": "LMY",
+    "reviewed_on": "2026-11-27",
+    "policy": "lexique_then_candidate_else_omit",
+    "reviewed_rows": 194,
+    "new_admissions": {
+      "m": 92,
+      "f": 41,
+      "mf": 60
+    },
+    "omitted": [
+      {
+        "frozen_row": 253,
+        "headword": "gens",
+        "reason": "Lexique and Candidate are null"
+      }
+    ]
   },
   "checks": {
     "portable_tests": "16 passed",
-    "core_preparation_tests": "19 passed",
+    "core_preparation_tests": "20 passed",
     "native_directory_tests": "2 passed",
     "lint": "passed",
     "resource_budget_regression": "passed",
-    "native_scenarios": "4 passed"
+    "native_scenarios": "4 passed",
+    "policy_capture_tests": "4 passed",
+    "shipped_converter_isolation": "passed",
+    "existing_4062_senses_fields_and_sources": "unchanged",
+    "rust_precompile_and_tests": "passed; hard 60-second execution limit",
+    "typecheck": "passed",
+    "rustfmt": "passed",
+    "windows_x64_release_build": "passed"
   },
   "limits_of_evidence": [
     "External WebView requests denied after startup, not whole-machine network denial.",
     "Native file-input injection uses synthetic TSV data, not the Win32 picker or an official FLELex download.",
     "Current candidate old-binary/resource upgrade not rerun; prior core-162-v1 upgrade evidence remains separate.",
     "Full/Lite dictionary resources share the existing packaging boundary; formal full/Lite speech/download and other-platform gates remain unrun.",
-    "Independent human noun review and real learner acceptance remain pending."
-  ]
+    "Real learner feedback and acceptance remain pending; LMY noun decisions are complete."
+  ],
+  "previous_candidate_receipt": "verification-gender-1.json"
 }

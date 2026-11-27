@@ -1,6 +1,6 @@
 # D2 learner review packet
 
-Artifact: `core-162-v1+gender-1`; SQLite SHA-256 `80f9fe5f482014856cc4f486d6128597d5e56a0846199024f7d05eaaf3bd56eb`. 44 exact selected senses.
+Artifact: `core-162-v1+gender-2`; SQLite SHA-256 `9a65546c1a19107afe0763d5fd57bb046eda3e2f3071208d661506b220dbf55d`. 44 exact selected senses.
 
 Status: awaiting a real learner review. Reviewer: pending. Review date: pending. Acceptance: pending.
 
@@ -8,7 +8,7 @@ For each sense, read FR / IPA / EN / ZH and the usage together in this packet an
 
 The packet includes auxiliaries, function words, every admitted POS class, polysemy, spelling relationships, gender-sensitive nouns and three longest-content senses. Its coverage is representative rather than exhaustive. The frozen 4,087-group scope, 25 approved zero-field annotations, three specialist senses and 592-group extension deferral remain unchanged.
 
-Content and provenance are copied from the packaged artifact under [CC BY-SA 4.0](../../../resources/core-pilot-79/COPYING); [notices and modifications](../../../resources/core-pilot-79/NOTICES.md) and [FranceTerme terms](../../../resources/core-pilot-79/LICENSE-FranceTerme.pdf) accompany it. The separate [194-row gender table](../noun-gender-residual-review.md) awaits independent human semantic decisions.
+Content and provenance are copied from the packaged artifact under [CC BY-SA 4.0](../../../resources/core-pilot-79/COPYING); [notices and modifications](../../../resources/core-pilot-79/NOTICES.md) and [FranceTerme terms](../../../resources/core-pilot-79/LICENSE-FranceTerme.pdf) accompany it. The separate [194-row gender table](../noun-gender-residual-review.md) records LMY's completed Lexique-first decisions. Learner feedback on these 44 senses remains pending.
 
 ## etre-aux-compound-tense
 
@@ -372,7 +372,7 @@ Decision: pending. Feedback / correction: pending.
 
 ## b86-265-nom
 
-Frozen row 265; `mort/NOM`; selected source spelling `mort`. Gender: `unknown`.
+Frozen row 265; `mort/NOM`; selected source spelling `mort`. Gender: `f`.
 
 **definition_fr:** Arrêt définitif des fonctions vitales d’un être vivant.
 
@@ -388,6 +388,7 @@ Frozen row 265; `mort/NOM`; selected source spelling `mort`. Gender: `unknown`.
 - ipa: [Wiktionnaire — mort](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604); version `revision 39969604 (2026-10-31T08:56:00Z)`; Fixed wikitext line 12; exact selected excerpt in selected-source-excerpts.json; Selected the headword IPA for this grammatical use and added slash delimiters.
 - meaning_en: [Wiktionnaire — mort](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604); version `revision 39969604 (2026-10-31T08:56:00Z)`; Fixed wikitext line 13; exact selected excerpt in selected-source-excerpts.json; en translation and scoped explanation of the selected French use by Lexique contributors; not imported foreign-language dictionary prose.
 - meaning_zh: [Wiktionnaire — mort](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604); version `revision 39969604 (2026-10-31T08:56:00Z)`; Fixed wikitext line 13; exact selected excerpt in selected-source-excerpts.json; zh translation and scoped explanation of the selected French use by Lexique contributors; not imported foreign-language dictionary prose.
+- gender: [Wiktionnaire — mort](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604); version `revision 39969604 (2026-10-31T08:56:00Z)`; Fixed wikitext line 12; exact header in noun-genders.json; LMY reviewed on 2026-11-27: Lexique when nonnull, otherwise the selected fixed-header Candidate; omit when both are null.
 
 Decision: pending. Feedback / correction: pending.
 
@@ -414,7 +415,7 @@ Decision: pending. Feedback / correction: pending.
 
 ## pas-noun-footstep
 
-Frozen row 10; `pas/NOM`; selected source spelling `pas`. Gender: `unknown`.
+Frozen row 10; `pas/NOM`; selected source spelling `pas`. Gender: `m`.
 
 **definition_fr:** Mouvement d’un pied qui permet d’avancer en marchant ; nom masculin.
 
@@ -430,12 +431,13 @@ Frozen row 10; `pas/NOM`; selected source spelling `pas`. Gender: `unknown`.
 - ipa: [Wiktionnaire — pas](https://fr.wiktionary.org/w/index.php?title=pas&oldid=39910982); version `revision 39910982 (2026-09-30T12:01:19Z)`; Fixed wikitext line 21; exact selected excerpt in selected-source-excerpts.json; Selected the recorded headword IPA and added slash delimiters.
 - meaning_en: [Wiktionary — pas](https://en.wiktionary.org/w/index.php?title=pas&oldid=93096367); version `revision 93096367 (2026-09-30T02:55:18Z)`; Fixed wikitext line 581; exact selected excerpt in selected-source-excerpts.json; English explanation adapted or translated by Lexique from the selected contributor gloss; removed wiki markup and scoped the exact everyday POS/use.
 - meaning_zh: [Wiktionary — pas](https://en.wiktionary.org/w/index.php?title=pas&oldid=93096367); version `revision 93096367 (2026-09-30T02:55:18Z)`; Fixed wikitext line 581; exact selected excerpt in selected-source-excerpts.json; Chinese explanation translated by Lexique from the selected contributor gloss; removed wiki markup and scoped the exact everyday POS/use.
+- gender: [Wiktionnaire — pas](https://fr.wiktionary.org/w/index.php?title=pas&oldid=39910982); version `revision 39910982 (2026-09-30T12:01:19Z)`; Fixed wikitext line 21; exact header in noun-genders.json; LMY reviewed on 2026-11-27: Lexique when nonnull, otherwise the selected fixed-header Candidate; omit when both are null.
 
 Decision: pending. Feedback / correction: pending.
 
 ## b85-230-child
 
-Frozen row 230; `enfant/NOM`; selected source spelling `enfant`. Gender: `unknown`.
+Frozen row 230; `enfant/NOM`; selected source spelling `enfant`. Gender: `m`.
 
 **definition_fr:** Personne qui n'a pas encore atteint l'adolescence.
 
@@ -451,6 +453,7 @@ Frozen row 230; `enfant/NOM`; selected source spelling `enfant`. Gender: `unknow
 - ipa: [Wiktionnaire — enfant](https://fr.wiktionary.org/w/index.php?title=enfant&oldid=39907712); version `revision 39907712 (2026-09-28T07:45:36Z)`; Fixed wikitext line 10; exact selected excerpt in selected-source-excerpts.json; Selected the recorded headword IPA variant and added slash delimiters.
 - meaning_en: [Wiktionnaire — enfant](https://fr.wiktionary.org/w/index.php?title=enfant&oldid=39907712); version `revision 39907712 (2026-09-28T07:45:36Z)`; Fixed wikitext line 11; exact selected excerpt in selected-source-excerpts.json; English adaptation and scoped explanation of the selected French contributor definition by Lexique contributors; removed wiki markup and excluded quotations.
 - meaning_zh: [Wiktionnaire — enfant](https://fr.wiktionary.org/w/index.php?title=enfant&oldid=39907712); version `revision 39907712 (2026-09-28T07:45:36Z)`; Fixed wikitext line 11; exact selected excerpt in selected-source-excerpts.json; Chinese adaptation and scoped explanation of the selected French contributor definition by Lexique contributors; removed wiki markup and excluded quotations.
+- gender: [Lexique 3.83](https://www.lexique.org/databases/Lexique383/Lexique383.tsv); version `3.83`; Lexique383.tsv NOM genre; lemma, same-stem plural or surface-form mapping recorded in noun-genders.json; LMY reviewed on 2026-11-27: Lexique when nonnull, otherwise the selected fixed-header Candidate; omit when both are null.
 
 Decision: pending. Feedback / correction: pending.
 
@@ -542,7 +545,7 @@ Decision: pending. Feedback / correction: pending.
 
 ## b110-1451-lâche-nom-selected
 
-Frozen row 1451; `lâche/NOM`; selected source spelling `lâche`. Gender: `unknown`.
+Frozen row 1451; `lâche/NOM`; selected source spelling `lâche`. Gender: `mf`.
 
 **definition_fr:** Terme injurieux désignant une personne qui manque de courage.
 
@@ -558,12 +561,13 @@ Frozen row 1451; `lâche/NOM`; selected source spelling `lâche`. Gender: `unkno
 - ipa: [Wiktionnaire — lâche](https://fr.wiktionary.org/w/index.php?title=l%C3%A2che&oldid=39845496); version `revision 39845496 (2026-09-01T12:18:09Z)`; Fixed wikitext line 126; exact selected excerpt in selected-source-excerpts.json; One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.
 - meaning_en: [Wiktionnaire — lâche](https://fr.wiktionary.org/w/index.php?title=l%C3%A2che&oldid=39845496); version `revision 39845496 (2026-09-01T12:18:09Z)`; Fixed wikitext line 127; exact selected excerpt in selected-source-excerpts.json; New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.
 - meaning_zh: [Wiktionnaire — lâche](https://fr.wiktionary.org/w/index.php?title=l%C3%A2che&oldid=39845496); version `revision 39845496 (2026-09-01T12:18:09Z)`; Fixed wikitext line 127; exact selected excerpt in selected-source-excerpts.json; New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.
+- gender: [Wiktionnaire — lâche](https://fr.wiktionary.org/w/index.php?title=l%C3%A2che&oldid=39845496); version `revision 39845496 (2026-09-01T12:18:09Z)`; Fixed wikitext line 126; exact header in noun-genders.json; LMY reviewed on 2026-11-27: Lexique when nonnull, otherwise the selected fixed-header Candidate; omit when both are null.
 
 Decision: pending. Feedback / correction: pending.
 
 ## b115-1750-tien-nom-selected
 
-Frozen row 1750; `tien/NOM`; selected source spelling `tien, ienne`. Gender: `unknown`.
+Frozen row 1750; `tien/NOM`; selected source spelling `tien, ienne`. Gender: `m`.
 
 **definition_fr:** Ce qui vient de toi, ta contribution personnelle. Nom masculin singulier dans la construction y mettre du tien : faire des concessions pour aider à une action commune. Du est ici de + le ; tien ne précède pas un nom.
 
@@ -579,6 +583,7 @@ Frozen row 1750; `tien/NOM`; selected source spelling `tien, ienne`. Gender: `un
 - ipa: [Wiktionnaire — tien](https://fr.wiktionary.org/w/index.php?title=tien&oldid=38579571); version `revision 38579571 (2025-08-25T18:21:47Z)`; Fixed wikitext line 9; exact selected excerpt in selected-source-excerpts.json; One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied. Exact frozen form is bound through the separately captured grammatical/construction evidence; no query alias. Exact bare French tien has the same form-level pronunciation in its nominal construction; the source does not classify it as a noun.
 - meaning_en: [Dictionnaire de l’Académie française (8e édition) — tien, ienne](https://www.dictionnaire-academie.fr/article/A8T0594); version `A8T0594-1935-tome2-page659 (edition DAF8-1935-tome2-page659; capture 2026-11-20T17:16:45.327561+00:00)`; Fixed capture line 737; exact selected excerpt in selected-source-excerpts.json; New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation. Exact frozen form is bound through the separately captured grammatical/construction evidence; no query alias.
 - meaning_zh: [Dictionnaire de l’Académie française (8e édition) — tien, ienne](https://www.dictionnaire-academie.fr/article/A8T0594); version `A8T0594-1935-tome2-page659 (edition DAF8-1935-tome2-page659; capture 2026-11-20T17:16:45.327561+00:00)`; Fixed capture line 737; exact selected excerpt in selected-source-excerpts.json; New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation. Exact frozen form is bound through the separately captured grammatical/construction evidence; no query alias.
+- gender: [Lexique 3.83](https://www.lexique.org/databases/Lexique383/Lexique383.tsv); version `3.83`; Lexique383.tsv NOM genre; lemma, same-stem plural or surface-form mapping recorded in noun-genders.json; LMY reviewed on 2026-11-27: Lexique when nonnull, otherwise the selected fixed-header Candidate; omit when both are null.
 
 Decision: pending. Feedback / correction: pending.
 
