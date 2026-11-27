@@ -79,8 +79,9 @@ retain original credit separately from the wiki and Lexique adaptation layers.
 [Selected rights](selected-rights.md) records the established collective-work
 basis and its 2006-01-01 expiry. Selected-expression rights are independently
 reviewed. The explorer DAF8
-marker is in the unselected English noun section. Ais/NOM retains four blocked
-fields with no approved exception; its full proposal is preserved separately.
+marker is in the unselected English noun section. Ais/NOM is an owner-approved
+zero-field annotation at row 4057; four fields remain missing and its rejected
+proposal is preserved separately.
 
 ## Redistribution obligations
 
@@ -88,12 +89,12 @@ Retain CC BY-SA 4.0 legal text and licence/source identifiers, complete
 contributor/history attribution, applicable original-work credits, modification
 notices and selected source material. Adaptations use CC BY-SA 4.0 without
 additional restrictions. External works retain their separate rights.
-The coordinator verifies actual combined source materials, notices and
-conversion before canonical admission.
+The core-162-v1 package contains the matching source materials, notices and
+converted resource.
 
 All 148 proposed texts have separate quality and selected-span rights decisions.
-Only 144 fields in 36 groups are independently eligible; canonical admission
-and combined packaging remain coordinator-owned.
+The independently accepted 144 fields in 36 groups are admitted in
+core-162-v1 with matching combined packaging and Windows x64 native evidence.
 
 The reviewed FR/EN/ZH changes select the normal baseball format with tie
 extensions, the stick-guided firework rocket and the current French admiral

@@ -15,12 +15,12 @@ assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'cor
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
-const ANNOTATION_ROWS_BY_ISSUE = {
-  82: [87], 87: [305], 97: [816, 849], 98: [859, 860], 99: [934],
-  101: [1005], 102: [1051], 105: [1208, 1218, 1219, 1220], 106: [1300], 108: [1386],
-  132: [2560], 133: [2626], 136: [2792], 142: [3098], 156: [3783], 158: [3885], 159: [3922, 3944],
-  160: [3953], 162: [4057],
-};
+const reviewed = JSON.parse(await readFile(resolve(curationPath, '..', 'field-review.json'), 'utf8'));
+const ANNOTATION_ROWS_BY_ISSUE = Object.fromEntries(
+  Object.entries(Object.groupBy(reviewed.annotation_exceptions,
+    (entry) => entry.decision.issue.split('/').at(-1)))
+    .map(([issue, entries]) => [issue, entries.map((entry) => entry.frozen_row)]),
+);
 const ALL_ANNOTATION_ROWS = new Set(Object.values(ANNOTATION_ROWS_BY_ISSUE).flat());
 const expectedRows = Array.from({ length: 4087 }, (_, index) => index + 1)
   .filter((row) => !ALL_ANNOTATION_ROWS.has(row));

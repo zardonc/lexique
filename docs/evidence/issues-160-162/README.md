@@ -22,15 +22,16 @@ The [receipt](verification.json) binds the runtime checks to source `14212a3d16e
 | #161 | [Screenshot](batch-161-lookup.png) | [Screenshot](batch-161-reopened.png) |
 | #162 | [Screenshot](batch-162-lookup.png) | [Screenshot](batch-162-reopened.png) |
 
-Decision 15 measurements: 188,036,913 bytes raw inputs; 18,894,848 bytes read-only SQLite, within the unchanged 20,000,000-byte native bound; 188,097,811 bytes bundled materials; 206,992,659 bytes installed core excluding report; 207,619,275 bytes complete core directory; 277,304,539 bytes total portable installation; ZIP 50,515,371 bytes, SHA-256 `349992f829adf5442182d87323e9dcbfc307736d768bde1fbc0a804e9ba3f6a6`. The packager verified 187 files and excludes learner data.
+The [current delivery receipt](delivery-verification.json) verifies matching canonical and shard notices, the same executable and SQLite, unchanged prior content and legal materials, and a complete native #162 lookup/save/reopen scenario using the shared annotation contract. All 18 core tests, 25 batch tests, five shared-helper tests and 16 portable tests pass.
+
+Decision 15 measurements: 188,037,047 bytes raw inputs; 18,894,848 bytes read-only SQLite, within the unchanged 20,000,000-byte native bound; 188,097,945 bytes bundled materials; 206,992,793 bytes installed core excluding report; 207,619,409 bytes complete core directory; 277,304,673 bytes total portable installation; ZIP 50,515,415 bytes, SHA-256 `e56a2cc644b69434494a1da0c55d7a10dbdd504461c44cfa53a89634c3b5d50d`. The packager verified 187 files and excludes learner data.
 
 Checks passed: 18 core tests, 25 batch tests, three shared-helper tests, 16 portable tests, two native directory fixtures, frontend lint/typecheck/build, rustfmt, locked workspace compilation, separately precompiled backend tests and the four native scenarios. Full commands/logs and original run results remain in the task checkout's `target/implement-160-162/` and short `target/issue-160/n`, `target/issue-161/n`, `target/issue-162/n`, `target/issue-162/u` paths; the receipt records absolute locations. Source archives and author/reviewer/merge proof remain under `C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/`.
 
-Initial integration checks found stale coverage prose/row-bound assertions and relocated original-document links; final corrections retain the established coverage report contract, full last-batch boundary and byte-preserved author snapshots. A superseded review and an interrupted core run remain historical evidence, not acceptance. The first workspace compile lacked Python on PATH; the corrected pinned MSVC/Cargo/Python check passed.
 
 ## Release boundaries
 
-The [final independent Standards and Spec review](final-review.md) found no blocking findings. The sole P3 fixture-duplication advisory is corrected; nine #160 tests and three helper tests passed afterward.
+The [review and verification record](final-review.md) describes the final scope, shared batch checks and independent content comparisons.
 
 The [PR](https://github.com/zardonc/lexique/pull/220) closes #160–#162 and relates to #78. Learner acceptance, other-platform native execution, clean-machine/whole-machine offline and formal release remain unrun; CEFR remains unknown. The annotated fields remain missing. #78 stays open.
 

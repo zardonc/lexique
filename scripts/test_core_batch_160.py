@@ -6,6 +6,7 @@ import shutil
 import unittest
 
 from core_batch_test_helpers import (
+    assert_french_pos_frame,
     assert_core_load_inputs_rejected,
     verify_archived_contributor_captures,
     verify_archived_source_captures,
@@ -192,7 +193,6 @@ class Batch160Tests(unittest.TestCase):
         lines = verify_archived_source_captures(self, captures["sources"], sources, Path)
         excerpts = read("source-excerpts.json")
         fields = {(record["sense_id"], record["field"]): record for record in excerpts["fields"]}
-        expected_pos = {"NOM": "nom", "VER": "verbe", "ADJ": "adjectif", "ADV": "adverbe"}
         for group in read("groups.json"):
             if not group["senses"]:
                 continue
@@ -208,12 +208,8 @@ class Batch160Tests(unittest.TestCase):
                     self.assertEqual(field["independent_review"], "passed")
                     self.assertEqual(field["language"], {"french_definition": "fr", "ipa": "und",
                                                          "english": "en", "chinese": "zh"}[name])
-                    before = lines[field["source_id"]][:record["line_1_based"]]
-                    language = next(line for line in reversed(before) if line.startswith("== "))
-                    pos = next(line for line in reversed(before) if line.startswith("=== {{S|")
-                               and not any(tag in line for tag in ("étymologie", "prononciation", "références")))
-                    self.assertEqual(language, "== {{langue|fr}} ==")
-                    self.assertIn("{{S|" + expected_pos[group["lexique_cgram"]] + "|fr", pos)
+                    assert_french_pos_frame(self, lines[field["source_id"]],
+                                            record["line_1_based"], group["lexique_cgram"])
                     if name == "ipa":
                         self.assertIn(field["text"].strip("/"), record["reviewed_excerpt"])
                     else:

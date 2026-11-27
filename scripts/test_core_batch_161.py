@@ -2,11 +2,11 @@
 import csv
 import json
 from pathlib import Path
-import re
 import subprocess
 import unittest
 
 from core_batch_test_helpers import (
+    assert_french_pos_frame,
     verify_archived_contributor_captures,
     verify_archived_source_captures,
 )
@@ -71,7 +71,6 @@ class Batch161Tests(unittest.TestCase):
         self.assertFalse(captures["contributor_registry"]["selected_sentence_authorship_proved"])
         excerpts = {(f["sense_id"], f["field"]): f for f in read("source-excerpts.json")["fields"]}
         self.assertEqual(len(excerpts), 200)
-        pos = {"NOM": "nom", "VER": "verbe", "ADJ": "adjectif", "ADV": "adverbe"}
         for group in read("groups.json"):
             sense = group["senses"][0]
             self.assertEqual(sense["source_headword"], group["headword"])
@@ -83,11 +82,7 @@ class Batch161Tests(unittest.TestCase):
                 self.assertEqual(line, field["source_span"]["raw_source_excerpt"])
                 self.assertEqual(exact["reviewed_excerpt"], line)
                 self.assertEqual(exact["revid"], sources[field["source_id"]]["revid"])
-                preceding = lines[:exact["line_1_based"]]
-                language = next(l for l in reversed(preceding) if re.match(r"^==\s*\{\{langue\|", l))
-                self.assertRegex(language, r"^==\s*\{\{langue\|fr\}\}\s*==$")
-                frame = next(l for l in reversed(preceding) if l.startswith("=== {{S|"))
-                self.assertIn("{{S|" + pos[group["lexique_cgram"]] + "|fr", frame)
+                assert_french_pos_frame(self, lines, exact["line_1_based"], group["lexique_cgram"])
                 if name == "ipa":
                     variant = exact["ipa_variant_excerpt"]
                     start = exact["ipa_variant_column_1_based"] - 1

@@ -6175,7 +6175,7 @@ Retain licence/disclaimer text, fixed sources and histories, contributor and
 original-work attribution, modification notices and selected source material.
 Adaptations retain CC BY-SA 4.0 without additional restrictions. Public-domain
 original editions and separate third-party rights are assessed at their own
-boundaries. Actual combined converter/package obligations remain pending.
+boundaries. The core-162-v1 package includes the required licences, notices and source materials.
 
 
 ## Approved rex annotation
@@ -6185,7 +6185,7 @@ Frozen row 3953 `rex/NOM` is an owner-approved zero-field annotation dated 2026-
 
 # Issue #161 selected content notices
 
-These 50 groups / 200 fields pass independent selected-field quality, everyday-use, spelling and selected-expression rights review. Canonical assembly and native integration remain pending.
+These 50 groups / 200 fields pass independent selected-field quality, everyday-use, spelling and selected-expression rights review and are admitted in core-162-v1. The integration receipt records their Windows x64 lookup, trusted save and reopen verification.
 
 French lexical adaptations and new English/Chinese explanatory translations: Lexique contributors. Fixed Wiktionnaire transcription and contribution layers, and Lexique adaptations: CC BY-SA 4.0. Retain attribution, source/history links, modification notices and ShareAlike; impose no additional restrictions. The complete legal text accompanies this shard in COPYING.
 
@@ -6436,8 +6436,9 @@ retain original credit separately from the wiki and Lexique adaptation layers.
 [Selected rights](https://github.com/zardonc/lexique/blob/15bb7e2fe6c58ee413325b95807a159a011dce07/docs/evidence/issue-162/selected-rights.md) records the established collective-work
 basis and its 2006-01-01 expiry. Selected-expression rights are independently
 reviewed. The explorer DAF8
-marker is in the unselected English noun section. Ais/NOM retains four blocked
-fields with no approved exception; its full proposal is preserved separately.
+marker is in the unselected English noun section. Ais/NOM is an owner-approved
+zero-field annotation at row 4057; four fields remain missing and its rejected
+proposal is preserved separately.
 
 ## Redistribution obligations
 
@@ -6445,12 +6446,12 @@ Retain CC BY-SA 4.0 legal text and licence/source identifiers, complete
 contributor/history attribution, applicable original-work credits, modification
 notices and selected source material. Adaptations use CC BY-SA 4.0 without
 additional restrictions. External works retain their separate rights.
-The coordinator verifies actual combined source materials, notices and
-conversion before canonical admission.
+The core-162-v1 package contains the matching source materials, notices and
+converted resource.
 
 All 148 proposed texts have separate quality and selected-span rights decisions.
-Only 144 fields in 36 groups are independently eligible; canonical admission
-and combined packaging remain coordinator-owned.
+The independently accepted 144 fields in 36 groups are admitted in
+core-162-v1 with matching combined packaging and Windows x64 native evidence.
 
 The reviewed FR/EN/ZH changes select the normal baseball format with tie
 extensions, the stick-guided firework rocket and the current French admiral

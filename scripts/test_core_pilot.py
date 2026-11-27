@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 import re
-from core_pilot import ANNOTATIONS, MATERIALS, prepare
+from core_pilot import ANNOTATIONS, ANNOTATION_ROWS, MATERIALS, prepare
 
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/core-pilot-79"
@@ -29,7 +29,7 @@ class CorePilotPreparationTests(unittest.TestCase):
                 for issue in range(120, 163):
                     first = 1951 + (issue - 120) * 50
                     batch = next(item for item in report["content_batches"] if item["issue"] == issue)
-                    annotations = {132: [2560], 133: [2626], 136: [2792], 142: [3098], 156: [3783], 158: [3885], 159: [3922, 3944], 160: [3953], 162: [4057]}.get(issue, [])
+                    annotations = [row for row, _, _, approved_issue, _ in ANNOTATIONS if approved_issue == issue]
                     target = min(50, len(scope) - first + 1)
                     self.assertEqual((batch["accepted_groups"], batch["complete_fields"],
                                       batch["reused_pilot_groups"], batch["annotation_exception_groups"]),
@@ -149,18 +149,7 @@ class CorePilotPreparationTests(unittest.TestCase):
             annotations = [row for row in coverage["incomplete_groups"]
                            if row.get("annotation_exception_decision")]
             self.assertEqual([(row["frozen_row"], row["word"], row["lexique_cgram"])
-                              for row in annotations], [(87, "quoi", "ADJ"), (305, "dont", "PRO:int"),
-                                                        (816, "t", "PRO:per"), (849, "c", "PRO:dem"),
-                                                        (859, "l", "ART:def"), (860, "l", "PRO:per"),
-                                                        (934, "i", "ADJ:num"), (1005, "m", "PRO:per"), (1051, "s", "PRO:per"),
-                                                        (1208, "quiconque", "PRO:int"), (1218, "qu", "CON"),
-                                                        (1219, "qu", "PRO:int"), (1220, "qu", "PRO:rel"),
-                                                        (1300, "d", "PRE"), (1386, "nulle", "PRO:ind"),
-                                                        (2560, "oublie", "NOM"), (2626, "r", "ADV"),
-                                                        (2792, "man", "NOM"), (3098, "damoiseau", "NOM"),
-                                                        (3783, "ya", "NOM"), (3885, "cm", "NOM"),
-                                                        (3922, "haver", "VER"), (3944, "da", "ONO"),
-                                                        (3953, "rex", "NOM"), (4057, "ais", "NOM")])
+                              for row in annotations], [annotation[:3] for annotation in ANNOTATIONS])
             self.assertTrue(all(set(row["incomplete_fields"]) == set(FIELD_NAMES) for row in annotations))
             self.assertEqual(annotations[1]["annotation_exception_decision"]["issue"],
                              "https://github.com/zardonc/lexique/issues/87")
@@ -475,7 +464,7 @@ class CorePilotPreparationTests(unittest.TestCase):
             with closing(sqlite3.connect((root / "first/core.sqlite3").as_uri() + "?mode=ro", uri=True)) as connection:
                 senses = [json.loads(row[0]) for row in connection.execute("SELECT payload FROM senses ORDER BY frozen_row,sense_index")]
                 self.assertEqual([row["frozen_row"] for row in senses],
-                                 [row for row in range(1, 4088) if row not in (87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386, 2560, 2626, 2792, 3098, 3783, 3885, 3922, 3944, 3953, 4057)])
+                                 [row for row in range(1, 4088) if row not in ANNOTATION_ROWS])
                 self.assertEqual([row["pos"] for row in senses[:5]], ["AUX", "NOM", "VER", "AUX", "VER"])
                 self.assertIn("all pronominal verbs", senses[0]["meaning_en"])
                 self.assertIn("past participle", senses[3]["meaning_en"])

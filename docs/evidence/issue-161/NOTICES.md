@@ -1,6 +1,6 @@
 # Issue #161 selected content notices
 
-These 50 groups / 200 fields pass independent selected-field quality, everyday-use, spelling and selected-expression rights review. Canonical assembly and native integration remain pending.
+These 50 groups / 200 fields pass independent selected-field quality, everyday-use, spelling and selected-expression rights review and are admitted in core-162-v1. The integration receipt records their Windows x64 lookup, trusted save and reopen verification.
 
 French lexical adaptations and new English/Chinese explanatory translations: Lexique contributors. Fixed Wiktionnaire transcription and contribution layers, and Lexique adaptations: CC BY-SA 4.0. Retain attribution, source/history links, modification notices and ShareAlike; impose no additional restrictions. The complete legal text accompanies this shard in COPYING.
 

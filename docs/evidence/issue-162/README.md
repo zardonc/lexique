@@ -1,9 +1,9 @@
 # Issue #162 reviewed content shard
 
-**36 of 37 frozen groups / 144 fields are independently eligible for admission.**
+**core-162-v1 admits 36 of 37 frozen groups / 144 independently reviewed fields.**
 Rows 4051–4087 retain exact identities, order and both frequency strings.
 The denominator remains 4,087 groups. Row 4057 `ais/NOM` retains four missing
-fields; no annotation or specialist exception is authorized.
+fields as an owner-approved zero-field annotation. No specialist sense is admitted.
 
 [Groups](groups.json), [field/use decisions](field-review.json),
 [rights](rights.json), [source excerpts](source-excerpts.json),
@@ -15,24 +15,25 @@ fields; no annotation or specialist exception is authorized.
 and `amiral`. [The independent review](README-independent-review.md) explains
 the editorial decisions and actual source boundaries.
 
-[Admission](admission.json) reports 144 independently eligible fields, four
-missing admitted fields and no pending independent quality/rights decisions.
-No field is canonically admitted by this shard. [Reuse](reuse.json) retains
+[Admission](admission.json) records the 144 independently accepted fields and
+four missing annotation fields. The canonical integration admits those 144
+fields in 36 groups. [Reuse](reuse.json) retains
 the unchanged core-159-v1 baseline of 3,927 groups and no reused #162 group.
 
 [Authored snapshots](authored-snapshot.json) preserve all 18 author files
 byte-for-byte at the supplied author head. [Rejected proposals](rejected-proposals.json)
 retain the complete old-board `ais` proposal and four independent decisions.
 [Blockers](content-blockers.json) and [modern corroboration](modern-corroboration.json)
-record the unproved everyday use and two owner-only alternatives.
+record the rejected everyday use and its retained source evidence.
 
 Raw author bytes remain at
 `C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/author-evidence/issue-162`.
 Independent investigation, scripts and SHA-bound closeout logs remain at
 `C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/reviewer-evidence/issue-162`.
 [Review verification](review-verification.json) records actual checks.
-Canonical conversion, combined packaging, native integration and learner
-acceptance remain coordinator-owned. Full D2 and release remain open.
+Canonical conversion, combined packaging and Windows x64 native integration
+are recorded in the integration evidence below. Learner acceptance and release
+remain open.
 
 
 ## Approved ais annotation

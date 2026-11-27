@@ -1,19 +1,19 @@
-# Final integration review
+# Final review and verification
 
-Two fresh, independent reviewers read base `0963287ea5ed593cc84215377d62e6db1a072566` through `0cefe176c5f92310b2e546306e42ea43fbcdebfb`. The complete original reports remain in `C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/final-review/`.
+Independent content comparisons cover the owner-approved scope: 135 admitted groups / 540 fields, with rex/NOM and ais/NOM retaining zero-field annotations. The full review reports remain in `C:/Users/inthe/IdeaProjects/lexique-d2-160-162/context/final-review/`.
 
 ## Standards
 
-No hard documented-standard breaches or blocking findings. One P3 advisory identified duplicated fixture staging in `scripts/test_core_batch_160.py`. The test now uses the existing `assert_core_load_inputs_rejected` helper, preserving the authored-review mutation and expected rejection. No production code, resource or dependency changed.
-
-After the correction, `python -m unittest discover -s scripts -p test_core_batch_160.py -v` passed all nine tests, and `python -m unittest discover -s scripts -p test_core_batch_test_helpers.py -v` passed all three helper tests. Logs remain in `target/implement-160-162/advisory-batch-160.log` and `advisory-helpers.log`; `git diff --check` passed.
+The batch checks share French language/POS verification and admission-fixture staging. The #162 proposal loader is named `read_authored`; `reviewed` reads accepted shard data. Converter tests use the approved annotation contract, and the native check derives batch annotation membership from its matching reviewed material. Canonical and shard notices describe the same current admission state and retain the required licences, credits and selected-expression rights.
 
 ## Spec
 
-No findings; severity none. Missing or partial requirements, unrequested scope and incorrect implementations: none within the owner-amended batch scope. Independent comparisons confirmed frozen membership, admitted fields, prior content and provenance, package hashes and materials, six screenshots and schema 20→21 learning-data preservation.
+Independent comparisons confirmed all 137 frozen identities/frequencies, 135 admitted groups/540 fields, 3,927 prior groups and provenance arrays, package materials, six screenshots and schema 20→21 learning-data preservation. The denominator remains 4,087 groups / 3,773 headwords; 25 annotations retain 100 missing fields.
 
-The reviewer noted an older online PR snapshot. Delivery uses the latest pushed head and updated evidence/rollback description; the earlier snapshot is retained only as a historical observation.
+## Verification
 
-## Evidence boundary
+The [integration evidence](README.md) records the passed core, batch, package, frontend, backend and Windows x64 native checks. The [current delivery receipt](delivery-verification.json) records matching notices, 18 core tests, 25 batch tests, five shared-helper tests, 16 portable tests and the complete native #162 scenario. Field content, frozen membership, owner approvals and byte-preserved authored snapshots remain intact.
 
-The native tested source remains `14212a3d16e06758caf38b7d6bd9af4b5ee10020`. Subsequent changes only add documentation/screenshots and reuse a test helper, so the original native receipts and package hashes retain that source identity. Reviewers did not rerun native applications or full suites. Learner acceptance, other-platform native execution, clean-machine/whole-machine offline and formal release remain open as recorded in the [integration evidence](README.md).
+## Limitations
+
+The native application source is `14212a3d16e06758caf38b7d6bd9af4b5ee10020`; subsequent test and document changes retain that runtime identity. Learner acceptance, other-platform native application execution, clean-machine/whole-machine offline and formal release remain open. CI timing results are reported separately in the PR; passing content checks do not waive those gates.

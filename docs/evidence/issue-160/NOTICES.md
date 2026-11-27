@@ -77,7 +77,7 @@ Retain licence/disclaimer text, fixed sources and histories, contributor and
 original-work attribution, modification notices and selected source material.
 Adaptations retain CC BY-SA 4.0 without additional restrictions. Public-domain
 original editions and separate third-party rights are assessed at their own
-boundaries. Actual combined converter/package obligations remain pending.
+boundaries. The core-162-v1 package includes the required licences, notices and source materials.
 
 
 ## Approved rex annotation

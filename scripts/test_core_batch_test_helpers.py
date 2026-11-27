@@ -5,8 +5,27 @@ import shutil
 import tempfile
 import unittest
 
-from core_batch_test_helpers import assert_core_load_inputs_rejected, verify_archived_contributor_captures
+from core_batch_test_helpers import (
+    assert_core_load_inputs_rejected,
+    assert_french_pos_frame,
+    verify_archived_contributor_captures,
+)
 from core_pilot import MATERIALS, RESOURCE, load_inputs
+
+
+class FrenchPosFrameTests(unittest.TestCase):
+    def test_french_pos_frame_ignores_non_pos_sections_and_accepts_pronunciation(self):
+        lines = ["== {{langue|fr}} ==", "=== {{S|nom|fr}} ===",
+                 "=== {{S|prononciation}} ===", "* {{pron|sœʁ|fr}}"]
+        assert_french_pos_frame(self, lines, 4, "NOM")
+        assert_french_pos_frame(self, lines[:1], 1)
+
+    def test_foreign_language_and_wrong_pos_frames_are_rejected(self):
+        for language, pos in (("en", "nom"), ("fr", "verbe")):
+            with self.subTest(language=language, pos=pos), self.assertRaises(AssertionError):
+                assert_french_pos_frame(self,
+                                       ["== {{langue|" + language + "}} ==", "=== {{S|" + pos + "|fr}} ==="],
+                                       2, "NOM")
 
 
 class ContributorCaptureTests(unittest.TestCase):

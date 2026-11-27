@@ -41,11 +41,11 @@ The fixed source describes a breed; the independent dictionary readbacks do
 not establish the proposed ordinary pet use. Detailed-expression origin also
 remains unresolved at the animal-science/breed bibliography boundary.
 
-[Admission](admission.json) separates 196 independently accepted shard fields
-from canonical admission, which remains coordinator-owned. [Reuse](reuse.json)
-retains the unchanged core-159-v1 baseline of 3,927 groups and zero reused groups.
-The global denominator remains 4,087 groups. Native lookup/save/reopen,
-conversion/combined packaging, learner acceptance and release gates are pending.
+[Admission](admission.json) records 196 independently accepted shard fields;
+core-162-v1 admits all 196 fields in 49 groups. [Reuse](reuse.json) retains
+the unchanged core-159-v1 baseline of 3,927 groups and zero reused groups.
+The global denominator remains 4,087 groups. The integration evidence below
+records completed conversion, packaging and Windows x64 lookup/save/reopen.
 
 
 ## Approved rex annotation
