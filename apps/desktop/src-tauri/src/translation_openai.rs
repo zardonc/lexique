@@ -89,6 +89,7 @@ where
     }
     let url = endpoint(base, model, key)?;
     let client = reqwest::Client::builder()
+        .user_agent(concat!("Lexique/", env!("CARGO_PKG_VERSION")))
         .connect_timeout(std::time::Duration::from_secs(10))
         .redirect(reqwest::redirect::Policy::none())
         .build()
@@ -424,7 +425,9 @@ mod tests {
             let server = std::thread::spawn(move || {
                 let (mut socket, _) = listener.accept().unwrap();
                 let mut buffer = [0; 4096];
-                let _ = socket.read(&mut buffer);
+                let count = socket.read(&mut buffer).unwrap();
+                let headers = String::from_utf8_lossy(&buffer[..count]).to_ascii_lowercase();
+                assert!(headers.contains("user-agent: lexique/"));
                 write!(socket, "HTTP/1.1 200 OK\r\nContent-Type: {content_type}\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{body}", body.len()).unwrap();
             });
             let mut received = String::new();
