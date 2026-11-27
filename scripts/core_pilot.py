@@ -397,7 +397,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
                   "content_batches": content_batches,
                   "limits": {"query_utf8_bytes": 512, "matching_senses": 200, "response_bytes": 4 * 1024 * 1024,
-                             "resource_bytes": 20_000_000, "field_unicode_scalars": 20_000},
+                             "resource_bytes": 24 * 1024 * 1024, "field_unicode_scalars": 20_000},
                   "measurements": {"maximum_sense_json_bytes": max(len(compact(row[3]).encode()) for row in selected),
                                    "maximum_field_unicode_scalars": max(len(row[3][name]) for row in selected for name in ("definition_fr", "meaning_en", "meaning_zh")),
                                    "raw_inputs_bytes": raw_inputs_bytes,

@@ -517,6 +517,7 @@ class CorePilotPreparationTests(unittest.TestCase):
                             "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
                         )
             measurements = report["measurements"]
+            self.assertLessEqual(report["sqlite_bytes"], report["limits"]["resource_bytes"])
             expected_raw = sum((RESOURCE / name).stat().st_size for name in (*MATERIALS, "input-checksums.json"))
             expected_bundled = sum(
                 path.stat().st_size for path in (root / "first").iterdir()

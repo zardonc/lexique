@@ -11,8 +11,9 @@ import { compareLearning, fixtureSql, inspectPackage, readState, seedAudio } fro
 const [scenario, resources, binary, conjugation, frequency, curationPath, destinationPath, input] = process.argv.slice(2);
 assert.ok([scenario, resources, binary, conjugation, frequency, curationPath, destinationPath].every(Boolean),
   'Expected scenario, package, binary, conjugation, frequency, reviewed curation and new destination; backup/profile scenarios also take an input');
-assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'upgrade', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
+assert.ok(['pilot', 'batch', 'delivery', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'upgrade', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
+const contentVersion = JSON.parse(await readFile(resolve(resources, 'dictionary/core-pilot-79/report.json'), 'utf8')).content_version;
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
 const reviewed = JSON.parse(await readFile(resolve(curationPath, '..', 'field-review.json'), 'utf8'));
@@ -203,7 +204,7 @@ async function rate(record) {
 
 async function pilot() {
   assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin-core', 'builtin', 'builtin-fra-eng']);
-  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, curation.content_version);
+  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, contentVersion);
   await invoke('dictionary_settings', { order: ['builtin', 'builtin-fra-eng', 'builtin-core'] });
   const before = readState(destination);
   for (const field of ['digest', 'reference']) await rejected('vocabulary_save', {
@@ -312,7 +313,7 @@ async function contentBatch() {
   const saved = [];
   for (const [index, key] of [...new Set(groups.map((group) => group.headword))].entries()) {
     const result = await save(key, `batch-${issue}-${index}`);
-    assert.equal(result.record.reference.version, curation.content_version);
+    assert.equal(result.record.reference.version, contentVersion);
     saved.push(result);
   }
   const representative = issue === 115 ? saved.find(({ record }) => record.headword === 'tien') : saved[0];
@@ -371,6 +372,54 @@ async function review() {
   assert.deepEqual(cached.bytes, audio.bytes);
   await openRecord(record);
   evidence.checks.push({ check: 'Complete native lookup, resource-absent fallback and both review backs retain four-field senses, example association and selected audio after normal restart', status: 'passed' });
+}
+
+async function delivery() {
+  assert.ok(input, 'Expected the exact learner-packet selection');
+  const selected = JSON.parse(await readFile(resolve(input), 'utf8'));
+  assert.ok(selected.length > 0);
+  const actual = [];
+  for (const key of new Set(selected.map((sense) => sense.headword))) {
+    actual.push(...admitted(await invoke('dictionary_lookup', { key, dictionary_id: 'builtin-core' }), key));
+  }
+  for (const sense of selected) assert.deepEqual(actual.find((value) => value.sense_id === sense.sense_id), sense);
+  const saved = [];
+  for (const [index, key] of ['école', 'enfant', selected.at(-1).headword].entries()) saved.push(await save(key, `delivery-${index}`));
+  await query(saved.at(-1).record.headword);
+  await fields(page.locator('.dictionary-entry'), saved.at(-1).record.digest.map((item) => item.core));
+  const filename = join(destination, 'synthetic-cefr.tsv');
+  const header = 'word\ttag\tfreq_A1\tfreq_A2\tfreq_B1\tfreq_B2\tfreq_C1\tfreq_C2\tfreq_total\tlevel\n';
+  await writeFile(filename, header + 'école\tNOM\t0\t0\t0\t0\t0\t0\t0\tA1\n');
+  await page.getByRole('button', { name: 'Settings', exact: true }).click();
+  await page.locator('.cefr-settings input[type=file]').setInputFiles(filename);
+  await expect.poll(async () => (await invoke('cefr_settings')).row_count).toBe(1);
+  await openRecord(saved[0].record);
+  await expect(page.locator('.vocabulary-summary .core-sense .cefr-badge')).toHaveText('A1');
+  const before = readState(destination);
+  await fixture.stop(true); await start();
+  assert.equal((await invoke('cefr_settings')).row_count, 1);
+  await openRecord(saved[0].record);
+  await expect(page.locator('.vocabulary-summary .core-sense .cefr-badge')).toHaveText('A1');
+  for (const value of saved) assert.deepEqual(await invoke('vocabulary_find', { headword: value.record.headword }), value.record);
+  compareLearning(readState(destination), before);
+  await page.getByRole('button', { name: 'Settings', exact: true }).click();
+  await writeFile(filename, 'Invalid synthetic replacement');
+  await page.locator('.cefr-settings input[type=file]').setInputFiles(filename);
+  await expect(page.locator('.cefr-settings [role=alert]')).toBeVisible();
+  assert.equal((await invoke('cefr_settings')).row_count, 1);
+  await writeFile(filename, header + 'école\tNOM\t0\t0\t0\t0\t0\t0\t0\tA2\n');
+  await page.locator('.cefr-settings input[type=file]').setInputFiles(filename);
+  await expect(page.locator('.cefr-settings [role=alert]')).toHaveCount(0);
+  await openRecord(saved[0].record);
+  await expect(page.locator('.vocabulary-summary .core-sense .cefr-badge')).toHaveText('A2');
+  await page.getByRole('button', { name: 'Settings', exact: true }).click();
+  await page.locator('.cefr-settings button').last().click();
+  await expect.poll(async () => (await invoke('cefr_settings')).row_count).toBeNull();
+  await openRecord(saved[0].record);
+  await expect(page.locator('.vocabulary-summary .cefr-badge')).toHaveCount(0);
+  compareLearning(readState(destination), before);
+  await page.screenshot({ path: join(destination, 'delivery-reopened.png'), fullPage: true });
+  evidence.checks.push({ check: 'Exact learner packet, long content, native synthetic TSV import/restart/rejection/replacement/removal, frozen saved digests', status: 'passed', selectedSenseIds: selected.map((sense) => sense.sense_id) });
 }
 
 async function helper(action, options = {}) {
@@ -674,7 +723,7 @@ async function replacement() {
     const current = await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' });
     assert.notEqual(current.source.version, record.reference.version);
     if (scenario === 'upgrade') {
-      assert.equal(current.source.version, curation.content_version);
+      assert.equal(current.source.version, contentVersion);
       admitted(current, 'être');
     } else assert.notEqual(senses(current).find((sense) => sense.frozen_row === 2).meaning_zh, record.digest.find((entry) => entry.core?.frozen_row === 2).core.meaning_zh);
     await query('être'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
@@ -726,6 +775,7 @@ try {
   await start();
   if (['pilot', 'no-speech'].includes(scenario)) await pilot();
   else if (scenario === 'batch') await contentBatch();
+  else if (scenario === 'delivery') await delivery();
   else if (scenario === 'review') await review();
   else if (scenario === 'catalogue') await catalogue();
   else if (['missing', 'corrupt', 'future'].includes(scenario)) await lifecycle();
