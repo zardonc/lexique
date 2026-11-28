@@ -8,7 +8,7 @@
 
 使用用户提供的私密凭据在独立 Windows 原生实例中进行真实服务调用：DeepL Free 的连接测试和翻译通过；提交 `d57d5a7bcc60d8db48600963272e30f517a66113` 的 OpenAI 兼容远端服务临时凭据连接测试、保存凭据后的连接测试及真实翻译通过。测试凭据已清除，未记录密钥或译文。
 
-基于 `a9b1f7c` 的审查修正工作区：服务独立配置与连接测试浏览器回归、翻译定向浏览器 7 项、桌面翻译相关 Rust 14 项、`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:test:build` 与 `pnpm test:rust` 通过。连接测试 IPC 和维护租约更改后尚未重复真实远端和完整原生旅程，也没有直接执行网络翻译与恢复并发的回归测试。
+审查修正提交 `d7c6eb9`：服务独立配置与连接测试浏览器回归、翻译定向浏览器 7 项、桌面翻译相关 Rust 14 项、`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:test:build` 与 `pnpm test:rust` 通过。Windows x64 原生隔离验证通过连接测试主机与耗时、流式超时、DPAPI 保存及重启清除，以及译文手动查词与本地语音；证据保留在 `target/issue-223/review-fix-native-01` 和 `review-fix-native-02`。连接测试 IPC 和维护租约更改后尚未重复真实远端和完整原生旅程，也没有直接执行网络翻译与恢复并发的回归测试。
 
 此原生检查未在同一旅程覆盖系统取词、OCR、模拟 DeepL、导入 MDX、凭据损坏恢复及备份恢复；也未验证 macOS、ARM64、全机断网或正式发行。浏览器模拟与本地服务不能代替真实远端服务验证。
 

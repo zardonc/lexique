@@ -37,6 +37,7 @@ try {
     const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
     node.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
   });
+  await page.getByRole('button', { name: '查询输入' }).click();
   await page.locator('.lookup-input .dictionary-original').waitFor({ timeout: 10_000 });
   await page.getByRole('button', { name: /播放例句: bonjour/ }).click();
   await page.waitForFunction(() => window.translationAudioPlays > 0, undefined, { timeout: 20_000 });

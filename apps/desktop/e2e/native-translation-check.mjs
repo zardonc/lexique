@@ -35,7 +35,7 @@ try {
     catch { rejected = true; }
     if (!rejected) throw new Error('URL credentials were accepted');
     const saved = await invoke('translation_settings', { locale: 'en', preferences, replacement: { provider: 'openai_compatible', key: 'fixture-secret' } });
-    await invoke('translation_test_connection', { preferences, replacement: null });
+    const connection = await invoke('translation_test_connection', { preferences, replacement: null });
     const translation = await invoke('translation_execute', { id: 'native-test', text: 'Bonjour', locale: 'en' });
     for (let i = 0; i < 40 && !kinds.includes('completed'); i++) await new Promise((done) => setTimeout(done, 25));
     await invoke('plugin:event|unlisten', { event: 'translation-progress', eventId });
@@ -47,9 +47,11 @@ try {
     catch (error) { timeoutError = String(error); }
     const timeoutMs = Date.now() - started;
     await invoke('translation_settings', { locale: 'en', preferences, replacement: null });
-    return { saved, translation, kinds, timeoutError, timeoutMs };
+    return { saved, connection, translation, kinds, timeoutError, timeoutMs };
   }, baseUrl);
   assert.equal(result.saved.keys.openai_compatible, 'configured');
+  assert.equal(result.connection.host, '127.0.0.1');
+  assert.ok(Number.isFinite(result.connection.elapsed_ms) && result.connection.elapsed_ms >= 0);
   assert.deepEqual(result.translation, { text: 'Hello', source: 'fr', target: 'en' });
   assert.deepEqual(result.kinds, ['started', 'delta', 'completed']);
   assert.equal(result.timeoutError, 'network_or_timeout');
