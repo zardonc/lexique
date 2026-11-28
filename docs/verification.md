@@ -1,16 +1,22 @@
 # 骨架验证记录
 
-## 翻译页查词与本地语音（#225、#226）
+## 在线翻译、查词与本地语音（#223–#226）
 
-2026-11-27，Windows x64 使用隔离数据目录和真实 WebView2：本地模拟 OpenAI 兼容 SSE 返回法语译文，选中译文查到随包离线词典，复用现有 Supertonic 3 资源调用本地播放；测试退出后 host、worker 与辅助进程均为零。浏览器全量 492 项通过；新增语音长度及迟到预览取消测试另在翻译定向套件通过。
+验证源码为 `babecc3cecf251a6ce17644eca558f81671fb8bb`，平台为 Windows x64、真实 WebView2 与隔离合成学习数据。证据根目录为 `C:/Users/inthe/.t3/worktrees/lexique/codex-online-translatio-65ba996360d3899f/target/`。代码规范及 #222 规格两轴源码审查在本工作区完成；差异保留为 `translation-review-runtime.patch` 和 `translation-review-tests.patch`。
 
-执行 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust`、`cargo test --locked -p lexique-desktop --lib`、`pnpm test:docs`、`pnpm test:e2e` 及 `pnpm desktop:build --no-bundle`；桌面库 180 项通过、2 项既有忽略。原生检查使用 `pnpm --filter @lexique/desktop exec node e2e/native-translation-speech-check.mjs`，传入隔离资源、构建产物与新建目标目录。
+`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust`、`pnpm test:docs` 与 `pnpm desktop:build --no-bundle` 通过。`cargo test --locked -p lexique-desktop --lib translation_` 20 项通过；`pnpm --filter @lexique/desktop exec playwright test translation.spec.ts selection.spec.ts ocr.spec.ts --workers=2` 39 项通过。后端执行保留硬性 60 秒限制，首次编译在执行预算之外；日志为证据根下的 `translation-final-*.log`、`translation-delivery-*.log`、`translation-current-rust-*.log` 与 `translation-current-test-rust.log`。
 
-使用用户提供的私密凭据在独立 Windows 原生实例中进行真实服务调用：DeepL Free 的连接测试和翻译通过；提交 `d57d5a7bcc60d8db48600963272e30f517a66113` 的 OpenAI 兼容远端服务临时凭据连接测试、保存凭据后的连接测试及真实翻译通过。测试凭据已清除，未记录密钥或译文。
+回归覆盖自动语言未确定时的 `lang`／朗读状态、显式法语流式及不完整状态、分块和重复推理内容过滤、DeepL 回退共用总时限、OpenAI 首内容／空闲／总时限和大小上限、IPC 输入校验、保存当前服务与独立密钥草稿、三语界面、源／目标选区、复制与语言互换、取消、未保存笔记保护、浏览器原生能力提示及 Lite 语音不可用。
 
-审查修正提交 `d7c6eb9`：服务独立配置与连接测试浏览器回归、翻译定向浏览器 7 项、桌面翻译相关 Rust 14 项、`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:test:build` 与 `pnpm test:rust` 通过。Windows x64 原生隔离验证通过连接测试主机与耗时、流式超时、DPAPI 保存及重启清除，以及译文手动查词与本地语音；证据保留在 `target/issue-223/review-fix-native-01` 和 `review-fix-native-02`。连接测试 IPC 和维护租约更改后尚未重复真实远端和完整原生旅程，也没有直接执行网络翻译与恢复并发的回归测试。
+Windows 原生检查分为独立的 60 秒批次；从 `apps/desktop/` 执行 `pnpm exec node e2e/<脚本>`，资源为 `../../target/issue-223/speech-resources`，构建产物为 `../../target/release/lexique-desktop.exe`，每批使用新的隔离目标目录：
 
-此原生检查未在同一旅程覆盖系统取词、OCR、模拟 DeepL、导入 MDX、凭据损坏恢复及备份恢复；也未验证 macOS、ARM64、全机断网或正式发行。浏览器模拟与本地服务不能代替真实远端服务验证。
+- `native-translation-check.mjs`：模拟 OpenAI SSE、连接主机与耗时、30 秒首内容超时、DPAPI 保存／重启／清除；证据为 `issue-223/delivery-mock/`。
+- `native-translation-state-check.mjs`：网络翻译等待期间完成真实备份恢复、服务设置和密钥不进入学习备份、恢复保留当前设置与密钥、单槽不可解密恢复、整文件损坏的原始字节保留及重新配置；证据为 `issue-223/delivery-state/`。
+- `native-translation-speech-check.mjs`：法语译文显式查询随包离线词典并实际调用本地 Supertonic 3 播放；证据为 `issue-223/delivery-speech/`。
+- `native-selection-check.mjs` 与 `native-ocr-check.mjs`：真实系统／网页／长文本取词、多屏离线 OCR、语言切换、显式查词、未保存笔记保护、词典故障后恢复及学习数据／受保护音频的重启保留；分别 7 项和 8 项通过，证据为 `issue-223/delivery-selection/` 与 `issue-223/delivery-ocr/`。额外参数为 `../../target/release/conjugation`、`../../target/release/frequency` 和合成夹具 `../../target/issue-223/current-retention-01/Lexique-data`。
+- 用户提供的私密凭据经原生 IPC 执行 OpenAI 兼容远端和 DeepL Free 的连接测试及真实翻译，两者通过；仅保存结果状态，密钥随后清除，证据为 `issue-223/delivery-real/`。各批次 `cleanup.json` 确认 host、worker 与辅助进程均为零。
+
+限制：DeepL 模拟服务只在 Rust 适配器边界执行，尚无模拟 DeepL 的原生 IPC 旅程；没有验证 macOS、ARM64、全机断网或正式发行。整份凭据文件损坏时，清除／替换会保留原始加密文件副本，但可能需要重新配置两个服务。源码审查未进行新的独立复审。
 
 ## 语法交换最终审查修正（#212）
 
