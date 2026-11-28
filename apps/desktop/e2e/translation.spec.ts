@@ -27,6 +27,38 @@ test('saved settings failure reports its safe diagnostic', async ({ page }) => {
   await expect(page.getByText(/保存的翻译设置已损坏/)).toBeVisible();
 });
 
+for (const diagnostic of ['Could not open database: unable to open database file', 'Invalid credentials file', 'Corrupt credentials file: expected value', 'Invalid credential', 'Could not access translation settings: task panicked']) {
+  test(`settings failure retains ${diagnostic}`, async ({ page }) => {
+    await nativeFixture(page, { translation_settings: [{ error: diagnostic }] });
+    await page.goto('/');
+    await page.getByRole('button', { name: '设置', exact: true }).click();
+    await expect(page.getByText(diagnostic, { exact: false })).toBeVisible();
+  });
+}
+
+test('control characters in source text and replacement keys report invalid requests before IPC', async ({ page }) => {
+  await nativeFixture(page, { translation_settings: [{ value: configured }, { value: configured }] });
+  await page.goto('/');
+  await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 1, text: 'hello\x07world' }));
+  await page.locator('.lookup-input').getByRole('button', { name: '翻译', exact: true }).click();
+  await expect(page.getByText(/请求无效，请检查文本和服务设置/)).toBeVisible();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'translation_execute'))).toHaveLength(0);
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  await page.getByLabel('替换 API 密钥').first().fill('fixture\x07key');
+  await page.getByRole('button', { name: '保存服务设置' }).first().click();
+  await expect(page.getByText(/服务设置操作失败: 请求无效，请检查文本和服务设置/)).toBeVisible();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'translation_settings' && call.args?.replacement))).toHaveLength(0);
+});
+
+test('invalid translation response is distinguished from invalid input', async ({ page }) => {
+  await nativeFixture(page, { translation_settings: [{ value: configured }], translation_execute: [{ value: { text: 'Bonjour', source: 'IT', target: 'fr' } }] });
+  await page.goto('/');
+  await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 1, text: 'Hello' }));
+  await page.locator('.lookup-input').getByRole('button', { name: '翻译', exact: true }).click();
+  await expect(page.getByText(/服务返回了无效响应/)).toBeVisible();
+  await expect(page.locator('.lookup-input pre')).toHaveCount(0);
+});
+
 test('browser preview reports translation as native-only', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: '翻译', exact: true }).click();
@@ -177,10 +209,11 @@ test('explicit French source speech is hidden during streaming and incomplete tr
   await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'translation_execute').length)).toBe(1);
   await page.evaluate(() => { const call = window.testNative.calls.find((item) => item.command === 'translation_execute'); window.testNative.emit('translation-progress', { id: call?.args?.id, kind: 'delta', text: 'Hello', source: 'fr', target: 'en' }); });
   await expect(page.getByRole('button', { name: /播放例句: Bonjour/ })).toHaveCount(0);
-  await expect(page.getByLabel('原文', { exact: true })).not.toHaveAttribute('lang');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveAttribute('lang', 'fr');
   await page.evaluate(() => window.testNative.release('incomplete-source'));
   await expect(page.getByText('译文不完整，请重试。')).toBeVisible();
   await expect(page.getByRole('button', { name: /播放例句: Bonjour/ })).toHaveCount(0);
+  await expect(page.getByLabel('原文', { exact: true })).toHaveAttribute('lang', 'fr');
 });
 
 test('captured text is sent only after Translate and editing cancels the request', async ({ page }) => {

@@ -115,7 +115,10 @@ async fn runtime_status(
 }
 
 pub fn run() {
-    tauri::Builder::default()
+    let builder = tauri::Builder::default();
+    #[cfg(all(test, windows))]
+    let builder = builder.any_thread();
+    builder
         .manage(vocabulary::CloseAuthorization::default())
         .manage(maintenance::MaintenanceCoordinator::default())
         .manage(note_import::NoteImportState::default())

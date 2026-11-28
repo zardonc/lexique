@@ -64,13 +64,13 @@ function InputResults({ input, locale, onDictionary }: {
 }
 
 function sourceLanguage(translation: ReturnType<typeof useTranslation>) {
-  if (translation.busy || (translation.result && !translation.complete)) return undefined;
   const language = translation.settings?.preferences.source_language;
-  return language === 'auto' ? (translation.complete && translation.result?.source !== 'auto' ? translation.result?.source : undefined) : language;
+  return language === 'auto' ? (!translation.busy && translation.complete && translation.result?.source !== 'auto' ? translation.result?.source : undefined) : language;
 }
 
-function SourceSpeech({ language, raw, runtime, locale, playbackKey, visible }: { readonly language?: string; readonly raw: string; readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly playbackKey: string; readonly visible: boolean }) {
-  return visible && language === 'fr' ? <ExampleSpeech key={playbackKey} value={raw} runtime={runtime} text={notebookMessages[locale]} /> : null;
+function SourceSpeech({ translation, raw, runtime, locale, visible }: { readonly translation: ReturnType<typeof useTranslation>; readonly raw: string; readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly visible: boolean }) {
+  const ready = !translation.busy && (!translation.result || translation.complete);
+  return visible && ready && sourceLanguage(translation) === 'fr' ? <ExampleSpeech key={`${translation.settings?.preferences.source_language}-${translation.busy}-${translation.saving}`} value={raw} runtime={runtime} text={notebookMessages[locale]} /> : null;
 }
 
 function useQuerySelection(raw: string, selection?: SelectionEvent) {
@@ -116,7 +116,7 @@ export function LookupInputPanel({ runtime, locale, selection, onCancel, onDicti
         autoCapitalize="none" autoCorrect="off" spellCheck={false}
         onSelect={(event) => query.source(event.currentTarget)}
         onChange={(event) => { query.clear(); ocr.stop(); if (selection) onCancel(); edit(event.target.value); }} />
-      <SourceSpeech language={resolvedSource} visible={visible} playbackKey={`${selectedLanguage}-${translation.busy}-${translation.saving}`} raw={raw} runtime={runtime} locale={locale} />
+      <SourceSpeech translation={translation} visible={visible} raw={raw} runtime={runtime} locale={locale} />
       <p className="dictionary-hint">{text.hint}</p>
       {raw && !query.valid && <p>{text.long}</p>}
       <div className="actions"><button type="submit" disabled={lookupDisabled(input.loading, capturing, query.valid)}>{input.loading ? dictionaryText.loading : text.query}</button>

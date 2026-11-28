@@ -8,9 +8,10 @@ import { native24Fixture } from './native-24-harness.mjs';
 assert.equal(process.argv.length, 5, 'Expected package, binary and new destination');
 const [resources, binary, destination] = process.argv.slice(2).map((path) => resolve(path));
 const server = createServer((request, response) => {
-  if (request.url === '/slow/v1/chat/completions') {
+  if (request.url === '/slow/v1/chat/completions' || request.url === '/pending/v1/chat/completions') {
     response.writeHead(200, { 'Content-Type': 'text/event-stream' });
     response.flushHeaders();
+    if (request.url.startsWith('/pending/')) response.write('data: {"choices":[{"delta":{"content":"SOURCE=fr;TARGET=en\\nHel"}}]}\n\n');
     return;
   }
   assert.equal(request.url, '/v1/chat/completions');
@@ -29,6 +30,11 @@ try {
     const handler = window.__TAURI_INTERNALS__.transformCallback((event) => { if (event.payload.id === 'native-test') kinds.push(event.payload.kind); });
     const eventId = await invoke('plugin:event|listen', { event: 'translation-progress', target: { kind: 'Any' }, handler });
     const initial = await invoke('translation_settings', { locale: 'en', preferences: null, replacement: null });
+    for (const active_provider of ['disabled', 'deepl']) {
+      const blank = { ...initial.preferences, active_provider, openai_compatible: { base_url: '   ', model: '' } };
+      const savedBlank = await invoke('translation_settings', { locale: 'en', preferences: blank, replacement: null });
+      if (savedBlank.preferences.active_provider !== active_provider) throw new Error('Active provider was not saved');
+    }
     const preferences = { ...initial.preferences, active_provider: 'openai_compatible', source_language: 'fr', target_language: 'en', openai_compatible: { base_url: url, model: 'fixture' } };
     let rejected = false;
     try { await invoke('translation_settings', { locale: 'en', preferences: { ...preferences, openai_compatible: { base_url: 'https://user:secret@example.com/v1', model: 'fixture' } }, replacement: null }); }
@@ -56,6 +62,23 @@ try {
   assert.deepEqual(result.kinds, ['started', 'delta', 'completed']);
   assert.equal(result.timeoutError, 'network_or_timeout');
   assert.ok(result.timeoutMs >= 29_000 && result.timeoutMs < 36_000);
+  await page.evaluate(async (url) => {
+    const invoke = window.__TAURI_INTERNALS__.invoke;
+    const initial = await invoke('translation_settings', { locale: 'zh', preferences: null, replacement: null });
+    await invoke('translation_settings', { locale: 'zh', preferences: { ...initial.preferences, openai_compatible: { base_url: url, model: 'fixture' } }, replacement: null });
+  }, baseUrl.replace('/v1', '/pending/v1'));
+  await page.getByRole('button', { name: '翻译', exact: true }).first().click();
+  await page.getByLabel('原文', { exact: true }).fill('Bonjour');
+  await page.locator('.lookup-input').getByRole('button', { name: '翻译', exact: true }).click();
+  await page.locator('.lookup-input pre').filter({ hasText: 'Hel' }).waitFor();
+  assert.equal(await page.getByLabel('原文', { exact: true }).getAttribute('lang'), 'fr');
+  assert.equal(await page.getByRole('button', { name: /播放例句: Bonjour/ }).count(), 0);
+  await page.locator('.lookup-input').getByRole('button', { name: '取消', exact: true }).click();
+  await page.evaluate(async (url) => {
+    const invoke = window.__TAURI_INTERNALS__.invoke;
+    const initial = await invoke('translation_settings', { locale: 'en', preferences: null, replacement: null });
+    await invoke('translation_settings', { locale: 'en', preferences: { ...initial.preferences, openai_compatible: { base_url: url, model: 'fixture' } }, replacement: null });
+  }, baseUrl);
   const ciphertext = await readFile(join(destination, 'Lexique-data/config/service-credentials.json'), 'utf8');
   assert.ok(!ciphertext.includes('fixture-secret'));
   await fixture.stop(true);
@@ -66,7 +89,7 @@ try {
   await restarted.evaluate(() => window.__TAURI_INTERNALS__.invoke('translation_clear_key', { provider: 'openai_compatible' }));
   const cleared = await restarted.evaluate(() => window.__TAURI_INTERNALS__.invoke('translation_settings', { locale: 'en', preferences: null, replacement: null }));
   assert.equal(cleared.keys.openai_compatible, 'missing');
-  await writeFile(join(destination, 'translation-result.json'), JSON.stringify({ nativeIpc: true, sse: true, dpapi: true, restart: true, clear: true }));
+  await writeFile(join(destination, 'translation-result.json'), JSON.stringify({ nativeIpc: true, sse: true, dpapi: true, restart: true, clear: true, blankSettings: true, sourceLang: true, streamingSpeechGate: true }));
   await fixture.stop(true);
 } finally {
   if (fixture) await fixture.finish();

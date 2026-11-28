@@ -10,7 +10,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 import { D2_ISSUE_DIRECTORIES } from './native-backup-state.mjs';
 
-export async function native24Fixture(packagePath, binaryPath, destinationPath) {
+export async function native24Fixture(packagePath, binaryPath, destinationPath, hostArguments = []) {
   const destination = resolve(destinationPath);
   assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59', 'issue-65', 'issue-66', 'issue-75', ...D2_ISSUE_DIRECTORIES, 'grammar-classification', 'issue-189', 'review-fixes', 'ticket-201', 'ticket-213', 'ticket-214', 'ticket-215', 'ticket-216', 'ticket-217', 'issue-223'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
   await mkdir(destination);
@@ -58,7 +58,7 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
   async function startHost(additionalBrowserArguments = '') {
     assert.deepEqual(executablePids(executable), [], 'Do not launch over an existing owned host');
     stopping = false;
-    child = spawn(executable, [], { cwd: destination, windowsHide: true,
+    child = spawn(executable, hostArguments, { cwd: destination, windowsHide: true,
       env: { ...process.env, WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--disable-gpu --autoplay-policy=no-user-gesture-required --remote-debugging-port=${port} ${additionalBrowserArguments}` } });
     currentHostPid = child.pid;
     diagnostic('host-start', { pid: child.pid });

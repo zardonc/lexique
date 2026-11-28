@@ -25,13 +25,13 @@ export function useTranslation(runtime: RuntimeAdapter, locale: Locale, { raw, v
   const [complete, setComplete] = useState(false);
   const [saving, setSaving] = useState(false);
   const active = useRef<string | undefined>(undefined);
-  useEffect(() => { let live = true; if (visible) void runtime.translationSettings(locale).then((value) => { if (live) setSettings(value); }).catch((error: unknown) => { if (live) setStatus(String(error)); }); return () => { live = false; }; }, [runtime, locale, visible]);
+  useEffect(() => { let live = true; if (visible) void runtime.translationSettings(locale).then((value) => { if (live) setSettings(value); }).catch((error: unknown) => { if (live) setStatus(translationError(locale, error)); }); return () => { live = false; }; }, [runtime, locale, visible]);
   function cancel() { const id = active.current; active.current = undefined; if (id) void runtime.cancelTranslation(id).catch(() => {}); setBusy(false); setComplete(false); setResult(undefined); }
   useEffect(() => () => { const id = active.current; active.current = undefined; if (id) void runtime.cancelTranslation(id).catch(() => {}); }, [runtime]);
   async function change(preferences: TranslationPreferences) {
     cancel(); setSaving(true); setStatus('');
     try { const next = await runtime.translationSettings(locale, preferences); if (next) setSettings(next); }
-    catch (error: unknown) { setStatus(String(error)); } finally { setSaving(false); }
+    catch (error: unknown) { setStatus(translationError(locale, error)); } finally { setSaving(false); }
   }
   async function translate() {
     cancel(); const id = crypto.randomUUID(); active.current = id; setBusy(true); setStatus('');
@@ -41,7 +41,7 @@ export function useTranslation(runtime: RuntimeAdapter, locale: Locale, { raw, v
       if (active.current !== id) return;
       const value = await runtime.translate(id, raw, locale); if (active.current === id) { setResult(value); setComplete(true); }
     }
-    catch (error: unknown) { if (active.current === id) setStatus(String(error)); }
+    catch (error: unknown) { if (active.current === id) setStatus(translationError(locale, error)); }
     finally { unlisten?.(); if (active.current === id) { active.current = undefined; setBusy(false); } }
   }
   return { settings, result, status, setStatus, busy, complete, saving, cancel, change, translate };

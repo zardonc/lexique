@@ -79,7 +79,10 @@ pub(crate) async fn translation_settings(
         if config.model.len() > 256 || config.model.chars().any(char::is_control) {
             return Err("invalid_request".into());
         }
-        if !config.base_url.is_empty() {
+        if config.base_url.len() > 512 || config.base_url.chars().any(char::is_control) {
+            return Err("invalid_request".into());
+        }
+        if !config.base_url.trim().is_empty() {
             let model = if config.model.trim().is_empty() {
                 "placeholder"
             } else {

@@ -29,26 +29,32 @@ const replacementSchema = z.object({ provider: providerSchema, key: keySchema })
 const idSchema = z.string().min(1).max(128).refine((value) => !/\p{Cc}/u.test(value));
 const textSchema = z.string().refine((value) => !!value.trim() && Array.from(value).length <= 5000 && !Array.from(value).some((char) => /\p{Cc}/u.test(char) && !['\n', '\r', '\t'].includes(char)));
 
+function parseRequest<T>(schema: z.ZodType<T>, value: unknown): T {
+  const parsed = schema.safeParse(value);
+  if (!parsed.success) throw new Error('invalid_request');
+  return parsed.data;
+}
+
 export const translationRuntime = {
   async translationSettings(locale: Locale, preferences?: TranslationPreferences, replacement?: Replacement): Promise<TranslationSettings | null> {
     if (!isTauri()) return null;
-    return translationSettingsSchema.parse(await invoke('translation_settings', { locale, preferences: preferences ? translationPreferencesSchema.parse(preferences) : null, replacement: replacement ? replacementSchema.parse(replacement) : null }));
+    return translationSettingsSchema.parse(await invoke('translation_settings', { locale, preferences: preferences ? parseRequest(translationPreferencesSchema, preferences) : null, replacement: replacement ? parseRequest(replacementSchema, replacement) : null }));
   },
   async translationClearKey(provider: Replacement['provider']) {
     if (!isTauri()) throw new Error('Translation services are available in the desktop app only');
-    await invoke('translation_clear_key', { provider: providerSchema.parse(provider) });
+    await invoke('translation_clear_key', { provider: parseRequest(providerSchema, provider) });
   },
   async translate(id: string, text: string, locale: Locale): Promise<TranslationResult> {
     if (!isTauri()) throw new Error('Translation is available in the desktop app only');
-    return translationResultSchema.parse(await invoke('translation_execute', { id: idSchema.parse(id), text: textSchema.parse(text), locale }));
+    return translationResultSchema.parse(await invoke('translation_execute', { id: parseRequest(idSchema, id), text: parseRequest(textSchema, text), locale }));
   },
-  async cancelTranslation(id: string) { if (isTauri()) await invoke('translation_cancel', { id: idSchema.parse(id) }); },
+  async cancelTranslation(id: string) { if (isTauri()) await invoke('translation_cancel', { id: parseRequest(idSchema, id) }); },
   async listenTranslation(callback: (value: z.infer<typeof translationDeltaSchema>) => void) {
     if (!isTauri()) return () => {};
     return listen('translation-progress', (event) => { const value = translationProgressSchema.parse(event.payload); if (value.kind === 'delta') callback(value); });
   },
   async testTranslationConnection(preferences: TranslationPreferences, replacement?: Replacement) {
     if (!isTauri()) throw new Error('Translation services are available in the desktop app only');
-    return z.object({ host: z.string(), elapsed_ms: z.number().nonnegative() }).strict().readonly().parse(await invoke('translation_test_connection', { preferences: translationPreferencesSchema.parse(preferences), replacement: replacement ? replacementSchema.parse(replacement) : null }));
+    return z.object({ host: z.string(), elapsed_ms: z.number().nonnegative() }).strict().readonly().parse(await invoke('translation_test_connection', { preferences: parseRequest(translationPreferencesSchema, preferences), replacement: replacement ? parseRequest(replacementSchema, replacement) : null }));
   },
 };
