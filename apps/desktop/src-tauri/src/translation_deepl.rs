@@ -3,6 +3,37 @@ mod tests {
     use super::*;
 
     #[test]
+    fn total_deadline_includes_french_fallback() {
+        use std::io::{Read, Write};
+        let listener = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+        let endpoint = format!("http://{}/translate", listener.local_addr().unwrap());
+        let worker = std::thread::spawn(move || {
+            for _ in 0..2 {
+                let (mut socket, _) = listener.accept().unwrap();
+                let mut request = [0; 4096];
+                socket.read(&mut request).unwrap();
+                std::thread::sleep(TOTAL_TIMEOUT * 3 / 4);
+                let body = r#"{"translations":[{"text":"你好","detected_source_language":"ZH"}]}"#;
+                let _ = write!(
+                    socket,
+                    "HTTP/1.1 200 OK\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{body}",
+                    body.len()
+                );
+            }
+        });
+        let runtime = tokio::runtime::Runtime::new().unwrap();
+        let result = runtime.block_on(async {
+            tokio::time::timeout(
+                TOTAL_TIMEOUT * 2,
+                translate(&endpoint, "fixture", "你好", "auto", "zh-CN"),
+            )
+            .await
+        });
+        worker.join().unwrap();
+        assert_eq!(result.unwrap().unwrap_err(), "network_or_timeout");
+    }
+
+    #[test]
     fn input_validation_rejects_blank_oversized_and_control_characters() {
         assert!(!valid_text(" \n\t"));
         assert!(!valid_text(&"x".repeat(5001)));
@@ -163,6 +194,11 @@ pub(crate) fn valid_text(text: &str) -> bool {
             .any(|ch| ch.is_control() && !matches!(ch, '\n' | '\r' | '\t'))
 }
 
+#[cfg(not(test))]
+const TOTAL_TIMEOUT: Duration = Duration::from_secs(30);
+#[cfg(test)]
+const TOTAL_TIMEOUT: Duration = Duration::from_millis(400);
+
 pub(crate) async fn translate_deepl(
     tier: &lexique_storage::DeeplTier,
     key: &str,
@@ -196,7 +232,7 @@ async fn translate(
         .redirect(reqwest::redirect::Policy::none())
         .build()
         .map_err(|_| "network_or_timeout")?;
-    tokio::time::timeout(Duration::from_secs(30), async {
+    tokio::time::timeout(TOTAL_TIMEOUT, async {
         let first = request(&client, endpoint, key, text, source, target_code).await?;
         let detected = detected_language(&first.detected_source_language)?;
         if source == "auto" && target != "fr" && detected == target {

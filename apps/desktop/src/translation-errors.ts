@@ -8,5 +8,10 @@ const messages: Record<Locale, Record<string, string>> = {
 
 export function translationError(locale: Locale, error: unknown): string {
   const code = typeof error === 'string' ? error : error instanceof Error ? error.message : '';
-  return messages[locale][code] ?? messages[locale].unknown;
+  const key = code.split(':', 1)[0] ?? '';
+  const detail = /\(OS code (?:Some\()?(-?\d+)\)?\)/u.exec(code)?.[1];
+  const context = code.includes('Invalid saved translation preferences') ? { zh: '保存的翻译设置已损坏。', en: 'Saved translation preferences are invalid.', fr: 'Les paramètres de traduction enregistrés sont invalides.' }[locale]
+    : key === 'maintenance_busy' ? { zh: '数据维护正在进行，请稍后重试。', en: 'Data maintenance is in progress; retry later.', fr: 'Maintenance des données en cours ; réessayez.' }[locale]
+      : messages[locale][key] ?? messages[locale].unknown;
+  return detail ? `${context} (OS ${detail})` : context;
 }

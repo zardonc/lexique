@@ -60,19 +60,24 @@ async function capture(monitor, key, name) {
   input('drag', '-X', String(source.x + 4), '-Y', String(source.y + 4),
     '-EndX', String(source.x + 824), '-EndY', String(source.y + 224));
   await page.locator('.preferences select').first().selectOption('zh');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'zh-CN');
   await expect(page.getByRole('heading', { name: '翻译', exact: true })).toBeVisible();
   const preview = page.getByRole('img', { name: '截图预览', exact: true });
   await expect(preview).toBeVisible();
   const data = await preview.getAttribute('src');
   await writeFile(join(destination, `${name}.png`), Buffer.from(data.split(',')[1], 'base64'));
-  const field = page.getByLabel('法语原文', { exact: true });
+  const field = page.getByLabel('原文', { exact: true });
   try { await expect(field).toHaveValue(/L'école d'aujourd'hui\.\nOù est le café \?\nÇa coûte 10 euros\./, { timeout: 12_000 }); }
   catch (cause) { throw new Error(`Native OCR alerts: ${(await page.getByRole('alert').allTextContents()).join('; ')}; input: ${await field.inputValue()}; ${cause}`); }
   const dimensions = await preview.evaluate((image) => [image.naturalWidth, image.naturalHeight]);
   // Native pointer coordinates can round by one physical pixel at fractional DPI.
   assert.ok(Math.abs(dimensions[0] - 820) <= 1 && Math.abs(dimensions[1] - 220) <= 1, `Physical crop: ${dimensions}`);
   await expect(page.getByText('学校', { exact: true })).toHaveCount(0);
-  await field.evaluate((node) => { const offset = node.value.indexOf('école'); node.setSelectionRange(offset, offset + 5); });
+  const offset = (await field.inputValue()).indexOf('école');
+  assert.ok(offset >= 0);
+  await field.focus(); await field.press('Control+Home');
+  for (let i = 0; i < offset; i++) await field.press('ArrowRight');
+  for (let i = 0; i < 5; i++) await field.press('Shift+ArrowRight');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
   results.push({ check: `${name}: localized real global shortcut → physical screen region → automatic offline OCR → explicit dictionary lookup`, passed: true, locale: locale.code, source, bounds, viewports, dimensions });
@@ -94,11 +99,12 @@ try {
   await page.getByRole('button', { name: '翻译', exact: true }).click();
   await page.getByLabel('导入图片', { exact: true }).setInputFiles(resolve('e2e/fixtures/ocr-french.png'));
   await expect(page.getByRole('img', { name: '截图预览', exact: true })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('');
   await page.getByRole('button', { name: '识别文字', exact: true }).click();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue(/Où est le café \?/, { timeout: 12_000 });
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue(/Où est le café \?/, { timeout: 12_000 });
   results.push({ check: 'packaged local WASM and French model recognize imported PNG with external requests blocked', passed: true });
   await page.locator('.preferences select').first().selectOption('fr');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
   await page.getByRole('button', { name: 'Rechercher par capture', exact: true }).click();
   const localized = await overlays();
   assert.equal(JSON.parse(input('bounds', '-Title', captureLabels.fr.title, '-SourcePid', String(fixture.hostPid()))).length, monitors.length);
@@ -106,6 +112,7 @@ try {
   await expect.poll(() => page.context().browser().contexts().flatMap((context) => context.pages())
     .filter((candidate) => new URL(candidate.url()).searchParams.has('capture')).length).toBe(0);
   await page.locator('.preferences select').first().selectOption('zh');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'zh-CN');
   results.push({ check: 'screen button carries the French interface language to every overlay and native title; localized cancel closes all overlays', passed: true });
   const initial = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('ocr_shortcut', { shortcut: null }));
   assert.equal(initial.shortcut, 'Ctrl+Alt+Shift+O');
@@ -119,6 +126,7 @@ try {
   const primary = monitors.find((monitor) => monitor.primary);
   assert.ok(primary);
   await page.locator('.preferences select').first().selectOption('en');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await capture(primary, initial.registered ? 79 : 80, 'primary-default');
   await page.getByRole('button', { name: '设置', exact: true }).click();
   const selection = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('selection_shortcut', { shortcut: null }));
@@ -135,6 +143,7 @@ try {
   await expect(page.getByText('截图快捷键已保存。', { exact: true })).toBeVisible();
   const secondary = monitors.filter((monitor) => !monitor.primary);
   await page.locator('.preferences select').first().selectOption('fr');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
   if (!secondary.length) {
     results.push({ check: 'secondary monitor with negative origin and independent scaling', status: 'skipped', reason: 'Only the primary monitor is currently connected' });
     await capture(primary, 80, 'primary-custom');
@@ -142,7 +151,7 @@ try {
   shortcut(80); const screens = await overlays();
   await screens[0].keyboard.press('Escape');
   await expect.poll(() => page.context().pages().filter((candidate) => new URL(candidate.url()).searchParams.has('capture')).length).toBe(0);
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('');
   results.push({ check: 'Escape closes both capture windows and cancels the request', passed: true });
   await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list li').filter({ hasText: 'école' }).getByRole('button').click();

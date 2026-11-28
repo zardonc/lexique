@@ -32,12 +32,15 @@ function focusSource(pid) {
 }
 async function captured(page, raw) {
   await expect(page.getByRole('heading', { name: '翻译', exact: true })).toBeVisible();
-  try { await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue(raw, { timeout: 8000 }); }
+  try { await expect(page.getByLabel('原文', { exact: true })).toHaveValue(raw, { timeout: 8000 }); }
   catch (error) { throw new Error(`Native selection: ${(await page.getByRole('alert').allTextContents()).join('; ')}; ${error}`); }
   await expect(page.getByText('学校', { exact: true })).toHaveCount(0);
-  await page.getByLabel('法语原文', { exact: true }).evaluate((node) => {
-    const offset = node.value.indexOf('école'); node.setSelectionRange(offset, offset + 5);
-  });
+  const field = page.getByLabel('原文', { exact: true });
+  const offset = (await field.inputValue()).indexOf('école');
+  assert.ok(offset >= 0);
+  await field.focus(); await field.press('Control+Home');
+  for (let i = 0; i < offset; i++) await field.press('ArrowRight');
+  for (let i = 0; i < 5; i++) await field.press('Shift+ArrowRight');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
 }
@@ -109,15 +112,15 @@ try {
   await captured(page, raw);
   assert.deepEqual(snapshot(), before);
   results.push({ check: 'native unsaved-note guard preserves learning and selected audio', passed: true });
-  const dictionary = join(destination, 'dictionary/dictionary.sqlite3'), backup = dictionary + '.original';
-  await rename(dictionary, backup);
+  const dictionaries = ['dictionary.sqlite3', 'core-pilot-79/core.sqlite3', 'freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx'].map((name) => join(destination, 'dictionary', name));
+  for (const dictionary of dictionaries) await rename(dictionary, dictionary + '.original');
   try {
     shortcut('Lexique selection editor');
-    await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue(raw);
+    await expect(page.getByLabel('原文', { exact: true })).toHaveValue(raw);
     await page.getByRole('button', { name: '查询输入', exact: true }).click();
     await expect(page.getByRole('alert').filter({ hasText: 'Could not read resource' })).toBeVisible();
-    await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue(raw);
-  } finally { await rename(backup, dictionary); }
+    await expect(page.getByLabel('原文', { exact: true })).toHaveValue(raw);
+  } finally { for (const dictionary of dictionaries) await rename(dictionary + '.original', dictionary); }
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
   results.push({ check: 'missing dictionary keeps captured input; restoration permits retry', passed: true });

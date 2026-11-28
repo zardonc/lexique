@@ -111,7 +111,7 @@ where
         request = request.bearer_auth(key);
     }
     async {
-        let total_deadline = tokio::time::Instant::now() + std::time::Duration::from_secs(120);
+        let total_deadline = tokio::time::Instant::now() + STREAM_TIMEOUT * 4;
         let mut deadline = tokio::time::Instant::now() + STREAM_TIMEOUT;
         let mut response = tokio::time::timeout(STREAM_TIMEOUT, request.send())
             .await
@@ -245,7 +245,7 @@ impl ContentParser {
             if text.chars().any(|c| ('\u{4e00}'..='\u{9fff}').contains(&c)) {
                 "zh-CN"
             } else {
-                "fr"
+                "auto"
             }
         } else {
             source
@@ -274,32 +274,44 @@ impl ContentParser {
     }
 
     fn drain(&mut self, finished: bool) -> Result<String, &'static str> {
-        if self.stage == 0 {
-            let trimmed = self.pending.trim_start();
-            if trimmed.starts_with("<think>") {
-                if let Some(end) = self.pending.find("</think>") {
-                    self.pending.drain(..end + "</think>".len());
-                    self.stage = 4;
-                } else if finished {
-                    return Err("invalid_response");
+        while matches!(self.stage, 0 | 4) {
+            if self.stage == 0 {
+                let trimmed = self.pending.trim_start();
+                if trimmed.starts_with("<think>") {
+                    if let Some(end) = self.pending.find("</think>") {
+                        self.pending.drain(..end + "</think>".len());
+                        self.stage = 4;
+                    } else if finished {
+                        return Err("invalid_response");
+                    } else {
+                        return Ok(String::new());
+                    }
+                } else if "<think>".starts_with(trimmed) && !finished {
+                    return Ok(String::new());
                 } else {
+                    self.stage = 1;
+                }
+            }
+            if self.stage == 4 {
+                let start = self.pending.len() - self.pending.trim_start().len();
+                self.pending.drain(..start);
+                if self.pending.is_empty() && !finished {
                     return Ok(String::new());
                 }
-            } else if "<think>".starts_with(trimmed) && !finished {
-                return Ok(String::new());
-            } else {
-                self.stage = 1;
+                self.stage = 0;
             }
-        }
-        if self.stage == 4 {
-            let start = self.pending.len() - self.pending.trim_start().len();
-            self.pending.drain(..start);
-            if self.pending.is_empty() && !finished {
-                return Ok(String::new());
-            }
-            self.stage = 1;
         }
         if self.stage == 1 {
+            let trimmed = self.pending.trim_start();
+            if !finished
+                && (trimmed.is_empty() || ("SOURCE=".starts_with(trimmed) && trimmed.len() < 7))
+            {
+                return Ok(String::new());
+            }
+            if trimmed.starts_with("SOURCE=") {
+                let start = self.pending.len() - trimmed.len();
+                self.pending.drain(..start);
+            }
             if let Some(end) = self.pending.find('\n') {
                 let mut header = false;
                 if end <= 64 {
@@ -325,21 +337,31 @@ impl ContentParser {
                 return Ok(String::new());
             }
         }
-        if self.stage == 2 {
-            let trimmed = self.pending.trim_start();
-            if trimmed.starts_with("<think>") {
-                if let Some(end) = self.pending.find("</think>") {
-                    self.pending.drain(..end + "</think>".len());
-                    self.stage = 3;
-                } else if finished {
-                    return Err("invalid_response");
+        while matches!(self.stage, 2 | 5) {
+            if self.stage == 2 {
+                let trimmed = self.pending.trim_start();
+                if trimmed.starts_with("<think>") {
+                    if let Some(end) = self.pending.find("</think>") {
+                        self.pending.drain(..end + "</think>".len());
+                        self.stage = 5;
+                    } else if finished {
+                        return Err("invalid_response");
+                    } else {
+                        return Ok(String::new());
+                    }
+                } else if "<think>".starts_with(trimmed) && !finished {
+                    return Ok(String::new());
                 } else {
+                    self.stage = 3;
+                }
+            }
+            if self.stage == 5 {
+                let start = self.pending.len() - self.pending.trim_start().len();
+                self.pending.drain(..start);
+                if self.pending.is_empty() && !finished {
                     return Ok(String::new());
                 }
-            } else if "<think>".starts_with(trimmed) && !finished {
-                return Ok(String::new());
-            } else {
-                self.stage = 3;
+                self.stage = 2;
             }
         }
         let output = std::mem::take(&mut self.pending);
@@ -354,6 +376,93 @@ impl ContentParser {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn repeated_split_thinking_blocks_are_removed_before_and_after_header() {
+        for input in [
+            "<think>one</think>\n<think>two</think>\nSOURCE=fr;TARGET=en\nHello",
+            "SOURCE=fr;TARGET=en\n<think>one</think>\n<think>two</think>\nHello",
+        ] {
+            let mut parser = ContentParser::new("auto", "en", "Bonjour");
+            let mut output = String::new();
+            for chunk in input.as_bytes().chunks(3) {
+                output.push_str(&parser.push(std::str::from_utf8(chunk).unwrap()).unwrap());
+            }
+            output.push_str(&parser.finish().unwrap());
+            assert_eq!(output, "Hello");
+            assert_eq!(parser.source, "fr");
+        }
+    }
+
+    #[test]
+    fn idle_total_and_response_caps_abort_streams() {
+        use std::io::{Read, Write};
+        for mode in ["idle", "total", "raw", "output"] {
+            let listener = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+            let base = format!("http://{}/v1", listener.local_addr().unwrap());
+            let worker = std::thread::spawn(move || {
+                let (mut socket, _) = listener.accept().unwrap();
+                let mut request = [0; 4096];
+                socket.read(&mut request).unwrap();
+                socket.write_all(b"HTTP/1.1 200 OK\r\nContent-Type: text/event-stream\r\nConnection: close\r\n\r\n").unwrap();
+                if mode == "raw" {
+                    let _ = socket.write_all(&vec![b' '; 512 * 1024 + 1]);
+                } else if mode == "output" {
+                    let frame =
+                        serde_json::json!({"choices":[{"delta":{"content":"x".repeat(20_001)}}]});
+                    let _ = write!(socket, "data: {frame}\n\ndata: [DONE]\n\n");
+                } else {
+                    for index in 0..10 {
+                        if socket.write_all(b"data: {\"choices\":[{\"delta\":{\"content\":\"SOURCE=fr;TARGET=en\\nHello\\n\"}}]}\n\n").is_err() { break; }
+                        std::thread::sleep(if mode == "idle" && index == 0 {
+                            STREAM_TIMEOUT * 2
+                        } else {
+                            STREAM_TIMEOUT / 2
+                        });
+                    }
+                }
+            });
+            let runtime = tokio::runtime::Runtime::new().unwrap();
+            let mut partial = String::new();
+            let result = runtime.block_on(async {
+                tokio::time::timeout(
+                    STREAM_TIMEOUT * 5,
+                    translate(&base, "fixture", "", "Bonjour", "fr", "en", |text, _, _| {
+                        partial.push_str(text)
+                    }),
+                )
+                .await
+            });
+            worker.join().unwrap();
+            assert_eq!(
+                result
+                    .expect("adapter exceeded its total deadline")
+                    .unwrap_err(),
+                if mode == "idle" || mode == "total" {
+                    "network_or_timeout"
+                } else {
+                    "invalid_response"
+                }
+            );
+            if mode == "idle" || mode == "total" {
+                assert!(partial.starts_with("Hello"));
+            }
+        }
+    }
+
+    #[test]
+    fn headerless_auto_does_not_assume_french_and_strips_metadata_after_blank_lines() {
+        let mut parser = ContentParser::new("auto", "zh-CN", "Hello world");
+        assert_eq!(parser.push("Hello world").unwrap(), "");
+        assert_eq!(parser.finish().unwrap(), "Hello world");
+        assert_eq!(parser.source, "auto");
+        let mut parser = ContentParser::new("auto", "en", "Bonjour");
+        let output = parser
+            .push("\nSOURCE=fr;TARGET=en\n<think>secret</think>\nHello")
+            .unwrap();
+        assert_eq!(output, "Hello");
+        assert_eq!(parser.source, "fr");
+    }
 
     #[test]
     fn first_content_deadline_includes_wait_for_response_headers() {

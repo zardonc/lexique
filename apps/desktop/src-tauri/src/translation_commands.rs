@@ -59,6 +59,10 @@ fn state(store: &dyn CredentialStore, slot: &str) -> &'static str {
     }
 }
 
+fn valid_operation_id(id: &str) -> bool {
+    !id.is_empty() && id.len() <= 128 && !id.chars().any(char::is_control)
+}
+
 #[tauri::command]
 pub(crate) async fn translation_settings(
     path: State<'_, DatabasePath>,
@@ -164,7 +168,10 @@ pub(crate) async fn translation_execute(
     text: String,
     locale: String,
 ) -> Result<crate::translation_deepl::TranslationResult, String> {
-    if id.is_empty() || id.len() > 128 || !matches!(locale.as_str(), "zh" | "en" | "fr") {
+    if !valid_operation_id(&id)
+        || !crate::translation_deepl::valid_text(&text)
+        || !matches!(locale.as_str(), "zh" | "en" | "fr")
+    {
         return Err("invalid_request".into());
     }
     let (task, generation) = {
@@ -198,11 +205,11 @@ pub(crate) async fn translation_execute(
                         }
                         lexique_storage::TranslationProvider::Deepl => store
                             .read("deepl")
-                            .map_err(|_| "credential_unreadable")?
+                            .map_err(|error| format!("credential_unreadable: {error}"))?
                             .ok_or("credential_missing")?,
                         lexique_storage::TranslationProvider::OpenaiCompatible => store
                             .read("openai_compatible")
-                            .map_err(|_| "credential_unreadable")?
+                            .map_err(|error| format!("credential_unreadable: {error}"))?
                             .unwrap_or_default(),
                     };
                     Ok((preferences, key))
@@ -280,7 +287,7 @@ pub(crate) fn translation_cancel(
         .0
         .lock()
         .map_err(|_| "Could not cancel translation")?;
-    if id.is_empty() || id.len() > 128 {
+    if !valid_operation_id(&id) {
         return Err("invalid_request".into());
     }
     if current
@@ -308,9 +315,23 @@ pub(crate) async fn translation_test_connection(
     preferences: lexique_storage::TranslationPreferences,
     replacement: Option<ReplacementKey>,
 ) -> Result<ConnectionResult, String> {
-    if replacement
-        .as_ref()
-        .is_some_and(|value| value.key.len() > 4096 || value.key.chars().any(char::is_control))
+    if preferences.openai_compatible.model.len() > 256
+        || preferences
+            .openai_compatible
+            .model
+            .chars()
+            .any(char::is_control)
+        || preferences.openai_compatible.base_url.len() > 512
+        || preferences
+            .openai_compatible
+            .base_url
+            .chars()
+            .any(char::is_control)
+        || replacement.as_ref().is_some_and(|value| {
+            value.key.is_empty()
+                || value.key.len() > 4096
+                || value.key.chars().any(char::is_control)
+        })
     {
         return Err("invalid_request".into());
     }
@@ -319,6 +340,12 @@ pub(crate) async fn translation_test_connection(
         lexique_storage::TranslationProvider::OpenaiCompatible => "openai_compatible",
         lexique_storage::TranslationProvider::Disabled => return Err("unconfigured".into()),
     };
+    if replacement
+        .as_ref()
+        .is_some_and(|value| value.provider != slot)
+    {
+        return Err("invalid_request".into());
+    }
     let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     let key = tauri::async_runtime::spawn_blocking(move || -> Result<String, String> {
@@ -328,7 +355,7 @@ pub(crate) async fn translation_test_connection(
             Some(_) => return Err("invalid_request".into()),
             None => credentials(&path)?
                 .read(slot)
-                .map_err(|_| "credential_unreadable")?
+                .map_err(|error| format!("credential_unreadable: {error}"))?
                 .unwrap_or_default(),
         })
     })
@@ -404,6 +431,14 @@ pub(crate) struct ConnectionResult {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn operation_ids_reject_control_characters_and_excessive_length() {
+        assert!(valid_operation_id("request-123"));
+        assert!(!valid_operation_id(""));
+        assert!(!valid_operation_id("request\nother"));
+        assert!(!valid_operation_id(&"x".repeat(129)));
+    }
 
     struct Fixture;
     impl CredentialStore for Fixture {

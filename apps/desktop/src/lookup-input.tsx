@@ -64,8 +64,9 @@ function InputResults({ input, locale, onDictionary }: {
 }
 
 function sourceLanguage(translation: ReturnType<typeof useTranslation>) {
+  if (translation.busy || (translation.result && !translation.complete)) return undefined;
   const language = translation.settings?.preferences.source_language;
-  return language === 'auto' ? translation.result?.source : language;
+  return language === 'auto' ? (translation.complete && translation.result?.source !== 'auto' ? translation.result?.source : undefined) : language;
 }
 
 function SourceSpeech({ language, raw, runtime, locale, playbackKey, visible }: { readonly language?: string; readonly raw: string; readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly playbackKey: string; readonly visible: boolean }) {
@@ -80,7 +81,7 @@ function useQuerySelection(raw: string, selection?: SelectionEvent) {
   return { selected, valid: dictionaryQuery.safeParse(selected.trim()).success,
     clear: () => { setTarget(''); setSource(''); },
     source: (node: HTMLTextAreaElement) => { setTarget(''); setSource(raw.slice(node.selectionStart, node.selectionEnd)); },
-    target: (value: string) => { setSource(''); setTarget(value); }, setTarget };
+    target: (value: string) => { if (value) setSource(''); setTarget(value); }, setTarget };
 }
 
 function lookupDisabled(loading: boolean, capturing: boolean, valid: boolean) {

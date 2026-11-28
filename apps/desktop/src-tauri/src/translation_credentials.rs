@@ -43,6 +43,37 @@ mod tests {
         drop(store);
         std::fs::remove_dir_all(root).unwrap();
     }
+
+    #[test]
+    fn corrupt_store_is_preserved_before_clearing_a_slot() {
+        let root = std::env::temp_dir().join(format!(
+            "lexique-corrupt-credentials-{}",
+            std::process::id()
+        ));
+        assert!(!root.exists());
+        std::fs::create_dir_all(root.join("Lexique-data/db")).unwrap();
+        let store = WindowsCredentials::new(&root.join("Lexique-data/db/lexique.sqlite3")).unwrap();
+        let directory = root.join("Lexique-data/config");
+        let corrupt = b"{\"deepl\":\"truncated";
+        std::fs::write(directory.join("service-credentials.json"), corrupt).unwrap();
+        assert!(store.read("deepl").is_err());
+        store.clear("deepl").unwrap();
+        assert!(store.read("deepl").unwrap().is_none());
+        let backups: Vec<_> = std::fs::read_dir(&directory)
+            .unwrap()
+            .map(|entry| entry.unwrap().path())
+            .filter(|path| {
+                path.file_name()
+                    .unwrap()
+                    .to_string_lossy()
+                    .starts_with(".credentials-corrupt-")
+            })
+            .collect();
+        assert_eq!(backups.len(), 1);
+        assert_eq!(std::fs::read(&backups[0]).unwrap(), corrupt);
+        drop(store);
+        std::fs::remove_dir_all(root).unwrap();
+    }
 }
 use std::{
     collections::BTreeMap,
@@ -108,7 +139,75 @@ impl WindowsCredentials {
         if content.len() > 65536 {
             return Err("Invalid credentials file".into());
         }
-        serde_json::from_slice(&content).map_err(|_| "Invalid credentials file".into())
+        serde_json::from_slice(&content).map_err(|_| "Corrupt credentials file".into())
+    }
+
+    fn load_for_update(&self) -> Result<BTreeMap<String, String>, String> {
+        match self.load() {
+            Ok(slots) => Ok(slots),
+            Err(error) if error == "Corrupt credentials file" => {
+                let mut input_options = OpenOptions::new();
+                input_options.read(true).follow(FollowSymlinks::No);
+                let input = self
+                    .0
+                    .open_with("service-credentials.json", &input_options)
+                    .map_err(|error| {
+                        format!(
+                            "Could not preserve credentials (OS code {:?})",
+                            error.raw_os_error()
+                        )
+                    })?;
+                let metadata = input.metadata().map_err(|error| {
+                    format!(
+                        "Could not inspect credentials (OS code {:?})",
+                        error.raw_os_error()
+                    )
+                })?;
+                if !metadata.is_file()
+                    || metadata.file_attributes() & 0x400 != 0
+                    || metadata.len() > 65536
+                {
+                    return Err("Invalid credentials file".into());
+                }
+                let nonce = std::time::SystemTime::now()
+                    .duration_since(std::time::UNIX_EPOCH)
+                    .map_err(|_| "Could not preserve credentials")?
+                    .as_nanos();
+                let backup = format!(".credentials-corrupt-{}-{nonce}.json", std::process::id());
+                let mut output_options = OpenOptions::new();
+                output_options
+                    .write(true)
+                    .create_new(true)
+                    .follow(FollowSymlinks::No);
+                let mut output = self
+                    .0
+                    .open_with(&backup, &output_options)
+                    .map_err(|error| {
+                        format!(
+                            "Could not preserve credentials (OS code {:?})",
+                            error.raw_os_error()
+                        )
+                    })?;
+                let copied =
+                    std::io::copy(&mut input.take(65537), &mut output).map_err(|error| {
+                        format!(
+                            "Could not preserve credentials (OS code {:?})",
+                            error.raw_os_error()
+                        )
+                    })?;
+                if copied > 65536 {
+                    return Err("Invalid credentials file".into());
+                }
+                output.sync_all().map_err(|error| {
+                    format!(
+                        "Could not preserve credentials (OS code {:?})",
+                        error.raw_os_error()
+                    )
+                })?;
+                Ok(BTreeMap::new())
+            }
+            Err(error) => Err(error),
+        }
     }
 
     fn save(&self, slots: &BTreeMap<String, String>) -> Result<(), String> {
@@ -179,7 +278,7 @@ impl CredentialStore for WindowsCredentials {
         valid_slot(slot)?;
         let encrypted = protect(secret.as_bytes(), slot)?;
         let _lock = crate::speech_cache::lock(&self.0)?;
-        let mut slots = self.load()?;
+        let mut slots = self.load_for_update()?;
         slots.insert(slot.into(), STANDARD.encode(encrypted));
         self.save(&slots)
     }
@@ -187,7 +286,7 @@ impl CredentialStore for WindowsCredentials {
     fn clear(&self, slot: &str) -> Result<(), String> {
         valid_slot(slot)?;
         let _lock = crate::speech_cache::lock(&self.0)?;
-        let mut slots = self.load()?;
+        let mut slots = self.load_for_update()?;
         slots.remove(slot);
         self.save(&slots)
     }

@@ -27,7 +27,7 @@ try {
     HTMLMediaElement.prototype.play = function () { window.translationAudioPlays++; return play.call(this); };
   }, `http://127.0.0.1:${server.address().port}/v1`);
   await page.getByRole('button', { name: '翻译', exact: true }).click();
-  await page.getByLabel('法语原文', { exact: true }).fill('你好');
+  await page.getByLabel('原文', { exact: true }).fill('你好');
   await page.locator('.lookup-input').getByRole('button', { name: '翻译', exact: true }).click();
   const output = page.locator('.lookup-input pre');
   await output.waitFor();

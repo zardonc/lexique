@@ -13,12 +13,16 @@ test('imported image is previewed and locally recognized before explicit diction
   await page.getByRole('button', { name: '翻译', exact: true }).click();
   await page.getByLabel('导入图片', { exact: true }).setInputFiles(fileURLToPath(imagePath));
   await expect(page.getByRole('img', { name: '截图预览', exact: true })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('');
   await page.getByRole('button', { name: '识别文字', exact: true }).click();
-  const field = page.getByLabel('法语原文', { exact: true });
+  const field = page.getByLabel('原文', { exact: true });
   await expect(field).toHaveValue(/L'école d'aujourd'hui\.\nOù est le café \?\nÇa coûte 10 euros/);
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(0);
-  await field.evaluate((node) => { (node as HTMLTextAreaElement).setSelectionRange(2, 7); });
+  await field.focus();
+  await field.press('Control+Home');
+  await field.press('ArrowRight');
+  await field.press('ArrowRight');
+  for (let i = 0; i < 5; i++) await field.press('Shift+ArrowRight');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
 });
@@ -29,8 +33,8 @@ test('screen region is automatically recognized into the editable translation in
   await page.getByRole('button', { name: '翻译', exact: true }).click();
   await page.evaluate((image) => window.testNative.emit('selection-input', { kind: 'image', request: 7, image, recognize: true }), image);
   await expect(page.getByRole('img', { name: '截图预览', exact: true })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue(/Où est le café \?/);
-  await page.getByLabel('法语原文', { exact: true }).fill('Où est le café ?');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue(/Où est le café \?/);
+  await page.getByLabel('原文', { exact: true }).fill('Où est le café ?');
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(0);
 });
 
@@ -43,14 +47,14 @@ test('missing local language data is visible and recognition can be retried', as
   await expect(page.getByRole('img', { name: '截图预览', exact: true })).toBeVisible();
   await page.unroute('**/ocr/fra.traineddata');
   await page.getByRole('button', { name: '识别文字', exact: true }).click();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue(/Où est le café \?/);
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue(/Où est le café \?/);
 });
 
 test('pasting a screenshot imports the image and blank recognition stays editable', async ({ page }) => {
   await nativeFixture(page, { ocr_image: [{ value: { kind: 'image', request: 1, image } }] });
   await page.goto('/');
   await page.getByRole('button', { name: '翻译', exact: true }).click();
-  await page.getByLabel('法语原文', { exact: true }).evaluate((field, dataUrl) => {
+  await page.getByLabel('原文', { exact: true }).evaluate((field, dataUrl) => {
     const bytes = Uint8Array.from(atob(dataUrl.split(',')[1]!), (character) => character.charCodeAt(0));
     const clipboard = new DataTransfer(); clipboard.items.add(new File([bytes], 'screenshot.png', { type: 'image/png' }));
     field.dispatchEvent(new ClipboardEvent('paste', { clipboardData: clipboard, bubbles: true, cancelable: true }));
@@ -65,7 +69,7 @@ test('pasting a screenshot imports the image and blank recognition stays editabl
   });
   await expect(page.getByRole('alert').filter({ hasText: '没有识别到文字' })).toBeVisible();
   await expect(page.getByRole('alert').filter({ hasText: '识别结果不确定' })).toBeVisible();
-  await page.getByLabel('法语原文', { exact: true }).fill('école');
+  await page.getByLabel('原文', { exact: true }).fill('école');
   await expect(page.getByRole('img', { name: '截图预览', exact: true })).toBeVisible();
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(0);
 });
@@ -79,14 +83,14 @@ test('cancelling blocked OCR protects later text edits and another request can c
   await page.evaluate((image) => window.testNative.emit('selection-input', { kind: 'image', request: 1, image, recognize: true }), image);
   await expect.poll(() => blocked).toBe(true);
   await page.getByRole('button', { name: '取消图片', exact: true }).click();
-  await page.getByLabel('法语原文', { exact: true }).fill('Une nouvelle phrase.');
+  await page.getByLabel('原文', { exact: true }).fill('Une nouvelle phrase.');
   await expect(page.getByRole('img', { name: '截图预览', exact: true })).toHaveCount(0);
   release(); await page.unroute('**/ocr/fra.traineddata');
   await page.getByRole('button', { name: '设置', exact: true }).click();
   await expect(page.getByRole('heading', { name: '设置', exact: true })).toBeVisible();
   await page.evaluate((image) => window.testNative.emit('selection-input', { kind: 'image', request: 2, image, recognize: true }), image);
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue(/Où est le café \?/);
-  await page.getByLabel('法语原文', { exact: true }).fill('Une nouvelle phrase.');
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('Une nouvelle phrase.');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue(/Où est le café \?/);
+  await page.getByLabel('原文', { exact: true }).fill('Une nouvelle phrase.');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('Une nouvelle phrase.');
   await expect(page.getByRole('img', { name: '截图预览', exact: true })).toBeVisible();
 });
