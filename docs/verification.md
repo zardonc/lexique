@@ -20,7 +20,9 @@ Windows 原生检查分为独立的 60 秒批次；从 `apps/desktop/` 执行 `p
 - `native-selection-check.mjs` 与 `native-ocr-check.mjs`：真实系统／网页／长文本取词、多屏离线 OCR、语言切换、显式查词、未保存笔记保护、词典故障后恢复及学习数据／受保护音频的重启保留；分别 7 项和 8 项通过，证据为 `issue-223/delivery-selection/` 与 `issue-223/delivery-ocr/`。额外参数为 `../../target/release/conjugation`、`../../target/release/frequency` 和合成夹具 `../../target/issue-223/current-retention-01/Lexique-data`。
 - 用户提供的私密凭据经原生 IPC 执行 OpenAI 兼容远端和 DeepL Free 的连接测试及真实翻译，两者通过；仅保存结果状态，密钥随后清除，证据为 `issue-223/delivery-real/`。各批次 `cleanup.json` 确认 host、worker 与辅助进程均为零。
 
-限制：正式 API 成功证据对应 `babecc3`，`3fc12e6` 未执行真实服务调用；没有验证 macOS、ARM64、全机断网或正式发行。整份凭据文件损坏时，清除／替换会保留原始加密文件副本，但可能需要重新配置两个服务。
+源码 `65a76ac548c1142d36e2168fa421fe73b3931cbc` 的 Windows x64 构建通过 OpenAI 兼容远端连接测试与真实翻译，配置地址以 `/chat/completions/` 结尾；单个及多个尾斜杠均有端点回归覆盖。原生证据为 `issue-223/review-openai-rerun-01/`，连接耗时 1,987 ms，两次调用合计 8,624 ms，测试密钥已清除，host／worker／helper 均为零。重新构建的 `pnpm desktop:build --no-bundle`、locked workspace 编译、rustfmt 与 21 项桌面翻译测试通过；测试直接执行预编译 EXE，执行硬限仍为 60 秒。审查基线 `f7d7b42` 的 lint／typecheck／build、文档检查、46 项浏览器检查及 260 项后端测试通过，日志保留于 `C:/Users/inthe/IdeaProjects/lexique/target/review-222/`。标准桌面测试命令在断言前意外重编译并触发 60 秒限制，单独预编译后直接执行通过。
+
+限制：DeepL 正式 API 成功证据仍对应 `babecc3`；未在端点修复源码上重跑完整原生组合场景，没有验证 macOS、ARM64、全机断网或正式发行。整份凭据文件损坏时，清除／替换会保留原始加密文件副本，但可能需要重新配置两个服务。
 
 ## 语法交换最终审查修正（#212）
 
