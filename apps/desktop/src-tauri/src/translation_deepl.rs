@@ -79,6 +79,17 @@ mod tests {
                 r#"{"translations":[{"detected_source_language":"FR","text":""}]}"#.into(),
                 "invalid_response",
             ),
+            (
+                "200 OK",
+                r#"{"translations":[{"detected_source_language":"","text":"hello"}]}"#.into(),
+                "invalid_response",
+            ),
+            (
+                "200 OK",
+                r#"{"translations":[{"detected_source_language":"garbage!","text":"hello"}]}"#
+                    .into(),
+                "invalid_response",
+            ),
         ] {
             let server = TcpListener::bind("127.0.0.1:0").unwrap();
             let endpoint = format!("http://{}/translate", server.local_addr().unwrap());
@@ -376,7 +387,14 @@ async fn request(
     }
     let mut decoded: DeeplResponse =
         serde_json::from_slice(&bytes).map_err(|_| "invalid_response")?;
-    if decoded.translations.len() != 1 || decoded.translations[0].text.trim().is_empty() {
+    if decoded.translations.len() != 1
+        || decoded.translations[0].text.trim().is_empty()
+        || decoded.translations[0].detected_source_language.len() != 2
+        || !decoded.translations[0]
+            .detected_source_language
+            .bytes()
+            .all(|byte| byte.is_ascii_alphabetic())
+    {
         return Err("invalid_response");
     }
     Ok(decoded.translations.remove(0))
