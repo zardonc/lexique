@@ -7,7 +7,7 @@ import { native24Fixture } from './native-24-harness.mjs';
 
 assert.equal(process.argv.length, 5, 'Expected resources, native test host and new destination');
 const [resources, binary, destination] = process.argv.slice(2).map((path) => resolve(path));
-let status = 200, body = { translations: [{ text: '钢琴', detected_source_language: 'IT' }] };
+let status = 200, body = { translations: [{ text: '钢琴', detected_source_language: 'IT' }] }, slow = false;
 const requests = [];
 const server = createServer((request, response) => {
   assert.equal(request.url, '/v2/translate');
@@ -17,6 +17,7 @@ const server = createServer((request, response) => {
   request.on('end', () => {
     requests.push(JSON.parse(data));
     response.writeHead(status, { 'Content-Type': 'application/json' });
+    if (slow) { response.flushHeaders(); return; }
     response.end(JSON.stringify(body));
   });
 });
@@ -46,6 +47,16 @@ try {
     assert.equal(error, expected);
     errors.push({ status, error });
   }
+  status = 200; slow = true;
+  const timeout = await page.evaluate(async () => {
+    const started = Date.now();
+    try { await window.__TAURI_INTERNALS__.invoke('translation_execute', { id: 'deepl-timeout', text: 'piano', locale: 'zh' }); }
+    catch (cause) { return { error: String(cause), elapsedMs: Date.now() - started }; }
+    return { error: 'unexpected_success', elapsedMs: Date.now() - started };
+  });
+  assert.equal(timeout.error, 'network_or_timeout');
+  assert.ok(timeout.elapsedMs >= 29_000 && timeout.elapsedMs < 36_000);
+  slow = false;
   status = 200; body = { translations: [{ text: '你好', detected_source_language: 'FR' }] };
   const connection = await page.evaluate(async () => {
     const initial = await window.__TAURI_INTERNALS__.invoke('translation_settings', { locale: 'zh', preferences: null, replacement: null });
@@ -53,7 +64,7 @@ try {
   });
   assert.equal(connection.host, 'api-free.deepl.com');
   await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('translation_clear_key', { provider: 'deepl' }));
-  await writeFile(join(destination, 'translation-result.json'), JSON.stringify({ nativeIpc: true, mockDeepl: true, result, errors, connection }));
+  await writeFile(join(destination, 'translation-result.json'), JSON.stringify({ nativeIpc: true, mockDeepl: true, result, errors, timeout, connection }));
   await fixture.stop(true);
 } finally {
   if (fixture) await fixture.finish();

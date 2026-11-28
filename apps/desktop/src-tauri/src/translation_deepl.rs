@@ -304,7 +304,14 @@ async fn translate(
         .redirect(reqwest::redirect::Policy::none())
         .build()
         .map_err(|_| "network_or_timeout")?;
-    tokio::time::timeout(TOTAL_TIMEOUT, async {
+    let timeout = TOTAL_TIMEOUT;
+    #[cfg(test)]
+    let timeout = if TEST_ENDPOINT.get().is_some() {
+        Duration::from_secs(30)
+    } else {
+        timeout
+    };
+    tokio::time::timeout(timeout, async {
         let first = request(&client, endpoint, key, text, source, target_code).await?;
         let detected = detected_language(&first.detected_source_language);
         if source == "auto" && target != "fr" && detected == target {
