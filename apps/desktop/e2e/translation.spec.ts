@@ -4,6 +4,33 @@ import { nativeFixture } from './native-fixture';
 const configured = { preferences: { active_provider: 'deepl', source_language: 'auto', target_language: 'zh-CN', deepl: { tier: 'free' }, openai_compatible: { base_url: '', model: '' } }, keys: { deepl: 'configured', openai_compatible: 'missing' } };
 declare global { interface Window { translationPlays: number } }
 
+test('dictionary lookup waits for an explicit valid query', async ({ page }) => {
+  await nativeFixture(page, { translation_settings: [{ value: configured }] });
+  await page.goto('/');
+  await page.evaluate(() => { window.testNative.emit('selection-input', { kind: 'captured', request: 1, text: 'Bonjour' }); });
+  const source = page.getByLabel('法语原文', { exact: true });
+  const lookup = page.getByRole('button', { name: '查询输入' });
+  await source.fill('a'.repeat(513));
+  await expect(lookup).toBeDisabled();
+  await source.focus();
+  await page.keyboard.press('Home');
+  for (let i = 0; i < 3; i++) await page.keyboard.press('Shift+ArrowRight');
+  await expect(lookup).toBeEnabled();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup'))).toHaveLength(0);
+  await lookup.click();
+  await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(1);
+});
+
+test('remote OpenAI requires a configured key', async ({ page }) => {
+  const openai = { ...configured, preferences: { ...configured.preferences, active_provider: 'openai_compatible', openai_compatible: { base_url: 'https://example.com/v1', model: 'model' } } };
+  await nativeFixture(page, { translation_settings: [{ value: openai }] });
+  await page.goto('/');
+  await page.evaluate(() => { window.testNative.emit('selection-input', { kind: 'captured', request: 1, text: 'Bonjour' }); });
+  await expect(page.getByText('密钥未配置')).toBeVisible();
+  await expect(page.getByRole('button', { name: '前往设置' })).toBeVisible();
+  await expect(page.locator('.lookup-input').getByRole('button', { name: '翻译', exact: true })).toBeDisabled();
+});
+
 test('captured text is sent only after Translate and editing cancels the request', async ({ page }) => {
   await nativeFixture(page, { translation_settings: [{ value: configured }], translation_execute: [{ gate: 'translation', value: { text: '迟到译文', source: 'fr', target: 'zh-CN' } }] });
   await page.goto('/');
@@ -59,12 +86,14 @@ test('looks up selections in both panes and preserves a completed translation', 
   await source.focus();
   await page.keyboard.press('Home');
   for (let i = 0; i < 6; i++) await page.keyboard.press('Shift+ArrowRight');
+  await page.getByRole('button', { name: '查询输入' }).click();
   await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBeGreaterThan(0);
   await page.locator('.lookup-input').getByRole('button', { name: '翻译', exact: true }).click();
   const target = page.locator('.lookup-input pre');
   await expect(target).toHaveText('école française');
   await expect(target).toHaveAttribute('lang', 'fr');
   await target.evaluate((node) => { const range = document.createRange(); range.setStart(node.firstChild!, 0); range.setEnd(node.firstChild!, 5); const selection = window.getSelection()!; selection.removeAllRanges(); selection.addRange(range); node.dispatchEvent(new MouseEvent('mouseup', { bubbles: true })); });
+  await page.getByRole('button', { name: '查询输入' }).click();
   await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBeGreaterThan(1);
   await expect(page.getByText('学校', { exact: true }).first()).toBeVisible();
   await expect(page.getByLabel('播放例句: école française (机器合成语音)')).toBeVisible();

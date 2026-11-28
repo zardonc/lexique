@@ -88,7 +88,9 @@ test('a long selection stays editable and only its selected word is queried', as
   const field = page.getByLabel('法语原文', { exact: true });
   await expect(field).toHaveValue(raw);
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(0);
-  await field.evaluate((node) => { (node as HTMLTextAreaElement).setSelectionRange(0, 5); });
+  await field.focus();
+  await page.keyboard.press('Control+Home');
+  for (let i = 0; i < 5; i++) await page.keyboard.press('Shift+ArrowRight');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
   await expect(field).toHaveValue(raw);
@@ -105,7 +107,7 @@ test('translation input and captured text keep only the first 5,000 characters',
   await page.keyboard.insertText(`${prefix}fin`);
   await expect(field).toHaveValue(prefix);
   await expect(page.getByRole('alert')).toHaveCount(0);
-  await expect(page.getByRole('button', { name: '查询输入', exact: true })).toBeEnabled();
+  await expect(page.getByRole('button', { name: '查询输入', exact: true })).toBeDisabled();
   await page.evaluate((text) => window.testNative.emit('selection-input', { kind: 'captured', request: 25, text }), `${prefix}stale`);
   await expect(field).toHaveValue(prefix);
   await field.fill('côte');

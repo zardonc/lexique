@@ -63,10 +63,6 @@ function InputResults({ input, locale, onDictionary }: {
   </>;
 }
 
-function sourceSelection(node: HTMLTextAreaElement | null, raw: string) {
-  return node && node.selectionEnd > node.selectionStart ? raw.slice(node.selectionStart, node.selectionEnd) : raw;
-}
-
 function sourceLanguage(translation: ReturnType<typeof useTranslation>) {
   const language = translation.settings?.preferences.source_language;
   return language === 'auto' ? translation.result?.source : language;
@@ -74,6 +70,21 @@ function sourceLanguage(translation: ReturnType<typeof useTranslation>) {
 
 function SourceSpeech({ language, raw, runtime, locale, playbackKey, visible }: { readonly language?: string; readonly raw: string; readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly playbackKey: string; readonly visible: boolean }) {
   return visible && language === 'fr' ? <ExampleSpeech key={playbackKey} value={raw} runtime={runtime} text={notebookMessages[locale]} /> : null;
+}
+
+function useQuerySelection(raw: string, selection?: SelectionEvent) {
+  const [target, setTarget] = useState('');
+  const [source, setSource] = useState('');
+  useEffect(() => { setSource(''); setTarget(''); }, [raw, selection]);
+  const selected = target || source || raw;
+  return { selected, valid: dictionaryQuery.safeParse(selected.trim()).success,
+    clear: () => { setTarget(''); setSource(''); },
+    source: (node: HTMLTextAreaElement) => { setTarget(''); setSource(raw.slice(node.selectionStart, node.selectionEnd)); },
+    target: (value: string) => { setSource(''); setTarget(value); }, setTarget };
+}
+
+function lookupDisabled(loading: boolean, capturing: boolean, valid: boolean) {
+  return loading || capturing || !valid;
 }
 
 export function LookupInputPanel({ runtime, locale, selection, onCancel, onDictionary, onSettings, visible }: {
@@ -84,43 +95,33 @@ export function LookupInputPanel({ runtime, locale, selection, onCancel, onDicti
   const input = useInputLookup(runtime, selection), field = useRef<HTMLTextAreaElement>(null);
   const translation = useTranslation(runtime, locale, { raw: input.raw, visible });
   useEffect(() => { if (!visible && translation.busy) translation.cancel(); }, [visible]);
-  const [targetSelection, setTargetSelection] = useState('');
+  const query = useQuerySelection(input.raw, selection);
   function edit(value: string) { translation.cancel(); input.edit(value); }
   const ocr = useOcrInput(runtime, selection, edit);
   useEffect(() => { if (selection) translation.cancel(); }, [selection]);
   const raw = input.raw;
   const capturing = selection?.kind === 'pending';
-  function selected() { return targetSelection || sourceSelection(field.current, raw); }
   const selectedLanguage = translation.settings?.preferences.source_language;
   const resolvedSource = sourceLanguage(translation);
-  useEffect(() => { setTargetSelection(''); }, [translation.result, translation.busy, selectedLanguage]);
-  function selectTarget(value: string) {
-    setTargetSelection(value);
-    if (dictionaryQuery.safeParse(value).success) void input.lookup(value);
-  }
-  function selectSource(node: HTMLTextAreaElement) {
-    setTargetSelection('');
-    const value = raw.slice(node.selectionStart, node.selectionEnd);
-    if (value && dictionaryQuery.safeParse(value).success) void input.lookup(value);
-  }
+  useEffect(() => { query.setTarget(''); }, [translation.result, translation.busy, selectedLanguage]);
   return <div className="lookup-input" onPaste={(event) => {
     const file = event.clipboardData.files[0];
     if (file) { event.preventDefault(); translation.cancel(); void ocr.importImage(file); }
   }}>
     <OcrInput ocr={ocr} locale={locale} onCancel={onCancel} onStart={translation.cancel} />
-    <form onSubmit={(event) => { event.preventDefault(); void input.lookup(selected()); }}>
+    <form onSubmit={(event) => { event.preventDefault(); void input.lookup(query.selected); }}>
       <label htmlFor="lookup-input-raw">{text.raw}</label>
       <textarea ref={field} id="lookup-input-raw" lang={resolvedSource} rows={4} value={raw} required
         autoCapitalize="none" autoCorrect="off" spellCheck={false}
-        onSelect={(event) => selectSource(event.currentTarget)}
-        onChange={(event) => { setTargetSelection(''); ocr.stop(); if (selection) onCancel(); edit(event.target.value); }} />
+        onSelect={(event) => query.source(event.currentTarget)}
+        onChange={(event) => { query.clear(); ocr.stop(); if (selection) onCancel(); edit(event.target.value); }} />
       <SourceSpeech language={resolvedSource} visible={visible} playbackKey={`${selectedLanguage}-${translation.busy}-${translation.saving}`} raw={raw} runtime={runtime} locale={locale} />
       <p className="dictionary-hint">{text.hint}</p>
-      {raw && !dictionaryQuery.safeParse(raw.trim()).success && <p>{text.long}</p>}
-      <div className="actions"><button type="submit" disabled={input.loading || capturing}>{input.loading ? dictionaryText.loading : text.query}</button>
+      {raw && !query.valid && <p>{text.long}</p>}
+      <div className="actions"><button type="submit" disabled={lookupDisabled(input.loading, capturing, query.valid)}>{input.loading ? dictionaryText.loading : text.query}</button>
         {(input.loading || capturing) && <button type="button" onClick={() => { input.cancel(); onCancel(); }}>{text.cancel}</button>}</div>
     </form>
-    <TranslationPanel translation={translation} locale={locale} raw={raw} onSettings={onSettings} runtime={runtime} onSelection={selectTarget} visible={visible} />
+    <TranslationPanel translation={translation} locale={locale} raw={raw} onSettings={onSettings} runtime={runtime} onSelection={query.target} visible={visible} />
     {capturing && <p role="status">{text.capturing}</p>}
     <InputResults input={input} locale={locale} onDictionary={onDictionary} />
   </div>;

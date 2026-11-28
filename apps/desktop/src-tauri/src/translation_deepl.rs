@@ -18,6 +18,7 @@ mod tests {
         };
         for (status, body, expected) in [
             ("456 Quota Exceeded", String::new(), "quota_or_rate_limited"),
+            ("500 Server Error", String::new(), "invalid_response"),
             ("200 OK", "x".repeat(256 * 1024 + 1), "invalid_response"),
             (
                 "200 OK",
@@ -249,7 +250,7 @@ async fn request(
         401 | 403 => return Err("auth_failed"),
         429 | 456 => return Err("quota_or_rate_limited"),
         400..=499 => return Err("invalid_request"),
-        _ => return Err("network_or_timeout"),
+        _ => return Err("invalid_response"),
     }
     let mut bytes = Vec::new();
     while let Some(chunk) = response.chunk().await.map_err(|_| "network_or_timeout")? {

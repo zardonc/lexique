@@ -64,12 +64,22 @@ function TranslationOutput({ translation, locale, runtime, onSelection, visible 
     {status && <p role="status">{status === 'copied' ? text.copied : `${text.error}: ${translationError(locale, status)}`}</p>}</>;
 }
 
+function openaiReadiness(preferences: TranslationPreferences, keyState: TranslationSettings['keys']['openai_compatible']) {
+  try {
+    const url = new URL(preferences.openai_compatible.base_url);
+    const local = ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
+    const configured = (url.protocol === 'https:' || (local && url.protocol === 'http:')) && !!preferences.openai_compatible.model.trim();
+    return { configured, available: configured && keyState !== 'unreadable' && (keyState === 'configured' || local) };
+  } catch { return { configured: false, available: false }; }
+}
+
 function serviceState(settings: TranslationSettings, locale: Locale) {
   const text = labels[locale], preferences = settings.preferences;
   const openai = preferences.active_provider === 'openai_compatible';
   const keyState = settings.keys[openai ? 'openai_compatible' : 'deepl'];
-  const available = preferences.active_provider !== 'disabled' && keyState !== 'unreadable' && (openai || keyState === 'configured');
-  const reason = preferences.active_provider === 'disabled' ? text.disabled : keyState === 'unreadable' ? text.unreadable : text.missing;
+  const readiness = openai ? openaiReadiness(preferences, keyState) : { configured: true, available: keyState === 'configured' };
+  const available = preferences.active_provider !== 'disabled' && readiness.available;
+  const reason = preferences.active_provider === 'disabled' || !readiness.configured ? text.disabled : keyState === 'unreadable' ? text.unreadable : text.missing;
   let destination = preferences.deepl.tier === 'free' ? 'DeepL (Free · api-free.deepl.com)' : 'DeepL (Pro · api.deepl.com)';
   if (openai) { try { destination = `OpenAI-compatible · ${new URL(preferences.openai_compatible.base_url).host} · ${preferences.openai_compatible.model}`; } catch { destination = 'OpenAI-compatible'; } }
   return { available, reason, destination };
