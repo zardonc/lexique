@@ -26,7 +26,7 @@ export function useTranslation(runtime: RuntimeAdapter, locale: Locale, { raw, v
   const [saving, setSaving] = useState(false);
   const active = useRef<string | undefined>(undefined);
   useEffect(() => { let live = true; if (visible) void runtime.translationSettings(locale).then((value) => { if (live) setSettings(value); }).catch((error: unknown) => { if (live) setStatus(translationError(locale, error)); }); return () => { live = false; }; }, [runtime, locale, visible]);
-  function cancel() { const id = active.current; active.current = undefined; if (id) void runtime.cancelTranslation(id).catch(() => {}); setBusy(false); setComplete(false); setResult(undefined); }
+  function cancel() { const id = active.current; active.current = undefined; if (id) void runtime.cancelTranslation(id).catch((error: unknown) => setStatus(translationError(locale, error))); setBusy(false); setComplete(false); setResult(undefined); }
   useEffect(() => () => { const id = active.current; active.current = undefined; if (id) void runtime.cancelTranslation(id).catch(() => {}); }, [runtime]);
   async function change(preferences: TranslationPreferences) {
     cancel(); setSaving(true); setStatus('');

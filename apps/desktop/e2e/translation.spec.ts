@@ -234,6 +234,27 @@ test('captured text is sent only after Translate and editing cancels the request
   await expect(page.getByText('迟到译文')).toHaveCount(0);
 });
 
+for (const action of ['cancel', 'edit', 'language'] as const) {
+  test(`translation cancellation failure stays visible after ${action}`, async ({ page }) => {
+    await nativeFixture(page, {
+      translation_settings: [{ value: configured }],
+      translation_execute: [{ gate: 'cancelled-translation', value: { text: '迟到译文', source: 'fr', target: 'zh-CN' } }],
+      translation_cancel: [{ error: 'Could not cancel translation' }],
+    });
+    await page.goto('/');
+    await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 1, text: 'Bonjour' }));
+    await page.locator('.lookup-input').getByRole('button', { name: '翻译', exact: true }).click();
+    await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'translation_execute').length)).toBe(1);
+    if (action === 'cancel') await page.getByRole('button', { name: '取消', exact: true }).click();
+    else if (action === 'edit') await page.getByLabel('原文', { exact: true }).fill('nouveau');
+    else await page.getByLabel('原文语言').selectOption('fr');
+    await expect(page.getByRole('status').filter({ hasText: 'Could not cancel translation' })).toBeVisible();
+    await page.evaluate(() => window.testNative.release('cancelled-translation'));
+    await expect(page.getByText('迟到译文')).toHaveCount(0);
+    await expect(page.getByRole('button', { name: '取消', exact: true })).toHaveCount(0);
+  });
+}
+
 test('streamed text remains incomplete after a disconnect and cannot be copied', async ({ page }) => {
   const openai = { ...configured, preferences: { ...configured.preferences, active_provider: 'openai_compatible', openai_compatible: { base_url: 'http://localhost:11434/v1', model: 'test' } } };
   await nativeFixture(page, { translation_settings: [{ value: openai }], translation_execute: [{ gate: 'stream', error: 'network_or_timeout' }] });
