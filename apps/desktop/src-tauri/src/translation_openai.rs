@@ -1,4 +1,7 @@
 pub(crate) fn endpoint(base: &str, model: &str, key: &str) -> Result<reqwest::Url, &'static str> {
+    if base.trim().is_empty() || model.trim().is_empty() {
+        return Err("unconfigured");
+    }
     if base.len() > 512
         || base.chars().any(char::is_control)
         || model.trim().is_empty()
@@ -455,6 +458,11 @@ mod tests {
 
     #[test]
     fn endpoint_validation_limits_http_and_empty_keys_to_literal_loopback() {
+        assert_eq!(endpoint("", "model", "key"), Err("unconfigured"));
+        assert_eq!(
+            endpoint("https://example.com/v1", " ", "key"),
+            Err("unconfigured")
+        );
         for host in [
             "http://localhost:11434/v1/",
             "http://127.0.0.1:8000/v1",

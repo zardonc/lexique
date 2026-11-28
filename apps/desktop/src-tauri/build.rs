@@ -137,6 +137,11 @@ fn main() {
     );
     tauri_build::try_build(tauri_build::Attributes::new().app_manifest(
         tauri_build::AppManifest::new().commands(&[
+            "translation_settings",
+            "translation_clear_key",
+            "translation_execute",
+            "translation_cancel",
+            "translation_test_connection",
             "runtime_status",
             "dictionary_lookup",
             "dictionary_settings",

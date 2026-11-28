@@ -125,7 +125,7 @@ pub(crate) async fn translation_settings(
         })
     })
     .await
-    .map_err(|_| "Could not access translation settings".to_string())?
+    .map_err(|error| format!("Could not access translation settings: {error}"))?
 }
 
 #[tauri::command]
@@ -142,7 +142,7 @@ pub(crate) async fn translation_clear_key(
         credentials(&path)?.clear(&provider)
     })
     .await
-    .map_err(|_| "Could not clear credential".to_string())?
+    .map_err(|error| format!("Could not clear credential: {error}"))?
 }
 
 #[derive(Default)]
@@ -167,8 +167,11 @@ pub(crate) async fn translation_execute(
     if id.is_empty() || id.len() > 128 || !matches!(locale.as_str(), "zh" | "en" | "fr") {
         return Err("invalid_request".into());
     }
-    let (reader, task, generation) = {
-        let mut current = operation.0.lock().map_err(|_| "network_or_timeout")?;
+    let (task, generation) = {
+        let mut current = operation
+            .0
+            .lock()
+            .map_err(|_| "Translation operation unavailable")?;
         if let Some(index) = current.cancelled.iter().position(|value| value == &id) {
             current.cancelled.remove(index);
             return Err("cancelled".into());
@@ -177,34 +180,46 @@ pub(crate) async fn translation_execute(
             previous.abort();
         }
         let reader = maintenance.admit_reader()?;
-        let connection = open(&path)?;
-        let preferences = lexique_storage::translation_preferences(&connection, &locale)
-            .map_err(|_| "invalid_request")?;
-        let store = credentials(&path)?;
-        let key = match preferences.active_provider {
-            lexique_storage::TranslationProvider::Disabled => return Err("unconfigured".into()),
-            lexique_storage::TranslationProvider::Deepl => store
-                .read("deepl")
-                .map_err(|_| "credential_unreadable")?
-                .ok_or("credential_missing")?,
-            lexique_storage::TranslationProvider::OpenaiCompatible => store
-                .read("openai_compatible")
-                .map_err(|_| "credential_unreadable")?
-                .unwrap_or_default(),
-        };
-        let source = match preferences.source_language {
-            lexique_storage::TranslationSource::Auto => "auto",
-            lexique_storage::TranslationSource::Fr => "fr",
-            lexique_storage::TranslationSource::ZhCn => "zh-CN",
-            lexique_storage::TranslationSource::En => "en",
-        };
-        let target = match preferences.target_language {
-            lexique_storage::TranslationLanguage::Fr => "fr",
-            lexique_storage::TranslationLanguage::ZhCn => "zh-CN",
-            lexique_storage::TranslationLanguage::En => "en",
-        };
+        let path = DatabasePath(path.0.clone());
         let event_id = id.clone();
         let task = tokio::spawn(async move {
+            let (preferences, key) =
+                tauri::async_runtime::spawn_blocking(move || -> Result<_, String> {
+                    let _reader = reader;
+                    let connection = open(&path)?;
+                    let preferences =
+                        lexique_storage::translation_preferences(&connection, &locale).map_err(
+                            |error| format!("Could not read translation preferences: {error}"),
+                        )?;
+                    let store = credentials(&path)?;
+                    let key = match preferences.active_provider {
+                        lexique_storage::TranslationProvider::Disabled => {
+                            return Err("unconfigured".into());
+                        }
+                        lexique_storage::TranslationProvider::Deepl => store
+                            .read("deepl")
+                            .map_err(|_| "credential_unreadable")?
+                            .ok_or("credential_missing")?,
+                        lexique_storage::TranslationProvider::OpenaiCompatible => store
+                            .read("openai_compatible")
+                            .map_err(|_| "credential_unreadable")?
+                            .unwrap_or_default(),
+                    };
+                    Ok((preferences, key))
+                })
+                .await
+                .map_err(|error| format!("Could not load translation settings: {error}"))??;
+            let source = match preferences.source_language {
+                lexique_storage::TranslationSource::Auto => "auto",
+                lexique_storage::TranslationSource::Fr => "fr",
+                lexique_storage::TranslationSource::ZhCn => "zh-CN",
+                lexique_storage::TranslationSource::En => "en",
+            };
+            let target = match preferences.target_language {
+                lexique_storage::TranslationLanguage::Fr => "fr",
+                lexique_storage::TranslationLanguage::ZhCn => "zh-CN",
+                lexique_storage::TranslationLanguage::En => "en",
+            };
             let _ = app.emit(
                 "translation-progress",
                 serde_json::json!({"id": event_id, "kind": "started"}),
@@ -226,14 +241,17 @@ pub(crate) async fn translation_execute(
                 "translation-progress",
                 serde_json::json!({"id": event_id, "kind": kind}),
             );
-            result
+            result.map_err(str::to_string)
         });
         let generation = operation.1.fetch_add(1, Ordering::Relaxed);
         current.current = Some((generation, id.clone(), task.abort_handle()));
-        (reader, task, generation)
+        (task, generation)
     };
     let result = task.await;
-    let mut current = operation.0.lock().map_err(|_| "network_or_timeout")?;
+    let mut current = operation
+        .0
+        .lock()
+        .map_err(|_| "Translation operation unavailable")?;
     let active = current
         .current
         .as_ref()
@@ -241,13 +259,16 @@ pub(crate) async fn translation_execute(
     if active {
         current.current.take();
     }
-    drop(reader);
     if !active {
         return Err("cancelled".into());
     }
-    result
-        .map_err(|_| "cancelled".to_string())?
-        .map_err(str::to_string)
+    result.map_err(|error| {
+        if error.is_cancelled() {
+            "cancelled".to_string()
+        } else {
+            format!("Translation task failed: {error}")
+        }
+    })?
 }
 
 #[tauri::command]
@@ -283,9 +304,10 @@ pub(crate) fn translation_cancel(
 #[tauri::command]
 pub(crate) async fn translation_test_connection(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     preferences: lexique_storage::TranslationPreferences,
     replacement: Option<ReplacementKey>,
-) -> Result<(), String> {
+) -> Result<ConnectionResult, String> {
     if replacement
         .as_ref()
         .is_some_and(|value| value.key.len() > 4096 || value.key.chars().any(char::is_control))
@@ -297,14 +319,43 @@ pub(crate) async fn translation_test_connection(
         lexique_storage::TranslationProvider::OpenaiCompatible => "openai_compatible",
         lexique_storage::TranslationProvider::Disabled => return Err("unconfigured".into()),
     };
-    let key = match replacement {
-        Some(value) if value.provider == slot && !value.key.is_empty() => value.key,
-        Some(_) => return Err("invalid_request".into()),
-        None => credentials(&path)?
-            .read(slot)
-            .map_err(|_| "credential_unreadable")?
-            .unwrap_or_default(),
+    let reader = maintenance.admit_reader()?;
+    let path = DatabasePath(path.0.clone());
+    let key = tauri::async_runtime::spawn_blocking(move || -> Result<String, String> {
+        let _reader = reader;
+        Ok(match replacement {
+            Some(value) if value.provider == slot && !value.key.is_empty() => value.key,
+            Some(_) => return Err("invalid_request".into()),
+            None => credentials(&path)?
+                .read(slot)
+                .map_err(|_| "credential_unreadable")?
+                .unwrap_or_default(),
+        })
+    })
+    .await
+    .map_err(|error| format!("Could not read translation credential: {error}"))??;
+    let host = match preferences.active_provider {
+        lexique_storage::TranslationProvider::Deepl => {
+            if matches!(preferences.deepl.tier, lexique_storage::DeeplTier::Free) {
+                "api-free.deepl.com"
+            } else {
+                "api.deepl.com"
+            }
+            .to_string()
+        }
+        lexique_storage::TranslationProvider::OpenaiCompatible => {
+            crate::translation_openai::endpoint(
+                &preferences.openai_compatible.base_url,
+                &preferences.openai_compatible.model,
+                &key,
+            )?
+            .host_str()
+            .ok_or("invalid_request")?
+            .to_string()
+        }
+        lexique_storage::TranslationProvider::Disabled => return Err("unconfigured".into()),
     };
+    let started = std::time::Instant::now();
     tokio::time::timeout(std::time::Duration::from_secs(15), async {
         match preferences.active_provider {
             lexique_storage::TranslationProvider::Deepl if key.is_empty() => {
@@ -337,8 +388,17 @@ pub(crate) async fn translation_test_connection(
     })
     .await
     .map_err(|_| "network_or_timeout")?
-    .map(|_| ())
-    .map_err(str::to_string)
+    .map_err(str::to_string)?;
+    Ok(ConnectionResult {
+        host,
+        elapsed_ms: started.elapsed().as_millis() as u64,
+    })
+}
+
+#[derive(Serialize)]
+pub(crate) struct ConnectionResult {
+    host: String,
+    elapsed_ms: u64,
 }
 
 #[cfg(test)]

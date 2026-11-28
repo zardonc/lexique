@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-translation-clear-key"
+description = "Enables the translation_clear_key command without any pre-configured scope."
+commands.allow = ["translation_clear_key"]
+
+[[permission]]
+identifier = "deny-translation-clear-key"
+description = "Denies the translation_clear_key command without any pre-configured scope."
+commands.deny = ["translation_clear_key"]

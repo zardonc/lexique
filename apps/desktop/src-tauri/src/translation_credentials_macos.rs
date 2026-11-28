@@ -11,7 +11,7 @@ impl MacCredentials {
     pub(crate) fn new() -> Result<Self, String> {
         SecKeychain::default_for_domain(SecPreferencesDomain::User)
             .map(Self)
-            .map_err(|_| "Could not open user Keychain".into())
+            .map_err(|error| format!("Could not open user Keychain (OS code {})", error.code()))
     }
 }
 
@@ -23,7 +23,7 @@ impl CredentialStore for MacCredentials {
                 .map(Some)
                 .map_err(|_| "Unreadable credential".into()),
             Err(error) if error.code() == ITEM_NOT_FOUND => Ok(None),
-            Err(_) => Err("Unreadable credential".into()),
+            Err(error) => Err(format!("Unreadable credential (OS code {})", error.code())),
         }
     }
 
@@ -31,7 +31,7 @@ impl CredentialStore for MacCredentials {
         valid_slot(slot)?;
         self.0
             .set_generic_password(SERVICE, slot, secret.as_bytes())
-            .map_err(|_| "Could not save credential".into())
+            .map_err(|error| format!("Could not save credential (OS code {})", error.code()))
     }
 
     fn clear(&self, slot: &str) -> Result<(), String> {
@@ -39,7 +39,12 @@ impl CredentialStore for MacCredentials {
         match self.0.find_generic_password(SERVICE, slot) {
             Ok((_, item)) => item.delete(),
             Err(error) if error.code() == ITEM_NOT_FOUND => return Ok(()),
-            Err(_) => return Err("Could not clear credential".into()),
+            Err(error) => {
+                return Err(format!(
+                    "Could not clear credential (OS code {})",
+                    error.code()
+                ));
+            }
         }
         match self.0.find_generic_password(SERVICE, slot) {
             Err(error) if error.code() == ITEM_NOT_FOUND => Ok(()),

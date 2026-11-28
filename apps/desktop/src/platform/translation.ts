@@ -44,6 +44,6 @@ export const translationRuntime = {
   },
   async testTranslationConnection(preferences: TranslationPreferences, replacement?: Replacement) {
     if (!isTauri()) throw new Error('Translation services are available in the desktop app only');
-    await invoke('translation_test_connection', { preferences: translationPreferencesSchema.parse(preferences), replacement: replacement ?? null });
+    return z.object({ host: z.string(), elapsed_ms: z.number().nonnegative() }).strict().parse(await invoke('translation_test_connection', { preferences: translationPreferencesSchema.parse(preferences), replacement: replacement ?? null }));
   },
 };

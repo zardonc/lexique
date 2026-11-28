@@ -2,15 +2,13 @@
 
 ## 翻译页查词与本地语音（#225、#226）
 
-2026-11-27，Windows x64 使用隔离数据目录和真实 WebView2：本地模拟 OpenAI 兼容 SSE 返回法语译文，选中译文查到随包离线词典，复用现有 Supertonic 3 资源调用本地播放；测试退出后 host、worker 与辅助进程均为零。浏览器全量 492 项通过，随后新增的语音长度及迟到预览取消测试在翻译定向套件中通过。完整套件覆盖前述实现，但不包含随后新增的测试用例。
+2026-11-27，Windows x64 使用隔离数据目录和真实 WebView2：本地模拟 OpenAI 兼容 SSE 返回法语译文，选中译文查到随包离线词典，复用现有 Supertonic 3 资源调用本地播放；测试退出后 host、worker 与辅助进程均为零。浏览器全量 492 项通过；新增语音长度及迟到预览取消测试另在翻译定向套件通过。
 
-执行 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust`、`cargo test --locked -p lexique-desktop --lib`、`pnpm test:docs`、`pnpm test:e2e` 及 `pnpm desktop:build --no-bundle`；桌面库 180 项通过、2 项既有忽略。Rust 测试预编译首次因 Windows Store Python 占位程序失败，使用本机便携 Python 后通过；一次全量浏览器启动与并行 OCR 资源准备冲突，串行重试通过。原生检查使用 `pnpm --filter @lexique/desktop exec node e2e/native-translation-speech-check.mjs`，传入隔离资源、构建产物与新建目标目录。
+执行 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust`、`cargo test --locked -p lexique-desktop --lib`、`pnpm test:docs`、`pnpm test:e2e` 及 `pnpm desktop:build --no-bundle`；桌面库 180 项通过、2 项既有忽略。原生检查使用 `pnpm --filter @lexique/desktop exec node e2e/native-translation-speech-check.mjs`，传入隔离资源、构建产物与新建目标目录。
 
-使用用户提供的私密凭据在独立 Windows 原生实例中进行真实服务调用：DeepL Free 的连接测试和翻译通过；指定 OpenAI 兼容服务的连接测试两次返回 `auth_failed`，尚未进入该服务的真实翻译。此错误涵盖 HTTP 401 和 403，不能据此确定具体原因。两次实例均清除测试凭据并正常退出，host、worker 与辅助进程均为零；未记录密钥或译文。
+使用用户提供的私密凭据在独立 Windows 原生实例中进行真实服务调用：DeepL Free 的连接测试和翻译通过；提交 `d57d5a7bcc60d8db48600963272e30f517a66113` 的 OpenAI 兼容远端服务临时凭据连接测试、保存凭据后的连接测试及真实翻译通过。测试凭据已清除，未记录密钥或译文。
 
-同日改用用户指定的本地 OpenAI 兼容服务和模型重试，连接测试仍返回 `auth_failed`，未进入翻译；该错误无法区分 HTTP 401 和 403。隔离实例清除了测试凭据并正常退出，host、worker 与辅助进程均为零。
-
-同日进一步对比发现，同一远端请求缺少 User-Agent 时返回 HTTP 403，带客户端标识时返回 HTTP 200。为 OpenAI 兼容请求添加应用标识后，重新构建的 Windows 原生应用直接访问用户指定服务：临时凭据连接测试、保存凭据后的连接测试及真实翻译均通过。请求头回归测试先失败、修复后通过；测试凭据已清除，未记录密钥或译文。
+基于 `a9b1f7c` 的审查修正工作区：服务独立配置与连接测试浏览器回归、翻译定向浏览器 7 项、桌面翻译相关 Rust 14 项、`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:test:build` 与 `pnpm test:rust` 通过。连接测试 IPC 和维护租约更改后尚未重复真实远端和完整原生旅程，也没有直接执行网络翻译与恢复并发的回归测试。
 
 此原生检查未在同一旅程覆盖系统取词、OCR、模拟 DeepL、导入 MDX、凭据损坏恢复及备份恢复；也未验证 macOS、ARM64、全机断网或正式发行。浏览器模拟与本地服务不能代替真实远端服务验证。
 

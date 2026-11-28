@@ -4,6 +4,25 @@ import { nativeFixture } from './native-fixture';
 const configured = { preferences: { active_provider: 'deepl', source_language: 'auto', target_language: 'zh-CN', deepl: { tier: 'free' }, openai_compatible: { base_url: '', model: '' } }, keys: { deepl: 'configured', openai_compatible: 'missing' } };
 declare global { interface Window { translationPlays: number } }
 
+test('both services can be configured and tested while translation is disabled', async ({ page }) => {
+  const disabled = { ...configured, preferences: { ...configured.preferences, active_provider: 'disabled' } };
+  await nativeFixture(page, { translation_settings: [{ value: disabled }], translation_test_connection: [{ value: { host: 'api-free.deepl.com', elapsed_ms: 42 } }, { value: { host: 'localhost', elapsed_ms: 24 } }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  const services = page.locator('section').filter({ has: page.getByRole('heading', { name: '服务与密钥' }) });
+  await expect(services.getByLabel('服务地址')).toBeVisible();
+  await expect(services.getByLabel('DeepL 套餐')).toBeVisible();
+  await expect(services.getByRole('button', { name: '测试连接' })).toHaveCount(2);
+  await services.getByRole('button', { name: '测试连接' }).first().click();
+  await expect(services.getByText(/api-free\.deepl\.com.*42/)).toBeVisible();
+  await services.getByLabel('服务地址').fill('http://localhost:1234/v1');
+  await services.getByLabel('模型').fill('test-model');
+  await services.getByRole('button', { name: '测试连接' }).last().click();
+  await expect(services.getByText(/localhost.*24/)).toBeVisible();
+  const calls = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'translation_test_connection').map((call) => call.args));
+  expect(calls.map((call) => (call?.preferences as { active_provider: string }).active_provider)).toEqual(['deepl', 'openai_compatible']);
+});
+
 test('dictionary lookup waits for an explicit valid query', async ({ page }) => {
   await nativeFixture(page, { translation_settings: [{ value: configured }] });
   await page.goto('/');

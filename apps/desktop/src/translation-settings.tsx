@@ -13,48 +13,50 @@ const labels = {
 export function TranslationSettingsPanel({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
   const text = labels[locale];
   const [settings, setSettings] = useState<TranslationSettings | null>();
-  const [key, setKey] = useState('');
+  const [keys, setKeys] = useState({ deepl: '', openai_compatible: '' });
   const [message, setMessage] = useState('');
   const [busy, setBusy] = useState(false);
   useEffect(() => { let active = true; void runtime.translationSettings(locale).then((value) => { if (active) setSettings(value); }).catch(() => { if (active) setMessage(text.failure); }); return () => { active = false; }; }, [runtime, locale, text.failure]);
   if (settings === null) return <section><h3>{text.title}</h3><p>{text.preview}</p></section>;
   if (!settings) return <section><h3>{text.title}</h3><p role="status">{message}</p></section>;
   const preferences = settings.preferences;
-  const slot: 'openai_compatible' | 'deepl' = preferences.active_provider === 'openai_compatible' ? 'openai_compatible' : 'deepl';
-  const replacement = key ? { provider: slot, key } : undefined;
-  async function save() {
+  type Slot = 'deepl' | 'openai_compatible';
+  async function save(slot?: Slot) {
     setBusy(true); setMessage('');
-    try { const next = await runtime.translationSettings(locale, preferences, replacement); if (next) setSettings(next); setKey(''); setMessage(text.saved); }
+    const replacement = slot && keys[slot] ? { provider: slot, key: keys[slot] } : undefined;
+    try { const next = await runtime.translationSettings(locale, preferences, replacement); if (next) setSettings(next); if (slot) setKeys({ ...keys, [slot]: '' }); setMessage(text.saved); }
     catch (error: unknown) { setMessage(`${text.failure}: ${translationError(locale, error)}`); }
     finally { setBusy(false); }
   }
-  async function clear() {
+  async function clear(slot: Slot) {
     setBusy(true); setMessage('');
-    try { await runtime.translationClearKey(slot); const next = await runtime.translationSettings(locale); if (next) setSettings({ ...next, preferences }); setKey(''); }
+    try { await runtime.translationClearKey(slot); const next = await runtime.translationSettings(locale); if (next) setSettings({ ...next, preferences }); setKeys({ ...keys, [slot]: '' }); }
     catch (error: unknown) { setMessage(`${text.failure}: ${translationError(locale, error)}`); }
     finally { setBusy(false); }
   }
-  async function test() {
+  async function test(slot: Slot) {
     setBusy(true); setMessage('');
-    try { await runtime.testTranslationConnection(preferences, replacement); setMessage(text.success); }
+    try { const result = await runtime.testTranslationConnection({ ...preferences, active_provider: slot }, keys[slot] ? { provider: slot, key: keys[slot] } : undefined); setMessage(`${text.success}: ${result.host} · ${result.elapsed_ms} ms`); }
     catch (error: unknown) { setMessage(`${text.failure}: ${translationError(locale, error)}`); }
     finally { setBusy(false); }
   }
   return <section className="speech-settings"><h3>{text.title}</h3>
     <label>{text.provider}<select value={preferences.active_provider} disabled={busy} onChange={(event) => {
-      const value = event.target.value; if (value === 'disabled' || value === 'deepl' || value === 'openai_compatible') { setKey(''); setSettings({ ...settings, preferences: { ...preferences, active_provider: value } }); }
+      const value = event.target.value; if (value === 'disabled' || value === 'deepl' || value === 'openai_compatible') setSettings({ ...settings, preferences: { ...preferences, active_provider: value } });
     }}><option value="disabled">{text.disabled}</option><option value="deepl">DeepL</option><option value="openai_compatible">OpenAI-compatible</option></select></label>
+    {(['deepl', 'openai_compatible'] as const).map((slot) => <fieldset key={slot}><legend>{slot === 'deepl' ? 'DeepL' : 'OpenAI-compatible'}</legend>
     {slot === 'deepl' ? <label>{text.tier}<select value={preferences.deepl.tier} disabled={busy} onChange={(event) => {
       const value = event.target.value; if (value === 'free' || value === 'pro') setSettings({ ...settings, preferences: { ...preferences, deepl: { tier: value } } });
     }}><option value="free">Free</option><option value="pro">Pro</option></select></label> : <>
       <label>{text.url}<input value={preferences.openai_compatible.base_url} maxLength={512} disabled={busy} onChange={(event) => setSettings({ ...settings, preferences: { ...preferences, openai_compatible: { ...preferences.openai_compatible, base_url: event.target.value } } })} /></label>
       <label>{text.model}<input value={preferences.openai_compatible.model} maxLength={256} disabled={busy} onChange={(event) => setSettings({ ...settings, preferences: { ...preferences, openai_compatible: { ...preferences.openai_compatible, model: event.target.value } } })} /></label>
     </>}
-    <label>{text.key}<input type="password" value={key} autoComplete="off" disabled={busy} onChange={(event) => {
-      const value = event.target.value; setKey(value); if (slot === 'deepl' && value.endsWith(':fx')) setSettings({ ...settings, preferences: { ...preferences, deepl: { tier: 'free' } } });
+    <label>{text.key}<input type="password" value={keys[slot]} autoComplete="off" disabled={busy} onChange={(event) => {
+      const value = event.target.value; setKeys({ ...keys, [slot]: value }); if (slot === 'deepl' && value.endsWith(':fx')) setSettings({ ...settings, preferences: { ...preferences, deepl: { tier: 'free' } } });
     }} /></label>
     <p>{text.state}: {text[settings.keys[slot]]}</p>
-    <div className="actions"><button disabled={busy} onClick={() => void save()}>{text.save}</button><button disabled={busy} onClick={() => void clear()}>{text.clear}</button><button disabled={busy || preferences.active_provider === 'disabled'} onClick={() => void test()}>{text.test}</button></div>
+    <div className="actions"><button disabled={busy} onClick={() => void save(slot)}>{text.save}</button><button disabled={busy} onClick={() => void clear(slot)}>{text.clear}</button><button disabled={busy} onClick={() => void test(slot)}>{text.test}</button></div>
+    </fieldset>)}
     {message && <p role="status">{message}</p>}
   </section>;
 }

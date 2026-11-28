@@ -79,11 +79,19 @@ impl WindowsCredentials {
             Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
                 return Ok(BTreeMap::new());
             }
-            Err(_) => return Err("Could not open credentials".into()),
+            Err(error) => {
+                return Err(format!(
+                    "Could not open credentials (OS code {:?})",
+                    error.raw_os_error()
+                ));
+            }
         };
-        let metadata = file
-            .metadata()
-            .map_err(|_| "Could not inspect credentials")?;
+        let metadata = file.metadata().map_err(|error| {
+            format!(
+                "Could not inspect credentials (OS code {:?})",
+                error.raw_os_error()
+            )
+        })?;
         if !metadata.is_file() || metadata.file_attributes() & 0x400 != 0 || metadata.len() > 65536
         {
             return Err("Invalid credentials file".into());
@@ -91,7 +99,12 @@ impl WindowsCredentials {
         let mut content = Vec::new();
         file.take(65537)
             .read_to_end(&mut content)
-            .map_err(|_| "Could not read credentials")?;
+            .map_err(|error| {
+                format!(
+                    "Could not read credentials (OS code {:?})",
+                    error.raw_os_error()
+                )
+            })?;
         if content.len() > 65536 {
             return Err("Invalid credentials file".into());
         }
@@ -110,18 +123,34 @@ impl WindowsCredentials {
             .write(true)
             .create_new(true)
             .follow(FollowSymlinks::No);
-        let mut file = self
-            .0
-            .open_with(&temporary, &options)
-            .map_err(|_| "Could not create credentials file")?;
+        let mut file = self.0.open_with(&temporary, &options).map_err(|error| {
+            format!(
+                "Could not create credentials file (OS code {:?})",
+                error.raw_os_error()
+            )
+        })?;
         let result = (|| {
-            file.write_all(&content)
-                .map_err(|_| "Could not write credentials")?;
-            file.sync_all().map_err(|_| "Could not sync credentials")?;
+            file.write_all(&content).map_err(|error| {
+                format!(
+                    "Could not write credentials (OS code {:?})",
+                    error.raw_os_error()
+                )
+            })?;
+            file.sync_all().map_err(|error| {
+                format!(
+                    "Could not sync credentials (OS code {:?})",
+                    error.raw_os_error()
+                )
+            })?;
             drop(file);
             self.0
                 .rename(&temporary, &self.0, "service-credentials.json")
-                .map_err(|_| "Could not publish credentials")?;
+                .map_err(|error| {
+                    format!(
+                        "Could not publish credentials (OS code {:?})",
+                        error.raw_os_error()
+                    )
+                })?;
             Ok(())
         })();
         let _ = self.0.remove_file(&temporary);
@@ -203,7 +232,7 @@ fn crypt(input: &[u8], slot: &str, encrypt: bool) -> Result<Vec<u8>, String> {
                 &mut output,
             )
         }
-        .map_err(|_| "Credential protection failed".to_string())?;
+        .map_err(|error| format!("Credential protection failed (OS code {})", error.code().0))?;
         let bytes = if output.cbData == 0 {
             Vec::new()
         } else {

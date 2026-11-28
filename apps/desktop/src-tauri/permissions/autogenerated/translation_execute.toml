@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-translation-execute"
+description = "Enables the translation_execute command without any pre-configured scope."
+commands.allow = ["translation_execute"]
+
+[[permission]]
+identifier = "deny-translation-execute"
+description = "Denies the translation_execute command without any pre-configured scope."
+commands.deny = ["translation_execute"]
