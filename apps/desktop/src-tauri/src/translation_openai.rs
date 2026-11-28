@@ -50,10 +50,11 @@ pub(crate) fn endpoint(base: &str, model: &str, key: &str) -> Result<reqwest::Ur
     if !loopback && key.is_empty() {
         return Err("credential_missing");
     }
-    let path = url.path().trim_end_matches('/');
+    let mut path = url.path().trim_end_matches('/').to_owned();
     if !path.ends_with("/chat/completions") {
-        url.set_path(&format!("{path}/chat/completions"));
+        path.push_str("/chat/completions");
     }
+    url.set_path(&path);
     Ok(url)
 }
 
@@ -576,9 +577,11 @@ mod tests {
             "http://localhost:11434/v1/",
             "http://127.0.0.1:8000/v1",
             "http://[::1]:8000/v1",
+            "http://localhost:8000/v1/chat/completions/",
+            "http://127.0.0.1:8000/v1/chat/completions///",
         ] {
             let url = endpoint(host, "model", "").unwrap();
-            assert!(url.path().ends_with("/chat/completions"));
+            assert_eq!(url.path(), "/v1/chat/completions");
         }
         for url in [
             "http://example.com/v1",
