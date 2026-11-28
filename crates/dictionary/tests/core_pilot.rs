@@ -176,7 +176,10 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
     ] {
         let lookup = core::lookup(&path, query, &expected).unwrap();
         assert_eq!(lookup.dictionary_id.as_deref(), Some("builtin-core"));
-        assert_eq!(json!(lookup.source.version), curated["content_version"]);
+        assert_eq!(
+            lookup.source.version,
+            format!("{}+gender-2", curated["content_version"].as_str().unwrap())
+        );
         assert_eq!(
             lookup
                 .entries
@@ -227,7 +230,7 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
             |row| row.get(0),
         )
         .unwrap();
-    assert_eq!(version, "1");
+    assert_eq!(version, "2");
 }
 
 #[test]
@@ -321,7 +324,7 @@ fn missing_corrupt_future_and_oversized_core_resources_have_explicit_errors() {
     Connection::open(&path)
         .unwrap()
         .execute(
-            "UPDATE metadata SET value='2' WHERE key='format_version'",
+            "UPDATE metadata SET value='3' WHERE key='format_version'",
             [],
         )
         .unwrap();

@@ -40,7 +40,7 @@ function Answer({ record, text, runtime }: { readonly record: VocabularyRecord; 
   return <>
     {!record.digest.length && <p>{text.interchange.missing}</p>}
     {record.digest.some((entry) => entry.core) ? record.digest.map((entry, index) => entry.core
-      ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <p key={index}>{entry.translation || text.missing}</p>)
+      ? <CoreSenseContent key={index} sense={entry.core} text={text.core} runtime={runtime} /> : <p key={index}>{entry.translation || text.missing}</p>)
       : <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>}
     <ExampleSense record={record} text={text} />
     <Examples record={record} text={text} runtime={runtime} />

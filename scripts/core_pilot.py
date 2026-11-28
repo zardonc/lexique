@@ -4,6 +4,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 from pathlib import Path
 import shutil
 import sqlite3
@@ -37,8 +38,34 @@ MATERIALS = (
     "COPYING", "curated-inputs.json", "field-review.json", "MEMBERSHIP-NOTICES.txt",
     "scope-manifest.csv", "selected-source-context.json", "selected-source-excerpts.json",
     "LEXIQUE-UPSTREAM-README.txt", "lexique-provenance.json", "README.md", "NOTICES.md",
-    "LICENSE-FranceTerme.pdf",
+    "LICENSE-FranceTerme.pdf", "noun-genders.json",
 )
+
+
+def apply_human_review(rows, review):
+    if review is None:
+        return
+    if review.get("policy") != "lexique_then_candidate_else_omit" or not review.get("reviewer") or not review.get("reviewed_on"):
+        raise ValueError("Invalid noun-gender human review")
+    by_id = {row["sense_id"]: row for row in rows}
+    seen = set()
+    for decision in review["decisions"]:
+        identity = decision["sense_id"]
+        if identity in seen or identity not in by_id:
+            raise ValueError("Duplicate or unbound noun-gender review decision")
+        seen.add(identity)
+        row = by_id[identity]
+        if row["review_status"] not in ("pending_independent_human_review", "human_reviewed"):
+            raise ValueError("Human review must apply only to residual noun decisions")
+        if any(row[key] != decision[key] for key in ("lexique_gender", "candidate_gender")):
+            raise ValueError("Noun-gender reviewed columns changed; a new decision is required")
+        value = row["lexique_gender"] if row["lexique_gender"] is not None else row["candidate_gender"]
+        if value not in (None, "m", "f", "mf"):
+            raise ValueError("Invalid reviewed noun gender")
+        row["gender"] = value
+        row["review_status"] = "human_reviewed"
+        selected = "Lexique" if row["lexique_gender"] is not None else "Candidate" if value is not None else "neither column"
+        row["rationale"] = f"{review['reviewer']} approved the column policy; selected {selected}."
 
 
 def unique_object(pairs):
@@ -110,6 +137,20 @@ def load_inputs(source_dir):
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
         text(decision.get("decision"), "annotation exception decision")
     groups = curated.get("groups", [])
+    genders = read_json(source_dir / "noun-genders.json")
+    if genders.get("schema") != "lexique-core-noun-genders-1" or genders.get("content_license") != "CC-BY-SA-4.0":
+        raise ValueError("Invalid noun-gender evidence schema or licence")
+    gender_rows = {row["sense_id"]: row for row in genders["rows"]}
+    if len(gender_rows) != 2134 or len(gender_rows) != len(genders["rows"]):
+        raise ValueError("Noun-gender evidence must cover exactly 2,134 admitted noun senses")
+    gender_review = genders.get("human_review")
+    expected_genders = [dict(row) for row in genders["rows"]]
+    apply_human_review(expected_genders, gender_review)
+    reviewed_ids = {decision["sense_id"] for decision in gender_review["decisions"]} if gender_review else set()
+    for row, expected in zip(genders["rows"], expected_genders, strict=True):
+        if (row["gender"], row["review_status"]) != (expected["gender"], expected["review_status"]) or (row["review_status"] == "human_reviewed" and row["sense_id"] not in reviewed_ids):
+            raise ValueError("Noun gender differs from its recorded human review")
+    lexique_source = read_json(source_dir / "lexique-provenance.json")
     if [group.get("frozen_row") for group in groups] != list(ROWS):
         raise ValueError("Admitted frozen scope rows changed")
     sources = {source["id"]: source for source in curated["sources"]}
@@ -220,7 +261,32 @@ def load_inputs(source_dir):
                 if source.get("source_frame") == "fixed_licensed_dataset_capture":
                     provenance[target]["attribution"] += f"; dataset credits: {source['history_url']}"
             payload["field_sources"] = provenance
+            if group["lexique_cgram"] == "NOM":
+                gender = gender_rows.pop(identity)
+                gender_source = sources[gender["source_id"]]
+                if (gender["frozen_row"], gender["headword"], gender["revid"], gender["fixed_url"]) != (
+                    group["frozen_row"], group["headword"], gender_source["revid"], gender_source["fixed_url"]
+                ) or gender["source_id"] not in {sense["fields"][name]["source_id"] for name in ("ipa", "french_definition")}:
+                    raise ValueError("Noun gender differs from its frozen identity or fixed source")
+                if gender["review_status"] not in ("deterministic_agreement", "pending_independent_human_review", "human_reviewed"):
+                    raise ValueError("Invalid noun-gender review status")
+                if gender["gender"] is not None:
+                    markers = set(re.findall(r"\{\{\s*(m|f|mf)(?:\|[^}]*)?\}\}", gender["raw_header"]))
+                    human_reviewed = gender["review_status"] == "human_reviewed"
+                    if gender["gender"] not in ("m", "f", "mf") or (not human_reviewed and (gender["review_status"] != "deterministic_agreement" or markers != {gender["gender"]} or gender["gender"] == "mf")):
+                        raise ValueError("Unreviewed or unsupported noun gender cannot enter the core resource")
+                    payload["gender"] = gender["gender"]
+                    provenance["gender"] = {**provenance["ipa"], "source_url": gender["fixed_url"],
+                        "span": f"Fixed wikitext line {gender['line_1_based']}; exact header in noun-genders.json",
+                        "modification": "Extracted explicit grammatical gender for the selected noun sense; Lexique 3.83 cross-check."}
+                    if human_reviewed:
+                        if gender["lexique_gender"] is not None:
+                            provenance["gender"] = {key: lexique_source[key] for key in ("title", "version", "attribution", "source_url", "license", "license_url")}
+                            provenance["gender"]["span"] = "Lexique383.tsv NOM genre; lemma, same-stem plural or surface-form mapping recorded in noun-genders.json"
+                        provenance["gender"]["modification"] = f"{gender_review['reviewer']} reviewed on {gender_review['reviewed_on']}: Lexique when nonnull, otherwise the selected fixed-header Candidate; omit when both are null."
             selected.append((group["frozen_row"], index, group["headword"], payload))
+    if gender_rows:
+        raise ValueError("Noun-gender evidence includes unbound senses")
     if len(selected) != len(ROWS) or len(seen) != len(ROWS):
         raise ValueError("Admitted selected-sense scope changed")
     unresolved = reviewed.get("unresolved_fields", [])
@@ -275,12 +341,12 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
     project_license = Path(project_license)
     if not project_license.is_file():
         raise ValueError("Missing separate MIT project/converter licence")
-    version = text(curated["content_version"], "content version", 200)
+    version = text(curated["content_version"], "content version", 200) + "+gender-2"
     source = {"title": "Lexique FR–EN–ZH", "version": version,
               "attribution": "Wiktionnaire/Wiktionary and Wikisource contributors; Théodore Soulice (1836); Académie française (DAF8, 1935); Ministère de la Culture / FranceTerme (CULT430, 2005-01-18, Licence Ouverte 1.0); selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
               "license": "CC BY-SA 4.0", "source_url": "https://github.com/zardonc/lexique/tree/main/resources/core-pilot-79",
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
-    metadata = {"format_version": "1", "content_version": version, "source": compact(source),
+    metadata = {"format_version": "2", "content_version": version, "source": compact(source),
                 "scope_denominator_groups": "4087", "scope_denominator_headwords": "3773"}
     selected_rows = {row[0] for row in selected}
     complete_rows = selected_rows - scope_gaps.keys()
@@ -360,7 +426,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         raw_inputs_bytes = sum((source_dir / name).stat().st_size for name in (*MATERIALS, "input-checksums.json"))
         bundled_materials_bytes = sum(file.stat().st_size for file in staged.iterdir() if file.name != "core.sqlite3")
         read_only_sqlite_bytes = database.stat().st_size
-        report = {"format_version": 1, "content_version": version, "sqlite_sha256": digest(database),
+        report = {"format_version": 2, "content_version": version, "sqlite_sha256": digest(database),
                   "sqlite_bytes": read_only_sqlite_bytes, "inputs": inputs,
                   "admission": {"independent_field_review": "passed", "produced_resource_self_check": "passed",
                                 "everyday_sense_review": "incomplete" if scope_gaps else "passed",
@@ -371,7 +437,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
                   "content_batches": content_batches,
                   "limits": {"query_utf8_bytes": 512, "matching_senses": 200, "response_bytes": 4 * 1024 * 1024,
-                             "resource_bytes": 20_000_000, "field_unicode_scalars": 20_000},
+                             "resource_bytes": 24 * 1024 * 1024, "field_unicode_scalars": 20_000},
                   "measurements": {"maximum_sense_json_bytes": max(len(compact(row[3]).encode()) for row in selected),
                                    "maximum_field_unicode_scalars": max(len(row[3][name]) for row in selected for name in ("definition_fr", "meaning_en", "meaning_zh")),
                                    "raw_inputs_bytes": raw_inputs_bytes,

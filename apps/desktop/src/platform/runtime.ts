@@ -8,6 +8,7 @@ import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema, type Sav
 import { dictionarySchema, dictionaryQuery, dictionaryId, dictionaryCatalog, dictionaryOrder, dictionaryContentHash, dictionaryRelink } from './dictionary';
 import type { DictionaryLookup, DictionaryCatalog, DictionaryRelink } from './dictionary';
 import { frequencyQuery, frequencySchema, type FrequencyLookup } from './frequency';
+import { cefrRuntime } from './cefr';
 import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
 import type { SpeechAudio, SpeechPreferences } from './speech';
 import { readSelectionEvent, selectionText, shortcutStatusSchema, shortcutText } from './selection';
@@ -117,7 +118,7 @@ const batchSchema = z.object({ operation: z.string().min(1).max(128), cancelled:
 export type BatchRequest = z.infer<typeof batchRequestSchema>;
 export type BatchStatus = z.infer<typeof batchSchema>;
 
-export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<typeof noteImportRuntime>, Readonly<typeof noteExportRuntime>, Readonly<typeof translationRuntime> {
+export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<typeof noteImportRuntime>, Readonly<typeof noteExportRuntime>, Readonly<typeof translationRuntime>, Readonly<typeof cefrRuntime> {
   readonly startRestore: (operation: string, pendingRequests?: readonly RawPendingRequest[]) => Promise<RestoreStatus>;
   readonly restoreStatus: (operation: string) => Promise<RestoreStatus>;
   readonly onRestoreProgress: (callback: (status: RestoreStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
@@ -198,6 +199,7 @@ export const runtime: RuntimeAdapter = {
   ...noteImportRuntime,
   ...restoreRuntime,
   ...notesRuntime,
+  ...cefrRuntime,
   ...noteExportRuntime,
   backupAvailable: isTauri,
   async startBackup() {

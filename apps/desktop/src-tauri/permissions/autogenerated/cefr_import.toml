@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-cefr-import"
+description = "Enables the cefr_import command without any pre-configured scope."
+commands.allow = ["cefr_import"]
+
+[[permission]]
+identifier = "deny-cefr-import"
+description = "Denies the cefr_import command without any pre-configured scope."
+commands.deny = ["cefr_import"]

@@ -15,12 +15,13 @@ import { CoreSenseContent, digestLabel } from './core-sense';
 import { CategoryPicker } from './learning-categories';
 import type { LearningCategories } from './learning-categories';
 import { SavedNoteExport } from './note-export';
+import { CefrRecordBadge } from './cefr';
 
-export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
+export function VocabularySummary({ snapshot, text, frequency, runtime }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode; readonly runtime?: RuntimeAdapter }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
-    <h3><span lang="fr">{snapshot.headword}</span> {frequency}</h3>
+    <h3><span lang="fr">{snapshot.headword}</span> {frequency} <CefrRecordBadge headword={snapshot.headword} digest={snapshot.digest} runtime={runtime} text={text.core} /></h3>
     {!snapshot.digest.length && <p>{text.interchange.missing}</p>}
-    {snapshot.digest.map((entry, index) => entry.core ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <dl key={index}>
+    {snapshot.digest.map((entry, index) => entry.core ? <CoreSenseContent key={index} sense={entry.core} text={text.core} runtime={runtime} /> : <dl key={index}>
       <dt>{text.pronunciation}</dt><dd lang="fr">{entry.pronunciations.join(' · ') || text.missing}</dd>
       <dt>{text.grammar}</dt><dd>{entry.grammar.join(' · ') || text.missing}</dd>
       <dt>{text.translation}</dt><dd lang="zh">{entry.translation || text.missing}</dd>
@@ -34,7 +35,7 @@ function SavedVocabularySummary({ snapshot, text, runtime }: {
   const keys = useMemo(() => [snapshot.headword], [snapshot.headword]);
   const frequencies = useFrequency(runtime, keys);
   const frequency = frequencies.lookup?.entries.find((entry) => entry.key === snapshot.headword);
-  return <><VocabularySummary snapshot={snapshot} text={text} frequency={<FrequencyBadge entry={frequency} text={text.frequency} />} />
+  return <><VocabularySummary snapshot={snapshot} text={text} runtime={runtime} frequency={<FrequencyBadge entry={frequency} text={text.frequency} />} />
     <FrequencyState state={frequencies} text={text.frequency} />
     {frequencies.lookup && frequency && <FrequencyDetails lookup={frequencies.lookup} entry={frequency} text={text.frequency} />}
   </>;
@@ -127,7 +128,7 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime, onRevi
   const overLimit = characterCount(notes) > 20_000 || exampleOverLimit;
   return <section className="vocabulary-editor" aria-label={text.edit}>
     <p className="eyebrow">{text.fallback}</p>{notebook.editor.record
-      ? <SavedVocabularySummary snapshot={snapshot} text={text} runtime={runtime} /> : <VocabularySummary snapshot={snapshot} text={text} />}
+      ? <SavedVocabularySummary snapshot={snapshot} text={text} runtime={runtime} /> : <VocabularySummary snapshot={snapshot} text={text} runtime={runtime} />}
     <SpeechButton key={snapshot.headword} word={snapshot.headword} runtime={runtime} text={text} />
     <label htmlFor="personal-notes">{text.notes}</label>
     <textarea ref={textarea} id="personal-notes" value={notes} disabled={notebook.busy} rows={8} spellCheck={false}

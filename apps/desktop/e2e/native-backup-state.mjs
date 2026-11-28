@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { resolve, join, relative, isAbsolute } from 'node:path';
 
-export const D2_ISSUE_DIRECTORIES = Array.from({ length: 84 }, (_, index) => `issue-${79 + index}`);
+export const D2_ISSUE_DIRECTORIES = Array.from({ length: 86 }, (_, index) => `issue-${79 + index}`);
 
 function ownedDestination(destination) {
   const root = resolve(destination);

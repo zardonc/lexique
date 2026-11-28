@@ -30,8 +30,9 @@ function linkedVerb(entry: DictionaryLookup['entries'][number], result: Dictiona
     && (previous?.result?.tables.some((table) => table.lemma === previous.selected && expressionMatches(table.lemma, entry.key)) ?? false);
 }
 
-export function DictionaryResults({ result, text, navigation }: {
+export function DictionaryResults({ result, text, runtime, navigation }: {
   readonly result: DictionaryLookup; readonly text: Messages['dictionary'];
+  readonly runtime?: RuntimeAdapter;
   readonly navigation?: { readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly previous?: ConjugationView; readonly onOpen: (view: ConjugationView) => void };
 }) {
   return <>
@@ -39,7 +40,7 @@ export function DictionaryResults({ result, text, navigation }: {
     {result.entries.map((entry) => <article className="dictionary-entry" key={entry.ordinal} data-ordinal={entry.ordinal}>
       <h3 lang="fr" tabIndex={-1}>{entry.key}</h3>
       <p className="dictionary-grammar">{entry.pronunciations.join(' · ')} {entry.grammar.join(' · ')}</p>
-      {entry.core_senses?.length ? entry.core_senses.map((sense) => <CoreSenseContent key={sense.sense_id} sense={sense} text={text.core} />)
+      {entry.core_senses?.length ? entry.core_senses.map((sense) => <CoreSenseContent key={sense.sense_id} sense={sense} text={text.core} runtime={runtime ?? navigation?.runtime} />)
         : entry.html === undefined ? <Senses senses={entry.senses} /> : <DictionaryHtml html={entry.html} title={result.source.title} />}
       {navigation && linkedVerb(entry, result, navigation.previous) && <DictionaryConjugation runtime={navigation.runtime} locale={navigation.locale}
         dictionaryKey={entry.key} dictionaryId={result.dictionary_id} previous={navigation.previous} posUnknown={!dictionaryVerb(entry)} onOpen={navigation.onOpen} />}
@@ -70,7 +71,7 @@ function Collection({ result, runtime, text, version, onCollect, onOpen, onExcer
     return () => { cancelled = true; };
   }, [runtime, headword, version, retry]);
   if (!headword) return null;
-  return <><VocabularySummary snapshot={snapshotFromLookup(result)} text={text} />
+  return <><VocabularySummary snapshot={snapshotFromLookup(result)} text={text} runtime={runtime} />
     <SpeechButton key={headword} word={headword} runtime={runtime} text={text} />
     {error ? <p role="alert">{text.readError}: {error} <button onClick={() => setRetry((value) => value + 1)}>{text.retry}</button></p>
       : record ? <p role="status">{text.existing} <button onClick={() => onOpen(record)}>{text.view}</button></p>
@@ -94,7 +95,7 @@ export function RecordOriginal({ reference, runtime, text, title }: {
     {error && <p role="alert">{text[error.code]} {error.message}</p>}
     {result === undefined && !error && <p role="status">{text.loading}</p>}
     {result === null && <p role="status">{text.preview}</p>}
-    {result && <>{result.sha256 !== reference.sha256 && <p role="status">{text.changedSource}</p>}<DictionaryResults result={result} text={text} /></>}
+    {result && <>{result.sha256 !== reference.sha256 && <p role="status">{text.changedSource}</p>}<DictionaryResults result={result} text={text} runtime={runtime} /></>}
   </section>;
 }
 

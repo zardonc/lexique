@@ -5,6 +5,8 @@ from contextlib import closing
 from pathlib import Path
 import shutil
 import sqlite3
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -17,6 +19,54 @@ FIELD_NAMES = {"french_definition": "definition_fr", "ipa": "ipa", "english": "m
 
 
 class CorePilotPreparationTests(unittest.TestCase):
+    def test_gender_evidence_applies_lmy_policy_with_correct_sources_and_omission(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "prepared"
+            report = prepare(output)
+            self.assertEqual(report["format_version"], 2)
+            with closing(sqlite3.connect(output / "core.sqlite3")) as connection:
+                senses = [json.loads(row[0]) for row in connection.execute("SELECT payload FROM senses")]
+            self.assertEqual(sum("gender" in sense for sense in senses), 2133)
+            self.assertTrue(all(sense["pos"] == "NOM" and "gender" in sense["field_sources"] for sense in senses if "gender" in sense))
+            self.assertTrue(all("cefr" not in sense for sense in senses))
+            child = next(sense for sense in senses if sense["headword"] == "enfant")
+            self.assertEqual(child["gender"], "m")
+            self.assertEqual(child["field_sources"]["gender"]["title"], "Lexique 3.83")
+            self.assertIn("LMY", child["field_sources"]["gender"]["modification"])
+            self.assertNotIn("gender", next(sense for sense in senses if sense["headword"] == "gens"))
+            evidence = json.loads((output / "noun-genders.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(evidence["rows"]), 2134)
+            self.assertEqual(sum(row["queue"] != "auto_accepted" for row in evidence["rows"]), 187)
+            self.assertEqual(sum(row["review_status"] == "human_reviewed" for row in evidence["rows"]), 194)
+            subprocess.run([sys.executable, "-I", "-B", str(output / "core_pilot.py"), "--help"], check=True, capture_output=True)
+            fallback = next(row for row in evidence["rows"] if row["lexique_gender"] is None and row["gender"] == "mf")
+            sense = next(sense for sense in senses if sense["sense_id"] == fallback["sense_id"])
+            self.assertEqual(sense["gender"], "mf")
+            self.assertEqual(sense["field_sources"]["gender"]["source_url"], fallback["fixed_url"])
+
+    def test_gender_admission_rejects_missing_or_changed_human_decisions(self):
+        for mutation in ("missing_review", "changed_gender", "changed_column"):
+            with self.subTest(mutation=mutation), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                source = root / "inputs"
+                shutil.copytree(RESOURCE, source)
+                path = source / "noun-genders.json"
+                evidence = json.loads(path.read_text(encoding="utf-8"))
+                row = next(row for row in evidence["rows"] if row["headword"] == "enfant")
+                if mutation == "missing_review":
+                    evidence.pop("human_review")
+                elif mutation == "changed_gender":
+                    row["gender"] = "mf"
+                else:
+                    row["lexique_gender"] = "f"
+                path.write_text(json.dumps(evidence, ensure_ascii=False), encoding="utf-8")
+                import hashlib
+                checksums = json.loads((source / "input-checksums.json").read_text(encoding="utf-8"))
+                checksums["noun-genders.json"] = hashlib.sha256(path.read_bytes()).hexdigest()
+                (source / "input-checksums.json").write_text(json.dumps(checksums), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "human review|reviewed columns"):
+                    prepare(root / "output", source_dir=source)
+
     def test_batches_120_through_162_match_the_frozen_membership_in_the_produced_core(self):
         with (RESOURCE / "scope-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
             scope = list(csv.DictReader(handle))
@@ -501,6 +551,7 @@ class CorePilotPreparationTests(unittest.TestCase):
                             "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
                         )
             measurements = report["measurements"]
+            self.assertLessEqual(report["sqlite_bytes"], report["limits"]["resource_bytes"])
             expected_raw = sum((RESOURCE / name).stat().st_size for name in (*MATERIALS, "input-checksums.json"))
             expected_bundled = sum(
                 path.stat().st_size for path in (root / "first").iterdir()

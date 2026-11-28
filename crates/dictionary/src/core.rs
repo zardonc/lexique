@@ -8,7 +8,7 @@ use unicode_normalization::UnicodeNormalization;
 
 use crate::{CORE_DICTIONARY_ID, DictionaryError, Entry, Lookup, Source, failure, mdx, snapshot};
 
-pub const MAX_RESOURCE_BYTES: u64 = 20_000_000;
+pub const MAX_RESOURCE_BYTES: u64 = 24 * 1024 * 1024;
 pub const MAX_MATCHING_SENSES: usize = 200;
 
 fn metadata(connection: &Connection, key: &str) -> Result<String, DictionaryError> {
@@ -20,11 +20,11 @@ fn metadata(connection: &Connection, key: &str) -> Result<String, DictionaryErro
 }
 
 fn source(connection: &Connection) -> Result<Source, DictionaryError> {
-    if metadata(connection, "format_version")? != "1" {
+    if !matches!(metadata(connection, "format_version")?.as_str(), "1" | "2") {
         return Err(failure(
             "unsupported",
             "Unsupported core resource format",
-            "expected format version 1",
+            "expected format version 1 or 2",
         ));
     }
     let version = metadata(connection, "content_version")?;

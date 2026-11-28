@@ -25,6 +25,7 @@ import { SelectionSettings } from './selection-settings';
 import { lookupInputMessages } from './lookup-input-content';
 import { DictionarySettings } from './dictionary-settings';
 import { DictionaryResources } from './dictionary-resources';
+import { CefrSettingsPanel } from './cefr';
 import { useInterfacePreferences } from './use-interface-preferences';
 import { BackupSettings } from './backup-settings';
 import { StartupFeedback, StartupScreen, useStartup } from './startup';
@@ -80,7 +81,7 @@ function pageTitleId(page: number) { return page === 3 || page === 1 ? 'main-pag
 function SettingsPanels({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
   return <><TranslationSettingsPanel runtime={runtime} locale={locale} /><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
     <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr />
-    <DictionarySettings runtime={runtime} locale={locale} /><DictionaryResources runtime={runtime} locale={locale} /></>;
+    <DictionarySettings runtime={runtime} locale={locale} /><CefrSettingsPanel runtime={runtime} locale={locale} /><DictionaryResources runtime={runtime} locale={locale} /></>;
 }
 
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
