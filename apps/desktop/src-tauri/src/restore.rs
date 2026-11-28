@@ -520,6 +520,8 @@ pub(crate) fn prepare_normal(
     crate::dictionaries::restore_catalog(&mut target, database, &catalog)
         .map_err(|error| error.to_string())?;
     crate::selection_shortcut::restore_device_preferences(&old, &target)?;
+    lexique_storage::preserve_translation_preferences(&old, &target)
+        .map_err(|error| error.to_string())?;
     old.close().map_err(|(_, error)| error.to_string())?;
     target.close().map_err(|(_, error)| error.to_string())?;
     observe("closing")?;

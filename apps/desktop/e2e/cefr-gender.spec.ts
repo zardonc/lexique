@@ -37,7 +37,7 @@ test('gender and local CEFR appear on saved views and review backs while the pro
   await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await expect(page.locator('.vocabulary-list .cefr-badge')).toHaveText('A2');
   await page.locator('.vocabulary-list button').click();
-  await expect(page.locator('.dictionary-original .core-sense[data-pos="NOM"] .cefr-badge')).toHaveText('B1');
+  await expect(page.locator('.dictionary-original:visible .core-sense[data-pos="NOM"] .cefr-badge')).toHaveText('B1');
   await page.getByRole('button', { name: 'Open recognition card', exact: true }).click();
   const card = page.getByRole('dialog', { name: 'Recognition card', exact: true });
   await expect(card.locator('.cefr-badge')).toHaveCount(0);

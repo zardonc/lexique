@@ -5,10 +5,10 @@ test('editable translation text uses the dictionary and opens the full result', 
   await nativeFixture(page);
   await page.goto('/');
   await page.getByRole('button', { name: '翻译', exact: true }).click();
-  await page.getByLabel('法语原文', { exact: true }).fill('école');
+  await page.getByLabel('原文', { exact: true }).fill('école');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('école');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('école');
   await page.getByRole('button', { name: '打开完整词典结果', exact: true }).click();
   await expect(page.getByRole('heading', { name: '词典', exact: true })).toBeVisible();
   await expect(page.getByLabel('法语词或词组')).toHaveValue('école');
@@ -24,7 +24,7 @@ test('captured selection enters translation without automatic dictionary lookup'
     window.testNative.emit('selection-input', { kind: 'captured', request: 1, text: '  école  ' });
   });
   await expect(page.getByRole('heading', { name: '翻译', exact: true })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('  école  ');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('  école  ');
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(0);
   await expect(page.getByText('学校', { exact: true })).toHaveCount(0);
 });
@@ -55,11 +55,11 @@ test('cancelled and older captures cannot replace a newer input', async ({ page 
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'pending', request: 10 }));
   await page.getByRole('button', { name: '取消', exact: true }).click();
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 10, text: 'stale' }));
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('');
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 11, text: 'école' }));
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('école');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('école');
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 10, text: 'stale' }));
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('école');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('école');
   await page.getByRole('button', { name: '词典', exact: true }).click();
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 11, text: 'late' }));
   await expect(page.getByRole('heading', { name: '词典', exact: true })).toBeVisible();
@@ -69,13 +69,13 @@ test('editing invalidates a delayed dictionary result and permits another lookup
   await nativeFixture(page, { dictionary_lookup: [{ value: dictionary, gate: 'first' }, { value: dictionary }] });
   await page.goto('/');
   await page.getByRole('button', { name: '翻译', exact: true }).click();
-  await page.getByLabel('法语原文', { exact: true }).fill('école');
+  await page.getByLabel('原文', { exact: true }).fill('école');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByRole('button', { name: '取消', exact: true })).toBeVisible();
-  await page.getByLabel('法语原文', { exact: true }).fill('côte');
+  await page.getByLabel('原文', { exact: true }).fill('côte');
   await page.evaluate(() => window.testNative.release('first'));
   await expect(page.getByText('学校', { exact: true })).toHaveCount(0);
-  await page.getByLabel('法语原文', { exact: true }).fill('école');
+  await page.getByLabel('原文', { exact: true }).fill('école');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
 });
@@ -85,10 +85,12 @@ test('a long selection stays editable and only its selected word is queried', as
   await page.goto('/');
   const raw = `école\n${'à'.repeat(600)}`;
   await page.evaluate((text) => window.testNative.emit('selection-input', { kind: 'captured', request: 20, text }), raw);
-  const field = page.getByLabel('法语原文', { exact: true });
+  const field = page.getByLabel('原文', { exact: true });
   await expect(field).toHaveValue(raw);
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(0);
-  await field.evaluate((node) => { (node as HTMLTextAreaElement).setSelectionRange(0, 5); });
+  await field.focus();
+  await page.keyboard.press('Control+Home');
+  for (let i = 0; i < 5; i++) await page.keyboard.press('Shift+ArrowRight');
   await page.getByRole('button', { name: '查询输入', exact: true }).click();
   await expect(page.getByText('学校', { exact: true })).toBeVisible();
   await expect(field).toHaveValue(raw);
@@ -99,13 +101,13 @@ test('translation input and captured text keep only the first 5,000 characters',
   await nativeFixture(page);
   await page.goto('/');
   await page.getByRole('button', { name: '翻译', exact: true }).click();
-  const field = page.getByLabel('法语原文', { exact: true });
+  const field = page.getByLabel('原文', { exact: true });
   const prefix = `${'à'.repeat(4_999)}😀`;
   await field.focus();
   await page.keyboard.insertText(`${prefix}fin`);
   await expect(field).toHaveValue(prefix);
   await expect(page.getByRole('alert')).toHaveCount(0);
-  await expect(page.getByRole('button', { name: '查询输入', exact: true })).toBeEnabled();
+  await expect(page.getByRole('button', { name: '查询输入', exact: true })).toBeDisabled();
   await page.evaluate((text) => window.testNative.emit('selection-input', { kind: 'captured', request: 25, text }), `${prefix}stale`);
   await expect(field).toHaveValue(prefix);
   await field.fill('côte');
@@ -125,7 +127,7 @@ test('capture uses the unsaved-note guard and does not save or collect text', as
   await expect(page.getByLabel('独立笔记', { exact: true })).toHaveValue('保留原有修改');
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 31, text: 'école' }));
   await page.getByRole('button', { name: '放弃修改', exact: true }).click();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('école');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('école');
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'vocabulary_save').length)).toBe(0);
 });
 
@@ -141,7 +143,7 @@ test('a capture during note saving opens translation after the save completes', 
     window.testNative.release('save');
   });
   await expect(page.getByRole('heading', { name: '翻译', exact: true })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('école');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('école');
   const saves = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'vocabulary_save'));
   expect(saves).toHaveLength(1);
   expect(saves[0]?.args?.request).toMatchObject({ notes: '保留笔记' });
@@ -163,7 +165,7 @@ test('a failed note save keeps the latest capture behind the leave guard', async
   await expect(page.getByLabel('独立笔记', { exact: true })).toHaveValue('保留未保存笔记');
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 38, text: 'école' }));
   await page.getByRole('button', { name: '放弃修改', exact: true }).click();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('école');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('école');
 });
 
 for (const code of ['no_selection', 'unsupported', 'permission', 'read_failed', 'busy'] as const) {
@@ -173,7 +175,7 @@ for (const code of ['no_selection', 'unsupported', 'permission', 'read_failed', 
     await page.evaluate((failure) => window.testNative.emit('selection-input', { kind: 'failed', request: 40, code: failure, message: 'source status' }), code);
     await expect(page.getByRole('alert').filter({ hasText: 'source status' })).toBeVisible();
     expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_lookup').length)).toBe(0);
-    await page.getByLabel('法语原文', { exact: true }).fill('école');
+    await page.getByLabel('原文', { exact: true }).fill('école');
     await page.getByRole('button', { name: '查询输入', exact: true }).click();
     await expect(page.getByText('学校', { exact: true })).toBeVisible();
   });
@@ -184,7 +186,7 @@ test('invalid capture payloads stay visible and cannot populate input', async ({
   await page.goto('/');
   await page.evaluate(() => window.testNative.emit('selection-input', { kind: 'captured', request: 50, text: 123 }));
   await expect(page.getByRole('alert').filter({ hasText: '选择返回的数据无效' })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('');
 });
 
 test('application text selection enters translation with editable text', async ({ page }) => {
@@ -198,6 +200,6 @@ test('application text selection enters translation with editable text', async (
   });
   await page.getByRole('button', { name: '查询应用内选中文字', exact: true }).click();
   await expect(page.getByRole('heading', { name: '翻译', exact: true })).toBeVisible();
-  await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('école');
+  await expect(page.getByLabel('原文', { exact: true })).toHaveValue('école');
   await expect(page.getByText('学校', { exact: true })).toHaveCount(0);
 });

@@ -25,7 +25,7 @@ fn open_child(parent: &Dir, name: &Path) -> Result<Dir, String> {
         .map_err(|e| e.to_string())
 }
 
-fn data_directory(database: &Path) -> Result<Dir, String> {
+pub(crate) fn data_directory(database: &Path) -> Result<Dir, String> {
     let data = data_directory_path(database)?;
     let parent = data.parent().ok_or("Invalid portable data path")?;
     let name = data.file_name().ok_or("Invalid portable data path")?;
@@ -53,7 +53,7 @@ pub fn managed_audio_directory(database: &Path) -> Result<PathBuf, String> {
     Ok(data_directory_path(database)?.join("temp").join("speech"))
 }
 
-fn create_child(parent: &Dir, name: &str) -> Result<Dir, String> {
+pub(crate) fn create_child(parent: &Dir, name: &str) -> Result<Dir, String> {
     if let Err(error) = parent.create_dir(name)
         && error.kind() != std::io::ErrorKind::AlreadyExists
     {
@@ -94,7 +94,7 @@ pub fn report_error(_database: &Path, message: &str) {
     }
 }
 
-fn lock(dir: &Dir) -> Result<File, String> {
+pub(crate) fn lock(dir: &Dir) -> Result<File, String> {
     let mut options = OpenOptions::new();
     options
         .read(true)

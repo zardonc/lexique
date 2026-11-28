@@ -47,6 +47,8 @@ class NativeFixture {
       grammar_list: [], grammar_get: null, grammar_sort: 'updated-desc', grammar_delete: null,
       learning_categories: [], category_delete: null, review_scope: { kind: 'all' },
       interface_preferences: { locale: 'zh', theme: 'white' },
+      translation_settings: { preferences: { active_provider: 'disabled', source_language: 'auto', target_language: 'zh-CN', deepl: { tier: 'free' }, openai_compatible: { base_url: '', model: '' } }, keys: { deepl: 'missing', openai_compatible: 'missing' } },
+      translation_cancel: null, translation_clear_key: null, translation_test_connection: null,
       speech_preferences: { voice: 'female', wpm: 180 }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
       review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false }, review_auto_enroll: false, review_pause: false,
@@ -70,6 +72,10 @@ class NativeFixture {
       items: request.vocabulary_ids.map((vocabulary_id) => ({ vocabulary_id, created_cards: 2, error: null, audio_state: 'queued', audio_error: null })) };
   }
   private settings(command: string, args?: Record<string, unknown>) {
+    if (command === 'translation_settings' && args?.preferences) {
+      const current = this.defaults.translation_settings as { preferences: unknown; keys: unknown };
+      this.defaults.translation_settings = { ...current, preferences: args.preferences };
+    }
     const settingKey = { speech_preferences: 'preferences', interface_preferences: 'preferences', review_settings: 'settings', review_scope: 'scope' }[command];
     if (settingKey && args?.[settingKey]) this.defaults[command] = args[settingKey];
     const booleanKey = { review_auto_enroll: 'enabled', review_pause: 'paused' }[command];

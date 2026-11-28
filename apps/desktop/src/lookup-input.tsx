@@ -10,6 +10,9 @@ import type { RuntimeAdapter } from './platform/runtime';
 import { selectionText, type SelectionEvent } from './platform/selection';
 import { useOcrInput } from './use-ocr-input';
 import { OcrInput } from './ocr-input';
+import { TranslationPanel, useTranslation } from './translation-panel';
+import { ExampleSpeech } from './example-speech';
+import { notebookMessages } from './notebook-content';
 
 function useInputLookup(runtime: RuntimeAdapter, selection?: SelectionEvent) {
   const [raw, setRaw] = useState('');
@@ -61,31 +64,66 @@ function InputResults({ input, locale, runtime, onDictionary }: {
   </>;
 }
 
-export function LookupInputPanel({ runtime, locale, selection, onCancel, onDictionary }: {
+function sourceLanguage(translation: ReturnType<typeof useTranslation>) {
+  const language = translation.settings?.preferences.source_language;
+  return language === 'auto' ? (!translation.busy && translation.complete && translation.result?.source !== 'auto' ? translation.result?.source : undefined) : language;
+}
+
+function SourceSpeech({ translation, raw, runtime, locale, visible }: { readonly translation: ReturnType<typeof useTranslation>; readonly raw: string; readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly visible: boolean }) {
+  const ready = !translation.busy && (!translation.result || translation.complete);
+  return visible && ready && sourceLanguage(translation) === 'fr' ? <ExampleSpeech key={`${translation.settings?.preferences.source_language}-${translation.busy}-${translation.saving}`} value={raw} runtime={runtime} text={notebookMessages[locale]} /> : null;
+}
+
+function useQuerySelection(raw: string, selection?: SelectionEvent) {
+  const [target, setTarget] = useState('');
+  const [source, setSource] = useState('');
+  useEffect(() => { setSource(''); setTarget(''); }, [raw, selection]);
+  const selected = target || source || raw;
+  return { selected, valid: dictionaryQuery.safeParse(selected.trim()).success,
+    clear: () => { setTarget(''); setSource(''); },
+    source: (node: HTMLTextAreaElement) => { setTarget(''); setSource(raw.slice(node.selectionStart, node.selectionEnd)); },
+    target: (value: string) => { if (value) setSource(''); setTarget(value); }, setTarget };
+}
+
+function lookupDisabled(loading: boolean, capturing: boolean, valid: boolean) {
+  return loading || capturing || !valid;
+}
+
+export function LookupInputPanel({ runtime, locale, selection, onCancel, onDictionary, onSettings, visible }: {
   readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly selection?: SelectionEvent;
-  readonly onCancel: () => void; readonly onDictionary: (view: DictionaryView) => void;
+  readonly onCancel: () => void; readonly onDictionary: (view: DictionaryView) => void; readonly onSettings: () => void; readonly visible: boolean;
 }) {
   const text = lookupInputMessages[locale], dictionaryText = messages[locale].dictionary;
   const input = useInputLookup(runtime, selection), field = useRef<HTMLTextAreaElement>(null);
-  const ocr = useOcrInput(runtime, selection, input.edit);
+  const translation = useTranslation(runtime, locale, { raw: input.raw, visible });
+  useEffect(() => { if (!visible && translation.busy) translation.cancel(); }, [visible]);
+  const query = useQuerySelection(input.raw, selection);
+  function edit(value: string) { translation.cancel(); input.edit(value); }
+  const ocr = useOcrInput(runtime, selection, edit);
+  useEffect(() => { if (selection) translation.cancel(); }, [selection]);
   const raw = input.raw;
   const capturing = selection?.kind === 'pending';
-  function selected() { const node = field.current; return node && node.selectionEnd > node.selectionStart ? raw.slice(node.selectionStart, node.selectionEnd) : raw; }
+  const selectedLanguage = translation.settings?.preferences.source_language;
+  const resolvedSource = sourceLanguage(translation);
+  useEffect(() => { query.setTarget(''); }, [translation.result, translation.busy, selectedLanguage]);
   return <div className="lookup-input" onPaste={(event) => {
     const file = event.clipboardData.files[0];
-    if (file) { event.preventDefault(); void ocr.importImage(file); }
+    if (file) { event.preventDefault(); translation.cancel(); void ocr.importImage(file); }
   }}>
-    <OcrInput ocr={ocr} locale={locale} onCancel={onCancel} />
-    <form onSubmit={(event) => { event.preventDefault(); void input.lookup(selected()); }}>
+    <OcrInput ocr={ocr} locale={locale} onCancel={onCancel} onStart={translation.cancel} />
+    <form onSubmit={(event) => { event.preventDefault(); void input.lookup(query.selected); }}>
       <label htmlFor="lookup-input-raw">{text.raw}</label>
-      <textarea ref={field} id="lookup-input-raw" lang="fr" rows={4} value={raw} required
+      <textarea ref={field} id="lookup-input-raw" lang={resolvedSource} rows={4} value={raw} required
         autoCapitalize="none" autoCorrect="off" spellCheck={false}
-        onChange={(event) => { ocr.stop(); if (selection) onCancel(); input.edit(event.target.value); }} />
+        onSelect={(event) => query.source(event.currentTarget)}
+        onChange={(event) => { query.clear(); ocr.stop(); if (selection) onCancel(); edit(event.target.value); }} />
+      <SourceSpeech translation={translation} visible={visible} raw={raw} runtime={runtime} locale={locale} />
       <p className="dictionary-hint">{text.hint}</p>
-      {raw && !dictionaryQuery.safeParse(raw.trim()).success && <p>{text.long}</p>}
-      <div className="actions"><button type="submit" disabled={input.loading || capturing}>{input.loading ? dictionaryText.loading : text.query}</button>
+      {raw && !query.valid && <p>{text.long}</p>}
+      <div className="actions"><button type="submit" disabled={lookupDisabled(input.loading, capturing, query.valid)}>{input.loading ? dictionaryText.loading : text.query}</button>
         {(input.loading || capturing) && <button type="button" onClick={() => { input.cancel(); onCancel(); }}>{text.cancel}</button>}</div>
     </form>
+    <TranslationPanel translation={translation} locale={locale} raw={raw} onSettings={onSettings} runtime={runtime} onSelection={query.target} visible={visible} />
     {capturing && <p role="status">{text.capturing}</p>}
     <InputResults input={input} locale={locale} runtime={runtime} onDictionary={onDictionary} />
   </div>;

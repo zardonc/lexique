@@ -12,6 +12,7 @@ import { VocabularyEditor } from './vocabulary-view';
 import { notebookMessages } from './notebook-content';
 import { LeaveDialog, useLeaveGuard } from './leave-guard';
 import { SpeechSettings } from './speech-settings';
+import { TranslationSettingsPanel } from './translation-settings';
 import { ReviewSettingsPanel } from './review-settings';
 import { ReviewQueuePanel } from './review-queue';
 import { useBatchReview } from './use-batch-review';
@@ -78,7 +79,7 @@ function PageIntroduction({ page, text }: { readonly page: number; readonly text
 function pageTitleId(page: number) { return page === 3 || page === 1 ? 'main-page-heading' : 'page-title'; }
 
 function SettingsPanels({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
-  return <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
+  return <><TranslationSettingsPanel runtime={runtime} locale={locale} /><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
     <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr />
     <DictionarySettings runtime={runtime} locale={locale} /><CefrSettingsPanel runtime={runtime} locale={locale} /><DictionaryResources runtime={runtime} locale={locale} /></>;
 }
@@ -125,7 +126,7 @@ function useLearningState(runtime: RuntimeAdapter) {
 }
 
 function LearningPage({ runtime, state }: { readonly runtime: RuntimeAdapter; readonly state: ReturnType<typeof useLearningState> }) {
-  const { page, locale, text, notebookText, notebook, grammar, categories, navigation, selection, mutate, scopeChange, guard, reviewVersion, batch } = state;
+  const { page, locale, text, notebookText, notebook, grammar, categories, navigation, mutate, scopeChange, guard, reviewVersion, batch } = state;
   if (page === 0) return <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
     preserveExcerpt={notebook.preservesExcerpt} locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
     onExcerpt={(result, record) => { const start = () => { grammar.clear(); notebook.beginExcerpt(result, record); }; if (notebook.editor?.snapshot.headword === result.entries[0]?.key && !notebook.excerpt && !notebook.busy) start(); else guard.request(start); }} onCollect={(result) => scopeChange(() => notebook.collect(result))}
@@ -135,7 +136,7 @@ function LearningPage({ runtime, state }: { readonly runtime: RuntimeAdapter; re
     categories={categories} onMutation={mutate} onScopeChange={scopeChange} onCreateGrammar={() => scopeChange(grammar.create)}
     onOpen={(record) => scopeChange(() => { if ('title' in record) grammar.open(record); else notebook.open(record); })} />;
   if (page === 3) return <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} />;
-  if (page === 5) return <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel} onDictionary={navigation.openDictionaryResult} />;
+  if (page === 5) return null;
   if (page === 7) return <SettingsPanels runtime={runtime} locale={locale} />;
   return <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>;
 }
@@ -144,6 +145,8 @@ function LearningApp({ runtime, startup, restore }: { readonly runtime: RuntimeA
   const state = useLearningState(runtime);
   const { preferences, locale, theme, collapsed, backupPaused, notesBusy, text, notebookText, notebook, grammar, categories,
     editor, guard, navigation, page, selection, reviewChanged, mutationError, scopeChange, batch } = state;
+  const [inputOpened, setInputOpened] = useState(false);
+  useEffect(() => { if (page === 5) setInputOpened(true); }, [page]);
   return <ExampleSpeechGroup><div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
     <Navigation text={text} selected={page} collapsed={collapsed} disabled={backupPaused || notesBusy} onSelect={navigation.changePage} onToggle={state.toggleCollapsed} />
@@ -155,6 +158,7 @@ function LearningApp({ runtime, startup, restore }: { readonly runtime: RuntimeA
           <fieldset className="backup-controls" disabled={backupPaused || notesBusy}>
           <PageIntroduction page={page} text={text} />
           <LearningPage runtime={runtime} state={state} />
+          {inputOpened && <div hidden={page !== 5}><LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel} onDictionary={navigation.openDictionaryResult} onSettings={() => navigation.changePage(7)} visible={page === 5} /></div>}
           <VocabularyEditor notebook={notebook} categories={categories} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; scopeChange(() => notebook.open(record)); }
           }} />

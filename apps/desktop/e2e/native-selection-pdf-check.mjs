@@ -46,12 +46,16 @@ try {
   assert.equal(run.status, 0, run.stderr);
   await expect(page.getByRole('heading', { name: '翻译', exact: true })).toBeVisible();
   await page.waitForFunction(() => document.querySelector('#lookup-input-raw')?.value || document.querySelector('[role="alert"]'));
-  const raw = await page.getByLabel('法语原文', { exact: true }).inputValue();
+  const raw = await page.getByLabel('原文', { exact: true }).inputValue();
   const failures = await page.getByRole('alert').allTextContents();
   if (raw) {
     assert.match(raw, /école/);
     await expect(page.getByText('学校', { exact: true })).toHaveCount(0);
-    await page.getByLabel('法语原文', { exact: true }).evaluate((node) => { const offset = node.value.indexOf('école'); node.setSelectionRange(offset, offset + 5); });
+    const field = page.getByLabel('原文', { exact: true });
+    const offset = raw.indexOf('école');
+    await field.focus(); await field.press('Control+Home');
+    for (let i = 0; i < offset; i++) await field.press('ArrowRight');
+    for (let i = 0; i < 5; i++) await field.press('Shift+ArrowRight');
     await page.getByRole('button', { name: '查询输入', exact: true }).click();
     await expect(page.getByText('学校', { exact: true })).toBeVisible();
   } else assert.ok(failures.some((failure) => /来源不提供|没有选中文字/.test(failure)), failures.join('; '));
