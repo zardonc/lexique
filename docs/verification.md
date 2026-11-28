@@ -22,6 +22,8 @@ Windows 原生检查分为独立的 60 秒批次；从 `apps/desktop/` 执行 `p
 
 源码 `65a76ac548c1142d36e2168fa421fe73b3931cbc` 的 Windows x64 构建通过 OpenAI 兼容远端连接测试与真实翻译，配置地址以 `/chat/completions/` 结尾；单个及多个尾斜杠均有端点回归覆盖。原生证据为 `issue-223/review-openai-rerun-01/`，连接耗时 1,987 ms，两次调用合计 8,624 ms，测试密钥已清除，host／worker／helper 均为零。重新构建的 `pnpm desktop:build --no-bundle`、locked workspace 编译、rustfmt 与 21 项桌面翻译测试通过；测试直接执行预编译 EXE，执行硬限仍为 60 秒。审查基线 `f7d7b42` 的 lint／typecheck／build、文档检查、46 项浏览器检查及 260 项后端测试通过，日志保留于 `C:/Users/inthe/IdeaProjects/lexique/target/review-222/`。标准桌面测试命令在断言前意外重编译并触发 60 秒限制，单独预编译后直接执行通过。
 
+与 `main` 的 CEFR／名词性别功能集成后，源码 `43c9158e49c3ef5b87ca9d5e737abfbf84818236` 通过 lint／typecheck／build、rustfmt、locked workspace 编译、264 项后端测试、21 项桌面翻译测试及 64 项翻译／取词／OCR／CEFR／核心词典浏览器检查。后端与桌面测试均先预编译，再在 60 秒执行硬限内完成；文档检查通过，日志为上述审查证据根下的 `pr-merge-*.log`。
+
 限制：DeepL 正式 API 成功证据仍对应 `babecc3`；未在端点修复源码上重跑完整原生组合场景，没有验证 macOS、ARM64、全机断网或正式发行。整份凭据文件损坏时，清除／替换会保留原始加密文件副本，但可能需要重新配置两个服务。
 
 ## LMY 名词复核准入
